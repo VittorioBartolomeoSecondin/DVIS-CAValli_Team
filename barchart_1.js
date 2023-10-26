@@ -10,7 +10,7 @@ const svg = d3.select("#barchart_1")
               .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Parse the Data
-d3.csv("http://localhost:8888/barchart_1.csv").then( function(data) {
+d3.csv("barchart_1.csv").then( function(data) {
 
     // Add X axis
     const x = d3.scaleLinear()
