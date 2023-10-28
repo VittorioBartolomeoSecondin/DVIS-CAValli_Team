@@ -89,10 +89,8 @@ function updateChart(selectedDataset) {
 // Initial chart creation with the default dataset
 updateChart("barchart_1.csv");
 
-/*
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-selector").addEventListener("change", function () {
   const selectedDataset = this.value;
   updateChart(selectedDataset);
 });
-*/
