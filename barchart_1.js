@@ -27,7 +27,7 @@ d3.csv("barchart_1.csv").then( function(data) {
     // Y axis
     const y = d3.scaleBand()
                 .range([ height, 0 ])
-                .domain(data.map(d => d.name))
+                .domain(data.map(d => d.scientific_name))
                 .padding(.1);
 
     svg.append("g")
@@ -38,7 +38,7 @@ d3.csv("barchart_1.csv").then( function(data) {
        .data(data)
        .join("rect")
        .attr("x", x(0) )
-       .attr("y", d => y(d.name))
+       .attr("y", d => y(d.scientific_name))
        .attr("width", d => x(d.count))
        .attr("height", y.bandwidth())
        .attr("fill", "steelblue")
