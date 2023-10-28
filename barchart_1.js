@@ -16,71 +16,83 @@ const tooltip = d3.select("#barchart_1")
                   .attr("class", "tooltip");
 
 // Parse the Data
-d3.csv("barchart_1.csv").then( function(data) {
-    
-    // Add X axis
-    const x = d3.scaleLinear()
-                .domain([0, 250000])
-                .range([ 0, width]);
-  
-    svg.append("g")
-       .attr("transform", `translate(0, ${height})`)
-       .call(d3.axisBottom(x))
-       .selectAll("text")
-       .attr("transform", "translate(-10,0)rotate(-45)")
-       .style("text-anchor", "end");
-    
-    // Y axis
-    const y = d3.scaleBand()
-                .range([ height, 0 ])
-                .domain(data.map(d => d.scientific_name))
-                .padding(.1);
-
-    svg.append("g")
-       .call(d3.axisLeft(y));
-
-    // Bars
-    svg.selectAll("myRect")
-       .data(data)
-       .enter()
-       .append("rect")
-       .attr("x", x(0) )
-       .attr("y", d => y(d.scientific_name))
-       //.attr("width", d => x(d.count))
-       .attr("width", 0)
-       .attr("height", y.bandwidth())
-       .attr("fill", "steelblue")
-       .on("mouseover", function (event, d) {
-         
-         // Show the tooltip
-         tooltip.transition()
-                .duration(200)
-                .style("opacity", 1);
-     
-         // Customize the tooltip content
-         tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} m`)
-                .style("left",(event.pageX + 40) + "px")
-                .style("top", (event.pageY - 40) + "px");
-         
-       })
+function updateChart(selectedDataset) {
+  d3.csv(selectedDataset).then( function(data) {
       
-       .on("mouseout", function (d) {
-         
-         // Hide the tooltip
-         tooltip.transition()
-           .duration(500)
-           .style("opacity", 0);
-         
-       });
+      // Add X axis
+      const x = d3.scaleLinear()
+                  .domain([0, 250000])
+                  .range([ 0, width]);
+    
+      svg.append("g")
+         .attr("transform", `translate(0, ${height})`)
+         .call(d3.axisBottom(x))
+         .selectAll("text")
+         .attr("transform", "translate(-10,0)rotate(-45)")
+         .style("text-anchor", "end");
+      
+      // Y axis
+      const y = d3.scaleBand()
+                  .range([ height, 0 ])
+                  .domain(data.map(d => d.scientific_name))
+                  .padding(.1);
+  
+      svg.append("g")
+         .call(d3.axisLeft(y));
+  
+      // Bars
+      svg.selectAll("myRect")
+         .data(data)
+         .enter()
+         .append("rect")
+         .attr("x", x(0) )
+         .attr("y", d => y(d.scientific_name))
+         //.attr("width", d => x(d.count))
+         .attr("width", 0)
+         .attr("height", y.bandwidth())
+         .attr("fill", "steelblue")
+         .on("mouseover", function (event, d) {
+           
+           // Show the tooltip
+           tooltip.transition()
+                  .duration(200)
+                  .style("opacity", 1);
+       
+           // Customize the tooltip content
+           tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} m`)
+                  .style("left",(event.pageX + 40) + "px")
+                  .style("top", (event.pageY - 40) + "px");
+           
+         })
+        
+         .on("mouseout", function (d) {
+           
+           // Hide the tooltip
+           tooltip.transition()
+             .duration(500)
+             .style("opacity", 0);
+           
+         });
+  
+  
+    // Animation
+      svg.selectAll("rect")
+          .transition()
+          .duration(1000)
+          .attr("x", x(0) )
+          .attr("width", d => x(d.count))
+          .delay((d, i) => i * 100);
 
+  })
+}
 
-  // Animation
-    svg.selectAll("rect")
-        .transition()
-        .duration(1000)
-        .attr("x", x(0) )
-        .attr("width", d => x(d.count))
-        .delay((d, i) => i * 100);
+// Initial chart creation with the default dataset
+updateChart("barchart_1.csv");
 
-
-})
+/*
+// Listen for changes in the dropdown selection
+document.getElementById("dataset-selector").addEventListener("change", function () {
+  const selectedDataset = this.value;
+  updateChart(selectedDataset);
+});
+*/
