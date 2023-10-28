@@ -90,7 +90,7 @@ function updateChart(selectedDataset) {
 updateChart("barchart_1.csv");
 
 // Listen for changes in the dropdown selection
-document.getElementById("dataset-selector").addEventListener("change", function () {
+document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = this.value;
   updateChart(selectedDataset);
 });
