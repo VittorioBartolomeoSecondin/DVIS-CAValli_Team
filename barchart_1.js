@@ -54,7 +54,7 @@ d3.csv("barchart_1.csv").then( function(data) {
                 .style("opacity", 1);
      
          // Customize the tooltip content
-         tooltip.html(`Common name: ${d.common_name}<br>Average height: ${d.avg_height}`)
+         tooltip.html(`Common name: ${d.common_name}<br>Average height: ${d.avg_height} m`)
                 .style("left", (event.pageX + 10) + "px")
                 .style("top", (event.pageY - 28) + "px");
        })
