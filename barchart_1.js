@@ -21,7 +21,7 @@ function updateChart(selectedDataset) {
       
       // Add X axis
       const x = d3.scaleLinear()
-                  .domain([0, 250000])
+                  .domain([0, d3.max(d.count)])
                   .range([ 0, width]);
     
       svg.append("g")
