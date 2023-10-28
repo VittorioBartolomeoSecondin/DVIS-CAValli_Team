@@ -15,27 +15,30 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
     <body>
-        <h1>CAValli Team</h1>
-        <ul style="list-style: none; padding: 0; text-align: center;">
-            <li>Christian Dagnino</li>
-            <li>Alessandro Longo</li>
-            <li>Vittorio Bartolomeo Secondin</li>
-        </ul>
-        <p><a href="/section1.html" class="btn btn-primary">Section1</a></p>
+
+        <!-- <p><a href="/section1.html" class="btn btn-primary">Section1</a></p> --> 
+        
+        <div id="header">
+            <h1>CAValli Team</h1>
+            <ul style="list-style: none; padding: 0; text-align: center;">
+                <li>Christian Dagnino</li>
+                <li>Alessandro Longo</li>
+                <li>Vittorio Bartolomeo Secondin</li>
+            </ul>
+                
+            <div id="dataset-selector">
+                <label for="dataset-dropdown">Select Dataset:</label>
+                <select id="dataset-dropdown">
+                    <option value="barchart_1.csv">Dataset 1</option>
+                    <option value="barchart_2.csv">Dataset 2</option>
+                    <!-- Add more dataset options as needed -->
+                </select>
+            </div>
+        </div>
 
         <div id="barchart_1">
             <h2 style="margin-left: 10px;">Data at a glance</h2>
-            <p style="margin-left: 10px;">
-                Compare tree species abundance <br>
-                
-                <select id="dataset-selector">
-                    <option value="barchart_1.csv">Dataset 1</option>
-                    <option value="barchart_2.csv">Dataset 2</option>
-                    <!-- Add more options for different datasets -->
-                </select>
-            </p>
-        
-            
+            <p style="margin-left: 10px;">Compare tree species abundance</p>
         </div>
         <div class="tooltip" id="tooltip"></div>
         
