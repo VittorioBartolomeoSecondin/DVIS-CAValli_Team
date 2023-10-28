@@ -66,6 +66,8 @@ d3.csv("barchart_1.csv").then( function(data) {
          // Hide the tooltip
          tooltip.transition()
            .duration(500)
+           .style("left", (event.pageX + 20) + "px")
+           .style("top", (event.pageY - 40) + "px")
            .style("opacity", 0);
          
        });
