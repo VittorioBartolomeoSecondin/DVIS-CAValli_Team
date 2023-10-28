@@ -78,7 +78,7 @@ d3.csv("barchart_1.csv").then( function(data) {
         .transition()
         .duration(1000)
         .attr("x", 0)
-        .attr("width", d => x(d.Value))
+        .attr("width", d => x(d.count))
         .delay((d, i) => i * 100);
 
 
