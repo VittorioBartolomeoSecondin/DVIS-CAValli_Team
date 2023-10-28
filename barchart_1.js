@@ -1,23 +1,23 @@
 // set the dimensions and margins of the graph
 const margin = {top: 40, right: 40, bottom: 50, left: 120}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
 
-// append the svg object to the body of the page
-const svg = d3.select("#barchart_1")
-              .append("svg")
-              .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top + margin.bottom)
-              .append("g")
-              .attr("transform", `translate(${margin.left}, ${margin.top})`);
-
-// Create the tooltip element
-const tooltip = d3.select("#barchart_1")
-                  .append("div")
-                  .style("opacity", 0)
-                  .attr("class", "tooltip");
-
 // Parse the Data
 function updateChart(selectedDataset) {
   d3.csv(selectedDataset).then( function(data) {
+
+      // append the svg object to the body of the page
+      const svg = d3.select("#barchart_1")
+                    .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+      // Create the tooltip element
+      const tooltip = d3.select("#barchart_1")
+                        .append("div")
+                        .style("opacity", 0)
+                        .attr("class", "tooltip");
       
       // Add X axis
       const x = d3.scaleLinear()
