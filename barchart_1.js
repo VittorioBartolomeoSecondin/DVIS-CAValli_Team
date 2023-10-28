@@ -19,7 +19,7 @@ function updateChart(selectedDataset) {
                         .style("opacity", 0)
                         .attr("class", "tooltip");
 
-      var max = d3.max(data, function(d) { return d.count; });
+      var max = d3.max(data, function(d) { return +d.count;} );
     
       // Add X axis
       const x = d3.scaleLinear()
@@ -95,5 +95,6 @@ updateChart("barchart_1.csv");
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = this.value;
   d3.selectAll("svg").remove();
+  d3.selectAll("section").remove();
   updateChart(selectedDataset);
 });
