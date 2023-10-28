@@ -11,9 +11,10 @@ const svg = d3.select("#barchart_1")
 
 // Create the tooltip element
 const tooltip = d3.select("#barchart_1")
+                  .append("div")
                   .attr("class", "tooltip")
                   .style("opacity", 0);
-                  //.append("div")
+                  
 
 // Parse the Data
 d3.csv("barchart_1.csv").then( function(data) {
