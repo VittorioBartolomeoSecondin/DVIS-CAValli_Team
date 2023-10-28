@@ -10,11 +10,10 @@ const svg = d3.select("#barchart_1")
               .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Create the tooltip element
-const tooltip = d3.select("#barchart_1");
-
+const tooltip = d3.select("#barchart_1")                  
+                  .attr("class", "tooltip")
+                  .style("opacity", 0);
                   //.append("div")
-                  //.attr("class", "tooltip")
-                  //.style("opacity", 0);
 
 // Parse the Data
 d3.csv("barchart_1.csv").then( function(data) {
@@ -43,8 +42,9 @@ d3.csv("barchart_1.csv").then( function(data) {
     // Bars
     svg.selectAll("myRect")
        .data(data)
-       .join("rect")
-       .attr("x", x(0) )
+       .enter()
+       .append("rect")
+       .attr("x", x(0))
        .attr("y", d => y(d.scientific_name))
        .attr("width", d => x(d.count))
        .attr("height", y.bandwidth())
@@ -58,8 +58,8 @@ d3.csv("barchart_1.csv").then( function(data) {
          
          // Customize the tooltip content
          tooltip.html(`Common name: ${d.common_name}<br>Average height: ${d.avg_height} m`)
-                .style("left", (event.x + 10) + "px")
-                .style("top", (event.y - 28) + "px");
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 28) + "px");
          
        })
        .on("mouseout", function (d) {         
