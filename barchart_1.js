@@ -1,5 +1,6 @@
 // set the dimensions and margins of the graph
 const margin = {top: 40, right: 40, bottom: 50, left: 120}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
+
 // append the svg object to the body of the page
 const svg = d3.select("#barchart_1")
               .append("svg")
@@ -8,7 +9,7 @@ const svg = d3.select("#barchart_1")
               .append("g")
               .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-///////////////////////// Create the tooltip element
+// Create the tooltip element
 const tooltip = d3.select("#barchart_1")
                   .append("div")
                   .attr("class", "tooltip")
@@ -47,22 +48,25 @@ d3.csv("barchart_1.csv").then( function(data) {
        .attr("width", d => x(d.count))
        .attr("height", y.bandwidth())
        .attr("fill", "steelblue")
-       .on("mouseover", function (event, d) {
+       .on("mouseover", function (event, d) {         
+         
          // Show the tooltip
          tooltip.transition()
                 .duration(200)
-                .style("opacity", 1);
-     
+                .style("opacity", 1);     
+         
          // Customize the tooltip content
          tooltip.html(`Common name: ${d.common_name}<br>Average height: ${d.avg_height} m`)
                 .style("left", (event.pageX + 10) + "px")
                 .style("top", (event.pageY - 28) + "px");
+         
        })
-       .on("mouseout", function (d) {
+       .on("mouseout", function (d) {         
+         
          // Hide the tooltip
          tooltip.transition()
            .duration(500)
            .style("opacity", 0);
-
+         
        });
 })
