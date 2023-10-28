@@ -36,7 +36,7 @@ d3.csv("barchart_1.csv").then( function(data) {
                 .padding(.1);
 
     svg.append("g")
-       .call(d3.axisLeft(y))
+       .call(d3.axisLeft(y));
 
     // Bars
     svg.selectAll("myRect")
