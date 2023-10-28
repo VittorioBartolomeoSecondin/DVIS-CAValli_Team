@@ -35,6 +35,17 @@ d3.csv("barchart_1.csv").then( function(data) {
 
     // Bars
     svg.selectAll("myRect")
+       .enter()
+       .append('rect')
+       .attr('class', 'bar')
+       .on('mouseover', (d) => {
+            tooltip.transition().duration(200).style('opacity', 0.9);
+            tooltip.html(`Common name: <span>${d.common_name}</span><br> 
+                        Average height: <span>${d.avg_height}</span>`)
+                   .style('left', `${d3.event.layerX}px`)
+                   .style('top', `${(d3.event.layerY - 28)}px`);
+       })
+       .on('mouseout', () => tooltip.transition().duration(500).style('opacity', 0))
        .data(data)
        .join("rect")
        .attr("x", x(0) )
@@ -42,4 +53,26 @@ d3.csv("barchart_1.csv").then( function(data) {
        .attr("width", d => x(d.count))
        .attr("height", y.bandwidth())
        .attr("fill", "steelblue")
+
 })
+
+const tooltip = d3.select('body').append('div')
+                  .attr('class', 'tooltip')
+                  .style('opacity', 0);
+
+svg.selectAll('.bar').data(letterFrequencies)
+  .enter()
+  .append('rect')
+  .attr('class', 'bar')
+  .attr('x', d => xScale(d.letter))
+  .attr('width', xScale.bandwidth())
+  .attr('y', d => yScale(d.frequency))
+  .attr('height', d => height - yScale(d.frequency))
+  .on('mouseover', (d) => {
+    tooltip.transition().duration(200).style('opacity', 0.9);
+    tooltip.html(`Common name: <span>${d.common_name}</span><br> 
+                  Average height: <span>${d.avg_height}</span>`)
+           .style('left', `${d3.event.layerX}px`)
+           .style('top', `${(d3.event.layerY - 28)}px`);
+  })
+  .on('mouseout', () => tooltip.transition().duration(500).style('opacity', 0));
