@@ -1,0 +1,21 @@
+.tooltip-container {
+    position: relative;
+}
+
+.element-with-tooltip::before {
+    content: attr(data-tooltip); /* Display the content of the data-tooltip attribute as the tooltip text */
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none; /* Hide the tooltip by default */
+    z-index: 1; /* Ensure the tooltip appears above other content */
+    bottom: 100%; /* Position the tooltip just above the element */
+    left: 50%; /* Position it horizontally centered over the element */
+    transform: translateX(-50%); /* Center it horizontally */
+}
+
+.element-with-tooltip:hover::before {
+    display: block; /* Show the tooltip when the element is hovered */
+}
