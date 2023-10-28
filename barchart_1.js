@@ -13,7 +13,7 @@ const svg = d3.select("#barchart_1")
 const tooltip = d3.select("#barchart_1")
                   .append("div")
                   .style("opacity", 0)
-                  .attr("class", "tooltip")
+                  .attr("class", "tooltip");
 
 // Parse the Data
 d3.csv("barchart_1.csv").then( function(data) {
@@ -58,8 +58,8 @@ d3.csv("barchart_1.csv").then( function(data) {
      
          // Customize the tooltip content
          tooltip.html(`Common name: ${d.common_name}<br>Average height: ${d.avg_height} m`)
-                .style("left", event.pageX + "px")
-                .style("top", event.pageY + "px");
+                .style("left",(event.pageX + 20) + "px")
+                .style("top", (event.pageY - 40) + "px");
          
        })
       
