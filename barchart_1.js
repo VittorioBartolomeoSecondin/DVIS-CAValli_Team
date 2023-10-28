@@ -7,36 +7,40 @@ const svg = d3.select("#barchart_1")
               .attr("height", height + margin.top + margin.bottom)
               .append("g")
               .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+///////////////////////// Create the tooltip element
+const tooltip = d3.select("#barchart_1")
+                  .append("div")
+                  .attr("class", "tooltip")
+                  .style("opacity", 0);
+
 // Parse the Data
 d3.csv("barchart_1.csv").then( function(data) {
+
     // Add X axis
     const x = d3.scaleLinear()
                 .domain([0, 250000])
                 .range([ 0, width]);
+
     svg.append("g")
        .attr("transform", `translate(0, ${height})`)
        .call(d3.axisBottom(x))
        .selectAll("text")
        .attr("transform", "translate(-10,0)rotate(-45)")
        .style("text-anchor", "end");
+
     // Y axis
     const y = d3.scaleBand()
                 .range([ height, 0 ])
                 .domain(data.map(d => d.scientific_name))
                 .padding(.1);
+
     svg.append("g")
        .call(d3.axisLeft(y))
-
-   ///////////////////////// Create the tooltip element
-   const tooltip = d3.select("#barchart_1")
-                     .append("div")
-                     .attr("class", "tooltip")
-                     .style("opacity", 0);
 
     // Bars
     svg.selectAll("myRect")
        .data(data)
-       .enter()
        .join("rect")
        .attr("x", x(0) )
        .attr("y", d => y(d.scientific_name))
@@ -46,13 +50,13 @@ d3.csv("barchart_1.csv").then( function(data) {
        .on("mouseover", function (event, d) {
          // Show the tooltip
          tooltip.transition()
-           .duration(200)
-           .style("opacity", 1);
+                .duration(200)
+                .style("opacity", 1);
      
          // Customize the tooltip content
          tooltip.html(`Common name: ${d.common_name}<br>Average height: ${d.avg_height}`)
-           .style("left", (event.pageX + 10) + "px")
-           .style("top", (event.pageY - 28) + "px");
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 28) + "px");
        })
        .on("mouseout", function (d) {
          // Hide the tooltip
@@ -60,6 +64,5 @@ d3.csv("barchart_1.csv").then( function(data) {
            .duration(500)
            .style("opacity", 0);
 
-})
-
+       })
 })
