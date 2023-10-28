@@ -46,7 +46,8 @@ d3.csv("barchart_1.csv").then( function(data) {
        .append("rect")
        .attr("x", x(0) )
        .attr("y", d => y(d.scientific_name))
-       .attr("width", d => x(d.count))
+       //.attr("width", d => x(d.count))
+       .attr("width", 0)
        .attr("height", y.bandwidth())
        .attr("fill", "steelblue")
        .on("mouseover", function (event, d) {
@@ -77,7 +78,7 @@ d3.csv("barchart_1.csv").then( function(data) {
     svg.selectAll("rect")
         .transition()
         .duration(1000)
-        .attr("x", 0)
+        .attr("x", x(0) )
         .attr("width", d => x(d.count))
         .delay((d, i) => i * 100);
 
