@@ -1,21 +1,24 @@
-.tooltip-container {
-    position: relative;
-}
-
-.element-with-tooltip::before {
-    content: attr(data-tooltip); /* Display the content of the data-tooltip attribute as the tooltip text */
+.tooltip {
+    display: none;
     position: absolute;
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
     border-radius: 5px;
-    display: none; /* Hide the tooltip by default */
-    z-index: 1; /* Ensure the tooltip appears above other content */
-    bottom: 100%; /* Position the tooltip just above the element */
-    left: 50%; /* Position it horizontally centered over the element */
-    transform: translateX(-50%); /* Center it horizontally */
+    padding: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.element-with-tooltip:hover::before {
-    display: block; /* Show the tooltip when the element is hovered */
+.tooltip .tooltip-content {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+    max-width: 200px;
+}
+
+.tooltip p {
+    margin: 0;
+}
+
+.tooltip strong {
+    font-weight: bold;
 }
