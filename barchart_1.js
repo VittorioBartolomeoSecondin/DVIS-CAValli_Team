@@ -72,13 +72,14 @@ d3.csv("barchart_1.csv").then( function(data) {
          
        });
 
-  
+
   // Animation
     svg.selectAll("rect")
         .transition()
         .duration(800)
-        .attr("y", d => y(d.Value))
-        .attr("height", d => height - y(d.Value))
-        .delay((d,i) => {console.log(i); return i*100})
+        .attr("x", 0)
+        .attr("width", d => x(d.Value))
+        .delay((d, i) => i * 100);
+
 
 })
