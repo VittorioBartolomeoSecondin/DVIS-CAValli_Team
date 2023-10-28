@@ -94,5 +94,6 @@ updateChart("barchart_1.csv");
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = this.value;
+  d3.selectAll("svg").remove();
   updateChart(selectedDataset);
 });
