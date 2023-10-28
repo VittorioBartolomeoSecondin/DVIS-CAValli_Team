@@ -18,10 +18,12 @@ function updateChart(selectedDataset) {
                         .append("div")
                         .style("opacity", 0)
                         .attr("class", "tooltip");
-      
+
+      var max = d3.max(data, function(d) { return d.count; });
+    
       // Add X axis
       const x = d3.scaleLinear()
-                  .domain([0, d3.max(d.count)])
+                  .domain([0, max])
                   .range([ 0, width]);
     
       svg.append("g")
