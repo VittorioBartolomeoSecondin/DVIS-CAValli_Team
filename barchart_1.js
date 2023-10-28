@@ -17,6 +17,7 @@ const tooltip = d3.select("#barchart_1")
 
 // Parse the Data
 function updateChart(selectedDataset) {
+  print(selectedDataset);
   d3.csv(selectedDataset).then( function(data) {
       
       // Add X axis
