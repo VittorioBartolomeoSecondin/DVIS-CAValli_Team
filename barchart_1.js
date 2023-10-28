@@ -43,4 +43,40 @@ d3.csv("barchart_1.csv").then( function(data) {
        .attr("height", y.bandwidth())
        .attr("fill", "steelblue")
 
+///////////////////////// Create the tooltip element
+const tooltip = d3.select("#barchart_1")
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
+// Bars
+svg.selectAll("myRect")
+  .data(data)
+  .enter()
+  .append("rect")
+  .attr("x", x(0))
+  .attr("y", d => y(d.scientific_name))
+  .attr("width", d => x(d.count))
+  .attr("height", y.bandwidth())
+  .attr("fill", "steelblue")
+  .on("mouseover", function (event, d) {
+    // Show the tooltip
+    tooltip.transition()
+      .duration(200)
+      .style("opacity", 1);
+
+    // Customize the tooltip content
+    tooltip.html(`Scientific Name: ${d.scientific_name}<br>Count: ${d.count}`)
+      .style("left", (event.pageX + 10) + "px")
+      .style("top", (event.pageY - 28) + "px");
+  })
+  .on("mouseout", function (d) {
+    // Hide the tooltip
+    tooltip.transition()
+      .duration(500)
+      .style("opacity", 0);
+  });  
+
+
+  
 })
