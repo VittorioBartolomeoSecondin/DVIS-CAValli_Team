@@ -76,7 +76,7 @@ d3.csv("barchart_1.csv").then( function(data) {
   // Animation
     svg.selectAll("rect")
         .transition()
-        .duration(800)
+        .duration(1000)
         .attr("x", 0)
         .attr("width", d => x(d.Value))
         .delay((d, i) => i * 100);
