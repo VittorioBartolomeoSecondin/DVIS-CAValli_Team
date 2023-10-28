@@ -39,6 +39,14 @@ d3.csv("barchart_1.csv").then( function(data) {
     svg.append("g")
        .call(d3.axisLeft(y));
 
+    // Animation
+    svg.selectAll("rect")
+        .transition()
+        .duration(800)
+        .attr("y", d => y(d.Value))
+        .attr("height", d => height - y(d.Value))
+        .delay((d,i) => {console.log(i); return i*100})
+
     // Bars
     svg.selectAll("myRect")
        .data(data)
