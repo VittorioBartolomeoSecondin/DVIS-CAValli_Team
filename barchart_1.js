@@ -64,5 +64,5 @@ d3.csv("barchart_1.csv").then( function(data) {
            .duration(500)
            .style("opacity", 0);
 
-       })
+       });
 })
