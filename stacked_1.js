@@ -51,7 +51,10 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   
   // Stack the data (per subgroup)
   const stackedData = d3.stack()
-                        .keys(subgroups)
+                        .keys(subgroups)                      
+                        .value((d, key) => +d[key])
+                        .order(d3.stackOrderNone)
+                        .offset(d3.stackOffsetNone)
                         (data);
 
   // Show the bars
