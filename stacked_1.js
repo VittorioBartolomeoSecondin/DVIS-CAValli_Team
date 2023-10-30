@@ -5,7 +5,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   const svg = d3.select("#stacked_1")
                 .append("svg")
                   .attr("width", width + margin.left + margin.right)
-                  .attr("height", height + 300 + margin.top + margin.bottom)
+                  .attr("height", height + margin.top + margin.bottom)
                 .append("g")
                   .attr("transform", `translate(${margin.left},${margin.top})`);
 
