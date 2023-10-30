@@ -75,7 +75,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
          .attr("y", d => y(d.data.city))
          .attr("width", d => x(d[1]) - x(d[0]))
          .attr("height", y.bandwidth())
-       .on("mouseover", function (event, d) => {
+       .on("mouseover", (event, d) => {
           
          // Show the tooltip
          tooltip.transition()
@@ -90,7 +90,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                 .style("top", (event.pageY - 40) + "px");
        
        })
-       .on("mouseout", function (d) => {
+       .on("mouseout", () => {
           
          // Hide the tooltip
           tooltip.transition()
