@@ -22,7 +22,7 @@ function updateChart(selectedDataset) {
                         .attr("class", "tooltip");
     
       // Define maximum
-      var max = d3.max(data, function(d) { return +d.count;} );
+      var max = d3.max(data, function(d) {return +d.count;});
     
       // Add X axis
       const x = d3.scaleLinear()
