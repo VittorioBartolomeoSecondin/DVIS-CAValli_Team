@@ -38,7 +38,7 @@ function updateChart(selectedDataset) {
       
       // Y axis
       const y = d3.scaleBand()
-                  .range([ height, 0 ])
+                  .range([height, 0])
                   .domain(data.map(d => d.scientific_name))
                   .padding(.1);
   
