@@ -19,7 +19,7 @@ function updateChart(selectedDataset) {
                         .style("opacity", 0)
                         .style("background-color", "lightgray")
                         .style("border", "2px solid black")
-                        .attr("class", "tooltip");
+                          .attr("class", "tooltip");
     
       // Define maximum
       var max = d3.max(data, function(d) {return +d.count;});
