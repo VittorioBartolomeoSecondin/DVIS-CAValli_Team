@@ -8,10 +8,10 @@ function updateChart(selectedDataset) {
       // append the svg object to the body of the page
       const svg = d3.select("#barchart_1")
                     .append("svg")
-                    .attr("width", width + margin.left + margin.right)
-                    .attr("height", height + margin.top + margin.bottom)
+                      .attr("width", width + margin.left + margin.right)
+                      .attr("height", height + margin.top + margin.bottom)
                     .append("g")
-                    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+                      .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
       // Create the tooltip element
       const tooltip = d3.select("#barchart_1")
@@ -29,10 +29,10 @@ function updateChart(selectedDataset) {
                   .range([ 0, width]);
     
       svg.append("g")
-         .attr("transform", `translate(0, ${height})`)
+           .attr("transform", `translate(0, ${height})`)
          .call(d3.axisBottom(x))
          .selectAll("text")
-         .attr("transform", "translate(-10,0)rotate(-45)")
+           .attr("transform", "translate(-10,0)rotate(-45)")
          .style("text-anchor", "end");
       
       // Y axis
@@ -49,12 +49,12 @@ function updateChart(selectedDataset) {
          .data(data)
          .enter()
          .append("rect")
-         .attr("x", x(0) )
-         .attr("y", d => y(d.scientific_name))
-         //.attr("width", d => x(d.count))
-         .attr("width", 0)
-         .attr("height", y.bandwidth())
-         .attr("fill", "steelblue")
+           .attr("x", x(0) )
+           .attr("y", d => y(d.scientific_name))
+           //.attr("width", d => x(d.count))
+           .attr("width", 0)
+           .attr("height", y.bandwidth())
+           .attr("fill", "steelblue")
          .on("mouseover", function (event, d) {
 
            d3.select(this).style("fill", "lightgreen")
@@ -89,8 +89,8 @@ function updateChart(selectedDataset) {
       svg.selectAll("rect")
           .transition()
           .duration(1000)
-          .attr("x", x(0) )
-          .attr("width", d => x(d.count))
+            .attr("x", x(0) )
+            .attr("width", d => x(d.count))
           .delay((d, i) => i * 100);
 
   })
