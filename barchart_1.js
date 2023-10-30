@@ -45,7 +45,7 @@ function updateChart(selectedDataset) {
       svg.append("g")
          .call(d3.axisLeft(y));
   
-      // Bars
+      // Show the bars
       svg.selectAll("myRect")
          .data(data)
          .enter()
