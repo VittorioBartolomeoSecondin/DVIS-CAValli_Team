@@ -63,7 +63,7 @@ function updateChart(selectedDataset) {
            tooltip.transition()
                   .duration(200)
                   .style("opacity", 1);
-                  .style("background-color", "lightgray")
+                  .style("background-color", "lightgray");
                   //.style("border", "2px solid black")
        
            // Customize the tooltip content
