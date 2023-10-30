@@ -17,10 +17,10 @@ d3.csv("section1_1/stacked_1.csv", function(data) {
 
    console.log(data);
 
-  // List of subgroups = header of the csv files = soil condition here
+  // List of subgroups = header of the csv files = scientific name of the tree (here)
   var subgroups = data.columns.slice(1)
 
-  // List of groups = species here = value of the first column called group -> I show them on the X axis
+  // List of groups = cities (here) = value of the first column called city -> I show them on the X axis
   var groups = d3.map(data, function(d){return(d.city)}).keys()
 
   // Add X axis
