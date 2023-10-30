@@ -18,7 +18,6 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   const groups = data.map(d => d.city);
 
   // Define maximum
-  // var max = d3.max(data, d => d3.max(subgroups, key => +d[key]));
   var max = d3.max(data, d => d3.sum(subgroups.map(key => +d[key])));  
 
   // Add X axis
