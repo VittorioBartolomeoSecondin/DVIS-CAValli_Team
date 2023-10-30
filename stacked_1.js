@@ -9,8 +9,7 @@ var svg = d3.select("#stacked_1")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
 d3.csv("section1_1/stacked_1.csv", function(data) {
@@ -18,7 +17,7 @@ d3.csv("section1_1/stacked_1.csv", function(data) {
    console.log(data);
 
   // List of subgroups = header of the csv files = scientific name of the tree (here)
-  var subgroups = data.columns.slice(1);
+  var subgroups = data.columns.slice();
 
   // List of groups = cities (here) = value of the first column called city -> I show them on the X axis
   var groups = d3.map(data, function(d){return(d.city)}).keys();
