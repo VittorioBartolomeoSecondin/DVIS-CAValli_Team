@@ -67,7 +67,7 @@ function updateChart(selectedDataset) {
                   .style("border", "2px solid black");
        
            // Customize the tooltip content
-           tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} m`)
+           tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} meters`)
                   .style("left",(event.pageX + 40) + "px")
                   .style("top", (event.pageY - 40) + "px");
            
