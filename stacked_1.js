@@ -78,7 +78,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
        .on("mouseover", (event, d) => {
           // Show the tooltip
           tooltip.transition().duration(200).style("opacity", 1);
-          tooltip.html(`City: ${d.data.city}<br>${d.key}: ${d[1] - d[0]}`);
+          tooltip.html(`City: ${d.data.city}<br>${d.key}:${d.data[d.key]}<br>Count: ${d[1] - d[0]}`);
        })
        .on("mousemove", (event) => {
           // Move the tooltip with the mouse pointer
