@@ -50,7 +50,7 @@ function updateChart(selectedDataset) {
          .data(data)
          .enter()
          .append("rect")
-           .attr("x", x(0) )
+           .attr("x", x(0))
            .attr("y", d => y(d.scientific_name))
            //.attr("width", d => x(d.count))
            .attr("width", 0)
@@ -90,7 +90,7 @@ function updateChart(selectedDataset) {
       svg.selectAll("rect")
           .transition()
           .duration(1000)
-            .attr("x", x(0) )
+            .attr("x", x(0))
             .attr("width", d => x(d.count))
           .delay((d, i) => i * 100);
 
