@@ -89,13 +89,13 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                 .style("left", (event.pageX + 40) + "px")
                 .style("top", (event.pageY - 40) + "px");
        
-       })
-       .on("mouseout", () => {
+         })
+         .on("mouseout", () => {
           
-         // Hide the tooltip
+          // Hide the tooltip
           tooltip.transition()
                  .duration(500)
                  .style("opacity", 0);
          
-    });
+          });
 })
