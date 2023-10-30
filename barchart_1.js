@@ -18,7 +18,7 @@ function updateChart(selectedDataset) {
                         .append("section")
                         .style("opacity", 0)
                         .style("background-color", "lightgray")
-                        .style("border", "2px solid black")
+                        //.style("border", "2px solid black")
                         .attr("class", "tooltip");
 
       var max = d3.max(data, function(d) { return +d.count;} );
@@ -64,7 +64,7 @@ function updateChart(selectedDataset) {
                   .duration(200)
                   .style("opacity", 1);
                   .style("background-color", "lightgray")
-                  .style("border", "2px solid black")
+                  //.style("border", "2px solid black")
        
            // Customize the tooltip content
            tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} m`)
