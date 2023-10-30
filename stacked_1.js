@@ -18,10 +18,10 @@ d3.csv("section1_1/stacked_1.csv", function(data) {
    console.log(data);
 
   // List of subgroups = header of the csv files = scientific name of the tree (here)
-  var subgroups = data.columns.slice(1)
+  var subgroups = data.columns.slice(1);
 
   // List of groups = cities (here) = value of the first column called city -> I show them on the X axis
-  var groups = d3.map(data, function(d){return(d.city)}).keys()
+  var groups = d3.map(data, function(d){return(d.city)}).keys();
 
   // Add X axis
   var x = d3.scaleBand()
@@ -42,7 +42,7 @@ d3.csv("section1_1/stacked_1.csv", function(data) {
   // color palette = one color per subgroup
   var color = d3.scaleOrdinal()
     .domain(subgroups)
-    .range(['#e41a1c','#377eb8','#4daf4a', '#fcff33', '#c733ff'])
+    .range(['#e41a1c','#377eb8','#4daf4a', '#fcff33', '#c733ff']);
 
   //stack the data? --> stack per subgroup
   var stackedData = d3.stack()
@@ -63,5 +63,5 @@ d3.csv("section1_1/stacked_1.csv", function(data) {
         .attr("x", function(d) { return x(d.data.city); })
         .attr("y", function(d) { return y(d[1]); })
         .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-        .attr("width",x.bandwidth())
+        .attr("width",x.bandwidth());
 })
