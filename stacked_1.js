@@ -75,18 +75,27 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
          .attr("y", d => y(d.data.city))
          .attr("width", d => x(d[1]) - x(d[0]))
          .attr("height", y.bandwidth())
-       .on("mouseover", (event, d) => {
-          // Show the tooltip
-          tooltip.transition().duration(200).style("opacity", 1);
-          tooltip.html(`City: ${d.data.city}<br>Scientific name: ${d3.select(this.parentNode).datum().key}<br>Count: ${d[1] - d[0]}`);
+       .on("mouseover", function (event, d) => {
+          
+         // Show the tooltip
+         tooltip.transition()
+                .duration(200)
+                .style("opacity", 1)
+                .style("background-color", "lightgray")
+                .style("border", "2px solid black");
+
+         // Customize the tooltip content
+         tooltip.html(`City: ${d.data.city}<br>Scientific name: ${d3.select(this.parentNode).datum().key}<br>Count: ${d[1] - d[0]}`)
+                .style("left", (event.pageX + 40) + "px")
+                .style("top", (event.pageY - 40) + "px");
+       
        })
-       .on("mousemove", (event) => {
-          // Move the tooltip with the mouse pointer
-          tooltip.style("left", event.pageX + 10 + "px")
-                 .style("top", event.pageY + "px");
-       })
-       .on("mouseout", () => {
-          // Hide the tooltip on mouseout
-          tooltip.transition().duration(500).style("opacity", 0);
+       .on("mouseout", function (d) => {
+          
+         // Hide the tooltip
+          tooltip.transition()
+                 .duration(500)
+                 .style("opacity", 0);
+         
     });
 })
