@@ -1,18 +1,13 @@
-// Set the dimensions and margins of the graph
-const margin2 = {top: 40, right: 40, bottom: 50, left: 140},
-    width = 460 - margin2.left - margin2.right,
-    height = 400 - margin2.top - margin2.bottom;
-
 // Parse the Data
 d3.csv("section1_1/stacked_1.csv").then( function(data) {
   
   // append the svg object to the body of the page
   const svg = d3.select("#stacked_1")
                 .append("svg")
-                  .attr("width", width + margin2.left + margin2.right)
-                  .attr("height", height + margin2.top + margin2.bottom)
+                  .attr("width", width + margin.left + margin.right)
+                  .attr("height", height + margin.top + margin.bottom)
                 .append("g")
-                  .attr("transform", `translate(${margin2.left},${margin2.top})`);
+                  .attr("transform", `translate(${margin.left},${margin.top})`);
 
   //// HERE WE SHOULD CREATE THE TOOLTIP  
  
