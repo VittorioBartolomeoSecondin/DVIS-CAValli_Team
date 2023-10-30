@@ -18,11 +18,11 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   const groups = data.map(d => d.city);
 
   // Define maximum
-  var max = d3.max(data, function(d) {return +d.count;});
+  // var max = d3.max(data, function(d) {return +d.count;});
 
   // Add X axis
   const x = d3.scaleLinear()
-              .domain([0, max + max/10])
+              .domain([0, d3.max(data, d => d3.max(subgroups, key => +d[key]))])
               .range([0, width]);
   
   svg.append("g")
