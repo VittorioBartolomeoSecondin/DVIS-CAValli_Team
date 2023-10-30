@@ -26,7 +26,6 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
               .range([0, width]);
   
   svg.append("g")
-     //.call(d3.axisLeft(x))
        .attr("transform", `translate(0, ${height})`)
      .call(d3.axisBottom(x))
      .selectAll("text")
@@ -40,8 +39,6 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
               .padding(.1);
   
   svg.append("g")
-     //.attr("transform", `translate(0, ${height})`)
-     //.call(d3.axisBottom(y).tickSizeOuter(0))
      .call(d3.axisLeft(y).tickSizeOuter(0));
 
   // Color palette = one color per subgroup
