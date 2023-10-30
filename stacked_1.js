@@ -15,6 +15,8 @@ var svg = d3.select("#stacked_1")
 // Parse the Data
 d3.csv("section1_1/stacked_1.csv", function(data) {
 
+   console.log(data);
+
   // List of subgroups = header of the csv files = soil condition here
   var subgroups = data.columns.slice(1)
 
