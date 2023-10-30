@@ -18,7 +18,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   const groups = data.map(d => (d.city));
 
   // Define maximum
-  var max = d3.max(data, function(d) { return +d.count;} );
+  var max = d3.max(data, function(d) {return +d.count;});
 
   // Add X axis
   const x = d3.scaleLinear()
@@ -28,7 +28,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   svg.append("g")
      //.call(d3.axisLeft(x))
        .attr("transform", `translate(0, ${height})`)
-     .call(d3.axisBottom(x))
+     .call(d3.axisBottom(x).tickSizeOuter(0))
      .selectAll("text")
        .attr("transform", "translate(-10,0)rotate(-45)")
      .style("text-anchor", "end");
@@ -37,7 +37,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   const y = d3.scaleBand()
               .range([height, 0])
               .domain(groups)
-              .padding([.1]);
+              .padding(.1);
   
   svg.append("g")
      //.attr("transform", `translate(0, ${height})`)
@@ -47,12 +47,12 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   // Color palette = one color per subgroup
   const color = d3.scaleOrdinal()
                   .range(['#e41a1c', '#377eb8', '#4daf4a', '#fcff33', '#c733ff'])
-                  .domain(subgroups) 
+                  .domain(subgroups);
   
   // Stack the data (per subgroup)
   const stackedData = d3.stack()
                         .keys(subgroups)
-                        (data)
+                        (data);
 
   // Show the bars
   svg.append("g")
@@ -68,5 +68,5 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
          .attr("x", d => x(d[1]))
          .attr("y", d => y(d.data.city))
          .attr("width", d => x(d[0]) - x(d[1]))
-         .attr("height", y.bandwidth())         
+         .attr("height", y.bandwidth());        
 })
