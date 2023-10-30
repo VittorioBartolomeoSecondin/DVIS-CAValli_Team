@@ -77,25 +77,27 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
          .attr("height", y.bandwidth())
        .on("mouseover", (event, d) => {
           
-         // Show the tooltip
-         tooltip.transition()
-                .duration(200)
-                .style("opacity", 1)
-                .style("background-color", "lightgray")
-                .style("border", "2px solid black");
+        // Show the tooltip
+        tooltip.transition()
+               .duration(200)
+               .style("opacity", 1)
+               .style("background-color", "lightgray")
+               .style("border", "2px solid black");
 
-         // Customize the tooltip content
-         tooltip.html(`City: ${d.data.city}<br>Scientific name: ${d3.select(this.parentNode).datum().key}<br>Count: ${d[1] - d[0]}`)
-                .style("left", (event.pageX + 40) + "px")
-                .style("top", (event.pageY - 40) + "px");
+
+        //const subgroupName = d3.keys(d.data).find(key => d.data[key] === d[1]);
+        // Customize the tooltip content
+        tooltip.html(`City: ${d.data.city}<br>Scientific name:<br>Count: ${d[1] - d[0]}`)
+               .style("left", (event.pageX + 40) + "px")
+               .style("top", (event.pageY - 40) + "px");
        
-         })
-         .on("mouseout", () => {
-          
-          // Hide the tooltip
-          tooltip.transition()
-                 .duration(500)
-                 .style("opacity", 0);
+        })
+        .on("mouseout", () => {
          
-          });
+         // Hide the tooltip
+         tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        
+         });
 })
