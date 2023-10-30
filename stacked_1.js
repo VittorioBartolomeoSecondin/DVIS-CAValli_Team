@@ -85,9 +85,9 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                .style("border", "2px solid black");
 
 
-        //const subgroupName = d3.keys(d.data).find(key => d.data[key] === d[1]);
+        const subgroupName = d3.keys(d.data).find(key => d.data[key] === d[1]);
         // Customize the tooltip content
-        tooltip.html(`City: ${d.data.city}<br>Scientific name:<br>Count: ${d[1] - d[0]}`)
+        tooltip.html(`City: ${d.data.city}<br>Scientific name: ${subgroupName}<br>Count: ${d[1] - d[0]}`)
                .style("left", (event.pageX + 40) + "px")
                .style("top", (event.pageY - 40) + "px");
        
