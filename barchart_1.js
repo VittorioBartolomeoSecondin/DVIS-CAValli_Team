@@ -36,7 +36,7 @@ function updateChart(selectedDataset) {
            .attr("transform", "translate(-10,0)rotate(-45)")
          .style("text-anchor", "end");
       
-      // Y axis
+      // Add Y axis
       const y = d3.scaleBand()
                   .range([height, 0])
                   .domain(data.map(d => d.scientific_name))
