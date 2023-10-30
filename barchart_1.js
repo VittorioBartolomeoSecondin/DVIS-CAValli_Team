@@ -54,6 +54,8 @@ function updateChart(selectedDataset) {
          .attr("height", y.bandwidth())
          .attr("fill", "steelblue")
          .on("mouseover", function (event, d) {
+
+           d3.select(this).style("fill", "lightgreen")
            
            // Show the tooltip
            tooltip.transition()
@@ -68,6 +70,8 @@ function updateChart(selectedDataset) {
          })
         
          .on("mouseout", function (d) {
+
+           d3.select(this).style("fill", "steelblue")
            
            // Hide the tooltip
            tooltip.transition()
