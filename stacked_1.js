@@ -43,7 +43,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
 
   // Color palette = one color per subgroup
   const color = d3.scaleOrdinal()
-                  .range(['#e41a1c', '#377eb8', '#4daf4a', '#fcff33', '#c733ff'])
+                  .range(['#e41a1c', '#377eb8', '#4daf4a', '#f48d0a', '#800aee'])
                   .domain(subgroups);
   
   // Stack the data (per subgroup)
