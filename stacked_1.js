@@ -16,8 +16,7 @@ var svg = d3.select("#stacked_1")
 d3.csv("section1_1/stacked_1.csv", function(data) {
 
   // List of subgroups = header of the csv files = soil condition here
-  var subgroups = data.columns.slice(1);
-   console.log(subgroups);
+  var subgroups = data.columns.slice(1)
 
   // List of groups = species here = value of the first column called group -> I show them on the X axis
   var groups = d3.map(data, function(d){return(d.city)}).keys()
