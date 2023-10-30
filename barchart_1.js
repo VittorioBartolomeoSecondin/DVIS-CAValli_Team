@@ -1,11 +1,11 @@
-// set the dimensions and margins of the graph
+// Set the dimensions and margins of the graph
 const margin = {top: 40, right: 40, bottom: 50, left: 140}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
 
 // Parse the Data
 function updateChart(selectedDataset) {
   d3.csv(selectedDataset).then( function(data) {
 
-      // append the svg object to the body of the page
+      // Append the svg object to the body of the page
       const svg = d3.select("#barchart_1")
                     .append("svg")
                       .attr("width", width + margin.left + margin.right)
@@ -20,7 +20,8 @@ function updateChart(selectedDataset) {
                         .style("background-color", "lightgray")
                         .style("border", "2px solid black")
                         .attr("class", "tooltip");
-
+    
+      // Define maximum
       var max = d3.max(data, function(d) { return +d.count;} );
     
       // Add X axis
