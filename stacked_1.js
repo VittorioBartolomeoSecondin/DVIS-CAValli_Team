@@ -15,7 +15,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   const subgroups = data.columns.slice(1);
 
   // List of groups = value of the first column cities (here) -> on Y axis
-  const groups = data.map(d => (d.city));
+  const groups = data.map(d => d.city);
 
   // Define maximum
   var max = d3.max(data, function(d) {return +d.count;});
@@ -28,21 +28,21 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   svg.append("g")
      //.call(d3.axisLeft(x))
        .attr("transform", `translate(0, ${height})`)
-     .call(d3.axisBottom(x).tickSizeOuter(0))
+     .call(d3.axisBottom(x))
      .selectAll("text")
        .attr("transform", "translate(-10,0)rotate(-45)")
      .style("text-anchor", "end");
   
   // Add Y axis
   const y = d3.scaleBand()
-              .range([height, 0])
+              .range([0, height])
               .domain(groups)
               .padding(.1);
   
   svg.append("g")
      //.attr("transform", `translate(0, ${height})`)
      //.call(d3.axisBottom(y).tickSizeOuter(0))
-     .call(d3.axisLeft(y));
+     .call(d3.axisLeft(y).tickSizeOuter(0));
 
   // Color palette = one color per subgroup
   const color = d3.scaleOrdinal()
@@ -65,8 +65,8 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
        // enter a second time = loop subgroup per subgroup to add all rectangles
        .data(d => d)
        .join("rect")
-         .attr("x", d => x(d[1]))
+         .attr("x", d => x(d[0]))
          .attr("y", d => y(d.data.city))
-         .attr("width", d => x(d[0]) - x(d[1]))
+         .attr("width", d => x(d[1]) - x(d[0]))
          .attr("height", y.bandwidth());        
 })
