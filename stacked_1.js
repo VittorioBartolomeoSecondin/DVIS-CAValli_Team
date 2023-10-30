@@ -9,12 +9,18 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                 .append("g")
                   .attr("transform", `translate(${margin.left},${margin.top})`);
 
-  //// HERE WE SHOULD CREATE THE TOOLTIP  
+  // Create the tooltip element
+  const tooltip = d3.select("#stacked_1")
+                    .append("section")
+                    .style("opacity", 0)
+                    .style("background-color", "lightgray")
+                    .style("border", "2px solid black")
+                      .attr("class", "tooltip"); 
  
   // List of subgroups = header of the csv files = scientific name of the trees (here)
   const subgroups = data.columns.slice(1);
 
-  // List of groups = value of the first column cities (here) -> on Y axis
+  // List of groups = value of the first column = cities (here) -> on Y axis
   const groups = data.map(d => d.city);
 
   // Define maximum
@@ -68,5 +74,19 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
          .attr("x", d => x(d[0]))
          .attr("y", d => y(d.data.city))
          .attr("width", d => x(d[1]) - x(d[0]))
-         .attr("height", y.bandwidth());        
+         .attr("height", y.bandwidth())
+       .on("mouseover", (event, d) => {
+          // Show the tooltip
+          tooltip.transition().duration(200).style("opacity", 1);
+          tooltip.html(`City: ${d.data.city}<br> ${d.key}: ${d.data[d.key]}`);
+       })
+       .on("mousemove", (event) => {
+          // Move the tooltip with the mouse pointer
+          tooltip.style("left", event.pageX + 10 + "px")
+                 .style("top", event.pageY + "px");
+       })
+       .on("mouseout", () => {
+          // Hide the tooltip on mouseout
+          tooltip.transition().duration(500).style("opacity", 0);
+    });
 })
