@@ -58,6 +58,7 @@ function updateChart(selectedDataset) {
            .attr("fill", "steelblue")
          .on("mouseover", function (event, d) {
 
+           // Change color when hovering
            d3.select(this).style("fill", "lightgreen")
            
            // Show the tooltip
@@ -72,17 +73,16 @@ function updateChart(selectedDataset) {
                   .style("left",(event.pageX + 40) + "px")
                   .style("top", (event.pageY - 40) + "px");
            
-         })
-        
+         })        
          .on("mouseout", function (d) {
 
+           // Returning to original color when not hovering
            d3.select(this).style("fill", "steelblue")
            
            // Hide the tooltip
            tooltip.transition()
              .duration(500)
-             .style("opacity", 0);
-           
+             .style("opacity", 0);           
          });
   
   
