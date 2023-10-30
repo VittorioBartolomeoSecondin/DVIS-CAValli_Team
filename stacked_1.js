@@ -1,7 +1,7 @@
 // Set the dimensions and margins of the graph
 const margin2 = {top: 10, right: 30, bottom: 20, left: 50},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 460 - margin2.left - margin2.right,
+    height = 400 - margin2.top - margin2.bottom;
 
 // Parse the Data
 d3.csv("section1_1/stacked_1.csv").then( function(data) {
