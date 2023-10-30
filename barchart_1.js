@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-const margin = {top: 40, right: 40, bottom: 50, left: 120}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
+const margin = {top: 40, right: 40, bottom: 50, left: 160}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
 
 // Parse the Data
 function updateChart(selectedDataset) {
