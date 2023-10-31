@@ -106,7 +106,8 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
        .on("mouseout", function(event, d) {
 
        // Returning to original color when not hovering
-       d3.select(this).style("fill", color(d.key));
+       const subgroupColor = color(d3.select(this.parentNode).datum().key);
+       d3.select(this).style("fill", subgroupColor);
        
        // Hide the tooltip
        tooltip.transition()
