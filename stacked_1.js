@@ -94,6 +94,13 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                .style("top", (event.pageY - 40) + "px");
        
         })
+        .on("mousemove", function(event, d) {
+        
+        // Move the tooltip with the mouse pointer
+        tooltip.style("left", (event.pageX + 10) + "px")
+               .style("top", (event.pageY + 10) + "px");
+          
+        })
         .on("mouseout", function(event, d) {
          
          // Hide the tooltip
