@@ -56,7 +56,7 @@ function updateChart(selectedDataset) {
            .attr("width", 0)
            .attr("height", y.bandwidth())
            .attr("fill", "steelblue")
-         .on("mouseover", function(event, d) {
+         .on("mouseover", function (event, d) {
 
          // Change color when hovering
          d3.select(this).style("fill", "lightgreen");
@@ -81,7 +81,7 @@ function updateChart(selectedDataset) {
                 .style("top", (event.pageY + 10) + "px");
          
          })
-         .on("mouseout", function(event, d) {
+         .on("mouseout", function (d) {
 
          // Returning to original color when not hovering
          d3.select(this).style("fill", "steelblue");
