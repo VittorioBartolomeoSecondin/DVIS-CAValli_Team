@@ -4,6 +4,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   // append the svg object to the body of the page
   const svg = d3.select("#stacked_1")
                 .append("svg")
+                  .attr("id", "stacked_svg")
                   .attr("width", width + margin.left + margin.right)
                   .attr("height", height + margin.top + margin.bottom)
                 .append("g")
