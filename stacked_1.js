@@ -76,37 +76,42 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
          .attr("width", d => x(d[1]) - x(d[0]))
          .attr("height", y.bandwidth())
        .on("mouseover", function(event, d) {
+
+       // Change color when hovering
+       d3.select(this).style("fill", "lightgreen");
           
-        // Show the tooltip
-        tooltip.transition()
-               .duration(200)
-               .style("opacity", 1)
-               .style("background-color", "lightgray")
-               .style("border", "2px solid black");
+       // Show the tooltip
+       tooltip.transition()
+              .duration(200)
+              .style("opacity", 1)
+              .style("background-color", "lightgray")
+              .style("border", "2px solid black");
+        
+       // Define the subgroup name and value to display them in the tooltip
+       const subgroupName = d3.select(this.parentNode).datum().key;
+       const subgroupValue = d.data[subgroupName];
+        
+       // Customize the tooltip content
+       tooltip.html("Scientific name: " + subgroupName + "<br>" + "Count: " + subgroupValue)
+              .style("left", (event.pageX + 40) + "px")
+              .style("top", (event.pageY - 40) + "px");
+       })
+       .on("mousemove", function(event, d) {
+        
+       // Move the tooltip with the mouse pointer
+       tooltip.style("left", (event.pageX + 10) + "px")
+              .style("top", (event.pageY + 10) + "px");
          
-        // Define the subgroup name and value to display them in the tooltip
-        const subgroupName = d3.select(this.parentNode).datum().key;
-        const subgroupValue = d.data[subgroupName];
-         
-        // Customize the tooltip content
-        tooltip.html("Scientific name: " + subgroupName + "<br>" + "Count: " + subgroupValue)
-               .style("left", (event.pageX + 40) + "px")
-               .style("top", (event.pageY - 40) + "px");
+       })
+       .on("mouseout", function(event, d) {
+
+       // Returning to original color when not hovering
+       d3.select(this).style("fill", color(d.key));
        
-        })
-        .on("mousemove", function(event, d) {
+       // Hide the tooltip
+       tooltip.transition()
+              .duration(500)
+              .style("opacity", 0);
         
-        // Move the tooltip with the mouse pointer
-        tooltip.style("left", (event.pageX + 10) + "px")
-               .style("top", (event.pageY + 10) + "px");
-          
-        })
-        .on("mouseout", function(event, d) {
-         
-         // Hide the tooltip
-         tooltip.transition()
-                .duration(500)
-                .style("opacity", 0);
-        
-         });
+       });
 })
