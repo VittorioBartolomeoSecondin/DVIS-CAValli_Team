@@ -58,35 +58,41 @@ function updateChart(selectedDataset) {
            .attr("fill", "steelblue")
          .on("mouseover", function (event, d) {
 
-           // Change color when hovering
-           d3.select(this).style("fill", "lightgreen")
+         // Change color when hovering
+         d3.select(this).style("fill", "lightgreen");
            
-           // Show the tooltip
-           tooltip.transition()
-                  .duration(200)
-                  .style("opacity", 1)
-                  .style("background-color", "lightgray")
-                  .style("border", "2px solid black");
-       
-           // Customize the tooltip content
-           tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} meters`)
-                  .style("left",(event.pageX + 40) + "px")
-                  .style("top", (event.pageY - 40) + "px");
+         // Show the tooltip
+         tooltip.transition()
+                .duration(200)
+                .style("opacity", 1)
+                .style("background-color", "lightgray")
+                .style("border", "2px solid black");
+         
+         // Customize the tooltip content
+         tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} meters`)
+                .style("left", (event.pageX + 40) + "px")
+                .style("top", (event.pageY - 40) + "px");
            
-         })        
+         })
+         .on("mousemove", function(event, d) {
+        
+         // Move the tooltip with the mouse pointer
+         tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY + 10) + "px");
+         
+         })
          .on("mouseout", function (d) {
 
-           // Returning to original color when not hovering
-           d3.select(this).style("fill", "steelblue")
+         // Returning to original color when not hovering
+         d3.select(this).style("fill", "steelblue");
            
-           // Hide the tooltip
-           tooltip.transition()
-             .duration(500)
-             .style("opacity", 0);           
-         });
+         // Hide the tooltip
+         tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);           
+         });  
   
-  
-    // Animation
+      // Animation
       svg.selectAll("rect")
           .transition()
           .duration(1000)
