@@ -8,6 +8,7 @@ function updateChart(selectedDataset) {
     // Append the svg object to the body of the page
       const svg = d3.select("#barchart_1")
                     .append("svg")
+                    .attr("id", "barchart_svg")
                       .attr("width", width + margin.left + margin.right)
                       .attr("height", height + margin.top + margin.bottom)
                     .append("g")
@@ -108,7 +109,6 @@ updateChart("section1_1/total.csv");
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = this.value;
-  d3.selectAll("svg").remove();
-  d3.selectAll("section").remove();
+  d3.select("#barchart_svg").remove();
   updateChart(selectedDataset);
 });
