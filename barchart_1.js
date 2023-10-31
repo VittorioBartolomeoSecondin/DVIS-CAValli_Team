@@ -1,26 +1,29 @@
 // Set the dimensions and margins of the graph
 const margin = {top: 40, right: 40, bottom: 50, left: 140}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
+
 // Parse the Data
 function updateChart(selectedDataset) {
   d3.csv(selectedDataset).then( function(data) {
-      // Append the svg object to the body of the page
+      
+    // Append the svg object to the body of the page
       const svg = d3.select("#barchart_1")
                     .append("svg")
                       .attr("width", width + margin.left + margin.right)
                       .attr("height", height + margin.top + margin.bottom)
                     .append("g")
                       .attr("transform", `translate(${margin.left}, ${margin.top})`);
-      // Create the tooltip element
+      
+    // Create the tooltip element
       const tooltip = d3.select("#barchart_1")
                         .append("section")
                         .style("opacity", 0)
                         .style("background-color", "lightgray")
                         .style("border", "2px solid black")
-                        .attr("class", "tooltip");
-
+                          .attr("class", "tooltip");
+    
       // Define maximum
       var max = d3.max(data, function(d) {return +d.count;});
-
+    
       // Add X axis
       const x = d3.scaleLinear()
                   .domain([0, max + max/10])
@@ -54,34 +57,42 @@ function updateChart(selectedDataset) {
            .attr("height", y.bandwidth())
            .attr("fill", "steelblue")
          .on("mouseover", function (event, d) {
-           d3.select(this).style("fill", "lightgreen")
-           
-           // Show the tooltip
-           tooltip.transition()
-                  .duration(200)
-                  .style("opacity", 1)
-                  .style("background-color", "lightgray")
-                  .style("border", "2px solid black");
-       
-           // Customize the tooltip content
-           tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} meters`)
-                  .style("left",(event.pageX + 40) + "px")
-                  .style("top", (event.pageY - 40) + "px");
-           
+
+         // Change color when hovering
+         d3.select(this).style("fill", "lightgreen");
+
+         // Show the tooltip
+         tooltip.transition()
+                .duration(200)
+                .style("opacity", 1)
+                .style("background-color", "lightgray")
+                .style("border", "2px solid black");
+         
+         // Customize the tooltip content
+         tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} meters`)
+                .style("left", (event.pageX + 40) + "px")
+                .style("top", (event.pageY - 40) + "px");
+
          })
-        
+         .on("mousemove", function (event, d) {
+
+         // Move the tooltip with the mouse pointer
+         tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY + 10) + "px");
+
+         })
          .on("mouseout", function (d) {
-           d3.select(this).style("fill", "steelblue")
-           
-           // Hide the tooltip
-           tooltip.transition()
-             .duration(500)
-             .style("opacity", 0);
-           
-         });
-  
-  
-    // Animation
+
+         // Returning to original color when not hovering
+         d3.select(this).style("fill", "steelblue");
+
+         // Hide the tooltip
+         tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);           
+         });  
+
+      // Animation
       svg.selectAll("rect")
           .transition()
           .duration(1000)
@@ -90,8 +101,10 @@ function updateChart(selectedDataset) {
           .delay((d, i) => i * 100);
   })
 }
+
 // Initial chart creation with the default dataset
 updateChart("section1_1/total.csv");
+
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = this.value;
