@@ -75,7 +75,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
          .attr("y", d => y(d.data.city))
          .attr("width", d => x(d[1]) - x(d[0]))
          .attr("height", y.bandwidth())
-       .on("mouseover", (event, d) => {
+       .on("mouseover", function(event, d) => {
           
         // Show the tooltip
         tooltip.transition()
@@ -83,16 +83,18 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                .style("opacity", 1)
                .style("background-color", "lightgray")
                .style("border", "2px solid black");
-
-
-        const subgroupName = d3.keys(d.data).find(key => d.data[key] === d[1]);
+         
+        // Define the subgroup name and value to display them in the tooltip
+        const subgroupName = d3.select(this.parentNode).datum().key;
+        const subgroupValue = d.data[subgroupName];
+         
         // Customize the tooltip content
-        tooltip.html(`City: ${d.data.city}<br>Scientific name: ${subgroupName}<br>Count: ${d[1] - d[0]}`)
+        tooltip.html("Scientific name: " + subgroupName + "<br>" + "Count: " + subgroupValue)
                .style("left", (event.pageX + 40) + "px")
                .style("top", (event.pageY - 40) + "px");
        
         })
-        .on("mouseout", () => {
+        .on("mouseout", function(event, d) => {
          
          // Hide the tooltip
          tooltip.transition()
