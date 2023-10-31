@@ -95,6 +95,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
        tooltip.html("Scientific name: " + subgroupName + "<br>" + "Count: " + subgroupValue)
               .style("left", (event.pageX + 40) + "px")
               .style("top", (event.pageY - 40) + "px");
+         
        })
        .on("mousemove", function(event, d) {
         
