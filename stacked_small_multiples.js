@@ -112,7 +112,7 @@ function updateChart(selectedValue) {
 
 updateChart("all"); // Load the chart with all cities initially
 
-document.getElementById("city-selector").addEventListener("change", function () {
+document.getElementById("city-dropdown").addEventListener("change", function () {
   const selectedValue = this.value;
   d3.select("#small_multiple1_svg").remove();
   d3.select("#small_multiple2_svg").remove();
