@@ -25,13 +25,15 @@ function updateStackedChart(selectedValue) {
   
     // List of groups = value of the first column = cities (here) -> on Y axis
     const groups = data.map(d => d.city);
-  
-    // Define maximum
-    var max = d3.max(data, d => d3.sum(subgroups.map(key => +d[key])));  
 
     var filteredGroups = groups;
+    var filteredData = data;
     if (selectedValue != "all")
       filteredGroups = groups.slice(0, selectedValue);
+      filteredData = data.slice(0, selectedValue);
+
+    // Define maximum
+    var max = d3.max(filteredData, d => d3.sum(subgroups.map(key => +d[key])));  
 
     console.log(selectedValue);
     console.log(filteredGroups);
