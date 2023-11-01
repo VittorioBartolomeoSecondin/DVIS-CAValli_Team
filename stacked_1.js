@@ -32,6 +32,7 @@ function updateChart(selectedValue) {
       if (selectedValue != "all")
         filteredGroups = groups.slice(0, selectedValue);
 
+      console.log(selectedValue);
       console.log(filteredGroups);
         
       // Add X axis
