@@ -142,11 +142,11 @@ function updateStackedPChart(selectedValue) {
     })
 }
 
-updateStackedChart("all"); // Load the chart with all cities initially
+updateStackedPChart("all"); // Load the chart with all cities initially
 
 document.getElementById("city-dropdown").addEventListener("change", function () {
 const selectedValue = this.value;
 d3.select("#stacked_percentage_1").remove();
 // Call a function to update your chart based on the selected value
-updateStackedChart(selectedValue);
+updateStackedPChart(selectedValue);
 });
