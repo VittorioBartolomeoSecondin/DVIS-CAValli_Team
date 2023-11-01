@@ -52,16 +52,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   const color = d3.scaleOrdinal()
                   .range(['#e41a1c', '#377eb8', '#4daf4a', '#f48d0a', '#800aee'])
                   .domain(subgroups);
-                 
-  // Stack the data (per subgroup)
-  const stackedData = d3.stack()
-                        .keys(subgroups)                      
-                        .value((d, key) => +d[key])
-                        .order(d3.stackOrderNone)
-                        .offset(d3.stackOffsetNone)
-                        (data);
 
-  /*
   // Group data by city
   const groupedData = d3.group(data, (d) => d.city);
   
@@ -72,7 +63,15 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
-      .attr("transform", translate(${margin.left},${margin.top}));*/
+      .attr("transform", translate(${margin.left},${margin.top}));
+                 
+  // Stack the data (per subgroup)
+  const stackedData = d3.stack()
+                        .keys(subgroups)                      
+                        .value((d, key) => +d[key])
+                        .order(d3.stackOrderNone)
+                        .offset(d3.stackOffsetNone)
+                        (data);
 
   console.log(stackedData);
 
