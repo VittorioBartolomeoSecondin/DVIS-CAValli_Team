@@ -1,12 +1,6 @@
 function updateChart(selectedValue) {
     // Parse the Data
     d3.csv("section1_1/stacked_1.csv").then( function(data) {
-
-      var filteredData = data;
-      if (selectedValue != "all")
-        filteredData = data.slice(0, selectedValue);
-
-      console.log(filteredData);
       
       // append the svg object to the body of the page
       const svg = d3.select("#stacked_1")
@@ -26,14 +20,20 @@ function updateChart(selectedValue) {
                           .attr("class", "tooltip"); 
      
       // List of subgroups = header of the csv files = scientific name of the trees (here)
-      const subgroups = filteredData.columns.slice(1);
+      const subgroups = data.columns.slice(1);
     
       // List of groups = value of the first column = cities (here) -> on Y axis
-      const groups = filteredData.map(d => d.city);
+      const groups = data.map(d => d.city);
     
       // Define maximum
-      var max = d3.max(filteredData, d => d3.sum(subgroups.map(key => +d[key])));  
-    
+      var max = d3.max(data, d => d3.sum(subgroups.map(key => +d[key])));  
+
+      var filteredData = data;
+      if (selectedValue != "all")
+        filteredData = data.slice(0, selectedValue);
+
+      console.log(filteredData);
+        
       // Add X axis
       const x = d3.scaleLinear()
                   .domain([0, max + max/10])
