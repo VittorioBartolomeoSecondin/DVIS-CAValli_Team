@@ -70,7 +70,7 @@ function updateStackedChart(selectedValue) {
                           .value((d, key) => +d[key])
                           .order(d3.stackOrderNone)
                           .offset(d3.stackOffsetNone)
-                          (data);
+                          (filteredData);
   
     // Show the bars
     svg.append("g")
