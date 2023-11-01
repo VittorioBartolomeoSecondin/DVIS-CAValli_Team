@@ -58,13 +58,19 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                       .range([0, height])
                       .domain(groups)
                       .padding(.1);
+
+          // Color palette = one color per subgroup
+          /*const color = d3.scaleOrdinal()
+                          .range(['#e41a1c', '#377eb8', '#4daf4a', '#f48d0a', '#800aee'])
+                          .domain(subgroups);*/
           
           svg.append("g")
              .call(d3.axisLeft(y).tickSizeOuter(0))
             // Enter in the stack data = loop key per key = group per group
              .data(stackedData)
              .join("g")
-               .attr("fill", d => color(d.key))
+               .attr("fill", "steelblue")
+               //.attr("fill", d => color(d.key))
                .selectAll("rect")
                // enter a second time = loop subgroup per subgroup to add all rectangles
                .data(d => d)
@@ -73,11 +79,6 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                  .attr("y", d => y(d.data.city))
                  .attr("width", d => x(d[1]) - x(d[0]))
                  .attr("height", y.bandwidth())
-        
-          // Color palette = one color per subgroup
-          const color = d3.scaleOrdinal()
-                          .range(['#e41a1c', '#377eb8', '#4daf4a', '#f48d0a', '#800aee'])
-                          .domain(subgroups);
 
         });
   });
