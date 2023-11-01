@@ -42,7 +42,7 @@ function updateChart(selectedValue) {
           
           // Add Y axis
           const y = d3.scaleBand()
-                      .range([0, height])
+                      .range([height, 0])
                       .domain(filteredData.map(d => d.city))
                       .padding(.1);
       
