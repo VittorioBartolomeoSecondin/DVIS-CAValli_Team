@@ -31,9 +31,6 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                             .style("background-color", "lightgray")
                             .style("border", "2px solid black")
                               .attr("class", "tooltip"); 
-         
-          // List of subgroups = header of the csv files = scientific name of the trees (here)
-          const subgroups = data.columns.slice(1);
         
           // List of groups = value of the first column = cities (here) -> on Y axis
           const groups = data.map(d => d.city);
