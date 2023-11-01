@@ -1,82 +1,107 @@
-// Parse the Data
-d3.csv("section1_1/stacked_1.csv").then( function(data) {
+// Set the dimensions and margins of the graph
+const margin = {top: 40, right: 40, bottom: 50, left: 140}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
 
-  // List of subgroups = header of the csv files = scientific name of the trees (here)
-  const subgroups = data.columns.slice(1);
+const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.csv', 'section1_1/small_multiple3.csv'];
+const scientific_names = ['Lagerstroemia indica', 'Platanus acerifolia', 'Liquidambar styraciflua'];
+const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 
-  // Data Restructuring (Assuming you're using D3.js)
-  const stackedData = d3.stack()
-    .keys(subgroups)
-    .order(d3.stackOrderNone)
-    .offset(d3.stackOffsetNone)
-    (data);
+
+for (let i = 0; i < datasets.length; i++) {
   
-  // Iterate through subgroups and create a separate small multiple for each
-  subgroups.forEach(subgroup => {
-    const subgroupData = stackedData.filter(d => d.key === subgroup);
-     console.log(subgroupData);
+  // Parse the Data
+  d3.csv(datasets[i]).then( function(data) {
+      
+    // Append the svg object to the body of the page
+      const svg = d3.select("#stacked_small_multiples")
+                    .append("svg")
+                    .attr("id", datasets[i].substring(11, 26))
+                      .attr("width", width + margin.left + margin.right)
+                      .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                      .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+      // Create the tooltip element
+      const tooltip = d3.select("#" + datasets[i].substring(11, 26))
+                        .append("section")
+                        .style("opacity", 0)
+                        .style("background-color", "lightgray")
+                        .style("border", "2px solid black")
+                          .attr("class", "tooltip");
+    
+      // Add X axis
+      const x = d3.scaleLinear()
+                  .domain([0, 40000])
+                  .range([0, width]);
+    
+      svg.append("g")
+           .attr("transform", `translate(0, ${height})`)
+         .call(d3.axisBottom(x))
+         .selectAll("text")
+           .attr("transform", "translate(-10,0)rotate(-45)")
+         .style("text-anchor", "end");
+      
+      // Add Y axis
+      const y = d3.scaleBand()
+                  .range([height, 0])
+                  .domain(data.map(d => d.city))
+                  .padding(.1);
   
-            // append the svg object to the body of the page
-          const svg = d3.select("#stacked_small_multiples")
-                        .append("svg")
-                          .attr("id", "stacked_small_multiples_svg")
-                          .attr("width", width + margin.left + margin.right)
-                          .attr("height", height + margin.top + margin.bottom)
-                        .append("g")
-                          .attr("transform", `translate(${margin.left},${margin.top})`);
-        
-          // Create the tooltip element
-          const tooltip = d3.select("#stacked_small_multiples")
-                            .append("section")
-                            .style("opacity", 0)
-                            .style("background-color", "lightgray")
-                            .style("border", "2px solid black")
-                              .attr("class", "tooltip"); 
-        
-          // List of groups = value of the first column = cities (here) -> on Y axis
-          const groups = data.map(d => d.city);
-        
-          // Define maximum
-          var max = d3.max(subgroupData, d => d3.sum(subgroups.map(key => +d[key])));  
-        
-          // Add X axis
-          const x = d3.scaleLinear()
-                      .domain([0, max + max/10])
-                      .range([0, width]);
-          
-          svg.append("g")
-               .attr("transform", `translate(0, ${height})`)
-             .call(d3.axisBottom(x))
-             .selectAll("text")
-               .attr("transform", "translate(-10,0)rotate(-45)")
-             .style("text-anchor", "end");
-          
-          // Add Y axis
-          const y = d3.scaleBand()
-                      .range([0, height])
-                      .domain(groups)
-                      .padding(.1);
+      svg.append("g")
+         .call(d3.axisLeft(y));
+  
+      // Show the bars
+      svg.selectAll("myRect")
+         .data(data)
+         .enter()
+         .append("rect")
+           .attr("x", x(0))
+           .attr("y", d => y(d.city))
+           //.attr("width", d => x(d.count))
+           .attr("width", 0)
+           .attr("height", y.bandwidth())
+           .attr("fill", "steelblue")
+         .on("mouseover", function (event, d) {
 
-          // Color palette = one color per subgroup
-          /*const color = d3.scaleOrdinal()
-                          .range(['#e41a1c', '#377eb8', '#4daf4a', '#f48d0a', '#800aee'])
-                          .domain(subgroups);*/
-          
-          svg.append("g")
-             .call(d3.axisLeft(y).tickSizeOuter(0))
-            // Enter in the stack data = loop key per key = group per group
-             .data(subgroupData)
-             .join("g")
-               .attr("fill", "steelblue")
-               //.attr("fill", d => color(d.key))
-               .selectAll("rect")
-               // enter a second time = loop subgroup per subgroup to add all rectangles
-               .data(d => d)
-               .join("rect")
-                 .attr("x", d => x(d[0]))
-                 .attr("y", d => y(d.data.city))
-                 .attr("width", d => x(d[1]) - x(d[0]))
-                 .attr("height", y.bandwidth())
+         // Change color when hovering
+         d3.select(this).style("fill", "lightgreen");
 
-        });
-  });
+         // Show the tooltip
+         tooltip.transition()
+                .duration(200)
+                .style("opacity", 1)
+                .style("background-color", "lightgray")
+                .style("border", "2px solid black");
+         
+         // Customize the tooltip content
+         tooltip.html(`Scientific name: ${scientific_names[i]}<br>Count: ${d.count}`)
+                .style("left", (event.pageX + 40) + "px")
+                .style("top", (event.pageY - 40) + "px");
+
+         })
+         .on("mousemove", function (event, d) {
+
+         // Move the tooltip with the mouse pointer
+         tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY + 10) + "px");
+
+         })
+         .on("mouseout", function (d) {
+
+         // Returning to original color when not hovering
+         d3.select(this).style("fill", colours[i]);
+
+         // Hide the tooltip
+         tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);           
+         });  
+
+      // Animation
+      svg.selectAll("rect")
+          .transition()
+          .duration(1000)
+            .attr("x", x(0))
+            .attr("width", d => x(d.count))
+          .delay((d, i) => i * 100);
+  })
+}
