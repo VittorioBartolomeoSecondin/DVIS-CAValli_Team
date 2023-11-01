@@ -55,7 +55,7 @@ for (let i = 0; i < datasets.length; i++) {
            //.attr("width", d => x(d.count))
            .attr("width", 0)
            .attr("height", y.bandwidth())
-           .attr("fill", "steelblue")
+           .attr("fill", colours[i])
          .on("mouseover", function (event, d) {
 
          // Change color when hovering
