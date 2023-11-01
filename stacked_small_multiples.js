@@ -57,7 +57,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                       .padding(.1);
           
           svg.append("g")
-             .call(d3.axisLeft(y).tickSizeOuter(0));
+             .call(d3.axisLeft(y).tickSizeOuter(0))
             // Enter in the stack data = loop key per key = group per group
              .data(stackedData)
              .join("g")
