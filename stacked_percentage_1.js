@@ -103,9 +103,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
          const subgroupValue = d.data[subgroupName];
           
          // Customize the tooltip content
-         //tooltip.html(`Common name: ${d.common_name}<br>Count: ${d.count}<br>Average height: ${d.avg_height} meters`)
-         //tooltip.html('Scientific name: ${d.subgroupName}<br>Percentage: ${d.subgroupValue}%')
-         tooltip.html("Scientific name: " + subgroupName + "<br>" + "Count: " + subgroupValue +"%")
+         tooltip.html("Scientific name: " + subgroupName + "<br>" + "Percentage: " + subgroupValue +"%")
                 .style("left", (event.pageX + 40) + "px")
                 .style("top", (event.pageY - 40) + "px");
            
