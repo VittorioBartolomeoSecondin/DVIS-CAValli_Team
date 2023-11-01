@@ -1,7 +1,7 @@
 const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.csv', 'section1_1/small_multiple3.csv'];
 const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 
-function updateChart(selectedValue) {
+function updateStackedSMChart(selectedValue) {
     for (let i = 0; i < datasets.length; i++) {
       
       // Parse the Data
@@ -107,7 +107,7 @@ function updateChart(selectedValue) {
     }
 }
 
-updateChart("all"); // Load the chart with all cities initially
+updateStackedSMChart("all"); // Load the chart with all cities initially
 
 document.getElementById("city-dropdown").addEventListener("change", function () {
   const selectedValue = this.value;
@@ -115,5 +115,5 @@ document.getElementById("city-dropdown").addEventListener("change", function () 
   d3.select("#small_multiple2_svg").remove();
   d3.select("#small_multiple3_svg").remove();
   // Call a function to update your chart based on the selected value
-  updateChart(selectedValue);
+  updateStackedSMChart(selectedValue);
 });
