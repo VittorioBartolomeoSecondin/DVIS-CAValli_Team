@@ -28,9 +28,10 @@ function updateStackedChart(selectedValue) {
 
     var filteredGroups = groups;
     var filteredData = data;
-    if (selectedValue == "all")
+    if (selectedValue == "all") {
       filteredGroups = groups.slice(0);
       filteredData = data.slice(0);
+    }
     else {
       filteredGroups = groups.slice(0, selectedValue);
       filteredData = data.slice(0, selectedValue);
