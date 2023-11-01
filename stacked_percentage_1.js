@@ -60,7 +60,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
         tot = 0
         for (i in subgroups){ name=subgroups[i] ; tot += +d[name] }
         // Now normalize
-        for (i in subgroups){ name=subgroups[i] ; d[name] = d[name] / tot * 100}
+        for (i in subgroups){ name=subgroups[i] ; d[name] = (d[name] / tot * 100).toFixed(2)}
     })
 
     // Stack the data (per subgroup)
