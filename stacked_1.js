@@ -5,6 +5,8 @@ function updateChart(selectedValue) {
       var filteredData = data;
       if (selectedValue != "all")
         filteredData = data.slice(0, selectedValue);
+
+      console.log(filteredData);
       
       // append the svg object to the body of the page
       const svg = d3.select("#stacked_1")
