@@ -1,6 +1,3 @@
-// Set the dimensions and margins of the graph
-const margin = {top: 40, right: 40, bottom: 50, left: 140}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
-
 const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.csv', 'section1_1/small_multiple3.csv'];
 const scientific_names = ['Lagerstroemia indica', 'Platanus acerifolia', 'Liquidambar styraciflua'];
 const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
