@@ -36,3 +36,11 @@ h1 {
 .tooltip strong {
     font-weight: bold;
 }
+
+#stacked_1 {
+    display: block; /* Show the default visualization */
+}
+
+#stacked_percentage_1, #small_multiples {
+    display: none; /* Hide the other visualizations initially */
+}
