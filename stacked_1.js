@@ -1,4 +1,5 @@
 function updateChart(selectedValue) {
+    console.log("updateChart");
     // Parse the Data
     d3.csv("section1_1/stacked_1.csv").then( function(data) {
       
