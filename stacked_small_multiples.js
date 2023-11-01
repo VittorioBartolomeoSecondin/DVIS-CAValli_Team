@@ -7,8 +7,9 @@ function updateChart(selectedValue) {
       // Parse the Data
       d3.csv(datasets[i]).then( function(data) {
 
+        var filteredData = data;
         if (selectedValue != "all")
-          const filteredData = data.slice(0, selectedValue);
+          filteredData = data.slice(0, selectedValue);
           
         // Append the svg object to the body of the page
           const svg = d3.select("#" + datasets[i].substring(11, 26))
