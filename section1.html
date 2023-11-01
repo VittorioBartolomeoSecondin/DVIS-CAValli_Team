@@ -147,6 +147,23 @@
             <div id="small_multiple2"></div>
             <div id="small_multiple3"></div>
         </div>
+
+        <script>
+            // Get references to the radio buttons and chart divs
+            const radioButtons = document.getElementsByName("options");
+            const chartDivs = [document.getElementById("stacked_1"), document.getElementById("stacked_percentage_1"), document.getElementById("small_multiples")];
+
+            // Add a change event listener to the radio buttons
+            for (let i = 0; i < radioButtons.length; i++) {
+                radioButtons[i].addEventListener("change", function() {
+                    // Hide all chart divs
+                    chartDivs.forEach(chart => chart.style.display = "none");
+        
+                    // Show the selected chart div based on the radio button index
+                    chartDivs[i].style.display = "block";
+                });
+            }
+        </script>
         
         <div id="city-selector">  
             <label for="city-dropdown"  style="margin-left: 10px;">Select Subgroup:</label>
