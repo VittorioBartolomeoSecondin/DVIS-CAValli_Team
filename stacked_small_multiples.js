@@ -1,5 +1,4 @@
 const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.csv', 'section1_1/small_multiple3.csv'];
-const scientific_names = ['Lagerstroemia indica', 'Platanus acerifolia', 'Liquidambar styraciflua'];
 const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 
 
@@ -9,7 +8,7 @@ for (let i = 0; i < datasets.length; i++) {
   d3.csv(datasets[i]).then( function(data) {
       
     // Append the svg object to the body of the page
-      const svg = d3.select("#stacked_small_multiples")
+      const svg = d3.select("#" + datasets[i].substring(11, 26))
                     .append("svg")
                     .attr("id", datasets[i].substring(11, 26))
                       .attr("width", width + margin.left + margin.right)
@@ -70,7 +69,7 @@ for (let i = 0; i < datasets.length; i++) {
                 .style("border", "2px solid black");
          
          // Customize the tooltip content
-         tooltip.html(`Scientific name: ${scientific_names[i]}<br>Count: ${d.count}`)
+         tooltip.html(`Count: ${d.count}`)
                 .style("left", (event.pageX + 40) + "px")
                 .style("top", (event.pageY - 40) + "px");
 
