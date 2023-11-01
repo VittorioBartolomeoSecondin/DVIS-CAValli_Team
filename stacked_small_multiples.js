@@ -11,9 +11,6 @@ function updateChart(selectedValue) {
         if (selectedValue != "all")
           filteredData = data.slice(0, selectedValue);
 
-        console.log(selectedValue);
-        console.log(filteredData);
-          
         // Append the svg object to the body of the page
           const svg = d3.select("#" + datasets[i].substring(11, 26))
                         .append("svg")
