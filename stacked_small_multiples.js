@@ -14,6 +14,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
   // Iterate through subgroups and create a separate small multiple for each
   subgroups.forEach(subgroup => {
     const subgroupData = stackedData.filter(d => d.key === subgroup);
+     console.log(subgroupData);
   
             // append the svg object to the body of the page
           const svg = d3.select("#stacked_small_multiples")
@@ -36,7 +37,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
           const groups = data.map(d => d.city);
         
           // Define maximum
-          var max = d3.max(data, d => d3.sum(subgroups.map(key => +d[key])));  
+          var max = d3.max(subgroupData, d => d3.sum(subgroups.map(key => +d[key])));  
         
           // Add X axis
           const x = d3.scaleLinear()
@@ -64,7 +65,7 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
           svg.append("g")
              .call(d3.axisLeft(y).tickSizeOuter(0))
             // Enter in the stack data = loop key per key = group per group
-             .data(stackedData)
+             .data(subgroupData)
              .join("g")
                .attr("fill", "steelblue")
                //.attr("fill", d => color(d.key))
