@@ -28,11 +28,11 @@ function updateChart(selectedValue) {
       // Define maximum
       var max = d3.max(data, d => d3.sum(subgroups.map(key => +d[key])));  
 
-      var filteredData = data;
+      var filteredGroups = groups;
       if (selectedValue != "all")
-        filteredData = data.slice(0, selectedValue);
+        filteredGroups = groups.slice(0, selectedValue);
 
-      console.log(filteredData);
+      console.log(filteredGroups);
         
       // Add X axis
       const x = d3.scaleLinear()
@@ -49,7 +49,7 @@ function updateChart(selectedValue) {
       // Add Y axis
       const y = d3.scaleBand()
                   .range([0, height])
-                  .domain(groups)
+                  .domain(filteredGroups)
                   .padding(.1);
       
       svg.append("g")
@@ -66,7 +66,7 @@ function updateChart(selectedValue) {
                             .value((d, key) => +d[key])
                             .order(d3.stackOrderNone)
                             .offset(d3.stackOffsetNone)
-                            (filteredData);
+                            (data);
     
       // Show the bars
       svg.append("g")
@@ -97,7 +97,7 @@ function updateChart(selectedValue) {
             
            // Define the subgroup name and value to display them in the tooltip
            const subgroupName = d3.select(this.parentNode).datum().key;
-           const subgroupValue = d.filteredData[subgroupName];
+           const subgroupValue = d.data[subgroupName];
             
            // Customize the tooltip content
            tooltip.html("Scientific name: " + subgroupName + "<br>" + "Count: " + subgroupValue)
