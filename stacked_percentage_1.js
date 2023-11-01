@@ -146,7 +146,7 @@ updateStackedPChart("all"); // Load the chart with all cities initially
 
 document.getElementById("city-dropdown").addEventListener("change", function () {
 const selectedValue = this.value;
-d3.select("#stacked_percentage_1").remove();
+d3.select("#stacked_percentage_svg").remove();
 // Call a function to update your chart based on the selected value
 updateStackedPChart(selectedValue);
 });
