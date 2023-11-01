@@ -8,7 +8,7 @@ function updateChart(selectedValue) {
       d3.csv(datasets[i]).then( function(data) {
 
         if (selectedValue != "all")
-          data = data.slice(0, selectedValue);
+          const filteredData = data.slice(0, selectedValue);
           
         // Append the svg object to the body of the page
           const svg = d3.select("#" + datasets[i].substring(11, 26))
@@ -42,7 +42,7 @@ function updateChart(selectedValue) {
           // Add Y axis
           const y = d3.scaleBand()
                       .range([height, 0])
-                      .domain(data.map(d => d.city))
+                      .domain(filteredData.map(d => d.city))
                       .padding(.1);
       
           svg.append("g")
@@ -50,7 +50,7 @@ function updateChart(selectedValue) {
       
           // Show the bars
           svg.selectAll("myRect")
-             .data(data)
+             .data(filteredData)
              .enter()
              .append("rect")
                .attr("x", x(0))
