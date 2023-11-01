@@ -2,7 +2,7 @@
 const margin = {top: 40, right: 40, bottom: 50, left: 140}, width = 700 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
 
 // Parse the Data
-function updateChart(selectedDataset) {
+function updateBarChart(selectedDataset) {
   d3.csv(selectedDataset).then( function(data) {
       
     // Append the svg object to the body of the page
@@ -104,11 +104,11 @@ function updateChart(selectedDataset) {
 }
 
 // Initial chart creation with the default dataset
-updateChart("section1_1/total.csv");
+updateBarChart("section1_1/total.csv");
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = this.value;
   d3.select("#barchart_svg").remove();
-  updateChart(selectedDataset);
+  updateBarChart(selectedDataset);
 });
