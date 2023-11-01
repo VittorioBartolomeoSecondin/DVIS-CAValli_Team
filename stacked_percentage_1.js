@@ -54,7 +54,6 @@ d3.csv("section1_1/stacked_1.csv").then( function(data) {
                     .domain(subgroups);
 
     // Normalize the data -> sum of each group must be 100!
-    console.log(data)
     dataNormalized = []
     data.forEach(function(d){
         // Compute the total
