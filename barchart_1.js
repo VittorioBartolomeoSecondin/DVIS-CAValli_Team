@@ -17,6 +17,7 @@ function updateBarChart(selectedDataset) {
     // Create the tooltip element
       const tooltip = d3.select("#barchart_1")
                         .append("section")
+                        .attr("id", "barchart_tooltip")
                         .style("opacity", 0)
                         .style("background-color", "lightgray")
                         .style("border", "2px solid black")
@@ -110,5 +111,6 @@ updateBarChart("section1_1/total.csv");
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = this.value;
   d3.select("#barchart_svg").remove();
+  d3.select("#barchart_tooltip").remove();
   updateBarChart(selectedDataset);
 });
