@@ -2,19 +2,15 @@ const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.
 const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 
 function updateStackedSMChart(selectedValue) {
-    var max_values = [];
-    var charts_x = [];
     for (let i = 0; i < datasets.length; i++) {
-      
+
       // Parse the Data
       d3.csv(datasets[i]).then( function(data) {
-
         var filteredData = data;
         if (selectedValue == "all")
             filteredData = data.slice(0);
         else
             filteredData = data.slice(0, selectedValue);
-
         // Append the svg object to the body of the page
           const svg = d3.select("#" + datasets[i].substring(11, 26))
                         .append("svg")
@@ -33,18 +29,16 @@ function updateStackedSMChart(selectedValue) {
                               .attr("class", "tooltip");
 
           // Define maximum
-          max_values.push(d3.max(filteredData, function(d) {return +d.count;}));
-          
-          // Add X axis
-          /*const x = d3.scaleLinear()
-                      .domain([0, max + max/10])
-                      .range([0, width]);*/
+          const max = d3.max(filteredData, function(d) {return +d.count;});
 
-          charts_x.push(d3.scaleLinear().range([0, width]));
-          
+          // Add X axis
+          const x = d3.scaleLinear()
+                      .domain([0, max + max/10])
+                      .range([0, width]);
+        
           svg.append("g")
                .attr("transform", `translate(0, ${height})`)
-             .call(d3.axisBottom(charts_x[i]))
+             .call(d3.axisBottom(x))
              .selectAll("text")
                .attr("transform", "translate(-10,0)rotate(-45)")
              .style("text-anchor", "end");
@@ -63,7 +57,7 @@ function updateStackedSMChart(selectedValue) {
              .data(filteredData)
              .enter()
              .append("rect")
-               .attr("x", charts_x[i](0))
+               .attr("x", x(0))
                .attr("y", d => y(d.city))
                //.attr("width", d => x(d.count))
                .attr("width", 0)
@@ -109,18 +103,13 @@ function updateStackedSMChart(selectedValue) {
           svg.selectAll("rect")
               .transition()
               .duration(1000)
-                .attr("x", charts_x[i](0))
-                .attr("width", d => charts_x[i](d.count))
+                .attr("x", x(0))
+                .attr("width", d => x(d.count))
               .delay((d, i) => i * 100);
       })
     }
-
-    for (x in charts_x)
-        x.domain([0, Math.max(max_values) + Math.max(max_values)/10]);
 }
-
 updateStackedSMChart("all"); // Load the chart with all cities initially
-
 document.getElementById("city-dropdown").addEventListener("change", function () {
   const selectedValue = this.value;
   d3.select("#small_multiple1_svg").remove();
