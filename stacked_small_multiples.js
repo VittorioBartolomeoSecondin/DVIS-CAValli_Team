@@ -4,7 +4,7 @@ const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 function updateStackedSMChart(selectedValue) {
     var max_values = [];
     var charts_x = [];
-    for (var i = 0; i < datasets.length; i++) {
+    for (let i = 0; i < datasets.length; i++) {
       
       // Parse the Data
       d3.csv(datasets[i]).then( function(data) {
