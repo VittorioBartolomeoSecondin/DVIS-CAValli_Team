@@ -1,6 +1,13 @@
 const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.csv', 'section1_1/small_multiple3.csv'];
 const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 
+function keep_interesting_cities(selectedValue, data) {
+    if (selectedValue == "all")
+        return data.slice(0);
+    else
+        return data.slice(0, selectedValue);
+}
+
 function updateStackedSMChart(selectedValue) {
     /*let max_values = [];
     
@@ -27,12 +34,7 @@ function updateStackedSMChart(selectedValue) {
     const promises = datasets.map((dataset) => {
       return d3.csv(dataset)
         .then(function (data) {
-          let filteredData = data;
-          if (selectedValue == "all")
-            filteredData = data.slice(0);
-          else
-            filteredData = data.slice(0, selectedValue);
-    
+          let filteredData = keep_interesting_cities(selectedValue, data);
           max_values.push(d3.max(filteredData, function (d) { return +d.count; }));
         });
     });
@@ -49,11 +51,7 @@ function updateStackedSMChart(selectedValue) {
 
               // Parse the Data
               d3.csv(datasets[i]).then( function(data) {
-                 var filteredData = data;
-                 if (selectedValue == "all")
-                    filteredData = data.slice(0);
-                 else
-                    filteredData = data.slice(0, selectedValue);
+                 let filteredData = keep_interesting_cities(selectedValue, data);
                   // Append the svg object to the body of the page
                   const svg = d3.select("#" + datasets[i].substring(11, 26))
                                 .append("svg")
