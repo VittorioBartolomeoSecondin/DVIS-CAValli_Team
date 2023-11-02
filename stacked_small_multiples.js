@@ -63,8 +63,8 @@ function updateStackedSMChart(selectedValue) {
           const svg = d3.select("#" + datasets[i].substring(11, 26))
                         .append("svg")
                         .attr("id", datasets[i].substring(11, 26) + "_svg")
-                          .attr("width", width - 400 + margin.left + margin.right)
-                          .attr("height", height - 200 + margin.top + margin.bottom)
+                          .attr("width", width + margin.left + margin.right)
+                          .attr("height", height + margin.top + margin.bottom)
                         .append("g")
                           .attr("transform", `translate(${margin.left}, ${margin.top})`);
     
