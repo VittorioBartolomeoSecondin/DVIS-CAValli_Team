@@ -21,7 +21,6 @@ function updateStackedSMChart(selectedValue) {
     console.log(max);*/
 
     let max_values = [];
-    var max = 4;
 
     // Create an array of promises for loading and processing data
     const promises = datasets.map((dataset) => {
@@ -41,7 +40,7 @@ function updateStackedSMChart(selectedValue) {
     Promise.all(promises)
       .then(() => {
         // All data has been loaded and max_values is populated
-        max = Math.max(...max_values);
+        var max = Math.max(...max_values);
         console.log(max);
         // Now you can continue with your chart creation or other actions
       })
