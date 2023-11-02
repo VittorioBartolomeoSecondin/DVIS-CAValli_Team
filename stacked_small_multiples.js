@@ -16,7 +16,7 @@ function updateStackedSMChart(selectedValue) {
         });
     }
 
-    console.log(max_values);
+    console.log(Math.max(max_values));
     
     for (let i = 0; i < datasets.length; i++) {
 
