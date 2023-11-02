@@ -40,7 +40,7 @@ function updateStackedSMChart(selectedValue) {
                       .domain([0, max + max/10])
                       .range([0, width]);*/
 
-          charts_x.push(d3.scaleLinear().domain([0, 40000].range([0, width]));
+          charts_x.push(d3.scaleLinear().domain([0, 40000]).range([0, width]));
           
           svg.append("g")
                .attr("transform", `translate(0, ${height})`)
