@@ -9,23 +9,6 @@ function keep_interesting_cities(selectedValue, data) {
 }
 
 function updateStackedSMChart(selectedValue) {
-    /*let max_values = [];
-    
-    for (let i = 0; i < datasets.length; i++) {
-        d3.csv(datasets[i]).then( function(data) {
-            let filteredData = data;
-            if (selectedValue == "all")
-                filteredData = data.slice(0);
-            else
-                filteredData = data.slice(0, selectedValue);
-            
-            max_values.push(d3.max(filteredData, function(d) {return +d.count;}));
-        });
-    }
-
-    console.log(max_values);
-    const max = Math.max(...max_values);
-    console.log(max);*/
 
     let max_values = [];
     var max = 0;
