@@ -2,7 +2,7 @@ const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.
 const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 
 function updateStackedSMChart(selectedValue) {
-    let max_values = [];
+    /*let max_values = [];
     
     for (let i = 0; i < datasets.length; i++) {
         d3.csv(datasets[i]).then( function(data) {
@@ -18,7 +18,36 @@ function updateStackedSMChart(selectedValue) {
 
     console.log(max_values);
     const max = Math.max(...max_values);
-    console.log(max);
+    console.log(max);*/
+
+    let max_values = [];
+
+    // Create an array of promises for loading and processing data
+    const promises = datasets.map((dataset) => {
+      return d3.csv(dataset)
+        .then(function (data) {
+          let filteredData = data;
+          if (selectedValue == "all")
+            filteredData = data.slice(0);
+          else
+            filteredData = data.slice(0, selectedValue);
+    
+          max_values.push(d3.max(filteredData, function (d) { return +d.count; }));
+        });
+    });
+    
+    // Wait for all promises to resolve
+    Promise.all(promises)
+      .then(() => {
+        // All data has been loaded and max_values is populated
+        const max = Math.max(...max_values);
+        console.log(max);
+        // Now you can continue with your chart creation or other actions
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
     
     for (let i = 0; i < datasets.length; i++) {
 
