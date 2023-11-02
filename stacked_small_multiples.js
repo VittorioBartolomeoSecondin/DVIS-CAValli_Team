@@ -63,7 +63,7 @@ function updateStackedSMChart(selectedValue) {
              .data(filteredData)
              .enter()
              .append("rect")
-               .attr("x", x(0))
+               .attr("x", charts_x[i](0))
                .attr("y", d => y(d.city))
                //.attr("width", d => x(d.count))
                .attr("width", 0)
@@ -109,8 +109,8 @@ function updateStackedSMChart(selectedValue) {
           svg.selectAll("rect")
               .transition()
               .duration(1000)
-                .attr("x", x(0))
-                .attr("width", d => x(d.count))
+                .attr("x", charts_x[i](0))
+                .attr("width", d => charts_x[i](d.count))
               .delay((d, i) => i * 100);
       })
     }
