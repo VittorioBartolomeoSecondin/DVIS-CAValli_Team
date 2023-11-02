@@ -2,7 +2,7 @@ const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.
 const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 
 function updateStackedSMChart(selectedValue) {
-    let max_values = [];
+    /*let max_values = [];
     
     for (let i = 0; i < datasets.length; i++) {
         d3.csv(datasets[i]).then( function(data) {
@@ -16,12 +16,12 @@ function updateStackedSMChart(selectedValue) {
         });
     }
 
-    //console.log(max_values);
-    //const max = Math.max(...max_values);
-    //console.log(max);
+    console.log(max_values);
+    const max = Math.max(...max_values);
+    console.log(max);*/
 
-    /*let max_values = [];
-    var max = 0;
+    let max_values = [];
+    var max = 4;
 
     // Create an array of promises for loading and processing data
     const promises = datasets.map((dataset) => {
@@ -47,7 +47,7 @@ function updateStackedSMChart(selectedValue) {
       })
       .catch((error) => {
         console.error(error);
-      });*/
+      });
 
     
     for (let i = 0; i < datasets.length; i++) {
@@ -79,7 +79,7 @@ function updateStackedSMChart(selectedValue) {
          
           // Add X axis
           const x = d3.scaleLinear()
-                      .domain([0, Math.max(...max_values) + Math.max(...max_values)/10])
+                      .domain([0, max + max/10])
                       .range([0, width]);
         
           svg.append("g")
