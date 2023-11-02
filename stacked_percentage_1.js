@@ -14,6 +14,7 @@ function updateStackedPChart(selectedValue) {
       // Create the tooltip element
       const tooltip = d3.select("#stacked_percentage_1")
                         .append("section")
+                        .attr("id", "stacked_percentage_tooltip")
                         .style("opacity", 0)
                         .style("background-color", "lightgray")
                         .style("border", "2px solid black")
@@ -147,6 +148,7 @@ updateStackedPChart("all"); // Load the chart with all cities initially
 document.getElementById("city-dropdown").addEventListener("change", function () {
 const selectedValue = this.value;
 d3.select("#stacked_percentage_svg").remove();
+d3.select("#stacked_percentage_tooltip").remove();
 // Call a function to update your chart based on the selected value
 updateStackedPChart(selectedValue);
 });
