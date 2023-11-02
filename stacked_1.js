@@ -38,10 +38,7 @@ function updateStackedChart(selectedValue) {
     }
 
     // Define maximum
-    var max = d3.max(filteredData, d => d3.sum(subgroups.map(key => +d[key])));  
-
-    console.log(selectedValue);
-    console.log(filteredGroups);
+    var max = d3.max(filteredData, d => d3.sum(subgroups.map(key => +d[key])));
       
     // Add X axis
     const x = d3.scaleLinear()
