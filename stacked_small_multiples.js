@@ -2,7 +2,6 @@ const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.
 const colours = ['#e41a1c', '#377eb8', '#4daf4a'];
 
 function updateStackedSMChart(selectedValue) {
-    var max = 0;
     for (let i = 0; i < datasets.length; i++) {
       
       // Parse the Data
@@ -32,7 +31,7 @@ function updateStackedSMChart(selectedValue) {
                               .attr("class", "tooltip");
 
           // Define maximum
-          if (i==0) max = d3.max(filteredData, function(d) {return +d.count;});
+          const max = d3.max(filteredData, function(d) {return +d.count;});
           
           // Add X axis
           const x = d3.scaleLinear()
