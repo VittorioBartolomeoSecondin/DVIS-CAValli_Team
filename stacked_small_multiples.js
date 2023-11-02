@@ -29,10 +29,13 @@ function updateStackedSMChart(selectedValue) {
                             .style("background-color", "lightgray")
                             .style("border", "2px solid black")
                               .attr("class", "tooltip");
-        
+
+          // Define maximum
+          var max = d3.max(filteredData, function(d) {return +d.count;});
+          
           // Add X axis
           const x = d3.scaleLinear()
-                      .domain([0, 40000])
+                      .domain([0, max + max/10])
                       .range([0, width]);
         
           svg.append("g")
