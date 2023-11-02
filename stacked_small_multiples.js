@@ -17,6 +17,7 @@ function updateStackedSMChart(selectedValue) {
     }
 
     const max = max_values.reduce((a, b) => Math.max(a, b), -Infinity);
+    console.log(max);
     
     for (let i = 0; i < datasets.length; i++) {
 
