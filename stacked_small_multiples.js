@@ -15,6 +15,8 @@ function updateStackedSMChart(selectedValue) {
             max_values.push(d3.max(filteredData, function(d) {return +d.count;}));
         });
     }
+
+    console.log(max_values);
     
     for (let i = 0; i < datasets.length; i++) {
 
