@@ -45,7 +45,7 @@ function updateStackedSMChart(selectedValue) {
          
           // Add X axis
           const x = d3.scaleLinear()
-                      .domain([0, d3.max(max_values) + d3.max(max_values)/10])
+                      .domain([0, Math.max(max_values) + Math.max(max_values)/10])
                       .range([0, width]);
         
           svg.append("g")
