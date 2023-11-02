@@ -16,7 +16,7 @@ function updateStackedSMChart(selectedValue) {
         });
     }
 
-    console.log(Math.max(max_values));
+    const max = max_values.reduce((a, b) => Math.max(a, b), -Infinity);
     
     for (let i = 0; i < datasets.length; i++) {
 
@@ -47,7 +47,7 @@ function updateStackedSMChart(selectedValue) {
          
           // Add X axis
           const x = d3.scaleLinear()
-                      .domain([0, Math.max(max_values) + Math.max(max_values)/10])
+                      .domain([0, max + max/10])
                       .range([0, width]);
         
           svg.append("g")
