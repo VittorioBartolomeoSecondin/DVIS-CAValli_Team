@@ -1,5 +1,5 @@
 // Set the dimensions and margins of the graph 1000-600
-const margin = {top: 40, right: 40, bottom: 50, left: 140}, width = 600 - margin.left - margin.right, height = 400 - margin.top - margin.bottom;
+const margin = {top: 40, right: 40, bottom: 50, left: 140}, width = 500 - margin.left - margin.right, height = 300 - margin.top - margin.bottom;
 
 // Parse the Data
 function updateBarChart(selectedDataset) {
