@@ -37,7 +37,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
 
   // Build color scale
   const myColor = d3.scaleSequential()
-    .interpolator(d3.interpolateInferno)
+    .range(["#d5e9c5", "#356d10"])
     .domain([0,40000])
 
   
