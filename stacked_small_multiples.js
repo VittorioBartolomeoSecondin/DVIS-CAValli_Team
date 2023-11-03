@@ -1,5 +1,5 @@
 const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.csv', 'section1_1/small_multiple3.csv'];
-const colours = ['#4053d3', '#ddb310', '#b51d14']; // '#fb49b0', '#00b25d' and '#cacaca' for the other colors
+const colours = ['#b51d14', '#ddb310', '#4053d3']; // '#fb49b0', '#00b25d' and '#cacaca' for the other colors
 
 function keep_interesting_cities(selectedValue, data) {
     if (selectedValue == "all")
