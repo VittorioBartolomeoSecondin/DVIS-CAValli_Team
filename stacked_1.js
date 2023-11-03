@@ -64,7 +64,7 @@ function updateStackedChart(selectedValue) {
   
     // Color palette = one color per subgroup
     const color = d3.scaleOrdinal()
-                    .range(['#e41a1c', '#377eb8', '#4daf4a', '#f48d0a', '#800aee'])
+                    .range(['#4053d3', '#ddb310', '#b51d14', '#fb49b0', '#00b25d']) //#cacaca for the 6th color
                     .domain(subgroups);
     
     // Stack the data (per subgroup)
