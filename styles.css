@@ -10,7 +10,6 @@ p {
 
 .possibly-sidebyside > div {
   float: left;
-  clear: both;
 }
 
 h1 {
