@@ -61,8 +61,8 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .data(colorDomain)
     .enter()
     .append("text")
-    .attr("x", (d, i) => i * 30 + 15) // Adjust spacing and positioning
-    .attr("y", 40) // Adjust vertical position
+    .attr("x", (d, i) => i * 30 + width) // Adjust spacing and positioning
+    .attr("y", height) // Adjust vertical position
     .style("text-anchor", "middle")
     .text(d => d);
 
