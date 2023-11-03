@@ -35,4 +35,13 @@ d3.csv("section1_1/heatmap.csv", function(data) {
     const myColor = d3.scaleLinear()
                       .range(["#d5e9c5", "#356d10"])
                       .domain([500,40000])
+
+    svg.selectAll()
+       .data(data, function(d) {return d.group+':'+d.variable;})
+       .join("rect")
+       .attr("x", function(d) { return x(d.group) })
+       .attr("y", function(d) { return y(d.variable) })
+       .attr("width", x.bandwidth() )
+       .attr("height", y.bandwidth() )
+       .style("fill", function(d) { return myColor(d.value)} )
 })
