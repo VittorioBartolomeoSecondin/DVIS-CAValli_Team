@@ -1,14 +1,15 @@
-// append the svg object to the body of the page
-const svg = d3.select("#heatmap")
-              .append("svg")
-              .attr("id", "heatmap_svg")
-              .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top + margin.bottom)
-              .append("g")
-              .attr("transform", `translate(${margin.left},${margin.top})`);
-
 //Read the data
 d3.csv("section1_1/heatmap.csv", function(data) {
+
+    // append the svg object to the body of the page
+    const svg = d3.select("#heatmap")
+                  .append("svg")
+                  .attr("id", "heatmap_svg")
+                  .attr("width", width + margin.left + margin.right)
+                  .attr("height", height + margin.top + margin.bottom)
+                  .append("g")
+                  .attr("transform", `translate(${margin.left},${margin.top})`);
+
 
     // Labels of row and columns
     const myGroups = ["Los Angeles", "San Jose", "San Diego", "Rancho Cucamonga", "Stockton"]
