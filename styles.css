@@ -8,6 +8,10 @@ p {
 }
 */
 
+.possibly-sidebyside > div {
+  float: left;
+}
+
 h1 {
     color: black; text-align: center;
 }
