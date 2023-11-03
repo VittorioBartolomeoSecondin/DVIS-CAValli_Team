@@ -39,10 +39,10 @@ function updateStackedSMChart(selectedValue) {
                   const svg = d3.select("#" + datasets[i].substring(11, 26))
                                 .append("svg")
                                 .attr("id", datasets[i].substring(11, 26) + "_svg")
-                                  .attr("width", width + margin.left + margin.right)
-                                  .attr("height", height + margin.top + margin.bottom)
+                                  .attr("width", width2 + margin2.left + margin2.right)
+                                  .attr("height", height2 + margin2.top + margin2.bottom)
                                 .append("g")
-                                  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+                                  .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
             
                   // Create the tooltip element
                   const tooltip = d3.select("#" + datasets[i].substring(11, 26))
@@ -57,10 +57,10 @@ function updateStackedSMChart(selectedValue) {
                   // Add X axis
                   const x = d3.scaleLinear()
                               .domain([0, max + max/10])
-                              .range([0, width]);
+                              .range([0, width2]);
                 
                   svg.append("g")
-                       .attr("transform", `translate(0, ${height})`)
+                       .attr("transform", `translate(0, ${height2})`)
                      .call(d3.axisBottom(x))
                      .selectAll("text")
                        .attr("transform", "translate(-10,0)rotate(-45)")
@@ -68,7 +68,7 @@ function updateStackedSMChart(selectedValue) {
                   
                   // Add Y axis
                   const y = d3.scaleBand()
-                              .range([0, height])
+                              .range([0, height2])
                               .domain(filteredData.map(d => d.city))
                               .padding(.1);
               
