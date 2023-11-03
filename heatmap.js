@@ -63,6 +63,35 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .style("stroke-opacity", 0.5)
     .style("shape-rendering", "crispEdges"); // Optional for crisp edges
 
+
+  // Extract color domain values and color codes
+  const colorDomain = myColor.domain(); // Array of color domain values (numbers)
+  const colorRange = myColor.range();   // Array of color codes
+  
+  // Create a legend SVG element
+  const legend = svg.append("g")
+    .attr("class", "legend")
+    .attr("transform", "translate(0, 20"); // Adjust the position as needed
+  
+  // Draw colored rectangles and corresponding text labels in the legend
+  legend.selectAll("rect")
+    .data(colorDomain)
+    .enter()
+    .append("rect")
+    .attr("x", (d, i) => i * 30) // Adjust spacing
+    .attr("width", 30) // Adjust the width of each legend item
+    .attr("height", 15) // Adjust the height of the legend items
+    .style("fill", d => myColor(d)); // Use the color scale to fill
+  
+  legend.selectAll("text")
+    .data(colorDomain)
+    .enter()
+    .append("text")
+    .attr("x", (d, i) => i * 30 + 15) // Adjust spacing and positioning
+    .attr("y", 40) // Adjust vertical position
+    .style("text-anchor", "middle")
+    .text(d => d);
+
   
 
 
