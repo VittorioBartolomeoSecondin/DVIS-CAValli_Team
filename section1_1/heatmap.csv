@@ -1,0 +1,26 @@
+city,species,count
+Los Angeles,Lagerstroemia indica,34729	
+Los Angeles,Platanus acerifolia,17477
+Los Angeles,Liquidambar styraciflua,30061
+Los Angeles,Washingtonia robusta,37971
+Los Angeles,Magnolia grandiflora,30988
+San Jose,Lagerstroemia indica,21636
+San Jose,Platanus acerifolia,26291
+San Jose,Liquidambar styraciflua,14644
+San Jose,Washingtonia robusta,5116
+San Jose,Magnolia grandiflora,7080
+San Diego,Lagerstroemia indica,2207	
+San Diego,Platanus acerifolia,1907
+San Diego,Liquidambar styraciflua,10323
+San Diego,Washingtonia robusta,15129
+San Diego,Magnolia grandiflora,3463
+Rancho Cucamonga,Lagerstroemia indica,12889	
+Rancho Cucamonga,Platanus acerifolia,5698
+Rancho Cucamonga,Liquidambar styraciflua,3727
+Rancho Cucamonga,Washingtonia robusta,2249
+Rancho Cucamonga,Magnolia grandiflora,5016
+Stockton,Lagerstroemia indica,7354	
+Stockton,Platanus acerifolia,7552
+Stockton,Liquidambar styraciflua,4110
+Stockton,Washingtonia robusta,780
+Stockton,Magnolia grandiflora,3762
