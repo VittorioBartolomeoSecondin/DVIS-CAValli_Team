@@ -52,7 +52,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .data(colorDomain)
     .enter()
     .append("rect")
-    .attr("x", (d, i) => i * 30) // Adjust spacing
+    .attr("x", (d, i) => i * 30 + width) // Adjust spacing
     .attr("width", 30) // Adjust the width of each legend item
     .attr("height", 15) // Adjust the height of the legend items
     .style("fill", d => myColor(d)); // Use the color scale to fill
