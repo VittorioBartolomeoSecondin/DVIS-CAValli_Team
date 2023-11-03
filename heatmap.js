@@ -1,7 +1,4 @@
-//Read the data
-d3.csv("section1_1/heatmap.csv", function(data) {
-
-    // append the svg object to the body of the page
+// append the svg object to the body of the page
     const svg = d3.select("#heatmap")
                   .append("svg")
                   .attr("id", "heatmap_svg")
@@ -10,6 +7,8 @@ d3.csv("section1_1/heatmap.csv", function(data) {
                   .append("g")
                   .attr("transform", `translate(${margin.left},${margin.top})`);
 
+//Read the data
+d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv", function(data) {
 
     // Labels of row and columns
     const myGroups = ["Los Angeles", "San Jose", "San Diego", "Rancho Cucamonga", "Stockton"]
@@ -37,13 +36,12 @@ d3.csv("section1_1/heatmap.csv", function(data) {
                       .range(["#d5e9c5", "#356d10"])
                       .domain([500,40000])
 
-    svg.append("g")
-       .selectAll("g")
-       .data(data, function(d) {return d.city+':'+d.species;})
+    svg.selectAll()
+       .data(data, function(d) {return d.group+':'+d.variable;})
        .join("rect")
-       .attr("x", function(d) { return x(d.city) })
-       .attr("y", function(d) { return y(d.species) })
+       .attr("x", function(d) { return x(d.group) })
+       .attr("y", function(d) { return y(d.variable) })
        .attr("width", x.bandwidth() )
        .attr("height", y.bandwidth() )
-       .style("fill", function(d) { return myColor(d.count)} )
+       .style("fill", function(d) { return myColor(d.value)} )
 })
