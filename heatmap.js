@@ -81,7 +81,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
       .attr("width", x.bandwidth() )
       .attr("height", y.bandwidth() )
       .style("fill", function(d) { return myColor(d.count)} )
-      .style("stroke-width", 1)
+      .style("stroke-width", 2)
       .style("stroke", "black")
       .style("opacity", 0.8)
 })
