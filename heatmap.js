@@ -37,7 +37,8 @@ d3.csv("section1_1/heatmap.csv", function(data) {
                       .range(["#d5e9c5", "#356d10"])
                       .domain([500,40000])
 
-    svg.selectAll()
+    svg.append("g")
+       .selectAll("g")
        .data(data, function(d) {return d.city+':'+d.species;})
        .join("rect")
        .attr("x", function(d) { return x(d.city) })
