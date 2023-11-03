@@ -20,7 +20,6 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .domain(myGroups)
     .padding(0.05);
   svg.append("g")
-    .style("font-size", 15)
     .attr("transform", `translate(0, ${height})`)
     .call(d3.axisBottom(x).tickSize(0))
     .select(".domain").remove()
@@ -31,14 +30,13 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .domain(myVars)
     .padding(0.05);
   svg.append("g")
-    .style("font-size", 15)
     .call(d3.axisLeft(y).tickSize(0))
     .select(".domain").remove()
 
   // Build color scale
   const myColor = d3.scaleSequential()
     .range(["#d5e9c5", "#356d10"])
-    .domain([0,40000])
+    .domain([500,40000])
 
   
 
