@@ -63,7 +63,7 @@ function updateStackedPChart(selectedValue) {
     
       // Color palette = one color per subgroup
       const color = d3.scaleOrdinal()
-                      .range(['#4053d3', '#ddb310', '#b51d14', '#fb49b0', '#00b25d']) //#cacaca for the 6th color
+                      .range(['#b51d14', '#ddb310', '#4053d3', '#fb49b0', '#00b25d']) //#cacaca for the 6th color
                       .domain(subgroups);
   
       // Normalize the data -> sum of each group must be 100!
