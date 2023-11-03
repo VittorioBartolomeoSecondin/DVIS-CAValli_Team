@@ -38,7 +38,6 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .range(["#d5e9c5", "#356d10"])
     .domain([500,40000])
 
-/*
   // Extract color domain values and color codes
   const colorDomain = myColor.domain(); // Array of color domain values (numbers)
   const colorRange = myColor.range();   // Array of color codes
@@ -66,9 +65,6 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .attr("y", 40) // Adjust vertical position
     .style("text-anchor", "middle")
     .text(d => d);
-*/
-  
-
 
   // add the squares
   svg.selectAll()
