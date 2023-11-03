@@ -32,7 +32,7 @@ svg.append("g")
 // Build color scale
 var myColor = d3.scaleLinear()
   .range(["#d5e9c5", "#356d10"])
-  .domain([1,100])
+  .domain([500,40000])
 
 //Read the data
 d3.csv("section1_1/stacked_1.csv", function(data) {
