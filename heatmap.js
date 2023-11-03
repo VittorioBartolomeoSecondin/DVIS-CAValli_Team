@@ -38,8 +38,32 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .range(["#d5e9c5", "#356d10"])
     .domain([500,40000])
 
-  
 
+
+  // Add X grid lines
+  svg.append("g")
+    .attr("class", "grid")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x)
+      .tickSize(-height)
+      .tickFormat("")
+    );
+  
+  // Add Y grid lines
+  svg.append("g")
+    .attr("class", "grid")
+    .call(d3.axisLeft(y)
+      .tickSize(-width)
+      .tickFormat("")
+    );
+
+  // Select the grid lines and style them
+  svg.selectAll(".grid line")
+    .style("stroke", "black")
+    .style("stroke-opacity", 0.5)
+    .style("shape-rendering", "crispEdges"); // Optional for crisp edges
+
+  
 
 
   // add the squares
