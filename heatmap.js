@@ -66,7 +66,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .append("svg")
   .attr("id", "heatmap_legend_svg")
   .attr("width", 1100)
-  .attr("height", 50)
+  .attr("height", 80)
 .append("g")
   .attr("transform", `translate(170, -60)`);
 
