@@ -75,7 +75,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .domain([d3.min(data, function(d) { return +d.count}), d3.max(data, function(d) { return +d.count})])
     .range(colorscale);
   
-  var format = d3.format(".1f")
+  var format = d3.format(".0")
   
   drawColorScale();
   
