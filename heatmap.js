@@ -43,10 +43,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
     .range(colours);
 
-  var c = d3.scaleLinear().domain(d3.extent(data, (d) => d.count)).range([0,1]);
-
-  console.log(d3.extent(data, (d) => d.count));
-  console.log(c);
+  var c = d3.scaleLinear().domain([d3.max(dataset, function(d) { return +d.occur}), d3.min(dataset, function(d) { return +d.occur})]).range([0,1]);
   
   // add the squares
   svg.selectAll()
