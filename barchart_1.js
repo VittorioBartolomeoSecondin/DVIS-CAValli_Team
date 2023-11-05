@@ -33,6 +33,7 @@ function updateBarChart(selectedDataset) {
                   .range([0, width]);
     
       svg.append("g")
+           .attr("class", "axis")
            .attr("transform", `translate(0, ${height})`)
          .call(d3.axisBottom(x))
          .selectAll("text")
@@ -46,6 +47,7 @@ function updateBarChart(selectedDataset) {
                   .padding(.1);
   
       svg.append("g")
+         .attr("class", "axis")
          .call(d3.axisLeft(y));
   
       // Show the bars
@@ -55,7 +57,6 @@ function updateBarChart(selectedDataset) {
          .append("rect")
            .attr("x", x(0))
            .attr("y", d => y(d.scientific_name))
-           .style("font-size", "0.5em")
            //.attr("width", d => x(d.count))
            .attr("width", 0)
            .attr("height", y.bandwidth())
