@@ -35,14 +35,15 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .call(d3.axisLeft(y).tickSize(5))
     .select(".domain").remove()
 
-  // Build color scale
-  const myColor = d3.scaleSequential()
-    .range(["#d5e9c5", "#356d10"])
-    .domain([500,40000])
+  var colours = ["#6363FF", "#6373FF", "#63A3FF", "#63E3FF", "#63FFFB", "#63FFCB",
+               "#63FF9B", "#63FF6B", "#7BFF63", "#BBFF63", "#DBFF63", "#FBFF63", 
+               "#FFD363", "#FFB363", "#FF8363", "#FF7363", "#FF6364"];
 
-  // Extract color domain values and color codes
-  const colorDomain = myColor.domain(); // Array of color domain values (numbers)
-  const colorRange = myColor.range();   // Array of color codes
+  var heatmapColour = d3.scale.linear()
+    .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
+    .range(colours);
+
+  var c = d3.scale.linear().domain(d3.extent(dataset)).range([0,1]);
   
   // add the squares
   svg.selectAll()
@@ -54,7 +55,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
       .attr("ry", 0)
       .attr("width", x.bandwidth() )
       .attr("height", y.bandwidth() )
-      .style("fill", function(d) { return myColor(d.count)} )
+      .style("fill", function(d) { return heatmapColour(c(d.count)) })
       .style("stroke-width", 1)
       .style("stroke", "black")
       .style("opacity", 0.8)
