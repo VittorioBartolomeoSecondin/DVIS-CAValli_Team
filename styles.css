@@ -8,6 +8,10 @@ p {
 }
 */
 
+.axis {
+    font: 14px sans-serif; 
+}
+
 .possibly-sidebyside > div {
   float: left;
 }
