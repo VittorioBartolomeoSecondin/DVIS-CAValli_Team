@@ -20,6 +20,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .domain(myGroups)
     .padding(0);
   svg.append("g")
+    .attr("class", "axis")
     .attr("transform", `translate(0, ${height})`)
     .call(d3.axisBottom(x).tickSize(5))
     .select(".domain").remove()
@@ -30,6 +31,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .domain(myVars)
     .padding(0);
   svg.append("g")
+    .attr("class", "axis")
     .call(d3.axisLeft(y).tickSize(5))
     .select(".domain").remove()
 
