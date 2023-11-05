@@ -71,8 +71,11 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
   .attr("transform", `translate(170, -50)`);
 
   var colorscale = colours.reverse();
+  var min = d3.min(data, function(d) { return +d.count}; 
+  var max = d3.max(data, function(d) { return +d.count});
+  
   var color = d3.scaleQuantize()
-    .domain([d3.min(data, function(d) { return +d.count}), d3.max(data, function(d) { return +d.count})])
+    .domain([min, max])
     .range(colorscale);
   
   var format = d3.format(".0f")
@@ -120,7 +123,8 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
         return i * 50 + 50;
       })
       .text(function(d) {
-        return format(color.invertExtent(d)[1])
+        if (color.invertExtent(d)[1] == max)
+          return format(color.invertExtent(d)[1])
       })
   }
 })
