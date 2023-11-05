@@ -44,6 +44,9 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .range(colours);
 
   var c = d3.scaleLinear().domain(d3.extent(data, (d) => d.count)).range([0,1]);
+
+  console.log(d3.extent(data, (d) => d.count));
+  console.log(c);
   
   // add the squares
   svg.selectAll()
@@ -55,7 +58,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
       .attr("ry", 0)
       .attr("width", x.bandwidth() )
       .attr("height", y.bandwidth() )
-      .style("fill", function(d) { return heatmapColour(c(d)) })
+      .style("fill", function(d) { return heatmapColour(c(d.count)) })
       .style("stroke-width", 1)
       .style("stroke", "black")
       .style("opacity", 0.8)
