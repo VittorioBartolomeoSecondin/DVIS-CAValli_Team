@@ -108,7 +108,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
         return i * 50 + 25;
       })
       .append("tspan")
-      .attr("dy", "1.0em")
+      .attr("dy", "0.5em")
       .attr('x', function(d, i) {
         return i * 50;
       })
