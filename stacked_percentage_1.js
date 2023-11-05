@@ -46,6 +46,7 @@ function updateStackedPChart(selectedValue) {
                   .range([0, width]);
       
       svg.append("g")
+           .attr("class", "axis")
            .attr("transform", `translate(0, ${height})`)
          .call(d3.axisBottom(x))
          .selectAll("text")
@@ -59,6 +60,7 @@ function updateStackedPChart(selectedValue) {
                   .padding(.1);
       
       svg.append("g")
+         .attr("class", "axis")
          .call(d3.axisLeft(y).tickSizeOuter(0));
     
       // Color palette = one color per subgroup
