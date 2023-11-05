@@ -1,5 +1,5 @@
 // Set the dimensions and margins of the graph
-const margin = {top: 40, right: 40, bottom: 50, left: 140}, width = 1000 - margin.left - margin.right, height = 600 - margin.top - margin.bottom;
+const margin = {top: 30, right: 40, bottom: 50, left: 160}, width = 1000 - margin.left - margin.right, height = 600 - margin.top - margin.bottom;
 const margin2 = {top: 40, right: 40, bottom: 50, left: 140}, width2 = 450 - margin.left - margin.right, height2 = 400 - margin.top - margin.bottom;
 
 // Parse the Data
