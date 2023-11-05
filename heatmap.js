@@ -35,9 +35,9 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .call(d3.axisLeft(y).tickSize(5))
     .select(".domain").remove()
 
-  var colours = ["#258257", "#2A8C5C", "#309562", "#359E67", "#3BA76C", "#41B070", "#48B875", 
-                 "#4FC07A", "#56C87F", "#5DCF84", "#65D689", "#76D494", 
-                 "#85D49E", "#94D4A8", "#A2D5B2", "#B0D6BC", "#BCD8C5"];
+  var colours = ["#27742D", "#2A7B2C", "#30822D", "#378830", "#3F8F33", "#489636" 
+                 "#519D39", "#5AA33C", "#64AA3F", "#6FB142", "#79B745", "#84BE48" 
+                 "#8FC44B", "#9BCB4E", "#A7D151", "#B3D855", "#C0DE58"];
   
   var heatmapColour = d3.scaleLinear()
     .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
