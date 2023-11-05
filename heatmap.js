@@ -62,6 +62,14 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
       .style("stroke", "black")
       .style("opacity", 0.8)
 
+  const legend_svg = d3.select("#heatmap")
+    .append("svg")
+  .attr("id", "heatmap_legend_svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
   var colorscale = colours.reverse();
   var color = d3.scaleQuantize()
     .domain([d3.min(data, function(d) { return +d.count}), d3.max(data, function(d) { return +d.count})])
@@ -72,7 +80,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
   drawColorScale();
   
   function drawColorScale() {
-    var pallete = svg.append('g')
+    var pallete = legend_svg.append('g')
       .attr('id', 'pallete')
       .attr("transform", `translate(0, 700)`);
   
