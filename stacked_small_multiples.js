@@ -60,6 +60,7 @@ function updateStackedSMChart(selectedValue) {
                               .range([0, width2]);
                 
                   svg.append("g")
+                       .attr("class", "axis")
                        .attr("transform", `translate(0, ${height2})`)
                      .call(d3.axisBottom(x))
                      .selectAll("text")
@@ -73,6 +74,7 @@ function updateStackedSMChart(selectedValue) {
                               .padding(.1);
               
                   svg.append("g")
+                     .attr("class", "axis")
                      .call(d3.axisLeft(y));
               
                   // Show the bars
