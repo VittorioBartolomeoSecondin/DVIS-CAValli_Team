@@ -68,7 +68,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
   .attr("width", 1100)
   .attr("height", 120)
 .append("g")
-  .attr("transform", `translate(140, 10)`);
+  .attr("transform", `translate(160, 0)`);
 
   var colorscale = colours.reverse();
   var color = d3.scaleQuantize()
