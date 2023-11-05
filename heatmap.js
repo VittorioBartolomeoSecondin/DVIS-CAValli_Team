@@ -71,7 +71,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
   .attr("transform", `translate(170, -50)`);
 
   var colorscale = colours.reverse();
-  var min = d3.min(data, function(d) { return +d.count}; 
+  var min = d3.min(data, function(d) { return +d.count}); 
   var max = d3.max(data, function(d) { return +d.count});
   
   var color = d3.scaleQuantize()
