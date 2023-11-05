@@ -117,7 +117,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
       })
       .append("tspan")
       .attr('x', function(d, i) {
-        return i * 50 + 25;
+        return i * 50 + 50;
       })
       .text(function(d) {
         return format(color.invertExtent(d)[1])
