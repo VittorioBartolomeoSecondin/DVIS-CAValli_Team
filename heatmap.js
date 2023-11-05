@@ -81,8 +81,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
   
   function drawColorScale() {
     var pallete = legend_svg.append('g')
-      .attr('id', 'pallete')
-      .attr("transform", `translate(0, 700)`);
+      .attr('id', 'pallete');
   
     var swatch = pallete.selectAll('rect').data(colorscale);
     swatch.enter().append('rect')
