@@ -43,7 +43,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
     .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
     .range(colours);
 
-  var c = d3.scaleLinear().domain([d3.max(data, function(d) { return +d.count}), d3.min(data, function(d) { return +d.count})]).range([0,1]);
+  var c = d3.scaleQuantize().domain([d3.max(data, function(d) { return +d.count}), d3.min(data, function(d) { return +d.count})]).range([0,1]);
 
   console.log([d3.max(data, function(d) { return +d.count}), d3.min(data, function(d) { return +d.count})]);
   
@@ -63,7 +63,7 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
       .style("opacity", 0.8)
 
   var colorscale = colours.reverse();
-  var color = d3.scaleLinear()
+  var color = d3.scaleQuantize()
     .domain([d3.min(data, function(d) { return +d.count}), d3.max(data, function(d) { return +d.count})])
     .range(colorscale);
   
