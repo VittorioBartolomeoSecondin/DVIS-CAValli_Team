@@ -93,7 +93,9 @@ d3.csv("section1_1/heatmap.csv").then(function(data) {
       })
       .attr('y', 50)
       .attr('width', 50)
-      .attr('height', 20);
+      .attr('height', 20)
+      .style("stroke-width", 1)
+      .style("stroke", "black");
   
     var texts = pallete.selectAll("foo")
       .data(color.range())
