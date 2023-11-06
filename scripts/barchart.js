@@ -108,7 +108,7 @@ function updateBarChart(selectedDataset) {
 }
 
 // Initial chart creation with the default dataset
-updateBarChart("section1_1/total.csv");
+updateBarChart("data/section1/barchart/total.csv");
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
