@@ -8,6 +8,14 @@ p {
 }
 */
 
+body {
+    font-family: 'Fira Sans';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab';
+}
+
 .axis {
     font: 14px sans-serif; 
 }
