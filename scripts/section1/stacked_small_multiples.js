@@ -1,4 +1,4 @@
-const datasets = ['section1_1/small_multiple1.csv', 'section1_1/small_multiple2.csv', 'section1_1/small_multiple3.csv'];
+const datasets = ['data/section1/stacked_barcharts/small_multiple1.csv', 'data/section1/stacked_barcharts/small_multiple2.csv', 'data/section1/stacked_barcharts/small_multiple3.csv', 'data/section1/stacked_barcharts/small_multiple4.csv', 'data/section1/stacked_barcharts/small_multiple5.csv', 'data/section1/stacked_barcharts/small_multiple6.csv'];
 const colours = ['#b51d14', '#ddb310', '#4053d3']; // '#fb49b0', '#00b25d' and '#cacaca' for the other colors
 
 function keep_interesting_cities(selectedValue, data) {
