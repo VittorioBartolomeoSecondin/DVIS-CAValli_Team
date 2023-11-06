@@ -36,18 +36,18 @@ function updateStackedSMChart(selectedValue) {
               d3.csv(datasets[i]).then( function(data) {
                  let filteredData = keep_interesting_cities(selectedValue, data);
                   // Append the svg object to the body of the page
-                  const svg = d3.select("#" + datasets[i].substring(11, 26))
+                  const svg = d3.select("#" + datasets[i].substring(32, 47))
                                 .append("svg")
-                                .attr("id", datasets[i].substring(11, 26) + "_svg")
+                                .attr("id", datasets[i].substring(32, 47) + "_svg")
                                   .attr("width", width2 + margin2.left + margin2.right)
                                   .attr("height", height2 + margin2.top + margin2.bottom)
                                 .append("g")
                                   .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
             
                   // Create the tooltip element
-                  const tooltip = d3.select("#" + datasets[i].substring(11, 26))
+                  const tooltip = d3.select("#" + datasets[i].substring(32, 47))
                                     .append("section")
-                                    .attr("id", datasets[i].substring(11, 26) + "_tooltip")
+                                    .attr("id", datasets[i].substring(32, 47) + "_tooltip")
                                     .style("opacity", 0)
                                     .style("background-color", "lightgray")
                                     .style("border", "2px solid black")
@@ -144,9 +144,15 @@ document.getElementById("city-dropdown").addEventListener("change", function () 
   d3.select("#small_multiple1_svg").remove();
   d3.select("#small_multiple2_svg").remove();
   d3.select("#small_multiple3_svg").remove();
+  d3.select("#small_multiple4_svg").remove();
+  d3.select("#small_multiple5_svg").remove();
+  d3.select("#small_multiple6_svg").remove();
   d3.select("#small_multiple1_tooltip").remove();
   d3.select("#small_multiple2_tooltip").remove();
   d3.select("#small_multiple3_tooltip").remove();
+  d3.select("#small_multiple4_tooltip").remove();
+  d3.select("#small_multiple5_tooltip").remove();
+  d3.select("#small_multiple6_tooltip").remove();
   // Call a function to update your chart based on the selected value
   updateStackedSMChart(selectedValue);
 });
