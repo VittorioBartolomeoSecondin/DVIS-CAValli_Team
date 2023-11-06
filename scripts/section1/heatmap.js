@@ -8,7 +8,7 @@ const svg = d3.select("#heatmap")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 //Read the data
-d3.csv("section1_1/heatmap.csv").then(function(data) {
+d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
 
   // Labels of row and columns -> unique identifier of the column called 'city' and 'species'
   const myGroups = Array.from(new Set(data.map(d => d.city)))
