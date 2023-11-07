@@ -124,7 +124,7 @@ function updateStackedPChart(selectedValue, useAlternateDataset) {
            const subgroupValue = d.data[subgroupName];
             
            // Customize the tooltip content
-           tooltip.html("Scientific name: " + subgroupName + "<br>" + "Percentage: " + subgroupValue + "%" + "<br>" + d.data[name] + "out of " + tot + "trees)
+           tooltip.html("Scientific name: " + subgroupName + "<br>" + "Percentage: " + subgroupValue + "%")
                   .style("left", (event.pageX + 40) + "px")
                   .style("top", (event.pageY - 40) + "px");
              
