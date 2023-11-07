@@ -1,7 +1,10 @@
-function updateStackedChart(selectedValue) {
+function updateStackedChart(selectedValue, useAlternateDataset) {
   console.log("updateChart");
+
+  const datasetURL = useAlternateDataset? "data/section1/stacked_barcharts/stacked_top_others.csv" : "data/section1/stacked_barcharts/stacked_top.csv";
+  
   // Parse the Data
-  d3.csv("data/section1/stacked_barcharts/stacked_top_others.csv").then( function(data) {
+  d3.csv(datasetURL).then( function(data) {
     
     // append the svg object to the body of the page
     const svg = d3.select("#stacked_1")
@@ -135,12 +138,22 @@ function updateStackedChart(selectedValue) {
          });
   })
 }
-updateStackedChart("all"); // Load the chart with all cities initially
+updateStackedChart("all", false); // Load the chart with all cities initially
 
+// Attach an event listener to the city dropdown
 document.getElementById("city-dropdown").addEventListener("change", function () {
-const selectedValue = this.value;
-d3.select("#stacked_svg").remove();
-d3.select("#stacked_tooltip").remove();
-// Call a function to update your chart based on the selected value
-updateStackedChart(selectedValue);
+    const selectedValue = this.value;
+    const useAlternateDataset = document.getElementById("dataset-checkbox").checked;
+    d3.select("#stacked_svg").remove();
+    d3.select("#stacked_tooltip").remove();
+    updateStackedChart(selectedValue, useAlternateDataset);
+});
+
+// Attach an event listener to the dataset checkbox
+document.getElementById("dataset-checkbox").addEventListener("change", function () {
+    const selectedValue = document.getElementById("city-dropdown").value;
+    const useAlternateDataset = this.checked;
+    d3.select("#stacked_svg").remove();
+    d3.select("#stacked_tooltip").remove();
+    updateStackedChart(selectedValue, useAlternateDataset);
 });
