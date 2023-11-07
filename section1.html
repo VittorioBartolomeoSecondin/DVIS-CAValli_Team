@@ -155,22 +155,6 @@
             }
         </script>
 
-        
-        <!--<div id="city-selector" style="clear: left;">  
-            <label for="city-dropdown"  style="margin-left: 10px;">Select Subgroup:</label>
-            <select id="city-dropdown">
-              <option value="all">All Cities</option>
-              <option value="10">10 Cities</option>
-              <option value="5">5 Cities</option>
-              <option value="3">3 Cities</option>
-              <option value="2">2 Cities</option>
-            </select>
-            <span class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">With others</label>
-            </span>
-        </div>-->
-
         <div id="city-selector-container" style="clear: left; display: flex; align-items: center; margin-left: 10px;">
             <div id="city-selector">
                 <label for="city-dropdown">Select Subgroup:</label>
@@ -205,7 +189,7 @@
 
         <h2 style="margin-left: 10px;">City comparison - heatmap</h2>
         <p style="margin-left: 10px;">Here we visualize the heatmap of the Californian subset. <br>
-        We have the 15 cities of the state on the x-axis and the 15 most widespread tree types with respect to the state on the y-axis.<br>
+        We have the 15 cities of the state on the x-axis and the 23 most widespread tree types (computed as the union of the top 3 tree types on each of the cities) on the y-axis.<br>
         As it is shown also in the legend, the more intense the color on the heatmap, the more trees of that type are present in that city.</p>
         <div id="heatmap"></div>
 
