@@ -76,73 +76,74 @@ function updateStackedPChart(selectedValue) {
           for (i in subgroups){ name=subgroups[i] ; tot += +d[name] }
           // Now normalize
           for (i in subgroups){ name=subgroups[i] ; d[name] = (d[name] / tot * 100).toFixed(2)}
-      })
+      
   
-      // Stack the data (per subgroup)
-      const stackedData = d3.stack()
-                            .keys(subgroups)                      
-                            .value((d, key) => +d[key])
-                            .order(d3.stackOrderNone)
-                            .offset(d3.stackOffsetNone)
-                            (filteredData);
-    
-      // Show the bars
-      svg.append("g")
-         .selectAll("g")
-         // Enter in the stack data = loop key per key = group per group
-         .data(stackedData)
-         .join("g")
-           .attr("fill", d => color(d.key))
-           .selectAll("rect")
-           // enter a second time = loop subgroup per subgroup to add all rectangles
-           .data(d => d)
-           .join("rect")
-             .attr("x", d => x(d[0]))
-             .attr("y", d => y(d.data.city))
-             .attr("width", d => x(d[1]) - x(d[0]))
-             .attr("height", y.bandwidth())
-           .on("mouseover", function(event, d) {
-    
-           // Change color when hovering
-           d3.select(this).style("fill", "lightgreen");
+        // Stack the data (per subgroup)
+        const stackedData = d3.stack()
+                              .keys(subgroups)                      
+                              .value((d, key) => +d[key])
+                              .order(d3.stackOrderNone)
+                              .offset(d3.stackOffsetNone)
+                              (filteredData);
+      
+        // Show the bars
+        svg.append("g")
+           .selectAll("g")
+           // Enter in the stack data = loop key per key = group per group
+           .data(stackedData)
+           .join("g")
+             .attr("fill", d => color(d.key))
+             .selectAll("rect")
+             // enter a second time = loop subgroup per subgroup to add all rectangles
+             .data(d => d)
+             .join("rect")
+               .attr("x", d => x(d[0]))
+               .attr("y", d => y(d.data.city))
+               .attr("width", d => x(d[1]) - x(d[0]))
+               .attr("height", y.bandwidth())
+             .on("mouseover", function(event, d) {
+      
+             // Change color when hovering
+             d3.select(this).style("fill", "lightgreen");
+                
+             // Show the tooltip
+             tooltip.transition()
+                    .duration(200)
+                    .style("opacity", 1)
+                    .style("background-color", "lightgray")
+                    .style("border", "2px solid black");
               
-           // Show the tooltip
-           tooltip.transition()
-                  .duration(200)
-                  .style("opacity", 1)
-                  .style("background-color", "lightgray")
-                  .style("border", "2px solid black");
-            
-           // Define the subgroup name and value to display them in the tooltip
-           const subgroupName = d3.select(this.parentNode).datum().key;
-           const subgroupValue = d.data[subgroupName];
-            
-           // Customize the tooltip content
-           tooltip.html("Scientific name: " + subgroupName + "<br>" + "Percentage: " + subgroupValue +"%")
-                  .style("left", (event.pageX + 40) + "px")
-                  .style("top", (event.pageY - 40) + "px");
+             // Define the subgroup name and value to display them in the tooltip
+             const subgroupName = d3.select(this.parentNode).datum().key;
+             const subgroupValue = d.data[subgroupName];
+              
+             // Customize the tooltip content
+             tooltip.html("Scientific name: " + subgroupName + "<br>" + "Percentage: " + subgroupValue + "%" + "<br>" + d.data[name] + "out of " + tot + "trees)
+                    .style("left", (event.pageX + 40) + "px")
+                    .style("top", (event.pageY - 40) + "px");
+               
+             })
+             .on("mousemove", function(event, d) {
+              
+             // Move the tooltip with the mouse pointer
+             tooltip.style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY + 10) + "px");
+               
+             })
+             .on("mouseout", function(event, d) {
+      
+             // Returning to original color when not hovering
+             const subgroupColor = color(d3.select(this.parentNode).datum().key);
+             d3.select(this).style("fill", subgroupColor);
              
-           })
-           .on("mousemove", function(event, d) {
-            
-           // Move the tooltip with the mouse pointer
-           tooltip.style("left", (event.pageX + 10) + "px")
-                  .style("top", (event.pageY + 10) + "px");
-             
-           })
-           .on("mouseout", function(event, d) {
-    
-           // Returning to original color when not hovering
-           const subgroupColor = color(d3.select(this.parentNode).datum().key);
-           d3.select(this).style("fill", subgroupColor);
-           
-           // Hide the tooltip
-           tooltip.transition()
-                  .duration(500)
-                  .style("opacity", 0);
-            
-           });
-    })
+             // Hide the tooltip
+             tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+              
+             });
+      })
+  })
 }
 
 updateStackedPChart("all"); // Load the chart with all cities initially
