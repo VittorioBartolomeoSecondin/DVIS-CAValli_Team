@@ -15,7 +15,7 @@ function updateStackedSMChart(selectedValue, useAlternateDataset) {
     var max = 0;
 
     // Create an array of promises for loading and processing data
-    const promises = datasets.map((dataset) => {
+    const promises = (useAlternateDataset? datasets : datasets.slice(0, datasets.length - 1)).map((dataset) => {
       return d3.csv(dataset)
         .then(function (data) {
           let filteredData = keep_interesting_cities(selectedValue, data);
