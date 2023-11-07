@@ -1,15 +1,6 @@
-/*
-body {
-    background-color: lightblue;
-}
-
-p {
-    font-family: verdana; font-size: 20px;
-}
-*/
-
 body {
     font-family: 'Fira Sans';
+    background-color: lightblue;
 }
 
 p, li, div, a, option, input {
