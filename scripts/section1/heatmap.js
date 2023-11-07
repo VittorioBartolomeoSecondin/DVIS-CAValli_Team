@@ -23,6 +23,9 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
     .attr("class", "axis")
     .attr("transform", `translate(0, ${height})`)
     .call(d3.axisBottom(x).tickSize(5))
+    .selectAll("text")
+    .attr("transform", "translate(-10,0)rotate(-45)")
+    .style("text-anchor", "end");
     .select(".domain").remove()
 
   // Build Y scales and axis:
@@ -35,9 +38,9 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
     .call(d3.axisLeft(y).tickSize(5))
     .select(".domain").remove()
 
-  var colours = ["#27742D", "#2A7B2C", "#30822D", "#378830", "#3F8F33", "#489636", 
-                 "#519D39", "#5AA33C", "#64AA3F", "#6FB142", "#79B745", "#84BE48", 
-                 "#8FC44B", "#9BCB4E", "#A7D151", "#B3D855", "#C0DE58"];
+  var colours = ["#2F2F2F", "#323232", "#353535", "#383838", "#3B3B3B", "#3E3E3E", 
+                 "#414141", "#444444", "#565656", "#686868", "#7A7A7A", "#8C8C8C", 
+                 "#9D9D9D", "#AFAFAF", "#C1C1C1", "#D3D3D3", "#E5E5E5"];
   
   var heatmapColour = d3.scalePow()
     .exponent(2)
