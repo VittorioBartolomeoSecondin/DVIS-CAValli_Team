@@ -39,7 +39,8 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
                  "#519D39", "#5AA33C", "#64AA3F", "#6FB142", "#79B745", "#84BE48", 
                  "#8FC44B", "#9BCB4E", "#A7D151", "#B3D855", "#C0DE58"];
   
-  var heatmapColour = d3.scaleLinear()
+  var heatmapColour = d3.scalePow()
+    .exponent(2)
     .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
     .range(colours);
 
