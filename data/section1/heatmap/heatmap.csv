@@ -1,0 +1,346 @@
+city,species,count
+Los Angeles,Abies,0
+Los Angeles,Cedrus deodara,3468
+Los Angeles,Cinnamomum camphora,15850
+Los Angeles,Cupaniopsis anacardioides,11715
+Los Angeles,Eucalyptus globulus,3213
+Los Angeles,Eucalyptus maculata,67
+Los Angeles,Gleditsia triacanthos,8778
+Los Angeles,Lagerstroemia indica,34729
+Los Angeles,Liquidambar styraciflua,30061
+Los Angeles,Lophostemon confertus,0
+Los Angeles,Magnolia grandiflora,30988
+Los Angeles,Metrosideros excelsa,561
+Los Angeles,Pinus canariensis,11609
+Los Angeles,Pistacia chinensis,1012
+Los Angeles,Platanus acerifolia,17477
+Los Angeles,Prunus L.,0
+Los Angeles,Pyrus calleryana,7500
+Los Angeles,Quercus,3612
+Los Angeles,Quercus lobata,210
+Los Angeles,Sequoia sempervirens,848
+Los Angeles,Syagrus romanzoffianum,0
+Los Angeles,Tristaniopsis laurina,0
+Los Angeles,Washingtonia robusta,37971
+San Jose,Abies,0
+San Jose,Cedrus deodara,601
+San Jose,Cinnamomum camphora,4835
+San Jose,Cupaniopsis anacardioides,185
+San Jose,Eucalyptus globulus,183
+San Jose,Eucalyptus maculata,0
+San Jose,Gleditsia triacanthos,4037
+San Jose,Lagerstroemia indica,21636
+San Jose,Liquidambar styraciflua,14644
+San Jose,Lophostemon confertus,289
+San Jose,Magnolia grandiflora,7080
+San Jose,Metrosideros excelsa,1
+San Jose,Pinus canariensis,1582
+San Jose,Pistacia chinensis,24316
+San Jose,Platanus acerifolia,26291
+San Jose,Prunus L.,0
+San Jose,Pyrus calleryana,9631
+San Jose,Quercus,183
+San Jose,Quercus lobata,1571
+San Jose,Sequoia sempervirens,2558
+San Jose,Syagrus romanzoffianum,3788
+San Jose,Tristaniopsis laurina,1479
+San Jose,Washingtonia robusta,5116
+San Diego,Abies,20
+San Diego,Cedrus deodara,71
+San Diego,Cinnamomum camphora,2267
+San Diego,Cupaniopsis anacardioides,13608
+San Diego,Eucalyptus globulus,64
+San Diego,Eucalyptus maculata,0
+San Diego,Gleditsia triacanthos,0
+San Diego,Lagerstroemia indica,2207
+San Diego,Liquidambar styraciflua,10323
+San Diego,Lophostemon confertus,7591
+San Diego,Magnolia grandiflora,3463
+San Diego,Metrosideros excelsa,880
+San Diego,Pinus canariensis,469
+San Diego,Pistacia chinensis,115
+San Diego,Platanus acerifolia,1907
+San Diego,Prunus L.,0
+San Diego,Pyrus calleryana,1986
+San Diego,Quercus,0
+San Diego,Quercus lobata,0
+San Diego,Sequoia sempervirens,27
+San Diego,Syagrus romanzoffianum,22624
+San Diego,Tristaniopsis laurina,0
+San Diego,Washingtonia robusta,15129
+Rancho Cucamonga,Abies,0
+Rancho Cucamonga,Cedrus deodara,48
+Rancho Cucamonga,Cinnamomum camphora,1173
+Rancho Cucamonga,Cupaniopsis anacardioides,1064
+Rancho Cucamonga,Eucalyptus globulus,5549
+Rancho Cucamonga,Eucalyptus maculata,0
+Rancho Cucamonga,Gleditsia triacanthos,8
+Rancho Cucamonga,Lagerstroemia indica,12920
+Rancho Cucamonga,Liquidambar styraciflua,3727
+Rancho Cucamonga,Lophostemon confertus,0
+Rancho Cucamonga,Magnolia grandiflora,5016
+Rancho Cucamonga,Metrosideros excelsa,0
+Rancho Cucamonga,Pinus canariensis,2355
+Rancho Cucamonga,Pistacia chinensis,3213
+Rancho Cucamonga,Platanus acerifolia,5707
+Rancho Cucamonga,Prunus L.,0
+Rancho Cucamonga,Pyrus calleryana,4941
+Rancho Cucamonga,Quercus,135
+Rancho Cucamonga,Quercus lobata,41
+Rancho Cucamonga,Sequoia sempervirens,24
+Rancho Cucamonga,Syagrus romanzoffianum,4
+Rancho Cucamonga,Tristaniopsis laurina,0
+Rancho Cucamonga,Washingtonia robusta,2262
+Stockton,Abies,0
+Stockton,Cedrus deodara,445
+Stockton,Cinnamomum camphora,1670
+Stockton,Cupaniopsis anacardioides,1
+Stockton,Eucalyptus globulus,12
+Stockton,Eucalyptus maculata,0
+Stockton,Gleditsia triacanthos,324
+Stockton,Lagerstroemia indica,7354
+Stockton,Liquidambar styraciflua,4110
+Stockton,Lophostemon confertus,0
+Stockton,Magnolia grandiflora,3762
+Stockton,Metrosideros excelsa,1
+Stockton,Pinus canariensis,779
+Stockton,Pistacia chinensis,11392
+Stockton,Platanus acerifolia,7552
+Stockton,Prunus L.,0
+Stockton,Pyrus calleryana,5296
+Stockton,Quercus,104
+Stockton,Quercus lobata,2523
+Stockton,Sequoia sempervirens,2936
+Stockton,Syagrus romanzoffianum,0
+Stockton,Tristaniopsis laurina,164
+Stockton,Washingtonia robusta,780
+Sacramento,Abies,0
+Sacramento,Cedrus deodara,678
+Sacramento,Cinnamomum camphora,773
+Sacramento,Cupaniopsis anacardioides,0
+Sacramento,Eucalyptus globulus,0
+Sacramento,Eucalyptus maculata,0
+Sacramento,Gleditsia triacanthos,0
+Sacramento,Lagerstroemia indica,4146
+Sacramento,Liquidambar styraciflua,1933
+Sacramento,Lophostemon confertus,0
+Sacramento,Magnolia grandiflora,1151
+Sacramento,Metrosideros excelsa,0
+Sacramento,Pinus canariensis,0
+Sacramento,Pistacia chinensis,4580
+Sacramento,Platanus acerifolia,14111
+Sacramento,Prunus L.,0
+Sacramento,Pyrus calleryana,4285
+Sacramento,Quercus,1021
+Sacramento,Quercus lobata,3693
+Sacramento,Sequoia sempervirens,2909
+Sacramento,Syagrus romanzoffianum,0
+Sacramento,Tristaniopsis laurina,0
+Sacramento,Washingtonia robusta,1535
+San Francisco,Abies,0
+San Francisco,Cedrus deodara,146
+San Francisco,Cinnamomum camphora,141
+San Francisco,Cupaniopsis anacardioides,246
+San Francisco,Eucalyptus globulus,444
+San Francisco,Eucalyptus maculata,0
+San Francisco,Gleditsia triacanthos,117
+San Francisco,Lagerstroemia indica,102
+San Francisco,Liquidambar styraciflua,1592
+San Francisco,Lophostemon confertus,8236
+San Francisco,Magnolia grandiflora,7793
+San Francisco,Metrosideros excelsa,8681
+San Francisco,Pinus canariensis,350
+San Francisco,Pistacia chinensis,412
+San Francisco,Platanus acerifolia,11925
+San Francisco,Prunus L.,0
+San Francisco,Pyrus calleryana,4036
+San Francisco,Quercus,25
+San Francisco,Quercus lobata,19
+San Francisco,Sequoia sempervirens,330
+San Francisco,Syagrus romanzoffianum,848
+San Francisco,Tristaniopsis laurina,8509
+San Francisco,Washingtonia robusta,1012
+Anaheim,Abies,0
+Anaheim,Cedrus deodara,98
+Anaheim,Cinnamomum camphora,2567
+Anaheim,Cupaniopsis anacardioides,1318
+Anaheim,Eucalyptus globulus,391
+Anaheim,Eucalyptus maculata,0
+Anaheim,Gleditsia triacanthos,23076
+Anaheim,Lagerstroemia indica,3771
+Anaheim,Liquidambar styraciflua,1491
+Anaheim,Lophostemon confertus,1609
+Anaheim,Magnolia grandiflora,5266
+Anaheim,Metrosideros excelsa,179
+Anaheim,Pinus canariensis,2317
+Anaheim,Pistacia chinensis,1123
+Anaheim,Platanus acerifolia,1264
+Anaheim,Prunus L.,0
+Anaheim,Pyrus calleryana,320
+Anaheim,Quercus,25
+Anaheim,Quercus lobata,2
+Anaheim,Sequoia sempervirens,12
+Anaheim,Syagrus romanzoffianum,1706
+Anaheim,Tristaniopsis laurina,322
+Anaheim,Washingtonia robusta,4385
+Ontario,Abies,0
+Ontario,Cedrus deodara,543
+Ontario,Cinnamomum camphora,3900
+Ontario,Cupaniopsis anacardioides,1108
+Ontario,Eucalyptus globulus,212
+Ontario,Eucalyptus maculata,333
+Ontario,Gleditsia triacanthos,107
+Ontario,Lagerstroemia indica,4630
+Ontario,Liquidambar styraciflua,4392
+Ontario,Lophostemon confertus,0
+Ontario,Magnolia grandiflora,1214
+Ontario,Metrosideros excelsa,4
+Ontario,Pinus canariensis,3307
+Ontario,Pistacia chinensis,1343
+Ontario,Platanus acerifolia,3328
+Ontario,Prunus L.,0
+Ontario,Pyrus calleryana,2793
+Ontario,Quercus,0
+Ontario,Quercus lobata,1
+Ontario,Sequoia sempervirens,161
+Ontario,Syagrus romanzoffianum,0
+Ontario,Tristaniopsis laurina,1
+Ontario,Washingtonia robusta,1588
+Oakland,Abies,2
+Oakland,Cedrus deodara,2
+Oakland,Cinnamomum camphora,522
+Oakland,Cupaniopsis anacardioides,0
+Oakland,Eucalyptus globulus,15
+Oakland,Eucalyptus maculata,0
+Oakland,Gleditsia triacanthos,224
+Oakland,Lagerstroemia indica,1953
+Oakland,Liquidambar styraciflua,3312
+Oakland,Lophostemon confertus,632
+Oakland,Magnolia grandiflora,1375
+Oakland,Metrosideros excelsa,122
+Oakland,Pinus canariensis,6
+Oakland,Pistacia chinensis,1150
+Oakland,Platanus acerifolia,3788
+Oakland,Prunus L.,2930
+Oakland,Pyrus calleryana,2683
+Oakland,Quercus,479
+Oakland,Quercus lobata,4
+Oakland,Sequoia sempervirens,48
+Oakland,Syagrus romanzoffianum,16
+Oakland,Tristaniopsis laurina,313
+Oakland,Washingtonia robusta,274
+Huntington Beach,Abies,0
+Huntington Beach,Cedrus deodara,83
+Huntington Beach,Cinnamomum camphora,304
+Huntington Beach,Cupaniopsis anacardioides,1431
+Huntington Beach,Eucalyptus globulus,299
+Huntington Beach,Eucalyptus maculata,0
+Huntington Beach,Gleditsia triacanthos,10394
+Huntington Beach,Lagerstroemia indica,3896
+Huntington Beach,Liquidambar styraciflua,170
+Huntington Beach,Lophostemon confertus,1453
+Huntington Beach,Magnolia grandiflora,372
+Huntington Beach,Metrosideros excelsa,936
+Huntington Beach,Pinus canariensis,1352
+Huntington Beach,Pistacia chinensis,67
+Huntington Beach,Platanus acerifolia,574
+Huntington Beach,Prunus L.,0
+Huntington Beach,Pyrus calleryana,1233
+Huntington Beach,Quercus,1
+Huntington Beach,Quercus lobata,8
+Huntington Beach,Sequoia sempervirens,70
+Huntington Beach,Syagrus romanzoffianum,4681
+Huntington Beach,Tristaniopsis laurina,1094
+Huntington Beach,Washingtonia robusta,4037
+Irvine,Abies,0
+Irvine,Cedrus deodara,95
+Irvine,Cinnamomum camphora,1333
+Irvine,Cupaniopsis anacardioides,1244
+Irvine,Eucalyptus globulus,3948
+Irvine,Eucalyptus maculata,3830
+Irvine,Gleditsia triacanthos,0
+Irvine,Lagerstroemia indica,1390
+Irvine,Liquidambar styraciflua,1773
+Irvine,Lophostemon confertus,0
+Irvine,Magnolia grandiflora,530
+Irvine,Metrosideros excelsa,529
+Irvine,Pinus canariensis,4578
+Irvine,Pistacia chinensis,0
+Irvine,Platanus acerifolia,1195
+Irvine,Prunus L.,0
+Irvine,Pyrus calleryana,0
+Irvine,Quercus,0
+Irvine,Quercus lobata,0
+Irvine,Sequoia sempervirens,8
+Irvine,Syagrus romanzoffianum,0
+Irvine,Tristaniopsis laurina,2
+Irvine,Washingtonia robusta,542
+Garden Grove,Abies,0
+Garden Grove,Cedrus deodara,32
+Garden Grove,Cinnamomum camphora,98
+Garden Grove,Cupaniopsis anacardioides,1438
+Garden Grove,Eucalyptus globulus,93
+Garden Grove,Eucalyptus maculata,10
+Garden Grove,Gleditsia triacanthos,125
+Garden Grove,Lagerstroemia indica,2358
+Garden Grove,Liquidambar styraciflua,365
+Garden Grove,Lophostemon confertus,1643
+Garden Grove,Magnolia grandiflora,696
+Garden Grove,Metrosideros excelsa,55
+Garden Grove,Pinus canariensis,1049
+Garden Grove,Pistacia chinensis,11
+Garden Grove,Platanus acerifolia,593
+Garden Grove,Prunus L.,0
+Garden Grove,Pyrus calleryana,467
+Garden Grove,Quercus,0
+Garden Grove,Quercus lobata,0
+Garden Grove,Sequoia sempervirens,4
+Garden Grove,Syagrus romanzoffianum,897
+Garden Grove,Tristaniopsis laurina,22
+Garden Grove,Washingtonia robusta,596
+Fresno,Abies,0
+Fresno,Cedrus deodara,749
+Fresno,Cinnamomum camphora,153
+Fresno,Cupaniopsis anacardioides,0
+Fresno,Eucalyptus globulus,0
+Fresno,Eucalyptus maculata,0
+Fresno,Gleditsia triacanthos,0
+Fresno,Lagerstroemia indica,184
+Fresno,Liquidambar styraciflua,6
+Fresno,Lophostemon confertus,0
+Fresno,Magnolia grandiflora,0
+Fresno,Metrosideros excelsa,0
+Fresno,Pinus canariensis,0
+Fresno,Pistacia chinensis,713
+Fresno,Platanus acerifolia,294
+Fresno,Prunus L.,0
+Fresno,Pyrus calleryana,55
+Fresno,Quercus,4
+Fresno,Quercus lobata,588
+Fresno,Sequoia sempervirens,124
+Fresno,Syagrus romanzoffianum,0
+Fresno,Tristaniopsis laurina,0
+Fresno,Washingtonia robusta,0
+Santa Rosa,Abies,155
+Santa Rosa,Cedrus deodara,0
+Santa Rosa,Cinnamomum camphora,0
+Santa Rosa,Cupaniopsis anacardioides,0
+Santa Rosa,Eucalyptus globulus,0
+Santa Rosa,Eucalyptus maculata,0
+Santa Rosa,Gleditsia triacanthos,0
+Santa Rosa,Lagerstroemia indica,0
+Santa Rosa,Liquidambar styraciflua,1
+Santa Rosa,Lophostemon confertus,0
+Santa Rosa,Magnolia grandiflora,0
+Santa Rosa,Metrosideros excelsa,0
+Santa Rosa,Pinus canariensis,0
+Santa Rosa,Pistacia chinensis,0
+Santa Rosa,Platanus acerifolia,87
+Santa Rosa,Prunus L.,0
+Santa Rosa,Pyrus calleryana,0
+Santa Rosa,Quercus,468
+Santa Rosa,Quercus lobata,0
+Santa Rosa,Sequoia sempervirens,203
+Santa Rosa,Syagrus romanzoffianum,0
+Santa Rosa,Tristaniopsis laurina,0
+Santa Rosa,Washingtonia robusta,0
