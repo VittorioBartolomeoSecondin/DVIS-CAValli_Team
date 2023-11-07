@@ -6,19 +6,19 @@ const margin2 = {top: 20, right: 40, bottom: 70, left: 160}, width2 = 450 - marg
 function updateBarChart(selectedDataset) {
   d3.csv(selectedDataset).then( function(data) {
       
-    // Append the svg object to the body of the page
+      // Append the svg object to the body of the page
       const svg = d3.select("#barchart_1")
                     .append("svg")
-                    .attr("id", "barchart_svg")
+                      .attr("id", "barchart_svg")
                       .attr("width", width + margin.left + margin.right)
                       .attr("height", height + margin.top + margin.bottom)
                     .append("g")
                       .attr("transform", `translate(${margin.left}, ${margin.top})`);
       
-    // Create the tooltip element
+      // Create the tooltip element
       const tooltip = d3.select("#barchart_1")
                         .append("section")
-                        .attr("id", "barchart_tooltip")
+                          .attr("id", "barchart_tooltip")
                         .style("opacity", 0)
                         .style("background-color", "lightgray")
                         .style("border", "2px solid black")
@@ -57,7 +57,6 @@ function updateBarChart(selectedDataset) {
          .append("rect")
            .attr("x", x(0))
            .attr("y", d => y(d.scientific_name))
-           //.attr("width", d => x(d.count))
            .attr("width", 0)
            .attr("height", y.bandwidth())
            .attr("fill", "steelblue")
