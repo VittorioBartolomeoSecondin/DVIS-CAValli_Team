@@ -185,8 +185,19 @@
                 </select>
             </div>
 
+            <script>
+                function showOthers() {
+                  var x = document.getElementById("small_multiple6");
+                  if (x.style.display === "none") {
+                    x.style.display = "block";
+                  } else {
+                    x.style.display = "none";
+                  }
+                }
+            </script>
+
             <div class="form-check ml-3" style="margin-left: 30px;">
-                <input class="form-check-input" type="checkbox" value="" id="dataset-checkbox">
+                <input class="form-check-input" type="checkbox" value="" id="dataset-checkbox" onclick="showOthers();">
                 <label class="form-check-label" for="dataset-checkbox">With others</label>
             </div>
         </div>
