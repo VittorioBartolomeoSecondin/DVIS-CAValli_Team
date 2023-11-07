@@ -8,8 +8,9 @@ function keep_interesting_cities(selectedValue, data) {
         return data.slice(0, selectedValue);
 }
 
-function updateStackedSMChart(selectedValue) {
+function updateStackedSMChart(selectedValue, useAlternateDataset) {
 
+    const datasets_to_show = useAlternateDataset? datasets.length : datasets.length - 1;
     let max_values = [];
     var max = 0;
 
@@ -30,7 +31,7 @@ function updateStackedSMChart(selectedValue) {
         console.log(max);
           
         // Now you can continue with your chart creation or other actions
-        for (let i = 0; i < datasets.length; i++) {
+        for (let i = 0; i < datasets_to_show; i++) {
 
               // Parse the Data
               d3.csv(datasets[i]).then( function(data) {
@@ -138,9 +139,10 @@ function updateStackedSMChart(selectedValue) {
         console.error(error);
       });
 }
-updateStackedSMChart("all"); // Load the chart with all cities initially
+updateStackedSMChart("all", false); // Load the chart with all cities initially
 document.getElementById("city-dropdown").addEventListener("change", function () {
   const selectedValue = this.value;
+  const useAlternateDataset = document.getElementById("dataset-checkbox").checked;
   d3.select("#small_multiple1_svg").remove();
   d3.select("#small_multiple2_svg").remove();
   d3.select("#small_multiple3_svg").remove();
@@ -154,5 +156,24 @@ document.getElementById("city-dropdown").addEventListener("change", function () 
   d3.select("#small_multiple5_tooltip").remove();
   d3.select("#small_multiple6_tooltip").remove();
   // Call a function to update your chart based on the selected value
-  updateStackedSMChart(selectedValue);
+  updateStackedSMChart(selectedValue, useAlternateDataset);
+});
+
+// Attach an event listener to the dataset checkbox
+document.getElementById("dataset-checkbox").addEventListener("change", function () {
+    const selectedValue = document.getElementById("city-dropdown").value;
+    const useAlternateDataset = this.checked;
+    d3.select("#small_multiple1_svg").remove();
+    d3.select("#small_multiple2_svg").remove();
+    d3.select("#small_multiple3_svg").remove();
+    d3.select("#small_multiple4_svg").remove();
+    d3.select("#small_multiple5_svg").remove();
+    d3.select("#small_multiple6_svg").remove();
+    d3.select("#small_multiple1_tooltip").remove();
+    d3.select("#small_multiple2_tooltip").remove();
+    d3.select("#small_multiple3_tooltip").remove();
+    d3.select("#small_multiple4_tooltip").remove();
+    d3.select("#small_multiple5_tooltip").remove();
+    d3.select("#small_multiple6_tooltip").remove();
+    updateStackedSMChart(selectedValue, useAlternateDataset);
 });
