@@ -1,13 +1,13 @@
 // append the svg object to the body of the page
 const svg = d3.select("#heatmap")
-.append("svg")
-.attr("id", "heatmap_svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom + 40)
-.append("g")
-  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+  .append("svg")
+    .attr("id", "heatmap_svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom + 40)
+  .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-//Read the data
+// Read the data
 d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
 
   // Labels of row and columns -> unique identifier of the column called 'city' and 'species'
@@ -19,13 +19,14 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
     .range([ 0, width ])
     .domain(myGroups)
     .padding(0);
+  
   svg.append("g")
-    .attr("class", "axis")
-    .attr("transform", `translate(0, ${height})`)
+      .attr("class", "axis")
+      .attr("transform", `translate(0, ${height})`)
     .call(d3.axisBottom(x).tickSize(5))
     .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(-45)")
-    .style("text-anchor", "end")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end")
     .select(".domain").remove();
 
   // Build Y scales and axis:
@@ -33,8 +34,9 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
     .range([ height, 0 ])
     .domain(myVars)
     .padding(0);
+  
   svg.append("g")
-    .attr("class", "axis")
+      .attr("class", "axis")
     .call(d3.axisLeft(y).tickSize(5))
     .select(".domain").remove()
 
@@ -47,10 +49,8 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
     .range(colours);
 
   var c = d3.scaleLinear().domain([d3.max(data, function(d) { return +d.count}), d3.min(data, function(d) { return +d.count})]).range([0,1]);
-
-  console.log([d3.max(data, function(d) { return +d.count}), d3.min(data, function(d) { return +d.count})]);
   
-  // add the squares
+  // add cells in the heatmap
   svg.selectAll()
     .data(data, function(d) {return d.city+':'+d.species;})
     .join("rect")
@@ -67,11 +67,11 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
 
   const legend_svg = d3.select("#heatmap")
     .append("svg")
-  .attr("id", "heatmap_legend_svg")
-  .attr("width", 1100)
-  .attr("height", 80)
-.append("g")
-  .attr("transform", `translate(170, -30)`);
+      .attr("id", "heatmap_legend_svg")
+      .attr("width", 1100)
+      .attr("height", 80)
+    .append("g")
+      .attr("transform", `translate(170, -30)`);
 
   var colorscale = colours.reverse();
   var min = d3.min(data, function(d) { return +d.count}); 
@@ -86,48 +86,52 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
   drawColorScale();
   
   function drawColorScale() {
-    var pallete = legend_svg.append('g')
-      .attr('id', 'pallete');
-  
-    var swatch = pallete.selectAll('rect').data(colorscale);
-    swatch.enter().append('rect')
-      .attr('fill', function(d) {
-        return d;
-      })
-      .attr('x', function(d, i) {
-        return i * 50;
-      })
-      .attr('y', 50)
-      .attr('width', 50)
-      .attr('height', 20)
-      .style("stroke-width", 1)
-      .style("stroke", "black");
-  
-    var texts = pallete.selectAll("foo")
-      .data(color.range())
-      .enter()
-      .append("text")
-      .attr("font-size", "10px")
-      .attr("text-anchor", "middle")
-      .attr("y", 80)
-      .attr('x', function(d, i) {
-        return i * 50 + 25;
-      })
-      .append("tspan")
-      .attr("dy", "0.5em")
-      .attr('x', function(d, i) {
-        return i * 50;
-      })
-      .text(function(d) {
-        return format(color.invertExtent(d)[0])
-      })
-      .append("tspan")
-      .attr('x', function(d, i) {
-        return i * 50 + 50;
-      })
-      .text(function(d) {
-        if (color.invertExtent(d)[1] == max)
-          return format(color.invertExtent(d)[1])
-      })
+      var palette = legend_svg.append('g')
+        .attr('id', 'palette');
+
+      // fill the legend with rectangles (colours)
+      var swatch = palette.selectAll('rect').data(colorscale);
+      swatch.enter().append('rect')
+        .attr('fill', function(d) {
+          return d;
+        })
+        .attr('x', function(d, i) {
+          return i * 50;
+        })
+        .attr('y', 50)
+        .attr('width', 50)
+        .attr('height', 20)
+        .style("stroke-width", 1)
+        .style("stroke", "black");
+
+      // counts are placed below the legend
+      var texts = palette.selectAll("foo")
+        .data(color.range())
+        .enter()
+        .append("text")
+        .attr("font-size", "10px")
+        .attr("text-anchor", "middle")
+        .attr("y", 80)
+        .attr('x', function(d, i) {
+          return i * 50 + 25;
+        })
+        .append("tspan")
+        .attr("dy", "0.5em")
+        .attr('x', function(d, i) {
+          return i * 50;
+        })
+        // single value separating two rectangles in the legend
+        .text(function(d) {
+          return format(color.invertExtent(d)[0])
+        })
+        .append("tspan")
+        .attr('x', function(d, i) {
+          return i * 50 + 50;
+        })
+        // last value below the legend
+        .text(function(d) {
+          if (color.invertExtent(d)[1] == max)
+            return format(color.invertExtent(d)[1])
+        })
   }
 })
