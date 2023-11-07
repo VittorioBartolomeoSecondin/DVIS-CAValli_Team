@@ -3,7 +3,7 @@ const svg = d3.select("#heatmap")
 .append("svg")
 .attr("id", "heatmap_svg")
   .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom + 30)
+  .attr("height", height + margin.top + margin.bottom + 40)
 .append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
