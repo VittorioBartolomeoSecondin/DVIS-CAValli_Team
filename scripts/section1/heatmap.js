@@ -25,8 +25,8 @@ d3.csv("data/section1/heatmap/heatmap.csv").then(function(data) {
     .call(d3.axisBottom(x).tickSize(5))
     .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
-    .style("text-anchor", "end");
-    .select(".domain").remove()
+    .style("text-anchor", "end")
+    .select(".domain").remove();
 
   // Build Y scales and axis:
   const y = d3.scaleBand()
