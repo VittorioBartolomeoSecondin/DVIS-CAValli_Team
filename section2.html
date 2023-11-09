@@ -69,13 +69,18 @@
                    .key(function (d) { return d.name; })
                    .object(graph.nodes));
                 */
-            
+                /*
                 // loop through each link replacing the text with its index from node
                  graph.links.forEach(function (d, i) {
-                 if (i=0) continue;
                  graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
                  graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
                 });
+                */
+                
+                for (let i = 1; i < graph.links.length; i++) {
+                  graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+                  graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+                }
             
                 // now loop through each nodes to make nodes an array of objects
                 // rather than an array of strings
