@@ -50,7 +50,7 @@
             var path = sankey.links();
 
             // load the data
-            d3.csv("data/section2/sankey.csv", function(error, data) {
+            d3.csv("data/section2/sankey.csv").then(function(data) {
                 
                 //set up graph
                 graph = {"nodes" : [], "links" : []};
