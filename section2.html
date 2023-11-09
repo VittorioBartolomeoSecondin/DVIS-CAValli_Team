@@ -69,11 +69,11 @@
                         targetNode = { "name": d.target };
                         graph.nodes.push(targetNode);
                     }
-
-                    // Push the link using the found or created nodes
+            
+                    // Push the link using the names of the nodes
                     graph.links.push({
-                        "source": d.source,
-                        "target": d.target,
+                        "source": graph.nodes.indexOf(sourceNode),
+                        "target": graph.nodes.indexOf(targetNode),
                         "value": +d.value
                     });
                 });
