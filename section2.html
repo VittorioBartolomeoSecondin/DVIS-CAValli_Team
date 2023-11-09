@@ -51,7 +51,34 @@
 
             // load the data
             d3.csv("data/section2/sankey.csv").then(function(data) {
+
+                // set up graph
+                graph = { "nodes": [], "links": [] };
+            
+                data.forEach(function(d) {
+                    // Check if the source node already exists
+                    let sourceNode = graph.nodes.find(node => node.name === d.source);
+                    if (!sourceNode) {
+                        sourceNode = { "name": d.source };
+                        graph.nodes.push(sourceNode);
+                    }
+
+                    // Check if the target node already exists
+                    let targetNode = graph.nodes.find(node => node.name === d.target);
+                    if (!targetNode) {
+                        targetNode = { "name": d.target };
+                        graph.nodes.push(targetNode);
+                    }
+
+                    // Push the link using the found or created nodes
+                    graph.links.push({
+                        "source": sourceNode,
+                        "target": targetNode,
+                        "value": +d.value
+                    });
+                });
                 
+                /*
                 //set up graph
                 graph = {"nodes" : [], "links" : []};
             
@@ -68,7 +95,7 @@
                    .key(function (d) { return d.name; })
                    .object(graph.nodes));
                 
-                /*
+                
                 // loop through each link replacing the text with its index from node
                  graph.links.forEach(function (d, i) {
                  graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
