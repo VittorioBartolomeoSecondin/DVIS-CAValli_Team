@@ -61,7 +61,6 @@
                     if (!sourceNode) {
                         sourceNode = { "name": d.source };
                         graph.nodes.push(sourceNode);
-                        sourceNode.index = graph.nodes.length - 1;
                     }
 
                     // Check if the target node already exists
@@ -69,13 +68,12 @@
                     if (!targetNode) {
                         targetNode = { "name": d.target };
                         graph.nodes.push(targetNode);
-                        targetNode.index = graph.nodes.length - 1;
                     }
             
                     // Push the link using the names of the nodes
                     graph.links.push({
-                        "source": sourceNode.index,
-                        "target": targetNode.index,
+                        "source": d.source,
+                        "target": d.target,
                         "value": +d.value
                     });
                 });
