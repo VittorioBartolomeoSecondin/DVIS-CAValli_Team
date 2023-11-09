@@ -61,16 +61,13 @@
                     graph.links.push({ "source": d.source,
                                        "target": d.target,
                                        "value": +d.value });
-                });
-
-                console.log(graph);
-            
-                /*
+                });       
+                
                 // return only the distinct / unique nodes
                  graph.nodes = d3.keys(d3.nest()
                    .key(function (d) { return d.name; })
                    .object(graph.nodes));
-                */
+                
                 /*
                 // loop through each link replacing the text with its index from node
                  graph.links.forEach(function (d, i) {
@@ -78,6 +75,8 @@
                  graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
                 });
                 */
+                
+                console.log(graph);
                 
                 for (let i = 1; i < graph.links.length; i++) {
                   graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
