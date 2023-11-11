@@ -66,8 +66,7 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
     .enter().append("path")
       .attr("class", "link")
       .attr("d", d3.sankeyLinkHorizontal())
-      .attr("stroke-width", function(d) { console.log(d.width); return d.width; });
-      //.attr("stroke-width", 1);  
+      .attr("stroke-width", function(d) { return d.width; }); 
 
   // add the link titles
   link.append("title")
@@ -86,7 +85,6 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
       .attr("x", function(d) { return d.x0; })
       .attr("y", function(d) { return d.y0; })
       .attr("height", function(d) { return d.y1 - d.y0; })
-      //.attr("height", 20)
       .attr("width", sankey.nodeWidth())
       .style("fill", function(d) { 
 	  return d.color = color(d.name.replace(/ .*/, "")); })
