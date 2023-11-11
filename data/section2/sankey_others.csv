@@ -1,0 +1,1537 @@
+source,target,value
+California,NewYork,0
+California,LosAngeles,582913
+California,Denver,0
+California,SanJose,264805
+California,Portland,0
+California,Houston,0
+California,SanDiego,212304
+California,Minneapolis,0
+California,WashingtonDC,0
+California,SanFrancisco,175272
+California,Seattle,0
+California,Columbus,0
+California,Baltimore,0
+California,NewOrleans,0
+California,Stockton,97707
+California,Other cities,478593
+New York,NewYork,652169
+New York,LosAngeles,0
+New York,Denver,0
+New York,SanJose,0
+New York,Portland,0
+New York,Houston,0
+New York,SanDiego,0
+New York,Minneapolis,0
+New York,WashingtonDC,0
+New York,SanFrancisco,0
+New York,Seattle,0
+New York,Columbus,0
+New York,Baltimore,0
+New York,NewOrleans,0
+New York,Stockton,0
+New York,Other cities,140882
+Colorado,NewYork,0
+Colorado,LosAngeles,0
+Colorado,Denver,284354
+Colorado,SanJose,0
+Colorado,Portland,0
+Colorado,Houston,0
+Colorado,SanDiego,0
+Colorado,Minneapolis,0
+Colorado,WashingtonDC,0
+Colorado,SanFrancisco,0
+Colorado,Seattle,0
+Colorado,Columbus,0
+Colorado,Baltimore,0
+Colorado,NewOrleans,0
+Colorado,Stockton,0
+Colorado,Other cities,73411
+Texas,NewYork,0
+Texas,LosAngeles,0
+Texas,Denver,0
+Texas,SanJose,0
+Texas,Portland,0
+Texas,Houston,213387
+Texas,SanDiego,0
+Texas,Minneapolis,0
+Texas,WashingtonDC,0
+Texas,SanFrancisco,0
+Texas,Seattle,0
+Texas,Columbus,0
+Texas,Baltimore,0
+Texas,NewOrleans,0
+Texas,Stockton,0
+Texas,Other cities,55255
+Oregon,NewYork,0
+Oregon,LosAngeles,0
+Oregon,Denver,0
+Oregon,SanJose,0
+Oregon,Portland,216751
+Oregon,Houston,0
+Oregon,SanDiego,0
+Oregon,Minneapolis,0
+Oregon,WashingtonDC,0
+Oregon,SanFrancisco,0
+Oregon,Seattle,0
+Oregon,Columbus,0
+Oregon,Baltimore,0
+Oregon,NewOrleans,0
+Oregon,Stockton,0
+Oregon,Other cities,0
+Minnesota,NewYork,0
+Minnesota,LosAngeles,0
+Minnesota,Denver,0
+Minnesota,SanJose,0
+Minnesota,Portland,0
+Minnesota,Houston,0
+Minnesota,SanDiego,0
+Minnesota,Minneapolis,176834
+Minnesota,WashingtonDC,0
+Minnesota,SanFrancisco,0
+Minnesota,Seattle,0
+Minnesota,Columbus,0
+Minnesota,Baltimore,0
+Minnesota,NewOrleans,0
+Minnesota,Stockton,0
+Minnesota,Other cities,0
+District of Columbia,NewYork,0
+District of Columbia,LosAngeles,0
+District of Columbia,Denver,0
+District of Columbia,SanJose,0
+District of Columbia,Portland,0
+District of Columbia,Houston,0
+District of Columbia,SanDiego,0
+District of Columbia,Minneapolis,0
+District of Columbia,WashingtonDC,175847
+District of Columbia,SanFrancisco,0
+District of Columbia,Seattle,0
+District of Columbia,Columbus,0
+District of Columbia,Baltimore,0
+District of Columbia,NewOrleans,0
+District of Columbia,Stockton,0
+District of Columbia,Other cities,0
+Washington,NewYork,0
+Washington,LosAngeles,0
+Washington,Denver,0
+Washington,SanJose,0
+Washington,Portland,0
+Washington,Houston,0
+Washington,SanDiego,0
+Washington,Minneapolis,0
+Washington,WashingtonDC,0
+Washington,SanFrancisco,0
+Washington,Seattle,164919
+Washington,Columbus,0
+Washington,Baltimore,0
+Washington,NewOrleans,0
+Washington,Stockton,0
+Washington,Other cities,0
+Ohio,NewYork,0
+Ohio,LosAngeles,0
+Ohio,Denver,0
+Ohio,SanJose,0
+Ohio,Portland,0
+Ohio,Houston,0
+Ohio,SanDiego,0
+Ohio,Minneapolis,0
+Ohio,WashingtonDC,0
+Ohio,SanFrancisco,0
+Ohio,Seattle,0
+Ohio,Columbus,151350
+Ohio,Baltimore,0
+Ohio,NewOrleans,0
+Ohio,Stockton,0
+Ohio,Other cities,0
+Wisconsin,NewYork,0
+Wisconsin,LosAngeles,0
+Wisconsin,Denver,0
+Wisconsin,SanJose,0
+Wisconsin,Portland,0
+Wisconsin,Houston,0
+Wisconsin,SanDiego,0
+Wisconsin,Minneapolis,0
+Wisconsin,WashingtonDC,0
+Wisconsin,SanFrancisco,0
+Wisconsin,Seattle,0
+Wisconsin,Columbus,0
+Wisconsin,Baltimore,0
+Wisconsin,NewOrleans,0
+Wisconsin,Stockton,0
+Wisconsin,Other cities,128072
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,128032
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,121290
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,0
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,105798
+Other states,Stockton,0
+Other states,Other cities,0
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,97227
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,92468
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,83535
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,61304
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,44767
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,42081
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,41176
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,32711
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,32006
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,24082
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,22587
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,16736
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,15805
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,15170
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,10411
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,9729
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,2502
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,1816
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,774
+Other states,NewYork,0
+Other states,LosAngeles,0
+Other states,Denver,0
+Other states,SanJose,0
+Other states,Portland,0
+Other states,Houston,0
+Other states,SanDiego,0
+Other states,Minneapolis,0
+Other states,WashingtonDC,0
+Other states,SanFrancisco,0
+Other states,Seattle,0
+Other states,Columbus,0
+Other states,Baltimore,0
+Other states,NewOrleans,0
+Other states,Stockton,0
+Other states,Other cities,214
+NewYork,Acer,88739
+NewYork,Quercus,82867
+NewYork,Fraxinus,19981
+NewYork,Platanus,87014
+NewYork,Gleditsia,64264
+NewYork,Lagerstroemia,442
+NewYork,Prunus,41653
+NewYork,Pyrus,58931
+NewYork,Tilia,51267
+NewYork,Ulmus,14915
+NewYork,Pinus,702
+NewYork,Liquidambar,10657
+NewYork,Magnolia,1000
+NewYork,Washingtonia,0
+NewYork,Celtis,2382
+NewYork,Other species,127355
+LosAngeles,Acer,1993
+LosAngeles,Quercus,14597
+LosAngeles,Fraxinus,18647
+LosAngeles,Platanus,22149
+LosAngeles,Gleditsia,8778
+LosAngeles,Lagerstroemia,35829
+LosAngeles,Prunus,11777
+LosAngeles,Pyrus,17285
+LosAngeles,Tilia,2
+LosAngeles,Ulmus,20563
+LosAngeles,Pinus,23667
+LosAngeles,Liquidambar,30302
+LosAngeles,Magnolia,31360
+LosAngeles,Washingtonia,40738
+LosAngeles,Celtis,337
+LosAngeles,Other species,304889
+Denver,Acer,41254
+Denver,Quercus,22505
+Denver,Fraxinus,37800
+Denver,Platanus,2049
+Denver,Gleditsia,24178
+Denver,Lagerstroemia,0
+Denver,Prunus,6833
+Denver,Pyrus,7410
+Denver,Tilia,18650
+Denver,Ulmus,19142
+Denver,Pinus,20316
+Denver,Liquidambar,84
+Denver,Magnolia,190
+Denver,Washingtonia,0
+Denver,Celtis,9477
+Denver,Other species,74466
+SanJose,Acer,8908
+SanJose,Quercus,18261
+SanJose,Fraxinus,12911
+SanJose,Platanus,27218
+SanJose,Gleditsia,4037
+SanJose,Lagerstroemia,21692
+SanJose,Prunus,12973
+SanJose,Pyrus,11557
+SanJose,Tilia,537
+SanJose,Ulmus,3898
+SanJose,Pinus,3611
+SanJose,Liquidambar,14677
+SanJose,Magnolia,7337
+SanJose,Washingtonia,6885
+SanJose,Celtis,3125
+SanJose,Other species,107178
+Portland,Acer,57813
+Portland,Quercus,7281
+Portland,Fraxinus,9293
+Portland,Platanus,1300
+Portland,Gleditsia,1412
+Portland,Lagerstroemia,852
+Portland,Prunus,25816
+Portland,Pyrus,11700
+Portland,Tilia,5490
+Portland,Ulmus,3356
+Portland,Pinus,3471
+Portland,Liquidambar,3703
+Portland,Magnolia,3507
+Portland,Washingtonia,0
+Portland,Celtis,334
+Portland,Other species,81423
+Houston,Acer,1733
+Houston,Quercus,66689
+Houston,Fraxinus,6030
+Houston,Platanus,2864
+Houston,Gleditsia,69
+Houston,Lagerstroemia,44356
+Houston,Prunus,2315
+Houston,Pyrus,2835
+Houston,Tilia,2
+Houston,Ulmus,9063
+Houston,Pinus,10038
+Houston,Liquidambar,1352
+Houston,Magnolia,4598
+Houston,Washingtonia,5476
+Houston,Celtis,13025
+Houston,Other species,42942
+SanDiego,Acer,89
+SanDiego,Quercus,1392
+SanDiego,Fraxinus,3151
+SanDiego,Platanus,9237
+SanDiego,Gleditsia,0
+SanDiego,Lagerstroemia,2207
+SanDiego,Prunus,3149
+SanDiego,Pyrus,4196
+SanDiego,Tilia,0
+SanDiego,Ulmus,1797
+SanDiego,Pinus,13564
+SanDiego,Liquidambar,10323
+SanDiego,Magnolia,3463
+SanDiego,Washingtonia,18168
+SanDiego,Celtis,0
+SanDiego,Other species,141568
+Minneapolis,Acer,47055
+Minneapolis,Quercus,8501
+Minneapolis,Fraxinus,29432
+Minneapolis,Platanus,13
+Minneapolis,Gleditsia,12676
+Minneapolis,Lagerstroemia,0
+Minneapolis,Prunus,204
+Minneapolis,Pyrus,315
+Minneapolis,Tilia,26830
+Minneapolis,Ulmus,20977
+Minneapolis,Pinus,1175
+Minneapolis,Liquidambar,0
+Minneapolis,Magnolia,12
+Minneapolis,Washingtonia,0
+Minneapolis,Celtis,12736
+Minneapolis,Other species,16908
+WashingtonDC,Acer,26489
+WashingtonDC,Quercus,39917
+WashingtonDC,Fraxinus,340
+WashingtonDC,Platanus,7478
+WashingtonDC,Gleditsia,2635
+WashingtonDC,Lagerstroemia,4353
+WashingtonDC,Prunus,11104
+WashingtonDC,Pyrus,963
+WashingtonDC,Tilia,5582
+WashingtonDC,Ulmus,15656
+WashingtonDC,Pinus,7748
+WashingtonDC,Liquidambar,4185
+WashingtonDC,Magnolia,2170
+WashingtonDC,Washingtonia,0
+WashingtonDC,Celtis,2549
+WashingtonDC,Other species,44678
+SanFrancisco,Acer,2101
+SanFrancisco,Quercus,1161
+SanFrancisco,Fraxinus,1447
+SanFrancisco,Platanus,12002
+SanFrancisco,Gleditsia,117
+SanFrancisco,Lagerstroemia,104
+SanFrancisco,Prunus,15128
+SanFrancisco,Pyrus,6040
+SanFrancisco,Tilia,150
+SanFrancisco,Ulmus,3453
+SanFrancisco,Pinus,3300
+SanFrancisco,Liquidambar,1684
+SanFrancisco,Magnolia,8277
+SanFrancisco,Washingtonia,1061
+SanFrancisco,Celtis,275
+SanFrancisco,Other species,118972
+Seattle,Acer,35523
+Seattle,Quercus,6726
+Seattle,Fraxinus,4340
+Seattle,Platanus,1893
+Seattle,Gleditsia,1404
+Seattle,Lagerstroemia,596
+Seattle,Prunus,28356
+Seattle,Pyrus,5327
+Seattle,Tilia,4313
+Seattle,Ulmus,2408
+Seattle,Pinus,1808
+Seattle,Liquidambar,3390
+Seattle,Magnolia,2777
+Seattle,Washingtonia,0
+Seattle,Celtis,141
+Seattle,Other species,65917
+Columbus,Acer,35911
+Columbus,Quercus,11459
+Columbus,Fraxinus,17476
+Columbus,Platanus,4388
+Columbus,Gleditsia,7090
+Columbus,Lagerstroemia,0
+Columbus,Prunus,4772
+Columbus,Pyrus,9401
+Columbus,Tilia,6754
+Columbus,Ulmus,4552
+Columbus,Pinus,2201
+Columbus,Liquidambar,1679
+Columbus,Magnolia,841
+Columbus,Washingtonia,0
+Columbus,Celtis,2048
+Columbus,Other species,42778
+Baltimore,Acer,26076
+Baltimore,Quercus,15716
+Baltimore,Fraxinus,3482
+Baltimore,Platanus,6787
+Baltimore,Gleditsia,3295
+Baltimore,Lagerstroemia,1590
+Baltimore,Prunus,6739
+Baltimore,Pyrus,4792
+Baltimore,Tilia,8084
+Baltimore,Ulmus,6250
+Baltimore,Pinus,1823
+Baltimore,Liquidambar,2517
+Baltimore,Magnolia,671
+Baltimore,Washingtonia,0
+Baltimore,Celtis,1040
+Baltimore,Other species,32428
+NewOrleans,Acer,1625
+NewOrleans,Quercus,25507
+NewOrleans,Fraxinus,814
+NewOrleans,Platanus,621
+NewOrleans,Gleditsia,1725
+NewOrleans,Lagerstroemia,30246
+NewOrleans,Prunus,479
+NewOrleans,Pyrus,2088
+NewOrleans,Tilia,0
+NewOrleans,Ulmus,2151
+NewOrleans,Pinus,3498
+NewOrleans,Liquidambar,254
+NewOrleans,Magnolia,6624
+NewOrleans,Washingtonia,673
+NewOrleans,Celtis,488
+NewOrleans,Other species,29005
+Stockton,Acer,2518
+Stockton,Quercus,6177
+Stockton,Fraxinus,10587
+Stockton,Platanus,7639
+Stockton,Gleditsia,324
+Stockton,Lagerstroemia,7368
+Stockton,Prunus,2409
+Stockton,Pyrus,6334
+Stockton,Tilia,899
+Stockton,Ulmus,812
+Stockton,Pinus,1306
+Stockton,Liquidambar,4371
+Stockton,Magnolia,3936
+Stockton,Washingtonia,1059
+Stockton,Celtis,7732
+Stockton,Other species,34236
+Other cities,Acer,15882
+Other cities,Quercus,5055
+Other cities,Fraxinus,10955
+Other cities,Platanus,1724
+Other cities,Gleditsia,1931
+Other cities,Lagerstroemia,0
+Other cities,Prunus,4016
+Other cities,Pyrus,2032
+Other cities,Tilia,1643
+Other cities,Ulmus,6499
+Other cities,Pinus,5557
+Other cities,Liquidambar,1478
+Other cities,Magnolia,316
+Other cities,Washingtonia,0
+Other cities,Celtis,5940
+Other cities,Other species,34199
+Other cities,Acer,29090
+Other cities,Quercus,1797
+Other cities,Fraxinus,21439
+Other cities,Platanus,119
+Other cities,Gleditsia,13536
+Other cities,Lagerstroemia,0
+Other cities,Prunus,297
+Other cities,Pyrus,778
+Other cities,Tilia,11799
+Other cities,Ulmus,3892
+Other cities,Pinus,519
+Other cities,Liquidambar,1
+Other cities,Magnolia,20
+Other cities,Washingtonia,0
+Other cities,Celtis,2667
+Other cities,Other species,10052
+Other cities,Acer,4086
+Other cities,Quercus,10489
+Other cities,Fraxinus,3143
+Other cities,Platanus,14111
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,4146
+Other cities,Prunus,2177
+Other cities,Pyrus,4631
+Other cities,Tilia,1021
+Other cities,Ulmus,4047
+Other cities,Pinus,1715
+Other cities,Liquidambar,1949
+Other cities,Magnolia,1341
+Other cities,Washingtonia,2467
+Other cities,Celtis,2167
+Other cities,Other species,29701
+Other cities,Acer,19603
+Other cities,Quercus,9679
+Other cities,Fraxinus,12353
+Other cities,Platanus,3922
+Other cities,Gleditsia,3013
+Other cities,Lagerstroemia,22
+Other cities,Prunus,2085
+Other cities,Pyrus,7253
+Other cities,Tilia,3980
+Other cities,Ulmus,3012
+Other cities,Pinus,297
+Other cities,Liquidambar,2140
+Other cities,Magnolia,168
+Other cities,Washingtonia,0
+Other cities,Celtis,736
+Other cities,Other species,15272
+Other cities,Acer,164
+Other cities,Quercus,1830
+Other cities,Fraxinus,754
+Other cities,Platanus,5838
+Other cities,Gleditsia,63
+Other cities,Lagerstroemia,12921
+Other cities,Prunus,522
+Other cities,Pyrus,5216
+Other cities,Tilia,37
+Other cities,Ulmus,317
+Other cities,Pinus,6184
+Other cities,Liquidambar,3729
+Other cities,Magnolia,5049
+Other cities,Washingtonia,2887
+Other cities,Celtis,2
+Other cities,Other species,35098
+Other cities,Acer,212
+Other cities,Quercus,1607
+Other cities,Fraxinus,285
+Other cities,Platanus,2075
+Other cities,Gleditsia,23076
+Other cities,Lagerstroemia,3771
+Other cities,Prunus,206
+Other cities,Pyrus,627
+Other cities,Tilia,10
+Other cities,Ulmus,905
+Other cities,Pinus,3396
+Other cities,Liquidambar,1493
+Other cities,Magnolia,5334
+Other cities,Washingtonia,4624
+Other cities,Celtis,340
+Other cities,Other species,29059
+Other cities,Acer,25596
+Other cities,Quercus,3763
+Other cities,Fraxinus,1468
+Other cities,Platanus,2017
+Other cities,Gleditsia,4485
+Other cities,Lagerstroemia,0
+Other cities,Prunus,2164
+Other cities,Pyrus,1509
+Other cities,Tilia,11110
+Other cities,Ulmus,4013
+Other cities,Pinus,1040
+Other cities,Liquidambar,219
+Other cities,Magnolia,80
+Other cities,Washingtonia,0
+Other cities,Celtis,830
+Other cities,Other species,18659
+Other cities,Acer,33730
+Other cities,Quercus,4772
+Other cities,Fraxinus,2384
+Other cities,Platanus,4909
+Other cities,Gleditsia,5805
+Other cities,Lagerstroemia,0
+Other cities,Prunus,700
+Other cities,Pyrus,1699
+Other cities,Tilia,3808
+Other cities,Ulmus,1872
+Other cities,Pinus,999
+Other cities,Liquidambar,517
+Other cities,Magnolia,25
+Other cities,Washingtonia,0
+Other cities,Celtis,645
+Other cities,Other species,10228
+Other cities,Acer,1821
+Other cities,Quercus,29619
+Other cities,Fraxinus,11
+Other cities,Platanus,284
+Other cities,Gleditsia,1
+Other cities,Lagerstroemia,14988
+Other cities,Prunus,708
+Other cities,Pyrus,115
+Other cities,Tilia,0
+Other cities,Ulmus,2674
+Other cities,Pinus,1184
+Other cities,Liquidambar,374
+Other cities,Magnolia,1964
+Other cities,Washingtonia,1388
+Other cities,Celtis,8
+Other cities,Other species,13072
+Other cities,Acer,18499
+Other cities,Quercus,4648
+Other cities,Fraxinus,3544
+Other cities,Platanus,3134
+Other cities,Gleditsia,6307
+Other cities,Lagerstroemia,0
+Other cities,Prunus,908
+Other cities,Pyrus,2659
+Other cities,Tilia,4786
+Other cities,Ulmus,605
+Other cities,Pinus,653
+Other cities,Liquidambar,786
+Other cities,Magnolia,251
+Other cities,Washingtonia,0
+Other cities,Celtis,897
+Other cities,Other species,16252
+Other cities,Acer,18035
+Other cities,Quercus,2035
+Other cities,Fraxinus,22031
+Other cities,Platanus,59
+Other cities,Gleditsia,2332
+Other cities,Lagerstroemia,0
+Other cities,Prunus,289
+Other cities,Pyrus,140
+Other cities,Tilia,3989
+Other cities,Ulmus,1728
+Other cities,Pinus,1378
+Other cities,Liquidambar,0
+Other cities,Magnolia,19
+Other cities,Washingtonia,0
+Other cities,Celtis,1600
+Other cities,Other species,7669
+Other cities,Acer,680
+Other cities,Quercus,1003
+Other cities,Fraxinus,1159
+Other cities,Platanus,3763
+Other cities,Gleditsia,107
+Other cities,Lagerstroemia,4630
+Other cities,Prunus,1454
+Other cities,Pyrus,3469
+Other cities,Tilia,0
+Other cities,Ulmus,1207
+Other cities,Pinus,4294
+Other cities,Liquidambar,4392
+Other cities,Magnolia,1225
+Other cities,Washingtonia,2243
+Other cities,Celtis,61
+Other cities,Other species,28890
+Other cities,Acer,8
+Other cities,Quercus,1763
+Other cities,Fraxinus,152
+Other cities,Platanus,4082
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,1390
+Other cities,Prunus,827
+Other cities,Pyrus,276
+Other cities,Tilia,0
+Other cities,Ulmus,730
+Other cities,Pinus,11592
+Other cities,Liquidambar,1773
+Other cities,Magnolia,530
+Other cities,Washingtonia,547
+Other cities,Celtis,5
+Other cities,Other species,34689
+Other cities,Acer,9517
+Other cities,Quercus,2468
+Other cities,Fraxinus,6363
+Other cities,Platanus,9
+Other cities,Gleditsia,10428
+Other cities,Lagerstroemia,0
+Other cities,Prunus,318
+Other cities,Pyrus,1537
+Other cities,Tilia,8098
+Other cities,Ulmus,2405
+Other cities,Pinus,3282
+Other cities,Liquidambar,0
+Other cities,Magnolia,6
+Other cities,Washingtonia,0
+Other cities,Celtis,2493
+Other cities,Other species,10436
+Other cities,Acer,76
+Other cities,Quercus,466
+Other cities,Fraxinus,287
+Other cities,Platanus,1097
+Other cities,Gleditsia,10394
+Other cities,Lagerstroemia,3896
+Other cities,Prunus,518
+Other cities,Pyrus,1970
+Other cities,Tilia,14
+Other cities,Ulmus,104
+Other cities,Pinus,2748
+Other cities,Liquidambar,170
+Other cities,Magnolia,378
+Other cities,Washingtonia,4067
+Other cities,Celtis,40
+Other cities,Other species,29373
+Other cities,Acer,16280
+Other cities,Quercus,4969
+Other cities,Fraxinus,9586
+Other cities,Platanus,492
+Other cities,Gleditsia,964
+Other cities,Lagerstroemia,1
+Other cities,Prunus,147
+Other cities,Pyrus,1359
+Other cities,Tilia,1190
+Other cities,Ulmus,1432
+Other cities,Pinus,1243
+Other cities,Liquidambar,1983
+Other cities,Magnolia,29
+Other cities,Washingtonia,0
+Other cities,Celtis,137
+Other cities,Other species,4955
+Other cities,Acer,10328
+Other cities,Quercus,3347
+Other cities,Fraxinus,587
+Other cities,Platanus,3471
+Other cities,Gleditsia,4045
+Other cities,Lagerstroemia,0
+Other cities,Prunus,983
+Other cities,Pyrus,3038
+Other cities,Tilia,2678
+Other cities,Ulmus,1571
+Other cities,Pinus,571
+Other cities,Liquidambar,892
+Other cities,Magnolia,162
+Other cities,Washingtonia,0
+Other cities,Celtis,142
+Other cities,Other species,10266
+Other cities,Acer,4126
+Other cities,Quercus,6900
+Other cities,Fraxinus,159
+Other cities,Platanus,76
+Other cities,Gleditsia,38
+Other cities,Lagerstroemia,4804
+Other cities,Prunus,670
+Other cities,Pyrus,26
+Other cities,Tilia,320
+Other cities,Ulmus,1554
+Other cities,Pinus,303
+Other cities,Liquidambar,49
+Other cities,Magnolia,2492
+Other cities,Washingtonia,0
+Other cities,Celtis,8
+Other cities,Other species,19651
+Other cities,Acer,1254
+Other cities,Quercus,721
+Other cities,Fraxinus,2161
+Other cities,Platanus,3836
+Other cities,Gleditsia,224
+Other cities,Lagerstroemia,1953
+Other cities,Prunus,3219
+Other cities,Pyrus,4110
+Other cities,Tilia,40
+Other cities,Ulmus,447
+Other cities,Pinus,116
+Other cities,Liquidambar,3312
+Other cities,Magnolia,1401
+Other cities,Washingtonia,305
+Other cities,Celtis,567
+Other cities,Other species,11902
+Other cities,Acer,138
+Other cities,Quercus,7061
+Other cities,Fraxinus,0
+Other cities,Platanus,7
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,503
+Other cities,Prunus,1
+Other cities,Pyrus,0
+Other cities,Tilia,0
+Other cities,Ulmus,59
+Other cities,Pinus,3298
+Other cities,Liquidambar,39
+Other cities,Magnolia,123
+Other cities,Washingtonia,0
+Other cities,Celtis,0
+Other cities,Other species,22792
+Other cities,Acer,4123
+Other cities,Quercus,7350
+Other cities,Fraxinus,2234
+Other cities,Platanus,933
+Other cities,Gleditsia,179
+Other cities,Lagerstroemia,20
+Other cities,Prunus,826
+Other cities,Pyrus,413
+Other cities,Tilia,315
+Other cities,Ulmus,846
+Other cities,Pinus,1210
+Other cities,Liquidambar,834
+Other cities,Magnolia,459
+Other cities,Washingtonia,0
+Other cities,Celtis,1135
+Other cities,Other species,11834
+Other cities,Acer,6751
+Other cities,Quercus,2841
+Other cities,Fraxinus,5110
+Other cities,Platanus,113
+Other cities,Gleditsia,2778
+Other cities,Lagerstroemia,0
+Other cities,Prunus,217
+Other cities,Pyrus,653
+Other cities,Tilia,2192
+Other cities,Ulmus,610
+Other cities,Pinus,1043
+Other cities,Liquidambar,2
+Other cities,Magnolia,11
+Other cities,Washingtonia,0
+Other cities,Celtis,1576
+Other cities,Other species,8169
+Other cities,Acer,6
+Other cities,Quercus,531
+Other cities,Fraxinus,5621
+Other cities,Platanus,118
+Other cities,Gleditsia,346
+Other cities,Lagerstroemia,77
+Other cities,Prunus,126
+Other cities,Pyrus,44
+Other cities,Tilia,0
+Other cities,Ulmus,873
+Other cities,Pinus,6651
+Other cities,Liquidambar,0
+Other cities,Magnolia,7
+Other cities,Washingtonia,2059
+Other cities,Celtis,68
+Other cities,Other species,15479
+Other cities,Acer,105
+Other cities,Quercus,5182
+Other cities,Fraxinus,1208
+Other cities,Platanus,145
+Other cities,Gleditsia,70
+Other cities,Lagerstroemia,2779
+Other cities,Prunus,86
+Other cities,Pyrus,815
+Other cities,Tilia,0
+Other cities,Ulmus,4367
+Other cities,Pinus,299
+Other cities,Liquidambar,143
+Other cities,Magnolia,132
+Other cities,Washingtonia,0
+Other cities,Celtis,3279
+Other cities,Other species,9680
+Other cities,Acer,352
+Other cities,Quercus,11188
+Other cities,Fraxinus,7
+Other cities,Platanus,33
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,2907
+Other cities,Prunus,1227
+Other cities,Pyrus,3
+Other cities,Tilia,0
+Other cities,Ulmus,696
+Other cities,Pinus,1397
+Other cities,Liquidambar,13
+Other cities,Magnolia,383
+Other cities,Washingtonia,1059
+Other cities,Celtis,10
+Other cities,Other species,5793
+Other cities,Acer,5934
+Other cities,Quercus,1448
+Other cities,Fraxinus,1953
+Other cities,Platanus,1918
+Other cities,Gleditsia,2050
+Other cities,Lagerstroemia,0
+Other cities,Prunus,1430
+Other cities,Pyrus,2792
+Other cities,Tilia,1737
+Other cities,Ulmus,889
+Other cities,Pinus,54
+Other cities,Liquidambar,289
+Other cities,Magnolia,10
+Other cities,Washingtonia,0
+Other cities,Celtis,131
+Other cities,Other species,3447
+Other cities,Acer,2452
+Other cities,Quercus,2477
+Other cities,Fraxinus,2
+Other cities,Platanus,1072
+Other cities,Gleditsia,47
+Other cities,Lagerstroemia,0
+Other cities,Prunus,178
+Other cities,Pyrus,190
+Other cities,Tilia,1164
+Other cities,Ulmus,1311
+Other cities,Pinus,2
+Other cities,Liquidambar,180
+Other cities,Magnolia,43
+Other cities,Washingtonia,0
+Other cities,Celtis,852
+Other cities,Other species,10405
+Other cities,Acer,39
+Other cities,Quercus,163
+Other cities,Fraxinus,103
+Other cities,Platanus,698
+Other cities,Gleditsia,125
+Other cities,Lagerstroemia,2358
+Other cities,Prunus,161
+Other cities,Pyrus,1177
+Other cities,Tilia,0
+Other cities,Ulmus,597
+Other cities,Pinus,1248
+Other cities,Liquidambar,365
+Other cities,Magnolia,708
+Other cities,Washingtonia,735
+Other cities,Celtis,2
+Other cities,Other species,9042
+Other cities,Acer,1686
+Other cities,Quercus,823
+Other cities,Fraxinus,2444
+Other cities,Platanus,10
+Other cities,Gleditsia,559
+Other cities,Lagerstroemia,0
+Other cities,Prunus,146
+Other cities,Pyrus,34
+Other cities,Tilia,475
+Other cities,Ulmus,1880
+Other cities,Pinus,2867
+Other cities,Liquidambar,0
+Other cities,Magnolia,0
+Other cities,Washingtonia,0
+Other cities,Celtis,319
+Other cities,Other species,4808
+Other cities,Acer,2157
+Other cities,Quercus,4251
+Other cities,Fraxinus,77
+Other cities,Platanus,100
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,3103
+Other cities,Prunus,374
+Other cities,Pyrus,246
+Other cities,Tilia,102
+Other cities,Ulmus,1093
+Other cities,Pinus,262
+Other cities,Liquidambar,163
+Other cities,Magnolia,377
+Other cities,Washingtonia,1
+Other cities,Celtis,36
+Other cities,Other species,3672
+Other cities,Acer,4135
+Other cities,Quercus,1859
+Other cities,Fraxinus,2025
+Other cities,Platanus,224
+Other cities,Gleditsia,405
+Other cities,Lagerstroemia,0
+Other cities,Prunus,146
+Other cities,Pyrus,270
+Other cities,Tilia,525
+Other cities,Ulmus,477
+Other cities,Pinus,673
+Other cities,Liquidambar,5
+Other cities,Magnolia,15
+Other cities,Washingtonia,0
+Other cities,Celtis,703
+Other cities,Other species,4343
+Other cities,Acer,12211
+Other cities,Quercus,767
+Other cities,Fraxinus,321
+Other cities,Platanus,108
+Other cities,Gleditsia,182
+Other cities,Lagerstroemia,0
+Other cities,Prunus,184
+Other cities,Pyrus,271
+Other cities,Tilia,378
+Other cities,Ulmus,150
+Other cities,Pinus,43
+Other cities,Liquidambar,8
+Other cities,Magnolia,8
+Other cities,Washingtonia,0
+Other cities,Celtis,1
+Other cities,Other species,845
+Other cities,Acer,0
+Other cities,Quercus,0
+Other cities,Fraxinus,0
+Other cities,Platanus,0
+Other cities,Gleditsia,11
+Other cities,Lagerstroemia,266
+Other cities,Prunus,0
+Other cities,Pyrus,0
+Other cities,Tilia,0
+Other cities,Ulmus,0
+Other cities,Pinus,0
+Other cities,Liquidambar,0
+Other cities,Magnolia,54
+Other cities,Washingtonia,0
+Other cities,Celtis,0
+Other cities,Other species,14839
+Other cities,Acer,103
+Other cities,Quercus,4098
+Other cities,Fraxinus,210
+Other cities,Platanus,41
+Other cities,Gleditsia,22
+Other cities,Lagerstroemia,1195
+Other cities,Prunus,351
+Other cities,Pyrus,241
+Other cities,Tilia,0
+Other cities,Ulmus,2245
+Other cities,Pinus,695
+Other cities,Liquidambar,91
+Other cities,Magnolia,84
+Other cities,Washingtonia,0
+Other cities,Celtis,30
+Other cities,Other species,5267
+Other cities,Acer,280
+Other cities,Quercus,1993
+Other cities,Fraxinus,133
+Other cities,Platanus,289
+Other cities,Gleditsia,118
+Other cities,Lagerstroemia,689
+Other cities,Prunus,15
+Other cities,Pyrus,267
+Other cities,Tilia,1
+Other cities,Ulmus,1202
+Other cities,Pinus,751
+Other cities,Liquidambar,56
+Other cities,Magnolia,40
+Other cities,Washingtonia,0
+Other cities,Celtis,184
+Other cities,Other species,3711
+Other cities,Acer,1725
+Other cities,Quercus,1004
+Other cities,Fraxinus,39
+Other cities,Platanus,260
+Other cities,Gleditsia,53
+Other cities,Lagerstroemia,517
+Other cities,Prunus,372
+Other cities,Pyrus,202
+Other cities,Tilia,97
+Other cities,Ulmus,352
+Other cities,Pinus,318
+Other cities,Liquidambar,96
+Other cities,Magnolia,240
+Other cities,Washingtonia,0
+Other cities,Celtis,285
+Other cities,Other species,2812
+Other cities,Acer,51
+Other cities,Quercus,1633
+Other cities,Fraxinus,8
+Other cities,Platanus,408
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,184
+Other cities,Prunus,9
+Other cities,Pyrus,59
+Other cities,Tilia,0
+Other cities,Ulmus,444
+Other cities,Pinus,546
+Other cities,Liquidambar,6
+Other cities,Magnolia,5
+Other cities,Washingtonia,4
+Other cities,Celtis,152
+Other cities,Other species,3078
+Other cities,Acer,685
+Other cities,Quercus,891
+Other cities,Fraxinus,67
+Other cities,Platanus,26
+Other cities,Gleditsia,14
+Other cities,Lagerstroemia,752
+Other cities,Prunus,291
+Other cities,Pyrus,99
+Other cities,Tilia,9
+Other cities,Ulmus,437
+Other cities,Pinus,180
+Other cities,Liquidambar,110
+Other cities,Magnolia,210
+Other cities,Washingtonia,0
+Other cities,Celtis,297
+Other cities,Other species,2505
+Other cities,Acer,186
+Other cities,Quercus,2114
+Other cities,Fraxinus,39
+Other cities,Platanus,0
+Other cities,Gleditsia,19
+Other cities,Lagerstroemia,497
+Other cities,Prunus,12
+Other cities,Pyrus,174
+Other cities,Tilia,0
+Other cities,Ulmus,1187
+Other cities,Pinus,58
+Other cities,Liquidambar,287
+Other cities,Magnolia,159
+Other cities,Washingtonia,4
+Other cities,Celtis,17
+Other cities,Other species,1465
+Other cities,Acer,35
+Other cities,Quercus,1975
+Other cities,Fraxinus,131
+Other cities,Platanus,46
+Other cities,Gleditsia,98
+Other cities,Lagerstroemia,609
+Other cities,Prunus,29
+Other cities,Pyrus,63
+Other cities,Tilia,0
+Other cities,Ulmus,1170
+Other cities,Pinus,7
+Other cities,Liquidambar,7
+Other cities,Magnolia,6
+Other cities,Washingtonia,20
+Other cities,Celtis,163
+Other cities,Other species,1715
+Other cities,Acer,52
+Other cities,Quercus,153
+Other cities,Fraxinus,276
+Other cities,Platanus,231
+Other cities,Gleditsia,159
+Other cities,Lagerstroemia,1
+Other cities,Prunus,53
+Other cities,Pyrus,75
+Other cities,Tilia,31
+Other cities,Ulmus,454
+Other cities,Pinus,271
+Other cities,Liquidambar,0
+Other cities,Magnolia,0
+Other cities,Washingtonia,0
+Other cities,Celtis,36
+Other cities,Other species,710
+Other cities,Acer,136
+Other cities,Quercus,321
+Other cities,Fraxinus,68
+Other cities,Platanus,281
+Other cities,Gleditsia,15
+Other cities,Lagerstroemia,24
+Other cities,Prunus,119
+Other cities,Pyrus,39
+Other cities,Tilia,31
+Other cities,Ulmus,204
+Other cities,Pinus,1
+Other cities,Liquidambar,131
+Other cities,Magnolia,9
+Other cities,Washingtonia,0
+Other cities,Celtis,0
+Other cities,Other species,660
+Other cities,Acer,477
+Other cities,Quercus,346
+Other cities,Fraxinus,56
+Other cities,Platanus,66
+Other cities,Gleditsia,7
+Other cities,Lagerstroemia,161
+Other cities,Prunus,45
+Other cities,Pyrus,46
+Other cities,Tilia,28
+Other cities,Ulmus,126
+Other cities,Pinus,43
+Other cities,Liquidambar,32
+Other cities,Magnolia,5
+Other cities,Washingtonia,0
+Other cities,Celtis,8
+Other cities,Other species,370
+Other cities,Acer,139
+Other cities,Quercus,468
+Other cities,Fraxinus,2
+Other cities,Platanus,87
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,0
+Other cities,Prunus,22
+Other cities,Pyrus,68
+Other cities,Tilia,0
+Other cities,Ulmus,0
+Other cities,Pinus,24
+Other cities,Liquidambar,1
+Other cities,Magnolia,0
+Other cities,Washingtonia,0
+Other cities,Celtis,17
+Other cities,Other species,728
+Other cities,Acer,266
+Other cities,Quercus,171
+Other cities,Fraxinus,19
+Other cities,Platanus,0
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,0
+Other cities,Prunus,103
+Other cities,Pyrus,4
+Other cities,Tilia,2
+Other cities,Ulmus,12
+Other cities,Pinus,320
+Other cities,Liquidambar,0
+Other cities,Magnolia,2
+Other cities,Washingtonia,0
+Other cities,Celtis,1
+Other cities,Other species,359
+Other cities,Acer,119
+Other cities,Quercus,194
+Other cities,Fraxinus,0
+Other cities,Platanus,62
+Other cities,Gleditsia,17
+Other cities,Lagerstroemia,0
+Other cities,Prunus,4
+Other cities,Pyrus,0
+Other cities,Tilia,78
+Other cities,Ulmus,11
+Other cities,Pinus,0
+Other cities,Liquidambar,10
+Other cities,Magnolia,8
+Other cities,Washingtonia,0
+Other cities,Celtis,0
+Other cities,Other species,271
+Other cities,Acer,1
+Other cities,Quercus,24
+Other cities,Fraxinus,0
+Other cities,Platanus,0
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,8
+Other cities,Prunus,0
+Other cities,Pyrus,0
+Other cities,Tilia,0
+Other cities,Ulmus,0
+Other cities,Pinus,46
+Other cities,Liquidambar,0
+Other cities,Magnolia,1
+Other cities,Washingtonia,0
+Other cities,Celtis,0
+Other cities,Other species,652
+Other cities,Acer,0
+Other cities,Quercus,1
+Other cities,Fraxinus,34
+Other cities,Platanus,0
+Other cities,Gleditsia,0
+Other cities,Lagerstroemia,0
+Other cities,Prunus,5
+Other cities,Pyrus,0
+Other cities,Tilia,0
+Other cities,Ulmus,5
+Other cities,Pinus,11
+Other cities,Liquidambar,0
+Other cities,Magnolia,0
+Other cities,Washingtonia,5
+Other cities,Celtis,0
+Other cities,Other species,153
