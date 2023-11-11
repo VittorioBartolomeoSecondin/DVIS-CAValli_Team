@@ -94,7 +94,7 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
   // add the title for the nodes
   node.append("title")
       .text(function(d) { 
-          return d.name + "\n" + format(d.value); });
+          return d.name + "\n" + d.value; });
 
   // add in the text for the nodes
   node.append("text")
