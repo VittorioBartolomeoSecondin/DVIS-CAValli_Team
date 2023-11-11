@@ -1,5 +1,8 @@
 body {
     font-family: 'Fira Sans';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 p, li, div, a, option, input {
@@ -105,6 +108,7 @@ margin: 0; padding: 0;
 }
 footer{
     background-color: #111010;
+    margin-top: auto;
 }
 .f-item-con{
     padding: 1.5rem 4rem;
