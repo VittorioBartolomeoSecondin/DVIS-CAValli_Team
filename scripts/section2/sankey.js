@@ -85,8 +85,8 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
   node.append("rect")
       .attr("x", function(d) { return d.x0; })
       .attr("y", function(d) { return d.y0; })
-      .style("stroke", "gray")
-      .style("stroke-width", 1)
+      .style("stroke", "black")
+      .style("stroke-width", 3)
       .attr("height", function(d) { return d.y1 - d.y0; })
       .attr("width", sankey.nodeWidth())
       .style("fill", function(d) { 
