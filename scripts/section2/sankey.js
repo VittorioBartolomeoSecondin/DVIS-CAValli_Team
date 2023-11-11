@@ -128,7 +128,7 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
 // Add hover effects to links
 link.on("mouseover", function() {
     d3.select(this)
-        .attr("stroke-width", 300);
+        .attr("stroke-width", 30);
 })
 .on("mouseout", function() {
     d3.select(this)
