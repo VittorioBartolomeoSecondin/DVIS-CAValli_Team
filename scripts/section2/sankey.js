@@ -58,6 +58,8 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
     sankeydata.nodes[i] = { "name": d };
   });
 
+  console.log(sankeydata);
+
   graph = sankey(sankeydata);
 
   // add in the links
