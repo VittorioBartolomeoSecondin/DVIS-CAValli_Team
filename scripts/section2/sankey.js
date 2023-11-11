@@ -62,6 +62,8 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
 
   graph = sankey(sankeydata);
 
+  console.log(graph);
+
   // add in the links
   var link = svg.append("g").selectAll(".link")
       .data(graph.links)
