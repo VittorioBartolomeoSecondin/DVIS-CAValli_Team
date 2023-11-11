@@ -89,6 +89,8 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
   node.append("rect")
       .attr("x", function(d) { return d.x0; })
       .attr("y", function(d) { return d.y0; })
+      .style("stroke", "gray")
+      .style("stroke-width", 1)
       .attr("height", function(d) { return d.y1 - d.y0; })
       .attr("width", sankey.nodeWidth())
       .style("fill", function(d) { 
@@ -111,5 +113,25 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
     .filter(function(d) { return d.x0 < width / 2; })
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
+
+ // Add hover effects to nodes
+ node.on("mouseover", function() {
+     d3.select(this)
+         .style("fill", "lightblue");
+ })
+ .on("mouseout", function() {
+     d3.select(this)
+         .style("fill", function(d) { return d.color; });
+ });
+
+// Add hover effects to links
+link.on("mouseover", function() {
+    d3.select(this)
+        .attr("stroke-width", 300);
+})
+.on("mouseout", function() {
+    d3.select(this)
+        .attr("stroke-width", function(d) { return d.width; });
+});
 
 });
