@@ -110,6 +110,7 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
       .attr("dy", "0.35em")
       .attr("text-anchor", "end")
       .text(function(d) { return d.name; })
+      .style("fill", function(d) { return d.color; });
     .filter(function(d) { return d.x0 < width / 2; })
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
@@ -117,11 +118,11 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
  // Add hover effects to nodes
  node.on("mouseover", function() {
      d3.select(this)
-         .style("fill", "lightblue");
+         .attr("font-weight", "bold");
  })
  .on("mouseout", function() {
      d3.select(this)
-         .style("fill", function(d) { return d.color; });
+         .attr("font-weight", "normal");
  });
 
 // Add hover effects to links
