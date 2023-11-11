@@ -20,7 +20,8 @@ var svg = d3.select("body").append("svg")
 var sankey = d3.sankey()
     .nodeWidth(36)
     .nodePadding(40)
-    .size([width, height]);
+    .size([width, height])
+    .nodeSort(null); // creates sankey nodes as ordered in the data 
 
 var path = sankey.links();
 
