@@ -110,7 +110,7 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
       .attr("dy", "0.35em")
       .attr("text-anchor", "end")
       .text(function(d) { return d.name; })
-      .style("fill", function(d) { return d.color; });
+      .style("fill", function(d) { return d.color; })
     .filter(function(d) { return d.x0 < width / 2; })
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
