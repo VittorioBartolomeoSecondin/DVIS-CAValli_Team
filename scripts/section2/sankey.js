@@ -78,6 +78,7 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
   var node = svg.append("g").selectAll(".node")
       .data(graph.nodes)
     .enter().append("g")
+      .attr("class", "node");
 
   // add the rectangles for the nodes
   node.append("rect")
