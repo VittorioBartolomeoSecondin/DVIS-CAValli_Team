@@ -1,0 +1,3970 @@
+source,target,value
+California,NewYork,0
+California,LosAngeles,582913
+California,Denver,0
+California,SanJose,264805
+California,Portland,0
+California,Houston,0
+California,SanDiego,212304
+California,Minneapolis,0
+California,WashingtonDC,0
+California,SanFrancisco,175272
+California,Seattle,0
+California,Columbus,0
+California,Baltimore,0
+California,NewOrleans,0
+California,Stockton,97707
+California,Indianapolis,0
+California,Madison,0
+California,Sacramento,87191
+California,StLouis,0
+California,RanchoCucamonga,80611
+California,Anaheim,77020
+California,Buffalo,0
+California,GrandRapids,0
+California,Orlando,0
+California,Rochester,0
+California,SiouxFalls,0
+California,Ontario,58577
+California,Irvine,58364
+California,AuroraCO,0
+California,HuntingtonBeach,55598
+California,OverlandPark,0
+California,Pittsburgh,0
+California,Atlanta,0
+California,Oakland,35568
+California,CapeCoral,0
+California,Louisville,0
+California,Milwaukee,0
+California,LasVegas,0
+California,Plano,0
+California,Tampa,0
+California,Providence,0
+California,Detroit,0
+California,GardenGrove,17521
+California,ColoradoSprings,0
+California,Durham,0
+California,DesMoines,0
+California,Worcester,0
+California,Honolulu,0
+California,Arlington,0
+California,OklahomaCity,0
+California,Knoxville,0
+California,Fresno,6587
+California,Greensboro,0
+California,Dallas,0
+California,Austin,0
+California,Albuquerque,0
+California,Nashville,0
+California,Richmond,0
+California,SantaRosa,1556
+California,Boston,0
+California,Jerseycity,0
+California,Miami,0
+California,Phoenix,0
+New York,NewYork,652169
+New York,LosAngeles,0
+New York,Denver,0
+New York,SanJose,0
+New York,Portland,0
+New York,Houston,0
+New York,SanDiego,0
+New York,Minneapolis,0
+New York,WashingtonDC,0
+New York,SanFrancisco,0
+New York,Seattle,0
+New York,Columbus,0
+New York,Baltimore,0
+New York,NewOrleans,0
+New York,Stockton,0
+New York,Indianapolis,0
+New York,Madison,0
+New York,Sacramento,0
+New York,StLouis,0
+New York,RanchoCucamonga,0
+New York,Anaheim,0
+New York,Buffalo,76953
+New York,GrandRapids,0
+New York,Orlando,0
+New York,Rochester,63929
+New York,SiouxFalls,0
+New York,Ontario,0
+New York,Irvine,0
+New York,AuroraCO,0
+New York,HuntingtonBeach,0
+New York,OverlandPark,0
+New York,Pittsburgh,0
+New York,Atlanta,0
+New York,Oakland,0
+New York,CapeCoral,0
+New York,Louisville,0
+New York,Milwaukee,0
+New York,LasVegas,0
+New York,Plano,0
+New York,Tampa,0
+New York,Providence,0
+New York,Detroit,0
+New York,GardenGrove,0
+New York,ColoradoSprings,0
+New York,Durham,0
+New York,DesMoines,0
+New York,Worcester,0
+New York,Honolulu,0
+New York,Arlington,0
+New York,OklahomaCity,0
+New York,Knoxville,0
+New York,Fresno,0
+New York,Greensboro,0
+New York,Dallas,0
+New York,Austin,0
+New York,Albuquerque,0
+New York,Nashville,0
+New York,Richmond,0
+New York,SantaRosa,0
+New York,Boston,0
+New York,Jerseycity,0
+New York,Miami,0
+New York,Phoenix,0
+Colorado,NewYork,0
+Colorado,LosAngeles,0
+Colorado,Denver,284354
+Colorado,SanJose,0
+Colorado,Portland,0
+Colorado,Houston,0
+Colorado,SanDiego,0
+Colorado,Minneapolis,0
+Colorado,WashingtonDC,0
+Colorado,SanFrancisco,0
+Colorado,Seattle,0
+Colorado,Columbus,0
+Colorado,Baltimore,0
+Colorado,NewOrleans,0
+Colorado,Stockton,0
+Colorado,Indianapolis,0
+Colorado,Madison,0
+Colorado,Sacramento,0
+Colorado,StLouis,0
+Colorado,RanchoCucamonga,0
+Colorado,Anaheim,0
+Colorado,Buffalo,0
+Colorado,GrandRapids,0
+Colorado,Orlando,0
+Colorado,Rochester,0
+Colorado,SiouxFalls,0
+Colorado,Ontario,0
+Colorado,Irvine,0
+Colorado,AuroraCO,57360
+Colorado,HuntingtonBeach,0
+Colorado,OverlandPark,0
+Colorado,Pittsburgh,0
+Colorado,Atlanta,0
+Colorado,Oakland,0
+Colorado,CapeCoral,0
+Colorado,Louisville,0
+Colorado,Milwaukee,0
+Colorado,LasVegas,0
+Colorado,Plano,0
+Colorado,Tampa,0
+Colorado,Providence,0
+Colorado,Detroit,0
+Colorado,GardenGrove,0
+Colorado,ColoradoSprings,16051
+Colorado,Durham,0
+Colorado,DesMoines,0
+Colorado,Worcester,0
+Colorado,Honolulu,0
+Colorado,Arlington,0
+Colorado,OklahomaCity,0
+Colorado,Knoxville,0
+Colorado,Fresno,0
+Colorado,Greensboro,0
+Colorado,Dallas,0
+Colorado,Austin,0
+Colorado,Albuquerque,0
+Colorado,Nashville,0
+Colorado,Richmond,0
+Colorado,SantaRosa,0
+Colorado,Boston,0
+Colorado,Jerseycity,0
+Colorado,Miami,0
+Colorado,Phoenix,0
+Texas,NewYork,0
+Texas,LosAngeles,0
+Texas,Denver,0
+Texas,SanJose,0
+Texas,Portland,0
+Texas,Houston,213387
+Texas,SanDiego,0
+Texas,Minneapolis,0
+Texas,WashingtonDC,0
+Texas,SanFrancisco,0
+Texas,Seattle,0
+Texas,Columbus,0
+Texas,Baltimore,0
+Texas,NewOrleans,0
+Texas,Stockton,0
+Texas,Indianapolis,0
+Texas,Madison,0
+Texas,Sacramento,0
+Texas,StLouis,0
+Texas,RanchoCucamonga,0
+Texas,Anaheim,0
+Texas,Buffalo,0
+Texas,GrandRapids,0
+Texas,Orlando,0
+Texas,Rochester,0
+Texas,SiouxFalls,0
+Texas,Ontario,0
+Texas,Irvine,0
+Texas,AuroraCO,0
+Texas,HuntingtonBeach,0
+Texas,OverlandPark,0
+Texas,Pittsburgh,0
+Texas,Atlanta,0
+Texas,Oakland,0
+Texas,CapeCoral,0
+Texas,Louisville,0
+Texas,Milwaukee,0
+Texas,LasVegas,0
+Texas,Plano,28290
+Texas,Tampa,0
+Texas,Providence,0
+Texas,Detroit,0
+Texas,GardenGrove,0
+Texas,ColoradoSprings,0
+Texas,Durham,0
+Texas,DesMoines,0
+Texas,Worcester,0
+Texas,Honolulu,0
+Texas,Arlington,14673
+Texas,OklahomaCity,0
+Texas,Knoxville,0
+Texas,Fresno,0
+Texas,Greensboro,0
+Texas,Dallas,6218
+Texas,Austin,6074
+Texas,Albuquerque,0
+Texas,Nashville,0
+Texas,Richmond,0
+Texas,SantaRosa,0
+Texas,Boston,0
+Texas,Jerseycity,0
+Texas,Miami,0
+Texas,Phoenix,0
+Oregon,NewYork,0
+Oregon,LosAngeles,0
+Oregon,Denver,0
+Oregon,SanJose,0
+Oregon,Portland,216751
+Oregon,Houston,0
+Oregon,SanDiego,0
+Oregon,Minneapolis,0
+Oregon,WashingtonDC,0
+Oregon,SanFrancisco,0
+Oregon,Seattle,0
+Oregon,Columbus,0
+Oregon,Baltimore,0
+Oregon,NewOrleans,0
+Oregon,Stockton,0
+Oregon,Indianapolis,0
+Oregon,Madison,0
+Oregon,Sacramento,0
+Oregon,StLouis,0
+Oregon,RanchoCucamonga,0
+Oregon,Anaheim,0
+Oregon,Buffalo,0
+Oregon,GrandRapids,0
+Oregon,Orlando,0
+Oregon,Rochester,0
+Oregon,SiouxFalls,0
+Oregon,Ontario,0
+Oregon,Irvine,0
+Oregon,AuroraCO,0
+Oregon,HuntingtonBeach,0
+Oregon,OverlandPark,0
+Oregon,Pittsburgh,0
+Oregon,Atlanta,0
+Oregon,Oakland,0
+Oregon,CapeCoral,0
+Oregon,Louisville,0
+Oregon,Milwaukee,0
+Oregon,LasVegas,0
+Oregon,Plano,0
+Oregon,Tampa,0
+Oregon,Providence,0
+Oregon,Detroit,0
+Oregon,GardenGrove,0
+Oregon,ColoradoSprings,0
+Oregon,Durham,0
+Oregon,DesMoines,0
+Oregon,Worcester,0
+Oregon,Honolulu,0
+Oregon,Arlington,0
+Oregon,OklahomaCity,0
+Oregon,Knoxville,0
+Oregon,Fresno,0
+Oregon,Greensboro,0
+Oregon,Dallas,0
+Oregon,Austin,0
+Oregon,Albuquerque,0
+Oregon,Nashville,0
+Oregon,Richmond,0
+Oregon,SantaRosa,0
+Oregon,Boston,0
+Oregon,Jerseycity,0
+Oregon,Miami,0
+Oregon,Phoenix,0
+Minnesota,NewYork,0
+Minnesota,LosAngeles,0
+Minnesota,Denver,0
+Minnesota,SanJose,0
+Minnesota,Portland,0
+Minnesota,Houston,0
+Minnesota,SanDiego,0
+Minnesota,Minneapolis,176834
+Minnesota,WashingtonDC,0
+Minnesota,SanFrancisco,0
+Minnesota,Seattle,0
+Minnesota,Columbus,0
+Minnesota,Baltimore,0
+Minnesota,NewOrleans,0
+Minnesota,Stockton,0
+Minnesota,Indianapolis,0
+Minnesota,Madison,0
+Minnesota,Sacramento,0
+Minnesota,StLouis,0
+Minnesota,RanchoCucamonga,0
+Minnesota,Anaheim,0
+Minnesota,Buffalo,0
+Minnesota,GrandRapids,0
+Minnesota,Orlando,0
+Minnesota,Rochester,0
+Minnesota,SiouxFalls,0
+Minnesota,Ontario,0
+Minnesota,Irvine,0
+Minnesota,AuroraCO,0
+Minnesota,HuntingtonBeach,0
+Minnesota,OverlandPark,0
+Minnesota,Pittsburgh,0
+Minnesota,Atlanta,0
+Minnesota,Oakland,0
+Minnesota,CapeCoral,0
+Minnesota,Louisville,0
+Minnesota,Milwaukee,0
+Minnesota,LasVegas,0
+Minnesota,Plano,0
+Minnesota,Tampa,0
+Minnesota,Providence,0
+Minnesota,Detroit,0
+Minnesota,GardenGrove,0
+Minnesota,ColoradoSprings,0
+Minnesota,Durham,0
+Minnesota,DesMoines,0
+Minnesota,Worcester,0
+Minnesota,Honolulu,0
+Minnesota,Arlington,0
+Minnesota,OklahomaCity,0
+Minnesota,Knoxville,0
+Minnesota,Fresno,0
+Minnesota,Greensboro,0
+Minnesota,Dallas,0
+Minnesota,Austin,0
+Minnesota,Albuquerque,0
+Minnesota,Nashville,0
+Minnesota,Richmond,0
+Minnesota,SantaRosa,0
+Minnesota,Boston,0
+Minnesota,Jerseycity,0
+Minnesota,Miami,0
+Minnesota,Phoenix,0
+District of Columbia,NewYork,0
+District of Columbia,LosAngeles,0
+District of Columbia,Denver,0
+District of Columbia,SanJose,0
+District of Columbia,Portland,0
+District of Columbia,Houston,0
+District of Columbia,SanDiego,0
+District of Columbia,Minneapolis,0
+District of Columbia,WashingtonDC,175847
+District of Columbia,SanFrancisco,0
+District of Columbia,Seattle,0
+District of Columbia,Columbus,0
+District of Columbia,Baltimore,0
+District of Columbia,NewOrleans,0
+District of Columbia,Stockton,0
+District of Columbia,Indianapolis,0
+District of Columbia,Madison,0
+District of Columbia,Sacramento,0
+District of Columbia,StLouis,0
+District of Columbia,RanchoCucamonga,0
+District of Columbia,Anaheim,0
+District of Columbia,Buffalo,0
+District of Columbia,GrandRapids,0
+District of Columbia,Orlando,0
+District of Columbia,Rochester,0
+District of Columbia,SiouxFalls,0
+District of Columbia,Ontario,0
+District of Columbia,Irvine,0
+District of Columbia,AuroraCO,0
+District of Columbia,HuntingtonBeach,0
+District of Columbia,OverlandPark,0
+District of Columbia,Pittsburgh,0
+District of Columbia,Atlanta,0
+District of Columbia,Oakland,0
+District of Columbia,CapeCoral,0
+District of Columbia,Louisville,0
+District of Columbia,Milwaukee,0
+District of Columbia,LasVegas,0
+District of Columbia,Plano,0
+District of Columbia,Tampa,0
+District of Columbia,Providence,0
+District of Columbia,Detroit,0
+District of Columbia,GardenGrove,0
+District of Columbia,ColoradoSprings,0
+District of Columbia,Durham,0
+District of Columbia,DesMoines,0
+District of Columbia,Worcester,0
+District of Columbia,Honolulu,0
+District of Columbia,Arlington,0
+District of Columbia,OklahomaCity,0
+District of Columbia,Knoxville,0
+District of Columbia,Fresno,0
+District of Columbia,Greensboro,0
+District of Columbia,Dallas,0
+District of Columbia,Austin,0
+District of Columbia,Albuquerque,0
+District of Columbia,Nashville,0
+District of Columbia,Richmond,0
+District of Columbia,SantaRosa,0
+District of Columbia,Boston,0
+District of Columbia,Jerseycity,0
+District of Columbia,Miami,0
+District of Columbia,Phoenix,0
+Washington,NewYork,0
+Washington,LosAngeles,0
+Washington,Denver,0
+Washington,SanJose,0
+Washington,Portland,0
+Washington,Houston,0
+Washington,SanDiego,0
+Washington,Minneapolis,0
+Washington,WashingtonDC,0
+Washington,SanFrancisco,0
+Washington,Seattle,164919
+Washington,Columbus,0
+Washington,Baltimore,0
+Washington,NewOrleans,0
+Washington,Stockton,0
+Washington,Indianapolis,0
+Washington,Madison,0
+Washington,Sacramento,0
+Washington,StLouis,0
+Washington,RanchoCucamonga,0
+Washington,Anaheim,0
+Washington,Buffalo,0
+Washington,GrandRapids,0
+Washington,Orlando,0
+Washington,Rochester,0
+Washington,SiouxFalls,0
+Washington,Ontario,0
+Washington,Irvine,0
+Washington,AuroraCO,0
+Washington,HuntingtonBeach,0
+Washington,OverlandPark,0
+Washington,Pittsburgh,0
+Washington,Atlanta,0
+Washington,Oakland,0
+Washington,CapeCoral,0
+Washington,Louisville,0
+Washington,Milwaukee,0
+Washington,LasVegas,0
+Washington,Plano,0
+Washington,Tampa,0
+Washington,Providence,0
+Washington,Detroit,0
+Washington,GardenGrove,0
+Washington,ColoradoSprings,0
+Washington,Durham,0
+Washington,DesMoines,0
+Washington,Worcester,0
+Washington,Honolulu,0
+Washington,Arlington,0
+Washington,OklahomaCity,0
+Washington,Knoxville,0
+Washington,Fresno,0
+Washington,Greensboro,0
+Washington,Dallas,0
+Washington,Austin,0
+Washington,Albuquerque,0
+Washington,Nashville,0
+Washington,Richmond,0
+Washington,SantaRosa,0
+Washington,Boston,0
+Washington,Jerseycity,0
+Washington,Miami,0
+Washington,Phoenix,0
+Ohio,NewYork,0
+Ohio,LosAngeles,0
+Ohio,Denver,0
+Ohio,SanJose,0
+Ohio,Portland,0
+Ohio,Houston,0
+Ohio,SanDiego,0
+Ohio,Minneapolis,0
+Ohio,WashingtonDC,0
+Ohio,SanFrancisco,0
+Ohio,Seattle,0
+Ohio,Columbus,151350
+Ohio,Baltimore,0
+Ohio,NewOrleans,0
+Ohio,Stockton,0
+Ohio,Indianapolis,0
+Ohio,Madison,0
+Ohio,Sacramento,0
+Ohio,StLouis,0
+Ohio,RanchoCucamonga,0
+Ohio,Anaheim,0
+Ohio,Buffalo,0
+Ohio,GrandRapids,0
+Ohio,Orlando,0
+Ohio,Rochester,0
+Ohio,SiouxFalls,0
+Ohio,Ontario,0
+Ohio,Irvine,0
+Ohio,AuroraCO,0
+Ohio,HuntingtonBeach,0
+Ohio,OverlandPark,0
+Ohio,Pittsburgh,0
+Ohio,Atlanta,0
+Ohio,Oakland,0
+Ohio,CapeCoral,0
+Ohio,Louisville,0
+Ohio,Milwaukee,0
+Ohio,LasVegas,0
+Ohio,Plano,0
+Ohio,Tampa,0
+Ohio,Providence,0
+Ohio,Detroit,0
+Ohio,GardenGrove,0
+Ohio,ColoradoSprings,0
+Ohio,Durham,0
+Ohio,DesMoines,0
+Ohio,Worcester,0
+Ohio,Honolulu,0
+Ohio,Arlington,0
+Ohio,OklahomaCity,0
+Ohio,Knoxville,0
+Ohio,Fresno,0
+Ohio,Greensboro,0
+Ohio,Dallas,0
+Ohio,Austin,0
+Ohio,Albuquerque,0
+Ohio,Nashville,0
+Ohio,Richmond,0
+Ohio,SantaRosa,0
+Ohio,Boston,0
+Ohio,Jerseycity,0
+Ohio,Miami,0
+Ohio,Phoenix,0
+Wisconsin,NewYork,0
+Wisconsin,LosAngeles,0
+Wisconsin,Denver,0
+Wisconsin,SanJose,0
+Wisconsin,Portland,0
+Wisconsin,Houston,0
+Wisconsin,SanDiego,0
+Wisconsin,Minneapolis,0
+Wisconsin,WashingtonDC,0
+Wisconsin,SanFrancisco,0
+Wisconsin,Seattle,0
+Wisconsin,Columbus,0
+Wisconsin,Baltimore,0
+Wisconsin,NewOrleans,0
+Wisconsin,Stockton,0
+Wisconsin,Indianapolis,0
+Wisconsin,Madison,96006
+Wisconsin,Sacramento,0
+Wisconsin,StLouis,0
+Wisconsin,RanchoCucamonga,0
+Wisconsin,Anaheim,0
+Wisconsin,Buffalo,0
+Wisconsin,GrandRapids,0
+Wisconsin,Orlando,0
+Wisconsin,Rochester,0
+Wisconsin,SiouxFalls,0
+Wisconsin,Ontario,0
+Wisconsin,Irvine,0
+Wisconsin,AuroraCO,0
+Wisconsin,HuntingtonBeach,0
+Wisconsin,OverlandPark,0
+Wisconsin,Pittsburgh,0
+Wisconsin,Atlanta,0
+Wisconsin,Oakland,0
+Wisconsin,CapeCoral,0
+Wisconsin,Louisville,0
+Wisconsin,Milwaukee,32066
+Wisconsin,LasVegas,0
+Wisconsin,Plano,0
+Wisconsin,Tampa,0
+Wisconsin,Providence,0
+Wisconsin,Detroit,0
+Wisconsin,GardenGrove,0
+Wisconsin,ColoradoSprings,0
+Wisconsin,Durham,0
+Wisconsin,DesMoines,0
+Wisconsin,Worcester,0
+Wisconsin,Honolulu,0
+Wisconsin,Arlington,0
+Wisconsin,OklahomaCity,0
+Wisconsin,Knoxville,0
+Wisconsin,Fresno,0
+Wisconsin,Greensboro,0
+Wisconsin,Dallas,0
+Wisconsin,Austin,0
+Wisconsin,Albuquerque,0
+Wisconsin,Nashville,0
+Wisconsin,Richmond,0
+Wisconsin,SantaRosa,0
+Wisconsin,Boston,0
+Wisconsin,Jerseycity,0
+Wisconsin,Miami,0
+Wisconsin,Phoenix,0
+Florida,NewYork,0
+Florida,LosAngeles,0
+Florida,Denver,0
+Florida,SanJose,0
+Florida,Portland,0
+Florida,Houston,0
+Florida,SanDiego,0
+Florida,Minneapolis,0
+Florida,WashingtonDC,0
+Florida,SanFrancisco,0
+Florida,Seattle,0
+Florida,Columbus,0
+Florida,Baltimore,0
+Florida,NewOrleans,0
+Florida,Stockton,0
+Florida,Indianapolis,0
+Florida,Madison,0
+Florida,Sacramento,0
+Florida,StLouis,0
+Florida,RanchoCucamonga,0
+Florida,Anaheim,0
+Florida,Buffalo,0
+Florida,GrandRapids,0
+Florida,Orlando,68211
+Florida,Rochester,0
+Florida,SiouxFalls,0
+Florida,Ontario,0
+Florida,Irvine,0
+Florida,AuroraCO,0
+Florida,HuntingtonBeach,0
+Florida,OverlandPark,0
+Florida,Pittsburgh,0
+Florida,Atlanta,0
+Florida,Oakland,0
+Florida,CapeCoral,34021
+Florida,Louisville,0
+Florida,Milwaukee,0
+Florida,LasVegas,0
+Florida,Plano,0
+Florida,Tampa,25068
+Florida,Providence,0
+Florida,Detroit,0
+Florida,GardenGrove,0
+Florida,ColoradoSprings,0
+Florida,Durham,0
+Florida,DesMoines,0
+Florida,Worcester,0
+Florida,Honolulu,0
+Florida,Arlington,0
+Florida,OklahomaCity,0
+Florida,Knoxville,0
+Florida,Fresno,0
+Florida,Greensboro,0
+Florida,Dallas,0
+Florida,Austin,0
+Florida,Albuquerque,0
+Florida,Nashville,0
+Florida,Richmond,0
+Florida,SantaRosa,0
+Florida,Boston,0
+Florida,Jerseycity,0
+Florida,Miami,732
+Florida,Phoenix,0
+Maryland,NewYork,0
+Maryland,LosAngeles,0
+Maryland,Denver,0
+Maryland,SanJose,0
+Maryland,Portland,0
+Maryland,Houston,0
+Maryland,SanDiego,0
+Maryland,Minneapolis,0
+Maryland,WashingtonDC,0
+Maryland,SanFrancisco,0
+Maryland,Seattle,0
+Maryland,Columbus,0
+Maryland,Baltimore,121290
+Maryland,NewOrleans,0
+Maryland,Stockton,0
+Maryland,Indianapolis,0
+Maryland,Madison,0
+Maryland,Sacramento,0
+Maryland,StLouis,0
+Maryland,RanchoCucamonga,0
+Maryland,Anaheim,0
+Maryland,Buffalo,0
+Maryland,GrandRapids,0
+Maryland,Orlando,0
+Maryland,Rochester,0
+Maryland,SiouxFalls,0
+Maryland,Ontario,0
+Maryland,Irvine,0
+Maryland,AuroraCO,0
+Maryland,HuntingtonBeach,0
+Maryland,OverlandPark,0
+Maryland,Pittsburgh,0
+Maryland,Atlanta,0
+Maryland,Oakland,0
+Maryland,CapeCoral,0
+Maryland,Louisville,0
+Maryland,Milwaukee,0
+Maryland,LasVegas,0
+Maryland,Plano,0
+Maryland,Tampa,0
+Maryland,Providence,0
+Maryland,Detroit,0
+Maryland,GardenGrove,0
+Maryland,ColoradoSprings,0
+Maryland,Durham,0
+Maryland,DesMoines,0
+Maryland,Worcester,0
+Maryland,Honolulu,0
+Maryland,Arlington,0
+Maryland,OklahomaCity,0
+Maryland,Knoxville,0
+Maryland,Fresno,0
+Maryland,Greensboro,0
+Maryland,Dallas,0
+Maryland,Austin,0
+Maryland,Albuquerque,0
+Maryland,Nashville,0
+Maryland,Richmond,0
+Maryland,SantaRosa,0
+Maryland,Boston,0
+Maryland,Jerseycity,0
+Maryland,Miami,0
+Maryland,Phoenix,0
+Louisiana,NewYork,0
+Louisiana,LosAngeles,0
+Louisiana,Denver,0
+Louisiana,SanJose,0
+Louisiana,Portland,0
+Louisiana,Houston,0
+Louisiana,SanDiego,0
+Louisiana,Minneapolis,0
+Louisiana,WashingtonDC,0
+Louisiana,SanFrancisco,0
+Louisiana,Seattle,0
+Louisiana,Columbus,0
+Louisiana,Baltimore,0
+Louisiana,NewOrleans,105798
+Louisiana,Stockton,0
+Louisiana,Indianapolis,0
+Louisiana,Madison,0
+Louisiana,Sacramento,0
+Louisiana,StLouis,0
+Louisiana,RanchoCucamonga,0
+Louisiana,Anaheim,0
+Louisiana,Buffalo,0
+Louisiana,GrandRapids,0
+Louisiana,Orlando,0
+Louisiana,Rochester,0
+Louisiana,SiouxFalls,0
+Louisiana,Ontario,0
+Louisiana,Irvine,0
+Louisiana,AuroraCO,0
+Louisiana,HuntingtonBeach,0
+Louisiana,OverlandPark,0
+Louisiana,Pittsburgh,0
+Louisiana,Atlanta,0
+Louisiana,Oakland,0
+Louisiana,CapeCoral,0
+Louisiana,Louisville,0
+Louisiana,Milwaukee,0
+Louisiana,LasVegas,0
+Louisiana,Plano,0
+Louisiana,Tampa,0
+Louisiana,Providence,0
+Louisiana,Detroit,0
+Louisiana,GardenGrove,0
+Louisiana,ColoradoSprings,0
+Louisiana,Durham,0
+Louisiana,DesMoines,0
+Louisiana,Worcester,0
+Louisiana,Honolulu,0
+Louisiana,Arlington,0
+Louisiana,OklahomaCity,0
+Louisiana,Knoxville,0
+Louisiana,Fresno,0
+Louisiana,Greensboro,0
+Louisiana,Dallas,0
+Louisiana,Austin,0
+Louisiana,Albuquerque,0
+Louisiana,Nashville,0
+Louisiana,Richmond,0
+Louisiana,SantaRosa,0
+Louisiana,Boston,0
+Louisiana,Jerseycity,0
+Louisiana,Miami,0
+Louisiana,Phoenix,0
+Indiana,NewYork,0
+Indiana,LosAngeles,0
+Indiana,Denver,0
+Indiana,SanJose,0
+Indiana,Portland,0
+Indiana,Houston,0
+Indiana,SanDiego,0
+Indiana,Minneapolis,0
+Indiana,WashingtonDC,0
+Indiana,SanFrancisco,0
+Indiana,Seattle,0
+Indiana,Columbus,0
+Indiana,Baltimore,0
+Indiana,NewOrleans,0
+Indiana,Stockton,0
+Indiana,Indianapolis,97227
+Indiana,Madison,0
+Indiana,Sacramento,0
+Indiana,StLouis,0
+Indiana,RanchoCucamonga,0
+Indiana,Anaheim,0
+Indiana,Buffalo,0
+Indiana,GrandRapids,0
+Indiana,Orlando,0
+Indiana,Rochester,0
+Indiana,SiouxFalls,0
+Indiana,Ontario,0
+Indiana,Irvine,0
+Indiana,AuroraCO,0
+Indiana,HuntingtonBeach,0
+Indiana,OverlandPark,0
+Indiana,Pittsburgh,0
+Indiana,Atlanta,0
+Indiana,Oakland,0
+Indiana,CapeCoral,0
+Indiana,Louisville,0
+Indiana,Milwaukee,0
+Indiana,LasVegas,0
+Indiana,Plano,0
+Indiana,Tampa,0
+Indiana,Providence,0
+Indiana,Detroit,0
+Indiana,GardenGrove,0
+Indiana,ColoradoSprings,0
+Indiana,Durham,0
+Indiana,DesMoines,0
+Indiana,Worcester,0
+Indiana,Honolulu,0
+Indiana,Arlington,0
+Indiana,OklahomaCity,0
+Indiana,Knoxville,0
+Indiana,Fresno,0
+Indiana,Greensboro,0
+Indiana,Dallas,0
+Indiana,Austin,0
+Indiana,Albuquerque,0
+Indiana,Nashville,0
+Indiana,Richmond,0
+Indiana,SantaRosa,0
+Indiana,Boston,0
+Indiana,Jerseycity,0
+Indiana,Miami,0
+Indiana,Phoenix,0
+Michigan,NewYork,0
+Michigan,LosAngeles,0
+Michigan,Denver,0
+Michigan,SanJose,0
+Michigan,Portland,0
+Michigan,Houston,0
+Michigan,SanDiego,0
+Michigan,Minneapolis,0
+Michigan,WashingtonDC,0
+Michigan,SanFrancisco,0
+Michigan,Seattle,0
+Michigan,Columbus,0
+Michigan,Baltimore,0
+Michigan,NewOrleans,0
+Michigan,Stockton,0
+Michigan,Indianapolis,0
+Michigan,Madison,0
+Michigan,Sacramento,0
+Michigan,StLouis,0
+Michigan,RanchoCucamonga,0
+Michigan,Anaheim,0
+Michigan,Buffalo,0
+Michigan,GrandRapids,72093
+Michigan,Orlando,0
+Michigan,Rochester,0
+Michigan,SiouxFalls,0
+Michigan,Ontario,0
+Michigan,Irvine,0
+Michigan,AuroraCO,0
+Michigan,HuntingtonBeach,0
+Michigan,OverlandPark,0
+Michigan,Pittsburgh,0
+Michigan,Atlanta,0
+Michigan,Oakland,0
+Michigan,CapeCoral,0
+Michigan,Louisville,0
+Michigan,Milwaukee,0
+Michigan,LasVegas,0
+Michigan,Plano,0
+Michigan,Tampa,0
+Michigan,Providence,0
+Michigan,Detroit,20375
+Michigan,GardenGrove,0
+Michigan,ColoradoSprings,0
+Michigan,Durham,0
+Michigan,DesMoines,0
+Michigan,Worcester,0
+Michigan,Honolulu,0
+Michigan,Arlington,0
+Michigan,OklahomaCity,0
+Michigan,Knoxville,0
+Michigan,Fresno,0
+Michigan,Greensboro,0
+Michigan,Dallas,0
+Michigan,Austin,0
+Michigan,Albuquerque,0
+Michigan,Nashville,0
+Michigan,Richmond,0
+Michigan,SantaRosa,0
+Michigan,Boston,0
+Michigan,Jerseycity,0
+Michigan,Miami,0
+Michigan,Phoenix,0
+Missouri,NewYork,0
+Missouri,LosAngeles,0
+Missouri,Denver,0
+Missouri,SanJose,0
+Missouri,Portland,0
+Missouri,Houston,0
+Missouri,SanDiego,0
+Missouri,Minneapolis,0
+Missouri,WashingtonDC,0
+Missouri,SanFrancisco,0
+Missouri,Seattle,0
+Missouri,Columbus,0
+Missouri,Baltimore,0
+Missouri,NewOrleans,0
+Missouri,Stockton,0
+Missouri,Indianapolis,0
+Missouri,Madison,0
+Missouri,Sacramento,0
+Missouri,StLouis,83535
+Missouri,RanchoCucamonga,0
+Missouri,Anaheim,0
+Missouri,Buffalo,0
+Missouri,GrandRapids,0
+Missouri,Orlando,0
+Missouri,Rochester,0
+Missouri,SiouxFalls,0
+Missouri,Ontario,0
+Missouri,Irvine,0
+Missouri,AuroraCO,0
+Missouri,HuntingtonBeach,0
+Missouri,OverlandPark,0
+Missouri,Pittsburgh,0
+Missouri,Atlanta,0
+Missouri,Oakland,0
+Missouri,CapeCoral,0
+Missouri,Louisville,0
+Missouri,Milwaukee,0
+Missouri,LasVegas,0
+Missouri,Plano,0
+Missouri,Tampa,0
+Missouri,Providence,0
+Missouri,Detroit,0
+Missouri,GardenGrove,0
+Missouri,ColoradoSprings,0
+Missouri,Durham,0
+Missouri,DesMoines,0
+Missouri,Worcester,0
+Missouri,Honolulu,0
+Missouri,Arlington,0
+Missouri,OklahomaCity,0
+Missouri,Knoxville,0
+Missouri,Fresno,0
+Missouri,Greensboro,0
+Missouri,Dallas,0
+Missouri,Austin,0
+Missouri,Albuquerque,0
+Missouri,Nashville,0
+Missouri,Richmond,0
+Missouri,SantaRosa,0
+Missouri,Boston,0
+Missouri,Jerseycity,0
+Missouri,Miami,0
+Missouri,Phoenix,0
+South Dakota,NewYork,0
+South Dakota,LosAngeles,0
+South Dakota,Denver,0
+South Dakota,SanJose,0
+South Dakota,Portland,0
+South Dakota,Houston,0
+South Dakota,SanDiego,0
+South Dakota,Minneapolis,0
+South Dakota,WashingtonDC,0
+South Dakota,SanFrancisco,0
+South Dakota,Seattle,0
+South Dakota,Columbus,0
+South Dakota,Baltimore,0
+South Dakota,NewOrleans,0
+South Dakota,Stockton,0
+South Dakota,Indianapolis,0
+South Dakota,Madison,0
+South Dakota,Sacramento,0
+South Dakota,StLouis,0
+South Dakota,RanchoCucamonga,0
+South Dakota,Anaheim,0
+South Dakota,Buffalo,0
+South Dakota,GrandRapids,0
+South Dakota,Orlando,0
+South Dakota,Rochester,0
+South Dakota,SiouxFalls,61304
+South Dakota,Ontario,0
+South Dakota,Irvine,0
+South Dakota,AuroraCO,0
+South Dakota,HuntingtonBeach,0
+South Dakota,OverlandPark,0
+South Dakota,Pittsburgh,0
+South Dakota,Atlanta,0
+South Dakota,Oakland,0
+South Dakota,CapeCoral,0
+South Dakota,Louisville,0
+South Dakota,Milwaukee,0
+South Dakota,LasVegas,0
+South Dakota,Plano,0
+South Dakota,Tampa,0
+South Dakota,Providence,0
+South Dakota,Detroit,0
+South Dakota,GardenGrove,0
+South Dakota,ColoradoSprings,0
+South Dakota,Durham,0
+South Dakota,DesMoines,0
+South Dakota,Worcester,0
+South Dakota,Honolulu,0
+South Dakota,Arlington,0
+South Dakota,OklahomaCity,0
+South Dakota,Knoxville,0
+South Dakota,Fresno,0
+South Dakota,Greensboro,0
+South Dakota,Dallas,0
+South Dakota,Austin,0
+South Dakota,Albuquerque,0
+South Dakota,Nashville,0
+South Dakota,Richmond,0
+South Dakota,SantaRosa,0
+South Dakota,Boston,0
+South Dakota,Jerseycity,0
+South Dakota,Miami,0
+South Dakota,Phoenix,0
+Kansas,NewYork,0
+Kansas,LosAngeles,0
+Kansas,Denver,0
+Kansas,SanJose,0
+Kansas,Portland,0
+Kansas,Houston,0
+Kansas,SanDiego,0
+Kansas,Minneapolis,0
+Kansas,WashingtonDC,0
+Kansas,SanFrancisco,0
+Kansas,Seattle,0
+Kansas,Columbus,0
+Kansas,Baltimore,0
+Kansas,NewOrleans,0
+Kansas,Stockton,0
+Kansas,Indianapolis,0
+Kansas,Madison,0
+Kansas,Sacramento,0
+Kansas,StLouis,0
+Kansas,RanchoCucamonga,0
+Kansas,Anaheim,0
+Kansas,Buffalo,0
+Kansas,GrandRapids,0
+Kansas,Orlando,0
+Kansas,Rochester,0
+Kansas,SiouxFalls,0
+Kansas,Ontario,0
+Kansas,Irvine,0
+Kansas,AuroraCO,0
+Kansas,HuntingtonBeach,0
+Kansas,OverlandPark,44767
+Kansas,Pittsburgh,0
+Kansas,Atlanta,0
+Kansas,Oakland,0
+Kansas,CapeCoral,0
+Kansas,Louisville,0
+Kansas,Milwaukee,0
+Kansas,LasVegas,0
+Kansas,Plano,0
+Kansas,Tampa,0
+Kansas,Providence,0
+Kansas,Detroit,0
+Kansas,GardenGrove,0
+Kansas,ColoradoSprings,0
+Kansas,Durham,0
+Kansas,DesMoines,0
+Kansas,Worcester,0
+Kansas,Honolulu,0
+Kansas,Arlington,0
+Kansas,OklahomaCity,0
+Kansas,Knoxville,0
+Kansas,Fresno,0
+Kansas,Greensboro,0
+Kansas,Dallas,0
+Kansas,Austin,0
+Kansas,Albuquerque,0
+Kansas,Nashville,0
+Kansas,Richmond,0
+Kansas,SantaRosa,0
+Kansas,Boston,0
+Kansas,Jerseycity,0
+Kansas,Miami,0
+Kansas,Phoenix,0
+Pennsylvania,NewYork,0
+Pennsylvania,LosAngeles,0
+Pennsylvania,Denver,0
+Pennsylvania,SanJose,0
+Pennsylvania,Portland,0
+Pennsylvania,Houston,0
+Pennsylvania,SanDiego,0
+Pennsylvania,Minneapolis,0
+Pennsylvania,WashingtonDC,0
+Pennsylvania,SanFrancisco,0
+Pennsylvania,Seattle,0
+Pennsylvania,Columbus,0
+Pennsylvania,Baltimore,0
+Pennsylvania,NewOrleans,0
+Pennsylvania,Stockton,0
+Pennsylvania,Indianapolis,0
+Pennsylvania,Madison,0
+Pennsylvania,Sacramento,0
+Pennsylvania,StLouis,0
+Pennsylvania,RanchoCucamonga,0
+Pennsylvania,Anaheim,0
+Pennsylvania,Buffalo,0
+Pennsylvania,GrandRapids,0
+Pennsylvania,Orlando,0
+Pennsylvania,Rochester,0
+Pennsylvania,SiouxFalls,0
+Pennsylvania,Ontario,0
+Pennsylvania,Irvine,0
+Pennsylvania,AuroraCO,0
+Pennsylvania,HuntingtonBeach,0
+Pennsylvania,OverlandPark,0
+Pennsylvania,Pittsburgh,42081
+Pennsylvania,Atlanta,0
+Pennsylvania,Oakland,0
+Pennsylvania,CapeCoral,0
+Pennsylvania,Louisville,0
+Pennsylvania,Milwaukee,0
+Pennsylvania,LasVegas,0
+Pennsylvania,Plano,0
+Pennsylvania,Tampa,0
+Pennsylvania,Providence,0
+Pennsylvania,Detroit,0
+Pennsylvania,GardenGrove,0
+Pennsylvania,ColoradoSprings,0
+Pennsylvania,Durham,0
+Pennsylvania,DesMoines,0
+Pennsylvania,Worcester,0
+Pennsylvania,Honolulu,0
+Pennsylvania,Arlington,0
+Pennsylvania,OklahomaCity,0
+Pennsylvania,Knoxville,0
+Pennsylvania,Fresno,0
+Pennsylvania,Greensboro,0
+Pennsylvania,Dallas,0
+Pennsylvania,Austin,0
+Pennsylvania,Albuquerque,0
+Pennsylvania,Nashville,0
+Pennsylvania,Richmond,0
+Pennsylvania,SantaRosa,0
+Pennsylvania,Boston,0
+Pennsylvania,Jerseycity,0
+Pennsylvania,Miami,0
+Pennsylvania,Phoenix,0
+Georgia,NewYork,0
+Georgia,LosAngeles,0
+Georgia,Denver,0
+Georgia,SanJose,0
+Georgia,Portland,0
+Georgia,Houston,0
+Georgia,SanDiego,0
+Georgia,Minneapolis,0
+Georgia,WashingtonDC,0
+Georgia,SanFrancisco,0
+Georgia,Seattle,0
+Georgia,Columbus,0
+Georgia,Baltimore,0
+Georgia,NewOrleans,0
+Georgia,Stockton,0
+Georgia,Indianapolis,0
+Georgia,Madison,0
+Georgia,Sacramento,0
+Georgia,StLouis,0
+Georgia,RanchoCucamonga,0
+Georgia,Anaheim,0
+Georgia,Buffalo,0
+Georgia,GrandRapids,0
+Georgia,Orlando,0
+Georgia,Rochester,0
+Georgia,SiouxFalls,0
+Georgia,Ontario,0
+Georgia,Irvine,0
+Georgia,AuroraCO,0
+Georgia,HuntingtonBeach,0
+Georgia,OverlandPark,0
+Georgia,Pittsburgh,0
+Georgia,Atlanta,41176
+Georgia,Oakland,0
+Georgia,CapeCoral,0
+Georgia,Louisville,0
+Georgia,Milwaukee,0
+Georgia,LasVegas,0
+Georgia,Plano,0
+Georgia,Tampa,0
+Georgia,Providence,0
+Georgia,Detroit,0
+Georgia,GardenGrove,0
+Georgia,ColoradoSprings,0
+Georgia,Durham,0
+Georgia,DesMoines,0
+Georgia,Worcester,0
+Georgia,Honolulu,0
+Georgia,Arlington,0
+Georgia,OklahomaCity,0
+Georgia,Knoxville,0
+Georgia,Fresno,0
+Georgia,Greensboro,0
+Georgia,Dallas,0
+Georgia,Austin,0
+Georgia,Albuquerque,0
+Georgia,Nashville,0
+Georgia,Richmond,0
+Georgia,SantaRosa,0
+Georgia,Boston,0
+Georgia,Jerseycity,0
+Georgia,Miami,0
+Georgia,Phoenix,0
+Kentucky,NewYork,0
+Kentucky,LosAngeles,0
+Kentucky,Denver,0
+Kentucky,SanJose,0
+Kentucky,Portland,0
+Kentucky,Houston,0
+Kentucky,SanDiego,0
+Kentucky,Minneapolis,0
+Kentucky,WashingtonDC,0
+Kentucky,SanFrancisco,0
+Kentucky,Seattle,0
+Kentucky,Columbus,0
+Kentucky,Baltimore,0
+Kentucky,NewOrleans,0
+Kentucky,Stockton,0
+Kentucky,Indianapolis,0
+Kentucky,Madison,0
+Kentucky,Sacramento,0
+Kentucky,StLouis,0
+Kentucky,RanchoCucamonga,0
+Kentucky,Anaheim,0
+Kentucky,Buffalo,0
+Kentucky,GrandRapids,0
+Kentucky,Orlando,0
+Kentucky,Rochester,0
+Kentucky,SiouxFalls,0
+Kentucky,Ontario,0
+Kentucky,Irvine,0
+Kentucky,AuroraCO,0
+Kentucky,HuntingtonBeach,0
+Kentucky,OverlandPark,0
+Kentucky,Pittsburgh,0
+Kentucky,Atlanta,0
+Kentucky,Oakland,0
+Kentucky,CapeCoral,0
+Kentucky,Louisville,32711
+Kentucky,Milwaukee,0
+Kentucky,LasVegas,0
+Kentucky,Plano,0
+Kentucky,Tampa,0
+Kentucky,Providence,0
+Kentucky,Detroit,0
+Kentucky,GardenGrove,0
+Kentucky,ColoradoSprings,0
+Kentucky,Durham,0
+Kentucky,DesMoines,0
+Kentucky,Worcester,0
+Kentucky,Honolulu,0
+Kentucky,Arlington,0
+Kentucky,OklahomaCity,0
+Kentucky,Knoxville,0
+Kentucky,Fresno,0
+Kentucky,Greensboro,0
+Kentucky,Dallas,0
+Kentucky,Austin,0
+Kentucky,Albuquerque,0
+Kentucky,Nashville,0
+Kentucky,Richmond,0
+Kentucky,SantaRosa,0
+Kentucky,Boston,0
+Kentucky,Jerseycity,0
+Kentucky,Miami,0
+Kentucky,Phoenix,0
+Nevada,NewYork,0
+Nevada,LosAngeles,0
+Nevada,Denver,0
+Nevada,SanJose,0
+Nevada,Portland,0
+Nevada,Houston,0
+Nevada,SanDiego,0
+Nevada,Minneapolis,0
+Nevada,WashingtonDC,0
+Nevada,SanFrancisco,0
+Nevada,Seattle,0
+Nevada,Columbus,0
+Nevada,Baltimore,0
+Nevada,NewOrleans,0
+Nevada,Stockton,0
+Nevada,Indianapolis,0
+Nevada,Madison,0
+Nevada,Sacramento,0
+Nevada,StLouis,0
+Nevada,RanchoCucamonga,0
+Nevada,Anaheim,0
+Nevada,Buffalo,0
+Nevada,GrandRapids,0
+Nevada,Orlando,0
+Nevada,Rochester,0
+Nevada,SiouxFalls,0
+Nevada,Ontario,0
+Nevada,Irvine,0
+Nevada,AuroraCO,0
+Nevada,HuntingtonBeach,0
+Nevada,OverlandPark,0
+Nevada,Pittsburgh,0
+Nevada,Atlanta,0
+Nevada,Oakland,0
+Nevada,CapeCoral,0
+Nevada,Louisville,0
+Nevada,Milwaukee,0
+Nevada,LasVegas,32006
+Nevada,Plano,0
+Nevada,Tampa,0
+Nevada,Providence,0
+Nevada,Detroit,0
+Nevada,GardenGrove,0
+Nevada,ColoradoSprings,0
+Nevada,Durham,0
+Nevada,DesMoines,0
+Nevada,Worcester,0
+Nevada,Honolulu,0
+Nevada,Arlington,0
+Nevada,OklahomaCity,0
+Nevada,Knoxville,0
+Nevada,Fresno,0
+Nevada,Greensboro,0
+Nevada,Dallas,0
+Nevada,Austin,0
+Nevada,Albuquerque,0
+Nevada,Nashville,0
+Nevada,Richmond,0
+Nevada,SantaRosa,0
+Nevada,Boston,0
+Nevada,Jerseycity,0
+Nevada,Miami,0
+Nevada,Phoenix,0
+Rhode Island,NewYork,0
+Rhode Island,LosAngeles,0
+Rhode Island,Denver,0
+Rhode Island,SanJose,0
+Rhode Island,Portland,0
+Rhode Island,Houston,0
+Rhode Island,SanDiego,0
+Rhode Island,Minneapolis,0
+Rhode Island,WashingtonDC,0
+Rhode Island,SanFrancisco,0
+Rhode Island,Seattle,0
+Rhode Island,Columbus,0
+Rhode Island,Baltimore,0
+Rhode Island,NewOrleans,0
+Rhode Island,Stockton,0
+Rhode Island,Indianapolis,0
+Rhode Island,Madison,0
+Rhode Island,Sacramento,0
+Rhode Island,StLouis,0
+Rhode Island,RanchoCucamonga,0
+Rhode Island,Anaheim,0
+Rhode Island,Buffalo,0
+Rhode Island,GrandRapids,0
+Rhode Island,Orlando,0
+Rhode Island,Rochester,0
+Rhode Island,SiouxFalls,0
+Rhode Island,Ontario,0
+Rhode Island,Irvine,0
+Rhode Island,AuroraCO,0
+Rhode Island,HuntingtonBeach,0
+Rhode Island,OverlandPark,0
+Rhode Island,Pittsburgh,0
+Rhode Island,Atlanta,0
+Rhode Island,Oakland,0
+Rhode Island,CapeCoral,0
+Rhode Island,Louisville,0
+Rhode Island,Milwaukee,0
+Rhode Island,LasVegas,0
+Rhode Island,Plano,0
+Rhode Island,Tampa,0
+Rhode Island,Providence,24082
+Rhode Island,Detroit,0
+Rhode Island,GardenGrove,0
+Rhode Island,ColoradoSprings,0
+Rhode Island,Durham,0
+Rhode Island,DesMoines,0
+Rhode Island,Worcester,0
+Rhode Island,Honolulu,0
+Rhode Island,Arlington,0
+Rhode Island,OklahomaCity,0
+Rhode Island,Knoxville,0
+Rhode Island,Fresno,0
+Rhode Island,Greensboro,0
+Rhode Island,Dallas,0
+Rhode Island,Austin,0
+Rhode Island,Albuquerque,0
+Rhode Island,Nashville,0
+Rhode Island,Richmond,0
+Rhode Island,SantaRosa,0
+Rhode Island,Boston,0
+Rhode Island,Jerseycity,0
+Rhode Island,Miami,0
+Rhode Island,Phoenix,0
+North Carolina,NewYork,0
+North Carolina,LosAngeles,0
+North Carolina,Denver,0
+North Carolina,SanJose,0
+North Carolina,Portland,0
+North Carolina,Houston,0
+North Carolina,SanDiego,0
+North Carolina,Minneapolis,0
+North Carolina,WashingtonDC,0
+North Carolina,SanFrancisco,0
+North Carolina,Seattle,0
+North Carolina,Columbus,0
+North Carolina,Baltimore,0
+North Carolina,NewOrleans,0
+North Carolina,Stockton,0
+North Carolina,Indianapolis,0
+North Carolina,Madison,0
+North Carolina,Sacramento,0
+North Carolina,StLouis,0
+North Carolina,RanchoCucamonga,0
+North Carolina,Anaheim,0
+North Carolina,Buffalo,0
+North Carolina,GrandRapids,0
+North Carolina,Orlando,0
+North Carolina,Rochester,0
+North Carolina,SiouxFalls,0
+North Carolina,Ontario,0
+North Carolina,Irvine,0
+North Carolina,AuroraCO,0
+North Carolina,HuntingtonBeach,0
+North Carolina,OverlandPark,0
+North Carolina,Pittsburgh,0
+North Carolina,Atlanta,0
+North Carolina,Oakland,0
+North Carolina,CapeCoral,0
+North Carolina,Louisville,0
+North Carolina,Milwaukee,0
+North Carolina,LasVegas,0
+North Carolina,Plano,0
+North Carolina,Tampa,0
+North Carolina,Providence,0
+North Carolina,Detroit,0
+North Carolina,GardenGrove,0
+North Carolina,ColoradoSprings,0
+North Carolina,Durham,16014
+North Carolina,DesMoines,0
+North Carolina,Worcester,0
+North Carolina,Honolulu,0
+North Carolina,Arlington,0
+North Carolina,OklahomaCity,0
+North Carolina,Knoxville,0
+North Carolina,Fresno,0
+North Carolina,Greensboro,6573
+North Carolina,Dallas,0
+North Carolina,Austin,0
+North Carolina,Albuquerque,0
+North Carolina,Nashville,0
+North Carolina,Richmond,0
+North Carolina,SantaRosa,0
+North Carolina,Boston,0
+North Carolina,Jerseycity,0
+North Carolina,Miami,0
+North Carolina,Phoenix,0
+Massachusetts,NewYork,0
+Massachusetts,LosAngeles,0
+Massachusetts,Denver,0
+Massachusetts,SanJose,0
+Massachusetts,Portland,0
+Massachusetts,Houston,0
+Massachusetts,SanDiego,0
+Massachusetts,Minneapolis,0
+Massachusetts,WashingtonDC,0
+Massachusetts,SanFrancisco,0
+Massachusetts,Seattle,0
+Massachusetts,Columbus,0
+Massachusetts,Baltimore,0
+Massachusetts,NewOrleans,0
+Massachusetts,Stockton,0
+Massachusetts,Indianapolis,0
+Massachusetts,Madison,0
+Massachusetts,Sacramento,0
+Massachusetts,StLouis,0
+Massachusetts,RanchoCucamonga,0
+Massachusetts,Anaheim,0
+Massachusetts,Buffalo,0
+Massachusetts,GrandRapids,0
+Massachusetts,Orlando,0
+Massachusetts,Rochester,0
+Massachusetts,SiouxFalls,0
+Massachusetts,Ontario,0
+Massachusetts,Irvine,0
+Massachusetts,AuroraCO,0
+Massachusetts,HuntingtonBeach,0
+Massachusetts,OverlandPark,0
+Massachusetts,Pittsburgh,0
+Massachusetts,Atlanta,0
+Massachusetts,Oakland,0
+Massachusetts,CapeCoral,0
+Massachusetts,Louisville,0
+Massachusetts,Milwaukee,0
+Massachusetts,LasVegas,0
+Massachusetts,Plano,0
+Massachusetts,Tampa,0
+Massachusetts,Providence,0
+Massachusetts,Detroit,0
+Massachusetts,GardenGrove,0
+Massachusetts,ColoradoSprings,0
+Massachusetts,Durham,0
+Massachusetts,DesMoines,0
+Massachusetts,Worcester,15477
+Massachusetts,Honolulu,0
+Massachusetts,Arlington,0
+Massachusetts,OklahomaCity,0
+Massachusetts,Knoxville,0
+Massachusetts,Fresno,0
+Massachusetts,Greensboro,0
+Massachusetts,Dallas,0
+Massachusetts,Austin,0
+Massachusetts,Albuquerque,0
+Massachusetts,Nashville,0
+Massachusetts,Richmond,0
+Massachusetts,SantaRosa,0
+Massachusetts,Boston,1259
+Massachusetts,Jerseycity,0
+Massachusetts,Miami,0
+Massachusetts,Phoenix,0
+Iowa,NewYork,0
+Iowa,LosAngeles,0
+Iowa,Denver,0
+Iowa,SanJose,0
+Iowa,Portland,0
+Iowa,Houston,0
+Iowa,SanDiego,0
+Iowa,Minneapolis,0
+Iowa,WashingtonDC,0
+Iowa,SanFrancisco,0
+Iowa,Seattle,0
+Iowa,Columbus,0
+Iowa,Baltimore,0
+Iowa,NewOrleans,0
+Iowa,Stockton,0
+Iowa,Indianapolis,0
+Iowa,Madison,0
+Iowa,Sacramento,0
+Iowa,StLouis,0
+Iowa,RanchoCucamonga,0
+Iowa,Anaheim,0
+Iowa,Buffalo,0
+Iowa,GrandRapids,0
+Iowa,Orlando,0
+Iowa,Rochester,0
+Iowa,SiouxFalls,0
+Iowa,Ontario,0
+Iowa,Irvine,0
+Iowa,AuroraCO,0
+Iowa,HuntingtonBeach,0
+Iowa,OverlandPark,0
+Iowa,Pittsburgh,0
+Iowa,Atlanta,0
+Iowa,Oakland,0
+Iowa,CapeCoral,0
+Iowa,Louisville,0
+Iowa,Milwaukee,0
+Iowa,LasVegas,0
+Iowa,Plano,0
+Iowa,Tampa,0
+Iowa,Providence,0
+Iowa,Detroit,0
+Iowa,GardenGrove,0
+Iowa,ColoradoSprings,0
+Iowa,Durham,0
+Iowa,DesMoines,15805
+Iowa,Worcester,0
+Iowa,Honolulu,0
+Iowa,Arlington,0
+Iowa,OklahomaCity,0
+Iowa,Knoxville,0
+Iowa,Fresno,0
+Iowa,Greensboro,0
+Iowa,Dallas,0
+Iowa,Austin,0
+Iowa,Albuquerque,0
+Iowa,Nashville,0
+Iowa,Richmond,0
+Iowa,SantaRosa,0
+Iowa,Boston,0
+Iowa,Jerseycity,0
+Iowa,Miami,0
+Iowa,Phoenix,0
+Hawaii,NewYork,0
+Hawaii,LosAngeles,0
+Hawaii,Denver,0
+Hawaii,SanJose,0
+Hawaii,Portland,0
+Hawaii,Houston,0
+Hawaii,SanDiego,0
+Hawaii,Minneapolis,0
+Hawaii,WashingtonDC,0
+Hawaii,SanFrancisco,0
+Hawaii,Seattle,0
+Hawaii,Columbus,0
+Hawaii,Baltimore,0
+Hawaii,NewOrleans,0
+Hawaii,Stockton,0
+Hawaii,Indianapolis,0
+Hawaii,Madison,0
+Hawaii,Sacramento,0
+Hawaii,StLouis,0
+Hawaii,RanchoCucamonga,0
+Hawaii,Anaheim,0
+Hawaii,Buffalo,0
+Hawaii,GrandRapids,0
+Hawaii,Orlando,0
+Hawaii,Rochester,0
+Hawaii,SiouxFalls,0
+Hawaii,Ontario,0
+Hawaii,Irvine,0
+Hawaii,AuroraCO,0
+Hawaii,HuntingtonBeach,0
+Hawaii,OverlandPark,0
+Hawaii,Pittsburgh,0
+Hawaii,Atlanta,0
+Hawaii,Oakland,0
+Hawaii,CapeCoral,0
+Hawaii,Louisville,0
+Hawaii,Milwaukee,0
+Hawaii,LasVegas,0
+Hawaii,Plano,0
+Hawaii,Tampa,0
+Hawaii,Providence,0
+Hawaii,Detroit,0
+Hawaii,GardenGrove,0
+Hawaii,ColoradoSprings,0
+Hawaii,Durham,0
+Hawaii,DesMoines,0
+Hawaii,Worcester,0
+Hawaii,Honolulu,15170
+Hawaii,Arlington,0
+Hawaii,OklahomaCity,0
+Hawaii,Knoxville,0
+Hawaii,Fresno,0
+Hawaii,Greensboro,0
+Hawaii,Dallas,0
+Hawaii,Austin,0
+Hawaii,Albuquerque,0
+Hawaii,Nashville,0
+Hawaii,Richmond,0
+Hawaii,SantaRosa,0
+Hawaii,Boston,0
+Hawaii,Jerseycity,0
+Hawaii,Miami,0
+Hawaii,Phoenix,0
+Tennessee,NewYork,0
+Tennessee,LosAngeles,0
+Tennessee,Denver,0
+Tennessee,SanJose,0
+Tennessee,Portland,0
+Tennessee,Houston,0
+Tennessee,SanDiego,0
+Tennessee,Minneapolis,0
+Tennessee,WashingtonDC,0
+Tennessee,SanFrancisco,0
+Tennessee,Seattle,0
+Tennessee,Columbus,0
+Tennessee,Baltimore,0
+Tennessee,NewOrleans,0
+Tennessee,Stockton,0
+Tennessee,Indianapolis,0
+Tennessee,Madison,0
+Tennessee,Sacramento,0
+Tennessee,StLouis,0
+Tennessee,RanchoCucamonga,0
+Tennessee,Anaheim,0
+Tennessee,Buffalo,0
+Tennessee,GrandRapids,0
+Tennessee,Orlando,0
+Tennessee,Rochester,0
+Tennessee,SiouxFalls,0
+Tennessee,Ontario,0
+Tennessee,Irvine,0
+Tennessee,AuroraCO,0
+Tennessee,HuntingtonBeach,0
+Tennessee,OverlandPark,0
+Tennessee,Pittsburgh,0
+Tennessee,Atlanta,0
+Tennessee,Oakland,0
+Tennessee,CapeCoral,0
+Tennessee,Louisville,0
+Tennessee,Milwaukee,0
+Tennessee,LasVegas,0
+Tennessee,Plano,0
+Tennessee,Tampa,0
+Tennessee,Providence,0
+Tennessee,Detroit,0
+Tennessee,GardenGrove,0
+Tennessee,ColoradoSprings,0
+Tennessee,Durham,0
+Tennessee,DesMoines,0
+Tennessee,Worcester,0
+Tennessee,Honolulu,0
+Tennessee,Arlington,0
+Tennessee,OklahomaCity,0
+Tennessee,Knoxville,8372
+Tennessee,Fresno,0
+Tennessee,Greensboro,0
+Tennessee,Dallas,0
+Tennessee,Austin,0
+Tennessee,Albuquerque,0
+Tennessee,Nashville,2039
+Tennessee,Richmond,0
+Tennessee,SantaRosa,0
+Tennessee,Boston,0
+Tennessee,Jerseycity,0
+Tennessee,Miami,0
+Tennessee,Phoenix,0
+Oklahoma,NewYork,0
+Oklahoma,LosAngeles,0
+Oklahoma,Denver,0
+Oklahoma,SanJose,0
+Oklahoma,Portland,0
+Oklahoma,Houston,0
+Oklahoma,SanDiego,0
+Oklahoma,Minneapolis,0
+Oklahoma,WashingtonDC,0
+Oklahoma,SanFrancisco,0
+Oklahoma,Seattle,0
+Oklahoma,Columbus,0
+Oklahoma,Baltimore,0
+Oklahoma,NewOrleans,0
+Oklahoma,Stockton,0
+Oklahoma,Indianapolis,0
+Oklahoma,Madison,0
+Oklahoma,Sacramento,0
+Oklahoma,StLouis,0
+Oklahoma,RanchoCucamonga,0
+Oklahoma,Anaheim,0
+Oklahoma,Buffalo,0
+Oklahoma,GrandRapids,0
+Oklahoma,Orlando,0
+Oklahoma,Rochester,0
+Oklahoma,SiouxFalls,0
+Oklahoma,Ontario,0
+Oklahoma,Irvine,0
+Oklahoma,AuroraCO,0
+Oklahoma,HuntingtonBeach,0
+Oklahoma,OverlandPark,0
+Oklahoma,Pittsburgh,0
+Oklahoma,Atlanta,0
+Oklahoma,Oakland,0
+Oklahoma,CapeCoral,0
+Oklahoma,Louisville,0
+Oklahoma,Milwaukee,0
+Oklahoma,LasVegas,0
+Oklahoma,Plano,0
+Oklahoma,Tampa,0
+Oklahoma,Providence,0
+Oklahoma,Detroit,0
+Oklahoma,GardenGrove,0
+Oklahoma,ColoradoSprings,0
+Oklahoma,Durham,0
+Oklahoma,DesMoines,0
+Oklahoma,Worcester,0
+Oklahoma,Honolulu,0
+Oklahoma,Arlington,0
+Oklahoma,OklahomaCity,9729
+Oklahoma,Knoxville,0
+Oklahoma,Fresno,0
+Oklahoma,Greensboro,0
+Oklahoma,Dallas,0
+Oklahoma,Austin,0
+Oklahoma,Albuquerque,0
+Oklahoma,Nashville,0
+Oklahoma,Richmond,0
+Oklahoma,SantaRosa,0
+Oklahoma,Boston,0
+Oklahoma,Jerseycity,0
+Oklahoma,Miami,0
+Oklahoma,Phoenix,0
+New Mexico,NewYork,0
+New Mexico,LosAngeles,0
+New Mexico,Denver,0
+New Mexico,SanJose,0
+New Mexico,Portland,0
+New Mexico,Houston,0
+New Mexico,SanDiego,0
+New Mexico,Minneapolis,0
+New Mexico,WashingtonDC,0
+New Mexico,SanFrancisco,0
+New Mexico,Seattle,0
+New Mexico,Columbus,0
+New Mexico,Baltimore,0
+New Mexico,NewOrleans,0
+New Mexico,Stockton,0
+New Mexico,Indianapolis,0
+New Mexico,Madison,0
+New Mexico,Sacramento,0
+New Mexico,StLouis,0
+New Mexico,RanchoCucamonga,0
+New Mexico,Anaheim,0
+New Mexico,Buffalo,0
+New Mexico,GrandRapids,0
+New Mexico,Orlando,0
+New Mexico,Rochester,0
+New Mexico,SiouxFalls,0
+New Mexico,Ontario,0
+New Mexico,Irvine,0
+New Mexico,AuroraCO,0
+New Mexico,HuntingtonBeach,0
+New Mexico,OverlandPark,0
+New Mexico,Pittsburgh,0
+New Mexico,Atlanta,0
+New Mexico,Oakland,0
+New Mexico,CapeCoral,0
+New Mexico,Louisville,0
+New Mexico,Milwaukee,0
+New Mexico,LasVegas,0
+New Mexico,Plano,0
+New Mexico,Tampa,0
+New Mexico,Providence,0
+New Mexico,Detroit,0
+New Mexico,GardenGrove,0
+New Mexico,ColoradoSprings,0
+New Mexico,Durham,0
+New Mexico,DesMoines,0
+New Mexico,Worcester,0
+New Mexico,Honolulu,0
+New Mexico,Arlington,0
+New Mexico,OklahomaCity,0
+New Mexico,Knoxville,0
+New Mexico,Fresno,0
+New Mexico,Greensboro,0
+New Mexico,Dallas,0
+New Mexico,Austin,0
+New Mexico,Albuquerque,2502
+New Mexico,Nashville,0
+New Mexico,Richmond,0
+New Mexico,SantaRosa,0
+New Mexico,Boston,0
+New Mexico,Jerseycity,0
+New Mexico,Miami,0
+New Mexico,Phoenix,0
+Virginia,NewYork,0
+Virginia,LosAngeles,0
+Virginia,Denver,0
+Virginia,SanJose,0
+Virginia,Portland,0
+Virginia,Houston,0
+Virginia,SanDiego,0
+Virginia,Minneapolis,0
+Virginia,WashingtonDC,0
+Virginia,SanFrancisco,0
+Virginia,Seattle,0
+Virginia,Columbus,0
+Virginia,Baltimore,0
+Virginia,NewOrleans,0
+Virginia,Stockton,0
+Virginia,Indianapolis,0
+Virginia,Madison,0
+Virginia,Sacramento,0
+Virginia,StLouis,0
+Virginia,RanchoCucamonga,0
+Virginia,Anaheim,0
+Virginia,Buffalo,0
+Virginia,GrandRapids,0
+Virginia,Orlando,0
+Virginia,Rochester,0
+Virginia,SiouxFalls,0
+Virginia,Ontario,0
+Virginia,Irvine,0
+Virginia,AuroraCO,0
+Virginia,HuntingtonBeach,0
+Virginia,OverlandPark,0
+Virginia,Pittsburgh,0
+Virginia,Atlanta,0
+Virginia,Oakland,0
+Virginia,CapeCoral,0
+Virginia,Louisville,0
+Virginia,Milwaukee,0
+Virginia,LasVegas,0
+Virginia,Plano,0
+Virginia,Tampa,0
+Virginia,Providence,0
+Virginia,Detroit,0
+Virginia,GardenGrove,0
+Virginia,ColoradoSprings,0
+Virginia,Durham,0
+Virginia,DesMoines,0
+Virginia,Worcester,0
+Virginia,Honolulu,0
+Virginia,Arlington,0
+Virginia,OklahomaCity,0
+Virginia,Knoxville,0
+Virginia,Fresno,0
+Virginia,Greensboro,0
+Virginia,Dallas,0
+Virginia,Austin,0
+Virginia,Albuquerque,0
+Virginia,Nashville,0
+Virginia,Richmond,1816
+Virginia,SantaRosa,0
+Virginia,Boston,0
+Virginia,Jerseycity,0
+Virginia,Miami,0
+Virginia,Phoenix,0
+New Jersey,NewYork,0
+New Jersey,LosAngeles,0
+New Jersey,Denver,0
+New Jersey,SanJose,0
+New Jersey,Portland,0
+New Jersey,Houston,0
+New Jersey,SanDiego,0
+New Jersey,Minneapolis,0
+New Jersey,WashingtonDC,0
+New Jersey,SanFrancisco,0
+New Jersey,Seattle,0
+New Jersey,Columbus,0
+New Jersey,Baltimore,0
+New Jersey,NewOrleans,0
+New Jersey,Stockton,0
+New Jersey,Indianapolis,0
+New Jersey,Madison,0
+New Jersey,Sacramento,0
+New Jersey,StLouis,0
+New Jersey,RanchoCucamonga,0
+New Jersey,Anaheim,0
+New Jersey,Buffalo,0
+New Jersey,GrandRapids,0
+New Jersey,Orlando,0
+New Jersey,Rochester,0
+New Jersey,SiouxFalls,0
+New Jersey,Ontario,0
+New Jersey,Irvine,0
+New Jersey,AuroraCO,0
+New Jersey,HuntingtonBeach,0
+New Jersey,OverlandPark,0
+New Jersey,Pittsburgh,0
+New Jersey,Atlanta,0
+New Jersey,Oakland,0
+New Jersey,CapeCoral,0
+New Jersey,Louisville,0
+New Jersey,Milwaukee,0
+New Jersey,LasVegas,0
+New Jersey,Plano,0
+New Jersey,Tampa,0
+New Jersey,Providence,0
+New Jersey,Detroit,0
+New Jersey,GardenGrove,0
+New Jersey,ColoradoSprings,0
+New Jersey,Durham,0
+New Jersey,DesMoines,0
+New Jersey,Worcester,0
+New Jersey,Honolulu,0
+New Jersey,Arlington,0
+New Jersey,OklahomaCity,0
+New Jersey,Knoxville,0
+New Jersey,Fresno,0
+New Jersey,Greensboro,0
+New Jersey,Dallas,0
+New Jersey,Austin,0
+New Jersey,Albuquerque,0
+New Jersey,Nashville,0
+New Jersey,Richmond,0
+New Jersey,SantaRosa,0
+New Jersey,Boston,0
+New Jersey,Jerseycity,774
+New Jersey,Miami,0
+New Jersey,Phoenix,0
+Arizona,NewYork,0
+Arizona,LosAngeles,0
+Arizona,Denver,0
+Arizona,SanJose,0
+Arizona,Portland,0
+Arizona,Houston,0
+Arizona,SanDiego,0
+Arizona,Minneapolis,0
+Arizona,WashingtonDC,0
+Arizona,SanFrancisco,0
+Arizona,Seattle,0
+Arizona,Columbus,0
+Arizona,Baltimore,0
+Arizona,NewOrleans,0
+Arizona,Stockton,0
+Arizona,Indianapolis,0
+Arizona,Madison,0
+Arizona,Sacramento,0
+Arizona,StLouis,0
+Arizona,RanchoCucamonga,0
+Arizona,Anaheim,0
+Arizona,Buffalo,0
+Arizona,GrandRapids,0
+Arizona,Orlando,0
+Arizona,Rochester,0
+Arizona,SiouxFalls,0
+Arizona,Ontario,0
+Arizona,Irvine,0
+Arizona,AuroraCO,0
+Arizona,HuntingtonBeach,0
+Arizona,OverlandPark,0
+Arizona,Pittsburgh,0
+Arizona,Atlanta,0
+Arizona,Oakland,0
+Arizona,CapeCoral,0
+Arizona,Louisville,0
+Arizona,Milwaukee,0
+Arizona,LasVegas,0
+Arizona,Plano,0
+Arizona,Tampa,0
+Arizona,Providence,0
+Arizona,Detroit,0
+Arizona,GardenGrove,0
+Arizona,ColoradoSprings,0
+Arizona,Durham,0
+Arizona,DesMoines,0
+Arizona,Worcester,0
+Arizona,Honolulu,0
+Arizona,Arlington,0
+Arizona,OklahomaCity,0
+Arizona,Knoxville,0
+Arizona,Fresno,0
+Arizona,Greensboro,0
+Arizona,Dallas,0
+Arizona,Austin,0
+Arizona,Albuquerque,0
+Arizona,Nashville,0
+Arizona,Richmond,0
+Arizona,SantaRosa,0
+Arizona,Boston,0
+Arizona,Jerseycity,0
+Arizona,Miami,0
+Arizona,Phoenix,214
+NewYork,Acer,88739
+NewYork,Quercus,82867
+NewYork,Fraxinus,19981
+NewYork,Platanus,87014
+NewYork,Gleditsia,64264
+NewYork,Lagerstroemia,442
+NewYork,Prunus,41653
+NewYork,Pyrus,58931
+NewYork,Tilia,51267
+NewYork,Ulmus,14915
+NewYork,Pinus,702
+NewYork,Liquidambar,10657
+NewYork,Magnolia,1000
+NewYork,Washingtonia,0
+NewYork,Celtis,2382
+NewYork,Malus,3527
+NewYork,Zelkova,29258
+NewYork,Eucalyptus,0
+NewYork,Ginkgo,21024
+NewYork,Ficus,0
+NewYork,Pistacia,0
+NewYork,Syagrus,0
+NewYork,Cercis,4020
+NewYork,Jacaranda,0
+NewYork,Cinnamomum,0
+NewYork,Cupressus,0
+NewYork,Picea,683
+NewYork,Cupaniopsis anacardioides,0
+NewYork,Crataegus,3329
+NewYork,Betula,1400
+LosAngeles,Acer,1993
+LosAngeles,Quercus,14597
+LosAngeles,Fraxinus,18647
+LosAngeles,Platanus,22149
+LosAngeles,Gleditsia,8778
+LosAngeles,Lagerstroemia,35829
+LosAngeles,Prunus,11777
+LosAngeles,Pyrus,17285
+LosAngeles,Tilia,2
+LosAngeles,Ulmus,20563
+LosAngeles,Pinus,23667
+LosAngeles,Liquidambar,30302
+LosAngeles,Magnolia,31360
+LosAngeles,Washingtonia,40738
+LosAngeles,Celtis,337
+LosAngeles,Malus,378
+LosAngeles,Zelkova,940
+LosAngeles,Eucalyptus,19486
+LosAngeles,Ginkgo,1077
+LosAngeles,Ficus,37642
+LosAngeles,Pistacia,1016
+LosAngeles,Syagrus,0
+LosAngeles,Cercis,252
+LosAngeles,Jacaranda,20365
+LosAngeles,Cinnamomum,15861
+LosAngeles,Cupressus,14721
+LosAngeles,Picea,89
+LosAngeles,Cupaniopsis anacardioides,11715
+LosAngeles,Crataegus,11
+LosAngeles,Betula,3679
+Denver,Acer,41254
+Denver,Quercus,22505
+Denver,Fraxinus,37800
+Denver,Platanus,2049
+Denver,Gleditsia,24178
+Denver,Lagerstroemia,0
+Denver,Prunus,6833
+Denver,Pyrus,7410
+Denver,Tilia,18650
+Denver,Ulmus,19142
+Denver,Pinus,20316
+Denver,Liquidambar,84
+Denver,Magnolia,190
+Denver,Washingtonia,0
+Denver,Celtis,9477
+Denver,Malus,12264
+Denver,Zelkova,525
+Denver,Eucalyptus,0
+Denver,Ginkgo,765
+Denver,Ficus,0
+Denver,Pistacia,32
+Denver,Syagrus,0
+Denver,Cercis,986
+Denver,Jacaranda,0
+Denver,Cinnamomum,0
+Denver,Cupressus,71
+Denver,Picea,9063
+Denver,Cupaniopsis anacardioides,0
+Denver,Crataegus,4683
+Denver,Betula,286
+SanJose,Acer,8908
+SanJose,Quercus,18261
+SanJose,Fraxinus,12911
+SanJose,Platanus,27218
+SanJose,Gleditsia,4037
+SanJose,Lagerstroemia,21692
+SanJose,Prunus,12973
+SanJose,Pyrus,11557
+SanJose,Tilia,537
+SanJose,Ulmus,3898
+SanJose,Pinus,3611
+SanJose,Liquidambar,14677
+SanJose,Magnolia,7337
+SanJose,Washingtonia,6885
+SanJose,Celtis,3125
+SanJose,Malus,1116
+SanJose,Zelkova,7669
+SanJose,Eucalyptus,3309
+SanJose,Ginkgo,5207
+SanJose,Ficus,306
+SanJose,Pistacia,24323
+SanJose,Syagrus,3788
+SanJose,Cercis,1009
+SanJose,Jacaranda,1382
+SanJose,Cinnamomum,4882
+SanJose,Cupressus,7347
+SanJose,Picea,119
+SanJose,Cupaniopsis anacardioides,185
+SanJose,Crataegus,315
+SanJose,Betula,2661
+Portland,Acer,57813
+Portland,Quercus,7281
+Portland,Fraxinus,9293
+Portland,Platanus,1300
+Portland,Gleditsia,1412
+Portland,Lagerstroemia,852
+Portland,Prunus,25816
+Portland,Pyrus,11700
+Portland,Tilia,5490
+Portland,Ulmus,3356
+Portland,Pinus,3471
+Portland,Liquidambar,3703
+Portland,Magnolia,3507
+Portland,Washingtonia,0
+Portland,Celtis,334
+Portland,Malus,8694
+Portland,Zelkova,1911
+Portland,Eucalyptus,92
+Portland,Ginkgo,2023
+Portland,Ficus,465
+Portland,Pistacia,258
+Portland,Syagrus,0
+Portland,Cercis,1457
+Portland,Jacaranda,0
+Portland,Cinnamomum,3
+Portland,Cupressus,345
+Portland,Picea,1259
+Portland,Cupaniopsis anacardioides,0
+Portland,Crataegus,5416
+Portland,Betula,6338
+Houston,Acer,1733
+Houston,Quercus,66689
+Houston,Fraxinus,6030
+Houston,Platanus,2864
+Houston,Gleditsia,69
+Houston,Lagerstroemia,44356
+Houston,Prunus,2315
+Houston,Pyrus,2835
+Houston,Tilia,2
+Houston,Ulmus,9063
+Houston,Pinus,10038
+Houston,Liquidambar,1352
+Houston,Magnolia,4598
+Houston,Washingtonia,5476
+Houston,Celtis,13025
+Houston,Malus,123
+Houston,Zelkova,0
+Houston,Eucalyptus,12
+Houston,Ginkgo,19
+Houston,Ficus,117
+Houston,Pistacia,627
+Houston,Syagrus,0
+Houston,Cercis,1881
+Houston,Jacaranda,0
+Houston,Cinnamomum,921
+Houston,Cupressus,271
+Houston,Picea,0
+Houston,Cupaniopsis anacardioides,0
+Houston,Crataegus,43
+Houston,Betula,302
+SanDiego,Acer,89
+SanDiego,Quercus,1392
+SanDiego,Fraxinus,3151
+SanDiego,Platanus,9237
+SanDiego,Gleditsia,0
+SanDiego,Lagerstroemia,2207
+SanDiego,Prunus,3149
+SanDiego,Pyrus,4196
+SanDiego,Tilia,0
+SanDiego,Ulmus,1797
+SanDiego,Pinus,13564
+SanDiego,Liquidambar,10323
+SanDiego,Magnolia,3463
+SanDiego,Washingtonia,18168
+SanDiego,Celtis,0
+SanDiego,Malus,0
+SanDiego,Zelkova,0
+SanDiego,Eucalyptus,13510
+SanDiego,Ginkgo,113
+SanDiego,Ficus,5164
+SanDiego,Pistacia,115
+SanDiego,Syagrus,22624
+SanDiego,Cercis,27
+SanDiego,Jacaranda,9831
+SanDiego,Cinnamomum,2267
+SanDiego,Cupressus,5607
+SanDiego,Picea,0
+SanDiego,Cupaniopsis anacardioides,13608
+SanDiego,Crataegus,0
+SanDiego,Betula,339
+Minneapolis,Acer,47055
+Minneapolis,Quercus,8501
+Minneapolis,Fraxinus,29432
+Minneapolis,Platanus,13
+Minneapolis,Gleditsia,12676
+Minneapolis,Lagerstroemia,0
+Minneapolis,Prunus,204
+Minneapolis,Pyrus,315
+Minneapolis,Tilia,26830
+Minneapolis,Ulmus,20977
+Minneapolis,Pinus,1175
+Minneapolis,Liquidambar,0
+Minneapolis,Magnolia,12
+Minneapolis,Washingtonia,0
+Minneapolis,Celtis,12736
+Minneapolis,Malus,3215
+Minneapolis,Zelkova,0
+Minneapolis,Eucalyptus,0
+Minneapolis,Ginkgo,3592
+Minneapolis,Ficus,0
+Minneapolis,Pistacia,0
+Minneapolis,Syagrus,0
+Minneapolis,Cercis,9
+Minneapolis,Jacaranda,0
+Minneapolis,Cinnamomum,0
+Minneapolis,Cupressus,0
+Minneapolis,Picea,1946
+Minneapolis,Cupaniopsis anacardioides,0
+Minneapolis,Crataegus,41
+Minneapolis,Betula,1308
+WashingtonDC,Acer,26489
+WashingtonDC,Quercus,39917
+WashingtonDC,Fraxinus,340
+WashingtonDC,Platanus,7478
+WashingtonDC,Gleditsia,2635
+WashingtonDC,Lagerstroemia,4353
+WashingtonDC,Prunus,11104
+WashingtonDC,Pyrus,963
+WashingtonDC,Tilia,5582
+WashingtonDC,Ulmus,15656
+WashingtonDC,Pinus,7748
+WashingtonDC,Liquidambar,4185
+WashingtonDC,Magnolia,2170
+WashingtonDC,Washingtonia,0
+WashingtonDC,Celtis,2549
+WashingtonDC,Malus,1455
+WashingtonDC,Zelkova,6366
+WashingtonDC,Eucalyptus,0
+WashingtonDC,Ginkgo,4743
+WashingtonDC,Ficus,0
+WashingtonDC,Pistacia,1744
+WashingtonDC,Syagrus,0
+WashingtonDC,Cercis,5339
+WashingtonDC,Jacaranda,0
+WashingtonDC,Cinnamomum,0
+WashingtonDC,Cupressus,0
+WashingtonDC,Picea,34
+WashingtonDC,Cupaniopsis anacardioides,0
+WashingtonDC,Crataegus,126
+WashingtonDC,Betula,1209
+SanFrancisco,Acer,2101
+SanFrancisco,Quercus,1161
+SanFrancisco,Fraxinus,1447
+SanFrancisco,Platanus,12002
+SanFrancisco,Gleditsia,117
+SanFrancisco,Lagerstroemia,104
+SanFrancisco,Prunus,15128
+SanFrancisco,Pyrus,6040
+SanFrancisco,Tilia,150
+SanFrancisco,Ulmus,3453
+SanFrancisco,Pinus,3300
+SanFrancisco,Liquidambar,1684
+SanFrancisco,Magnolia,8277
+SanFrancisco,Washingtonia,1061
+SanFrancisco,Celtis,275
+SanFrancisco,Malus,289
+SanFrancisco,Zelkova,54
+SanFrancisco,Eucalyptus,3271
+SanFrancisco,Ginkgo,3349
+SanFrancisco,Ficus,9889
+SanFrancisco,Pistacia,412
+SanFrancisco,Syagrus,848
+SanFrancisco,Cercis,152
+SanFrancisco,Jacaranda,1118
+SanFrancisco,Cinnamomum,141
+SanFrancisco,Cupressus,1990
+SanFrancisco,Picea,30
+SanFrancisco,Cupaniopsis anacardioides,246
+SanFrancisco,Crataegus,1251
+SanFrancisco,Betula,263
+Seattle,Acer,35523
+Seattle,Quercus,6726
+Seattle,Fraxinus,4340
+Seattle,Platanus,1893
+Seattle,Gleditsia,1404
+Seattle,Lagerstroemia,596
+Seattle,Prunus,28356
+Seattle,Pyrus,5327
+Seattle,Tilia,4313
+Seattle,Ulmus,2408
+Seattle,Pinus,1808
+Seattle,Liquidambar,3390
+Seattle,Magnolia,2777
+Seattle,Washingtonia,0
+Seattle,Celtis,141
+Seattle,Malus,8610
+Seattle,Zelkova,1745
+Seattle,Eucalyptus,74
+Seattle,Ginkgo,1251
+Seattle,Ficus,208
+Seattle,Pistacia,78
+Seattle,Syagrus,0
+Seattle,Cercis,1416
+Seattle,Jacaranda,0
+Seattle,Cinnamomum,0
+Seattle,Cupressus,158
+Seattle,Picea,534
+Seattle,Cupaniopsis anacardioides,0
+Seattle,Crataegus,7328
+Seattle,Betula,4255
+Columbus,Acer,35911
+Columbus,Quercus,11459
+Columbus,Fraxinus,17476
+Columbus,Platanus,4388
+Columbus,Gleditsia,7090
+Columbus,Lagerstroemia,0
+Columbus,Prunus,4772
+Columbus,Pyrus,9401
+Columbus,Tilia,6754
+Columbus,Ulmus,4552
+Columbus,Pinus,2201
+Columbus,Liquidambar,1679
+Columbus,Magnolia,841
+Columbus,Washingtonia,0
+Columbus,Celtis,2048
+Columbus,Malus,7028
+Columbus,Zelkova,962
+Columbus,Eucalyptus,0
+Columbus,Ginkgo,856
+Columbus,Ficus,0
+Columbus,Pistacia,0
+Columbus,Syagrus,0
+Columbus,Cercis,1256
+Columbus,Jacaranda,0
+Columbus,Cinnamomum,0
+Columbus,Cupressus,14
+Columbus,Picea,2141
+Columbus,Cupaniopsis anacardioides,0
+Columbus,Crataegus,722
+Columbus,Betula,785
+Baltimore,Acer,26076
+Baltimore,Quercus,15716
+Baltimore,Fraxinus,3482
+Baltimore,Platanus,6787
+Baltimore,Gleditsia,3295
+Baltimore,Lagerstroemia,1590
+Baltimore,Prunus,6739
+Baltimore,Pyrus,4792
+Baltimore,Tilia,8084
+Baltimore,Ulmus,6250
+Baltimore,Pinus,1823
+Baltimore,Liquidambar,2517
+Baltimore,Magnolia,671
+Baltimore,Washingtonia,0
+Baltimore,Celtis,1040
+Baltimore,Malus,917
+Baltimore,Zelkova,6767
+Baltimore,Eucalyptus,0
+Baltimore,Ginkgo,1628
+Baltimore,Ficus,30
+Baltimore,Pistacia,55
+Baltimore,Syagrus,0
+Baltimore,Cercis,2428
+Baltimore,Jacaranda,0
+Baltimore,Cinnamomum,0
+Baltimore,Cupressus,5
+Baltimore,Picea,741
+Baltimore,Cupaniopsis anacardioides,0
+Baltimore,Crataegus,593
+Baltimore,Betula,475
+NewOrleans,Acer,1625
+NewOrleans,Quercus,25507
+NewOrleans,Fraxinus,814
+NewOrleans,Platanus,621
+NewOrleans,Gleditsia,1725
+NewOrleans,Lagerstroemia,30246
+NewOrleans,Prunus,479
+NewOrleans,Pyrus,2088
+NewOrleans,Tilia,0
+NewOrleans,Ulmus,2151
+NewOrleans,Pinus,3498
+NewOrleans,Liquidambar,254
+NewOrleans,Magnolia,6624
+NewOrleans,Washingtonia,673
+NewOrleans,Celtis,488
+NewOrleans,Malus,49
+NewOrleans,Zelkova,3
+NewOrleans,Eucalyptus,10
+NewOrleans,Ginkgo,222
+NewOrleans,Ficus,185
+NewOrleans,Pistacia,1282
+NewOrleans,Syagrus,1690
+NewOrleans,Cercis,263
+NewOrleans,Jacaranda,2
+NewOrleans,Cinnamomum,193
+NewOrleans,Cupressus,43
+NewOrleans,Picea,0
+NewOrleans,Cupaniopsis anacardioides,0
+NewOrleans,Crataegus,55
+NewOrleans,Betula,319
+Stockton,Acer,2518
+Stockton,Quercus,6177
+Stockton,Fraxinus,10587
+Stockton,Platanus,7639
+Stockton,Gleditsia,324
+Stockton,Lagerstroemia,7368
+Stockton,Prunus,2409
+Stockton,Pyrus,6334
+Stockton,Tilia,899
+Stockton,Ulmus,812
+Stockton,Pinus,1306
+Stockton,Liquidambar,4371
+Stockton,Magnolia,3936
+Stockton,Washingtonia,1059
+Stockton,Celtis,7732
+Stockton,Malus,207
+Stockton,Zelkova,3379
+Stockton,Eucalyptus,237
+Stockton,Ginkgo,786
+Stockton,Ficus,23
+Stockton,Pistacia,11397
+Stockton,Syagrus,743
+Stockton,Cercis,363
+Stockton,Jacaranda,8
+Stockton,Cinnamomum,1670
+Stockton,Cupressus,1161
+Stockton,Picea,72
+Stockton,Cupaniopsis anacardioides,1
+Stockton,Crataegus,158
+Stockton,Betula,783
+Indianapolis,Acer,15882
+Indianapolis,Quercus,5055
+Indianapolis,Fraxinus,10955
+Indianapolis,Platanus,1724
+Indianapolis,Gleditsia,1931
+Indianapolis,Lagerstroemia,0
+Indianapolis,Prunus,4016
+Indianapolis,Pyrus,2032
+Indianapolis,Tilia,1643
+Indianapolis,Ulmus,6499
+Indianapolis,Pinus,5557
+Indianapolis,Liquidambar,1478
+Indianapolis,Magnolia,316
+Indianapolis,Washingtonia,0
+Indianapolis,Celtis,5940
+Indianapolis,Malus,5803
+Indianapolis,Zelkova,51
+Indianapolis,Eucalyptus,0
+Indianapolis,Ginkgo,540
+Indianapolis,Ficus,0
+Indianapolis,Pistacia,0
+Indianapolis,Syagrus,0
+Indianapolis,Cercis,1972
+Indianapolis,Jacaranda,0
+Indianapolis,Cinnamomum,0
+Indianapolis,Cupressus,0
+Indianapolis,Picea,5483
+Indianapolis,Cupaniopsis anacardioides,0
+Indianapolis,Crataegus,1182
+Indianapolis,Betula,619
+Madison,Acer,29090
+Madison,Quercus,1797
+Madison,Fraxinus,21439
+Madison,Platanus,119
+Madison,Gleditsia,13536
+Madison,Lagerstroemia,0
+Madison,Prunus,297
+Madison,Pyrus,778
+Madison,Tilia,11799
+Madison,Ulmus,3892
+Madison,Pinus,519
+Madison,Liquidambar,1
+Madison,Magnolia,20
+Madison,Washingtonia,0
+Madison,Celtis,2667
+Madison,Malus,2608
+Madison,Zelkova,0
+Madison,Eucalyptus,0
+Madison,Ginkgo,547
+Madison,Ficus,0
+Madison,Pistacia,0
+Madison,Syagrus,0
+Madison,Cercis,76
+Madison,Jacaranda,0
+Madison,Cinnamomum,0
+Madison,Cupressus,0
+Madison,Picea,561
+Madison,Cupaniopsis anacardioides,0
+Madison,Crataegus,284
+Madison,Betula,188
+Sacramento,Acer,4086
+Sacramento,Quercus,10489
+Sacramento,Fraxinus,3143
+Sacramento,Platanus,14111
+Sacramento,Gleditsia,0
+Sacramento,Lagerstroemia,4146
+Sacramento,Prunus,2177
+Sacramento,Pyrus,4631
+Sacramento,Tilia,1021
+Sacramento,Ulmus,4047
+Sacramento,Pinus,1715
+Sacramento,Liquidambar,1949
+Sacramento,Magnolia,1341
+Sacramento,Washingtonia,2467
+Sacramento,Celtis,2167
+Sacramento,Malus,422
+Sacramento,Zelkova,3861
+Sacramento,Eucalyptus,585
+Sacramento,Ginkgo,1175
+Sacramento,Ficus,46
+Sacramento,Pistacia,4596
+Sacramento,Syagrus,0
+Sacramento,Cercis,789
+Sacramento,Jacaranda,0
+Sacramento,Cinnamomum,773
+Sacramento,Cupressus,1393
+Sacramento,Picea,77
+Sacramento,Cupaniopsis anacardioides,0
+Sacramento,Crataegus,254
+Sacramento,Betula,342
+StLouis,Acer,19603
+StLouis,Quercus,9679
+StLouis,Fraxinus,12353
+StLouis,Platanus,3922
+StLouis,Gleditsia,3013
+StLouis,Lagerstroemia,22
+StLouis,Prunus,2085
+StLouis,Pyrus,7253
+StLouis,Tilia,3980
+StLouis,Ulmus,3012
+StLouis,Pinus,297
+StLouis,Liquidambar,2140
+StLouis,Magnolia,168
+StLouis,Washingtonia,0
+StLouis,Celtis,736
+StLouis,Malus,1156
+StLouis,Zelkova,1024
+StLouis,Eucalyptus,0
+StLouis,Ginkgo,1507
+StLouis,Ficus,1
+StLouis,Pistacia,2
+StLouis,Syagrus,0
+StLouis,Cercis,2946
+StLouis,Jacaranda,0
+StLouis,Cinnamomum,0
+StLouis,Cupressus,3
+StLouis,Picea,159
+StLouis,Cupaniopsis anacardioides,0
+StLouis,Crataegus,310
+StLouis,Betula,802
+RanchoCucamonga,Acer,164
+RanchoCucamonga,Quercus,1830
+RanchoCucamonga,Fraxinus,754
+RanchoCucamonga,Platanus,5838
+RanchoCucamonga,Gleditsia,63
+RanchoCucamonga,Lagerstroemia,12921
+RanchoCucamonga,Prunus,522
+RanchoCucamonga,Pyrus,5216
+RanchoCucamonga,Tilia,37
+RanchoCucamonga,Ulmus,317
+RanchoCucamonga,Pinus,6184
+RanchoCucamonga,Liquidambar,3729
+RanchoCucamonga,Magnolia,5049
+RanchoCucamonga,Washingtonia,2887
+RanchoCucamonga,Celtis,2
+RanchoCucamonga,Malus,9
+RanchoCucamonga,Zelkova,242
+RanchoCucamonga,Eucalyptus,5611
+RanchoCucamonga,Ginkgo,833
+RanchoCucamonga,Ficus,143
+RanchoCucamonga,Pistacia,3215
+RanchoCucamonga,Syagrus,1660
+RanchoCucamonga,Cercis,1162
+RanchoCucamonga,Jacaranda,734
+RanchoCucamonga,Cinnamomum,1173
+RanchoCucamonga,Cupressus,9
+RanchoCucamonga,Picea,0
+RanchoCucamonga,Cupaniopsis anacardioides,1064
+RanchoCucamonga,Crataegus,0
+RanchoCucamonga,Betula,207
+Anaheim,Acer,212
+Anaheim,Quercus,1607
+Anaheim,Fraxinus,285
+Anaheim,Platanus,2075
+Anaheim,Gleditsia,23076
+Anaheim,Lagerstroemia,3771
+Anaheim,Prunus,206
+Anaheim,Pyrus,627
+Anaheim,Tilia,10
+Anaheim,Ulmus,905
+Anaheim,Pinus,3396
+Anaheim,Liquidambar,1493
+Anaheim,Magnolia,5334
+Anaheim,Washingtonia,4624
+Anaheim,Celtis,340
+Anaheim,Malus,2
+Anaheim,Zelkova,290
+Anaheim,Eucalyptus,2173
+Anaheim,Ginkgo,852
+Anaheim,Ficus,598
+Anaheim,Pistacia,1123
+Anaheim,Syagrus,1706
+Anaheim,Cercis,150
+Anaheim,Jacaranda,1676
+Anaheim,Cinnamomum,2567
+Anaheim,Cupressus,95
+Anaheim,Picea,0
+Anaheim,Cupaniopsis anacardioides,1318
+Anaheim,Crataegus,0
+Anaheim,Betula,28
+Buffalo,Acer,25596
+Buffalo,Quercus,3763
+Buffalo,Fraxinus,1468
+Buffalo,Platanus,2017
+Buffalo,Gleditsia,4485
+Buffalo,Lagerstroemia,0
+Buffalo,Prunus,2164
+Buffalo,Pyrus,1509
+Buffalo,Tilia,11110
+Buffalo,Ulmus,4013
+Buffalo,Pinus,1040
+Buffalo,Liquidambar,219
+Buffalo,Magnolia,80
+Buffalo,Washingtonia,0
+Buffalo,Celtis,830
+Buffalo,Malus,2806
+Buffalo,Zelkova,722
+Buffalo,Eucalyptus,0
+Buffalo,Ginkgo,680
+Buffalo,Ficus,0
+Buffalo,Pistacia,0
+Buffalo,Syagrus,0
+Buffalo,Cercis,395
+Buffalo,Jacaranda,0
+Buffalo,Cinnamomum,0
+Buffalo,Cupressus,0
+Buffalo,Picea,844
+Buffalo,Cupaniopsis anacardioides,0
+Buffalo,Crataegus,929
+Buffalo,Betula,483
+GrandRapids,Acer,33730
+GrandRapids,Quercus,4772
+GrandRapids,Fraxinus,2384
+GrandRapids,Platanus,4909
+GrandRapids,Gleditsia,5805
+GrandRapids,Lagerstroemia,0
+GrandRapids,Prunus,700
+GrandRapids,Pyrus,1699
+GrandRapids,Tilia,3808
+GrandRapids,Ulmus,1872
+GrandRapids,Pinus,999
+GrandRapids,Liquidambar,517
+GrandRapids,Magnolia,25
+GrandRapids,Washingtonia,0
+GrandRapids,Celtis,645
+GrandRapids,Malus,745
+GrandRapids,Zelkova,544
+GrandRapids,Eucalyptus,0
+GrandRapids,Ginkgo,570
+GrandRapids,Ficus,0
+GrandRapids,Pistacia,0
+GrandRapids,Syagrus,0
+GrandRapids,Cercis,273
+GrandRapids,Jacaranda,0
+GrandRapids,Cinnamomum,0
+GrandRapids,Cupressus,0
+GrandRapids,Picea,1835
+GrandRapids,Cupaniopsis anacardioides,0
+GrandRapids,Crataegus,324
+GrandRapids,Betula,305
+Orlando,Acer,1821
+Orlando,Quercus,29619
+Orlando,Fraxinus,11
+Orlando,Platanus,284
+Orlando,Gleditsia,1
+Orlando,Lagerstroemia,14988
+Orlando,Prunus,708
+Orlando,Pyrus,115
+Orlando,Tilia,0
+Orlando,Ulmus,2674
+Orlando,Pinus,1184
+Orlando,Liquidambar,374
+Orlando,Magnolia,1964
+Orlando,Washingtonia,1388
+Orlando,Celtis,8
+Orlando,Malus,2
+Orlando,Zelkova,0
+Orlando,Eucalyptus,11
+Orlando,Ginkgo,1
+Orlando,Ficus,117
+Orlando,Pistacia,0
+Orlando,Syagrus,817
+Orlando,Cercis,38
+Orlando,Jacaranda,24
+Orlando,Cinnamomum,879
+Orlando,Cupressus,58
+Orlando,Picea,0
+Orlando,Cupaniopsis anacardioides,9
+Orlando,Crataegus,0
+Orlando,Betula,8
+Rochester,Acer,18499
+Rochester,Quercus,4648
+Rochester,Fraxinus,3544
+Rochester,Platanus,3134
+Rochester,Gleditsia,6307
+Rochester,Lagerstroemia,0
+Rochester,Prunus,908
+Rochester,Pyrus,2659
+Rochester,Tilia,4786
+Rochester,Ulmus,605
+Rochester,Pinus,653
+Rochester,Liquidambar,786
+Rochester,Magnolia,251
+Rochester,Washingtonia,0
+Rochester,Celtis,897
+Rochester,Malus,552
+Rochester,Zelkova,1633
+Rochester,Eucalyptus,0
+Rochester,Ginkgo,714
+Rochester,Ficus,0
+Rochester,Pistacia,0
+Rochester,Syagrus,0
+Rochester,Cercis,68
+Rochester,Jacaranda,0
+Rochester,Cinnamomum,0
+Rochester,Cupressus,0
+Rochester,Picea,695
+Rochester,Cupaniopsis anacardioides,0
+Rochester,Crataegus,810
+Rochester,Betula,130
+SiouxFalls,Acer,18035
+SiouxFalls,Quercus,2035
+SiouxFalls,Fraxinus,22031
+SiouxFalls,Platanus,59
+SiouxFalls,Gleditsia,2332
+SiouxFalls,Lagerstroemia,0
+SiouxFalls,Prunus,289
+SiouxFalls,Pyrus,140
+SiouxFalls,Tilia,3989
+SiouxFalls,Ulmus,1728
+SiouxFalls,Pinus,1378
+SiouxFalls,Liquidambar,0
+SiouxFalls,Magnolia,19
+SiouxFalls,Washingtonia,0
+SiouxFalls,Celtis,1600
+SiouxFalls,Malus,1224
+SiouxFalls,Zelkova,0
+SiouxFalls,Eucalyptus,0
+SiouxFalls,Ginkgo,266
+SiouxFalls,Ficus,0
+SiouxFalls,Pistacia,0
+SiouxFalls,Syagrus,0
+SiouxFalls,Cercis,74
+SiouxFalls,Jacaranda,0
+SiouxFalls,Cinnamomum,0
+SiouxFalls,Cupressus,0
+SiouxFalls,Picea,2290
+SiouxFalls,Cupaniopsis anacardioides,0
+SiouxFalls,Crataegus,150
+SiouxFalls,Betula,78
+Ontario,Acer,680
+Ontario,Quercus,1003
+Ontario,Fraxinus,1159
+Ontario,Platanus,3763
+Ontario,Gleditsia,107
+Ontario,Lagerstroemia,4630
+Ontario,Prunus,1454
+Ontario,Pyrus,3469
+Ontario,Tilia,0
+Ontario,Ulmus,1207
+Ontario,Pinus,4294
+Ontario,Liquidambar,4392
+Ontario,Magnolia,1225
+Ontario,Washingtonia,2243
+Ontario,Celtis,61
+Ontario,Malus,23
+Ontario,Zelkova,340
+Ontario,Eucalyptus,1869
+Ontario,Ginkgo,248
+Ontario,Ficus,449
+Ontario,Pistacia,1343
+Ontario,Syagrus,2109
+Ontario,Cercis,345
+Ontario,Jacaranda,1149
+Ontario,Cinnamomum,3900
+Ontario,Cupressus,270
+Ontario,Picea,0
+Ontario,Cupaniopsis anacardioides,1108
+Ontario,Crataegus,0
+Ontario,Betula,27
+Irvine,Acer,8
+Irvine,Quercus,1763
+Irvine,Fraxinus,152
+Irvine,Platanus,4082
+Irvine,Gleditsia,0
+Irvine,Lagerstroemia,1390
+Irvine,Prunus,827
+Irvine,Pyrus,276
+Irvine,Tilia,0
+Irvine,Ulmus,730
+Irvine,Pinus,11592
+Irvine,Liquidambar,1773
+Irvine,Magnolia,530
+Irvine,Washingtonia,547
+Irvine,Celtis,5
+Irvine,Malus,2
+Irvine,Zelkova,0
+Irvine,Eucalyptus,14064
+Irvine,Ginkgo,122
+Irvine,Ficus,1054
+Irvine,Pistacia,0
+Irvine,Syagrus,0
+Irvine,Cercis,30
+Irvine,Jacaranda,2063
+Irvine,Cinnamomum,1333
+Irvine,Cupressus,441
+Irvine,Picea,0
+Irvine,Cupaniopsis anacardioides,1244
+Irvine,Crataegus,0
+Irvine,Betula,172
+AuroraCO,Acer,9517
+AuroraCO,Quercus,2468
+AuroraCO,Fraxinus,6363
+AuroraCO,Platanus,9
+AuroraCO,Gleditsia,10428
+AuroraCO,Lagerstroemia,0
+AuroraCO,Prunus,318
+AuroraCO,Pyrus,1537
+AuroraCO,Tilia,8098
+AuroraCO,Ulmus,2405
+AuroraCO,Pinus,3282
+AuroraCO,Liquidambar,0
+AuroraCO,Magnolia,6
+AuroraCO,Washingtonia,0
+AuroraCO,Celtis,2493
+AuroraCO,Malus,1536
+AuroraCO,Zelkova,3
+AuroraCO,Eucalyptus,0
+AuroraCO,Ginkgo,9
+AuroraCO,Ficus,0
+AuroraCO,Pistacia,0
+AuroraCO,Syagrus,0
+AuroraCO,Cercis,21
+AuroraCO,Jacaranda,0
+AuroraCO,Cinnamomum,0
+AuroraCO,Cupressus,0
+AuroraCO,Picea,1332
+AuroraCO,Cupaniopsis anacardioides,0
+AuroraCO,Crataegus,736
+AuroraCO,Betula,7
+HuntingtonBeach,Acer,76
+HuntingtonBeach,Quercus,466
+HuntingtonBeach,Fraxinus,287
+HuntingtonBeach,Platanus,1097
+HuntingtonBeach,Gleditsia,10394
+HuntingtonBeach,Lagerstroemia,3896
+HuntingtonBeach,Prunus,518
+HuntingtonBeach,Pyrus,1970
+HuntingtonBeach,Tilia,14
+HuntingtonBeach,Ulmus,104
+HuntingtonBeach,Pinus,2748
+HuntingtonBeach,Liquidambar,170
+HuntingtonBeach,Magnolia,378
+HuntingtonBeach,Washingtonia,4067
+HuntingtonBeach,Celtis,40
+HuntingtonBeach,Malus,3
+HuntingtonBeach,Zelkova,15
+HuntingtonBeach,Eucalyptus,3786
+HuntingtonBeach,Ginkgo,77
+HuntingtonBeach,Ficus,350
+HuntingtonBeach,Pistacia,67
+HuntingtonBeach,Syagrus,4681
+HuntingtonBeach,Cercis,1699
+HuntingtonBeach,Jacaranda,199
+HuntingtonBeach,Cinnamomum,304
+HuntingtonBeach,Cupressus,56
+HuntingtonBeach,Picea,0
+HuntingtonBeach,Cupaniopsis anacardioides,1431
+HuntingtonBeach,Crataegus,0
+HuntingtonBeach,Betula,8
+OverlandPark,Acer,16280
+OverlandPark,Quercus,4969
+OverlandPark,Fraxinus,9586
+OverlandPark,Platanus,492
+OverlandPark,Gleditsia,964
+OverlandPark,Lagerstroemia,1
+OverlandPark,Prunus,147
+OverlandPark,Pyrus,1359
+OverlandPark,Tilia,1190
+OverlandPark,Ulmus,1432
+OverlandPark,Pinus,1243
+OverlandPark,Liquidambar,1983
+OverlandPark,Magnolia,29
+OverlandPark,Washingtonia,0
+OverlandPark,Celtis,137
+OverlandPark,Malus,1418
+OverlandPark,Zelkova,105
+OverlandPark,Eucalyptus,4
+OverlandPark,Ginkgo,136
+OverlandPark,Ficus,0
+OverlandPark,Pistacia,0
+OverlandPark,Syagrus,0
+OverlandPark,Cercis,706
+OverlandPark,Jacaranda,0
+OverlandPark,Cinnamomum,0
+OverlandPark,Cupressus,0
+OverlandPark,Picea,554
+OverlandPark,Cupaniopsis anacardioides,0
+OverlandPark,Crataegus,24
+OverlandPark,Betula,293
+Pittsburgh,Acer,10328
+Pittsburgh,Quercus,3347
+Pittsburgh,Fraxinus,587
+Pittsburgh,Platanus,3471
+Pittsburgh,Gleditsia,4045
+Pittsburgh,Lagerstroemia,0
+Pittsburgh,Prunus,983
+Pittsburgh,Pyrus,3038
+Pittsburgh,Tilia,2678
+Pittsburgh,Ulmus,1571
+Pittsburgh,Pinus,571
+Pittsburgh,Liquidambar,892
+Pittsburgh,Magnolia,162
+Pittsburgh,Washingtonia,0
+Pittsburgh,Celtis,142
+Pittsburgh,Malus,1335
+Pittsburgh,Zelkova,610
+Pittsburgh,Eucalyptus,0
+Pittsburgh,Ginkgo,1218
+Pittsburgh,Ficus,2
+Pittsburgh,Pistacia,0
+Pittsburgh,Syagrus,0
+Pittsburgh,Cercis,261
+Pittsburgh,Jacaranda,0
+Pittsburgh,Cinnamomum,0
+Pittsburgh,Cupressus,0
+Pittsburgh,Picea,793
+Pittsburgh,Cupaniopsis anacardioides,0
+Pittsburgh,Crataegus,401
+Pittsburgh,Betula,120
+Atlanta,Acer,4126
+Atlanta,Quercus,6900
+Atlanta,Fraxinus,159
+Atlanta,Platanus,76
+Atlanta,Gleditsia,38
+Atlanta,Lagerstroemia,4804
+Atlanta,Prunus,670
+Atlanta,Pyrus,26
+Atlanta,Tilia,320
+Atlanta,Ulmus,1554
+Atlanta,Pinus,303
+Atlanta,Liquidambar,49
+Atlanta,Magnolia,2492
+Atlanta,Washingtonia,0
+Atlanta,Celtis,8
+Atlanta,Malus,569
+Atlanta,Zelkova,79
+Atlanta,Eucalyptus,0
+Atlanta,Ginkgo,559
+Atlanta,Ficus,32
+Atlanta,Pistacia,186
+Atlanta,Syagrus,0
+Atlanta,Cercis,4318
+Atlanta,Jacaranda,0
+Atlanta,Cinnamomum,0
+Atlanta,Cupressus,32
+Atlanta,Picea,0
+Atlanta,Cupaniopsis anacardioides,0
+Atlanta,Crataegus,347
+Atlanta,Betula,246
+Oakland,Acer,1254
+Oakland,Quercus,721
+Oakland,Fraxinus,2161
+Oakland,Platanus,3836
+Oakland,Gleditsia,224
+Oakland,Lagerstroemia,1953
+Oakland,Prunus,3219
+Oakland,Pyrus,4110
+Oakland,Tilia,40
+Oakland,Ulmus,447
+Oakland,Pinus,116
+Oakland,Liquidambar,3312
+Oakland,Magnolia,1401
+Oakland,Washingtonia,305
+Oakland,Celtis,567
+Oakland,Malus,255
+Oakland,Zelkova,29
+Oakland,Eucalyptus,207
+Oakland,Ginkgo,576
+Oakland,Ficus,146
+Oakland,Pistacia,1150
+Oakland,Syagrus,23
+Oakland,Cercis,421
+Oakland,Jacaranda,365
+Oakland,Cinnamomum,522
+Oakland,Cupressus,261
+Oakland,Picea,0
+Oakland,Cupaniopsis anacardioides,0
+Oakland,Crataegus,762
+Oakland,Betula,288
+CapeCoral,Acer,138
+CapeCoral,Quercus,7061
+CapeCoral,Fraxinus,0
+CapeCoral,Platanus,7
+CapeCoral,Gleditsia,0
+CapeCoral,Lagerstroemia,503
+CapeCoral,Prunus,1
+CapeCoral,Pyrus,0
+CapeCoral,Tilia,0
+CapeCoral,Ulmus,59
+CapeCoral,Pinus,3298
+CapeCoral,Liquidambar,39
+CapeCoral,Magnolia,123
+CapeCoral,Washingtonia,0
+CapeCoral,Celtis,0
+CapeCoral,Malus,0
+CapeCoral,Zelkova,0
+CapeCoral,Eucalyptus,210
+CapeCoral,Ginkgo,0
+CapeCoral,Ficus,188
+CapeCoral,Pistacia,0
+CapeCoral,Syagrus,817
+CapeCoral,Cercis,0
+CapeCoral,Jacaranda,68
+CapeCoral,Cinnamomum,1
+CapeCoral,Cupressus,126
+CapeCoral,Picea,0
+CapeCoral,Cupaniopsis anacardioides,421
+CapeCoral,Crataegus,0
+CapeCoral,Betula,0
+Louisville,Acer,4123
+Louisville,Quercus,7350
+Louisville,Fraxinus,2234
+Louisville,Platanus,933
+Louisville,Gleditsia,179
+Louisville,Lagerstroemia,20
+Louisville,Prunus,826
+Louisville,Pyrus,413
+Louisville,Tilia,315
+Louisville,Ulmus,846
+Louisville,Pinus,1210
+Louisville,Liquidambar,834
+Louisville,Magnolia,459
+Louisville,Washingtonia,0
+Louisville,Celtis,1135
+Louisville,Malus,461
+Louisville,Zelkova,80
+Louisville,Eucalyptus,0
+Louisville,Ginkgo,132
+Louisville,Ficus,0
+Louisville,Pistacia,2
+Louisville,Syagrus,0
+Louisville,Cercis,605
+Louisville,Jacaranda,0
+Louisville,Cinnamomum,0
+Louisville,Cupressus,0
+Louisville,Picea,472
+Louisville,Cupaniopsis anacardioides,0
+Louisville,Crataegus,217
+Louisville,Betula,267
+Milwaukee,Acer,6751
+Milwaukee,Quercus,2841
+Milwaukee,Fraxinus,5110
+Milwaukee,Platanus,113
+Milwaukee,Gleditsia,2778
+Milwaukee,Lagerstroemia,0
+Milwaukee,Prunus,217
+Milwaukee,Pyrus,653
+Milwaukee,Tilia,2192
+Milwaukee,Ulmus,610
+Milwaukee,Pinus,1043
+Milwaukee,Liquidambar,2
+Milwaukee,Magnolia,11
+Milwaukee,Washingtonia,0
+Milwaukee,Celtis,1576
+Milwaukee,Malus,1542
+Milwaukee,Zelkova,0
+Milwaukee,Eucalyptus,0
+Milwaukee,Ginkgo,94
+Milwaukee,Ficus,0
+Milwaukee,Pistacia,0
+Milwaukee,Syagrus,0
+Milwaukee,Cercis,33
+Milwaukee,Jacaranda,0
+Milwaukee,Cinnamomum,0
+Milwaukee,Cupressus,0
+Milwaukee,Picea,1610
+Milwaukee,Cupaniopsis anacardioides,0
+Milwaukee,Crataegus,1023
+Milwaukee,Betula,355
+LasVegas,Acer,6
+LasVegas,Quercus,531
+LasVegas,Fraxinus,5621
+LasVegas,Platanus,118
+LasVegas,Gleditsia,346
+LasVegas,Lagerstroemia,77
+LasVegas,Prunus,126
+LasVegas,Pyrus,44
+LasVegas,Tilia,0
+LasVegas,Ulmus,873
+LasVegas,Pinus,6651
+LasVegas,Liquidambar,0
+LasVegas,Magnolia,7
+LasVegas,Washingtonia,2059
+LasVegas,Celtis,68
+LasVegas,Malus,1
+LasVegas,Zelkova,11
+LasVegas,Eucalyptus,361
+LasVegas,Ginkgo,0
+LasVegas,Ficus,1
+LasVegas,Pistacia,937
+LasVegas,Syagrus,0
+LasVegas,Cercis,5
+LasVegas,Jacaranda,2
+LasVegas,Cinnamomum,0
+LasVegas,Cupressus,128
+LasVegas,Picea,0
+LasVegas,Cupaniopsis anacardioides,0
+LasVegas,Crataegus,0
+LasVegas,Betula,4
+Plano,Acer,105
+Plano,Quercus,5182
+Plano,Fraxinus,1208
+Plano,Platanus,145
+Plano,Gleditsia,70
+Plano,Lagerstroemia,2779
+Plano,Prunus,86
+Plano,Pyrus,815
+Plano,Tilia,0
+Plano,Ulmus,4367
+Plano,Pinus,299
+Plano,Liquidambar,143
+Plano,Magnolia,132
+Plano,Washingtonia,0
+Plano,Celtis,3279
+Plano,Malus,5
+Plano,Zelkova,0
+Plano,Eucalyptus,0
+Plano,Ginkgo,9
+Plano,Ficus,0
+Plano,Pistacia,822
+Plano,Syagrus,0
+Plano,Cercis,554
+Plano,Jacaranda,0
+Plano,Cinnamomum,0
+Plano,Cupressus,269
+Plano,Picea,0
+Plano,Cupaniopsis anacardioides,0
+Plano,Crataegus,12
+Plano,Betula,23
+Tampa,Acer,352
+Tampa,Quercus,11188
+Tampa,Fraxinus,7
+Tampa,Platanus,33
+Tampa,Gleditsia,0
+Tampa,Lagerstroemia,2907
+Tampa,Prunus,1227
+Tampa,Pyrus,3
+Tampa,Tilia,0
+Tampa,Ulmus,696
+Tampa,Pinus,1397
+Tampa,Liquidambar,13
+Tampa,Magnolia,383
+Tampa,Washingtonia,1059
+Tampa,Celtis,10
+Tampa,Malus,0
+Tampa,Zelkova,0
+Tampa,Eucalyptus,3
+Tampa,Ginkgo,0
+Tampa,Ficus,13
+Tampa,Pistacia,0
+Tampa,Syagrus,225
+Tampa,Cercis,21
+Tampa,Jacaranda,7
+Tampa,Cinnamomum,175
+Tampa,Cupressus,0
+Tampa,Picea,0
+Tampa,Cupaniopsis anacardioides,5
+Tampa,Crataegus,7
+Tampa,Betula,55
+Providence,Acer,5934
+Providence,Quercus,1448
+Providence,Fraxinus,1953
+Providence,Platanus,1918
+Providence,Gleditsia,2050
+Providence,Lagerstroemia,0
+Providence,Prunus,1430
+Providence,Pyrus,2792
+Providence,Tilia,1737
+Providence,Ulmus,889
+Providence,Pinus,54
+Providence,Liquidambar,289
+Providence,Magnolia,10
+Providence,Washingtonia,0
+Providence,Celtis,131
+Providence,Malus,452
+Providence,Zelkova,1193
+Providence,Eucalyptus,0
+Providence,Ginkgo,265
+Providence,Ficus,0
+Providence,Pistacia,0
+Providence,Syagrus,0
+Providence,Cercis,24
+Providence,Jacaranda,0
+Providence,Cinnamomum,0
+Providence,Cupressus,0
+Providence,Picea,31
+Providence,Cupaniopsis anacardioides,0
+Providence,Crataegus,120
+Providence,Betula,76
+Detroit,Acer,2452
+Detroit,Quercus,2477
+Detroit,Fraxinus,2
+Detroit,Platanus,1072
+Detroit,Gleditsia,47
+Detroit,Lagerstroemia,0
+Detroit,Prunus,178
+Detroit,Pyrus,190
+Detroit,Tilia,1164
+Detroit,Ulmus,1311
+Detroit,Pinus,2
+Detroit,Liquidambar,180
+Detroit,Magnolia,43
+Detroit,Washingtonia,0
+Detroit,Celtis,852
+Detroit,Malus,706
+Detroit,Zelkova,604
+Detroit,Eucalyptus,0
+Detroit,Ginkgo,602
+Detroit,Ficus,0
+Detroit,Pistacia,0
+Detroit,Syagrus,0
+Detroit,Cercis,213
+Detroit,Jacaranda,0
+Detroit,Cinnamomum,0
+Detroit,Cupressus,0
+Detroit,Picea,4
+Detroit,Cupaniopsis anacardioides,0
+Detroit,Crataegus,546
+Detroit,Betula,327
+GardenGrove,Acer,39
+GardenGrove,Quercus,163
+GardenGrove,Fraxinus,103
+GardenGrove,Platanus,698
+GardenGrove,Gleditsia,125
+GardenGrove,Lagerstroemia,2358
+GardenGrove,Prunus,161
+GardenGrove,Pyrus,1177
+GardenGrove,Tilia,0
+GardenGrove,Ulmus,597
+GardenGrove,Pinus,1248
+GardenGrove,Liquidambar,365
+GardenGrove,Magnolia,708
+GardenGrove,Washingtonia,735
+GardenGrove,Celtis,2
+GardenGrove,Malus,1
+GardenGrove,Zelkova,4
+GardenGrove,Eucalyptus,184
+GardenGrove,Ginkgo,30
+GardenGrove,Ficus,255
+GardenGrove,Pistacia,11
+GardenGrove,Syagrus,897
+GardenGrove,Cercis,20
+GardenGrove,Jacaranda,668
+GardenGrove,Cinnamomum,98
+GardenGrove,Cupressus,74
+GardenGrove,Picea,0
+GardenGrove,Cupaniopsis anacardioides,1438
+GardenGrove,Crataegus,0
+GardenGrove,Betula,21
+ColoradoSprings,Acer,1686
+ColoradoSprings,Quercus,823
+ColoradoSprings,Fraxinus,2444
+ColoradoSprings,Platanus,10
+ColoradoSprings,Gleditsia,559
+ColoradoSprings,Lagerstroemia,0
+ColoradoSprings,Prunus,146
+ColoradoSprings,Pyrus,34
+ColoradoSprings,Tilia,475
+ColoradoSprings,Ulmus,1880
+ColoradoSprings,Pinus,2867
+ColoradoSprings,Liquidambar,0
+ColoradoSprings,Magnolia,0
+ColoradoSprings,Washingtonia,0
+ColoradoSprings,Celtis,319
+ColoradoSprings,Malus,313
+ColoradoSprings,Zelkova,0
+ColoradoSprings,Eucalyptus,0
+ColoradoSprings,Ginkgo,4
+ColoradoSprings,Ficus,0
+ColoradoSprings,Pistacia,0
+ColoradoSprings,Syagrus,0
+ColoradoSprings,Cercis,14
+ColoradoSprings,Jacaranda,0
+ColoradoSprings,Cinnamomum,0
+ColoradoSprings,Cupressus,0
+ColoradoSprings,Picea,962
+ColoradoSprings,Cupaniopsis anacardioides,0
+ColoradoSprings,Crataegus,207
+ColoradoSprings,Betula,7
+Durham,Acer,2157
+Durham,Quercus,4251
+Durham,Fraxinus,77
+Durham,Platanus,100
+Durham,Gleditsia,0
+Durham,Lagerstroemia,3103
+Durham,Prunus,374
+Durham,Pyrus,246
+Durham,Tilia,102
+Durham,Ulmus,1093
+Durham,Pinus,262
+Durham,Liquidambar,163
+Durham,Magnolia,377
+Durham,Washingtonia,1
+Durham,Celtis,36
+Durham,Malus,13
+Durham,Zelkova,211
+Durham,Eucalyptus,0
+Durham,Ginkgo,261
+Durham,Ficus,17
+Durham,Pistacia,363
+Durham,Syagrus,0
+Durham,Cercis,621
+Durham,Jacaranda,0
+Durham,Cinnamomum,0
+Durham,Cupressus,0
+Durham,Picea,2
+Durham,Cupaniopsis anacardioides,0
+Durham,Crataegus,39
+Durham,Betula,88
+DesMoines,Acer,4135
+DesMoines,Quercus,1859
+DesMoines,Fraxinus,2025
+DesMoines,Platanus,224
+DesMoines,Gleditsia,405
+DesMoines,Lagerstroemia,0
+DesMoines,Prunus,146
+DesMoines,Pyrus,270
+DesMoines,Tilia,525
+DesMoines,Ulmus,477
+DesMoines,Pinus,673
+DesMoines,Liquidambar,5
+DesMoines,Magnolia,15
+DesMoines,Washingtonia,0
+DesMoines,Celtis,703
+DesMoines,Malus,1263
+DesMoines,Zelkova,0
+DesMoines,Eucalyptus,0
+DesMoines,Ginkgo,56
+DesMoines,Ficus,0
+DesMoines,Pistacia,0
+DesMoines,Syagrus,0
+DesMoines,Cercis,115
+DesMoines,Jacaranda,0
+DesMoines,Cinnamomum,0
+DesMoines,Cupressus,0
+DesMoines,Picea,808
+DesMoines,Cupaniopsis anacardioides,0
+DesMoines,Crataegus,0
+DesMoines,Betula,145
+Worcester,Acer,12211
+Worcester,Quercus,767
+Worcester,Fraxinus,321
+Worcester,Platanus,108
+Worcester,Gleditsia,182
+Worcester,Lagerstroemia,0
+Worcester,Prunus,184
+Worcester,Pyrus,271
+Worcester,Tilia,378
+Worcester,Ulmus,150
+Worcester,Pinus,43
+Worcester,Liquidambar,8
+Worcester,Magnolia,8
+Worcester,Washingtonia,0
+Worcester,Celtis,1
+Worcester,Malus,108
+Worcester,Zelkova,76
+Worcester,Eucalyptus,0
+Worcester,Ginkgo,57
+Worcester,Ficus,0
+Worcester,Pistacia,0
+Worcester,Syagrus,0
+Worcester,Cercis,0
+Worcester,Jacaranda,0
+Worcester,Cinnamomum,0
+Worcester,Cupressus,0
+Worcester,Picea,32
+Worcester,Cupaniopsis anacardioides,0
+Worcester,Crataegus,2
+Worcester,Betula,37
+Honolulu,Acer,0
+Honolulu,Quercus,0
+Honolulu,Fraxinus,0
+Honolulu,Platanus,0
+Honolulu,Gleditsia,11
+Honolulu,Lagerstroemia,266
+Honolulu,Prunus,0
+Honolulu,Pyrus,0
+Honolulu,Tilia,0
+Honolulu,Ulmus,0
+Honolulu,Pinus,0
+Honolulu,Liquidambar,0
+Honolulu,Magnolia,54
+Honolulu,Washingtonia,0
+Honolulu,Celtis,0
+Honolulu,Malus,0
+Honolulu,Zelkova,0
+Honolulu,Eucalyptus,55
+Honolulu,Ginkgo,0
+Honolulu,Ficus,482
+Honolulu,Pistacia,0
+Honolulu,Syagrus,1
+Honolulu,Cercis,0
+Honolulu,Jacaranda,9
+Honolulu,Cinnamomum,47
+Honolulu,Cupressus,33
+Honolulu,Picea,0
+Honolulu,Cupaniopsis anacardioides,2
+Honolulu,Crataegus,0
+Honolulu,Betula,0
+Arlington,Acer,103
+Arlington,Quercus,4098
+Arlington,Fraxinus,210
+Arlington,Platanus,41
+Arlington,Gleditsia,22
+Arlington,Lagerstroemia,1195
+Arlington,Prunus,351
+Arlington,Pyrus,241
+Arlington,Tilia,0
+Arlington,Ulmus,2245
+Arlington,Pinus,695
+Arlington,Liquidambar,91
+Arlington,Magnolia,84
+Arlington,Washingtonia,0
+Arlington,Celtis,30
+Arlington,Malus,0
+Arlington,Zelkova,0
+Arlington,Eucalyptus,0
+Arlington,Ginkgo,27
+Arlington,Ficus,0
+Arlington,Pistacia,587
+Arlington,Syagrus,0
+Arlington,Cercis,691
+Arlington,Jacaranda,0
+Arlington,Cinnamomum,0
+Arlington,Cupressus,3
+Arlington,Picea,0
+Arlington,Cupaniopsis anacardioides,0
+Arlington,Crataegus,1
+Arlington,Betula,8
+OklahomaCity,Acer,280
+OklahomaCity,Quercus,1993
+OklahomaCity,Fraxinus,133
+OklahomaCity,Platanus,289
+OklahomaCity,Gleditsia,118
+OklahomaCity,Lagerstroemia,689
+OklahomaCity,Prunus,15
+OklahomaCity,Pyrus,267
+OklahomaCity,Tilia,1
+OklahomaCity,Ulmus,1202
+OklahomaCity,Pinus,751
+OklahomaCity,Liquidambar,56
+OklahomaCity,Magnolia,40
+OklahomaCity,Washingtonia,0
+OklahomaCity,Celtis,184
+OklahomaCity,Malus,52
+OklahomaCity,Zelkova,8
+OklahomaCity,Eucalyptus,0
+OklahomaCity,Ginkgo,0
+OklahomaCity,Ficus,0
+OklahomaCity,Pistacia,567
+OklahomaCity,Syagrus,0
+OklahomaCity,Cercis,320
+OklahomaCity,Jacaranda,0
+OklahomaCity,Cinnamomum,0
+OklahomaCity,Cupressus,48
+OklahomaCity,Picea,0
+OklahomaCity,Cupaniopsis anacardioides,0
+OklahomaCity,Crataegus,1
+OklahomaCity,Betula,33
+Knoxville,Acer,1725
+Knoxville,Quercus,1004
+Knoxville,Fraxinus,39
+Knoxville,Platanus,260
+Knoxville,Gleditsia,53
+Knoxville,Lagerstroemia,517
+Knoxville,Prunus,372
+Knoxville,Pyrus,202
+Knoxville,Tilia,97
+Knoxville,Ulmus,352
+Knoxville,Pinus,318
+Knoxville,Liquidambar,96
+Knoxville,Magnolia,240
+Knoxville,Washingtonia,0
+Knoxville,Celtis,285
+Knoxville,Malus,53
+Knoxville,Zelkova,128
+Knoxville,Eucalyptus,0
+Knoxville,Ginkgo,73
+Knoxville,Ficus,0
+Knoxville,Pistacia,73
+Knoxville,Syagrus,0
+Knoxville,Cercis,323
+Knoxville,Jacaranda,0
+Knoxville,Cinnamomum,0
+Knoxville,Cupressus,0
+Knoxville,Picea,17
+Knoxville,Cupaniopsis anacardioides,0
+Knoxville,Crataegus,30
+Knoxville,Betula,83
+Fresno,Acer,51
+Fresno,Quercus,1633
+Fresno,Fraxinus,8
+Fresno,Platanus,408
+Fresno,Gleditsia,0
+Fresno,Lagerstroemia,184
+Fresno,Prunus,9
+Fresno,Pyrus,59
+Fresno,Tilia,0
+Fresno,Ulmus,444
+Fresno,Pinus,546
+Fresno,Liquidambar,6
+Fresno,Magnolia,5
+Fresno,Washingtonia,4
+Fresno,Celtis,152
+Fresno,Malus,3
+Fresno,Zelkova,126
+Fresno,Eucalyptus,0
+Fresno,Ginkgo,331
+Fresno,Ficus,1
+Fresno,Pistacia,713
+Fresno,Syagrus,0
+Fresno,Cercis,49
+Fresno,Jacaranda,0
+Fresno,Cinnamomum,153
+Fresno,Cupressus,198
+Fresno,Picea,0
+Fresno,Cupaniopsis anacardioides,0
+Fresno,Crataegus,0
+Fresno,Betula,4
+Greensboro,Acer,685
+Greensboro,Quercus,891
+Greensboro,Fraxinus,67
+Greensboro,Platanus,26
+Greensboro,Gleditsia,14
+Greensboro,Lagerstroemia,752
+Greensboro,Prunus,291
+Greensboro,Pyrus,99
+Greensboro,Tilia,9
+Greensboro,Ulmus,437
+Greensboro,Pinus,180
+Greensboro,Liquidambar,110
+Greensboro,Magnolia,210
+Greensboro,Washingtonia,0
+Greensboro,Celtis,297
+Greensboro,Malus,37
+Greensboro,Zelkova,35
+Greensboro,Eucalyptus,0
+Greensboro,Ginkgo,15
+Greensboro,Ficus,1
+Greensboro,Pistacia,4
+Greensboro,Syagrus,0
+Greensboro,Cercis,60
+Greensboro,Jacaranda,0
+Greensboro,Cinnamomum,0
+Greensboro,Cupressus,198
+Greensboro,Picea,12
+Greensboro,Cupaniopsis anacardioides,0
+Greensboro,Crataegus,2
+Greensboro,Betula,40
+Dallas,Acer,186
+Dallas,Quercus,2114
+Dallas,Fraxinus,39
+Dallas,Platanus,0
+Dallas,Gleditsia,19
+Dallas,Lagerstroemia,497
+Dallas,Prunus,12
+Dallas,Pyrus,174
+Dallas,Tilia,0
+Dallas,Ulmus,1187
+Dallas,Pinus,58
+Dallas,Liquidambar,287
+Dallas,Magnolia,159
+Dallas,Washingtonia,4
+Dallas,Celtis,17
+Dallas,Malus,0
+Dallas,Zelkova,0
+Dallas,Eucalyptus,0
+Dallas,Ginkgo,63
+Dallas,Ficus,0
+Dallas,Pistacia,427
+Dallas,Syagrus,0
+Dallas,Cercis,82
+Dallas,Jacaranda,0
+Dallas,Cinnamomum,0
+Dallas,Cupressus,0
+Dallas,Picea,0
+Dallas,Cupaniopsis anacardioides,0
+Dallas,Crataegus,0
+Dallas,Betula,43
+Austin,Acer,35
+Austin,Quercus,1975
+Austin,Fraxinus,131
+Austin,Platanus,46
+Austin,Gleditsia,98
+Austin,Lagerstroemia,609
+Austin,Prunus,29
+Austin,Pyrus,63
+Austin,Tilia,0
+Austin,Ulmus,1170
+Austin,Pinus,7
+Austin,Liquidambar,7
+Austin,Magnolia,6
+Austin,Washingtonia,20
+Austin,Celtis,163
+Austin,Malus,0
+Austin,Zelkova,0
+Austin,Eucalyptus,0
+Austin,Ginkgo,1
+Austin,Ficus,2
+Austin,Pistacia,23
+Austin,Syagrus,0
+Austin,Cercis,56
+Austin,Jacaranda,0
+Austin,Cinnamomum,0
+Austin,Cupressus,9
+Austin,Picea,0
+Austin,Cupaniopsis anacardioides,0
+Austin,Crataegus,0
+Austin,Betula,0
+Albuquerque,Acer,52
+Albuquerque,Quercus,153
+Albuquerque,Fraxinus,276
+Albuquerque,Platanus,231
+Albuquerque,Gleditsia,159
+Albuquerque,Lagerstroemia,1
+Albuquerque,Prunus,53
+Albuquerque,Pyrus,75
+Albuquerque,Tilia,31
+Albuquerque,Ulmus,454
+Albuquerque,Pinus,271
+Albuquerque,Liquidambar,0
+Albuquerque,Magnolia,0
+Albuquerque,Washingtonia,0
+Albuquerque,Celtis,36
+Albuquerque,Malus,130
+Albuquerque,Zelkova,2
+Albuquerque,Eucalyptus,0
+Albuquerque,Ginkgo,2
+Albuquerque,Ficus,0
+Albuquerque,Pistacia,54
+Albuquerque,Syagrus,0
+Albuquerque,Cercis,36
+Albuquerque,Jacaranda,0
+Albuquerque,Cinnamomum,0
+Albuquerque,Cupressus,30
+Albuquerque,Picea,21
+Albuquerque,Cupaniopsis anacardioides,0
+Albuquerque,Crataegus,0
+Albuquerque,Betula,0
+Nashville,Acer,136
+Nashville,Quercus,321
+Nashville,Fraxinus,68
+Nashville,Platanus,281
+Nashville,Gleditsia,15
+Nashville,Lagerstroemia,24
+Nashville,Prunus,119
+Nashville,Pyrus,39
+Nashville,Tilia,31
+Nashville,Ulmus,204
+Nashville,Pinus,1
+Nashville,Liquidambar,131
+Nashville,Magnolia,9
+Nashville,Washingtonia,0
+Nashville,Celtis,0
+Nashville,Malus,0
+Nashville,Zelkova,166
+Nashville,Eucalyptus,0
+Nashville,Ginkgo,89
+Nashville,Ficus,0
+Nashville,Pistacia,43
+Nashville,Syagrus,0
+Nashville,Cercis,36
+Nashville,Jacaranda,0
+Nashville,Cinnamomum,0
+Nashville,Cupressus,0
+Nashville,Picea,5
+Nashville,Cupaniopsis anacardioides,0
+Nashville,Crataegus,16
+Nashville,Betula,81
+Richmond,Acer,477
+Richmond,Quercus,346
+Richmond,Fraxinus,56
+Richmond,Platanus,66
+Richmond,Gleditsia,7
+Richmond,Lagerstroemia,161
+Richmond,Prunus,45
+Richmond,Pyrus,46
+Richmond,Tilia,28
+Richmond,Ulmus,126
+Richmond,Pinus,43
+Richmond,Liquidambar,32
+Richmond,Magnolia,5
+Richmond,Washingtonia,0
+Richmond,Celtis,8
+Richmond,Malus,4
+Richmond,Zelkova,129
+Richmond,Eucalyptus,0
+Richmond,Ginkgo,41
+Richmond,Ficus,0
+Richmond,Pistacia,36
+Richmond,Syagrus,0
+Richmond,Cercis,15
+Richmond,Jacaranda,0
+Richmond,Cinnamomum,0
+Richmond,Cupressus,9
+Richmond,Picea,1
+Richmond,Cupaniopsis anacardioides,0
+Richmond,Crataegus,0
+Richmond,Betula,0
+SantaRosa,Acer,139
+SantaRosa,Quercus,468
+SantaRosa,Fraxinus,2
+SantaRosa,Platanus,87
+SantaRosa,Gleditsia,0
+SantaRosa,Lagerstroemia,0
+SantaRosa,Prunus,22
+SantaRosa,Pyrus,68
+SantaRosa,Tilia,0
+SantaRosa,Ulmus,0
+SantaRosa,Pinus,24
+SantaRosa,Liquidambar,1
+SantaRosa,Magnolia,0
+SantaRosa,Washingtonia,0
+SantaRosa,Celtis,17
+SantaRosa,Malus,0
+SantaRosa,Zelkova,0
+SantaRosa,Eucalyptus,0
+SantaRosa,Ginkgo,0
+SantaRosa,Ficus,0
+SantaRosa,Pistacia,0
+SantaRosa,Syagrus,0
+SantaRosa,Cercis,0
+SantaRosa,Jacaranda,0
+SantaRosa,Cinnamomum,0
+SantaRosa,Cupressus,0
+SantaRosa,Picea,0
+SantaRosa,Cupaniopsis anacardioides,0
+SantaRosa,Crataegus,0
+SantaRosa,Betula,0
+Boston,Acer,266
+Boston,Quercus,171
+Boston,Fraxinus,19
+Boston,Platanus,0
+Boston,Gleditsia,0
+Boston,Lagerstroemia,0
+Boston,Prunus,103
+Boston,Pyrus,4
+Boston,Tilia,2
+Boston,Ulmus,12
+Boston,Pinus,320
+Boston,Liquidambar,0
+Boston,Magnolia,2
+Boston,Washingtonia,0
+Boston,Celtis,1
+Boston,Malus,26
+Boston,Zelkova,0
+Boston,Eucalyptus,0
+Boston,Ginkgo,0
+Boston,Ficus,0
+Boston,Pistacia,0
+Boston,Syagrus,0
+Boston,Cercis,0
+Boston,Jacaranda,0
+Boston,Cinnamomum,0
+Boston,Cupressus,0
+Boston,Picea,25
+Boston,Cupaniopsis anacardioides,0
+Boston,Crataegus,1
+Boston,Betula,20
+Jerseycity,Acer,119
+Jerseycity,Quercus,194
+Jerseycity,Fraxinus,0
+Jerseycity,Platanus,62
+Jerseycity,Gleditsia,17
+Jerseycity,Lagerstroemia,0
+Jerseycity,Prunus,4
+Jerseycity,Pyrus,0
+Jerseycity,Tilia,78
+Jerseycity,Ulmus,11
+Jerseycity,Pinus,0
+Jerseycity,Liquidambar,10
+Jerseycity,Magnolia,8
+Jerseycity,Washingtonia,0
+Jerseycity,Celtis,0
+Jerseycity,Malus,8
+Jerseycity,Zelkova,10
+Jerseycity,Eucalyptus,0
+Jerseycity,Ginkgo,0
+Jerseycity,Ficus,0
+Jerseycity,Pistacia,0
+Jerseycity,Syagrus,0
+Jerseycity,Cercis,16
+Jerseycity,Jacaranda,0
+Jerseycity,Cinnamomum,0
+Jerseycity,Cupressus,0
+Jerseycity,Picea,0
+Jerseycity,Cupaniopsis anacardioides,0
+Jerseycity,Crataegus,0
+Jerseycity,Betula,7
+Miami,Acer,1
+Miami,Quercus,24
+Miami,Fraxinus,0
+Miami,Platanus,0
+Miami,Gleditsia,0
+Miami,Lagerstroemia,8
+Miami,Prunus,0
+Miami,Pyrus,0
+Miami,Tilia,0
+Miami,Ulmus,0
+Miami,Pinus,46
+Miami,Liquidambar,0
+Miami,Magnolia,1
+Miami,Washingtonia,0
+Miami,Celtis,0
+Miami,Malus,0
+Miami,Zelkova,0
+Miami,Eucalyptus,0
+Miami,Ginkgo,0
+Miami,Ficus,22
+Miami,Pistacia,0
+Miami,Syagrus,16
+Miami,Cercis,0
+Miami,Jacaranda,0
+Miami,Cinnamomum,0
+Miami,Cupressus,0
+Miami,Picea,0
+Miami,Cupaniopsis anacardioides,1
+Miami,Crataegus,0
+Miami,Betula,0
+Phoenix,Acer,0
+Phoenix,Quercus,1
+Phoenix,Fraxinus,34
+Phoenix,Platanus,0
+Phoenix,Gleditsia,0
+Phoenix,Lagerstroemia,0
+Phoenix,Prunus,5
+Phoenix,Pyrus,0
+Phoenix,Tilia,0
+Phoenix,Ulmus,5
+Phoenix,Pinus,11
+Phoenix,Liquidambar,0
+Phoenix,Magnolia,0
+Phoenix,Washingtonia,5
+Phoenix,Celtis,0
+Phoenix,Malus,0
+Phoenix,Zelkova,0
+Phoenix,Eucalyptus,1
+Phoenix,Ginkgo,0
+Phoenix,Ficus,9
+Phoenix,Pistacia,0
+Phoenix,Syagrus,16
+Phoenix,Cercis,0
+Phoenix,Jacaranda,3
+Phoenix,Cinnamomum,0
+Phoenix,Cupressus,1
+Phoenix,Picea,0
+Phoenix,Cupaniopsis anacardioides,0
+Phoenix,Crataegus,0
+Phoenix,Betula,0
