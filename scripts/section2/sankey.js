@@ -59,11 +59,11 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
     sankeydata.nodes[i] = { "name": d };
   });
 
-  console.log(sankeydata);
-
   graph = sankey(sankeydata);
 
-  console.log(graph);
+  var linkColor = d3.scaleSequential()
+    .interpolator(d3.interpolateHsl)
+    .domain([0, 1]); // Domain from 0 to 
 
   // add in the links
   var link = svg.append("g").selectAll(".link")
@@ -71,7 +71,12 @@ d3.csv("data/section2/sankey.csv").then(function(data) {
     .enter().append("path")
       .attr("class", "link")
       .attr("d", d3.sankeyLinkHorizontal())
-      .attr("stroke-width", function(d) { return d.width; }); 
+      .attr("stroke-width", function(d) { return d.width; })
+      .style("stroke", function(d, i) {
+	// Calculate the interpolation parameter based on the link position
+	var t = i / graph.links.length;
+	return linkColor(t);
+       });
 
   // add the link titles
   link.append("title")
