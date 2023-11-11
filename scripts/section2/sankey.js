@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 40, bottom: 70, left: 80},
     width = 1500 - margin.left - margin.right,
-    height = 4800 - margin.top - margin.bottom;  
+    height = 3800 - margin.top - margin.bottom;  
 
 // format variables
 var formatNumber = d3.format(",.0f"), // zero decimal places
@@ -20,8 +20,8 @@ var svg = d3.select("body").append("svg")
 var sankey = d3.sankey()
     .nodeWidth(36)
     .nodePadding(40)
-    .size([width, height])
-    .nodeSort(null); // creates sankey nodes as ordered in the data 
+    .size([width, height]);
+    //.nodeSort(null); // creates sankey nodes as ordered in the data 
 
 var path = sankey.links();
 
