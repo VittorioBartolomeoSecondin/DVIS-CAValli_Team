@@ -1,6 +1,6 @@
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 40, bottom: 70, left: 20},
-    width = 1500 - margin.left - margin.right,
+    width = 1300 - margin.left - margin.right,
     height = 1000 - margin.top - margin.bottom;  
 
 // format variables
