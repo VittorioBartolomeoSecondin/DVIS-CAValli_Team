@@ -115,6 +115,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
+    text-align: center;
 }
 footer .app-name{
     color: white;
@@ -123,7 +124,6 @@ footer .app-name{
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 700;
-    text-align: center;
 }
 .app-name .app-initial{
     color: var(--theme-col);
