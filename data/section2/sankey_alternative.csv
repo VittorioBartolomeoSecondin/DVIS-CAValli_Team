@@ -1,10 +1,11 @@
 source,target,value
-USA states,North,1887197
-USA states,West,2585751
-USA states,South,742192
+33 USA states,North,1887197
+33 USA states,West,2585751
+33 USA states,South,742192
 North,New York,793051
 North,Minnesota,176834
 North,District of Columbia,175847
+North,Ohio,151350
 West,California,1811594
 West,Colorado,357765
 West,Oregon,216751
@@ -95,6 +96,27 @@ WashingtonDC,Zelkova,6366
 WashingtonDC,Eucalyptus,0
 WashingtonDC,Ginkgo,4743
 WashingtonDC,Ficus,0
+Ohio,Columbus,151350
+Columbus,Acer,35911
+Columbus,Quercus,11459
+Columbus,Fraxinus,17476
+Columbus,Platanus,4388
+Columbus,Gleditsia,7090
+Columbus,Lagerstroemia,0
+Columbus,Prunus,4772
+Columbus,Pyrus,9401
+Columbus,Tilia,6754
+Columbus,Ulmus,4552
+Columbus,Pinus,2201
+Columbus,Liquidambar,1679
+Columbus,Magnolia,841
+Columbus,Washingtonia,0
+Columbus,Celtis,2048
+Columbus,Malus,7028
+Columbus,Zelkova,962
+Columbus,Eucalyptus,0
+Columbus,Ginkgo,856
+Columbus,Ficus,0
 California,LosAngeles,582913
 LosAngeles,Acer,1993
 LosAngeles,Quercus,14597
