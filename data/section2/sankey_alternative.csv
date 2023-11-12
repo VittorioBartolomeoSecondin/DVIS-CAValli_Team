@@ -1,7 +1,10 @@
 source,target,value
+USA states,North,15
+USA states,West,7
+USA states,South,11
 North,New York,793051
 North,Minnesota,176834
-North,Ohio,151350
+North,District of Columbia,175847
 West,California,1811594
 West,Colorado,357765
 West,Oregon,216751
@@ -71,27 +74,27 @@ Minneapolis,Zelkova,0
 Minneapolis,Eucalyptus,0
 Minneapolis,Ginkgo,3592
 Minneapolis,Ficus,0
-Ohio,Columbus,151350
-Columbus,Acer,35911
-Columbus,Quercus,11459
-Columbus,Fraxinus,17476
-Columbus,Platanus,4388
-Columbus,Gleditsia,7090
-Columbus,Lagerstroemia,0
-Columbus,Prunus,4772
-Columbus,Pyrus,9401
-Columbus,Tilia,6754
-Columbus,Ulmus,4552
-Columbus,Pinus,2201
-Columbus,Liquidambar,1679
-Columbus,Magnolia,841
-Columbus,Washingtonia,0
-Columbus,Celtis,2048
-Columbus,Malus,7028
-Columbus,Zelkova,962
-Columbus,Eucalyptus,0
-Columbus,Ginkgo,856
-Columbus,Ficus,0
+District of Columbia,WashingtonDC,175847
+WashingtonDC,Acer,26489
+WashingtonDC,Quercus,39917
+WashingtonDC,Fraxinus,340
+WashingtonDC,Platanus,7478
+WashingtonDC,Gleditsia,2635
+WashingtonDC,Lagerstroemia,4353
+WashingtonDC,Prunus,11104
+WashingtonDC,Pyrus,963
+WashingtonDC,Tilia,5582
+WashingtonDC,Ulmus,15656
+WashingtonDC,Pinus,7748
+WashingtonDC,Liquidambar,4185
+WashingtonDC,Magnolia,2170
+WashingtonDC,Washingtonia,0
+WashingtonDC,Celtis,2549
+WashingtonDC,Malus,1455
+WashingtonDC,Zelkova,6366
+WashingtonDC,Eucalyptus,0
+WashingtonDC,Ginkgo,4743
+WashingtonDC,Ficus,0
 California,LosAngeles,582913
 LosAngeles,Acer,1993
 LosAngeles,Quercus,14597
