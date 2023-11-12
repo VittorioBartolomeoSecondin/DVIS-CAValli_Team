@@ -137,7 +137,7 @@ footer .cr-con{
   margin-top: 20px;
 }
 
-.center .btns a > button{
+#central_button {
   height: 55px;
   width: 170px;
   border-radius: 5px;
@@ -150,19 +150,11 @@ footer .cr-con{
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
-}
-
-.center .btns a > button:first-child{
   color: #fff;
   background: none;
 }
 
-.btns a > button:first-child:hover{
-  background: white;
-  color: black;
-}
-
-.center .btns a > button:last-child{
+#central_button:hover{
   background: white;
   color: black;
 }
