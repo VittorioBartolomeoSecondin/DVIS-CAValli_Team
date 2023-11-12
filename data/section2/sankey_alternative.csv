@@ -19,6 +19,8 @@ NewYork,Prunus,41653
 NewYork,Pyrus,58931
 NewYork,Tilia,51267
 NewYork,Ulmus,14915
+NewYork,Pinus,702
+NewYork,Liquidambar,10657
 New York,Buffalo,76953
 Buffalo,Acer,25596
 Buffalo,Quercus,3763
@@ -30,6 +32,8 @@ Buffalo,Prunus,2164
 Buffalo,Pyrus,1509
 Buffalo,Tilia,11110
 Buffalo,Ulmus,4013
+Buffalo,Pinus,1040
+Buffalo,Liquidambar,219
 Minnesota,Minneapolis,176834
 Minneapolis,Acer,47055
 Minneapolis,Quercus,8501
@@ -41,6 +45,8 @@ Minneapolis,Prunus,204
 Minneapolis,Pyrus,315
 Minneapolis,Tilia,26830
 Minneapolis,Ulmus,20977
+Minneapolis,Pinus,1175
+Minneapolis,Liquidambar,0
 Ohio,Columbus,151350
 Columbus,Acer,35911
 Columbus,Quercus,11459
@@ -52,6 +58,8 @@ Columbus,Prunus,4772
 Columbus,Pyrus,9401
 Columbus,Tilia,6754
 Columbus,Ulmus,4552
+Columbus,Pinus,2201
+Columbus,Liquidambar,1679
 California,LosAngeles,582913
 LosAngeles,Acer,1993
 LosAngeles,Quercus,14597
@@ -63,6 +71,8 @@ LosAngeles,Prunus,11777
 LosAngeles,Pyrus,17285
 LosAngeles,Tilia,2
 LosAngeles,Ulmus,20563
+LosAngeles,Pinus,23667
+LosAngeles,Liquidambar,30302
 California,SanJose,264805
 SanJose,Acer,8908
 SanJose,Quercus,18261
@@ -74,6 +84,8 @@ SanJose,Prunus,12973
 SanJose,Pyrus,11557
 SanJose,Tilia,537
 SanJose,Ulmus,3898
+SanJose,Pinus,3611
+SanJose,Liquidambar,14677
 California,SanDiego,212304
 SanDiego,Acer,89
 SanDiego,Quercus,1392
@@ -85,6 +97,21 @@ SanDiego,Prunus,3149
 SanDiego,Pyrus,4196
 SanDiego,Tilia,0
 SanDiego,Ulmus,1797
+SanDiego,Pinus,13564
+SanDiego,Liquidambar,10323
+California,SanFrancisco,175272
+SanFrancisco,Acer,2101
+SanFrancisco,Quercus,1161
+SanFrancisco,Fraxinus,1447
+SanFrancisco,Platanus,12002
+SanFrancisco,Gleditsia,117
+SanFrancisco,Lagerstroemia,104
+SanFrancisco,Prunus,15128
+SanFrancisco,Pyrus,6040
+SanFrancisco,Tilia,150
+SanFrancisco,Ulmus,3453
+SanFrancisco,Pinus,3300
+SanFrancisco,Liquidambar,1684
 Colorado,Denver,284354
 Denver,Acer,41254
 Denver,Quercus,22505
@@ -96,6 +123,8 @@ Denver,Prunus,6833
 Denver,Pyrus,7410
 Denver,Tilia,18650
 Denver,Ulmus,19142
+Denver,Pinus,20316
+Denver,Liquidambar,84
 Colorado,AuroraCO,57360
 AuroraCO,Acer,9517
 AuroraCO,Quercus,2468
@@ -107,6 +136,8 @@ AuroraCO,Prunus,318
 AuroraCO,Pyrus,1537
 AuroraCO,Tilia,8098
 AuroraCO,Ulmus,2405
+AuroraCO,Pinus,3282
+AuroraCO,Liquidambar,0
 Oregon,Portland,216751
 Portland,Acer,57813
 Portland,Quercus,7281
@@ -118,6 +149,8 @@ Portland,Prunus,25816
 Portland,Pyrus,11700
 Portland,Tilia,5490
 Portland,Ulmus,3356
+Portland,Pinus,3471
+Portland,Liquidambar,3703
 Texas,Houston,213387
 Houston,Acer,1733
 Houston,Quercus,66689
@@ -129,6 +162,8 @@ Houston,Prunus,2315
 Houston,Pyrus,2835
 Houston,Tilia,2
 Houston,Ulmus,9063
+Houston,Pinus,10038
+Houston,Liquidambar,1352
 Texas,Plano,28290
 Plano,Acer,105
 Plano,Quercus,5182
@@ -140,6 +175,8 @@ Plano,Prunus,86
 Plano,Pyrus,815
 Plano,Tilia,0
 Plano,Ulmus,4367
+Plano,Pinus,299
+Plano,Liquidambar,143
 Florida,Orlando,68211
 Orlando,Acer,1821
 Orlando,Quercus,29619
@@ -151,6 +188,8 @@ Orlando,Prunus,708
 Orlando,Pyrus,115
 Orlando,Tilia,0
 Orlando,Ulmus,2674
+Orlando,Pinus,1184
+Orlando,Liquidambar,374
 Florida,CapeCoral,34021
 CapeCoral,Acer,138
 CapeCoral,Quercus,7061
@@ -162,6 +201,8 @@ CapeCoral,Prunus,1
 CapeCoral,Pyrus,0
 CapeCoral,Tilia,0
 CapeCoral,Ulmus,59
+CapeCoral,Pinus,3298
+CapeCoral,Liquidambar,39
 Maryland,Baltimore,121290
 Baltimore,Acer,26076
 Baltimore,Quercus,15716
@@ -173,3 +214,5 @@ Baltimore,Prunus,6739
 Baltimore,Pyrus,4792
 Baltimore,Tilia,8084
 Baltimore,Ulmus,6250
+Baltimore,Pinus,1823
+Baltimore,Liquidambar,2517
