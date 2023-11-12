@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
-var margin = {top: 20, right: 40, bottom: 70, left: 40},
+var margin = {top: 20, right: 40, bottom: 70, left: 20},
     width = 1500 - margin.left - margin.right,
-    height = 1200 - margin.top - margin.bottom;  
+    height = 1000 - margin.top - margin.bottom;  
 
 // format variables
 var formatNumber = d3.format(",.0f"), // zero decimal places
