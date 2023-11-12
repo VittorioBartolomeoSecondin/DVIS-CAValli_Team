@@ -110,6 +110,7 @@ margin: 0; padding: 0;
 footer{
     background-color: #111010;
     margin-top: auto;
+    justify-content: center;
 }
 .f-item-con{
     padding: 1.5rem 4rem;
