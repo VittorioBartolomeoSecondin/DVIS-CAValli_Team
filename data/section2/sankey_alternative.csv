@@ -14,27 +14,27 @@ West,Oregon,216751
 South,Texas,268642
 South,Florida,128032
 South,Maryland,121290
-New York,New York,652169
-New York,Acer,88739
-New York,Quercus,82867
-New York,Fraxinus,19981
-New York,Platanus,87014
-New York,Gleditsia,64264
-New York,Lagerstroemia,442
-New York,Prunus,41653
-New York,Pyrus,58931
-New York,Tilia,51267
-New York,Ulmus,14915
-New York,Pinus,702
-New York,Liquidambar,10657
-New York,Magnolia,1000
-New York,Washingtonia,0
-New York,Celtis,2382
-New York,Malus,3527
-New York,Zelkova,29258
-New York,Eucalyptus,0
-New York,Ginkgo,21024
-New York,Ficus,0
+New York,NewYork,652169
+NewYork,Acer,88739
+NewYork,Quercus,82867
+NewYork,Fraxinus,19981
+NewYork,Platanus,87014
+NewYork,Gleditsia,64264
+NewYork,Lagerstroemia,442
+NewYork,Prunus,41653
+NewYork,Pyrus,58931
+NewYork,Tilia,51267
+NewYork,Ulmus,14915
+NewYork,Pinus,702
+NewYork,Liquidambar,10657
+NewYork,Magnolia,1000
+NewYork,Washingtonia,0
+NewYork,Celtis,2382
+NewYork,Malus,3527
+NewYork,Zelkova,29258
+NewYork,Eucalyptus,0
+NewYork,Ginkgo,21024
+NewYork,Ficus,0
 New York,Buffalo,76953
 Buffalo,Acer,25596
 Buffalo,Quercus,3763
@@ -77,27 +77,27 @@ Minneapolis,Zelkova,0
 Minneapolis,Eucalyptus,0
 Minneapolis,Ginkgo,3592
 Minneapolis,Ficus,0
-District of Columbia,Washington DC,175847
-Washington DC,Acer,26489
-Washington DC,Quercus,39917
-Washington DC,Fraxinus,340
-Washington DC,Platanus,7478
-Washington DC,Gleditsia,2635
-Washington DC,Lagerstroemia,4353
-Washington DC,Prunus,11104
-Washington DC,Pyrus,963
-Washington DC,Tilia,5582
-Washington DC,Ulmus,15656
-Washington DC,Pinus,7748
-Washington DC,Liquidambar,4185
-Washington DC,Magnolia,2170
-Washington DC,Washingtonia,0
-Washington DC,Celtis,2549
-Washington DC,Malus,1455
-Washington DC,Zelkova,6366
-Washington DC,Eucalyptus,0
-Washington DC,Ginkgo,4743
-Washington DC,Ficus,0
+District of Columbia,WashingtonDC,175847
+WashingtonDC,Acer,26489
+WashingtonDC,Quercus,39917
+WashingtonDC,Fraxinus,340
+WashingtonDC,Platanus,7478
+WashingtonDC,Gleditsia,2635
+WashingtonDC,Lagerstroemia,4353
+WashingtonDC,Prunus,11104
+WashingtonDC,Pyrus,963
+WashingtonDC,Tilia,5582
+WashingtonDC,Ulmus,15656
+WashingtonDC,Pinus,7748
+WashingtonDC,Liquidambar,4185
+WashingtonDC,Magnolia,2170
+WashingtonDC,Washingtonia,0
+WashingtonDC,Celtis,2549
+WashingtonDC,Malus,1455
+WashingtonDC,Zelkova,6366
+WashingtonDC,Eucalyptus,0
+WashingtonDC,Ginkgo,4743
+WashingtonDC,Ficus,0
 Ohio,Columbus,151350
 Columbus,Acer,35911
 Columbus,Quercus,11459
@@ -182,27 +182,27 @@ Indianapolis,Zelkova,51
 Indianapolis,Eucalyptus,0
 Indianapolis,Ginkgo,540
 Indianapolis,Ficus,0
-California,Los Angeles,582913
-Los Angeles,Acer,1993
-Los Angeles,Quercus,14597
-Los Angeles,Fraxinus,18647
-Los Angeles,Platanus,22149
-Los Angeles,Gleditsia,8778
-Los Angeles,Lagerstroemia,35829
-Los Angeles,Prunus,11777
-Los Angeles,Pyrus,17285
-Los Angeles,Tilia,2
-Los Angeles,Ulmus,20563
-Los Angeles,Pinus,23667
-Los Angeles,Liquidambar,30302
-Los Angeles,Magnolia,31360
-Los Angeles,Washingtonia,40738
-Los Angeles,Celtis,337
-Los Angeles,Malus,378
-Los Angeles,Zelkova,940
-Los Angeles,Eucalyptus,19486
-Los Angeles,Ginkgo,1077
-Los Angeles,Ficus,37642
+California,LosAngeles,582913
+LosAngeles,Acer,1993
+LosAngeles,Quercus,14597
+LosAngeles,Fraxinus,18647
+LosAngeles,Platanus,22149
+LosAngeles,Gleditsia,8778
+LosAngeles,Lagerstroemia,35829
+LosAngeles,Prunus,11777
+LosAngeles,Pyrus,17285
+LosAngeles,Tilia,2
+LosAngeles,Ulmus,20563
+LosAngeles,Pinus,23667
+LosAngeles,Liquidambar,30302
+LosAngeles,Magnolia,31360
+LosAngeles,Washingtonia,40738
+LosAngeles,Celtis,337
+LosAngeles,Malus,378
+LosAngeles,Zelkova,940
+LosAngeles,Eucalyptus,19486
+LosAngeles,Ginkgo,1077
+LosAngeles,Ficus,37642
 California,SanJose,264805
 SanJose,Acer,8908
 SanJose,Quercus,18261
@@ -224,48 +224,48 @@ SanJose,Zelkova,7669
 SanJose,Eucalyptus,3309
 SanJose,Ginkgo,5207
 SanJose,Ficus,306
-California,San Diego,212304
-San Diego,Acer,89
-San Diego,Quercus,1392
-San Diego,Fraxinus,3151
-San Diego,Platanus,9237
-San Diego,Gleditsia,0
-San Diego,Lagerstroemia,2207
-San Diego,Prunus,3149
-San Diego,Pyrus,4196
-San Diego,Tilia,0
-San Diego,Ulmus,1797
-San Diego,Pinus,13564
-San Diego,Liquidambar,10323
-San Diego,Magnolia,3463
-San Diego,Washingtonia,18168
-San Diego,Celtis,0
-San Diego,Malus,0
-San Diego,Zelkova,0
-San Diego,Eucalyptus,13510
-San Diego,Ginkgo,113
-San Diego,Ficus,5164
-California,San Francisco,175272
-San Francisco,Acer,2101
-San Francisco,Quercus,1161
-San Francisco,Fraxinus,1447
-San Francisco,Platanus,12002
-San Francisco,Gleditsia,117
-San Francisco,Lagerstroemia,104
-San Francisco,Prunus,15128
-San Francisco,Pyrus,6040
-San Francisco,Tilia,150
-San Francisco,Ulmus,3453
-San Francisco,Pinus,3300
-San Francisco,Liquidambar,1684
-San Francisco,Magnolia,8277
-San Francisco,Washingtonia,1061
-San Francisco,Celtis,275
-San Francisco,Malus,289
-San Francisco,Zelkova,54
-San Francisco,Eucalyptus,3271
-San Francisco,Ginkgo,3349
-San Francisco,Ficus,9889
+California,SanDiego,212304
+SanDiego,Acer,89
+SanDiego,Quercus,1392
+SanDiego,Fraxinus,3151
+SanDiego,Platanus,9237
+SanDiego,Gleditsia,0
+SanDiego,Lagerstroemia,2207
+SanDiego,Prunus,3149
+SanDiego,Pyrus,4196
+SanDiego,Tilia,0
+SanDiego,Ulmus,1797
+SanDiego,Pinus,13564
+SanDiego,Liquidambar,10323
+SanDiego,Magnolia,3463
+SanDiego,Washingtonia,18168
+SanDiego,Celtis,0
+SanDiego,Malus,0
+SanDiego,Zelkova,0
+SanDiego,Eucalyptus,13510
+SanDiego,Ginkgo,113
+SanDiego,Ficus,5164
+California,SanFrancisco,175272
+SanFrancisco,Acer,2101
+SanFrancisco,Quercus,1161
+SanFrancisco,Fraxinus,1447
+SanFrancisco,Platanus,12002
+SanFrancisco,Gleditsia,117
+SanFrancisco,Lagerstroemia,104
+SanFrancisco,Prunus,15128
+SanFrancisco,Pyrus,6040
+SanFrancisco,Tilia,150
+SanFrancisco,Ulmus,3453
+SanFrancisco,Pinus,3300
+SanFrancisco,Liquidambar,1684
+SanFrancisco,Magnolia,8277
+SanFrancisco,Washingtonia,1061
+SanFrancisco,Celtis,275
+SanFrancisco,Malus,289
+SanFrancisco,Zelkova,54
+SanFrancisco,Eucalyptus,3271
+SanFrancisco,Ginkgo,3349
+SanFrancisco,Ficus,9889
 California,Stockton,97707
 Stockton,Acer,2518
 Stockton,Quercus,6177
@@ -329,27 +329,27 @@ Denver,Zelkova,525
 Denver,Eucalyptus,0
 Denver,Ginkgo,765
 Denver,Ficus,0
-Colorado,Aurora CO,57360
-Aurora CO,Acer,9517
-Aurora CO,Quercus,2468
-Aurora CO,Fraxinus,6363
-Aurora CO,Platanus,9
-Aurora CO,Gleditsia,10428
-Aurora CO,Lagerstroemia,0
-Aurora CO,Prunus,318
-Aurora CO,Pyrus,1537
-Aurora CO,Tilia,8098
-Aurora CO,Ulmus,2405
-Aurora CO,Pinus,3282
-Aurora CO,Liquidambar,0
-Aurora CO,Magnolia,6
-Aurora CO,Washingtonia,0
-Aurora CO,Celtis,2493
-Aurora CO,Malus,1536
-Aurora CO,Zelkova,3
-Aurora CO,Eucalyptus,0
-Aurora CO,Ginkgo,9
-Aurora CO,Ficus,0
+Colorado,AuroraCO,57360
+AuroraCO,Acer,9517
+AuroraCO,Quercus,2468
+AuroraCO,Fraxinus,6363
+AuroraCO,Platanus,9
+AuroraCO,Gleditsia,10428
+AuroraCO,Lagerstroemia,0
+AuroraCO,Prunus,318
+AuroraCO,Pyrus,1537
+AuroraCO,Tilia,8098
+AuroraCO,Ulmus,2405
+AuroraCO,Pinus,3282
+AuroraCO,Liquidambar,0
+AuroraCO,Magnolia,6
+AuroraCO,Washingtonia,0
+AuroraCO,Celtis,2493
+AuroraCO,Malus,1536
+AuroraCO,Zelkova,3
+AuroraCO,Eucalyptus,0
+AuroraCO,Ginkgo,9
+AuroraCO,Ficus,0
 Oregon,Portland,216751
 Portland,Acer,57813
 Portland,Quercus,7281
@@ -434,27 +434,27 @@ Orlando,Zelkova,0
 Orlando,Eucalyptus,11
 Orlando,Ginkgo,1
 Orlando,Ficus,117
-Florida,Cape Coral,34021
-Cape Coral,Acer,138
-Cape Coral,Quercus,7061
-Cape Coral,Fraxinus,0
-Cape Coral,Platanus,7
-Cape Coral,Gleditsia,0
-Cape Coral,Lagerstroemia,503
-Cape Coral,Prunus,1
-Cape Coral,Pyrus,0
-Cape Coral,Tilia,0
-Cape Coral,Ulmus,59
-Cape Coral,Pinus,3298
-Cape Coral,Liquidambar,39
-Cape Coral,Magnolia,123
-Cape Coral,Washingtonia,0
-Cape Coral,Celtis,0
-Cape Coral,Malus,0
-Cape Coral,Zelkova,0
-Cape Coral,Eucalyptus,210
-Cape Coral,Ginkgo,0
-Cape Coral,Ficus,188
+Florida,CapeCoral,34021
+CapeCoral,Acer,138
+CapeCoral,Quercus,7061
+CapeCoral,Fraxinus,0
+CapeCoral,Platanus,7
+CapeCoral,Gleditsia,0
+CapeCoral,Lagerstroemia,503
+CapeCoral,Prunus,1
+CapeCoral,Pyrus,0
+CapeCoral,Tilia,0
+CapeCoral,Ulmus,59
+CapeCoral,Pinus,3298
+CapeCoral,Liquidambar,39
+CapeCoral,Magnolia,123
+CapeCoral,Washingtonia,0
+CapeCoral,Celtis,0
+CapeCoral,Malus,0
+CapeCoral,Zelkova,0
+CapeCoral,Eucalyptus,210
+CapeCoral,Ginkgo,0
+CapeCoral,Ficus,188
 Maryland,Baltimore,121290
 Baltimore,Acer,26076
 Baltimore,Quercus,15716
