@@ -106,6 +106,7 @@ margin: 0; padding: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
+
 footer{
     background-color: #111010;
     margin-top: auto;
@@ -115,22 +116,10 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
-    justify-content: center;
-}
-footer .app-name{
     color: white;
-    border-left: 4px solid var(--theme-col);
-    padding-left: 1.5rem;
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 700;
-}
-.app-name .app-initial{
-    color: var(--theme-col);
-}
-footer .app-info p{
-    color: white;
-    padding-left: 1.65rem;
 }
 
 footer .footer-title{ 
