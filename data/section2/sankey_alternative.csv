@@ -7,6 +7,7 @@ North,Minnesota,176834
 North,District of Columbia,175847
 North,Ohio,151350
 North,Wisconsin,128072
+North,Indiana,97227
 West,California,1811594
 West,Colorado,357765
 West,Oregon,216751
@@ -160,6 +161,27 @@ Milwaukee,Zelkova,0
 Milwaukee,Eucalyptus,0
 Milwaukee,Ginkgo,94
 Milwaukee,Ficus,0
+Indiana,Indianapolis,97227
+Indianapolis,Acer,15882
+Indianapolis,Quercus,5055
+Indianapolis,Fraxinus,10955
+Indianapolis,Platanus,1724
+Indianapolis,Gleditsia,1931
+Indianapolis,Lagerstroemia,0
+Indianapolis,Prunus,4016
+Indianapolis,Pyrus,2032
+Indianapolis,Tilia,1643
+Indianapolis,Ulmus,6499
+Indianapolis,Pinus,5557
+Indianapolis,Liquidambar,1478
+Indianapolis,Magnolia,316
+Indianapolis,Washingtonia,0
+Indianapolis,Celtis,5940
+Indianapolis,Malus,5803
+Indianapolis,Zelkova,51
+Indianapolis,Eucalyptus,0
+Indianapolis,Ginkgo,540
+Indianapolis,Ficus,0
 California,LosAngeles,582913
 LosAngeles,Acer,1993
 LosAngeles,Quercus,14597
