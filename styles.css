@@ -115,7 +115,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
-    text-align: center;
+    justify-content: center;
 }
 footer .app-name{
     color: white;
