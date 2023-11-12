@@ -21,6 +21,9 @@ NewYork,Tilia,51267
 NewYork,Ulmus,14915
 NewYork,Pinus,702
 NewYork,Liquidambar,10657
+NewYork,Magnolia,1000
+NewYork,Washingtonia,0
+NewYork,Celtis,2382
 New York,Buffalo,76953
 Buffalo,Acer,25596
 Buffalo,Quercus,3763
@@ -34,6 +37,9 @@ Buffalo,Tilia,11110
 Buffalo,Ulmus,4013
 Buffalo,Pinus,1040
 Buffalo,Liquidambar,219
+Buffalo,Magnolia,80
+Buffalo,Washingtonia,0
+Buffalo,Celtis,830
 Minnesota,Minneapolis,176834
 Minneapolis,Acer,47055
 Minneapolis,Quercus,8501
@@ -47,6 +53,9 @@ Minneapolis,Tilia,26830
 Minneapolis,Ulmus,20977
 Minneapolis,Pinus,1175
 Minneapolis,Liquidambar,0
+Minneapolis,Magnolia,12
+Minneapolis,Washingtonia,0
+Minneapolis,Celtis,12736
 Ohio,Columbus,151350
 Columbus,Acer,35911
 Columbus,Quercus,11459
@@ -60,6 +69,9 @@ Columbus,Tilia,6754
 Columbus,Ulmus,4552
 Columbus,Pinus,2201
 Columbus,Liquidambar,1679
+Columbus,Magnolia,841
+Columbus,Washingtonia,0
+Columbus,Celtis,2048
 California,LosAngeles,582913
 LosAngeles,Acer,1993
 LosAngeles,Quercus,14597
@@ -73,6 +85,9 @@ LosAngeles,Tilia,2
 LosAngeles,Ulmus,20563
 LosAngeles,Pinus,23667
 LosAngeles,Liquidambar,30302
+LosAngeles,Magnolia,31360
+LosAngeles,Washingtonia,40738
+LosAngeles,Celtis,337
 California,SanJose,264805
 SanJose,Acer,8908
 SanJose,Quercus,18261
@@ -86,6 +101,9 @@ SanJose,Tilia,537
 SanJose,Ulmus,3898
 SanJose,Pinus,3611
 SanJose,Liquidambar,14677
+SanJose,Magnolia,7337
+SanJose,Washingtonia,6885
+SanJose,Celtis,3125
 California,SanDiego,212304
 SanDiego,Acer,89
 SanDiego,Quercus,1392
@@ -99,6 +117,9 @@ SanDiego,Tilia,0
 SanDiego,Ulmus,1797
 SanDiego,Pinus,13564
 SanDiego,Liquidambar,10323
+SanDiego,Magnolia,3463
+SanDiego,Washingtonia,18168
+SanDiego,Celtis,0
 California,SanFrancisco,175272
 SanFrancisco,Acer,2101
 SanFrancisco,Quercus,1161
@@ -112,6 +133,25 @@ SanFrancisco,Tilia,150
 SanFrancisco,Ulmus,3453
 SanFrancisco,Pinus,3300
 SanFrancisco,Liquidambar,1684
+SanFrancisco,Magnolia,8277
+SanFrancisco,Washingtonia,1061
+SanFrancisco,Celtis,275
+California,Stockton,97707
+Stockton,Acer,2518
+Stockton,Quercus,6177
+Stockton,Fraxinus,10587
+Stockton,Platanus,7639
+Stockton,Gleditsia,324
+Stockton,Lagerstroemia,7368
+Stockton,Prunus,2409
+Stockton,Pyrus,6334
+Stockton,Tilia,899
+Stockton,Ulmus,812
+Stockton,Pinus,1306
+Stockton,Liquidambar,4371
+Stockton,Magnolia,3936
+Stockton,Washingtonia,1059
+Stockton,Celtis,7732
 Colorado,Denver,284354
 Denver,Acer,41254
 Denver,Quercus,22505
@@ -125,6 +165,9 @@ Denver,Tilia,18650
 Denver,Ulmus,19142
 Denver,Pinus,20316
 Denver,Liquidambar,84
+Denver,Magnolia,190
+Denver,Washingtonia,0
+Denver,Celtis,9477
 Colorado,AuroraCO,57360
 AuroraCO,Acer,9517
 AuroraCO,Quercus,2468
@@ -138,6 +181,9 @@ AuroraCO,Tilia,8098
 AuroraCO,Ulmus,2405
 AuroraCO,Pinus,3282
 AuroraCO,Liquidambar,0
+AuroraCO,Magnolia,6
+AuroraCO,Washingtonia,0
+AuroraCO,Celtis,2493
 Oregon,Portland,216751
 Portland,Acer,57813
 Portland,Quercus,7281
@@ -151,6 +197,9 @@ Portland,Tilia,5490
 Portland,Ulmus,3356
 Portland,Pinus,3471
 Portland,Liquidambar,3703
+Portland,Magnolia,3507
+Portland,Washingtonia,0
+Portland,Celtis,334
 Texas,Houston,213387
 Houston,Acer,1733
 Houston,Quercus,66689
@@ -164,6 +213,9 @@ Houston,Tilia,2
 Houston,Ulmus,9063
 Houston,Pinus,10038
 Houston,Liquidambar,1352
+Houston,Magnolia,4598
+Houston,Washingtonia,5476
+Houston,Celtis,13025
 Texas,Plano,28290
 Plano,Acer,105
 Plano,Quercus,5182
@@ -177,6 +229,9 @@ Plano,Tilia,0
 Plano,Ulmus,4367
 Plano,Pinus,299
 Plano,Liquidambar,143
+Plano,Magnolia,132
+Plano,Washingtonia,0
+Plano,Celtis,3279
 Florida,Orlando,68211
 Orlando,Acer,1821
 Orlando,Quercus,29619
@@ -190,6 +245,9 @@ Orlando,Tilia,0
 Orlando,Ulmus,2674
 Orlando,Pinus,1184
 Orlando,Liquidambar,374
+Orlando,Magnolia,1964
+Orlando,Washingtonia,1388
+Orlando,Celtis,8
 Florida,CapeCoral,34021
 CapeCoral,Acer,138
 CapeCoral,Quercus,7061
@@ -203,6 +261,9 @@ CapeCoral,Tilia,0
 CapeCoral,Ulmus,59
 CapeCoral,Pinus,3298
 CapeCoral,Liquidambar,39
+CapeCoral,Magnolia,123
+CapeCoral,Washingtonia,0
+CapeCoral,Celtis,0
 Maryland,Baltimore,121290
 Baltimore,Acer,26076
 Baltimore,Quercus,15716
@@ -216,3 +277,6 @@ Baltimore,Tilia,8084
 Baltimore,Ulmus,6250
 Baltimore,Pinus,1823
 Baltimore,Liquidambar,2517
+Baltimore,Magnolia,671
+Baltimore,Washingtonia,0
+Baltimore,Celtis,1040
