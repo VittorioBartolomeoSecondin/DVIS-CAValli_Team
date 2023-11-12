@@ -137,7 +137,7 @@ footer .cr-con{
   margin-top: 20px;
 }
 
-.center .btns button{
+.center .btns a > button{
   height: 55px;
   width: 170px;
   border-radius: 5px;
