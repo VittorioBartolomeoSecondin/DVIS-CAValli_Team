@@ -152,17 +152,17 @@ footer .cr-con{
   transition: all 0.3s ease;
 }
 
-.center .btns button:first-child{
+.center .btns a > button:first-child{
   color: #fff;
   background: none;
 }
 
-.btns button:first-child:hover{
+.btns a > button:first-child:hover{
   background: white;
   color: black;
 }
 
-.center .btns button:last-child{
+.center .btns a > button:last-child{
   background: white;
   color: black;
 }
