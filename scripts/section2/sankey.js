@@ -118,6 +118,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 	 
      // Highlight incoming links
     link.filter(function(linkData) {
+	console.log(linkData.target);
         return linkData.target === d; // Filter links entering the hovered node
     }).attr("stroke-opacity", 0.6); // Apply desired style to the incoming links
  })
