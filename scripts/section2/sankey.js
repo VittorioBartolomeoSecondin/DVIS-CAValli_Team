@@ -118,6 +118,8 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
     // Highlight the current node
     d3.select(this).attr("font-weight", "bold");
 
+   console.log(hoveredNode.targetLinks);
+
     // Filter and highlight incoming links based on the target node
     link.filter(function(linkData) {
         return linkData.target === hoveredNode;
