@@ -58,7 +58,6 @@ var svg = d3.select("body").append("svg")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
-	    .on("click", highlight_node_links)
 	    .attr("transform", 
 	          "translate(" + margin.left + "," + margin.top + ")");
 
@@ -162,6 +161,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
      d3.select(this)
          .attr("font-weight", "bold");
  })
+ .on("click", highlight_node_links)
  .on("mouseout", function() {
      d3.select(this)
          .attr("font-weight", "normal");
