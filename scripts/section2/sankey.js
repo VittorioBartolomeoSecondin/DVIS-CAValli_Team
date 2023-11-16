@@ -112,13 +112,23 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
       .attr("text-anchor", "start");
 
  // Add hover effects to nodes
- node.on("mouseover", function() {
+ node.on("mouseover", function(d) {
      d3.select(this)
          .attr("font-weight", "bold");
+     link
+         .transition()
+         .duration(300)
+         .style("stroke-opacity", function(l) {
+	    return l.source === d || l.target === d ? 0.5 : 0.2;
+         });
  })
  .on("mouseout", function() {
      d3.select(this)
          .attr("font-weight", "normal");
+     link
+         .transition()
+         .duration(300)
+         .style("stroke-opacity", 0.2);
  });
 
 // Add hover effects to links
