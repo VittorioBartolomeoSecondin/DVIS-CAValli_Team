@@ -158,3 +158,8 @@ footer .cr-con{
   background: white;
   color: black;
 }
+
+#navigation_buttons {
+  display: flex;
+  justify-content: center;
+}
