@@ -115,10 +115,18 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
  node.on("mouseover", function(d) {
      d3.select(this)
          .attr("font-weight", "bold");
+	 
+     // Highlight incoming links
+    link.filter(function(linkData) {
+        return linkData.target === d; // Filter links entering the hovered node
+    }).attr("stroke-opacity", 0.6); // Apply desired style to the incoming links
  })
  .on("mouseout", function() {
      d3.select(this)
          .attr("font-weight", "normal");
+
+     // Reset the style for incoming links
+    link.attr("stroke-opacity", 1); // Reset to default opacity for all links
  });
 
 // Add hover effects to links
