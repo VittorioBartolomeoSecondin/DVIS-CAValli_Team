@@ -1,3 +1,48 @@
+function highlight_node_links(node,i){
+
+  var remainingNodes=[],
+      nextNodes=[];
+
+  var stroke_opacity = 0;
+  if( d3.select(this).attr("data-clicked") == "1" ){
+    d3.select(this).attr("data-clicked","0");
+    stroke_opacity = 0.2;
+  }else{
+    d3.select(this).attr("data-clicked","1");
+    stroke_opacity = 0.5;
+  }
+
+  var traverse = [{
+                    linkType : "sourceLinks",
+                    nodeType : "target"
+                  },{
+                    linkType : "targetLinks",
+                    nodeType : "source"
+                  }];
+
+  traverse.forEach(function(step){
+    node[step.linkType].forEach(function(link) {
+      remainingNodes.push(link[step.nodeType]);
+      highlight_link(link.id, stroke_opacity);
+    });
+
+    while (remainingNodes.length) {
+      nextNodes = [];
+      remainingNodes.forEach(function(node) {
+        node[step.linkType].forEach(function(link) {
+          nextNodes.push(link[step.nodeType]);
+          highlight_link(link.id, stroke_opacity);
+        });
+      });
+      remainingNodes = nextNodes;
+    }
+  });
+}
+
+function highlight_link(id,opacity){
+    d3.select("#link-"+id).style("stroke-opacity", opacity);
+}
+
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 40, bottom: 70, left: 60},
     width = 1300 - margin.left - margin.right,
@@ -13,6 +58,7 @@ var svg = d3.select("body").append("svg")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
+	    .on("click", highlight_node_links)
 	    .attr("transform", 
 	          "translate(" + margin.left + "," + margin.top + ")");
 
@@ -115,21 +161,10 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
  node.on("mouseover", function(d) {
      d3.select(this)
          .attr("font-weight", "bold");
-     console.log(d);
-     link
-         .transition()
-         .duration(300)
-         .style("stroke-opacity", function(l) {
-	    return l.source === d || l.target === d ? 0.5 : 0.2;
-         });
  })
  .on("mouseout", function() {
      d3.select(this)
          .attr("font-weight", "normal");
-     link
-         .transition()
-         .duration(300)
-         .style("stroke-opacity", 0.2);
  });
 
 // Add hover effects to links
