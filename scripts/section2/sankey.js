@@ -114,7 +114,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
  // Add hover effects to nodes
  node.on("mouseover", function(d) {
      var hoveredNode = d3.select(this).datum(); // Get the data associated with the hovered node
-	 
+     console.log(hoveredNode);
      d3.select(this)
          .attr("font-weight", "bold");
 	 
