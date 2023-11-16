@@ -115,6 +115,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
  node.on("mouseover", function(d) {
      d3.select(this)
          .attr("font-weight", "bold");
+     console.log(d);
      link
          .transition()
          .duration(300)
