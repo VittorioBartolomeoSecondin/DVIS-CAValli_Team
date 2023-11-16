@@ -113,15 +113,15 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 
  // Add hover effects to nodes
  node.on("mouseover", function(d) {
-     var hoveredNode = d3.select(this).datum(); // Get the data associated with the hovered node
-     console.log(hoveredNode);
-     d3.select(this)
-         .attr("font-weight", "bold");
-	 
-    // Filter and highlight incoming links based on the target node
-    link.filter(function(linkData) {
-        return linkData.target === hoveredNode;
-    }).attr("stroke-opacity", 0.6);
+    var hoveredNode = d; // Keep a reference to the hovered node's data
+
+    // Highlight the current node
+    d3.select(this).attr("font-weight", "bold");
+
+    // Highlight incoming links based on the targetLinks array of the node
+    hoveredNode.targetLinks.forEach(function(link) {
+        d3.select(link).attr("stroke-opacity", 0.6);
+    });
  })
  .on("mouseout", function() {
      d3.select(this)
