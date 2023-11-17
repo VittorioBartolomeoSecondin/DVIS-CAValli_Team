@@ -124,6 +124,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
     link.attr("stroke-width", function(d) {
 	    console.log(d); 
 	    hoveredNode.srcElement.__data__.targetLinks.forEach(function(targetLink) {
+		    console.log(targetLink);
 		    if (d.source.name == targetLink.source.name && d.target.name == targetLink.target.name) 
 		    	return 10;
 	    });
