@@ -68,8 +68,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
       .attr("id", function(d) {return d.source.name + "->" + d.target.name;})
       .attr("class", "link")
       .attr("d", d3.sankeyLinkHorizontal())
-      .attr("stroke-width", function(d) { return d.width; })
-      .style("fill", "black");
+      .attr("stroke-width", function(d) { return d.width; });
 
   // add the link titles
   link.append("title")
@@ -122,20 +121,20 @@ node.on("mouseover", function (event, d) {
 
     link.filter(function(linkData) {
 	if (linkData.target.name == d.name)
-	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("fill", "red");
+	    document.getElementById(linkData.source.name + "->" + d.name);//.setAttribute("stroke-width", );
     });
     })
     .on("mouseout", function () {
         d3.select(this).attr("font-weight", "normal");
 
 	Array.from(document.getElementsByClassName("link")).forEach(function(element) {
-	    element.removeAttribute("fill");
+	    //element.setAttribute("stroke-width");
         });
     });
 // Add hover effects to links
 link.on("mouseover", function () {
     d3.select(this)
-        .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
+        .attr("stroke-width", function (d) { console.log(d); if (d.width < 4) return 4; else return d.width; });
 })
     .on("mouseout", function () {
         d3.select(this)
