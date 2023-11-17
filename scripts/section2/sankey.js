@@ -113,8 +113,18 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
     .filter(function(d) { return d.x0 < width / 2; })
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
+	
+   // Add hover effects to links
+   link.on("mouseover", function () {
+	d3.select(this)
+	.attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
+   })
+	.on("mouseout", function () {
+	   d3.select(this)
+	     .attr("stroke-width", function (d) { return d.width; });
+	});
 
-  // Add hover effects to nodes
+     // Add hover effects to nodes
   node.on("mouseover", function (event, d) {
        d3.select(this).attr("font-weight", "bold");
 
@@ -133,14 +143,4 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 	           .attr("stroke-width", function (d) { return d.width; });
          });
        });
-	
-   // Add hover effects to links
-   link.on("mouseover", function () {
-	d3.select(this)
-	.attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
-   })
-	.on("mouseout", function () {
-	   d3.select(this)
-	     .attr("stroke-width", function (d) { return d.width; });
-	});
 });
