@@ -121,14 +121,14 @@ node.on("mouseover", function (event, d) {
 
     link.filter(function(linkData) {
 	if (linkData.target.name == d.name)
-	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke-width", function() { if (linkData.width < 4) return 4; else return linkData.width; });
+	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke-width", d.width < 4? 4:d.width);
     });
     })
-    .on("mouseout", function () {
+    .on("mouseout", function (event, d) {
         d3.select(this).attr("font-weight", "normal");
 
 	Array.from(document.getElementsByClassName("link")).forEach(function(element) {
-	    element.setAttribute("stroke-width", element.getAttribute("stroke-width"));
+	    element.setAttribute("stroke-width", d.width);
         });
     });
 // Add hover effects to links
