@@ -128,7 +128,7 @@ node.on("mouseover", function (event, d) {
         d3.select(this).attr("font-weight", "normal");
 
 	Array.from(document.getElementsByClassName("link")).forEach(function(element) {
-	    //element.setAttribute("stroke", "black");
+	    element.removeAttribute("fill");
         });
     });
 // Add hover effects to links
