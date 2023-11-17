@@ -118,14 +118,11 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
   node.on("mouseover", function (event, d) {
        d3.select(this).attr("font-weight", "bold");
 
-       // Log for debugging
-       console.log("Current Node: ", d.name);
-
        link.filter(function(linkData) {
-	   if (linkData.target.name == d.name)
+	   if (linkData.target.name == d.name) {
+		   console.log(document.getElementById(linkData.source.name + "->" + d.name));
 	       d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-	         .attr("stroke-opacity", 1)
-		 .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
+		 .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });}
        });
    })
       .on("mouseout", function (event, d) {
@@ -134,8 +131,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
          link.filter(function(linkData) {
 	     if (linkData.target.name == d.name) 
 	         d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-		   .attr("stroke-opacity", 0.5);
-	           //.attr("stroke-width", function (d) { return d.width; });
+	           .attr("stroke-width", function (d) { return d.width; });
          });
        });
 	
@@ -143,7 +139,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
    link.on("mouseover", function () {
 	console.log(this);
 	d3.select(this)
-	.attr("stroke-width", function (d) { console.log(d); if (d.width < 4) return 4; else return d.width; });
+	.attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
    })
 	.on("mouseout", function () {
 	   d3.select(this)
