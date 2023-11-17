@@ -118,11 +118,9 @@ node.on("mouseover", function (event, d) {
     // Log for debugging
     console.log("Current Node: ", d.name);
 
-    link.filter(linkData => {
-        //console.log("Link Target: ", linkData.target.name);
-	console.log(linkData.target.name === d.name);
+    d3.select(link.filter(linkData => {
         return linkData.target.name === d.name;
-    }).attr("stroke", "red");
+    })).attr("stroke", "red");
     })
     .on("mouseout", function () {
         d3.select(this).attr("font-weight", "normal");
