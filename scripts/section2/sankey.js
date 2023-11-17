@@ -137,6 +137,7 @@ node.on("mouseover", function (event, d) {
 	
 // Add hover effects to links
 link.on("mouseover", function () {
+    console.log(this);
     d3.select(this)
         .attr("stroke-width", function (d) { console.log(d); if (d.width < 4) return 4; else return d.width; });
 })
