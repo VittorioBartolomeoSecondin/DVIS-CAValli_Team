@@ -186,6 +186,6 @@ link.on("mouseover", function() {
 .on("mouseout", function() {
     d3.select(this)
         .attr("stroke-width", function(d) { return d.width; });
-});
-
 });*/
+
+});
