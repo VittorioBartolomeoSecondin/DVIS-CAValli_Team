@@ -67,8 +67,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
     .enter().append("path")
       .attr("class", "link")
       .attr("d", d3.sankeyLinkHorizontal())
-      .attr("stroke-width", function(d) { return d.width; })
-      .attr("stroke", "red");
+      .attr("stroke-width", function(d) { return d.width; });
 
   // add the link titles
   link.append("title")
@@ -121,7 +120,7 @@ node.on("mouseover", function (event, d) {
 
     d3.select(link.filter(linkData => {
         return linkData.target.name === d.name;
-    })).attr("stroke", "red");
+    })).attr("stroke-width", 10);
     })
     .on("mouseout", function () {
         d3.select(this).attr("font-weight", "normal");
