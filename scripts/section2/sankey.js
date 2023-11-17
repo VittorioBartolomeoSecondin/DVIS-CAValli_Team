@@ -123,8 +123,8 @@ node.on("mouseover", function (event, d) {
 
     link.filter(function(linkData) {
 	if (linkData.target.name == d.name) {
-	    document.getElementById(linkData.source.name + "->" + d.name);//this .setAttribute("stroke-width", 4);
-    	    console.log(linkData);
+	    d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+                .attr("stroke-width", function () { if (linkData.width < 4) return 4; else return linkData.width; });
 	}
     });
  })
