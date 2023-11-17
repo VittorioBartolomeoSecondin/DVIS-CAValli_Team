@@ -121,7 +121,7 @@ node.on("mouseover", function (event, d) {
 
     link.filter(function(linkData) {
 	if (linkData.target.name == d.name)
-	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke-width", d.width < 4? 4:d.width);
+	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke-width", linkData.width < 4? 4:linkData.width);
     });
     })
     .on("mouseout", function (event, d) {
