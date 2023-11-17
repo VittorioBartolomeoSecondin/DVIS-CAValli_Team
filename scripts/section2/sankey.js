@@ -130,8 +130,9 @@ node.on("mouseover", function (event, d) {
 
     // Highlight links that reach the hovered node
     link.classed("highlighted", function (linkData) {
-	console.log(d);
-        return linkData.target === d;
+	//console.log(d);
+	console.log(linkData.target);
+        return linkData.target === d.name;
     });
 })
     .on("mouseout", function () {
