@@ -114,72 +114,37 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
 
-// Add hover effects to nodes
-node.on("mouseover", function (event, d) {
-    d3.select(this).attr("font-weight", "bold");
+  // Add hover effects to nodes
+  node.on("mouseover", function (event, d) {
+       d3.select(this).attr("font-weight", "bold");
 
-    // Log for debugging
-    console.log("Current Node: ", d.name);
+       // Log for debugging
+       console.log("Current Node: ", d.name);
 
-    link.filter(function(linkData) {
-	if (linkData.target.name == d.name) {
-	    d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-                .attr("stroke-width", function () { if (linkData.width < 4) return 4; else return linkData.width; });
-	}
-    });
- })
-    .on("mouseout", function (event, d) {
-        d3.select(this).attr("font-weight", "normal");
+       link.filter(function(linkData) {
+	   if (linkData.target.name == d.name)
+	       d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+		 .attr("stroke-width", function () { if (linkData.width < 4) return 4; else return linkData.width; });
+       });
+   })
+      .on("mouseout", function (event, d) {
+         d3.select(this).attr("font-weight", "normal");
 
-	    link.filter(function(linkData) {
-	if (linkData.target.name == d.name) {
-	    d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-                .attr("stroke-width", function () { return linkData.width; });
-	}
-    });
-	/*// restore each link to its original stroke-width
-	Array.from(document.getElementsByClassName("link")).forEach(function(element) {
-	    element.setAttribute("stroke-width", d.originalStrokeWidth);
-        });*/
-     });
+         link.filter(function(linkData) {
+	     if (linkData.target.name == d.name) 
+	         d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+	           .attr("stroke-width", function () { return linkData.width; });
+         });
+       });
 	
-// Add hover effects to links
-link.on("mouseover", function () {
-    console.log(this);
-    d3.select(this)
-        .attr("stroke-width", function (d) { console.log(d); if (d.width < 4) return 4; else return d.width; });
-})
-    .on("mouseout", function () {
-        d3.select(this)
-            .attr("stroke-width", function (d) { return d.width; });
-    });
-
-/*
- // Add hover effects to nodes
- node.on("mouseover", function(d) {
-    d3.select(this)
-	 .attr("font-weight", "bold");
-
-    console.log(d);
-    // Retrieve incoming links for the hovered node
-    var incomingLinks = graph.links.filter(function(link) {
-	console.log(link);
-        return link.target === d; // Assuming link.target represents the node the link is entering
-    });
- })
- .on("mouseout", function() {
-     d3.select(this)
-         .attr("font-weight", "normal");
- });
-
-// Add hover effects to links
-link.on("mouseover", function() {
-    d3.select(this)
-        .attr("stroke-width", function(d) { console.log(d.width); if (d.width < 4) return 4; else return d.width; });
-})
-.on("mouseout", function() {
-    d3.select(this)
-        .attr("stroke-width", function(d) { return d.width; });
-});*/
-
+   // Add hover effects to links
+   link.on("mouseover", function () {
+	console.log(this);
+	d3.select(this)
+	.attr("stroke-width", function (d) { console.log(d); if (d.width < 4) return 4; else return d.width; });
+   })
+	.on("mouseout", function () {
+	   d3.select(this)
+	     .attr("stroke-width", function (d) { return d.width; });
+	});
 });
