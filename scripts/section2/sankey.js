@@ -122,9 +122,10 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 
     // Filter and highlight incoming links based on the target node
     link.attr("stroke-width", function(d) {
-	    console.log(d); 
+	    console.log(d.source);
+	    console.log(d.target);
 	    hoveredNode.srcElement.__data__.targetLinks.forEach(function(targetLink) {
-		    console.log(targetLink);
+		    console.log(targetLink.source);
 		    if (d.source.name == targetLink.source.name && d.target.name == targetLink.target.name) 
 		    	return 10;
 	    });
