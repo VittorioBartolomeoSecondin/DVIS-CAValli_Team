@@ -131,8 +131,12 @@ node.on("mouseover", function (event, d) {
     // Highlight links that reach the hovered node
     link.classed("highlighted", function (linkData) {
 	//console.log(d);
-	console.log(linkData.target);
-        return linkData.target === d.name;
+	//console.log(linkData.target);
+	if (linkData.target.name === d.name) {
+	   console.log(linkData.target.name);
+	   console.log(d.name);
+           return linkData.target.name === d.name;
+	}
     });
 })
     .on("mouseout", function () {
