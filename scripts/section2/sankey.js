@@ -124,6 +124,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
        link.filter(function(linkData) {
 	   if (linkData.target.name == d.name)
 	       d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+	         .attr("stroke-opacity", 1);
 		 .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
        });
    })
@@ -133,7 +134,8 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
          link.filter(function(linkData) {
 	     if (linkData.target.name == d.name) 
 	         d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-	           .attr("stroke-width", function (d) { return d.width; });
+		   .attr("stroke-opacity", 0.5);
+	           //.attr("stroke-width", function (d) { return d.width; });
          });
        });
 	
