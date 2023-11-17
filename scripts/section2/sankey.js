@@ -123,7 +123,8 @@ node.on("mouseover", function (event, d) {
 
     link.filter(function(linkData) {
 	if (linkData.target.name == d.name)
-	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke-width", 4);
+	    document.getElementById(linkData.source.name + "->" + d.name);//this .setAttribute("stroke-width", 4);
+    	    console.log(linkData);
     });
  })
     .on("mouseout", function (event, d) {
