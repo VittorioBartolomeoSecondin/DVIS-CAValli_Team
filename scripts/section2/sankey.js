@@ -120,7 +120,7 @@ node.on("mouseover", function (event, d) {
 
     d3.select(link.filter(linkData => {
         return linkData.target.name === d.name;
-    })).attr("stroke-width", 10);
+    })).style("stroke", "red");
     })
     .on("mouseout", function () {
         d3.select(this).attr("font-weight", "normal");
