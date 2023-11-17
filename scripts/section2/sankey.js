@@ -60,27 +60,14 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
   });
 
   graph = sankey(sankeydata);
-
-  // Create a group for link highlights
-  var linkHighlightGroup = svg.append("g").attr("class", "link-highlights");
 	
   // add in the links
-  /*var link = svg.append("g").selectAll(".link")
+  var link = svg.append("g").selectAll(".link")
       .data(graph.links)
     .enter().append("path")
       .attr("class", "link")
       .attr("d", d3.sankeyLinkHorizontal())
-      .attr("stroke-width", function(d) { return d.width; });*/
-
-    // Add in the links
-    var link = svg.append("g").selectAll(".link")
-      .data(graph.links)
-      .enter().append("path")
-      .attr("class", function (d) {
-	return "link " + "source-" + d.source.index + " target-" + d.target.index;
-      })
-      .attr("d", d3.sankeyLinkHorizontal())
-      .attr("stroke-width", function (d) { return d.width; });
+      .attr("stroke-width", function(d) { return d.width; });
 
   // add the link titles
   link.append("title")
@@ -129,21 +116,12 @@ node.on("mouseover", function (event, d) {
     d3.select(this).attr("font-weight", "bold");
 
     // Highlight links that reach the hovered node
-    link.classed("highlighted", function (linkData) {
-	//console.log(d);
-	//console.log(linkData.target);
-	if (linkData.target.name === d.name) {
-	   console.log(linkData.target.name);
-	   console.log(d.name);
-           return linkData.target.name === d.name;
-	}
-    });
-})
+    link.filter(linkData => linkData.target.name === d.name).attr("stroke", "red"); // You can customize the highlighting style here
+    })
     .on("mouseout", function () {
         d3.select(this).attr("font-weight", "normal");
 
-        // Remove highlight from links
-        link.classed("highlighted", false);
+        link.attr("stroke", "#000"); // Reset to the default link color
     });
 // Add hover effects to links
 link.on("mouseover", function () {
@@ -155,17 +133,6 @@ link.on("mouseover", function () {
             .attr("stroke-width", function (d) { return d.width; });
     });
 
-// Add hover effects to highlighted links
-linkHighlightGroup.selectAll(".link.highlighted")
-    .on("mouseover", function () {
-        d3.select(this)
-            .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; })
-	    .attr("fill", "steelblue");
-    })
-    .on("mouseout", function () {
-        d3.select(this)
-            .attr("stroke-width", function (d) { return d.width; });
-    });
 /*
  // Add hover effects to nodes
  node.on("mouseover", function(d) {
