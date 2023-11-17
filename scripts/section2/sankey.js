@@ -124,6 +124,8 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
 
+console.log(link);
+
 // Add hover effects to nodes
 node.on("mouseover", function (d) {
     d3.select(this).attr("font-weight", "bold");
