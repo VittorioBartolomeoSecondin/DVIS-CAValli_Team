@@ -119,10 +119,9 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
        d3.select(this).attr("font-weight", "bold");
 
        link.filter(function(linkData) {
-	   if (linkData.target.name == d.name) {
-		   console.log(document.getElementById(linkData.source.name + "->" + d.name));
+	   if (linkData.target.name == d.name) 
 	       d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-		 .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });}
+		 .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
        });
    })
       .on("mouseout", function (event, d) {
@@ -137,7 +136,6 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 	
    // Add hover effects to links
    link.on("mouseover", function () {
-	console.log(this);
 	d3.select(this)
 	.attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
    })
