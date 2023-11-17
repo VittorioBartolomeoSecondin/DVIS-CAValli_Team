@@ -131,6 +131,12 @@ node.on("mouseover", function (event, d) {
     .on("mouseout", function (event, d) {
         d3.select(this).attr("font-weight", "normal");
 
+	    link.filter(function(linkData) {
+	if (linkData.target.name == d.name) {
+	    d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+                .attr("stroke-width", function () { return linkData.width; });
+	}
+    });
 	/*// restore each link to its original stroke-width
 	Array.from(document.getElementsByClassName("link")).forEach(function(element) {
 	    element.setAttribute("stroke-width", d.originalStrokeWidth);
