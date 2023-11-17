@@ -119,9 +119,10 @@ node.on("mouseover", function (event, d) {
     // Log for debugging
     console.log("Current Node: ", d.name);
 
-    d3.select(link.filter(linkData => {
-        return linkData.target.name === d.name;
-    })).style("stroke", "red");
+    link.filter(function(linkData) {
+	if (linkData.target.name == d.name)
+	    document.getElementById(linkData.source.name + "->" + d.name).attr("stroke-width", 10);
+    });
     })
     .on("mouseout", function () {
         d3.select(this).attr("font-weight", "normal");
