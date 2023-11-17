@@ -122,9 +122,10 @@ node.on("mouseover", function (event, d) {
     console.log("Current Node: ", d.name);
 
     link.filter(function(linkData) {
-	if (linkData.target.name == d.name)
+	if (linkData.target.name == d.name) {
 	    document.getElementById(linkData.source.name + "->" + d.name);//this .setAttribute("stroke-width", 4);
     	    console.log(linkData);
+	}
     });
  })
     .on("mouseout", function (event, d) {
