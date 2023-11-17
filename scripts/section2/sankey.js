@@ -69,8 +69,6 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
       .attr("class", "link")
       .attr("d", d3.sankeyLinkHorizontal())
       .attr("stroke-width", function(d) {
-         // Store original stroke-width in the data
-         d.originalStrokeWidth = d.width; 
          return d.width;
       });
 
@@ -123,13 +121,10 @@ node.on("mouseover", function (event, d) {
     // Log for debugging
     console.log("Current Node: ", d.name);
 
-	Array.from(document.getElementsByClassName("link")).forEach(function(element) {
-	    element.setAttribute("stroke-width", d.originalStrokeWidth);
-        });
-    /*link.filter(function(linkData) {
+    link.filter(function(linkData) {
 	if (linkData.target.name == d.name)
 	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke-width", 4);
-    });*/
+    });
  })
     .on("mouseout", function (event, d) {
         d3.select(this).attr("font-weight", "normal");
