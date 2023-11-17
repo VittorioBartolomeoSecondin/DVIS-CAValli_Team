@@ -121,8 +121,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
        link.filter(function(linkData) {
 	   if (linkData.target.name == d.name) 
 	       d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-	         .attr("stroke", "green");
-		 //.attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
+		 .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
        });
    })
       .on("mouseout", function (event, d) {
