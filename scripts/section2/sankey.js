@@ -115,8 +115,12 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 node.on("mouseover", function (event, d) {
     d3.select(this).attr("font-weight", "bold");
 
+    // Log for debugging
+    console.log("Current Node: ", d.name);
+
     link.filter(linkData => {
-        console.log("Link Target: ", linkData.target.name);
+        //console.log("Link Target: ", linkData.target.name);
+	console.log(linkData.target.name === d.name);
         return linkData.target.name === d.name;
     }).attr("stroke", "red");
     })
