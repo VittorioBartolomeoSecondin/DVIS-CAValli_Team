@@ -121,9 +121,9 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
    console.log(d.srcElement.__data__.targetLinks[0].source.name);
 
     // Filter and highlight incoming links based on the target node
-    link.filter(function(linkData) {
-        return linkData.target === hoveredNode;
-    }).attr("stroke-opacity", 0.6);
+    link.attr("stroke-opacity", function(d) {if (d.source.name == hoveredNode.srcElement.__data__.targetLinks[0].source.name && 
+						 d.target.name == hoveredNode.srcElement.__data__.targetLinks[0].target.name) return 0.4;
+					    });
  })
  .on("mouseout", function() {
      d3.select(this)
