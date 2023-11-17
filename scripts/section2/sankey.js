@@ -123,18 +123,21 @@ node.on("mouseover", function (event, d) {
     // Log for debugging
     console.log("Current Node: ", d.name);
 
-    link.filter(function(linkData) {
+	Array.from(document.getElementsByClassName("link")).forEach(function(element) {
+	    element.setAttribute("stroke-width", d.originalStrokeWidth);
+        });
+    /*link.filter(function(linkData) {
 	if (linkData.target.name == d.name)
 	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke-width", 4);
-    });
+    });*/
  })
     .on("mouseout", function (event, d) {
         d3.select(this).attr("font-weight", "normal");
 
-	// restore each link to its original stroke-width
+	/*// restore each link to its original stroke-width
 	Array.from(document.getElementsByClassName("link")).forEach(function(element) {
 	    element.setAttribute("stroke-width", d.originalStrokeWidth);
-        });
+        });*/
      });
 	
 // Add hover effects to links
