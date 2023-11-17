@@ -115,6 +115,15 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
  node.on("mouseover", function(d) {
     d3.select(this)
 	 .attr("font-weight", "bold");
+
+    // Retrieve incoming links for the hovered node
+    var incomingLinks = graph.links.filter(function(link) {
+	console.log(link);
+        return link.target === d; // Assuming link.target represents the node the link is entering
+    });
+
+    // Now you have references to the incoming links for the hovered node
+    console.log("Incoming Links:", incomingLinks);
  })
  .on("mouseout", function() {
      d3.select(this)
