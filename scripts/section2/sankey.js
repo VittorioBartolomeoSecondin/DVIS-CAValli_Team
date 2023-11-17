@@ -121,8 +121,8 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
    console.log(d.srcElement.__data__.targetLinks[0].source.name);
 
     // Filter and highlight incoming links based on the target node
-    link.attr("stroke-opacity", function(d) {console.log(d); if (d.source.name == hoveredNode.srcElement.__data__.targetLinks[0].source.name && 
-						 d.target.name == hoveredNode.srcElement.__data__.targetLinks[0].target.name) return 0.4;
+    link.attr("stroke-width", function(d) {console.log(d); if (d.source.name == hoveredNode.srcElement.__data__.targetLinks[0].source.name && 
+						 d.target.name == hoveredNode.srcElement.__data__.targetLinks[0].target.name) return 10;
 					    });
  })
  .on("mouseout", function() {
