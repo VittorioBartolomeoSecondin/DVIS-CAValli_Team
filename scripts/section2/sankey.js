@@ -68,7 +68,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
       .attr("id", function(d) {return d.source.name + "->" + d.target.name;})
       .attr("class", "link")
       .attr("d", d3.sankeyLinkHorizontal())
-      .attr("stroke-width", function(d) { return d.width; }
+      .attr("stroke-width", function(d) { return d.width; })
       .attr("fill", "black");
 
   // add the link titles
