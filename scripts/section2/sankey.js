@@ -127,14 +127,14 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 console.log(link);
 
 // Add hover effects to nodes
-node.on("mouseover", function (d) {
+node.on("mouseover", function (event, d) {
     d3.select(this).attr("font-weight", "bold");
 
     // Highlight links that reach the hovered node
     link.classed("highlighted", function (linkData) {
 	console.log(d);
 	console.log(linkData);
-        return linkData.target === d || linkData.source === d;
+        return linkData.target === d;
     });
 })
     .on("mouseout", function () {
