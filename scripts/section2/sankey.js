@@ -133,7 +133,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
          link.filter(function(linkData) {
 	     if (linkData.target.name == d.name) 
 	         d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-	           .attr("stroke-width", function () { return linkData.width; });
+	           .attr("stroke-width", function (d) { return d.width; });
          });
        });
 	
