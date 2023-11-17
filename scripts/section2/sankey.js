@@ -121,13 +121,13 @@ node.on("mouseover", function (event, d) {
 
     link.filter(function(linkData) {
 	if (linkData.target.name == d.name)
-	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke-width", 10);
+	    document.getElementById(linkData.source.name + "->" + d.name).setAttribute("stroke", "red");
     });
     })
     .on("mouseout", function () {
         d3.select(this).attr("font-weight", "normal");
 
-        link.attr("stroke", "#000"); // Reset to the default link color
+        document.getElementsByClassName("link").setAttribute("stroke", "black");
     });
 // Add hover effects to links
 link.on("mouseover", function () {
