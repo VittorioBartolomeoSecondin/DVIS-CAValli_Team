@@ -1,3 +1,7 @@
+* {
+    max-width: 100%;
+}
+
 body {
     font-family: 'Fira Sans';
     min-height: 100vh;
