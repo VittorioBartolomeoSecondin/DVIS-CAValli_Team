@@ -153,7 +153,8 @@ link.on("mouseover", function () {
 linkHighlightGroup.selectAll(".link.highlighted")
     .on("mouseover", function () {
         d3.select(this)
-            .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
+            .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; })
+	    .attr("fill", "steelblue");
     })
     .on("mouseout", function () {
         d3.select(this)
@@ -186,5 +187,5 @@ link.on("mouseover", function() {
     d3.select(this)
         .attr("stroke-width", function(d) { return d.width; });
 });
-*/
-});
+
+});*/
