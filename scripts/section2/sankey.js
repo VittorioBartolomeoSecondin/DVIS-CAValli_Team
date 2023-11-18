@@ -114,7 +114,7 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
 
-   var showing_connections = false;
+   var showing_connections = false; // false
 
    node.on("mouseover", function (event, d) {
     // Highlight the current node
@@ -126,53 +126,36 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
    });
 
    
-var prevClickedNode = null;
-
-// Add hover effects to nodes
-node.on("click", function(event, d) {
-    // Toggle the state when a node is clicked
-    showing_connections = !showing_connections;
-
-    // Check if it's the same node as previously clicked
-    if (prevClickedNode && prevClickedNode !== d) {
-        link.each(function(linkData) {
-            if (linkData.target.name === prevClickedNode.name) {
-                d3.select(document.getElementById(linkData.source.name + "->" + prevClickedNode.name))
-                    .style("stroke-opacity", 0.2)
-                    .attr("stroke-width", function(d) { return d.width; });
-            }
-        });
-    }
-
-    // Update the link styles based on the state
-    link.each(function(linkData) {
-        if (linkData.target.name === d.name) {
-            d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-                .style("stroke-opacity", showing_connections ? 0.5 : 0.2)
-                .attr("stroke-width", function(d) { return Math.max(4, d.width); });
-        }
-    });
-
-    // Keep track of the clicked node
-    prevClickedNode = d;
-});
-   /*// Add hover effects to nodes
-   node.on("click", function(event, d) {
-	   
-      // Toggle the state when a node is clicked
-      showing_connections = !showing_connections;
-	   
-      // Update the link styles based on the state
-      link.each(function(linkData) {
-	if (linkData.target.name === d.name) {
-	    var linkElement = d3.select(document.getElementById(linkData.source.name + "->" + d.name));
-	    if (showing_connections) 
-		    linkElement.style("stroke-opacity", 0.5).attr("stroke-width", function(d) { return Math.max(4, d.width); });
-	     else
-		linkElement.style("stroke-opacity", 0.2).attr("stroke-width", function(d) { return d.width; });
-	}
-      });
-   });*/
+	var prevClickedNode = null; // d
+	
+	// Add hover effects to nodes
+	node.on("click", function(event, d) {
+	    // Toggle the state when a node is clicked
+	    showing_connections = !showing_connections;
+	
+	    // Check if it's the same node as previously clicked
+	    if (prevClickedNode && prevClickedNode !== d) {
+		link.each(function(linkData) {
+		    if (linkData.target.name === prevClickedNode.name) {
+			d3.select(document.getElementById(linkData.source.name + "->" + prevClickedNode.name))
+			    .style("stroke-opacity", 0.2)
+			    .attr("stroke-width", function(d) { return d.width; });
+		    }
+		});
+	    }
+	
+	    // Update the link styles based on the state
+	    link.each(function(linkData) {
+		if (linkData.target.name === d.name) {
+		    d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+			.style("stroke-opacity", showing_connections ? 0.5 : 0.2)
+			.attr("stroke-width", function(d) { return showing_connections ? Math.max(4, d.width) : d.width; });
+		}
+	    });
+	
+	    // Keep track of the clicked node
+	    prevClickedNode = d;
+	});
   
    // Add hover effects to links
    link.on("mouseover", function () {
