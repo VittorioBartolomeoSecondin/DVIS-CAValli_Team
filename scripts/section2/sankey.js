@@ -116,10 +116,17 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 
    var showing_connections = false;
 
+  node.on("mouseover", function (event, d) {
+    // Highlight the current node
+    d3.select(this).attr("font-weight", "bold");
+})
+.on("mouseout", function () {
+    // Reset styles on mouseout
+    d3.select(this).attr("font-weight", "normal");
+});
+
    // Add hover effects to nodes
    node.on("click", function(event, d) {
-      d3.select(this).attr("font-weight", "bold");
-
       // Toggle the state when a node is clicked
       showing_connections = !showing_connections;
 
