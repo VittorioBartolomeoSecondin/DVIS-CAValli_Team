@@ -127,15 +127,20 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
 
    // Add hover effects to nodes
    node.on("click", function(event, d) {
+	   
+      // Toggle the state when a node is clicked
+      showing_connections = !showing_connections;
+	   
       // Update the link styles based on the state
       link.each(function(linkData) {
-	var linkElement = d3.select(document.getElementById(linkData.source.name + "->" + d.name));
-	linkElement.style("stroke-opacity", 0.2).attr("stroke-width", function(d) { return d.width; });
-	if (linkData.target.name === d.name && !showing_connections) 
-		linkElement.style("stroke-opacity", 0.5).attr("stroke-width", function(d) { return Math.max(4, d.width); });
+	if (linkData.target.name === d.name) {
+	    var linkElement = d3.select(document.getElementById(linkData.source.name + "->" + d.name));
+	    if (showing_connections) 
+		    linkElement.style("stroke-opacity", 0.5).attr("stroke-width", function(d) { return Math.max(4, d.width); });
+	     else
+		linkElement.style("stroke-opacity", 0.2).attr("stroke-width", function(d) { return d.width; });
+	}
       });
-
-      showing_connections = !showing_connections;
    });
   
    // Add hover effects to links
