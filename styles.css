@@ -166,8 +166,8 @@ footer .cr-con{
 #central_button {
   /* Match Bootstrap button styles */
   display: inline-block;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  padding: 0.5rem 1rem; /* Increased padding for a larger button */
+  font-size: 1.1rem; /* Slightly larger font size */
   font-weight: 400;
   line-height: 1.5;
   text-align: center;
