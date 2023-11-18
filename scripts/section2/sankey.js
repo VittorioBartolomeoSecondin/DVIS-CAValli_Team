@@ -140,6 +140,8 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
 		linkElement.style("stroke-opacity", 0.2).attr("stroke-width", function(d) { return d.width; });
 	}
       });
+	   
+      showing_connections = !showing_connections
    });
   
    // Add hover effects to links
