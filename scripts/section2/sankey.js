@@ -125,7 +125,38 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
     d3.select(this).attr("font-weight", "normal");
    });
 
-   // Add hover effects to nodes
+   
+var prevClickedNode = null;
+
+// Add hover effects to nodes
+node.on("click", function(event, d) {
+    // Toggle the state when a node is clicked
+    showing_connections = !showing_connections;
+
+    // Check if it's the same node as previously clicked
+    if (prevClickedNode && prevClickedNode !== d) {
+        link.each(function(linkData) {
+            if (linkData.target.name === prevClickedNode.name) {
+                d3.select(document.getElementById(linkData.source.name + "->" + prevClickedNode.name))
+                    .style("stroke-opacity", 0.2)
+                    .attr("stroke-width", function(d) { return d.width; });
+            }
+        });
+    }
+
+    // Update the link styles based on the state
+    link.each(function(linkData) {
+        if (linkData.target.name === d.name) {
+            d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+                .style("stroke-opacity", showing_connections ? 0.5 : 0.2)
+                .attr("stroke-width", function(d) { return Math.max(4, d.width); });
+        }
+    });
+
+    // Keep track of the clicked node
+    prevClickedNode = d;
+});
+   /*// Add hover effects to nodes
    node.on("click", function(event, d) {
 	   
       // Toggle the state when a node is clicked
@@ -141,7 +172,7 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
 		linkElement.style("stroke-opacity", 0.2).attr("stroke-width", function(d) { return d.width; });
 	}
       });
-   });
+   });*/
   
    // Add hover effects to links
    link.on("mouseover", function () {
