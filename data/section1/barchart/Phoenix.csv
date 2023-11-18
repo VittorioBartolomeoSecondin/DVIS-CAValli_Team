@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Fraxinus velutina,19,Modesto ash,126.08,54.6
-Syagrus romanzoffiana,16,Queen palm,73.8,22.41
-Cercidium floridum,14,Palo verde,6.17,21.43
-Fraxinus,12,Ash,106.58,27.78
-Citrus paradisi,11,Grapefruit,22.7,19.77
-Morus alba,10,White mulberry,80.21,34.26
-Pinus halepensis,9,Aleppo pine,125.99,46.43
-Ficus microcarpa,8,Indian laurel fig,110.19,39.3
-Citrus aurantium,7,Sour orange,18.2,11.85
-Searsia lancea,6,African sumac,7.38,32.42
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Fraxinus velutina,19,Modesto ash,Fraxinus,Oleaceae,Lamiales,126.08,54.6
+Syagrus romanzoffiana,16,Queen palm,Syagrus,Arecaceae,Arecales,73.8,22.41
+Cercidium floridum,14,Palo verde,Parkinsonia,Fabaceae,Fabales,6.17,21.43
+Fraxinus,12,Ash,Fraxinus,Oleaceae,Lamiales,106.58,27.78
+Citrus paradisi,11,Grapefruit,Citrus,Rutaceae,Sapindales,22.7,19.77
+Morus alba,10,White mulberry,Morus,Moraceae,Rosales,80.21,34.26
+Pinus halepensis,9,Aleppo pine,Pinus,Pinaceae,Pinales,125.99,46.43
+Ficus microcarpa,8,Indian laurel fig,Ficus,Moraceae,Rosales,110.19,39.3
+Citrus aurantium,7,Sour orange,Citrus,Rutaceae,Sapindales,18.2,11.85
+Searsia lancea,6,African sumac,Searsia,Anacardiaceae,Sapindales,7.38,32.42

@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Lagerstroemia,713,Common crapemyrtle,9.37,19.4
-Quercus phellos,523,Willow oak,73.64,42.91
-Carya illinoinensis,437,Pecan,105.78,44.7
-Ulmus,405,Elm,64.26,20.35
-Celtis occidentalis,295,Common hackberry,94.87,25.37
-Cornus florida,248,Flowering dogwood,36.89,11.77
-Acer saccharum,238,Sugar maple,93.8,26.35
-Morus,222,Mulberry,54.68,35.97
-Acer rubrum,221,Red maple,86.51,24.76
-Juglans nigra,220,Black walnut,129.91,36.07
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Lagerstroemia,715,Common crapemyrtle,Lagerstroemia,Lythraceae,Myrtales,9.37,19.4
+Quercus phellos,523,Willow oak,Quercus,Fagaceae,Fagales,73.64,42.91
+Carya illinoinensis,437,Pecan,Carya,Juglandaceae,Fagales,105.78,44.7
+Ulmus,405,Elm,Ulmus,Ulmaceae,Rosales,64.26,20.33
+Celtis occidentalis,295,Common hackberry,Celtis,Cannabaceae,Rosales,94.87,25.37
+Cornus florida,248,Flowering dogwood,Cornus,Cornaceae,Cornales,36.89,11.77
+Acer saccharum,238,Sugar maple,Acer,Sapindaceae,Sapindales,93.8,26.35
+Morus,222,Mulberry,Morus,Moraceae,Rosales,54.68,35.97
+Acer rubrum,221,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Juglans nigra,220,Black walnut,Juglans,Juglandaceae,Fagales,129.91,36.07

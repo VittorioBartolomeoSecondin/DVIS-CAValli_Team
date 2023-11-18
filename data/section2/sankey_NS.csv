@@ -1,19 +1,18 @@
 source,target,value
-33 USA states,North,1870123
-33 USA states,West,2577322
-33 USA states,South,733127
+33 USA states,North,2462814
+33 USA states,South,2717758
 North,New York,787349
+North,Colorado,354878
+North,Oregon,216751
 North,Minnesota,176834
-North,District of Columbia,175847
+North,Washington,164903
 North,Ohio,140876
-North,Wisconsin,127623
-North,Indiana,97227
-West,California,1806085
-West,Colorado,354878
-West,Oregon,216751
+South,California,1806085
 South,Texas,264285
+South,District of Columbia,175847
 South,Florida,124208
 South,Maryland,121279
+South,Louisiana,105786
 New York,New York City,652169
 New York City,Sapindaceae,93745
 New York City,Rosaceae,109131
@@ -51,6 +50,63 @@ Buffalo,Cannabaceae,830
 Buffalo,Moraceae,108
 Buffalo,Betulaceae,1393
 Buffalo,Bignoniaceae,264
+Colorado,Denver,284351
+Denver,Sapindaceae,44267
+Denver,Rosaceae,31413
+Denver,Fagaceae,22646
+Denver,Fabaceae,30968
+Denver,Oleaceae,39818
+Denver,Ulmaceae,19667
+Denver,Platanaceae,2049
+Denver,Pinaceae,31069
+Denver,Malvaceae,18912
+Denver,Myrtaceae,62
+Denver,Cupressaceae,6598
+Denver,Magnoliaceae,357
+Denver,Altingiaceae,84
+Denver,Anacardiaceae,427
+Denver,Cannabaceae,9477
+Denver,Moraceae,443
+Denver,Betulaceae,1279
+Denver,Bignoniaceae,3579
+Colorado,Aurora,55619
+Aurora,Sapindaceae,9788
+Aurora,Rosaceae,4146
+Aurora,Fagaceae,2469
+Aurora,Fabaceae,10802
+Aurora,Oleaceae,6440
+Aurora,Ulmaceae,2408
+Aurora,Platanaceae,9
+Aurora,Pinaceae,4724
+Aurora,Malvaceae,8098
+Aurora,Cupressaceae,332
+Aurora,Magnoliaceae,23
+Aurora,Anacardiaceae,13
+Aurora,Cannabaceae,2493
+Aurora,Moraceae,15
+Aurora,Betulaceae,10
+Aurora,Bignoniaceae,286
+Oregon,Portland,216751
+Portland,Sapindaceae,59875
+Portland,Rosaceae,53119
+Portland,Fagaceae,9151
+Portland,Fabaceae,5354
+Portland,Oleaceae,10712
+Portland,Ulmaceae,5267
+Portland,Platanaceae,1300
+Portland,Pinaceae,9147
+Portland,Lythraceae,852
+Portland,Arecaceae,325
+Portland,Malvaceae,5613
+Portland,Myrtaceae,96
+Portland,Cupressaceae,4478
+Portland,Magnoliaceae,4192
+Portland,Altingiaceae,3703
+Portland,Anacardiaceae,823
+Portland,Cannabaceae,334
+Portland,Moraceae,681
+Portland,Betulaceae,11103
+Portland,Bignoniaceae,451
 Minnesota,Minneapolis,176834
 Minneapolis,Sapindaceae,47900
 Minneapolis,Rosaceae,3968
@@ -68,25 +124,27 @@ Minneapolis,Cannabaceae,12736
 Minneapolis,Moraceae,207
 Minneapolis,Betulaceae,1883
 Minneapolis,Bignoniaceae,245
-District of Columbia,Washington DC,175847
-Washington DC,Sapindaceae,28636
-Washington DC,Rosaceae,15677
-Washington DC,Fagaceae,40216
-Washington DC,Fabaceae,12373
-Washington DC,Oleaceae,2040
-Washington DC,Ulmaceae,22022
-Washington DC,Platanaceae,7478
-Washington DC,Pinaceae,7905
-Washington DC,Lythraceae,4353
-Washington DC,Malvaceae,5582
-Washington DC,Cupressaceae,2592
-Washington DC,Magnoliaceae,3257
-Washington DC,Altingiaceae,4185
-Washington DC,Anacardiaceae,1996
-Washington DC,Cannabaceae,2549
-Washington DC,Moraceae,495
-Washington DC,Betulaceae,3557
-Washington DC,Bignoniaceae,126
+Washington,Seattle,164903
+Seattle,Sapindaceae,37081
+Seattle,Rosaceae,54845
+Seattle,Fagaceae,7779
+Seattle,Fabaceae,4529
+Seattle,Oleaceae,5172
+Seattle,Ulmaceae,4153
+Seattle,Platanaceae,1893
+Seattle,Pinaceae,4929
+Seattle,Lythraceae,596
+Seattle,Arecaceae,245
+Seattle,Malvaceae,4373
+Seattle,Myrtaceae,74
+Seattle,Cupressaceae,4813
+Seattle,Magnoliaceae,3747
+Seattle,Altingiaceae,3390
+Seattle,Anacardiaceae,395
+Seattle,Cannabaceae,141
+Seattle,Moraceae,281
+Seattle,Betulaceae,8624
+Seattle,Bignoniaceae,390
 Ohio,Columbus,140876
 Columbus,Sapindaceae,36773
 Columbus,Rosaceae,23939
@@ -105,58 +163,6 @@ Columbus,Cannabaceae,2048
 Columbus,Moraceae,987
 Columbus,Betulaceae,2811
 Columbus,Bignoniaceae,533
-Wisconsin,Madison,95557
-Madison,Sapindaceae,29231
-Madison,Rosaceae,4338
-Madison,Fagaceae,1804
-Madison,Fabaceae,14587
-Madison,Oleaceae,23272
-Madison,Ulmaceae,3892
-Madison,Platanaceae,119
-Madison,Pinaceae,1160
-Madison,Malvaceae,11799
-Madison,Cupressaceae,598
-Madison,Magnoliaceae,25
-Madison,Altingiaceae,1
-Madison,Cannabaceae,2667
-Madison,Moraceae,99
-Madison,Betulaceae,570
-Madison,Bignoniaceae,70
-Wisconsin,Milwaukee,32066
-Milwaukee,Sapindaceae,6861
-Milwaukee,Rosaceae,3537
-Milwaukee,Fagaceae,2904
-Milwaukee,Fabaceae,3053
-Milwaukee,Oleaceae,5606
-Milwaukee,Ulmaceae,610
-Milwaukee,Platanaceae,113
-Milwaukee,Pinaceae,2894
-Milwaukee,Malvaceae,2192
-Milwaukee,Cupressaceae,381
-Milwaukee,Magnoliaceae,28
-Milwaukee,Altingiaceae,2
-Milwaukee,Cannabaceae,1576
-Milwaukee,Moraceae,104
-Milwaukee,Betulaceae,512
-Milwaukee,Bignoniaceae,59
-Indiana,Indianapolis,97227
-Indianapolis,Sapindaceae,16280
-Indianapolis,Rosaceae,13123
-Indianapolis,Fagaceae,5258
-Indianapolis,Fabaceae,5475
-Indianapolis,Oleaceae,11023
-Indianapolis,Ulmaceae,6550
-Indianapolis,Platanaceae,1724
-Indianapolis,Pinaceae,11701
-Indianapolis,Malvaceae,1657
-Indianapolis,Cupressaceae,2160
-Indianapolis,Magnoliaceae,1455
-Indianapolis,Altingiaceae,1478
-Indianapolis,Anacardiaceae,113
-Indianapolis,Cannabaceae,5940
-Indianapolis,Moraceae,3224
-Indianapolis,Betulaceae,1082
-Indianapolis,Bignoniaceae,1188
 California,Los Angeles,581946
 Los Angeles,Sapindaceae,16735
 Los Angeles,Rosaceae,31429
@@ -281,63 +287,6 @@ Sacramento,Anacardiaceae,4688
 Sacramento,Cannabaceae,2167
 Sacramento,Moraceae,638
 Sacramento,Betulaceae,664
-Colorado,Denver,284351
-Denver,Sapindaceae,44267
-Denver,Rosaceae,31413
-Denver,Fagaceae,22646
-Denver,Fabaceae,30968
-Denver,Oleaceae,39818
-Denver,Ulmaceae,19667
-Denver,Platanaceae,2049
-Denver,Pinaceae,31069
-Denver,Malvaceae,18912
-Denver,Myrtaceae,62
-Denver,Cupressaceae,6598
-Denver,Magnoliaceae,357
-Denver,Altingiaceae,84
-Denver,Anacardiaceae,427
-Denver,Cannabaceae,9477
-Denver,Moraceae,443
-Denver,Betulaceae,1279
-Denver,Bignoniaceae,3579
-Colorado,Aurora,55619
-Aurora,Sapindaceae,9788
-Aurora,Rosaceae,4146
-Aurora,Fagaceae,2469
-Aurora,Fabaceae,10802
-Aurora,Oleaceae,6440
-Aurora,Ulmaceae,2408
-Aurora,Platanaceae,9
-Aurora,Pinaceae,4724
-Aurora,Malvaceae,8098
-Aurora,Cupressaceae,332
-Aurora,Magnoliaceae,23
-Aurora,Anacardiaceae,13
-Aurora,Cannabaceae,2493
-Aurora,Moraceae,15
-Aurora,Betulaceae,10
-Aurora,Bignoniaceae,286
-Oregon,Portland,216751
-Portland,Sapindaceae,59875
-Portland,Rosaceae,53119
-Portland,Fagaceae,9151
-Portland,Fabaceae,5354
-Portland,Oleaceae,10712
-Portland,Ulmaceae,5267
-Portland,Platanaceae,1300
-Portland,Pinaceae,9147
-Portland,Lythraceae,852
-Portland,Arecaceae,325
-Portland,Malvaceae,5613
-Portland,Myrtaceae,96
-Portland,Cupressaceae,4478
-Portland,Magnoliaceae,4192
-Portland,Altingiaceae,3703
-Portland,Anacardiaceae,823
-Portland,Cannabaceae,334
-Portland,Moraceae,681
-Portland,Betulaceae,11103
-Portland,Bignoniaceae,451
 Texas,Houston,211786
 Houston,Sapindaceae,2118
 Houston,Rosaceae,5622
@@ -377,6 +326,25 @@ Plano,Cannabaceae,3279
 Plano,Moraceae,31
 Plano,Betulaceae,23
 Plano,Bignoniaceae,151
+District of Columbia,Washington DC,175847
+Washington DC,Sapindaceae,28636
+Washington DC,Rosaceae,15677
+Washington DC,Fagaceae,40216
+Washington DC,Fabaceae,12373
+Washington DC,Oleaceae,2040
+Washington DC,Ulmaceae,22022
+Washington DC,Platanaceae,7478
+Washington DC,Pinaceae,7905
+Washington DC,Lythraceae,4353
+Washington DC,Malvaceae,5582
+Washington DC,Cupressaceae,2592
+Washington DC,Magnoliaceae,3257
+Washington DC,Altingiaceae,4185
+Washington DC,Anacardiaceae,1996
+Washington DC,Cannabaceae,2549
+Washington DC,Moraceae,495
+Washington DC,Betulaceae,3557
+Washington DC,Bignoniaceae,126
 Florida,Orlando,66229
 Orlando,Sapindaceae,1830
 Orlando,Rosaceae,1253
@@ -436,3 +404,24 @@ Baltimore,Cannabaceae,1040
 Baltimore,Moraceae,1668
 Baltimore,Betulaceae,1072
 Baltimore,Bignoniaceae,168
+Louisiana,New Orleans,105786
+New Orleans,Sapindaceae,1903
+New Orleans,Rosaceae,3293
+New Orleans,Fagaceae,25572
+New Orleans,Fabaceae,2168
+New Orleans,Oleaceae,2629
+New Orleans,Ulmaceae,2154
+New Orleans,Platanaceae,621
+New Orleans,Pinaceae,3500
+New Orleans,Lythraceae,30270
+New Orleans,Arecaceae,6240
+New Orleans,Malvaceae,71
+New Orleans,Myrtaceae,249
+New Orleans,Cupressaceae,6451
+New Orleans,Magnoliaceae,6665
+New Orleans,Altingiaceae,254
+New Orleans,Anacardiaceae,1290
+New Orleans,Cannabaceae,488
+New Orleans,Moraceae,607
+New Orleans,Betulaceae,370
+New Orleans,Bignoniaceae,58

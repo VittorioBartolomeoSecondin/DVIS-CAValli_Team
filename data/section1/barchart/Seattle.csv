@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Prunus cerasifera,8244,Leaf plum purple,59.84,17.7
-Acer rubrum,7543,Red maple,86.51,24.76
-Acer platanoides,6304,Norway maple,100.7,33.48
-Malus,5206,Crabapple,46.09,14.88
-Prunus L.,4948,Kwanzan flowering cherry,nan,19.49
-Acer palmatum,4577,Japanese maple,37.6,13.9
-Pyrus calleryana,4467,Callery pear,85.81,22.81
-Prunus,3937,Cherry,47.56,19.37
-Acer truncatum,3750,Pacific sunset maple,42.38,13.32
-Crataegus laevigata,3645,English midland hawthorn,59.98,23.46
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Prunus,8885,Cherry,Prunus,Rosaceae,Rosales,47.56,19.38
+Prunus cerasifera,8244,Leaf plum purple,Prunus,Rosaceae,Rosales,59.84,17.7
+Acer rubrum,7543,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Malus,6451,Crabapple,Malus,Rosaceae,Rosales,46.72,14.82
+Acer platanoides,6304,Norway maple,Acer,Sapindaceae,Sapindales,100.7,33.48
+Acer palmatum,4577,Japanese maple,Acer,Sapindaceae,Sapindales,37.6,13.9
+Pyrus calleryana,4467,Callery pear,Pyrus,Rosaceae,Rosales,85.81,22.81
+Acer truncatum,3750,Pacific sunset maple,Acer,Sapindaceae,Sapindales,42.38,13.32
+Crataegus laevigata,3645,English midland hawthorn,Crataegus,Rosaceae,Rosales,59.98,23.46
+Liquidambar styraciflua,3377,American sweetgum,Liquidambar,Altingiaceae,Saxifragales,122.53,32.33

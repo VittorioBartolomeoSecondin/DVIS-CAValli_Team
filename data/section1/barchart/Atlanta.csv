@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Cercis canadensis,4308,Eastern redbud,37.01,10.86
-Lagerstroemia,2703,Common crapemyrtle,9.37,19.4
-Acer buergerianum,1898,Trident maple,49.16,9.86
-Lagerstroemia indica,1728,Crape myrtle,53.13,12.27
-Quercus nuttallii,1514,Nuttall oak,nan,12.34
-Acer rubrum,1476,Red maple,86.51,24.76
-Quercus alba,1461,White oak,144.91,43.41
-Nyssa sylvatica,1449,Tupelo,48.78,8.86
-Cornus florida,1292,Flowering dogwood,36.89,11.77
-Ulmus americana,989,American elm,106.67,48.82
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Cercis canadensis,4308,Eastern redbud,Cercis,Fabaceae,Fabales,37.01,10.86
+Lagerstroemia,2964,Common crapemyrtle,Lagerstroemia,Lythraceae,Myrtales,9.37,19.4
+Acer buergerianum,1898,Trident maple,Acer,Sapindaceae,Sapindales,49.16,9.86
+Lagerstroemia indica,1728,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales,53.13,12.27
+Quercus nuttallii,1514,Nuttall oak,Quercus,Fagaceae,Fagales,nan,12.34
+Acer rubrum,1476,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Quercus alba,1461,White oak,Quercus,Fagaceae,Fagales,144.91,43.41
+Nyssa sylvatica,1449,Tupelo,Nyssa,Nyssaceae,Cornales,48.78,8.86
+Cornus florida,1292,Flowering dogwood,Cornus,Cornaceae,Cornales,36.89,11.77
+Ulmus americana,989,American elm,Ulmus,Ulmaceae,Rosales,106.67,48.82

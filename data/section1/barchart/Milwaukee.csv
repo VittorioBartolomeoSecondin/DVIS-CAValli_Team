@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Fraxinus pennsylvanica,3425,Green ash,142.0,30.74
-Acer platanoides,2905,Norway maple,100.7,33.48
-Gleditsia triacanthos,2778,Honeylocust,90.95,28.15
-Acer saccharum,1878,Sugar maple,93.8,26.35
-Celtis occidentalis,1487,Common hackberry,94.87,25.37
-Quercus rubra,1459,Northern red oak,108.06,34.33
-Fraxinus americana,1412,White ash,109.62,30.37
-Malus tschonoskii,1383,Crabapple,nan,21.72
-Tilia americana,1122,American linden,96.92,28.02
-Crataegus,995,Hawthorn,44.02,17.59
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Fraxinus pennsylvanica,3425,Green ash,Fraxinus,Oleaceae,Lamiales,142.0,30.74
+Acer platanoides,2905,Norway maple,Acer,Sapindaceae,Sapindales,100.7,33.48
+Gleditsia triacanthos,2778,Honeylocust,Gleditsia,Fabaceae,Fabales,90.95,28.15
+Acer saccharum,1878,Sugar maple,Acer,Sapindaceae,Sapindales,93.8,26.35
+Celtis occidentalis,1487,Common hackberry,Celtis,Cannabaceae,Rosales,94.87,25.37
+Quercus rubra,1459,Northern red oak,Quercus,Fagaceae,Fagales,108.06,34.33
+Fraxinus americana,1412,White ash,Fraxinus,Oleaceae,Lamiales,109.62,30.37
+Malus tschonoskii,1383,Crabapple,Malus,Rosaceae,Rosales,nan,21.72
+Tilia americana,1122,American linden,Tilia,Malvaceae,Malvales,96.92,28.02
+Crataegus,995,Hawthorn,Crataegus,Rosaceae,Rosales,44.02,17.58

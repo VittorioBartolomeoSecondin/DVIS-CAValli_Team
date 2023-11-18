@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Lagerstroemia indica,30244,Crape myrtle,53.13,12.27
-Quercus virginiana,21775,Live oak,92.73,31.36
-Taxodium distichum,5409,Bald cypress,77.44,16.7
-Ilex attenuata,4186,Hybrid holly species,52.28,10.12
-Magnolia grandiflora,3471,Southern magnolia,81.82,21.8
-Pinus elliottii,3098,Slash pine,130.64,25.34
-Pyrus calleryana,2043,Callery pear,85.81,22.81
-Sabal palmetto,1979,Cabbage palm,77.85,33.48
-Ulmus parvifolia,1877,Chinese elm,101.71,23.6
-Magnolia virginiana,1795,Florida sweet bay magnolia bay,32.14,6.14
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Lagerstroemia indica,30244,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales,53.13,12.27
+Quercus virginiana,21775,Live oak,Quercus,Fagaceae,Fagales,92.73,31.36
+Taxodium distichum,5409,Bald cypress,Taxodium,Cupressaceae,Pinales,77.44,16.7
+Ilex attenuata,4186,Hybrid holly species,Ilex,Aquifoliaceae,Aquifoliales,52.28,10.12
+Magnolia grandiflora,3471,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales,81.82,21.8
+Pinus elliottii,3098,Slash pine,Pinus,Pinaceae,Pinales,130.64,25.34
+Pyrus calleryana,2043,Callery pear,Pyrus,Rosaceae,Rosales,85.81,22.81
+Sabal palmetto,1979,Cabbage palm,Sabal,Arecaceae,Arecales,77.85,33.48
+Ulmus parvifolia,1877,Chinese elm,Ulmus,Ulmaceae,Rosales,101.71,23.6
+Magnolia virginiana,1795,Florida sweet bay magnolia bay,Magnolia,Magnoliaceae,Magnoliales,32.14,6.14

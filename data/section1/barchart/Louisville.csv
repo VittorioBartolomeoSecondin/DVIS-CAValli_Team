@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Acer saccharum,1810,Sugar maple,93.8,26.35
-Quercus palustris,1678,Pin oak,124.3,43.98
-Acer rubrum,1538,Red maple,86.51,24.76
-Fraxinus pennsylvanica,1404,Green ash,142.0,30.74
-Celtis occidentalis,1086,Common hackberry,94.87,25.37
-Liriodendron tulipifera,997,Tulip tree,145.5,31.96
-Liquidambar styraciflua,834,American sweetgum,122.53,32.33
-Quercus rubra,805,Northern red oak,108.06,34.33
-Platanus occidentalis,802,American sycamore,130.68,49.41
-Fraxinus americana,773,White ash,109.62,30.37
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Acer saccharum,1810,Sugar maple,Acer,Sapindaceae,Sapindales,93.8,26.35
+Quercus palustris,1678,Pin oak,Quercus,Fagaceae,Fagales,124.3,43.98
+Acer rubrum,1538,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Fraxinus pennsylvanica,1404,Green ash,Fraxinus,Oleaceae,Lamiales,142.0,30.74
+Celtis occidentalis,1086,Common hackberry,Celtis,Cannabaceae,Rosales,94.87,25.37
+Liriodendron tulipifera,997,Tulip tree,Liriodendron,Magnoliaceae,Magnoliales,145.5,31.96
+Liquidambar styraciflua,834,American sweetgum,Liquidambar,Altingiaceae,Saxifragales,122.53,32.33
+Quercus rubra,805,Northern red oak,Quercus,Fagaceae,Fagales,108.06,34.33
+Platanus occidentalis,802,American sycamore,Platanus,Platanaceae,Proteales,130.68,49.41
+Fraxinus americana,773,White ash,Fraxinus,Oleaceae,Lamiales,109.62,30.37

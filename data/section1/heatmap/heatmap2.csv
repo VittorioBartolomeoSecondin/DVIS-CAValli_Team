@@ -1,0 +1,346 @@
+city,species,count,common_name,tree_genus,tree_family,tree_order
+Los Angeles,Abies,0,Fir,Abies,Pinaceae,Pinales
+Los Angeles,Cedrus deodara,3468,Deodar cedar,Cedrus,Pinaceae,Pinales
+Los Angeles,Cinnamomum camphora,15850,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Los Angeles,Cupaniopsis anacardioides,11715,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Los Angeles,Eucalyptus globulus,3213,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Los Angeles,Eucalyptus maculata,67,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Los Angeles,Gleditsia triacanthos,8778,Honeylocust,Gleditsia,Fabaceae,Fabales
+Los Angeles,Lagerstroemia indica,34729,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Los Angeles,Liquidambar styraciflua,30061,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Los Angeles,Lophostemon confertus,0,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Los Angeles,Magnolia grandiflora,30988,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Los Angeles,Metrosideros excelsa,561,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Los Angeles,Pinus canariensis,11609,Canary island pine,Pinus,Pinaceae,Pinales
+Los Angeles,Pistacia chinensis,1012,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Los Angeles,Platanus acerifolia,17477,London planetree,Platanus,Platanaceae,Proteales
+Los Angeles,Prunus,132,Cherry,Prunus,Rosaceae,Rosales
+Los Angeles,Pyrus calleryana,7500,Callery pear,Pyrus,Rosaceae,Rosales
+Los Angeles,Quercus,3612,Deciduous oak,Quercus,Fagaceae,Fagales
+Los Angeles,Quercus lobata,210,California white oak,Quercus,Fagaceae,Fagales
+Los Angeles,Sequoia sempervirens,848,Coast redwood,Sequoia,Cupressaceae,Pinales
+Los Angeles,Syagrus romanzoffianum,0,Queen palm,Syagrus,Arecaceae,Arecales
+Los Angeles,Tristaniopsis laurina,0,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Los Angeles,Washingtonia robusta,37971,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+San Jose,Abies,0,Fir,Abies,Pinaceae,Pinales
+San Jose,Cedrus deodara,601,Deodar cedar,Cedrus,Pinaceae,Pinales
+San Jose,Cinnamomum camphora,4835,Camphor tree,Cinnamomum,Lauraceae,Laurales
+San Jose,Cupaniopsis anacardioides,185,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+San Jose,Eucalyptus globulus,183,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+San Jose,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+San Jose,Gleditsia triacanthos,4037,Honeylocust,Gleditsia,Fabaceae,Fabales
+San Jose,Lagerstroemia indica,21636,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+San Jose,Liquidambar styraciflua,14644,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+San Jose,Lophostemon confertus,289,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+San Jose,Magnolia grandiflora,7080,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+San Jose,Metrosideros excelsa,1,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+San Jose,Pinus canariensis,1582,Canary island pine,Pinus,Pinaceae,Pinales
+San Jose,Pistacia chinensis,24316,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+San Jose,Platanus acerifolia,26291,London planetree,Platanus,Platanaceae,Proteales
+San Jose,Prunus,776,Cherry,Prunus,Rosaceae,Rosales
+San Jose,Pyrus calleryana,9631,Callery pear,Pyrus,Rosaceae,Rosales
+San Jose,Quercus,183,Deciduous oak,Quercus,Fagaceae,Fagales
+San Jose,Quercus lobata,1571,California white oak,Quercus,Fagaceae,Fagales
+San Jose,Sequoia sempervirens,2558,Coast redwood,Sequoia,Cupressaceae,Pinales
+San Jose,Syagrus romanzoffianum,3788,Queen palm,Syagrus,Arecaceae,Arecales
+San Jose,Tristaniopsis laurina,1479,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+San Jose,Washingtonia robusta,5116,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+San Diego,Abies,20,Fir,Abies,Pinaceae,Pinales
+San Diego,Cedrus deodara,71,Deodar cedar,Cedrus,Pinaceae,Pinales
+San Diego,Cinnamomum camphora,2267,Camphor tree,Cinnamomum,Lauraceae,Laurales
+San Diego,Cupaniopsis anacardioides,13608,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+San Diego,Eucalyptus globulus,64,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+San Diego,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+San Diego,Gleditsia triacanthos,0,Honeylocust,Gleditsia,Fabaceae,Fabales
+San Diego,Lagerstroemia indica,2207,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+San Diego,Liquidambar styraciflua,10323,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+San Diego,Lophostemon confertus,7591,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+San Diego,Magnolia grandiflora,3463,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+San Diego,Metrosideros excelsa,880,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+San Diego,Pinus canariensis,469,Canary island pine,Pinus,Pinaceae,Pinales
+San Diego,Pistacia chinensis,115,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+San Diego,Platanus acerifolia,1907,London planetree,Platanus,Platanaceae,Proteales
+San Diego,Prunus,0,Cherry,Prunus,Rosaceae,Rosales
+San Diego,Pyrus calleryana,1986,Callery pear,Pyrus,Rosaceae,Rosales
+San Diego,Quercus,0,Deciduous oak,Quercus,Fagaceae,Fagales
+San Diego,Quercus lobata,0,California white oak,Quercus,Fagaceae,Fagales
+San Diego,Sequoia sempervirens,27,Coast redwood,Sequoia,Cupressaceae,Pinales
+San Diego,Syagrus romanzoffianum,22624,Queen palm,Syagrus,Arecaceae,Arecales
+San Diego,Tristaniopsis laurina,0,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+San Diego,Washingtonia robusta,15129,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Rancho Cucamonga,Abies,0,Fir,Abies,Pinaceae,Pinales
+Rancho Cucamonga,Cedrus deodara,48,Deodar cedar,Cedrus,Pinaceae,Pinales
+Rancho Cucamonga,Cinnamomum camphora,1173,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Rancho Cucamonga,Cupaniopsis anacardioides,1064,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Rancho Cucamonga,Eucalyptus globulus,5549,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Rancho Cucamonga,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Rancho Cucamonga,Gleditsia triacanthos,63,Honeylocust,Gleditsia,Fabaceae,Fabales
+Rancho Cucamonga,Lagerstroemia indica,12920,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Rancho Cucamonga,Liquidambar styraciflua,3727,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Rancho Cucamonga,Lophostemon confertus,0,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Rancho Cucamonga,Magnolia grandiflora,5016,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Rancho Cucamonga,Metrosideros excelsa,1,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Rancho Cucamonga,Pinus canariensis,2355,Canary island pine,Pinus,Pinaceae,Pinales
+Rancho Cucamonga,Pistacia chinensis,3213,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Rancho Cucamonga,Platanus acerifolia,5707,London planetree,Platanus,Platanaceae,Proteales
+Rancho Cucamonga,Prunus,8,Cherry,Prunus,Rosaceae,Rosales
+Rancho Cucamonga,Pyrus calleryana,4941,Callery pear,Pyrus,Rosaceae,Rosales
+Rancho Cucamonga,Quercus,135,Deciduous oak,Quercus,Fagaceae,Fagales
+Rancho Cucamonga,Quercus lobata,41,California white oak,Quercus,Fagaceae,Fagales
+Rancho Cucamonga,Sequoia sempervirens,24,Coast redwood,Sequoia,Cupressaceae,Pinales
+Rancho Cucamonga,Syagrus romanzoffianum,4,Queen palm,Syagrus,Arecaceae,Arecales
+Rancho Cucamonga,Tristaniopsis laurina,0,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Rancho Cucamonga,Washingtonia robusta,2262,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Stockton,Abies,0,Fir,Abies,Pinaceae,Pinales
+Stockton,Cedrus deodara,445,Deodar cedar,Cedrus,Pinaceae,Pinales
+Stockton,Cinnamomum camphora,1670,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Stockton,Cupaniopsis anacardioides,1,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Stockton,Eucalyptus globulus,12,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Stockton,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Stockton,Gleditsia triacanthos,324,Honeylocust,Gleditsia,Fabaceae,Fabales
+Stockton,Lagerstroemia indica,7354,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Stockton,Liquidambar styraciflua,4110,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Stockton,Lophostemon confertus,0,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Stockton,Magnolia grandiflora,3762,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Stockton,Metrosideros excelsa,1,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Stockton,Pinus canariensis,779,Canary island pine,Pinus,Pinaceae,Pinales
+Stockton,Pistacia chinensis,11392,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Stockton,Platanus acerifolia,7552,London planetree,Platanus,Platanaceae,Proteales
+Stockton,Prunus,117,Cherry,Prunus,Rosaceae,Rosales
+Stockton,Pyrus calleryana,5296,Callery pear,Pyrus,Rosaceae,Rosales
+Stockton,Quercus,104,Deciduous oak,Quercus,Fagaceae,Fagales
+Stockton,Quercus lobata,2523,California white oak,Quercus,Fagaceae,Fagales
+Stockton,Sequoia sempervirens,2936,Coast redwood,Sequoia,Cupressaceae,Pinales
+Stockton,Syagrus romanzoffianum,0,Queen palm,Syagrus,Arecaceae,Arecales
+Stockton,Tristaniopsis laurina,164,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Stockton,Washingtonia robusta,780,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Sacramento,Abies,0,Fir,Abies,Pinaceae,Pinales
+Sacramento,Cedrus deodara,678,Deodar cedar,Cedrus,Pinaceae,Pinales
+Sacramento,Cinnamomum camphora,773,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Sacramento,Cupaniopsis anacardioides,0,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Sacramento,Eucalyptus globulus,0,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Sacramento,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Sacramento,Gleditsia triacanthos,0,Honeylocust,Gleditsia,Fabaceae,Fabales
+Sacramento,Lagerstroemia indica,4146,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Sacramento,Liquidambar styraciflua,1933,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Sacramento,Lophostemon confertus,0,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Sacramento,Magnolia grandiflora,1151,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Sacramento,Metrosideros excelsa,0,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Sacramento,Pinus canariensis,0,Canary island pine,Pinus,Pinaceae,Pinales
+Sacramento,Pistacia chinensis,4580,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Sacramento,Platanus acerifolia,14111,London planetree,Platanus,Platanaceae,Proteales
+Sacramento,Prunus,530,Cherry,Prunus,Rosaceae,Rosales
+Sacramento,Pyrus calleryana,4285,Callery pear,Pyrus,Rosaceae,Rosales
+Sacramento,Quercus,1021,Deciduous oak,Quercus,Fagaceae,Fagales
+Sacramento,Quercus lobata,3693,California white oak,Quercus,Fagaceae,Fagales
+Sacramento,Sequoia sempervirens,2909,Coast redwood,Sequoia,Cupressaceae,Pinales
+Sacramento,Syagrus romanzoffianum,0,Queen palm,Syagrus,Arecaceae,Arecales
+Sacramento,Tristaniopsis laurina,0,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Sacramento,Washingtonia robusta,1535,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+San Francisco,Abies,0,Fir,Abies,Pinaceae,Pinales
+San Francisco,Cedrus deodara,146,Deodar cedar,Cedrus,Pinaceae,Pinales
+San Francisco,Cinnamomum camphora,141,Camphor tree,Cinnamomum,Lauraceae,Laurales
+San Francisco,Cupaniopsis anacardioides,246,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+San Francisco,Eucalyptus globulus,444,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+San Francisco,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+San Francisco,Gleditsia triacanthos,117,Honeylocust,Gleditsia,Fabaceae,Fabales
+San Francisco,Lagerstroemia indica,102,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+San Francisco,Liquidambar styraciflua,1592,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+San Francisco,Lophostemon confertus,8236,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+San Francisco,Magnolia grandiflora,7793,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+San Francisco,Metrosideros excelsa,8681,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+San Francisco,Pinus canariensis,350,Canary island pine,Pinus,Pinaceae,Pinales
+San Francisco,Pistacia chinensis,412,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+San Francisco,Platanus acerifolia,11925,London planetree,Platanus,Platanaceae,Proteales
+San Francisco,Prunus,207,Cherry,Prunus,Rosaceae,Rosales
+San Francisco,Pyrus calleryana,4036,Callery pear,Pyrus,Rosaceae,Rosales
+San Francisco,Quercus,25,Deciduous oak,Quercus,Fagaceae,Fagales
+San Francisco,Quercus lobata,19,California white oak,Quercus,Fagaceae,Fagales
+San Francisco,Sequoia sempervirens,330,Coast redwood,Sequoia,Cupressaceae,Pinales
+San Francisco,Syagrus romanzoffianum,848,Queen palm,Syagrus,Arecaceae,Arecales
+San Francisco,Tristaniopsis laurina,8509,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+San Francisco,Washingtonia robusta,1012,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Anaheim,Abies,0,Fir,Abies,Pinaceae,Pinales
+Anaheim,Cedrus deodara,98,Deodar cedar,Cedrus,Pinaceae,Pinales
+Anaheim,Cinnamomum camphora,2567,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Anaheim,Cupaniopsis anacardioides,1318,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Anaheim,Eucalyptus globulus,391,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Anaheim,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Anaheim,Gleditsia triacanthos,23076,Honeylocust,Gleditsia,Fabaceae,Fabales
+Anaheim,Lagerstroemia indica,3771,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Anaheim,Liquidambar styraciflua,1491,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Anaheim,Lophostemon confertus,1609,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Anaheim,Magnolia grandiflora,5266,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Anaheim,Metrosideros excelsa,179,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Anaheim,Pinus canariensis,2317,Canary island pine,Pinus,Pinaceae,Pinales
+Anaheim,Pistacia chinensis,1123,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Anaheim,Platanus acerifolia,1264,London planetree,Platanus,Platanaceae,Proteales
+Anaheim,Prunus,0,Cherry,Prunus,Rosaceae,Rosales
+Anaheim,Pyrus calleryana,320,Callery pear,Pyrus,Rosaceae,Rosales
+Anaheim,Quercus,25,Deciduous oak,Quercus,Fagaceae,Fagales
+Anaheim,Quercus lobata,2,California white oak,Quercus,Fagaceae,Fagales
+Anaheim,Sequoia sempervirens,12,Coast redwood,Sequoia,Cupressaceae,Pinales
+Anaheim,Syagrus romanzoffianum,1706,Queen palm,Syagrus,Arecaceae,Arecales
+Anaheim,Tristaniopsis laurina,322,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Anaheim,Washingtonia robusta,4385,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Ontario,Abies,0,Fir,Abies,Pinaceae,Pinales
+Ontario,Cedrus deodara,543,Deodar cedar,Cedrus,Pinaceae,Pinales
+Ontario,Cinnamomum camphora,3900,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Ontario,Cupaniopsis anacardioides,1108,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Ontario,Eucalyptus globulus,212,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Ontario,Eucalyptus maculata,333,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Ontario,Gleditsia triacanthos,107,Honeylocust,Gleditsia,Fabaceae,Fabales
+Ontario,Lagerstroemia indica,4630,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Ontario,Liquidambar styraciflua,4392,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Ontario,Lophostemon confertus,0,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Ontario,Magnolia grandiflora,1214,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Ontario,Metrosideros excelsa,4,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Ontario,Pinus canariensis,3307,Canary island pine,Pinus,Pinaceae,Pinales
+Ontario,Pistacia chinensis,1343,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Ontario,Platanus acerifolia,3328,London planetree,Platanus,Platanaceae,Proteales
+Ontario,Prunus,0,Cherry,Prunus,Rosaceae,Rosales
+Ontario,Pyrus calleryana,2793,Callery pear,Pyrus,Rosaceae,Rosales
+Ontario,Quercus,0,Deciduous oak,Quercus,Fagaceae,Fagales
+Ontario,Quercus lobata,1,California white oak,Quercus,Fagaceae,Fagales
+Ontario,Sequoia sempervirens,161,Coast redwood,Sequoia,Cupressaceae,Pinales
+Ontario,Syagrus romanzoffianum,0,Queen palm,Syagrus,Arecaceae,Arecales
+Ontario,Tristaniopsis laurina,1,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Ontario,Washingtonia robusta,1588,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Oakland,Abies,2,Fir,Abies,Pinaceae,Pinales
+Oakland,Cedrus deodara,2,Deodar cedar,Cedrus,Pinaceae,Pinales
+Oakland,Cinnamomum camphora,522,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Oakland,Cupaniopsis anacardioides,0,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Oakland,Eucalyptus globulus,15,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Oakland,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Oakland,Gleditsia triacanthos,224,Honeylocust,Gleditsia,Fabaceae,Fabales
+Oakland,Lagerstroemia indica,1953,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Oakland,Liquidambar styraciflua,3312,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Oakland,Lophostemon confertus,632,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Oakland,Magnolia grandiflora,1375,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Oakland,Metrosideros excelsa,122,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Oakland,Pinus canariensis,6,Canary island pine,Pinus,Pinaceae,Pinales
+Oakland,Pistacia chinensis,1150,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Oakland,Platanus acerifolia,3788,London planetree,Platanus,Platanaceae,Proteales
+Oakland,Prunus,2932,Cherry,Prunus,Rosaceae,Rosales
+Oakland,Pyrus calleryana,2683,Callery pear,Pyrus,Rosaceae,Rosales
+Oakland,Quercus,479,Deciduous oak,Quercus,Fagaceae,Fagales
+Oakland,Quercus lobata,4,California white oak,Quercus,Fagaceae,Fagales
+Oakland,Sequoia sempervirens,48,Coast redwood,Sequoia,Cupressaceae,Pinales
+Oakland,Syagrus romanzoffianum,16,Queen palm,Syagrus,Arecaceae,Arecales
+Oakland,Tristaniopsis laurina,313,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Oakland,Washingtonia robusta,274,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+HuntingtonBeach,Abies,0,Fir,Abies,Pinaceae,Pinales
+HuntingtonBeach,Cedrus deodara,83,Deodar cedar,Cedrus,Pinaceae,Pinales
+HuntingtonBeach,Cinnamomum camphora,304,Camphor tree,Cinnamomum,Lauraceae,Laurales
+HuntingtonBeach,Cupaniopsis anacardioides,1431,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+HuntingtonBeach,Eucalyptus globulus,299,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+HuntingtonBeach,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+HuntingtonBeach,Gleditsia triacanthos,10394,Honeylocust,Gleditsia,Fabaceae,Fabales
+HuntingtonBeach,Lagerstroemia indica,3896,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+HuntingtonBeach,Liquidambar styraciflua,170,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+HuntingtonBeach,Lophostemon confertus,1453,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+HuntingtonBeach,Magnolia grandiflora,372,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+HuntingtonBeach,Metrosideros excelsa,936,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+HuntingtonBeach,Pinus canariensis,1352,Canary island pine,Pinus,Pinaceae,Pinales
+HuntingtonBeach,Pistacia chinensis,67,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+HuntingtonBeach,Platanus acerifolia,574,London planetree,Platanus,Platanaceae,Proteales
+HuntingtonBeach,Prunus,3,Cherry,Prunus,Rosaceae,Rosales
+HuntingtonBeach,Pyrus calleryana,1233,Callery pear,Pyrus,Rosaceae,Rosales
+HuntingtonBeach,Quercus,1,Deciduous oak,Quercus,Fagaceae,Fagales
+HuntingtonBeach,Quercus lobata,8,California white oak,Quercus,Fagaceae,Fagales
+HuntingtonBeach,Sequoia sempervirens,70,Coast redwood,Sequoia,Cupressaceae,Pinales
+HuntingtonBeach,Syagrus romanzoffianum,4681,Queen palm,Syagrus,Arecaceae,Arecales
+HuntingtonBeach,Tristaniopsis laurina,1094,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+HuntingtonBeach,Washingtonia robusta,4037,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Irvine,Abies,0,Fir,Abies,Pinaceae,Pinales
+Irvine,Cedrus deodara,95,Deodar cedar,Cedrus,Pinaceae,Pinales
+Irvine,Cinnamomum camphora,1333,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Irvine,Cupaniopsis anacardioides,1244,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Irvine,Eucalyptus globulus,3948,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Irvine,Eucalyptus maculata,3830,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Irvine,Gleditsia triacanthos,0,Honeylocust,Gleditsia,Fabaceae,Fabales
+Irvine,Lagerstroemia indica,1390,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Irvine,Liquidambar styraciflua,1773,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Irvine,Lophostemon confertus,0,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Irvine,Magnolia grandiflora,530,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Irvine,Metrosideros excelsa,529,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Irvine,Pinus canariensis,4578,Canary island pine,Pinus,Pinaceae,Pinales
+Irvine,Pistacia chinensis,0,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Irvine,Platanus acerifolia,1195,London planetree,Platanus,Platanaceae,Proteales
+Irvine,Prunus,17,Cherry,Prunus,Rosaceae,Rosales
+Irvine,Pyrus calleryana,0,Callery pear,Pyrus,Rosaceae,Rosales
+Irvine,Quercus,0,Deciduous oak,Quercus,Fagaceae,Fagales
+Irvine,Quercus lobata,0,California white oak,Quercus,Fagaceae,Fagales
+Irvine,Sequoia sempervirens,8,Coast redwood,Sequoia,Cupressaceae,Pinales
+Irvine,Syagrus romanzoffianum,0,Queen palm,Syagrus,Arecaceae,Arecales
+Irvine,Tristaniopsis laurina,2,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Irvine,Washingtonia robusta,542,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Garden Grove,Abies,0,Fir,Abies,Pinaceae,Pinales
+Garden Grove,Cedrus deodara,32,Deodar cedar,Cedrus,Pinaceae,Pinales
+Garden Grove,Cinnamomum camphora,98,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Garden Grove,Cupaniopsis anacardioides,1438,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Garden Grove,Eucalyptus globulus,93,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Garden Grove,Eucalyptus maculata,10,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Garden Grove,Gleditsia triacanthos,125,Honeylocust,Gleditsia,Fabaceae,Fabales
+Garden Grove,Lagerstroemia indica,2358,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Garden Grove,Liquidambar styraciflua,365,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Garden Grove,Lophostemon confertus,1643,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Garden Grove,Magnolia grandiflora,696,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Garden Grove,Metrosideros excelsa,55,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Garden Grove,Pinus canariensis,1049,Canary island pine,Pinus,Pinaceae,Pinales
+Garden Grove,Pistacia chinensis,11,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Garden Grove,Platanus acerifolia,593,London planetree,Platanus,Platanaceae,Proteales
+Garden Grove,Prunus,5,Cherry,Prunus,Rosaceae,Rosales
+Garden Grove,Pyrus calleryana,467,Callery pear,Pyrus,Rosaceae,Rosales
+Garden Grove,Quercus,0,Deciduous oak,Quercus,Fagaceae,Fagales
+Garden Grove,Quercus lobata,0,California white oak,Quercus,Fagaceae,Fagales
+Garden Grove,Sequoia sempervirens,4,Coast redwood,Sequoia,Cupressaceae,Pinales
+Garden Grove,Syagrus romanzoffianum,897,Queen palm,Syagrus,Arecaceae,Arecales
+Garden Grove,Tristaniopsis laurina,22,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Garden Grove,Washingtonia robusta,596,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Fresno,Abies,0,Fir,Abies,Pinaceae,Pinales
+Fresno,Cedrus deodara,749,Deodar cedar,Cedrus,Pinaceae,Pinales
+Fresno,Cinnamomum camphora,153,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Fresno,Cupaniopsis anacardioides,0,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Fresno,Eucalyptus globulus,0,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Fresno,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Fresno,Gleditsia triacanthos,0,Honeylocust,Gleditsia,Fabaceae,Fabales
+Fresno,Lagerstroemia indica,184,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Fresno,Liquidambar styraciflua,6,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Fresno,Lophostemon confertus,0,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Fresno,Magnolia grandiflora,0,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Fresno,Metrosideros excelsa,0,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Fresno,Pinus canariensis,0,Canary island pine,Pinus,Pinaceae,Pinales
+Fresno,Pistacia chinensis,713,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Fresno,Platanus acerifolia,294,London planetree,Platanus,Platanaceae,Proteales
+Fresno,Prunus,0,Cherry,Prunus,Rosaceae,Rosales
+Fresno,Pyrus calleryana,55,Callery pear,Pyrus,Rosaceae,Rosales
+Fresno,Quercus,4,Deciduous oak,Quercus,Fagaceae,Fagales
+Fresno,Quercus lobata,588,California white oak,Quercus,Fagaceae,Fagales
+Fresno,Sequoia sempervirens,124,Coast redwood,Sequoia,Cupressaceae,Pinales
+Fresno,Syagrus romanzoffianum,0,Queen palm,Syagrus,Arecaceae,Arecales
+Fresno,Tristaniopsis laurina,0,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Fresno,Washingtonia robusta,0,Mexican fan palm,Washingtonia,Arecaceae,Arecales
+Santa Rosa,Abies,155,Fir,Abies,Pinaceae,Pinales
+Santa Rosa,Cedrus deodara,0,Deodar cedar,Cedrus,Pinaceae,Pinales
+Santa Rosa,Cinnamomum camphora,0,Camphor tree,Cinnamomum,Lauraceae,Laurales
+Santa Rosa,Cupaniopsis anacardioides,0,Carrotwood,Cupaniopsis,Sapindaceae,Sapindales
+Santa Rosa,Eucalyptus globulus,0,Eucalyptus,Eucalyptus,Myrtaceae,Myrtales
+Santa Rosa,Eucalyptus maculata,0,Spotted gum,Corymbia,Myrtaceae,Myrtales
+Santa Rosa,Gleditsia triacanthos,0,Honeylocust,Gleditsia,Fabaceae,Fabales
+Santa Rosa,Lagerstroemia indica,0,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales
+Santa Rosa,Liquidambar styraciflua,1,American sweetgum,Liquidambar,Altingiaceae,Saxifragales
+Santa Rosa,Lophostemon confertus,0,Brisbane box,Lophostemon,Myrtaceae,Myrtales
+Santa Rosa,Magnolia grandiflora,0,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales
+Santa Rosa,Metrosideros excelsa,0,New zealand xmas tree,Metrosideros,Myrtaceae,Myrtales
+Santa Rosa,Pinus canariensis,0,Canary island pine,Pinus,Pinaceae,Pinales
+Santa Rosa,Pistacia chinensis,0,Chinese pistache,Pistacia,Anacardiaceae,Sapindales
+Santa Rosa,Platanus acerifolia,87,London planetree,Platanus,Platanaceae,Proteales
+Santa Rosa,Prunus,22,Cherry,Prunus,Rosaceae,Rosales
+Santa Rosa,Pyrus calleryana,0,Callery pear,Pyrus,Rosaceae,Rosales
+Santa Rosa,Quercus,468,Deciduous oak,Quercus,Fagaceae,Fagales
+Santa Rosa,Quercus lobata,0,California white oak,Quercus,Fagaceae,Fagales
+Santa Rosa,Sequoia sempervirens,203,Coast redwood,Sequoia,Cupressaceae,Pinales
+Santa Rosa,Syagrus romanzoffianum,0,Queen palm,Syagrus,Arecaceae,Arecales
+Santa Rosa,Tristaniopsis laurina,0,Swamp myrtle,Tristaniopsis,Myrtaceae,Myrtales
+Santa Rosa,Washingtonia robusta,0,Mexican fan palm,Washingtonia,Arecaceae,Arecales

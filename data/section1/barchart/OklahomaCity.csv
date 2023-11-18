@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Juniperus virginiana,711,Eastern red cedar,75.69,18.05
-Lagerstroemia indica,689,Crape myrtle,53.13,12.27
-Quercus stellata,584,Post oak,115.92,39.05
-Pistacia chinensis,567,Chinese pistache,77.33,21.72
-Ulmus parvifolia,455,Chinese elm,101.71,23.6
-Pinus nigra,453,Austrian pine,78.51,27.1
-Quercus shumardii,383,Shumard oak,85.02,22.41
-Taxodium distichum,377,Bald cypress,77.44,16.7
-Ulmus pumila,327,Siberian elm,125.63,37.38
-Quercus marilandica,323,Blackjack  oak,108.69,36.04
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Juniperus virginiana,711,Eastern red cedar,Juniperus,Cupressaceae,Pinales,75.69,18.05
+Lagerstroemia indica,689,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales,53.13,12.27
+Quercus stellata,584,Post oak,Quercus,Fagaceae,Fagales,115.92,39.05
+Pistacia chinensis,567,Chinese pistache,Pistacia,Anacardiaceae,Sapindales,77.33,21.72
+Ulmus parvifolia,455,Chinese elm,Ulmus,Ulmaceae,Rosales,101.71,23.6
+Pinus nigra,453,Austrian pine,Pinus,Pinaceae,Pinales,78.51,27.1
+Quercus shumardii,383,Shumard oak,Quercus,Fagaceae,Fagales,85.02,22.41
+Taxodium distichum,377,Bald cypress,Taxodium,Cupressaceae,Pinales,77.44,16.7
+Ulmus pumila,327,Siberian elm,Ulmus,Ulmaceae,Rosales,125.63,37.38
+Quercus marilandica,323,Blackjack  oak,Quercus,Fagaceae,Fagales,108.69,36.04

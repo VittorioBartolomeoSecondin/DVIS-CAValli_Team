@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Gleditsia triacanthos,225943,Honeylocust,90.95,28.15
-Platanus acerifolia,219724,London planetree,124.69,45.68
-Acer platanoides,209907,Norway maple,100.7,33.48
-Lagerstroemia indica,209899,Crape myrtle,53.13,12.27
-Pyrus calleryana,159991,Callery pear,85.81,22.81
-Fraxinus pennsylvanica,156922,Green ash,142.0,30.74
-Acer rubrum,140936,Red maple,86.51,24.76
-Liquidambar styraciflua,111483,American sweetgum,122.53,32.33
-Tilia cordata,106733,Littleleaf linden,107.87,27.93
-Quercus virginiana,104183,Live oak,92.73,31.36
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Gleditsia triacanthos,226027,Honeylocust,Gleditsia,Fabaceae,Fabales,90.95,28.15
+Platanus acerifolia,219724,London planetree,Platanus,Platanaceae,Proteales,124.69,45.68
+Acer platanoides,209907,Norway maple,Acer,Sapindaceae,Sapindales,100.7,33.48
+Lagerstroemia indica,209899,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales,53.13,12.27
+Pyrus calleryana,159991,Callery pear,Pyrus,Rosaceae,Rosales,85.81,22.81
+Fraxinus pennsylvanica,156922,Green ash,Fraxinus,Oleaceae,Lamiales,142.0,30.74
+Acer rubrum,140936,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Liquidambar styraciflua,111483,American sweetgum,Liquidambar,Altingiaceae,Saxifragales,122.53,32.33
+Tilia cordata,106733,Littleleaf linden,Tilia,Malvaceae,Malvales,107.87,27.93
+Quercus virginiana,104183,Live oak,Quercus,Fagaceae,Fagales,92.73,31.36

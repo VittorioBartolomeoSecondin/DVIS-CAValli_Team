@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Platanus acerifolia,281,London planetree,124.69,45.68
-Zelkova serrata,166,Japanese zelkova,103.34,25.53
-Quercus phellos,154,Willow oak,73.64,42.91
-Liquidambar styraciflua,131,American sweetgum,122.53,32.33
-Ulmus parvifolia,120,Chinese elm,101.71,23.6
-Prunus yedoensis,99,Yoshino cherry,32.11,15.25
-Ginkgo biloba,89,Ginkgo,90.34,22.01
-Ulmus pumila,84,Siberian elm,125.63,37.38
-Betula nigra,81,River birch,71.47,15.14
-Quercus shumardii,77,Shumard oak,85.02,22.41
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Platanus acerifolia,281,London planetree,Platanus,Platanaceae,Proteales,124.69,45.68
+Zelkova serrata,166,Japanese zelkova,Zelkova,Ulmaceae,Rosales,103.34,25.53
+Quercus phellos,154,Willow oak,Quercus,Fagaceae,Fagales,73.64,42.91
+Liquidambar styraciflua,131,American sweetgum,Liquidambar,Altingiaceae,Saxifragales,122.53,32.33
+Ulmus parvifolia,120,Chinese elm,Ulmus,Ulmaceae,Rosales,101.71,23.6
+Prunus yedoensis,99,Yoshino cherry,Prunus,Rosaceae,Rosales,32.11,15.25
+Ginkgo biloba,89,Ginkgo,Ginkgo,Ginkgoaceae,Ginkgoales,90.34,22.01
+Ulmus pumila,84,Siberian elm,Ulmus,Ulmaceae,Rosales,125.63,37.38
+Betula nigra,81,River birch,Betula,Betulaceae,Fagales,71.47,15.14
+Quercus shumardii,77,Shumard oak,Quercus,Fagaceae,Fagales,85.02,22.41

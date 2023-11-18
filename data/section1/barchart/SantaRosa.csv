@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Quercus,468,Deciduous oak,97.81,27.27
-Sequoia sempervirens,203,Coast redwood,171.63,48.79
-Abies,155,Fir,162.83,31.5
-Acer,139,Maple,79.16,23.66
-Platanus acerifolia,87,London planetree,124.69,45.68
-Pyrus,68,Pear,63.73,20.81
-Pinus,24,Pine,92.73,26.28
-Prunus,22,Cherry,47.56,19.37
-Celtis occidentalis,17,Common hackberry,94.87,25.37
-Cedrus,9,Cedar,118.77,45.78
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Quercus,468,Deciduous oak,Quercus,Fagaceae,Fagales,97.81,27.27
+Sequoia sempervirens,203,Coast redwood,Sequoia,Cupressaceae,Pinales,171.63,48.79
+Abies,155,Fir,Abies,Pinaceae,Pinales,162.83,31.5
+Acer,139,Maple,Acer,Sapindaceae,Sapindales,79.05,23.66
+Platanus acerifolia,87,London planetree,Platanus,Platanaceae,Proteales,124.69,45.68
+Pyrus,68,Pear,Pyrus,Rosaceae,Rosales,63.73,20.81
+Pinus,24,Pine,Pinus,Pinaceae,Pinales,92.73,26.28
+Prunus,22,Cherry,Prunus,Rosaceae,Rosales,47.56,19.38
+Celtis occidentalis,17,Common hackberry,Celtis,Cannabaceae,Rosales,94.87,25.37
+Cedrus,9,Cedar,Cedrus,Pinaceae,Pinales,118.77,45.78

@@ -1,241 +1,233 @@
 source,target,value
-California,Los Angeles,582913
+California,Los Angeles,581946
 California,San Jose,264805
-California,San Diego,212304
-California,San Francisco,175272
+California,San Diego,212220
+California,San Francisco,175106
 California,Stockton,97707
-California,Sacramento,87191
-California,Rancho Cucamonga,80611
-California,Anaheim,77020
+California,Sacramento,84260
+California,Rancho Cucamonga,80603
+California,Anaheim,77019
 California,Ontario,58577
-California,Irvine,58364
-California,Huntington Beach,55598
+California,Irvine,57769
+California,HuntingtonBeach,55598
 California,Oakland,35568
 California,Garden Grove,17521
-California,Fresno,6587
-California,Santa Rosa,1556
-Los Angeles,Acer,1993
-Los Angeles,Quercus,14597
-Los Angeles,Fraxinus,18647
-Los Angeles,Platanus,22149
-Los Angeles,Gleditsia,8778
-Los Angeles,Lagerstroemia,35829
-Los Angeles,Prunus,11777
-Los Angeles,Pyrus,17285
-Los Angeles,Tilia,2
-Los Angeles,Ulmus,20563
-Los Angeles,Pinus,23667
-Los Angeles,Liquidambar,30302
-Los Angeles,Magnolia,31360
-Los Angeles,Washingtonia,40738
-Los Angeles,Celtis,337
-San Jose,Acer,8908
-San Jose,Quercus,18261
-San Jose,Fraxinus,12911
-San Jose,Platanus,27218
-San Jose,Gleditsia,4037
-San Jose,Lagerstroemia,21692
-San Jose,Prunus,12973
-San Jose,Pyrus,11557
-San Jose,Tilia,537
-San Jose,Ulmus,3898
-San Jose,Pinus,3611
-San Jose,Liquidambar,14677
-San Jose,Magnolia,7337
-San Jose,Washingtonia,6885
-San Jose,Celtis,3125
-San Diego,Acer,89
-San Diego,Quercus,1392
-San Diego,Fraxinus,3151
-San Diego,Platanus,9237
-San Diego,Gleditsia,0
-San Diego,Lagerstroemia,2207
-San Diego,Prunus,3149
-San Diego,Pyrus,4196
-San Diego,Tilia,0
-San Diego,Ulmus,1797
-San Diego,Pinus,13564
-San Diego,Liquidambar,10323
-San Diego,Magnolia,3463
-San Diego,Washingtonia,18168
-San Diego,Celtis,0
-San Francisco,Acer,2101
-San Francisco,Quercus,1161
-San Francisco,Fraxinus,1447
-San Francisco,Platanus,12002
-San Francisco,Gleditsia,117
-San Francisco,Lagerstroemia,104
-San Francisco,Prunus,15128
-San Francisco,Pyrus,6040
-San Francisco,Tilia,150
-San Francisco,Ulmus,3453
-San Francisco,Pinus,3300
-San Francisco,Liquidambar,1684
-San Francisco,Magnolia,8277
-San Francisco,Washingtonia,1061
-San Francisco,Celtis,275
-Stockton,Acer,2518
-Stockton,Quercus,6177
-Stockton,Fraxinus,10587
-Stockton,Platanus,7639
-Stockton,Gleditsia,324
-Stockton,Lagerstroemia,7368
-Stockton,Prunus,2409
-Stockton,Pyrus,6334
-Stockton,Tilia,899
-Stockton,Ulmus,812
-Stockton,Pinus,1306
-Stockton,Liquidambar,4371
-Stockton,Magnolia,3936
-Stockton,Washingtonia,1059
-Stockton,Celtis,7732
-Sacramento,Acer,4086
-Sacramento,Quercus,10489
-Sacramento,Fraxinus,3143
-Sacramento,Platanus,14111
-Sacramento,Gleditsia,0
-Sacramento,Lagerstroemia,4146
-Sacramento,Prunus,2177
-Sacramento,Pyrus,4631
-Sacramento,Tilia,1021
-Sacramento,Ulmus,4047
-Sacramento,Pinus,1715
-Sacramento,Liquidambar,1949
-Sacramento,Magnolia,1341
-Sacramento,Washingtonia,2467
-Sacramento,Celtis,2167
-Rancho Cucamonga,Acer,164
-Rancho Cucamonga,Quercus,1830
-Rancho Cucamonga,Fraxinus,754
-Rancho Cucamonga,Platanus,5838
-Rancho Cucamonga,Gleditsia,63
-Rancho Cucamonga,Lagerstroemia,12921
-Rancho Cucamonga,Prunus,522
-Rancho Cucamonga,Pyrus,5216
-Rancho Cucamonga,Tilia,37
-Rancho Cucamonga,Ulmus,317
-Rancho Cucamonga,Pinus,6184
-Rancho Cucamonga,Liquidambar,3729
-Rancho Cucamonga,Magnolia,5049
-Rancho Cucamonga,Washingtonia,2887
-Rancho Cucamonga,Celtis,2
-Anaheim,Acer,212
-Anaheim,Quercus,1607
-Anaheim,Fraxinus,285
-Anaheim,Platanus,2075
-Anaheim,Gleditsia,23076
-Anaheim,Lagerstroemia,3771
-Anaheim,Prunus,206
-Anaheim,Pyrus,627
-Anaheim,Tilia,10
-Anaheim,Ulmus,905
-Anaheim,Pinus,3396
-Anaheim,Liquidambar,1493
-Anaheim,Magnolia,5334
-Anaheim,Washingtonia,4624
-Anaheim,Celtis,340
-Ontario,Acer,680
-Ontario,Quercus,1003
-Ontario,Fraxinus,1159
-Ontario,Platanus,3763
-Ontario,Gleditsia,107
-Ontario,Lagerstroemia,4630
-Ontario,Prunus,1454
-Ontario,Pyrus,3469
-Ontario,Tilia,0
-Ontario,Ulmus,1207
-Ontario,Pinus,4294
-Ontario,Liquidambar,4392
-Ontario,Magnolia,1225
-Ontario,Washingtonia,2243
-Ontario,Celtis,61
-Irvine,Acer,8
-Irvine,Quercus,1763
-Irvine,Fraxinus,152
-Irvine,Platanus,4082
-Irvine,Gleditsia,0
-Irvine,Lagerstroemia,1390
-Irvine,Prunus,827
-Irvine,Pyrus,276
-Irvine,Tilia,0
-Irvine,Ulmus,730
-Irvine,Pinus,11592
-Irvine,Liquidambar,1773
-Irvine,Magnolia,530
-Irvine,Washingtonia,547
-Irvine,Celtis,5
-Huntington Beach,Acer,76
-Huntington Beach,Quercus,466
-Huntington Beach,Fraxinus,287
-Huntington Beach,Platanus,1097
-Huntington Beach,Gleditsia,10394
-Huntington Beach,Lagerstroemia,3896
-Huntington Beach,Prunus,518
-Huntington Beach,Pyrus,1970
-Huntington Beach,Tilia,14
-Huntington Beach,Ulmus,104
-Huntington Beach,Pinus,2748
-Huntington Beach,Liquidambar,170
-Huntington Beach,Magnolia,378
-Huntington Beach,Washingtonia,4067
-Huntington Beach,Celtis,40
-Oakland,Acer,1254
-Oakland,Quercus,721
-Oakland,Fraxinus,2161
-Oakland,Platanus,3836
-Oakland,Gleditsia,224
-Oakland,Lagerstroemia,1953
-Oakland,Prunus,3219
-Oakland,Pyrus,4110
-Oakland,Tilia,40
-Oakland,Ulmus,447
-Oakland,Pinus,116
-Oakland,Liquidambar,3312
-Oakland,Magnolia,1401
-Oakland,Washingtonia,305
-Oakland,Celtis,567
-Garden Grove,Acer,39
-Garden Grove,Quercus,163
-Garden Grove,Fraxinus,103
-Garden Grove,Platanus,698
-Garden Grove,Gleditsia,125
-Garden Grove,Lagerstroemia,2358
-Garden Grove,Prunus,161
-Garden Grove,Pyrus,1177
-Garden Grove,Tilia,0
-Garden Grove,Ulmus,597
-Garden Grove,Pinus,1248
-Garden Grove,Liquidambar,365
-Garden Grove,Magnolia,708
-Garden Grove,Washingtonia,735
-Garden Grove,Celtis,2
-Fresno,Acer,51
-Fresno,Quercus,1633
-Fresno,Fraxinus,8
-Fresno,Platanus,408
-Fresno,Gleditsia,0
-Fresno,Lagerstroemia,184
-Fresno,Prunus,9
-Fresno,Pyrus,59
-Fresno,Tilia,0
-Fresno,Ulmus,444
-Fresno,Pinus,546
-Fresno,Liquidambar,6
-Fresno,Magnolia,5
-Fresno,Washingtonia,4
-Fresno,Celtis,152
-Santa Rosa,Acer,139
-Santa Rosa,Quercus,468
-Santa Rosa,Fraxinus,2
-Santa Rosa,Platanus,87
-Santa Rosa,Gleditsia,0
-Santa Rosa,Lagerstroemia,0
-Santa Rosa,Prunus,22
-Santa Rosa,Pyrus,68
-Santa Rosa,Tilia,0
-Santa Rosa,Ulmus,0
-Santa Rosa,Pinus,24
-Santa Rosa,Liquidambar,1
-Santa Rosa,Magnolia,0
-Santa Rosa,Washingtonia,0
-Santa Rosa,Celtis,17
+California,Fresno,6173
+California,Santa Rosa,1213
+Los Angeles,Sapindaceae,16735
+Los Angeles,Rosaceae,31429
+Los Angeles,Fagaceae,14969
+Los Angeles,Fabaceae,31110
+Los Angeles,Oleaceae,29090
+Los Angeles,Ulmaceae,21503
+Los Angeles,Platanaceae,22149
+Los Angeles,Pinaceae,27383
+Los Angeles,Lythraceae,36013
+Los Angeles,Arecaceae,66126
+Los Angeles,Malvaceae,6700
+Los Angeles,Myrtaceae,41281
+Los Angeles,Cupressaceae,21155
+Los Angeles,Magnoliaceae,34288
+Los Angeles,Altingiaceae,30302
+San Jose,Sapindaceae,10661
+San Jose,Rosaceae,27924
+San Jose,Fagaceae,18333
+San Jose,Fabaceae,9749
+San Jose,Oleaceae,17651
+San Jose,Ulmaceae,11567
+San Jose,Platanaceae,27218
+San Jose,Pinaceae,4436
+San Jose,Lythraceae,21770
+San Jose,Arecaceae,12002
+San Jose,Malvaceae,695
+San Jose,Myrtaceae,6094
+San Jose,Cupressaceae,11401
+San Jose,Magnoliaceae,7957
+San Jose,Altingiaceae,14677
+San Diego,Sapindaceae,17411
+San Diego,Rosaceae,7929
+San Diego,Fagaceae,1392
+San Diego,Fabaceae,7811
+San Diego,Oleaceae,4334
+San Diego,Ulmaceae,1797
+San Diego,Platanaceae,9237
+San Diego,Pinaceae,14021
+San Diego,Lythraceae,2207
+San Diego,Arecaceae,46263
+San Diego,Malvaceae,1446
+San Diego,Myrtaceae,30258
+San Diego,Cupressaceae,8667
+San Diego,Magnoliaceae,3523
+San Diego,Altingiaceae,10323
+San Francisco,Sapindaceae,3607
+San Francisco,Rosaceae,27292
+San Francisco,Fagaceae,1244
+San Francisco,Fabaceae,7116
+San Francisco,Oleaceae,7830
+San Francisco,Ulmaceae,3507
+San Francisco,Platanaceae,12002
+San Francisco,Pinaceae,3569
+San Francisco,Lythraceae,111
+San Francisco,Arecaceae,3755
+San Francisco,Malvaceae,1243
+San Francisco,Myrtaceae,43104
+San Francisco,Cupressaceae,4134
+San Francisco,Magnoliaceae,8591
+San Francisco,Altingiaceae,1684
+Stockton,Sapindaceae,3084
+Stockton,Rosaceae,9497
+Stockton,Fagaceae,6185
+Stockton,Fabaceae,1366
+Stockton,Oleaceae,11568
+Stockton,Ulmaceae,4191
+Stockton,Platanaceae,7639
+Stockton,Pinaceae,1851
+Stockton,Lythraceae,7380
+Stockton,Arecaceae,2115
+Stockton,Malvaceae,983
+Stockton,Myrtaceae,512
+Stockton,Cupressaceae,4621
+Stockton,Magnoliaceae,4799
+Stockton,Altingiaceae,4371
+Sacramento,Sapindaceae,4316
+Sacramento,Rosaceae,7638
+Sacramento,Fagaceae,10571
+Sacramento,Fabaceae,1452
+Sacramento,Oleaceae,4346
+Sacramento,Ulmaceae,7908
+Sacramento,Platanaceae,14111
+Sacramento,Pinaceae,2520
+Sacramento,Lythraceae,4159
+Sacramento,Arecaceae,3488
+Sacramento,Malvaceae,1021
+Sacramento,Myrtaceae,629
+Sacramento,Cupressaceae,4636
+Sacramento,Magnoliaceae,2052
+Sacramento,Altingiaceae,1949
+Rancho Cucamonga,Sapindaceae,2908
+Rancho Cucamonga,Rosaceae,6542
+Rancho Cucamonga,Fagaceae,1830
+Rancho Cucamonga,Fabaceae,1984
+Rancho Cucamonga,Oleaceae,1093
+Rancho Cucamonga,Ulmaceae,559
+Rancho Cucamonga,Platanaceae,5838
+Rancho Cucamonga,Pinaceae,6358
+Rancho Cucamonga,Lythraceae,12945
+Rancho Cucamonga,Arecaceae,6393
+Rancho Cucamonga,Malvaceae,4004
+Rancho Cucamonga,Myrtaceae,7532
+Rancho Cucamonga,Cupressaceae,207
+Rancho Cucamonga,Magnoliaceae,5253
+Rancho Cucamonga,Altingiaceae,3729
+Anaheim,Sapindaceae,3909
+Anaheim,Rosaceae,1036
+Anaheim,Fagaceae,1609
+Anaheim,Fabaceae,24460
+Anaheim,Oleaceae,419
+Anaheim,Ulmaceae,1195
+Anaheim,Platanaceae,2075
+Anaheim,Pinaceae,3519
+Anaheim,Lythraceae,3772
+Anaheim,Arecaceae,8281
+Anaheim,Malvaceae,701
+Anaheim,Myrtaceae,6224
+Anaheim,Cupressaceae,284
+Anaheim,Magnoliaceae,5564
+Anaheim,Altingiaceae,1493
+Ontario,Sapindaceae,2641
+Ontario,Rosaceae,5257
+Ontario,Fagaceae,1012
+Ontario,Fabaceae,1622
+Ontario,Oleaceae,2468
+Ontario,Ulmaceae,1547
+Ontario,Platanaceae,3763
+Ontario,Pinaceae,4837
+Ontario,Lythraceae,4634
+Ontario,Arecaceae,5817
+Ontario,Malvaceae,1082
+Ontario,Myrtaceae,3189
+Ontario,Cupressaceae,668
+Ontario,Magnoliaceae,2168
+Ontario,Altingiaceae,4392
+Irvine,Sapindaceae,2224
+Irvine,Rosaceae,1241
+Irvine,Fagaceae,1763
+Irvine,Fabaceae,975
+Irvine,Oleaceae,189
+Irvine,Ulmaceae,730
+Irvine,Platanaceae,4082
+Irvine,Pinaceae,11687
+Irvine,Lythraceae,1390
+Irvine,Arecaceae,593
+Irvine,Malvaceae,359
+Irvine,Myrtaceae,19602
+Irvine,Cupressaceae,535
+Irvine,Magnoliaceae,534
+Irvine,Altingiaceae,1773
+HuntingtonBeach,Sapindaceae,1691
+HuntingtonBeach,Rosaceae,2933
+HuntingtonBeach,Fagaceae,467
+HuntingtonBeach,Fabaceae,12670
+HuntingtonBeach,Oleaceae,1025
+HuntingtonBeach,Ulmaceae,119
+HuntingtonBeach,Platanaceae,1097
+HuntingtonBeach,Pinaceae,2835
+HuntingtonBeach,Lythraceae,3902
+HuntingtonBeach,Arecaceae,11857
+HuntingtonBeach,Malvaceae,197
+HuntingtonBeach,Myrtaceae,9448
+HuntingtonBeach,Cupressaceae,325
+HuntingtonBeach,Magnoliaceae,379
+HuntingtonBeach,Altingiaceae,170
+Oakland,Sapindaceae,1479
+Oakland,Rosaceae,8522
+Oakland,Fagaceae,784
+Oakland,Fabaceae,1579
+Oakland,Oleaceae,2503
+Oakland,Ulmaceae,476
+Oakland,Platanaceae,3836
+Oakland,Pinaceae,187
+Oakland,Lythraceae,1958
+Oakland,Arecaceae,549
+Oakland,Malvaceae,49
+Oakland,Myrtaceae,1919
+Oakland,Cupressaceae,207
+Oakland,Magnoliaceae,1474
+Oakland,Altingiaceae,3312
+Garden Grove,Sapindaceae,1712
+Garden Grove,Rosaceae,1739
+Garden Grove,Fagaceae,163
+Garden Grove,Fabaceae,358
+Garden Grove,Oleaceae,317
+Garden Grove,Ulmaceae,601
+Garden Grove,Platanaceae,698
+Garden Grove,Pinaceae,1283
+Garden Grove,Lythraceae,2359
+Garden Grove,Arecaceae,2478
+Garden Grove,Malvaceae,42
+Garden Grove,Myrtaceae,2373
+Garden Grove,Cupressaceae,231
+Garden Grove,Magnoliaceae,713
+Garden Grove,Altingiaceae,365
+Fresno,Sapindaceae,55
+Fresno,Rosaceae,71
+Fresno,Fagaceae,1633
+Fresno,Fabaceae,50
+Fresno,Oleaceae,9
+Fresno,Ulmaceae,570
+Fresno,Platanaceae,408
+Fresno,Pinaceae,1312
+Fresno,Lythraceae,184
+Fresno,Arecaceae,4
+Fresno,Myrtaceae,1
+Fresno,Cupressaceae,322
+Fresno,Magnoliaceae,5
+Fresno,Altingiaceae,6
+Santa Rosa,Sapindaceae,139
+Santa Rosa,Rosaceae,90
+Santa Rosa,Fagaceae,468
+Santa Rosa,Oleaceae,2
+Santa Rosa,Platanaceae,87
+Santa Rosa,Pinaceae,188
+Santa Rosa,Cupressaceae,203
+Santa Rosa,Altingiaceae,1

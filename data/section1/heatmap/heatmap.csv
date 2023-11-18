@@ -14,7 +14,7 @@ Los Angeles,Metrosideros excelsa,561
 Los Angeles,Pinus canariensis,11609
 Los Angeles,Pistacia chinensis,1012
 Los Angeles,Platanus acerifolia,17477
-Los Angeles,Prunus L.,0
+Los Angeles,Prunus,132
 Los Angeles,Pyrus calleryana,7500
 Los Angeles,Quercus,3612
 Los Angeles,Quercus lobata,210
@@ -37,7 +37,7 @@ San Jose,Metrosideros excelsa,1
 San Jose,Pinus canariensis,1582
 San Jose,Pistacia chinensis,24316
 San Jose,Platanus acerifolia,26291
-San Jose,Prunus L.,0
+San Jose,Prunus,776
 San Jose,Pyrus calleryana,9631
 San Jose,Quercus,183
 San Jose,Quercus lobata,1571
@@ -60,7 +60,7 @@ San Diego,Metrosideros excelsa,880
 San Diego,Pinus canariensis,469
 San Diego,Pistacia chinensis,115
 San Diego,Platanus acerifolia,1907
-San Diego,Prunus L.,0
+San Diego,Prunus,0
 San Diego,Pyrus calleryana,1986
 San Diego,Quercus,0
 San Diego,Quercus lobata,0
@@ -74,16 +74,16 @@ Rancho Cucamonga,Cinnamomum camphora,1173
 Rancho Cucamonga,Cupaniopsis anacardioides,1064
 Rancho Cucamonga,Eucalyptus globulus,5549
 Rancho Cucamonga,Eucalyptus maculata,0
-Rancho Cucamonga,Gleditsia triacanthos,8
+Rancho Cucamonga,Gleditsia triacanthos,63
 Rancho Cucamonga,Lagerstroemia indica,12920
 Rancho Cucamonga,Liquidambar styraciflua,3727
 Rancho Cucamonga,Lophostemon confertus,0
 Rancho Cucamonga,Magnolia grandiflora,5016
-Rancho Cucamonga,Metrosideros excelsa,0
+Rancho Cucamonga,Metrosideros excelsa,1
 Rancho Cucamonga,Pinus canariensis,2355
 Rancho Cucamonga,Pistacia chinensis,3213
 Rancho Cucamonga,Platanus acerifolia,5707
-Rancho Cucamonga,Prunus L.,0
+Rancho Cucamonga,Prunus,8
 Rancho Cucamonga,Pyrus calleryana,4941
 Rancho Cucamonga,Quercus,135
 Rancho Cucamonga,Quercus lobata,41
@@ -106,7 +106,7 @@ Stockton,Metrosideros excelsa,1
 Stockton,Pinus canariensis,779
 Stockton,Pistacia chinensis,11392
 Stockton,Platanus acerifolia,7552
-Stockton,Prunus L.,0
+Stockton,Prunus,117
 Stockton,Pyrus calleryana,5296
 Stockton,Quercus,104
 Stockton,Quercus lobata,2523
@@ -129,7 +129,7 @@ Sacramento,Metrosideros excelsa,0
 Sacramento,Pinus canariensis,0
 Sacramento,Pistacia chinensis,4580
 Sacramento,Platanus acerifolia,14111
-Sacramento,Prunus L.,0
+Sacramento,Prunus,530
 Sacramento,Pyrus calleryana,4285
 Sacramento,Quercus,1021
 Sacramento,Quercus lobata,3693
@@ -152,7 +152,7 @@ San Francisco,Metrosideros excelsa,8681
 San Francisco,Pinus canariensis,350
 San Francisco,Pistacia chinensis,412
 San Francisco,Platanus acerifolia,11925
-San Francisco,Prunus L.,0
+San Francisco,Prunus,207
 San Francisco,Pyrus calleryana,4036
 San Francisco,Quercus,25
 San Francisco,Quercus lobata,19
@@ -175,7 +175,7 @@ Anaheim,Metrosideros excelsa,179
 Anaheim,Pinus canariensis,2317
 Anaheim,Pistacia chinensis,1123
 Anaheim,Platanus acerifolia,1264
-Anaheim,Prunus L.,0
+Anaheim,Prunus,0
 Anaheim,Pyrus calleryana,320
 Anaheim,Quercus,25
 Anaheim,Quercus lobata,2
@@ -198,7 +198,7 @@ Ontario,Metrosideros excelsa,4
 Ontario,Pinus canariensis,3307
 Ontario,Pistacia chinensis,1343
 Ontario,Platanus acerifolia,3328
-Ontario,Prunus L.,0
+Ontario,Prunus,0
 Ontario,Pyrus calleryana,2793
 Ontario,Quercus,0
 Ontario,Quercus lobata,1
@@ -221,7 +221,7 @@ Oakland,Metrosideros excelsa,122
 Oakland,Pinus canariensis,6
 Oakland,Pistacia chinensis,1150
 Oakland,Platanus acerifolia,3788
-Oakland,Prunus L.,2930
+Oakland,Prunus,2932
 Oakland,Pyrus calleryana,2683
 Oakland,Quercus,479
 Oakland,Quercus lobata,4
@@ -229,29 +229,29 @@ Oakland,Sequoia sempervirens,48
 Oakland,Syagrus romanzoffianum,16
 Oakland,Tristaniopsis laurina,313
 Oakland,Washingtonia robusta,274
-Huntington Beach,Abies,0
-Huntington Beach,Cedrus deodara,83
-Huntington Beach,Cinnamomum camphora,304
-Huntington Beach,Cupaniopsis anacardioides,1431
-Huntington Beach,Eucalyptus globulus,299
-Huntington Beach,Eucalyptus maculata,0
-Huntington Beach,Gleditsia triacanthos,10394
-Huntington Beach,Lagerstroemia indica,3896
-Huntington Beach,Liquidambar styraciflua,170
-Huntington Beach,Lophostemon confertus,1453
-Huntington Beach,Magnolia grandiflora,372
-Huntington Beach,Metrosideros excelsa,936
-Huntington Beach,Pinus canariensis,1352
-Huntington Beach,Pistacia chinensis,67
-Huntington Beach,Platanus acerifolia,574
-Huntington Beach,Prunus L.,0
-Huntington Beach,Pyrus calleryana,1233
-Huntington Beach,Quercus,1
-Huntington Beach,Quercus lobata,8
-Huntington Beach,Sequoia sempervirens,70
-Huntington Beach,Syagrus romanzoffianum,4681
-Huntington Beach,Tristaniopsis laurina,1094
-Huntington Beach,Washingtonia robusta,4037
+HuntingtonBeach,Abies,0
+HuntingtonBeach,Cedrus deodara,83
+HuntingtonBeach,Cinnamomum camphora,304
+HuntingtonBeach,Cupaniopsis anacardioides,1431
+HuntingtonBeach,Eucalyptus globulus,299
+HuntingtonBeach,Eucalyptus maculata,0
+HuntingtonBeach,Gleditsia triacanthos,10394
+HuntingtonBeach,Lagerstroemia indica,3896
+HuntingtonBeach,Liquidambar styraciflua,170
+HuntingtonBeach,Lophostemon confertus,1453
+HuntingtonBeach,Magnolia grandiflora,372
+HuntingtonBeach,Metrosideros excelsa,936
+HuntingtonBeach,Pinus canariensis,1352
+HuntingtonBeach,Pistacia chinensis,67
+HuntingtonBeach,Platanus acerifolia,574
+HuntingtonBeach,Prunus,3
+HuntingtonBeach,Pyrus calleryana,1233
+HuntingtonBeach,Quercus,1
+HuntingtonBeach,Quercus lobata,8
+HuntingtonBeach,Sequoia sempervirens,70
+HuntingtonBeach,Syagrus romanzoffianum,4681
+HuntingtonBeach,Tristaniopsis laurina,1094
+HuntingtonBeach,Washingtonia robusta,4037
 Irvine,Abies,0
 Irvine,Cedrus deodara,95
 Irvine,Cinnamomum camphora,1333
@@ -267,7 +267,7 @@ Irvine,Metrosideros excelsa,529
 Irvine,Pinus canariensis,4578
 Irvine,Pistacia chinensis,0
 Irvine,Platanus acerifolia,1195
-Irvine,Prunus L.,0
+Irvine,Prunus,17
 Irvine,Pyrus calleryana,0
 Irvine,Quercus,0
 Irvine,Quercus lobata,0
@@ -290,7 +290,7 @@ Garden Grove,Metrosideros excelsa,55
 Garden Grove,Pinus canariensis,1049
 Garden Grove,Pistacia chinensis,11
 Garden Grove,Platanus acerifolia,593
-Garden Grove,Prunus L.,0
+Garden Grove,Prunus,5
 Garden Grove,Pyrus calleryana,467
 Garden Grove,Quercus,0
 Garden Grove,Quercus lobata,0
@@ -313,7 +313,7 @@ Fresno,Metrosideros excelsa,0
 Fresno,Pinus canariensis,0
 Fresno,Pistacia chinensis,713
 Fresno,Platanus acerifolia,294
-Fresno,Prunus L.,0
+Fresno,Prunus,0
 Fresno,Pyrus calleryana,55
 Fresno,Quercus,4
 Fresno,Quercus lobata,588
@@ -336,7 +336,7 @@ Santa Rosa,Metrosideros excelsa,0
 Santa Rosa,Pinus canariensis,0
 Santa Rosa,Pistacia chinensis,0
 Santa Rosa,Platanus acerifolia,87
-Santa Rosa,Prunus L.,0
+Santa Rosa,Prunus,22
 Santa Rosa,Pyrus calleryana,0
 Santa Rosa,Quercus,468
 Santa Rosa,Quercus lobata,0

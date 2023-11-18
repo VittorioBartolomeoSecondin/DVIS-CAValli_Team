@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Platanus acerifolia,87014,London planetree,124.69,45.68
-Gleditsia triacanthos,64264,Honeylocust,90.95,28.15
-Pyrus calleryana,58931,Callery pear,85.81,22.81
-Quercus palustris,53185,Pin oak,124.3,43.98
-Acer platanoides,40112,Norway maple,100.7,33.48
-Tilia cordata,29742,Littleleaf linden,107.87,27.93
-Prunus,29279,Cherry,47.56,19.37
-Zelkova serrata,29258,Japanese zelkova,103.34,25.53
-Ginkgo biloba,21024,Ginkgo,90.34,22.01
-Styphnolobium japonicum,19338,Sophora,92.66,24.24
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Platanus acerifolia,87014,London planetree,Platanus,Platanaceae,Proteales,124.69,45.68
+Gleditsia triacanthos,64264,Honeylocust,Gleditsia,Fabaceae,Fabales,90.95,28.15
+Pyrus calleryana,58931,Callery pear,Pyrus,Rosaceae,Rosales,85.81,22.81
+Quercus palustris,53185,Pin oak,Quercus,Fagaceae,Fagales,124.3,43.98
+Acer platanoides,40112,Norway maple,Acer,Sapindaceae,Sapindales,100.7,33.48
+Tilia cordata,29742,Littleleaf linden,Tilia,Malvaceae,Malvales,107.87,27.93
+Prunus,29279,Cherry,Prunus,Rosaceae,Rosales,47.56,19.38
+Zelkova serrata,29258,Japanese zelkova,Zelkova,Ulmaceae,Rosales,103.34,25.53
+Ginkgo biloba,21024,Ginkgo,Ginkgo,Ginkgoaceae,Ginkgoales,90.34,22.01
+Styphnolobium japonicum,19338,Sophora,Styphnolobium,Fabaceae,Fabales,92.66,24.24

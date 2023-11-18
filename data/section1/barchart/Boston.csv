@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Pinus strobus,267,Eastern white pine,112.24,29.03
-Acer rubrum,151,Red maple,86.51,24.76
-Quercus rubra,115,Northern red oak,108.06,34.33
-Prunus serotina,87,Black cherry,101.28,28.58
-Acer saccharum,59,Sugar maple,93.8,26.35
-Tsuga canadensis,44,Eastern hemlock,79.7,28.91
-Pinus rigida,42,Pitch pine,114.83,21.42
-Juniperus virginiana,39,Eastern red cedar,75.69,18.05
-Quercus alba,30,White oak,144.91,43.41
-Acer pseudoplatanus,29,Sycamore maple,107.6,36.11
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Pinus strobus,267,Eastern white pine,Pinus,Pinaceae,Pinales,112.24,29.03
+Acer rubrum,151,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Quercus rubra,115,Northern red oak,Quercus,Fagaceae,Fagales,108.06,34.33
+Prunus serotina,87,Black cherry,Prunus,Rosaceae,Rosales,101.28,28.58
+Acer saccharum,59,Sugar maple,Acer,Sapindaceae,Sapindales,93.8,26.35
+Tsuga canadensis,44,Eastern hemlock,Tsuga,Pinaceae,Pinales,79.7,28.91
+Pinus rigida,42,Pitch pine,Pinus,Pinaceae,Pinales,114.83,21.42
+Juniperus virginiana,39,Eastern red cedar,Juniperus,Cupressaceae,Pinales,75.69,18.05
+Quercus alba,30,White oak,Quercus,Fagaceae,Fagales,144.91,43.41
+Acer pseudoplatanus,29,Sycamore maple,Acer,Sapindaceae,Sapindales,107.6,36.11

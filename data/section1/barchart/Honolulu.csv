@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Cocos nucifera,1811,Coconut palm,116.13,32.52
-Adonidia merrillii,1525,Manila palm,33.65,14.58
-Cassia nealiae,977,Rainbow shower,87.22,44.78
-Tabebuia heterophylla,955,Pink tecoma,84.46,35.22
-Albizia saman,923,Monkeypod,113.37,83.7
-Casuarina equisetifolia,434,Horsetail tree,190.44,73.95
-Acacia confusa,366,Formosan koa,88.74,38.12
-Conocarpus erectus,351,Silver buttonwood,48.08,15.96
-Tabebuia berteroi,293,White tecoma,63.38,17.06
-Filicium decipiens,279,Fern tree,87.19,34.62
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Cocos nucifera,1811,Coconut palm,Cocos,Arecaceae,Arecales,116.13,32.52
+Adonidia merrillii,1525,Manila palm,Adonidia,Arecaceae,Arecales,33.65,14.58
+Cassia nealiae,977,Rainbow shower,Cassia,Fabaceae,Fabales,87.22,44.78
+Tabebuia heterophylla,955,Pink tecoma,Tabebuia,Bignoniaceae,Lamiales,84.46,35.22
+Albizia saman,923,Monkeypod,Samanea,Fabaceae,Fabales,113.37,83.7
+Casuarina equisetifolia,434,Horsetail tree,Casuarina,Casuarinaceae,Fagales,190.44,73.95
+Acacia confusa,366,Formosan koa,Acacia,Fabaceae,Fabales,88.74,38.12
+Conocarpus erectus,351,Silver buttonwood,Conocarpus,Combretaceae,Myrtales,48.08,15.96
+Tabebuia berteroi,293,White tecoma,Tabebuia,Bignoniaceae,Lamiales,63.38,17.06
+Filicium decipiens,279,Fern tree,Filicium,Sapindaceae,Sapindales,87.19,34.62

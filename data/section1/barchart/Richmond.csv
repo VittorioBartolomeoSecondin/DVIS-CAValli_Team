@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Acer saccharum,227,Sugar maple,93.8,26.35
-Quercus phellos,171,Willow oak,73.64,42.91
-Lagerstroemia indica,161,Crape myrtle,53.13,12.27
-Acer rubrum,148,Red maple,86.51,24.76
-Quercus palustris,133,Pin oak,124.3,43.98
-Zelkova serrata,129,Japanese zelkova,103.34,25.53
-Ulmus alata,79,Winged elm,67.65,23.94
-Fraxinus pennsylvanica,53,Green ash,142.0,30.74
-Pyrus calleryana,46,Callery pear,85.81,22.81
-Acer campestre,45,Hedge maple,54.51,17.15
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Acer saccharum,227,Sugar maple,Acer,Sapindaceae,Sapindales,93.8,26.35
+Quercus phellos,171,Willow oak,Quercus,Fagaceae,Fagales,73.64,42.91
+Lagerstroemia indica,161,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales,53.13,12.27
+Acer rubrum,148,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Quercus palustris,133,Pin oak,Quercus,Fagaceae,Fagales,124.3,43.98
+Zelkova serrata,129,Japanese zelkova,Zelkova,Ulmaceae,Rosales,103.34,25.53
+Ulmus alata,79,Winged elm,Ulmus,Ulmaceae,Rosales,67.65,23.94
+Fraxinus pennsylvanica,53,Green ash,Fraxinus,Oleaceae,Lamiales,142.0,30.74
+Pyrus calleryana,46,Callery pear,Pyrus,Rosaceae,Rosales,85.81,22.81
+Acer campestre,45,Hedge maple,Acer,Sapindaceae,Sapindales,54.51,17.15

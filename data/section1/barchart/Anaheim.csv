@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Gleditsia triacanthos,23076,Honeylocust,90.95,28.15
-Magnolia grandiflora,5266,Southern magnolia,81.82,21.8
-Washingtonia robusta,4385,Mexican fan palm,160.1,44.35
-Lagerstroemia indica,3771,Crape myrtle,53.13,12.27
-Cinnamomum camphora,2567,Camphor tree,102.94,44.48
-Pinus canariensis,2317,Canary island pine,198.12,49.05
-Koelreuteria bipinnata,2227,Chinese flame tree,102.87,30.67
-Syagrus romanzoffianum,1706,Queen palm,76.76,26.94
-Jacaranda mimosifolia,1676,Jacaranda,72.01,20.96
-Lophostemon confertus,1609,Brisbane box,100.24,25.17
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Gleditsia triacanthos,23076,Honeylocust,Gleditsia,Fabaceae,Fabales,90.95,28.15
+Magnolia grandiflora,5266,Southern magnolia,Magnolia,Magnoliaceae,Magnoliales,81.82,21.8
+Washingtonia robusta,4385,Mexican fan palm,Washingtonia,Arecaceae,Arecales,160.1,44.35
+Lagerstroemia indica,3771,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales,53.13,12.27
+Cinnamomum camphora,2567,Camphor tree,Cinnamomum,Lauraceae,Laurales,102.94,44.48
+Pinus canariensis,2317,Canary island pine,Pinus,Pinaceae,Pinales,198.12,49.05
+Koelreuteria bipinnata,2227,Chinese flame tree,Koelreuteria,Sapindaceae,Sapindales,102.87,30.67
+Syagrus romanzoffianum,1706,Queen palm,Syagrus,Arecaceae,Arecales,76.76,26.94
+Jacaranda mimosifolia,1676,Jacaranda,Jacaranda,Bignoniaceae,Lamiales,72.01,20.96
+Lophostemon confertus,1609,Brisbane box,Lophostemon,Myrtaceae,Myrtales,100.24,25.17

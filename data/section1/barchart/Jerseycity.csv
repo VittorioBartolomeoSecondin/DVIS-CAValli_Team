@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Thuja occidentalis,111,Northern white cedar,45.69,15.89
-Quercus rubra,101,Northern red oak,108.06,34.33
-Quercus bicolor,92,Swamp white oak,49.94,11.22
-Tilia cordata,78,Littleleaf linden,107.87,27.93
-Acer rubrum,63,Red maple,86.51,24.76
-Platanus occidentalis,62,American sycamore,130.68,49.41
-Acer saccharum,56,Sugar maple,93.8,26.35
-Juniperus virginiana,33,Eastern red cedar,75.69,18.05
-Juniperus chinensis,22,Juniper,55.79,22.02
-Gleditsia triacanthos,17,Honeylocust,90.95,28.15
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Thuja occidentalis,111,Northern white cedar,Thuja,Cupressaceae,Pinales,45.69,15.89
+Quercus rubra,101,Northern red oak,Quercus,Fagaceae,Fagales,108.06,34.33
+Quercus bicolor,92,Swamp white oak,Quercus,Fagaceae,Fagales,49.94,11.22
+Tilia cordata,78,Littleleaf linden,Tilia,Malvaceae,Malvales,107.87,27.93
+Acer rubrum,63,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Platanus occidentalis,62,American sycamore,Platanus,Platanaceae,Proteales,130.68,49.41
+Acer saccharum,56,Sugar maple,Acer,Sapindaceae,Sapindales,93.8,26.35
+Juniperus virginiana,33,Eastern red cedar,Juniperus,Cupressaceae,Pinales,75.69,18.05
+Juniperus chinensis,22,Juniper,Juniperus,Cupressaceae,Pinales,55.79,22.02
+Gleditsia triacanthos,17,Honeylocust,Gleditsia,Fabaceae,Fabales,90.95,28.15

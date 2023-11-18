@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Acer rubrum,683,Red maple,86.51,24.76
-Cornus florida,602,Flowering dogwood,36.89,11.77
-Acer saccharum,594,Sugar maple,93.8,26.35
-Lagerstroemia indica,517,Crape myrtle,53.13,12.27
-Cercis canadensis,323,Eastern redbud,37.01,10.86
-Quercus phellos,321,Willow oak,73.64,42.91
-Celtis occidentalis,282,Common hackberry,94.87,25.37
-Pinus strobus,199,Eastern white pine,112.24,29.03
-Quercus palustris,184,Pin oak,124.3,43.98
-Acer saccharinum,172,Silver maple,154.47,52.17
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Acer rubrum,683,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Cornus florida,602,Flowering dogwood,Cornus,Cornaceae,Cornales,36.89,11.77
+Acer saccharum,594,Sugar maple,Acer,Sapindaceae,Sapindales,93.8,26.35
+Lagerstroemia indica,517,Crape myrtle,Lagerstroemia,Lythraceae,Myrtales,53.13,12.27
+Cercis canadensis,323,Eastern redbud,Cercis,Fabaceae,Fabales,37.01,10.86
+Quercus phellos,321,Willow oak,Quercus,Fagaceae,Fagales,73.64,42.91
+Celtis occidentalis,282,Common hackberry,Celtis,Cannabaceae,Rosales,94.87,25.37
+Pinus strobus,199,Eastern white pine,Pinus,Pinaceae,Pinales,112.24,29.03
+Quercus palustris,184,Pin oak,Quercus,Fagaceae,Fagales,124.3,43.98
+Acer saccharinum,172,Silver maple,Acer,Sapindaceae,Sapindales,154.47,52.17

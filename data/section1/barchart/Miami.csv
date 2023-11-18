@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Pinus elliottii,46,Slash pine,130.64,25.34
-Sabal palmetto,41,Cabbage palm,77.85,33.48
-Adonidia merrillii,36,Manila palm,33.65,14.58
-Eugenia,34,Redberry stopper,nan,18.47
-Musa acuminata,33,Edible banana,19.69,21.3
-Pseudopanax crassifolius,32,Lancewood,nan,26.3
-Cocos nucifera,28,Coconut palm,116.13,32.52
-Mangifera indica,23,Mango,80.58,52.44
-Ravenala madagascariensis,22,Travelers tree,68.9,63.37
-Coccoloba diversifolia,22,Pigeon plum,nan,23.53
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Pinus elliottii,46,Slash pine,Pinus,Pinaceae,Pinales,130.64,25.34
+Sabal palmetto,41,Cabbage palm,Sabal,Arecaceae,Arecales,77.85,33.48
+Adonidia merrillii,36,Manila palm,Adonidia,Arecaceae,Arecales,33.65,14.58
+Eugenia,34,Redberry stopper,Eugenia,Myrtaceae,Myrtales,nan,18.47
+Musa acuminata,33,Edible banana,Musa,Musaceae,Zingiberales,19.69,21.3
+Pseudopanax crassifolius,32,Lancewood,Pseudopanax,Araliaceae,Apiales,nan,26.3
+Cocos nucifera,28,Coconut palm,Cocos,Arecaceae,Arecales,116.13,32.52
+Mangifera indica,23,Mango,Mangifera,Anacardiaceae,Sapindales,80.58,52.44
+Ravenala madagascariensis,22,Travelers tree,Ravenala,Strelitziaceae,Zingiberales,68.9,63.37
+Coccoloba diversifolia,22,Pigeon plum,Coccoloba,Polygonaceae,Caryophyllales,nan,23.53

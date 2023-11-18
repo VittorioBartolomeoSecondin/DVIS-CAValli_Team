@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Gleditsia triacanthos,10428,Honeylocust,90.95,28.15
-Tilia,6107,Linden,82.6,31.32
-Fraxinus pennsylvanica,5465,Green ash,142.0,30.74
-Acer platanoides,4745,Norway maple,100.7,33.48
-Acer saccharinum,3433,Silver maple,154.47,52.17
-Celtis occidentalis,2493,Common hackberry,94.87,25.37
-Tilia americana,1668,American linden,96.92,28.02
-Malus,1536,Crabapple,46.09,14.88
-Pinus nigra,1517,Austrian pine,78.51,27.1
-Pyrus calleryana,1490,Callery pear,85.81,22.81
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Gleditsia triacanthos,10428,Honeylocust,Gleditsia,Fabaceae,Fabales,90.95,28.15
+Tilia,6107,Linden,Tilia,Malvaceae,Malvales,82.6,31.31
+Fraxinus pennsylvanica,5465,Green ash,Fraxinus,Oleaceae,Lamiales,142.0,30.74
+Acer platanoides,4745,Norway maple,Acer,Sapindaceae,Sapindales,100.7,33.48
+Acer saccharinum,3433,Silver maple,Acer,Sapindaceae,Sapindales,154.47,52.17
+Celtis occidentalis,2493,Common hackberry,Celtis,Cannabaceae,Rosales,94.87,25.37
+Tilia americana,1668,American linden,Tilia,Malvaceae,Malvales,96.92,28.02
+Malus,1536,Crabapple,Malus,Rosaceae,Rosales,46.72,14.82
+Pinus nigra,1517,Austrian pine,Pinus,Pinaceae,Pinales,78.51,27.1
+Pyrus calleryana,1490,Callery pear,Pyrus,Rosaceae,Rosales,85.81,22.81

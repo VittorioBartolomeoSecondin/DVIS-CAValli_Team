@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Cedrus deodara,749,Deodar cedar,131.55,39.72
-Pistacia chinensis,713,Chinese pistache,77.33,21.72
-Quercus lobata,588,California white oak,91.6,28.74
-Ulmus parvifolia,444,Chinese elm,101.71,23.6
-Quercus coccinea,397,Scarlet oak,96.76,30.25
-Ginkgo biloba,331,Ginkgo,90.34,22.01
-Platanus acerifolia,294,London planetree,124.69,45.68
-Pinus pinea,238,Italian stone pine,112.13,53.72
-Quercus virginiana,232,Live oak,92.73,31.36
-Pinus halepensis,209,Aleppo pine,125.99,46.43
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Cedrus deodara,749,Deodar cedar,Cedrus,Pinaceae,Pinales,131.55,39.72
+Pistacia chinensis,713,Chinese pistache,Pistacia,Anacardiaceae,Sapindales,77.33,21.72
+Quercus lobata,588,California white oak,Quercus,Fagaceae,Fagales,91.6,28.74
+Ulmus parvifolia,444,Chinese elm,Ulmus,Ulmaceae,Rosales,101.71,23.6
+Quercus coccinea,397,Scarlet oak,Quercus,Fagaceae,Fagales,96.76,30.25
+Ginkgo biloba,331,Ginkgo,Ginkgo,Ginkgoaceae,Ginkgoales,90.34,22.01
+Platanus acerifolia,294,London planetree,Platanus,Platanaceae,Proteales,124.69,45.68
+Pinus pinea,238,Italian stone pine,Pinus,Pinaceae,Pinales,112.13,53.72
+Quercus virginiana,232,Live oak,Quercus,Fagaceae,Fagales,92.73,31.36
+Pinus halepensis,209,Aleppo pine,Pinus,Pinaceae,Pinales,125.99,46.43

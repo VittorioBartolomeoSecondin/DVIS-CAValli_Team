@@ -1,11 +1,11 @@
-scientific_name,count,common_name,avg_height,avg_diameter
-Acer saccharum,7042,Sugar maple,93.8,26.35
-Celtis occidentalis,5940,Common hackberry,94.87,25.37
-Malus,5803,Crabapple,46.09,14.88
-Fraxinus americana,5717,White ash,109.62,30.37
-Ulmus pumila,3977,Siberian elm,125.63,37.38
-Acer platanoides,3298,Norway maple,100.7,33.48
-Pinus strobus,3148,Eastern white pine,112.24,29.03
-Acer rubrum,3135,Red maple,86.51,24.76
-Morus,3107,Mulberry,54.68,35.97
-Fraxinus pennsylvanica,2810,Green ash,142.0,30.74
+scientific_name,count,common_name,tree_genus,tree_family,tree_order,avg_height,avg_diameter
+Acer saccharum,7042,Sugar maple,Acer,Sapindaceae,Sapindales,93.8,26.35
+Celtis occidentalis,5940,Common hackberry,Celtis,Cannabaceae,Rosales,94.87,25.37
+Malus,5803,Crabapple,Malus,Rosaceae,Rosales,46.72,14.82
+Fraxinus americana,5717,White ash,Fraxinus,Oleaceae,Lamiales,109.62,30.37
+Ulmus pumila,3977,Siberian elm,Ulmus,Ulmaceae,Rosales,125.63,37.38
+Acer platanoides,3298,Norway maple,Acer,Sapindaceae,Sapindales,100.7,33.48
+Pinus strobus,3148,Eastern white pine,Pinus,Pinaceae,Pinales,112.24,29.03
+Acer rubrum,3135,Red maple,Acer,Sapindaceae,Sapindales,86.51,24.76
+Morus,3107,Mulberry,Morus,Moraceae,Rosales,54.68,35.97
+Fraxinus pennsylvanica,2810,Green ash,Fraxinus,Oleaceae,Lamiales,142.0,30.74
