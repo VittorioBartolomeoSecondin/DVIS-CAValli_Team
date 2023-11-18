@@ -114,18 +114,30 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
       .attr("x", function(d) { return d.x1 + 6; })
       .attr("text-anchor", "start");
 
+  var showing_connections = false;
+	
   // Add hover effects to nodes
-  node.on("mouseover", function (event, d) {
+  node.on("click", function (event, d) {
        d3.select(this).attr("font-weight", "bold");
 
        link.filter(function(linkData) {
-	   if (linkData.target.name == d.name) 
-	       d3.select(document.getElementById(linkData.source.name + "->" + d.name))
-		 .style("stroke-opacity", 0.5)
-		 .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
+	   if (linkData.target.name == d.name) {
+	       if (!showing_connections) {
+		       d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+			 .style("stroke-opacity", 0.5)
+			 .attr("stroke-width", function (d) { if (d.width < 4) return 4; else return d.width; });
+		       showing_connections = true;
+	       }
+	       else {
+		      d3.select(document.getElementById(linkData.source.name + "->" + d.name))
+		        .style("stroke-opacity", 0.2)
+	                .attr("stroke-width", function (d) { return d.width; });
+		       showing_connections = false;
+	       }
+	   }
        });
    })
-      .on("mouseout", function (event, d) {
+     /* .on("mouseout", function (event, d) {
          d3.select(this).attr("font-weight", "normal");
 
          link.filter(function(linkData) {
@@ -134,7 +146,7 @@ d3.csv("data/section2/sankey_alternative.csv").then(function(data) {
 		   .style("stroke-opacity", 0.2)
 	           .attr("stroke-width", function (d) { return d.width; });
          });
-       });
+       });*/
 
    // Add hover effects to links
    link.on("mouseover", function () {
