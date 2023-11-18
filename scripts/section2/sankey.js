@@ -100,7 +100,7 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
   // add the title for the nodes
   node.append("title")
       .text(function(d) { 
-          return d.name + "\n" + d.value; });
+          return d.name + "\n" + d.value + " trees"; });
 
   // add in the text for the nodes
   node.append("text")
