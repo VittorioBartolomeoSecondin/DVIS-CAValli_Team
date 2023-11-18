@@ -76,7 +76,7 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
   link.append("title")
         .text(function(d) {
     		    return d.source.name + " → " + 
-                d.target.name + "\n" + d.value; });
+                d.target.name + "\n" + d.value + " trees"; });
 
   // add in the nodes
   var node = svg.append("g").selectAll(".node")
