@@ -133,3 +133,16 @@ Promise.all([
         .style("fill", "blue");
 
 });
+
+/*
+// Initial chart creation with the default dataset
+updateLineChart();
+
+// Listen for changes in the dropdown selection
+document.getElementById("dataset-dropdown").addEventListener("change", function () {
+  const selectedDataset = this.value;
+  d3.select("#barchart_svg").remove();
+  d3.select("#barchart_tooltip").remove();
+  updateBarChart(selectedDataset);
+});
+*/
