@@ -31,17 +31,17 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         console.log(yearDataAvg);
 
     
-        var allMonths = Object.keys(dataAvg[0]).slice(2);
+        var allMonths = Object.keys(yearDataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
     
-        var minTemperature = d3.min(dataMin, function (d) {
+        var minTemperature = d3.min(yearDataMin, function (d) {
             return d3.min(months, function (month) {
                 return +d[month];
             });
         });
         
         // Find the maximum temperature across all months in dataMax
-        var maxTemperature = d3.max(dataMax, function (d) {
+        var maxTemperature = d3.max(yearDataMax, function (d) {
             return d3.max(months, function (month) {
                 return +d[month];
             });
@@ -80,11 +80,11 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
     
         var lineMax = d3.line()
             .x(function (d) { return x(d); })
-            .y(function (d) { return y(dataMax[0][d]); });
+            .y(function (d) { return y(yearDataMax[0][d]); });
     
         var lineMin = d3.line()
             .x(function (d) { return x(d); })
-            .y(function (d) { return y(dataMin[0][d]); });
+            .y(function (d) { return y(yearDataMin[0][d]); });
     
         svg.append("path")
             .datum(months)
@@ -104,7 +104,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .data(months)
             .enter().append("circle")
             .attr("cx", function (d) { return x(d); })
-            .attr("cy", function (d) { return y(dataAvg[0][d]); })
+            .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
             .attr("r", 4)
             .style("fill", "#89CFF0");
     
@@ -113,7 +113,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .enter().append("circle")
             .attr("class", "circle-max")
             .attr("cx", function (d) { return x(d); })
-            .attr("cy", function (d) { return y(dataMax[0][d]); })
+            .attr("cy", function (d) { return y(yearDataMax[0][d]); })
             .attr("r", 4)
             .style("fill", "#0000FF");
     
@@ -122,7 +122,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .enter().append("circle")
             .attr("class", "circle-min")
             .attr("cx", function (d) { return x(d); })
-            .attr("cy", function (d) { return y(dataMin[0][d]); })
+            .attr("cy", function (d) { return y(yearDataMin[0][d]); })
             .attr("r", 4)
             .style("fill", "#00FFFF");
     
