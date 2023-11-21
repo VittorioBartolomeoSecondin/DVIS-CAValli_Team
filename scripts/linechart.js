@@ -20,15 +20,15 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
     var months = allMonths.slice(0, allMonths.length / 2); // Use only the first 12 months
     
     // set the domain of x-axis scale to be the months
-    /*var x = d3.scaleBand()
+    var x = d3.scaleBand()
         .domain(months)
         .range([0, width])
-        .padding(0.1);*/
+        .padding(0.1);
 
     // set the domain of x-axis scale to be the months
-    var x = d3.scaleLinear()
+    /*var x = d3.scaleLinear()
         .domain([0, months.length - 1])  // Use the indices of the months as the domain
-        .range([0, width]);
+        .range([0, width]);*/
 
 
     
