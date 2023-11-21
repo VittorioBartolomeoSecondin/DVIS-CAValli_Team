@@ -12,9 +12,9 @@ var svg = d3.select("body").append("svg")
 
 // Read the data
 Promise.all([
-    d3.csv("data/AVG/AlabamaAVG.csv"),
-    d3.csv("data/MAX/AlabamaMAX.csv"),
-    d3.csv("data/MIN/AlabamaMIN.csv")
+    d3.csv("data/section3/AVG/AlabamaAVG.csv"),
+    d3.csv("data/section3/MAX/AlabamaMAX.csv"),
+    d3.csv("data/section3/MIN/AlabamaMIN.csv")
 ]).then(function (datasets) {
 
     var dataAvg = datasets[0];
