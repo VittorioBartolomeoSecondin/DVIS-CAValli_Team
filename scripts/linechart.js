@@ -26,10 +26,10 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
         .padding(0.1);*/
 
     // set the domain of x-axis scale to be the months
-    var x = d3.scaleBand()
-        .domain(months)
-        .range([0, width - x.bandwidth()])  // Adjust the range to ensure the first bar starts at 0
-        .padding(0.1);
+    var x = d3.scaleLinear()
+        .domain([0, months.length - 1])  // Use the indices of the months as the domain
+        .range([0, width]);
+
 
     
     // set the domain of y-axis scale to be the maximum temperature across all months
@@ -52,7 +52,7 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
         .call(d3.axisLeft(y));
 
     // Create a line function
-    var line = d3.line()
+    /*var line = d3.line()
         //.x(function(month) { return x(month); })
         .x(function(d) { return x(d); })
         .y(function(d) { return y(data[0][d]); });
@@ -63,6 +63,20 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
         .attr("fill", "none")
         .attr("stroke", "#69b3a2")
         .attr("stroke-width", 1.5)
+        .attr("d", line);*/
+
+    // Create a line function
+    var line = d3.line()
+        .x(function(d, i) { return x(i); })  // Use the index as x-coordinate
+        .y(function(d) { return y(data[0][d]); });
+    
+    // Draw the line
+    svg.append("path")
+        .datum(months)
+        .attr("fill", "none")
+        .attr("stroke", "#69b3a2")
+        .attr("stroke-width", 1.5)
         .attr("d", line);
+
 
 });
