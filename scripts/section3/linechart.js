@@ -24,9 +24,9 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         var dataMax = datasets[1];
         var dataMin = datasets[2];
     
-        var yearDataAvg = dataAvg.filter(function (d) { return +d.year === 1895; });
-        var yearDataMax = dataMax.filter(function (d) { return +d.year === 1895; });
-        var yearDataMin = dataMin.filter(function (d) { return +d.year === 1895; });
+        var yearDataAvg = dataAvg.filter(function (d) { return +d.year === 1926; });
+        var yearDataMax = dataMax.filter(function (d) { return +d.year === 1926; });
+        var yearDataMin = dataMin.filter(function (d) { return +d.year === 1926; });
 
     
         var allMonths = Object.keys(dataAvg[0]).slice(2);
