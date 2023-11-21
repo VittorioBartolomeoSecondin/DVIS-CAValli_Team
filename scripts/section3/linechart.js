@@ -27,10 +27,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         var yearDataAvg = dataAvg.filter(function (d) { return d.year === 1895; });
         var yearDataMax = dataMax.filter(function (d) { return d.year === 1895; });
         var yearDataMin = dataMin.filter(function (d) { return d.year === 1895; });
-
-        console.log(yearDataAvg);
-        console.log(yearDataMax);
-        console.log(yearDataMin);
     
         var allMonths = Object.keys(dataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
@@ -79,10 +75,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .style("text-anchor", "middle")
             .text("Temperatures in Celsius");
     
-        var lineAvg = d3.line()
-            .x(function (d) { return x(d); })
-            .y(function (d) { return y(dataAvg[0][d]); });
-    
         var lineMax = d3.line()
             .x(function (d) { return x(d); })
             .y(function (d) { return y(dataMax[0][d]); });
@@ -94,21 +86,14 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         svg.append("path")
             .datum(months)
             .attr("fill", "none")
-            .attr("stroke", "black")
-            .attr("stroke-width", 1.5)
-            .attr("d", lineAvg);
-    
-        svg.append("path")
-            .datum(months)
-            .attr("fill", "none")
-            .attr("stroke", "red") // Adjust the color for max temperature
+            .attr("stroke", "#0000FF")
             .attr("stroke-width", 1.5)
             .attr("d", lineMax);
     
         svg.append("path")
             .datum(months)
             .attr("fill", "none")
-            .attr("stroke", "blue") // Adjust the color for min temperature
+            .attr("stroke", "#00FFFF")
             .attr("stroke-width", 1.5)
             .attr("d", lineMin);
     
@@ -118,7 +103,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("cx", function (d) { return x(d); })
             .attr("cy", function (d) { return y(dataAvg[0][d]); })
             .attr("r", 4)
-            .style("fill", "black");
+            .style("fill", "#89CFF0");
     
         svg.selectAll(".circle-max")
             .data(months)
@@ -127,7 +112,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("cx", function (d) { return x(d); })
             .attr("cy", function (d) { return y(dataMax[0][d]); })
             .attr("r", 4)
-            .style("fill", "red");
+            .style("fill", "#0000FF");
     
         svg.selectAll(".circle-min")
             .data(months)
@@ -136,7 +121,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("cx", function (d) { return x(d); })
             .attr("cy", function (d) { return y(dataMin[0][d]); })
             .attr("r", 4)
-            .style("fill", "blue");
+            .style("fill", "#00FFFF");
     
     })
 }
