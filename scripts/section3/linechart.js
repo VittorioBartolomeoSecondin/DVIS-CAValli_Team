@@ -28,6 +28,8 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         var yearDataMax = dataMax.filter(function (d) { return +d.year === 1926; });
         var yearDataMin = dataMin.filter(function (d) { return +d.year === 1926; });
 
+        console.log(yearDataAvg);
+
     
         var allMonths = Object.keys(dataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
