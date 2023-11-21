@@ -3,15 +3,16 @@ var margin = { top: 20, right: 40, bottom: 70, left: 60 },
     width = 1000 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
-// append the svg object to the body of the page
-var svg = d3.select("body").append("svg")
-    .attr("id", "linechart_svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
-
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) {
+
+    // append the svg object to the body of the page
+    var svg = d3.select("body").append("svg")
+        .attr("id", "linechart_svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
     // Read the data
     Promise.all([
         d3.csv(selectedDataset_1),
