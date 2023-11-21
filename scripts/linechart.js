@@ -23,15 +23,8 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
     var x = d3.scaleBand()
         .domain(months)
         .range([0, width])
-        .padding(0.5);
+        .padding(1);
 
-    // set the domain of x-axis scale to be the months
-    /*var x = d3.scaleLinear()
-        .domain([0, months.length - 1])  // Use the indices of the months as the domain
-        .range([0, width]);*/
-
-
-    
     // set the domain of y-axis scale to be the maximum temperature across all months
     var y = d3.scaleLinear()
         .domain([0, d3.max(data, function(d) {
