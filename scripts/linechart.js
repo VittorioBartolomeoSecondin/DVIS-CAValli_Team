@@ -95,23 +95,25 @@ Promise.all([
         .enter().append("circle")
         .attr("cx", function (d) { return x(d); })
         .attr("cy", function (d) { return y(dataAvg[0][d]); })
-        .attr("r", 5)
+        .attr("r", 4)
         .style("fill", "black");
 
-    svg.selectAll("circle")
+    svg.selectAll(".circle-max")
         .data(months)
         .enter().append("circle")
+        .attr("class", "circle-max")
         .attr("cx", function (d) { return x(d); })
         .attr("cy", function (d) { return y(dataMax[0][d]); })
-        .attr("r", 5)
+        .attr("r", 4)
         .style("fill", "red");
 
-    svg.selectAll("circle")
+    svg.selectAll(".circle-min")
         .data(months)
         .enter().append("circle")
+        .attr("class", "circle-min")
         .attr("cx", function (d) { return x(d); })
         .attr("cy", function (d) { return y(dataMin[0][d]); })
-        .attr("r", 5)
+        .attr("r", 4)
         .style("fill", "blue");
 
 });
