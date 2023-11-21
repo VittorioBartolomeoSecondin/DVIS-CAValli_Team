@@ -57,6 +57,21 @@ Promise.all([
     svg.append("g")
         .call(d3.axisLeft(y));
 
+    // Add x-axis label
+    svg.append("text")
+        .attr("transform", `translate(${width / 2},${height + margin.top + 20})`)
+        .style("text-anchor", "middle")
+        .text("Month");
+    
+    // Add y-axis label
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x", 0 - height / 2)
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Temperatures in Celsius");
+
     var lineAvg = d3.line()
         .x(function (d) { return x(d); })
         .y(function (d) { return y(dataAvg[0][d]); });
