@@ -92,17 +92,26 @@ Promise.all([
     var allMonths = Object.keys(dataAvg[0]).slice(2);
     var months = allMonths.slice(0, allMonths.length / 2);
 
+    var minTemperature = d3.min(dataMin, function (d) {
+        return d3.min(months, function (month) {
+            return +d[month];
+        });
+    });
+    
+    // Find the maximum temperature across all months in dataMax
+    var maxTemperature = d3.max(dataMax, function (d) {
+        return d3.max(months, function (month) {
+            return +d[month];
+        });
+    });
+
     var x = d3.scaleBand()
         .domain(months)
         .range([0, width])
         .padding(1);
 
     var y = d3.scaleLinear()
-        .domain([0, d3.max(dataMax, function (d) {
-            return d3.max(months, function (month) {
-                return +d[month];
-            });
-        })])
+        .domain([minTemperature, maxTemperature])
         .range([height, 0]);
 
     svg.append("g")
