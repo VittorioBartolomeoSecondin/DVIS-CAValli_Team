@@ -22,8 +22,7 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
     // set the domain of x-axis scale to be the months
     var x = d3.scaleBand()
         .domain(months)
-        .range([0, width])
-        .padding(0.1);
+        .range([0, width]);
 
     // set the domain of x-axis scale to be the months
     /*var x = d3.scaleLinear()
@@ -52,7 +51,7 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
         .call(d3.axisLeft(y));
 
     // Create a line function
-    /*var line = d3.line()
+    var line = d3.line()
         //.x(function(month) { return x(month); })
         .x(function(d) { return x(d); })
         .y(function(d) { return y(data[0][d]); });
@@ -63,10 +62,10 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
         .attr("fill", "none")
         .attr("stroke", "#69b3a2")
         .attr("stroke-width", 1.5)
-        .attr("d", line);*/
+        .attr("d", line);
 
     // Create a line function
-    var line = d3.line()
+    /*var line = d3.line()
         .x(function(d, i) { return x(i); })  // Use the index as x-coordinate
         .y(function(d) { return y(data[0][d]); });
     
@@ -76,7 +75,7 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
         .attr("fill", "none")
         .attr("stroke", "#69b3a2")
         .attr("stroke-width", 1.5)
-        .attr("d", line);
+        .attr("d", line);*/
 
 
 });
