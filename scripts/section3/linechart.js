@@ -6,7 +6,7 @@ var margin = { top: 20, right: 40, bottom: 70, left: 60 },
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) {
 
     // append the svg object to the body of the page
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#linechart_1").append("svg")
         .attr("id", "linechart_svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
