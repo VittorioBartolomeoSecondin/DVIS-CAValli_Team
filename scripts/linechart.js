@@ -114,20 +114,20 @@ Promise.all([
 
     var lineAvg = d3.line()
         .x(function (d) { return x(d); })
-        .y(function (d) { return y(yearDataAvg[0][d]); });
+        .y(function (d) { return y(dataAvg[0][d]); });
 
     var lineMax = d3.line()
         .x(function (d) { return x(d); })
-        .y(function (d) { return y(yearDataMax[0][d]); });
+        .y(function (d) { return y(dataMax[0][d]); });
 
     var lineMin = d3.line()
         .x(function (d) { return x(d); })
-        .y(function (d) { return y(yearDataMin[0][d]); });
+        .y(function (d) { return y(dataMin[0][d]); });
 
     svg.append("path")
         .datum(months)
         .attr("fill", "none")
-        .attr("stroke", "#69b3a2")
+        .attr("stroke", "black")
         .attr("stroke-width", 1.5)
         .attr("d", lineAvg);
 
