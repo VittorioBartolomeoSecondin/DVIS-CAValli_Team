@@ -20,10 +20,17 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
     var months = allMonths.slice(0, allMonths.length / 2); // Use only the first 12 months
     
     // set the domain of x-axis scale to be the months
-    var x = d3.scaleBand()
+    /*var x = d3.scaleBand()
         .domain(months)
         .range([0, width])
+        .padding(0.1);*/
+
+    // set the domain of x-axis scale to be the months
+    var x = d3.scaleBand()
+        .domain(months)
+        .range([0, width - x.bandwidth()])  // Adjust the range to ensure the first bar starts at 0
         .padding(0.1);
+
     
     // set the domain of y-axis scale to be the maximum temperature across all months
     var y = d3.scaleLinear()
@@ -46,8 +53,8 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
 
     // Create a line function
     var line = d3.line()
-        .x(function(month) { return x(month); })
-        //.x(function(d) { return x(d); })
+        //.x(function(month) { return x(month); })
+        .x(function(d) { return x(d); })
         .y(function(d) { return y(data[0][d]); });
 
     // Draw the line
