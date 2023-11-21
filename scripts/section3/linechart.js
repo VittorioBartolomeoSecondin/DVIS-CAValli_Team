@@ -144,9 +144,9 @@ updateLineChart("data/section3/AVG/AlabamaAVG.csv","data/section3/MAX/AlabamaMAX
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
-  const selectedDataset_1 = "data/section3/AVG/ + "this.value" + "AVG.csv";
-  const selectedDataset_2 = "data/section3/MAX/ + "this.value" + "MAX.csv";
-  const selectedDataset_3 = "data/section3/MIN/ + "this.value" + "MIN.csv";
+  const selectedDataset_1 = "data/section3/AVG/" + this.value + "AVG.csv";
+  const selectedDataset_2 = "data/section3/MAX/" + this.value + "MAX.csv";
+  const selectedDataset_3 = "data/section3/MIN/" + this.value + "MIN.csv";
   d3.select("#linechart_svg").remove();
   updateBarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3);
 });
