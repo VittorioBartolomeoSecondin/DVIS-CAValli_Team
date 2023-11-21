@@ -51,7 +51,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .padding(1);
     
         var y = d3.scaleLinear()
-            .domain([minTemperature, maxTemperature])
+            .domain([minTemperature-2, maxTemperature])
             .range([height, 0]);
     
         svg.append("g")
