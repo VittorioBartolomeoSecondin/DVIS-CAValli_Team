@@ -22,7 +22,8 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
     // set the domain of x-axis scale to be the months
     var x = d3.scaleBand()
         .domain(months)
-        .range([0, width]);
+        .range([0, width])
+        .padding(0.1);
 
     // set the domain of x-axis scale to be the months
     /*var x = d3.scaleLinear()
