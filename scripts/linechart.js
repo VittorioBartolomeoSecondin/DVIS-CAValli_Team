@@ -46,7 +46,8 @@ d3.csv("data/AVG/AlabamaAVG.csv").then(function(data) {
 
     // Create a line function
     var line = d3.line()
-        .x(function(d) { return x(d); })
+        .x(function(month) { return x(month); })
+        //.x(function(d) { return x(d); })
         .y(function(d) { return y(data[0][d]); });
 
     // Draw the line
