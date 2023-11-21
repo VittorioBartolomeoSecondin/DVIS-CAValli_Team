@@ -14,9 +14,6 @@ var svg = d3.select("body").append("svg")
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) {
     // Read the data
     Promise.all([
-        //d3.csv("data/section3/AVG/AlabamaAVG.csv"),
-        //d3.csv("data/section3/MAX/AlabamaMAX.csv"),
-        //d3.csv("data/section3/MIN/AlabamaMIN.csv")
         d3.csv(selectedDataset_1),
         d3.csv(selectedDataset_2),
         d3.csv(selectedDataset_3)
@@ -148,8 +145,5 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   const selectedDataset_2 = "data/section3/MAX/" + this.value + "MAX.csv";
   const selectedDataset_3 = "data/section3/MIN/" + this.value + "MIN.csv";
   d3.select("#linechart_svg").remove();
-  console.log(selectedDataset_1);
-  console.log(selectedDataset_2);
-  console.log(selectedDataset_3);
   updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3);
 });
