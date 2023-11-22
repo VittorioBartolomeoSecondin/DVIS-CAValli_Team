@@ -147,9 +147,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
 }
 
 function handleMouseOver(event, d) {
-    // Change color when hovering
-    d3.select(this).style("fill", "lightblue");
-
     // Show the tooltip
     tooltip.transition()
         .duration(200)
@@ -164,9 +161,6 @@ function handleMouseOver(event, d) {
 }
 
 function handleMouseOut() {
-    // Returning to the original color when not hovering
-    d3.select(this).style("fill", d3.select(this).style("fill"));
-
     // Hide the tooltip
     tooltip.transition()
         .duration(500)
