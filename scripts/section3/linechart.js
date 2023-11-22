@@ -13,6 +13,15 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
+    // Create a tooltip
+    const tooltip = d3.select("#linechart_1")
+        .append("section")
+            .attr("id", "linechart_tooltip")
+        .style("opacity", 0)
+        .style("background-color", "lightgray")
+        .style("border", "2px solid black")
+            .attr("class", "tooltip");
+
     // Read the data
     Promise.all([
         d3.csv(selectedDataset_1),
@@ -98,13 +107,17 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("stroke-width", 1.5)
             .attr("d", lineMin);
     
-        svg.selectAll("circle")
+        svg.selectAll("circle-avg")
             .data(months)
             .enter().append("circle")
+            .attr("class", "circle-avg")
             .attr("cx", function (d) { return x(d); })
             .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
             .attr("r", 4)
-            .style("fill", "#89CFF0");
+            .style("fill", "#89CFF0")
+            .on("mouseover", handleMouseOver)
+            .on("mousemove", handleMouseMove)
+            .on("mouseout", handleMouseOut);
     
         svg.selectAll(".circle-max")
             .data(months)
@@ -113,7 +126,10 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("cx", function (d) { return x(d); })
             .attr("cy", function (d) { return y(yearDataMax[0][d]); })
             .attr("r", 4)
-            .style("fill", "#0000FF");
+            .style("fill", "#0000FF")
+            .on("mouseover", handleMouseOver)
+            .on("mousemove", handleMouseMove)
+            .on("mouseout", handleMouseOut);
     
         svg.selectAll(".circle-min")
             .data(months)
@@ -122,10 +138,68 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("cx", function (d) { return x(d); })
             .attr("cy", function (d) { return y(yearDataMin[0][d]); })
             .attr("r", 4)
-            .style("fill", "#00FFFF");
+            .style("fill", "#00FFFF")
+            .on("mouseover", handleMouseOver)
+            .on("mousemove", handleMouseMove)
+            .on("mouseout", handleMouseOut);
     
     })
 }
+
+function handleMouseOver(event, d) {
+    // Change color when hovering
+    d3.select(this).style("fill", "lightblue");
+
+    // Show the tooltip
+    tooltip.transition()
+        .duration(200)
+        .style("opacity", 1);
+
+    // Tooltip content
+    const temperatureCelsius = getTemperatureCelsius(this);
+    const temperatureFahrenheit = getTemperatureFahrenheit(this);
+    tooltip.html(`Temperature: ${temperatureCelsius}°C<br>(${temperatureFahrenheit}°F)`)
+        .style("left", (event.pageX + 10) + "px")
+        .style("top", (event.pageY - 20) + "px");
+}
+
+function handleMouseMove(event) {
+    // Move the tooltip with the mouse pointer
+    tooltip.style("left", (event.pageX + 10) + "px")
+        .style("top", (event.pageY - 20) + "px");
+}
+
+function handleMouseOut() {
+    // Returning to the original color when not hovering
+    const subgroupColor = color(d3.select(this.parentNode).datum().key);
+    d3.select(this).style("fill", subgroupColor);
+
+    // Hide the tooltip
+    tooltip.transition()
+        .duration(500)
+        .style("opacity", 0);
+}
+
+
+function getTemperatureCelsius(circle) {
+    const className = d3.select(circle).attr("class");
+    const data = className === "circle-avg" ? yearDataAvg[0] :
+                 className === "circle-max" ? yearDataMax[0] :
+                 yearDataMin[0];
+    const month = d3.select(circle).data()[0];
+    return data[month] + "°C";
+}
+
+function getTemperatureFahrenheit(circle) {
+    const className = d3.select(circle).attr("class");
+    const data = className === "circle-avg" ? yearDataAvg[0] :
+                 className === "circle-max" ? yearDataMax[0] :
+                 yearDataMin[0];
+    const month = d3.select(circle).data()[0];
+    const fahrenheitValue = data[month + "F"];
+    return fahrenheitValue + "°F";
+}
+
 
 // Initial chart creation with the default dataset
 updateLineChart("data/section3/AVG/AlabamaAVG.csv","data/section3/MAX/AlabamaMAX.csv","data/section3/MIN/AlabamaMIN.csv");
