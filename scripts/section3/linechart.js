@@ -163,8 +163,7 @@ function handleMouseOver(event, d) {
 
 function handleMouseOut() {
     // Returning to the original color when not hovering
-    const subgroupColor = color(d3.select(this.parentNode).datum().key);
-    d3.select(this).style("fill", subgroupColor);
+    d3.select(this).style("fill", d3.select(this).style("fill"));
 
     // Hide the tooltip
     tooltip.transition()
