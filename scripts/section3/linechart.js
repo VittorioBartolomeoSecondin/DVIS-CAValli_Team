@@ -3,6 +3,16 @@ var margin = { top: 20, right: 40, bottom: 70, left: 60 },
     width = 1000 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
+// Create a tooltip
+const tooltip = d3.select("#linechart_1")
+    .append("section")
+        .attr("id", "linechart_tooltip")
+    .style("opacity", 0)
+    .style("background-color", "lightgray")
+    .style("border", "2px solid black")
+        .attr("class", "tooltip");
+
+
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) {
 
     // append the svg object to the body of the page
@@ -12,15 +22,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
-
-    // Create a tooltip
-    const tooltip = d3.select("#linechart_1")
-        .append("section")
-            .attr("id", "linechart_tooltip")
-        .style("opacity", 0)
-        .style("background-color", "lightgray")
-        .style("border", "2px solid black")
-            .attr("class", "tooltip");
 
     // Read the data
     Promise.all([
