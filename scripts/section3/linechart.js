@@ -155,7 +155,7 @@ function handleMouseOver(event, d) {
     // Tooltip content
     const temperatureCelsius = getTemperatureCelsius(this);
     const temperatureFahrenheit = getTemperatureFahrenheit(this);
-    tooltip.html(`Temperature: ${temperatureCelsius}/${temperatureFahrenheit}`)
+    tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 20) + "px");
 }
