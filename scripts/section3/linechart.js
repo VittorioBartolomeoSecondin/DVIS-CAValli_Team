@@ -116,7 +116,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("r", 4)
             .style("fill", "#89CFF0")
             .on("mouseover", handleMouseOver)
-            .on("mousemove", handleMouseMove)
             .on("mouseout", handleMouseOut);
     
         svg.selectAll(".circle-max")
@@ -128,7 +127,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("r", 4)
             .style("fill", "#0000FF")
             .on("mouseover", handleMouseOver)
-            .on("mousemove", handleMouseMove)
             .on("mouseout", handleMouseOut);
     
         svg.selectAll(".circle-min")
@@ -140,7 +138,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
             .attr("r", 4)
             .style("fill", "#00FFFF")
             .on("mouseover", handleMouseOver)
-            .on("mousemove", handleMouseMove)
             .on("mouseout", handleMouseOut);
     
     })
@@ -160,12 +157,6 @@ function handleMouseOver(event, d) {
     const temperatureFahrenheit = getTemperatureFahrenheit(this);
     tooltip.html(`Temperature: ${temperatureCelsius}°C<br>(${temperatureFahrenheit}°F)`)
         .style("left", (event.pageX + 10) + "px")
-        .style("top", (event.pageY - 20) + "px");
-}
-
-function handleMouseMove(event) {
-    // Move the tooltip with the mouse pointer
-    tooltip.style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 20) + "px");
 }
 
