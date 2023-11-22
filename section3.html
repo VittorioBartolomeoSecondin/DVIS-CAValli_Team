@@ -651,7 +651,11 @@
 
                     if (selectedDataset === "Alaska") {
                         for (var year = 1895; year <= 1924; year++) {
-                            document.getElementById("Checkme" + (year-1893)).setAttribute("hidden", "hidden");
+                            var checkbox = document.getElementById("Checkme" + (year - 1893));
+                            if (checkbox.checked) {
+                                checkbox.checked = false;
+                            }
+                            checkbox.setAttribute("hidden", "hidden");
                         }
                     } else {
                         for (var year = 1895; year <= 2023; year++) {
