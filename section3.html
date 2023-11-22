@@ -49,8 +49,6 @@
             <i>The following button influences the visualization for all the plots in the page.</i>
         </p>
 
-        <!--
-
         <div id="selector-container" style="clear: left; display: flex; align-items: center; margin-left: 10px;">
             <div id="dataset-selector">
                 <label for="dataset-dropdown"  style="margin-left: 10px;">Select Dataset:</label>
@@ -108,15 +106,26 @@
             </div>
 
             <script>
-              function handleCheckboxChange(checkbox) {
-                var checkedCheckboxes = document.querySelectorAll('.form-check-input:checked');
-            
-                if (checkedCheckboxes.length > 10) {
-                  alert('Maximum 10 checkboxes allowed!');
-                  // Uncheck the last checkbox
-                  checkbox.checked = false;
+                function handleCheckboxChange(checkbox) {
+                    var checkedCheckboxes = document.querySelectorAll('.form-check-input:checked');
+                
+                    if (checkedCheckboxes.length > 10) {
+                      alert('Maximum 10 checkboxes allowed!');
+                      // Uncheck the last checkbox
+                      checkbox.checked = false;
+                    }
                 }
-              }
+
+                function handleDatasetChange() {
+                    var datasetDropdown = document.getElementById("dataset-dropdown");
+                    var selectedDataset = datasetDropdown.options[datasetDropdown.selectedIndex].value;
+
+                    if (selectedDataset === "Alaska") {
+                        for (var year = 1895; year <= 1924; year++) {
+                            document.getElementById("year-" + year).setAttribute("hidden", "hidden");
+                        }
+                    }
+                }
             </script>
 
             <div class="dropdown">
@@ -641,118 +650,6 @@
                             <input class="form-check-input" type="checkbox" value="2023" id="Checkme130" onchange="handleCheckboxChange(this)">
                             <label class="form-check-label" for="Checkme130">2023</label>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        -->
-
-        <div id="selector-container" style="clear: left; display: flex; align-items: center; margin-left: 10px;">
-            <div id="dataset-selector">
-                <label for="dataset-dropdown" style="margin-left: 10px;">Select Dataset:</label>
-                <select class="selectpicker" id="dataset-dropdown" data-style="btn-primary" data-live-search="true" onchange="populateYearDropdown()">
-                    <option value="Alabama">Alabama</option>
-                    <option value="Alaska">Alaska</option>
-                    <option value="Arizona">Arizona</option>
-                    <option value="Arkansas">Arkansas</option>
-                    <option value="California">California</option>
-                    <option value="Colorado">Colorado</option>
-                    <option value="Connecticut">Connecticut</option>
-                    <option value="Delaware">Delaware</option>
-                    <option value="Florida">Florida</option>
-                    <option value="Georgia">Georgia</option>
-                    <option value="Idaho">Idaho</option>
-                    <option value="Illinois">Illinois</option>
-                    <option value="Indiana">Indiana</option>
-                    <option value="Iowa">Iowa</option>
-                    <option value="Kansas">Kansas</option>
-                    <option value="Kentucky">Kentucky</option>
-                    <option value="Louisiana">Louisiana</option>
-                    <option value="Maine">Maine</option>
-                    <option value="Maryland">Maryland</option>
-                    <option value="Massachusetts">Massachusetts</option>
-                    <option value="Michigan">Michigan</option>
-                    <option value="Minnesota">Minnesota</option>
-                    <option value="Mississippi">Mississippi</option>
-                    <option value="Missouri">Missouri</option>
-                    <option value="Montana">Montana</option>
-                    <option value="Nebraska">Nebraska</option>
-                    <option value="Nevada">Nevada</option>
-                    <option value="NewHampshire">New Hampshire</option>
-                    <option value="NewJersey">New Jersey</option>
-                    <option value="NewMexico">New Mexico</option>
-                    <option value="NewYork">New York</option>
-                    <option value="NorthCarolina">North Carolina</option>
-                    <option value="NorthDakota">North Dakota</option>
-                    <option value="Ohio">Ohio</option>
-                    <option value="Oklahoma">Oklahoma</option>
-                    <option value="Oregon">Oregon</option>
-                    <option value="Pennsylvania">Pennsylvania</option>
-                    <option value="RhodeIsland">Rhode Island</option>
-                    <option value="SouthCarolina">South Carolina</option>
-                    <option value="SouthDakota">South Dakota</option>
-                    <option value="Tennessee">Tennessee</option>
-                    <option value="Texas">Texas</option>
-                    <option value="Utah">Utah</option>
-                    <option value="Vermont">Vermont</option>
-                    <option value="Virginia">Virginia</option>
-                    <option value="Washington">Washington</option>
-                    <option value="WestVirginia">West Virginia</option>
-                    <option value="Wisconsin">Wisconsin</option>
-                    <option value="Wyoming">Wyoming</option>
-                </select>
-            </div>
-
-
-            <script>
-                function handleCheckboxChange(checkbox) {
-                    var checkedCheckboxes = document.querySelectorAll('.form-check-input:checked');
-        
-                    if (checkedCheckboxes.length > 10) {
-                        alert('Maximum 10 checkboxes allowed!');
-                        // Uncheck the last checkbox
-                        checkbox.checked = false;
-                    }
-                }
-        
-                function populateYearDropdown() {
-                    var datasetDropdown = document.getElementById("dataset-dropdown");
-                    var yearDropdown = document.getElementById("year-dropdown");
-                    var selectedDataset = datasetDropdown.value;
-            
-                    // Clear previous options
-                    yearDropdown.innerHTML = "";
-            
-                    // Add options specific for the Alaska dataset
-                    if (selectedDataset === "Alaska") {
-                        for (var year = 1925; year <= 2023; year++) {
-                            var option = document.createElement("option");
-                            option.value = year;
-                            option.text = year;
-                            yearDropdown.appendChild(option);
-                        }
-                    } else {
-                        // For other states, add options from 1895 to 2023
-                        for (var year = 1895; year <= 2023; year++) {
-                            var option = document.createElement("option");
-                            option.value = year;
-                            option.text = year;
-                            yearDropdown.appendChild(option);
-                        }
-                    }
-                }
-            </script>
-
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 30px;">
-                    Select Year
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 250px; overflow-y: auto;">
-                    <form style="padding: 5px;">
-                        <!-- The options will be populated dynamically by the script -->
-                        <select id="year-dropdown" multiple>
-                        </select>
                     </form>
                 </div>
             </div>
