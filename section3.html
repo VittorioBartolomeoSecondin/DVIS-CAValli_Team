@@ -115,17 +115,6 @@
                       checkbox.checked = false;
                     }
                 }
-
-                function handleDatasetChange() {
-                    var datasetDropdown = document.getElementById("dataset-dropdown");
-                    var selectedDataset = datasetDropdown.options[datasetDropdown.selectedIndex].value;
-
-                    if (selectedDataset === "Alaska") {
-                        for (var year = 1895; year <= 1924; year++) {
-                            document.getElementById("Checkme" + (year-1824)).setAttribute("hidden", "hidden");
-                        }
-                    }
-                }
             </script>
 
             <div class="dropdown">
@@ -654,6 +643,19 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            function handleDatasetChange() {
+                    var datasetDropdown = document.getElementById("dataset-dropdown");
+                    var selectedDataset = datasetDropdown.options[datasetDropdown.selectedIndex].value;
+
+                    if (selectedDataset === "Alaska") {
+                        for (var year = 1895; year <= 1924; year++) {
+                            document.getElementById("Checkme" + (year-1824)).setAttribute("hidden", "hidden");
+                        }
+                    }
+            }
+        </script>
 
         <br>
 
