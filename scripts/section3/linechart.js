@@ -12,6 +12,8 @@ const tooltip = d3.select("#linechart_1")
     .style("border", "2px solid black")
         .attr("class", "tooltip");
 
+var yearDataAvg, yearDataMax, yearDataMin;
+
 
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) {
 
@@ -34,9 +36,9 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         var dataMax = datasets[1];
         var dataMin = datasets[2];
     
-        var yearDataAvg = dataAvg.filter(function (d) { return +d.year === 1926; });
-        var yearDataMax = dataMax.filter(function (d) { return +d.year === 1926; });
-        var yearDataMin = dataMin.filter(function (d) { return +d.year === 1926; });
+        yearDataAvg = dataAvg.filter(function (d) { return +d.year === 1926; });
+        yearDataMax = dataMax.filter(function (d) { return +d.year === 1926; });
+        yearDataMin = dataMin.filter(function (d) { return +d.year === 1926; });
 
     
         var allMonths = Object.keys(yearDataAvg[0]).slice(2);
