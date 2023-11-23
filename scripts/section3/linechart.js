@@ -15,7 +15,7 @@ const tooltip = d3.select("#linechart_1")
 var yearDataAvg, yearDataMax, yearDataMin;
 
 
-function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYear) {
+function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
 
     // append the svg object to the body of the page
     var svg = d3.select("#linechart_1").append("svg")
@@ -36,26 +36,17 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
         var dataMax = datasets[1];
         var dataMin = datasets[2];
 
-        console.log(selectedYear);
-    
-        yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
-        yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
-        yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
-
-        console.log(yearDataAvg);
-
-    
-        var allMonths = Object.keys(yearDataAvg[0]).slice(2);
+        var allMonths = Object.keys(dataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
+        console.log(months);
     
-        var minTemperature = d3.min(yearDataMin, function (d) {
+        var minTemperature = d3.min(dataMin, function (d) {
             return d3.min(months, function (month) {
                 return +d[month];
             });
         });
         
-        // Find the maximum temperature across all months in dataMax
-        var maxTemperature = d3.max(yearDataMax, function (d) {
+        var maxTemperature = d3.max(dataMax, function (d) {
             return d3.max(months, function (month) {
                 return +d[month];
             });
@@ -99,65 +90,71 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             .attr("text-anchor", "middle")
             .style("font-size", "20px")
             .style("text-decoration", "underline")
-            .text(`Temperature Data for ${selectedYear}`);
-            //.text(`Temperature Data for ${selectedYears.join(', ')}`);
+            .text(`Temperature Data for ${selectedYears.join(', ')}`);
+
+        selectedYears.forEach(function (selectedYear) {
+            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
+            yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
+            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
+
     
-        var lineMax = d3.line()
-            .x(function (d) { return x(d); })
-            .y(function (d) { return y(yearDataMax[0][d]); });
-    
-        var lineMin = d3.line()
-            .x(function (d) { return x(d); })
-            .y(function (d) { return y(yearDataMin[0][d]); });
-    
-        svg.append("path")
-            .datum(months)
-            .attr("fill", "none")
-            .attr("stroke", "#0000FF")
-            .attr("stroke-width", 1.5)
-            .attr("d", lineMax);
-    
-        svg.append("path")
-            .datum(months)
-            .attr("fill", "none")
-            .attr("stroke", "#00FFFF")
-            .attr("stroke-width", 1.5)
-            .attr("d", lineMin);
-    
-        svg.selectAll("circle-avg")
-            .data(months)
-            .enter().append("circle")
-            .attr("class", "circle-avg")
-            .attr("cx", function (d) { return x(d); })
-            .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
-            .attr("r", 4)
-            .style("fill", "#89CFF0")
-            .on("mouseover", handleMouseOver)
-            .on("mouseout", handleMouseOut);
-    
-        svg.selectAll(".circle-max")
-            .data(months)
-            .enter().append("circle")
-            .attr("class", "circle-max")
-            .attr("cx", function (d) { return x(d); })
-            .attr("cy", function (d) { return y(yearDataMax[0][d]); })
-            .attr("r", 4)
-            .style("fill", "#0000FF")
-            .on("mouseover", handleMouseOver)
-            .on("mouseout", handleMouseOut);
-    
-        svg.selectAll(".circle-min")
-            .data(months)
-            .enter().append("circle")
-            .attr("class", "circle-min")
-            .attr("cx", function (d) { return x(d); })
-            .attr("cy", function (d) { return y(yearDataMin[0][d]); })
-            .attr("r", 4)
-            .style("fill", "#00FFFF")
-            .on("mouseover", handleMouseOver)
-            .on("mouseout", handleMouseOut);
-    
-    })
+            var lineMax = d3.line()
+                .x(function (d) { return x(d); })
+                .y(function (d) { return y(yearDataMax[0][d]); });
+        
+            var lineMin = d3.line()
+                .x(function (d) { return x(d); })
+                .y(function (d) { return y(yearDataMin[0][d]); });
+        
+            svg.append("path")
+                .datum(months)
+                .attr("fill", "none")
+                .attr("stroke", "#0000FF")
+                .attr("stroke-width", 1.5)
+                .attr("d", lineMax);
+        
+            svg.append("path")
+                .datum(months)
+                .attr("fill", "none")
+                .attr("stroke", "#00FFFF")
+                .attr("stroke-width", 1.5)
+                .attr("d", lineMin);
+        
+            svg.selectAll("circle-avg")
+                .data(months)
+                .enter().append("circle")
+                .attr("class", "circle-avg")
+                .attr("cx", function (d) { return x(d); })
+                .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
+                .attr("r", 4)
+                .style("fill", "#89CFF0")
+                .on("mouseover", handleMouseOver)
+                .on("mouseout", handleMouseOut);
+        
+            svg.selectAll(".circle-max")
+                .data(months)
+                .enter().append("circle")
+                .attr("class", "circle-max")
+                .attr("cx", function (d) { return x(d); })
+                .attr("cy", function (d) { return y(yearDataMax[0][d]); })
+                .attr("r", 4)
+                .style("fill", "#0000FF")
+                .on("mouseover", handleMouseOver)
+                .on("mouseout", handleMouseOut);
+        
+            svg.selectAll(".circle-min")
+                .data(months)
+                .enter().append("circle")
+                .attr("class", "circle-min")
+                .attr("cx", function (d) { return x(d); })
+                .attr("cy", function (d) { return y(yearDataMin[0][d]); })
+                .attr("r", 4)
+                .style("fill", "#00FFFF")
+                .on("mouseover", handleMouseOver)
+                .on("mouseout", handleMouseOut);
+        
+        })
+    }
 }
 
 function handleMouseOver(event, d) {
@@ -216,7 +213,6 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
 
   // Extract values of checked checkboxes
   const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
-  const selectedYear = selectedYears[0];
 
   d3.select("#linechart_svg").remove();
   updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYear);
@@ -231,12 +227,11 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     
     // Extract values of checked checkboxes
     const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
-    const selectedYear = selectedYears[0];
     
     const selectedDataset_1 = "data/section3/AVG/" + selectedValue + "AVG.csv";
     const selectedDataset_2 = "data/section3/MAX/" + selectedValue + "MAX.csv";
     const selectedDataset_3 = "data/section3/MIN/" + selectedValue + "MIN.csv";
-    //const selectedYear = event.target.value;
+
     d3.select("#linechart_svg").remove();
-    updateLineChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYear);
+    updateLineChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
 });
