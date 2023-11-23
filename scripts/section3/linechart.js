@@ -45,12 +45,14 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 return +d[month];
             });
         });
+        console.log(minTemperature);
         
         var maxTemperature = d3.max(dataMax, function (d) {
             return d3.max(months, function (month) {
                 return +d[month];
             });
         });
+        console.log(maxTemperature);
     
         var x = d3.scaleBand()
             .domain(months)
@@ -199,7 +201,7 @@ function getTemperatureFahrenheit(circle) {
 
 
 // Initial chart creation with the default dataset
-updateLineChart("data/section3/AVG/AlabamaAVG.csv","data/section3/MAX/AlabamaMAX.csv","data/section3/MIN/AlabamaMIN.csv", 2000);
+updateLineChart("data/section3/AVG/AlabamaAVG.csv","data/section3/MAX/AlabamaMAX.csv","data/section3/MIN/AlabamaMIN.csv", [2000]);
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
