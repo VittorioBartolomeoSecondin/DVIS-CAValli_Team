@@ -152,8 +152,8 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .style("fill", "#00FFFF")
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
-        }
-    })
+        });
+    });
 }
 
 function handleMouseOver(event, d) {
