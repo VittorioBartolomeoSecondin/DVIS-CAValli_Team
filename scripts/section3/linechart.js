@@ -35,10 +35,14 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
         var dataAvg = datasets[0];
         var dataMax = datasets[1];
         var dataMin = datasets[2];
+
+        console.log(selectedYear);
     
         yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
         yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
         yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
+
+        console.log(yearDataAvg);
 
     
         var allMonths = Object.keys(yearDataAvg[0]).slice(2);
