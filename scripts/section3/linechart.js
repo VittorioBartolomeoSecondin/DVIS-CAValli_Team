@@ -91,6 +91,16 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             .attr("dy", "1em")
             .style("text-anchor", "middle")
             .text("Temperatures in Celsius");
+
+        // Append a title to the SVG
+        svg.append("text")
+            .attr("x", width / 2)
+            .attr("y", 0 - margin.top / 2)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .style("text-decoration", "underline")
+            .text(`Temperature Data for ${selectedYear}`);
+            //.text(`Temperature Data for ${selectedYears.join(', ')}`);
     
         var lineMax = d3.line()
             .x(function (d) { return x(d); })
