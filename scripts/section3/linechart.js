@@ -206,7 +206,7 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
 
   // Extract values of checked checkboxes
   const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
-  console.log(selectedYears);
+  const selectedYear = selectedYears[0];
 
   d3.select("#linechart_svg").remove();
   updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYear);
