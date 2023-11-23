@@ -15,7 +15,7 @@ const tooltip = d3.select("#linechart_1")
 var yearDataAvg, yearDataMax, yearDataMin;
 
 
-function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) {
+function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYear) {
 
     // append the svg object to the body of the page
     var svg = d3.select("#linechart_1").append("svg")
@@ -36,9 +36,9 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3) 
         var dataMax = datasets[1];
         var dataMin = datasets[2];
     
-        yearDataAvg = dataAvg.filter(function (d) { return +d.year === 1926; });
-        yearDataMax = dataMax.filter(function (d) { return +d.year === 1926; });
-        yearDataMin = dataMin.filter(function (d) { return +d.year === 1926; });
+        yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
+        yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
+        yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
 
     
         var allMonths = Object.keys(yearDataAvg[0]).slice(2);
@@ -189,13 +189,25 @@ function getTemperatureFahrenheit(circle) {
 
 
 // Initial chart creation with the default dataset
-updateLineChart("data/section3/AVG/AlabamaAVG.csv","data/section3/MAX/AlabamaMAX.csv","data/section3/MIN/AlabamaMIN.csv");
+updateLineChart("data/section3/AVG/AlabamaAVG.csv","data/section3/MAX/AlabamaMAX.csv","data/section3/MIN/AlabamaMIN.csv", 2000);
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset_1 = "data/section3/AVG/" + this.value + "AVG.csv";
   const selectedDataset_2 = "data/section3/MAX/" + this.value + "MAX.csv";
   const selectedDataset_3 = "data/section3/MIN/" + this.value + "MIN.csv";
+  const selectedYear = document.getElementById("year-dropdown").value;
   d3.select("#linechart_svg").remove();
-  updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3);
+  updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYear);
+});
+
+// Add an event listener for changes in the year dropdown
+document.getElementById("year-dropdown").addEventListener("change", function () {
+    const selectedValue = document.getElementById("city-dropdown").value;
+    const selectedDataset_1 = "data/section3/AVG/" + selectedValue + "AVG.csv";
+    const selectedDataset_2 = "data/section3/MAX/" + selectedValue + "MAX.csv";
+    const selectedDataset_3 = "data/section3/MIN/" + selectedValue + "MIN.csv";
+    const selectedYear = this.value;
+    d3.select("#linechart_svg").remove();
+    updateLineChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYear);
 });
