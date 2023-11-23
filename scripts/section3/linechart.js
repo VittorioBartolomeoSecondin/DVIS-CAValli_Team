@@ -225,10 +225,18 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
 // Add an event listener for changes in the year dropdown
 document.getElementById("year-checkbox-form").addEventListener("change", function () {
     const selectedValue = document.getElementById("dataset-dropdown").value;
+
+    // Select all checked checkboxes
+    const checkedCheckboxes = document.querySelectorAll("#year-checkbox-form input:checked");
+    
+    // Extract values of checked checkboxes
+    const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
+    const selectedYear = selectedYears[0];
+    
     const selectedDataset_1 = "data/section3/AVG/" + selectedValue + "AVG.csv";
     const selectedDataset_2 = "data/section3/MAX/" + selectedValue + "MAX.csv";
     const selectedDataset_3 = "data/section3/MIN/" + selectedValue + "MIN.csv";
-    const selectedYear = event.target.value;
+    //const selectedYear = event.target.value;
     d3.select("#linechart_svg").remove();
     updateLineChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYear);
 });
