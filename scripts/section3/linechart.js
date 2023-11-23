@@ -200,7 +200,14 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   const selectedDataset_1 = "data/section3/AVG/" + this.value + "AVG.csv";
   const selectedDataset_2 = "data/section3/MAX/" + this.value + "MAX.csv";
   const selectedDataset_3 = "data/section3/MIN/" + this.value + "MIN.csv";
-  const selectedYear = document.getElementById("year-checkbox-form").value;
+
+  // Select all checked checkboxes
+  const checkedCheckboxes = document.querySelectorAll("#year-checkbox-form input:checked");
+
+  // Extract values of checked checkboxes
+  const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
+  console.log(selectedYears);
+
   d3.select("#linechart_svg").remove();
   updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYear);
 });
