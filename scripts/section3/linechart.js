@@ -124,10 +124,10 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("stroke-width", 1.5)
                 .attr("d", lineMin);
         
-            svg.selectAll('.circle-avg-${selectedYear}')
+            svg.selectAll(".circle-avg-" + selectedYear)
                 .data(months)
                 .enter().append("circle")
-                .attr("class", '.circle-avg-${selectedYear}')
+                .attr("class", ".circle-avg-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
                 .attr("r", 4)
@@ -135,10 +135,10 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
-            svg.selectAll('.circle-max-${selectedYear}')
+            svg.selectAll(".circle-max-" + selectedYear)
                 .data(months)
                 .enter().append("circle")
-                .attr("class", '.circle-max-${selectedYear}')
+                .attr("class", ".circle-max-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataMax[0][d]); })
                 .attr("r", 4)
@@ -146,10 +146,10 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
-            svg.selectAll('.circle-min-${selectedYear}')
+            svg.selectAll(".circle-min-" + selectedYear)
                 .data(months)
                 .enter().append("circle")
-                .attr("class", '.circle-min-${selectedYear}')
+                .attr("class", ".circle-min-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataMin[0][d]); })
                 .attr("r", 4)
