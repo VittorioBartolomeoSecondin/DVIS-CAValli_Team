@@ -85,6 +85,8 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             .style("text-anchor", "middle")
             .text("Temperatures in Celsius");
 
+        var stateName = document.getElementById("dataset-dropdown").value;
+
         // Append a title to the SVG
         svg.append("text")
             .attr("x", width / 2)
@@ -92,7 +94,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             .attr("text-anchor", "middle")
             .style("font-size", "20px")
             .style("text-decoration", "underline")
-            .text(`Temperature Data for ${selectedYears.join(', ')}`);
+            .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
 
         selectedYears.forEach(function (selectedYear) {
             yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
