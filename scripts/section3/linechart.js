@@ -125,7 +125,9 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("d", lineMin);
         
             svg.selectAll(".circle-avg-" + selectedYear)
-                .data(months)
+                .data(months.map(function (month) {
+                    return { month: month, value: yearDataAvg[0][month], valueF: yearDataAvg[0][month + "F"] };
+                }))
                 .enter().append("circle")
                 .attr("class", ".circle-avg-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
@@ -136,7 +138,9 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .on("mouseout", handleMouseOut);
         
             svg.selectAll(".circle-max-" + selectedYear)
-                .data(months)
+                .data(months.map(function (month) {
+                    return { month: month, value: yearDataMax[0][month], valueF: yearDataMax[0][month + "F"] };
+                }))
                 .enter().append("circle")
                 .attr("class", ".circle-max-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
@@ -147,7 +151,9 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .on("mouseout", handleMouseOut);
         
             svg.selectAll(".circle-min-" + selectedYear)
-                .data(months)
+                .data(months.map(function (month) {
+                    return { month: month, value: yearDataMin[0][month], valueF: yearDataMin[0][month + "F"] };
+                }))
                 .enter().append("circle")
                 .attr("class", ".circle-min-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
@@ -167,8 +173,9 @@ function handleMouseOver(event, d) {
         .style("opacity", 1);
 
     // Tooltip content
-    const temperatureCelsius = getTemperatureCelsius(this);
-    const temperatureFahrenheit = getTemperatureFahrenheit(this);
+    const data = d3.select(this).data()[0];
+    const temperatureCelsius = data.value + "°C";
+    const temperatureFahrenheit = data.valueF + "°F";
     tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 20) + "px");
