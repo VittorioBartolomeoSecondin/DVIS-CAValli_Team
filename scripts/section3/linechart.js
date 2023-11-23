@@ -216,7 +216,7 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
 
   d3.select("#linechart_svg").remove();
-  updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYear);
+  updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears);
 });
 
 // Add an event listener for changes in the year dropdown
