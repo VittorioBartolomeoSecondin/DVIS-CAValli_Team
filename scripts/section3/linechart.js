@@ -124,7 +124,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("stroke-width", 1.5)
                 .attr("d", lineMin);
         
-            svg.selectAll(".circle-avg-" + selectedYear)
+            svg.selectAll("circle-avg-" + selectedYear)
                 .data(months.map(function (month) {
                     return { month: month, value: yearDataAvg[0][month], valueF: yearDataAvg[0][month + "F"] };
                 }))
@@ -137,7 +137,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
-            svg.selectAll(".circle-max-" + selectedYear)
+            svg.selectAll("circle-max-" + selectedYear)
                 .data(months.map(function (month) {
                     return { month: month, value: yearDataMax[0][month], valueF: yearDataMax[0][month + "F"] };
                 }))
@@ -150,7 +150,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
-            svg.selectAll(".circle-min-" + selectedYear)
+            svg.selectAll("circle-min-" + selectedYear)
                 .data(months.map(function (month) {
                     return { month: month, value: yearDataMin[0][month], valueF: yearDataMin[0][month + "F"] };
                 }))
