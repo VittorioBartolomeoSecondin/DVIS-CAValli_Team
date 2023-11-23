@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var margin = { top: 40, right: 40, bottom: 70, left: 60 },
+var margin = { top: 60, right: 40, bottom: 70, left: 60 },
     width = 1000 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -97,7 +97,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             .attr("x", width / 2)
             .attr("y", 0 - margin.top / 2)
             .attr("text-anchor", "middle")
-            .style("font-size", "16px")
+            .style("font-size", "20px")
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${selectedYear}`);
             //.text(`Temperature Data for ${selectedYears.join(', ')}`);
