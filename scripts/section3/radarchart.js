@@ -14,11 +14,11 @@ const tooltip = d3.select("#radarchart_1")
 
 var yearDataAvg, yearDataMax, yearDataMin;
 
-function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
+function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
 
     // append the svg object to the body of the page
-    var svg = d3.select("#linechart_1").append("svg")
-        .attr("id", "linechart_svg")
+    var svg = d3.select("#radarchart_1").append("svg")
+        .attr("id", "radarchart_svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
@@ -37,53 +37,19 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
 
         var allMonths = Object.keys(dataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
-        console.log(months);
         
         var minTemperature = d3.min(dataMin, function (d) {
             return d3.min(months, function (month) {
                 return +d[month];
             });
         });
-        //console.log(minTemperature);
         
         var maxTemperature = d3.max(dataMax, function (d) {
             return d3.max(months, function (month) {
                 return +d[month];
             });
         });
-        //console.log(maxTemperature);
-    
-        var x = d3.scaleBand()
-            .domain(months)
-            .range([0, width])
-            .padding(1);
         
-        var y = d3.scaleLinear()
-            .domain([minTemperature, maxTemperature])
-            .range([height, 0]);
-    
-        svg.append("g")
-            .attr("transform", `translate(0,${height})`)
-            .call(d3.axisBottom(x));
-    
-        svg.append("g")
-            .call(d3.axisLeft(y));
-        
-        // Add x-axis label
-        svg.append("text")
-            .attr("transform", `translate(${width / 2},${height + margin.top + 20})`)
-            .style("text-anchor", "middle")
-            .text("Month");
-        
-        // Add y-axis label
-        svg.append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 0 - margin.left)
-            .attr("x", 0 - height / 2)
-            .attr("dy", "1em")
-            .style("text-anchor", "middle")
-            .text("Temperatures in Celsius");
-
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
@@ -95,166 +61,67 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             .style("font-size", "20px")
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
+        
+        // Data
+        var data = [
+            { axis: months[0], value: dataMax[0] },
+            { axis: months[1], value: dataMax[1] },
+            { axis: months[2], value: dataMax[2] },
+            { axis: months[3], value: dataMax[3] },
+            { axis: months[4], value: dataMax[4] },
+            { axis: months[5], value: dataMax[5] },
+            { axis: months[6], value: dataMax[6] },
+            { axis: months[7], value: dataMax[7] },
+            { axis: months[8], value: dataMax[8] },
+            { axis: months[9], value: dataMax[9] },
+            { axis: months[10], value: dataMax[10] },
+            { axis: months[11], value: dataMax[11] }
+        ];
+        
+        // Define the number of data points
+        var numPoints = months.length;
+        
+        // Define the radius of the radar chart
+        var radius = Math.min(width, height) / 2;
+        
+        // Define the angles for each data point
+        var angle = d3.scaleLinear()
+            .domain([0, numPoints])
+            .range([0, 2 * Math.PI]);
+        
+        // Create a radial scale for the values
+        var scale = d3.scaleLinear()
+            .domain([minTemperature, maxTemperature])  // Assuming values are between 0 and 1
+            .range([0, radius]);
+        
+        // Draw the axes
+        for (var i = 0; i < numPoints; i++) {
+            var axis = angle(i);
+            svg.append("line")
+                .attr("x1", width / 2)
+                .attr("y1", height / 2)
+                .attr("x2", width / 2 + scale(1) * Math.cos(axis))
+                .attr("y2", height / 2 + scale(1) * Math.sin(axis))
+                .attr("stroke", "gray");
+        }
+        
+        // Plot the data points and connect them with lines
+        var line = d3.lineRadial()
+            .angle(function (d, i) { return angle(i); })
+            .radius(function (d) { return scale(d.value); });
+        
+        svg.append("path")
+            .datum(data)
+            .attr("d", line)
+            .attr("stroke", "blue")
+            .attr("fill", "blue");
 
         selectedYears.forEach(function (selectedYear) {
             yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
-            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
-    
-            /*var lineMax = d3.line()
-                .x(function (d) { return x(d); })
-                .y(function (d) { return y(yearDataMax[0][d]); });
-        
-            var lineMin = d3.line()
-                .x(function (d) { return x(d); })
-                .y(function (d) { return y(yearDataMin[0][d]); });
-        
-            svg.append("path")
-                .datum(months)
-                .attr("fill", "none")
-                .attr("stroke", "#0000FF")
-                .attr("stroke-width", 1.5)
-                .attr("d", lineMax);
-        
-            svg.append("path")
-                .datum(months)
-                .attr("fill", "none")
-                .attr("stroke", "#00FFFF")
-                .attr("stroke-width", 1.5)
-                .attr("d", lineMin);*/
-
-                var lineMin = d3.line()
-                    .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
-                    .x(function(d) { return x(d[0]); })
-                    .y(function(d) { return y(d[1]); });
-                
-                var filteredDataMin = months.map(function(month) {
-                    return [month, +yearDataMin[0][month]];
-                }).filter(function(d) {
-                    return !isNaN(d[1]);
-                });
-                
-                svg.append("path")
-                    .datum(filteredDataMin)
-                    .attr("fill", "none")
-                    .attr("stroke", "#00FFFF")
-                    .attr("stroke-width", 1.5)
-                    .attr("d", lineMin);
-
-            var lineMax = d3.line()
-                .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
-                .x(function(d) { return x(d[0]); })
-                .y(function(d) { return y(d[1]); });
-            
-            var filteredDataMax = months.map(function(month) {
-                return [month, +yearDataMax[0][month]];
-            }).filter(function(d) {
-                return !isNaN(d[1]);
-            });
-            
-            svg.append("path")
-                .datum(filteredDataMax)
-                .attr("fill", "none")
-                .attr("stroke", "#0000FF")
-                .attr("stroke-width", 1.5)
-                .attr("d", lineMax);
-        
-            svg.selectAll(".circle-avg-" + selectedYear)
-                /*.data(months.map(function (month) {
-                    return { month: month, value: yearDataAvg[0][month], valueF: yearDataAvg[0][month + "F"] };
-                }))*/
-                .data(months.filter(function(month) {
-                    return !isNaN(yearDataAvg[0][month]); // Filter out NaN values
-                }))
-                //.data(months)
-                .enter().append("circle")
-                .attr("class", "circle-avg-" + selectedYear)
-                .attr("cx", function (d) { return x(d); })
-                .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
-                .attr("r", 4)
-                .style("fill", "#89CFF0")
-                .on("mouseover", handleMouseOver)
-                .on("mouseout", handleMouseOut);
-        
-            svg.selectAll(".circle-max-" + selectedYear)
-                /*.data(months.map(function (month) {
-                    return { month: month, value: yearDataMax[0][month], valueF: yearDataMax[0][month + "F"] };
-                }))*/
-                .data(months.filter(function(month) {
-                    return !isNaN(yearDataMax[0][month]); // Filter out NaN values
-                }))
-                //.data(months)
-                .enter().append("circle")
-                .attr("class", "circle-max-" + selectedYear)
-                .attr("cx", function (d) { return x(d); })
-                .attr("cy", function (d) { return y(yearDataMax[0][d]); })           
-                .attr("r", 4)
-                .style("fill", "#0000FF")
-                .on("mouseover", handleMouseOver)
-                .on("mouseout", handleMouseOut);
-        
-            svg.selectAll(".circle-min-" + selectedYear)
-                /*.data(months.map(function (month) {
-                    return { month: month, value: yearDataMin[0][month], valueF: yearDataMin[0][month + "F"] };
-                }))*/
-                .data(months.filter(function(month) {
-                    return !isNaN(yearDataMin[0][month]); // Filter out NaN values
-                }))
-                //.data(months)
-                .enter().append("circle")
-                .attr("class", "circle-min-" + selectedYear)
-                .attr("cx", function (d) { return x(d); })
-                .attr("cy", function (d) { return y(yearDataMin[0][d]); })       
-                .attr("r", 4)
-                .style("fill", "#00FFFF")
-                .on("mouseover", handleMouseOver)
-                .on("mouseout", handleMouseOut);
+            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });   
         });
     });
-}
-
-function handleMouseOver(event, d) {
-    // Show the tooltip
-    tooltip.transition()
-        .duration(200)
-        .style("opacity", 1);
-
-    // Tooltip content
-    const temperatureCelsius = getTemperatureCelsius(this);
-    const temperatureFahrenheit = getTemperatureFahrenheit(this);
-    /*const data = d3.select(this).data()[0];
-    const temperatureCelsius = data.value + "°C";
-    const temperatureFahrenheit = data.valueF + "°F";*/
-    tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
-        .style("left", (event.pageX + 10) + "px")
-        .style("top", (event.pageY - 20) + "px");
-}
-
-function handleMouseOut() {
-    // Hide the tooltip
-    tooltip.transition()
-        .duration(500)
-        .style("opacity", 0);
-}
-
-function getTemperatureCelsius(circle) {
-    const className = d3.select(circle).attr("class");
-    console.log(className);
-    const data = className === "circle-avg-" ? yearDataAvg[0] :
-                 className === "circle-max-" ? yearDataMax[0] :
-                 yearDataMin[0];
-    const month = d3.select(circle).data()[0];
-    return data[month] + "°C";
-}
-
-function getTemperatureFahrenheit(circle) {
-    const className = d3.select(circle).attr("class");
-    const data = className === "circle-avg-" ? yearDataAvg[0] :
-                 className === "circle-max-" ? yearDataMax[0] :
-                 yearDataMin[0];
-    const month = d3.select(circle).data()[0];
-    const fahrenheitValue = data[month + "F"];
-    return fahrenheitValue + "°F";
 }
 
 // Initial chart creation with the default dataset
@@ -290,65 +157,6 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     const selectedDataset_2 = "data/section3/MAX/" + selectedValue + "MAX.csv";
     const selectedDataset_3 = "data/section3/MIN/" + selectedValue + "MIN.csv";
 
-    d3.select("#linechart_svg").remove();
-    updateLineChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
+    d3.select("#radarchart_svg").remove();
+    updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
 });
-
-var data = [
-    { axis: "Label 1", value: 0.8 },
-    { axis: "Label 2", value: 0.6 },
-    { axis: "Label 3", value: 0.9 },
-    { axis: "Label 4", value: 0.7 },
-    { axis: "Label 5", value: 0.5 }
-];
-
-// Set the dimensions and margins of the graph
-var margin = { top: 60, right: 40, bottom: 70, left: 60 },
-    width = 1000 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
-
-// Append the svg object to the body of the page
-var svg = d3.select("#radarchart_1").append("svg")
-    .attr("id", "radarchart_svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
-
-// Define the number of data points
-var numPoints = data.length;
-
-// Define the radius of the radar chart
-var radius = Math.min(width, height) / 2;
-
-// Define the angles for each data point
-var angle = d3.scaleLinear()
-    .domain([0, numPoints])
-    .range([0, 2 * Math.PI]);
-
-// Create a radial scale for the values
-var scale = d3.scaleLinear()
-    .domain([0, 1])  // Assuming values are between 0 and 1
-    .range([0, radius]);
-
-// Draw the axes
-for (var i = 0; i < numPoints; i++) {
-    var axis = angle(i);
-    svg.append("line")
-        .attr("x1", width / 2)
-        .attr("y1", height / 2)
-        .attr("x2", width / 2 + scale(1) * Math.cos(axis))
-        .attr("y2", height / 2 + scale(1) * Math.sin(axis))
-        .attr("stroke", "gray");
-}
-
-// Plot the data points and connect them with lines
-var line = d3.lineRadial()
-    .angle(function (d, i) { return angle(i); })
-    .radius(function (d) { return scale(d.value); });
-
-svg.append("path")
-    .datum(data)
-    .attr("d", line)
-    .attr("stroke", "blue")
-    .attr("fill", "blue");
