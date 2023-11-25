@@ -65,10 +65,9 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         // Data
         var data = [];
         //generate the data
-        for (var i = 0; i < numPoints; i++){
+        for (var i = 0; i < selectedYears.length; i++){
             var point = {}
             months.forEach(m => point[m] = yearDataMax[i]);
-            console.log(point);
             data.push(point);
         }
         console.log(data);    
