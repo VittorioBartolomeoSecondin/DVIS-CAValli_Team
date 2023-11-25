@@ -153,7 +153,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
 }
 
 // Initial chart creation with the default dataset
-updateRadarChart("data/section3/AVG/AlabamaAVG.csv", "data/section3/MAX/AlabamaMAX.csv", "data/section3/MIN/AlabamaMIN.csv", [2000]);
+updateRadarChart("data/section3/AVG/AlabamaAVG.csv", [2000]);
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
