@@ -198,21 +198,21 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
 }
 
 function handleMouseOver(event, d) {
+    const circle = d3.select(this);
+    const temperatureCelsius = circle.attr("temperatureCelsius") + "°C";
+    const temperatureFahrenheit = circle.attr("temperatureFahrenheit") + "°F";
+
+    // Get the position of the hovered circle
+    const circleX = +circle.attr("cx");
+    const circleY = +circle.attr("cy");
+
     // Show the tooltip
     tooltip.transition()
         .duration(200)
-        .style("opacity", 1);
-
-    // Tooltip content
-    //const temperatureCelsius = getTemperatureCelsius(this);
-    const temperatureCelsius = d3.select(this).attr("temperatureCelsius") + "°C";
-    const temperatureFahrenheit = d3.select(this).attr("temperatureFahrenheit") + "°F";
-    /*const data = d3.select(this).data()[0];
-    const temperatureCelsius = data.value + "°C";
-    const temperatureFahrenheit = data.valueF + "°F";*/
-    tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
-        .style("left", (event.pageX + 10) + "px")
-        .style("top", (event.pageY - 20) + "px");
+        .style("opacity", 1)
+        .html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
+        .style("left", circleX + margin.left + "px") // Adjust left position
+        .style("top", circleY + margin.top + "px"); // Adjust top position
 }
 
 function handleMouseOut() {
