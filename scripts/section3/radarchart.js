@@ -164,6 +164,8 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     .enter()
                     .filter(dp => !isNaN(dp)) // Filter out NaN values
                     .append("circle")
+                    .attr("temperatureCelsius", function(d) { return yearDataAvg[0][d]; }) // Custom attribute for temperature
+                    .attr("temperatureFahrenheit", function(d) { return yearDataAvg[0][d + "F"]; })
                     .attr("cx", function(dp, j) {
                         const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
                         return width / 2 + Math.cos(angle) * radialScale(dp);
@@ -173,10 +175,37 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         return height / 2 - Math.sin(angle) * radialScale(dp);
                     })
                     .attr("r", 4) // Adjust the radius of the circles as needed
-                    .attr("fill", color); // Use the same color for circles
+                    .attr("fill", color) // Use the same color for circles
+                    .on("mouseover", handleMouseOver)
+                    .on("mouseout", handleMouseOut);
             });
     });
     
+}
+
+function handleMouseOver(event, d) {
+    // Show the tooltip
+    tooltip.transition()
+        .duration(200)
+        .style("opacity", 1);
+
+    // Tooltip content
+    //const temperatureCelsius = getTemperatureCelsius(this);
+    const temperatureCelsius = d3.select(this).attr("temperatureCelsius") + "°C";
+    const temperatureFahrenheit = d3.select(this).attr("temperatureFahrenheit") + "°F";
+    /*const data = d3.select(this).data()[0];
+    const temperatureCelsius = data.value + "°C";
+    const temperatureFahrenheit = data.valueF + "°F";*/
+    tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
+        .style("left", (event.pageX + 10) + "px")
+        .style("top", (event.pageY - 20) + "px");
+}
+
+function handleMouseOut() {
+    // Hide the tooltip
+    tooltip.transition()
+        .duration(500)
+        .style("opacity", 0);
 }
 
 // Initial chart creation with the default dataset
