@@ -116,7 +116,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
 }
 
 // Initial chart creation with the default dataset
-updateLineChart("data/section3/AVG/AlabamaAVG.csv", "data/section3/MAX/AlabamaMAX.csv", "data/section3/MIN/AlabamaMIN.csv", [2000]);
+updateRadarChart("data/section3/AVG/AlabamaAVG.csv", "data/section3/MAX/AlabamaMAX.csv", "data/section3/MIN/AlabamaMIN.csv", [2000]);
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
@@ -130,8 +130,8 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   // Extract values of checked checkboxes
   const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
 
-  d3.select("#linechart_svg").remove();
-  updateLineChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
+  d3.select("#radarchart_svg").remove();
+  updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
 });
 
 // Add an event listener for changes in the year dropdown
