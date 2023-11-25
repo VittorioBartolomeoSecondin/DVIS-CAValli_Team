@@ -139,6 +139,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
             return coordinates;
         }       
 
+        /*
         // Draw the path element
         svg.selectAll("path")
             .data(data)
@@ -160,24 +161,58 @@ function updateRadarChart(selectedDataset, selectedYears) {
             .append("g")
             .attr("class", "datapoint")
             .selectAll("circle")
-            .data(d => months.map(month => ({ month, value: d[month] })))
+            .data(d => Object.values(d).slice(0, -1)) // Exclude the 'year' property
             .enter()
             .append("circle")
             .attr("cx", function(d, i) {
                 var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-                return width / 2 + Math.cos(angle) * radialScale(d.value);
+                return width / 2 + Math.cos(angle) * radialScale(d);
             })
             .attr("cy", function(d, i) {
                 var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-                return height / 2 - Math.sin(angle) * radialScale(d.value);
+                return height / 2 - Math.sin(angle) * radialScale(d);
             })
             .attr("r", 4) // Adjust the radius of the circles as needed
-            .attr("fill", (_, i) => {
-                const dataIndex = Math.floor(i / months.length); // Calculate index of the data point
-                return colors[dataIndex]; // Assign color based on the index of the line's color array
+            .attr("fill", (_, i) => colors[i]); // Use colors to differentiate data points
             });
+            */
 
-    });
+        // Draw paths and circles with the same color for each data point
+        svg.selectAll("g")
+            .data(data)
+            .enter()
+            .append("g")
+            .each(function(d, i) {
+                const color = colors[i]; // Retrieve the color for the current data point
+                const pathData = getPathCoordinates(d);
+        
+                // Draw path element
+                d3.select(this)
+                    .append("path")
+                    .attr("d", line(pathData))
+                    .attr("stroke-width", 3)
+                    .attr("stroke", color)
+                    .attr("fill", "none")
+                    .attr("stroke-opacity", 1);
+        
+                // Draw circles for data points
+                d3.select(this)
+                    .selectAll("circle")
+                    .data(Object.values(d).slice(0, -1)) // Exclude the 'year' property
+                    .enter()
+                    .append("circle")
+                    .attr("cx", function(dp, j) {
+                        const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
+                        return width / 2 + Math.cos(angle) * radialScale(dp);
+                    })
+                    .attr("cy", function(dp, j) {
+                        const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
+                        return height / 2 - Math.sin(angle) * radialScale(dp);
+                    })
+                    .attr("r", 4) // Adjust the radius of the circles as needed
+                    .attr("fill", color); // Use the same color for circles
+            });
+    
 }
 
 // Initial chart creation with the default dataset
