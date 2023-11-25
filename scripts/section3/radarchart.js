@@ -212,6 +212,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     .attr("r", 4) // Adjust the radius of the circles as needed
                     .attr("fill", color); // Use the same color for circles
             });
+    });
     
 }
 
