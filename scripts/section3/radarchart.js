@@ -80,13 +80,79 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         // Define the angles for each data point
         var angle = d3.scaleLinear()
             .domain([0, numPoints])
-            .range([0, 2 * Math.PI]);
+            .range([0, 250]);
+
+        // Define the angles for each data point
+        var ticks = [-10, 0, 10, 20, 30];    
+
+        // Add circles
+        svg.selectAll("circle")
+            .data(ticks)
+            .join(
+                enter => enter.append("circle")
+                    .attr("cx", width / 2)
+                    .attr("cy", height / 2)
+                    .attr("fill", "none")
+                    .attr("stroke", "gray")
+                    .attr("r", d => radialScale(d))
+            );
+
+        // Add text label for ticks
+        svg.selectAll(".ticklabel")
+            .data(ticks)
+            .join(
+                enter => enter.append("text")
+                    .attr("class", "ticklabel")
+                    .attr("x", width / 2 + 5)
+                    .attr("y", d => height / 2 - radialScale(d))
+                    .text(d => d.toString())
+            );
         
         // Create a radial scale for the values
         var scale = d3.scaleLinear()
             .domain([minTemperature, maxTemperature])
             .range([0, radius]);
+
+        // Create a function angle to coordinate
+        function angleToCoordinate(angle, value){
+            var x = Math.cos(angle) * radialScale(value);
+            var y = Math.sin(angle) * radialScale(value);
+            return {"x": width / 2 + x, "y": height / 2 - y};
+        }
+
+        let featureData = months.map((m, i) => {
+            let angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
+            return {
+                "name": m,
+                "angle": angle,
+                "line_coord": angleToCoordinate(angle, 10),
+                "label_coord": angleToCoordinate(angle, 10.5)
+            };
+        });
         
+        // draw axis line
+        svg.selectAll("line")
+            .data(featureData)
+            .join(
+                enter => enter.append("line")
+                    .attr("x1", width / 2)
+                    .attr("y1", height / 2)
+                    .attr("x2", d => d.line_coord.x)
+                    .attr("y2", d => d.line_coord.y)
+                    .attr("stroke","black")
+            );
+        
+        // draw axis label
+        svg.selectAll(".axislabel")
+            .data(featureData)
+            .join(
+                enter => enter.append("text")
+                    .attr("x", d => d.label_coord.x)
+                    .attr("y", d => d.label_coord.y)
+                    .text(d => d.name)
+            );
+        
+        /*
         // Draw the axes
         for (var i = 0; i < numPoints; i++) {
             var axis = angle(i);
@@ -108,6 +174,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             .attr("d", line)
             .attr("stroke", "blue")
             .attr("fill", "blue");
+        */
     });
 }
 
