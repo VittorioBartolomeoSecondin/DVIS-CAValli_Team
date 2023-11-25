@@ -53,14 +53,22 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
 
+        // Data
+        var data = [];
         selectedYears.forEach(function (selectedYear) {
             yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
+            console.log(yearDataAvg);  
+            var point = {}
+            months.forEach(m => point[m] = yearDataAvg[0][m]);
+            console.log(point);  
+            data.push(point);
         });
+        console.log(data);   
         
         // Define the number of data points
         var numPoints = months.length;
         
-        // Data
+        /*
         var data = [];
         for (var i = 0; i < selectedYears.length; i++){
             var point = {}
@@ -68,6 +76,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             data.push(point);
         };    
         console.log(data);        
+        */
         
         // Define the radius of the radar chart
         var radius = Math.min(width, height) / 2;
