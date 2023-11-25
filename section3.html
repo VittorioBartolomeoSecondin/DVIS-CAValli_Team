@@ -655,11 +655,11 @@
                             if (checkbox.checked) {
                                 checkbox.checked = false;
                             }
-                            checkbox.setAttribute("hidden", "hidden");
+                            checkbox.setAttribute("disabled", "true");
                         }
                     } else {
                         for (var year = 1895; year <= 2023; year++) {
-                            document.getElementById("Checkme" + (year-1893)).removeAttribute("hidden");
+                            document.getElementById("Checkme" + (year-1893)).removeAttribute("disabled");
                         }
                     }
             }
