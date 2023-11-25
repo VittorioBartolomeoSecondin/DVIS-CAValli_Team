@@ -198,6 +198,11 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
 }
 
 function handleMouseOver(event, d) {
+    // Show the tooltip
+    tooltip.transition()
+           .duration(200)
+           .style("opacity", 1);
+    
     const circle = d3.select(this);
     const temperatureCelsius = circle.attr("temperatureCelsius") + "°C";
     const temperatureFahrenheit = circle.attr("temperatureFahrenheit") + "°F";
@@ -206,13 +211,10 @@ function handleMouseOver(event, d) {
     const circleX = +circle.attr("cx");
     const circleY = +circle.attr("cy");
 
-    // Show the tooltip
-    tooltip.transition()
-        .duration(200)
-        .style("opacity", 1)
-        .html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
-        .style("left", circleX + margin.left + "px") // Adjust left position
-        .style("top", circleY + margin.top + "px"); // Adjust top position
+    
+    tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
+           .style("left", circleX + margin.left + "px") // Adjust left position
+           .style("top", circleY + margin.top + "px"); // Adjust top position
 }
 
 function handleMouseOut() {
