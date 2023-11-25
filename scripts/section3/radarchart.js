@@ -41,7 +41,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
             .style("font-size", "20px")
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
-
+        /*
         // Data
         var data = [];
         selectedYears.forEach(function (selectedYear) {
@@ -49,7 +49,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
             var point = {}
             months.forEach(m => point[m] = yearDataAvg[0][m]);
             data.push(point);
-        });
+        });*/
         
         // Define the angles for each data point
         var radialScale = d3.scaleLinear()
@@ -139,6 +139,15 @@ function updateRadarChart(selectedDataset, selectedYears) {
             return coordinates;
         }       
 
+        // Data
+        var data = [];
+        selectedYears.forEach(function (selectedYear) {
+            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
+            var point = {}
+            months.forEach(m => point[m] = yearDataAvg[0][m]);
+            data.push(point);
+        
+        
         // Draw paths and circles with the same color for each data point
         svg.selectAll("g")
             .data(data)
@@ -182,6 +191,8 @@ function updateRadarChart(selectedDataset, selectedYears) {
             });
     });
     
+});
+
 }
 
 function handleMouseOver(event, d) {
