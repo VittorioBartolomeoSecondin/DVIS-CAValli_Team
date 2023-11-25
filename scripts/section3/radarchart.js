@@ -135,7 +135,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     coordinates.push(angleToCoordinate(angle, data_point[months_name]));
                 }
             }
-            coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
+            //coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
             return coordinates;
         }       
 
