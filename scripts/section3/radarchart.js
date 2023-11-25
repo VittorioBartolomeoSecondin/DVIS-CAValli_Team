@@ -1,8 +1,3 @@
-// set the dimensions and margins of the graph
-var margin = { top: 60, right: 40, bottom: 70, left: 60 },
-    width = 1000 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
-
 var yearDataAvg, yearDataMax, yearDataMin;
 
 function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
