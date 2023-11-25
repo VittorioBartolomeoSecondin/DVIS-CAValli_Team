@@ -44,6 +44,12 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
+        selectedYears.forEach(function (selectedYear) {
+            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
+            yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
+            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });   
+        });
+
         // Append a title to the SVG
         svg.append("text")
             .attr("x", width / 2)
@@ -82,7 +88,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         
         // Create a radial scale for the values
         var scale = d3.scaleLinear()
-            .domain([minTemperature, maxTemperature])  // Assuming values are between 0 and 1
+            .domain([minTemperature, maxTemperature])
             .range([0, radius]);
         
         // Draw the axes
@@ -106,12 +112,6 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             .attr("d", line)
             .attr("stroke", "blue")
             .attr("fill", "blue");
-
-        selectedYears.forEach(function (selectedYear) {
-            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
-            yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
-            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });   
-        });
     });
 }
 
