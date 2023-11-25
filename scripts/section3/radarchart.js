@@ -67,8 +67,9 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         for (var i = 0; i < selectedYears.length; i++){
             var point = {}
             months.forEach(m => point[m] = yearDataMax[i][m]);
+            data.push(point);
         };    
-        console.log(data);
+        console.log(data);        
         
         // Define the radius of the radar chart
         var radius = Math.min(width, height) / 2;
