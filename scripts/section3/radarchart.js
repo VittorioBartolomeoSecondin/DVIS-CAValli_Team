@@ -41,15 +41,6 @@ function updateRadarChart(selectedDataset, selectedYears) {
             .style("font-size", "20px")
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
-        /*
-        // Data
-        var data = [];
-        selectedYears.forEach(function (selectedYear) {
-            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
-            var point = {}
-            months.forEach(m => point[m] = yearDataAvg[0][m]);
-            data.push(point);
-        });*/
         
         // Define the angles for each data point
         var radialScale = d3.scaleLinear()
@@ -126,7 +117,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
             .y(d => d.y);
         var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
         
-        function getPathCoordinates(data_point){
+       function getPathCoordinates(data_point){
             var coordinates = [];
             for (var i = 0; i < months.length; i++){
                 var months_name = months[i];
@@ -135,7 +126,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     coordinates.push(angleToCoordinate(angle, data_point[months_name]));
                 }
             }
-            //coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
+            coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
             return coordinates;
         }       
 
@@ -148,50 +139,49 @@ function updateRadarChart(selectedDataset, selectedYears) {
             data.push(point);
         
         
-        // Draw paths and circles with the same color for each data point
-        svg.selectAll("g")
-            .data(data)
-            .enter()
-            .append("g")
-            .each(function(d, i) {
-                const color = colors[i]; // Retrieve the color for the current data point
-                const pathData = getPathCoordinates(d);
-                console.log(pathData);
-        
-                // Draw path element
-                d3.select(this)
-                    .append("path")
-                    .attr("d", line(pathData))
-                    .attr("stroke-width", 3)
-                    .attr("stroke", color)
-                    .attr("fill", "none")
-                    .attr("stroke-opacity", 1);
-        
-                // Draw circles for data points
-                d3.select(this)
-                    .selectAll("circle")
-                    .data(Object.values(d).slice(0, -1)) // Exclude the 'year' property
-                    .enter()
-                    .filter(dp => !isNaN(dp)) // Filter out NaN values
-                    .append("circle")
-                    .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
-                    .attr("temperatureFahrenheit", function(d, i) { console.log(yearDataAvg[0]); return yearDataAvg[0][months[i] + "F"]; })
-                    .attr("cx", function(dp, j) {
-                        const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
-                        return width / 2 + Math.cos(angle) * radialScale(dp);
-                    })
-                    .attr("cy", function(dp, j) {
-                        const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
-                        return height / 2 - Math.sin(angle) * radialScale(dp);
-                    })
-                    .attr("r", 4) // Adjust the radius of the circles as needed
-                    .attr("fill", color) // Use the same color for circles
-                    .on("mouseover", handleMouseOver)
-                    .on("mouseout", handleMouseOut);
-            });
-    });
-    
-});
+            // Draw paths and circles with the same color for each data point
+            svg.selectAll("g")
+                .data(data)
+                .enter()
+                .append("g")
+                .each(function(d, i) {
+                    const color = colors[i]; // Retrieve the color for the current data point
+                    const pathData = getPathCoordinates(d);
+                    console.log(pathData);
+            
+                    // Draw path element
+                    d3.select(this)
+                        .append("path")
+                        .attr("d", line(pathData))
+                        .attr("stroke-width", 3)
+                        .attr("stroke", color)
+                        .attr("fill", "none")
+                        .attr("stroke-opacity", 1);
+            
+                    // Draw circles for data points
+                    d3.select(this)
+                        .selectAll("circle")
+                        .data(Object.values(d).slice(0, -1)) // Exclude the 'year' property
+                        .enter()
+                        .filter(dp => !isNaN(dp)) // Filter out NaN values
+                        .append("circle")
+                        .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
+                        .attr("temperatureFahrenheit", function(d, i) { console.log(yearDataAvg[0]); return yearDataAvg[0][months[i] + "F"]; })
+                        .attr("cx", function(dp, j) {
+                            const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
+                            return width / 2 + Math.cos(angle) * radialScale(dp);
+                        })
+                        .attr("cy", function(dp, j) {
+                            const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
+                            return height / 2 - Math.sin(angle) * radialScale(dp);
+                        })
+                        .attr("r", 4) // Adjust the radius of the circles as needed
+                        .attr("fill", color) // Use the same color for circles
+                        .on("mouseover", handleMouseOver)
+                        .on("mouseout", handleMouseOut);
+                });
+        });
+     });
 
 }
 
