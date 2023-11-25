@@ -165,7 +165,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     .filter(dp => !isNaN(dp)) // Filter out NaN values
                     .append("circle")
                     .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
-                    .attr("temperatureFahrenheit", function(d) { return yearDataAvg[0][d + "F"]; })
+                    .attr("temperatureFahrenheit", function(d, i) { return yearDataAvg[0][i + "F"]; })
                     .attr("cx", function(dp, j) {
                         const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
                         return width / 2 + Math.cos(angle) * radialScale(dp);
