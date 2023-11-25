@@ -101,13 +101,11 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
     
-            var lineMax = d3.line()
-                .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
+            /*var lineMax = d3.line()
                 .x(function (d) { return x(d); })
                 .y(function (d) { return y(yearDataMax[0][d]); });
         
             var lineMin = d3.line()
-                .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
                 .x(function (d) { return x(d); })
                 .y(function (d) { return y(yearDataMin[0][d]); });
         
@@ -123,7 +121,43 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("fill", "none")
                 .attr("stroke", "#00FFFF")
                 .attr("stroke-width", 1.5)
-                .attr("d", lineMin);
+                .attr("d", lineMin);*/
+
+                var lineMin = d3.line()
+                    .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
+                    .x(function(d) { return x(d[0]); })
+                    .y(function(d) { return y(d[1]); });
+                
+                var filteredDataMin = months.map(function(month) {
+                    return [month, +yearDataMin[0][month]];
+                }).filter(function(d) {
+                    return !isNaN(d[1]);
+                });
+                
+                svg.append("path")
+                    .datum(filteredDataMin)
+                    .attr("fill", "none")
+                    .attr("stroke", "#00FFFF")
+                    .attr("stroke-width", 1.5)
+                    .attr("d", lineMin);
+
+            var lineMax = d3.line()
+                .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
+                .x(function(d) { return x(d[0]); })
+                .y(function(d) { return y(d[1]); });
+            
+            var filteredDataMax = months.map(function(month) {
+                return [month, +yearDataMax[0][month]];
+            }).filter(function(d) {
+                return !isNaN(d[1]);
+            });
+            
+            svg.append("path")
+                .datum(filteredDataMax)
+                .attr("fill", "none")
+                .attr("stroke", "#00FFFF")
+                .attr("stroke-width", 1.5)
+                .attr("d", lineMax);
         
             svg.selectAll(".circle-avg-" + selectedYear)
                 /*.data(months.map(function (month) {
