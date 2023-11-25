@@ -77,24 +77,18 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         ];
         */
         
-        // Data
-        var data = [
-            { axis: "Jan", value: 6 },
-            { axis: "Feb", value: 6 },
-            { axis: "Mar", value: 7 },
-            { axis: "Apr", value: 12 },
-            { axis: "May", value: 25 },
-            { axis: "Jun", value: -5 },
-            { axis: "Jul", value: 15 },
-            { axis: "Aug", value: 8 },
-            { axis: "Sep", value: 4 },
-            { axis: "Oct", value: 6 },
-            { axis: "Nov", value: 7 },
-            { axis: "Dec", value: 9 }
-        ];
-        
         // Define the number of data points
         var numPoints = months.length;
+        
+        // Data
+        var data = [];
+        //generate the data
+        for (var i = 0; i < numPoints; i++){
+            var point = {}
+            months.forEach(m => point[m] = dataMax[i]);
+            data.push(point);
+        }
+        console.log(data);    
         
         // Define the radius of the radar chart
         var radius = Math.min(width, height) / 2;
