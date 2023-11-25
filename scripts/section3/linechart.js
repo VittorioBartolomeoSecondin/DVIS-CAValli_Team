@@ -202,7 +202,7 @@ function handleMouseOver(event, d) {
 
     // Tooltip content
     //const temperatureCelsius = getTemperatureCelsius(this);
-    const temperatureCelsius = d3.select(this).attr("temperature");
+    const temperatureCelsius = d3.select(this).attr("cy") + "°C";
     const temperatureFahrenheit = getTemperatureFahrenheit(this);
     /*const data = d3.select(this).data()[0];
     const temperatureCelsius = data.value + "°C";
@@ -218,16 +218,6 @@ function handleMouseOut() {
         .duration(500)
         .style("opacity", 0);
 }
-
-/*function getTemperatureCelsius(circle) {
-    const className = d3.select(circle).attr("class");
-    console.log(className);
-    const data = className === "circle-avg-" ? yearDataAvg[0] :
-                 className === "circle-max-" ? yearDataMax[0] :
-                 yearDataMin[0];
-    const month = d3.select(circle).data()[0];
-    return data[month] + "°C";
-}*/
 
 function getTemperatureFahrenheit(circle) {
     const className = d3.select(circle).attr("class");
