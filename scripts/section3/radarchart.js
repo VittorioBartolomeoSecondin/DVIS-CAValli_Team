@@ -147,6 +147,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
             .each(function(d, i) {
                 const color = colors[i]; // Retrieve the color for the current data point
                 const pathData = getPathCoordinates(d);
+                console.log(pathData);
         
                 // Draw path element
                 d3.select(this)
