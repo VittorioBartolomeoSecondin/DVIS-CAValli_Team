@@ -139,44 +139,6 @@ function updateRadarChart(selectedDataset, selectedYears) {
             return coordinates;
         }       
 
-        /*
-        // Draw the path element
-        svg.selectAll("path")
-            .data(data)
-            .join(
-                enter => enter.append("path")
-                    .datum(d => getPathCoordinates(d))
-                    .attr("d", line)
-                    .attr("stroke-width", 3)
-                    .attr("stroke", (_, i) => colors[i])
-                    .attr("fill", "none")
-                    .attr("stroke-opacity", 1)
-                    //.attr("opacity", 0.1)
-            );
-
-        // Draw circles for data points
-        svg.selectAll(".datapoint")
-            .data(data)
-            .enter()
-            .append("g")
-            .attr("class", "datapoint")
-            .selectAll("circle")
-            .data(d => Object.values(d).slice(0, -1)) // Exclude the 'year' property
-            .enter()
-            .append("circle")
-            .attr("cx", function(d, i) {
-                var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-                return width / 2 + Math.cos(angle) * radialScale(d);
-            })
-            .attr("cy", function(d, i) {
-                var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-                return height / 2 - Math.sin(angle) * radialScale(d);
-            })
-            .attr("r", 4) // Adjust the radius of the circles as needed
-            .attr("fill", (_, i) => colors[i]); // Use colors to differentiate data points
-            });
-            */
-
         // Draw paths and circles with the same color for each data point
         svg.selectAll("g")
             .data(data)
@@ -200,6 +162,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     .selectAll("circle")
                     .data(Object.values(d).slice(0, -1)) // Exclude the 'year' property
                     .enter()
+                    .filter(dp => !isNaN(dp)) // Filter out NaN values
                     .append("circle")
                     .attr("cx", function(dp, j) {
                         const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
