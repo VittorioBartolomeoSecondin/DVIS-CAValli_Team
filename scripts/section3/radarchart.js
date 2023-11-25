@@ -136,7 +136,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         var line = d3.line()
             .x(d => d.x)
             .y(d => d.y);
-        var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "drakgreen", "lightgreen", "lightblue", "pink"];
+        var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
         
         function getPathCoordinates(data_point){
             var coordinates = [];
@@ -157,7 +157,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                     .attr("d", line)
                     .attr("stroke-width", 5)
                     .attr("stroke", (_, i) => colors[i])
-                    .attr("fill", (_, i) => colors[i])
+                    //.attr("fill", (_, i) => colors[i])
                     .attr("stroke-opacity", 1)
                     .attr("opacity", 0.1)
             ); 
