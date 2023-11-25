@@ -133,6 +133,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
                 coordinates.push(angleToCoordinate(angle, data_point[months_name]));
             }
+            coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]);
             return coordinates;
         }       
 
@@ -149,27 +150,6 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     .attr("stroke-opacity", 1)
                     //.attr("opacity", 0.1)
             );
-
-            // Calculate coordinates for December and January for each year
-            function getPathCoordinatesDecJan(data_point) {
-                var dec = angleToCoordinate((3 * Math.PI / 2), data_point['Dec']);
-                var jan = angleToCoordinate((Math.PI / 2), data_point['Jan']);
-                return [dec, jan];
-            }
-            
-            // Draw the line connecting December and January for each year
-            svg.selectAll(".dec-jan-line")
-                .data(data)
-                .join(
-                    enter => enter.append("path")
-                        .datum(d => getPathCoordinatesDecJan(d))
-                        .attr("d", line)
-                        .attr("stroke-width", 3)
-                        .attr("stroke", (_, i) => colors[i])
-                        .attr("fill", "none")
-                        .attr("stroke-opacity", 1)
-                        //.attr("opacity", 0.1)
-                );
     });
 }
 
