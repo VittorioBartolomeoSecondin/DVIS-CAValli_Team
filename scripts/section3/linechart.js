@@ -222,16 +222,6 @@ function handleMouseOut() {
         .style("opacity", 0);
 }
 
-function getTemperatureFahrenheit(circle) {
-    const className = d3.select(circle).attr("class");
-    const data = className === "circle-avg-" ? yearDataAvg[0] :
-                 className === "circle-max-" ? yearDataMax[0] :
-                 yearDataMin[0];
-    const month = d3.select(circle).data()[0];
-    const fahrenheitValue = data[month + "F"];
-    return fahrenheitValue + "°F";
-}
-
 // Initial chart creation with the default dataset
 updateLineChart("data/section3/AVG/AlabamaAVG.csv", "data/section3/MAX/AlabamaMAX.csv", "data/section3/MIN/AlabamaMIN.csv", [2000]);
 
