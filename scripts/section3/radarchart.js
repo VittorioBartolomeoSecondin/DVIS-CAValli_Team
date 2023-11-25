@@ -75,7 +75,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         // Define the angles for each data point
         var radialScale = d3.scaleLinear()
             .domain([minTemperature, maxTemperature])
-            .range([0, 250]);
+            .range([0, 220]);
 
         var ticks = [minTemperature, 0, maxTemperature];    
 
@@ -115,7 +115,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                 "name": m,
                 "angle": angle,
                 "line_coord": angleToCoordinate(angle, maxTemperature),
-                "label_coord": angleToCoordinate(angle, 10.5)
+                "label_coord": angleToCoordinate(angle, maxTemperature + 1)
             };
         });
 
