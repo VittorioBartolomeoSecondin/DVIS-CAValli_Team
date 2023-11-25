@@ -194,6 +194,7 @@ function handleMouseOut() {
 
 function getTemperatureCelsius(circle) {
     const className = d3.select(circle).attr("class");
+    console.log(className);
     const data = className === "circle-avg-" ? yearDataAvg[0] :
                  className === "circle-max-" ? yearDataMax[0] :
                  yearDataMin[0];
