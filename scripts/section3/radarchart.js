@@ -54,9 +54,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
 
         selectedYears.forEach(function (selectedYear) {
-            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
-            yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
-            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });   
+            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
         });
         
         // Define the number of data points
@@ -66,7 +64,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         var data = [];
         for (var i = 0; i < selectedYears.length; i++){
             var point = {}
-            months.forEach(m => point[m] = yearDataMax[i][m]);
+            months.forEach(m => point[m] = yearDataAvg[i][m]);
             data.push(point);
         };    
         console.log(data);        
@@ -147,9 +145,8 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         var line = d3.line()
             .x(d => d.x)
             .y(d => d.y);
-        var colors = ["darkorange"];
-        //, "gray", "navy"
-
+        var colors = ["darkorange, "gray", "navy", "red", "yellow", "purple", "drakgreen", "lightgreen", "lightblue", "pink"];
+       
         function getPathCoordinates(data_point){
             var coordinates = [];
             for (var i = 0; i < months.length; i++){
