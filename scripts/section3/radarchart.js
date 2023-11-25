@@ -143,7 +143,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 enter => enter.append("path")
                     .datum(d => getPathCoordinates(d))
                     .attr("d", line)
-                    .attr("stroke-width", 5)
+                    .attr("stroke-width", 3)
                     .attr("stroke", (_, i) => colors[i])
                     .attr("fill", "none")
                     .attr("stroke-opacity", 1)
