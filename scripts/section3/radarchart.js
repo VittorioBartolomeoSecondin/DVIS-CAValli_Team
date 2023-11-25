@@ -157,9 +157,7 @@ updateRadarChart("data/section3/AVG/AlabamaAVG.csv", [2000]);
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
-  const selectedDataset_1 = "data/section3/AVG/" + this.value + "AVG.csv";
-  const selectedDataset_2 = "data/section3/MAX/" + this.value + "MAX.csv";
-  const selectedDataset_3 = "data/section3/MIN/" + this.value + "MIN.csv";
+  const selectedDataset = "data/section3/AVG/" + this.value + "AVG.csv";
 
   // Select all checked checkboxes
   const checkedCheckboxes = document.querySelectorAll("#year-checkbox-form input:checked");
@@ -168,7 +166,7 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
 
   d3.select("#radarchart_svg").remove();
-  updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
+  updateRadarChart(selectedDataset, selectedYears);
 });
 
 // Add an event listener for changes in the year dropdown
@@ -181,10 +179,8 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     // Extract values of checked checkboxes
     const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
     
-    const selectedDataset_1 = "data/section3/AVG/" + selectedValue + "AVG.csv";
-    const selectedDataset_2 = "data/section3/MAX/" + selectedValue + "MAX.csv";
-    const selectedDataset_3 = "data/section3/MIN/" + selectedValue + "MIN.csv";
+    const selectedDataset = "data/section3/AVG/" + selectedValue + "AVG.csv";
 
     d3.select("#radarchart_svg").remove();
-    updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
+    updateRadarChart(selectedDataset, selectedYears);
 });
