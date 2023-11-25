@@ -109,8 +109,8 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             return {"x": width / 2 + x, "y": height / 2 - y};
         }
 
-        let featureData = months.map((m, i) => {
-            let angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
+        var featureData = months.map((m, i) => {
+            var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
             return {
                 "name": m,
                 "angle": angle,
@@ -119,7 +119,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             };
         });
 
-        // draw axis line
+        // Draw axis line
         svg.selectAll("line")
             .data(featureData)
             .join(
@@ -131,7 +131,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                     .attr("stroke","black")
             );
         
-        // draw axis label
+        // Draw axis label
         svg.selectAll(".axislabel")
             .data(featureData)
             .join(
@@ -145,17 +145,18 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         var line = d3.line()
             .x(d => d.x)
             .y(d => d.y);
-        var colors = ["darkorange", "gray", "navy"];
+        var colors = ["darkorange"];
+        //, "gray", "navy"
 
         function getPathCoordinates(data_point){
-            let coordinates = [];
+            var coordinates = [];
             for (var i = 0; i < months.length; i++){
-                let months_name = months[i];
-                let angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
+                var months_name = months[i];
+                var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
                 coordinates.push(angleToCoordinate(angle, data_point[months_name]));
             }
             return coordinates;
-        }
+        }       
 
         // Draw the path element
         svg.selectAll("path")
@@ -169,31 +170,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                     .attr("fill", (_, i) => colors[i])
                     .attr("stroke-opacity", 1)
                     .attr("opacity", 0.5)
-            );
-        
-        /*
-        // Draw the axes
-        for (var i = 0; i < numPoints; i++) {
-            var axis = angle(i);
-            svg.append("line")
-                .attr("x1", width / 2)
-                .attr("y1", height / 2)
-                .attr("x2", width / 2 + scale(1) * Math.cos(axis))
-                .attr("y2", height / 2 + scale(1) * Math.sin(axis))
-                .attr("stroke", "gray");
-        }
-        
-        // Plot the data points and connect them with lines
-        var line = d3.lineRadial()
-            .angle(function (d, i) { return angle(i); })
-            .radius(function (d) { return scale(d.value); });
-        
-        svg.append("path")
-            .datum(data)
-            .attr("d", line)
-            .attr("stroke", "blue")
-            .attr("fill", "blue");
-        */
+            ); 
     });
 }
 
