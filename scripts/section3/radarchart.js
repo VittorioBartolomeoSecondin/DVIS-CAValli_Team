@@ -58,27 +58,11 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });   
         });
-
-        /*
-        // Data
-        var data = [
-            { axis: months[0], value: dataMax[0] },
-            { axis: months[1], value: dataMax[1] },
-            { axis: months[2], value: dataMax[2] },
-            { axis: months[3], value: dataMax[3] },
-            { axis: months[4], value: dataMax[4] },
-            { axis: months[5], value: dataMax[5] },
-            { axis: months[6], value: dataMax[6] },
-            { axis: months[7], value: dataMax[7] },
-            { axis: months[8], value: dataMax[8] },
-            { axis: months[9], value: dataMax[9] },
-            { axis: months[10], value: dataMax[10] },
-            { axis: months[11], value: dataMax[11] }
-        ];
-        */
         
         // Define the number of data points
         var numPoints = months.length;
+        console.log(months); 
+        console.log(numPoints); 
         
         // Data
         var data = [];
