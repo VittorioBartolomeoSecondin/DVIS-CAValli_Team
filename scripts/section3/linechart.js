@@ -131,13 +131,12 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 }))*/
                 .data(months)
                 .enter().append("circle")
+                .filter(function(d) {
+                    return !isNaN(yearDataAvg[0][d]); // Filter out NaN values
+                })
                 .attr("class", "circle-avg-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
-                //.attr("cy", function (d) { return y(yearDataAvg[0][d]); })
-                .attr("cy", function(d) { 
-                    const temperature = yearDataMin[0][d];
-                    return !isNaN(temperature) ? y(temperature) : null; // Only plot non-NaN values
-                })
+                .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
                 .attr("r", 4)
                 .style("fill", "#89CFF0")
                 .on("mouseover", handleMouseOver)
@@ -149,13 +148,12 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 }))*/
                 .data(months)
                 .enter().append("circle")
+                .filter(function(d) {
+                    return !isNaN(yearDataMax[0][d]); // Filter out NaN values
+                })
                 .attr("class", "circle-max-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
-                //.attr("cy", function (d) { return y(yearDataMax[0][d]); })
-                .attr("cy", function(d) { 
-                    const temperature = yearDataMin[0][d];
-                    return !isNaN(temperature) ? y(temperature) : null; // Only plot non-NaN values
-                })                
+                .attr("cy", function (d) { return y(yearDataMax[0][d]); })           
                 .attr("r", 4)
                 .style("fill", "#0000FF")
                 .on("mouseover", handleMouseOver)
@@ -167,13 +165,12 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 }))*/
                 .data(months)
                 .enter().append("circle")
+                .filter(function(d) {
+                    return !isNaN(yearDataMin[0][d]); // Filter out NaN values
+                })
                 .attr("class", "circle-min-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
-                //.attr("cy", function (d) { return y(yearDataMin[0][d]); })
-                .attr("cy", function(d) { 
-                    const temperature = yearDataMin[0][d];
-                    return !isNaN(temperature) ? y(temperature) : null; // Only plot non-NaN values
-                })                
+                .attr("cy", function (d) { return y(yearDataMin[0][d]); })       
                 .attr("r", 4)
                 .style("fill", "#00FFFF")
                 .on("mouseover", handleMouseOver)
