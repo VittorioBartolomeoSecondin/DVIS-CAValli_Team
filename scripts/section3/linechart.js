@@ -155,7 +155,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             svg.append("path")
                 .datum(filteredDataMax)
                 .attr("fill", "none")
-                .attr("stroke", "#00FFFF")
+                .attr("stroke", "#0000FF")
                 .attr("stroke-width", 1.5)
                 .attr("d", lineMax);
         
