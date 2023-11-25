@@ -77,7 +77,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             .domain([minTemperature, maxTemperature])
             .range([0, 250]);
 
-        var ticks = [0, maxTemperature];    
+        var ticks = [minTemperature, 0, maxTemperature];    
 
         // Add circles
         svg.selectAll("circle")
