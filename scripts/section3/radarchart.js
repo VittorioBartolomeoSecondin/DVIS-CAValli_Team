@@ -75,11 +75,10 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         
         // Define the angles for each data point
         var radialScale = d3.scaleLinear()
-            .domain([0, numPoints])
+            .domain([0, -numPoints])
             .range([0, 100]);
 
-        /*
-        var ticks = [-10, 0, 10, 20, 30];    
+        var ticks = [0, maxTemperature];    
 
         // Add circles
         svg.selectAll("circle")
@@ -103,7 +102,6 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                     .attr("y", d => height / 2 - radialScale(d))
                     .text(d => d.toString())
             );
-        */
         
         // Create a radial scale for the values
         var scale = d3.scaleLinear()
