@@ -129,7 +129,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                 "label_coord": angleToCoordinate(angle, 10.5)
             };
         });
-        
+
         // draw axis line
         svg.selectAll("line")
             .data(featureData)
