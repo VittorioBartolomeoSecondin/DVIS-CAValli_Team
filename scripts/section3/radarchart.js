@@ -68,7 +68,6 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         for (var i = 0; i < selectedYears.length; i++){
             var point = {}
             months.forEach(m => point[m] = yearDataMax[i][m]);
-            console.log(point);   
             data.push(point);
         }
         console.log(data);    
@@ -77,7 +76,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         var radius = Math.min(width, height) / 2;
         
         // Define the angles for each data point
-        var angle = d3.scaleLinear()
+        var radialScale = d3.scaleLinear()
             .domain([0, numPoints])
             .range([0, 250]);
 
