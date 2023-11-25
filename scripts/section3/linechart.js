@@ -102,10 +102,12 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
     
             var lineMax = d3.line()
+                .defined(function(d) { return !isNaN(d[1]); })
                 .x(function (d) { return x(d); })
                 .y(function (d) { return y(yearDataMax[0][d]); });
         
             var lineMin = d3.line()
+                .defined(function(d) { return !isNaN(d[1]); })
                 .x(function (d) { return x(d); })
                 .y(function (d) { return y(yearDataMin[0][d]); });
         
