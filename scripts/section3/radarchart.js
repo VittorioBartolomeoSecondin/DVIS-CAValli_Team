@@ -1,75 +1,58 @@
-// Function to parse CSV data
-function parseCSV(csv) {
-    const rows = csv.split('\n');
-    const labels = rows[0].split(',').slice(2, 14); // Extract month names from 'Jan' to 'Dec'
-    const datasets = {};
+var data = [
+    { axis: "Label 1", value: 0.8 },
+    { axis: "Label 2", value: 0.6 },
+    { axis: "Label 3", value: 0.9 },
+    { axis: "Label 4", value: 0.7 },
+    { axis: "Label 5", value: 0.5 }
+];
 
-    for (let i = 1; i < rows.length; i++) {
-        const values = rows[i].split(',').slice(2, 14).map(parseFloat); // Extract temperature values
-        const year = rows[i].split(',')[1].trim(); // Extract the year from the 2nd column
+// Set the dimensions and margins of the graph
+var margin = { top: 60, right: 40, bottom: 70, left: 60 },
+    width = 1000 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
-        if (!datasets[year]) {
-            datasets[year] = {
-                label: `Year ${year}`,
-                data: [],
-                backgroundColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.2)`,
-                borderColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 1)`,
-                borderWidth: 2,
-                pointRadius: 4,
-            };
-        }
+// Append the svg object to the body of the page
+var svg = d3.select("#radarchart_1").append("svg")
+    .attr("id", "radarchart_svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-        datasets[year].data.push(...values);
-    }
+// Define the number of data points
+var numPoints = data.length;
 
-    return { labels, datasets: Object.values(datasets) };
+// Define the radius of the radar chart
+var radius = Math.min(width, height) / 2;
+
+// Define the angles for each data point
+var angle = d3.scaleLinear()
+    .domain([0, numPoints])
+    .range([0, 2 * Math.PI]);
+
+// Create a radial scale for the values
+var scale = d3.scaleLinear()
+    .domain([0, 1])  // Assuming values are between 0 and 1
+    .range([0, radius]);
+
+// Draw the axes
+for (var i = 0; i < numPoints; i++) {
+    var axis = angle(i);
+    svg.append("line")
+        .attr("x1", width / 2)
+        .attr("y1", height / 2)
+        .attr("x2", width / 2 + scale(1) * Math.cos(axis))
+        .attr("y2", height / 2 + scale(1) * Math.sin(axis))
+        .attr("stroke", "gray");
 }
 
-// Event listener for file input change
-document.getElementById('csvFile').addEventListener('change', (event) => {
-    const file = event.target.files[0];
+// Plot the data points and connect them with lines
+var line = d3.lineRadial()
+    .angle(function (d, i) { return angle(i); })
+    .radius(function (d) { return scale(d.value); });
 
-    if (file) {
-        const reader = new FileReader();
-
-        reader.onload = (e) => {
-            const csvData = e.target.result;
-            const { labels, datasets } = parseCSV(csvData);
-
-            const data = {
-                labels: labels,
-                datasets: datasets,
-            };
-
-            const config = {
-                type: 'radar',
-                data: data,
-                options: {
-                    scales: {
-                        r: {
-                            suggestedMin: 0,
-                            suggestedMax: 100, // Adjust this based on your temperature range
-                        },
-                    },
-                    plugins: {
-                        tooltip: {
-                            callbacks: {
-                                label: (context) => {
-                                    const dataset = context.dataset;
-                                    const value = context.parsed.y;
-                                    const fahrenheit = value * (9 / 5) + 32; // Convert Celsius to Fahrenheit
-                                    return `${dataset.label}: ${value}°C (${fahrenheit.toFixed(1)}°F)`;
-                                },
-                            },
-                        },
-                    },
-                },
-            };
-
-            const ctx = document.getElementById('radarChart').getContext('2d');
-            const radarChart = new Chart(ctx, config);
-        };
-
-        reader.readAsText(file);
-    }
-});
+svg.append("path")
+    .datum(data)
+    .attr("d", line)
+    .attr("stroke", "blue")
+    .attr("fill", "blue");
