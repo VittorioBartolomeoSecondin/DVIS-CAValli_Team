@@ -102,11 +102,6 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                     .text(d => d.toString())
             );
         
-        // Create a radial scale for the values
-        var scale = d3.scaleLinear()
-            .domain([minTemperature, maxTemperature])
-            .range([0, radius]);
-
         // Create a function angle to coordinate
         function angleToCoordinate(angle, value){
             var x = Math.cos(angle) * radialScale(value);
