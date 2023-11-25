@@ -67,14 +67,9 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         //generate the data
         for (var i = 0; i < selectedYears.length; i++){
             var point = {}
-            var filteredDataMax = months.map(function(month) {
-                return [month, +yearDataMax[i][month]];
-            }).filter(function(d) {
-                return !isNaN(d[1]);
-            });
-            //months.forEach(m => point[m] = yearDataMax[i][m]);
-            console.log(filteredDataMax);   
-            data.push(filteredDataMax);
+            months.forEach(m => point[m] = yearDataMax[i][m]);
+            console.log(point);   
+            data.push(point);
         }
         console.log(data);    
         
