@@ -3,20 +3,11 @@ var margin = { top: 60, right: 40, bottom: 70, left: 60 },
     width = 1000 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
-// Create a tooltip
-const tooltip = d3.select("#radarchart_1")
-    .append("section")
-        .attr("id", "radarchart_tooltip")
-    .style("opacity", 0)
-    .style("background-color", "lightgray")
-    .style("border", "2px solid black")
-        .attr("class", "tooltip");
-
 var yearDataAvg, yearDataMax, yearDataMin;
 
 function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
 
-    // append the svg object to the body of the page
+    // Append the svg object to the body of the page
     var svg = d3.select("#radarchart_1").append("svg")
         .attr("id", "radarchart_svg")
         .attr("width", width + margin.left + margin.right)
