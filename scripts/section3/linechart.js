@@ -14,7 +14,6 @@ const tooltip = d3.select("#linechart_1")
 
 var yearDataAvg, yearDataMax, yearDataMin;
 
-
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
 
     // append the svg object to the body of the page
@@ -39,26 +38,26 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
         var allMonths = Object.keys(dataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
         console.log(months);
-    
+        
         var minTemperature = d3.min(dataMin, function (d) {
             return d3.min(months, function (month) {
                 return +d[month];
             });
         });
-        console.log(minTemperature);
+        //console.log(minTemperature);
         
         var maxTemperature = d3.max(dataMax, function (d) {
             return d3.max(months, function (month) {
                 return +d[month];
             });
         });
-        console.log(maxTemperature);
+        //console.log(maxTemperature);
     
         var x = d3.scaleBand()
             .domain(months)
             .range([0, width])
             .padding(1);
-    
+        
         var y = d3.scaleLinear()
             .domain([minTemperature, maxTemperature])
             .range([height, 0]);
@@ -69,7 +68,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
     
         svg.append("g")
             .call(d3.axisLeft(y));
-    
+        
         // Add x-axis label
         svg.append("text")
             .attr("transform", `translate(${width / 2},${height + margin.top + 20})`)
@@ -100,7 +99,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
-
     
             var lineMax = d3.line()
                 .x(function (d) { return x(d); })
@@ -193,11 +191,10 @@ function handleMouseOut() {
         .style("opacity", 0);
 }
 
-
 function getTemperatureCelsius(circle) {
     const className = d3.select(circle).attr("class");
-    const data = className === "circle-avg" ? yearDataAvg[0] :
-                 className === "circle-max" ? yearDataMax[0] :
+    const data = className === "circle-avg-" ? yearDataAvg[0] :
+                 className === "circle-max-" ? yearDataMax[0] :
                  yearDataMin[0];
     const month = d3.select(circle).data()[0];
     return data[month] + "°C";
@@ -205,14 +202,13 @@ function getTemperatureCelsius(circle) {
 
 function getTemperatureFahrenheit(circle) {
     const className = d3.select(circle).attr("class");
-    const data = className === "circle-avg" ? yearDataAvg[0] :
-                 className === "circle-max" ? yearDataMax[0] :
+    const data = className === "circle-avg-" ? yearDataAvg[0] :
+                 className === "circle-max-" ? yearDataMax[0] :
                  yearDataMin[0];
     const month = d3.select(circle).data()[0];
     const fahrenheitValue = data[month + "F"];
     return fahrenheitValue + "°F";
 }
-
 
 // Initial chart creation with the default dataset
 updateLineChart("data/section3/AVG/AlabamaAVG.csv","data/section3/MAX/AlabamaMAX.csv","data/section3/MIN/AlabamaMIN.csv", [2000]);
