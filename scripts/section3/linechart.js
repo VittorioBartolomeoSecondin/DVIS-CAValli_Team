@@ -66,12 +66,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
         svg.append("g")
             .call(d3.axisLeft(y));
         
-        // Add x-axis label
-        svg.append("text")
-            .attr("transform", `translate(${width / 2},${height + margin.top + 20})`)
-            .style("text-anchor", "middle")
-            .text("Month");
-        
         // Add y-axis label
         svg.append("text")
             .attr("transform", "rotate(-90)")
