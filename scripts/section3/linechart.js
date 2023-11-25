@@ -144,7 +144,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                     return { month: month, value: yearDataMax[0][month], valueF: yearDataMax[0][month + "F"] };
                 }))*/
                 .data(months.filter(function(month) {
-                    return !isNaN(yearDataAvg[0][month]); // Filter out NaN values
+                    return !isNaN(yearDataMax[0][month]); // Filter out NaN values
                 }))
                 .enter().append("circle")
                 .attr("class", "circle-max-" + selectedYear)
@@ -160,7 +160,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                     return { month: month, value: yearDataMin[0][month], valueF: yearDataMin[0][month + "F"] };
                 }))*/
                 .data(months.filter(function(month) {
-                    return !isNaN(yearDataAvg[0][month]); // Filter out NaN values
+                    return !isNaN(yearDataMin[0][month]); // Filter out NaN values
                 }))
                 .enter().append("circle")
                 .attr("class", "circle-min-" + selectedYear)
