@@ -23,8 +23,11 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
     ]).then(function (datasets) {
     
         var dataAvg = datasets[0];
+        console.log(dataAvg);  
         var dataMax = datasets[1];
+        console.log(dataMax);  
         var dataMin = datasets[2];
+        console.log(dataMin);  
 
         var allMonths = Object.keys(dataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
