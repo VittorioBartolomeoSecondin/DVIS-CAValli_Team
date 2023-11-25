@@ -166,8 +166,8 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 //.data(months)
                 .enter().append("circle")
                 .attr("class", "circle-max-" + selectedYear)
-                .attr("temperatureCelsius", function(d) { return yearDataAvg[0][d]; }) // Custom attribute for temperature
-                .attr("temperatureFahrenheit", function(d) { return yearDataAvg[0][d + "F"]; })
+                .attr("temperatureCelsius", function(d) { return yearDataMax[0][d]; }) // Custom attribute for temperature
+                .attr("temperatureFahrenheit", function(d) { return yearDataMax[0][d + "F"]; })
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataMax[0][d]); })           
                 .attr("r", 4)
@@ -185,8 +185,8 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 //.data(months)
                 .enter().append("circle")
                 .attr("class", "circle-min-" + selectedYear)
-                .attr("temperatureCelsius", function(d) { return yearDataAvg[0][d]; }) // Custom attribute for temperature
-                .attr("temperatureFahrenheit", function(d) { return yearDataAvg[0][d + "F"]; })
+                .attr("temperatureCelsius", function(d) { return yearDataMin[0][d]; }) // Custom attribute for temperature
+                .attr("temperatureFahrenheit", function(d) { return yearDataMin[0][d + "F"]; })
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataMin[0][d]); })       
                 .attr("r", 4)
