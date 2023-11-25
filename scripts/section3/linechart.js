@@ -84,7 +84,8 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             .style("text-anchor", "middle")
             .text("Temperatures in Celsius");
 
-        var stateName = document.getElementById("dataset-dropdown").value;
+        var selectState = document.getElementById("dataset-dropdown");
+        var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
         // Append a title to the SVG
         svg.append("text")
