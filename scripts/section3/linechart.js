@@ -14,6 +14,24 @@ const tooltip = d3.select("#linechart_1")
 
 var yearDataAvg, yearDataMax, yearDataMin;
 
+// Function to filter out columns with NaN values for a specific year
+function filterNaNColumns(data, year) {
+    // Filter out columns with NaN for the specified year
+    var columnsToKeep = Object.keys(data[0]).filter(function (key) {
+        // Check if the column is for the specified year and doesn't have NaN values
+        return key.startsWith("year") || (+key === year && !data.some(d => isNaN(+d[key])));
+    });
+
+    // Create a new dataset with only the columns that passed the filter
+    return data.map(function (d) {
+        var filtered = {};
+        columnsToKeep.forEach(function (column) {
+            filtered[column] = d[column];
+        });
+        return filtered;
+    });
+}
+
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
 
     // append the svg object to the body of the page
@@ -34,6 +52,11 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
         var dataAvg = datasets[0];
         var dataMax = datasets[1];
         var dataMin = datasets[2];
+
+        // Filter out columns with NaN values for the year 2023
+        dataAvg = filterNaNColumns(dataAvg, 2023);
+        dataMax = filterNaNColumns(dataMax, 2023);
+        dataMin = filterNaNColumns(dataMin, 2023);
 
         var allMonths = Object.keys(dataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
@@ -127,9 +150,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 /*.data(months.map(function (month) {
                     return { month: month, value: yearDataAvg[0][month], valueF: yearDataAvg[0][month + "F"] };
                 }))*/
-                .data(months.filter(function(month) {
-                    return !isNaN(yearDataAvg[0][month]); // Filter out NaN values
-                }))
+                .data(months)
                 .enter().append("circle")
                 .attr("class", "circle-avg-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
@@ -143,9 +164,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 /*.data(months.map(function (month) {
                     return { month: month, value: yearDataMax[0][month], valueF: yearDataMax[0][month + "F"] };
                 }))*/
-                .data(months.filter(function(month) {
-                    return !isNaN(yearDataMax[0][month]); // Filter out NaN values
-                }))
+                .data(months)
                 .enter().append("circle")
                 .attr("class", "circle-max-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
@@ -159,9 +178,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 /*.data(months.map(function (month) {
                     return { month: month, value: yearDataMin[0][month], valueF: yearDataMin[0][month + "F"] };
                 }))*/
-                .data(months.filter(function(month) {
-                    return !isNaN(yearDataMin[0][month]); // Filter out NaN values
-                }))
+                .data(months)
                 .enter().append("circle")
                 .attr("class", "circle-min-" + selectedYear)
                 .attr("cx", function (d) { return x(d); })
