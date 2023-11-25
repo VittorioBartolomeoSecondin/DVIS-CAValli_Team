@@ -202,7 +202,7 @@ function handleMouseOver(event, d) {
 
     // Tooltip content
     //const temperatureCelsius = getTemperatureCelsius(this);
-    const temperatureCelsius = d3.select(this).attr("cy") + "°C";
+    const temperatureCelsius = d3.select(this).attr("temperature") + "°C";
     const temperatureFahrenheit = getTemperatureFahrenheit(this);
     /*const data = d3.select(this).data()[0];
     const temperatureCelsius = data.value + "°C";
