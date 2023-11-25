@@ -121,7 +121,7 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             return {
                 "name": m,
                 "angle": angle,
-                "line_coord": angleToCoordinate(angle, 10),
+                "line_coord": angleToCoordinate(angle, maxTemperature),
                 "label_coord": angleToCoordinate(angle, 10.5)
             };
         });
