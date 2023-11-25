@@ -1,6 +1,4 @@
-var yearDataAvg, yearDataMax, yearDataMin;
-
-function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
+function updateRadarChart(selectedDataset, selectedYears) {
 
     // Append the svg object to the body of the page
     var svg = d3.select("#radarchart_1").append("svg")
@@ -12,25 +10,21 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
 
     // Read the data
     Promise.all([
-        d3.csv(selectedDataset_1),
-        d3.csv(selectedDataset_2),
-        d3.csv(selectedDataset_3)
+        d3.csv(selectedDataset)
     ]).then(function (datasets) {
     
         var dataAvg = datasets[0];
-        var dataMax = datasets[1];
-        var dataMin = datasets[2];
 
         var allMonths = Object.keys(dataAvg[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
         
-        var minTemperature = d3.min(dataMin, function (d) {
+        var minTemperature = d3.min(dataAvg, function (d) {
             return d3.min(months, function (month) {
                 return +d[month];
             });
         });
         
-        var maxTemperature = d3.max(dataMax, function (d) {
+        var maxTemperature = d3.max(dataAvg, function (d) {
             return d3.max(months, function (month) {
                 return +d[month];
             });
@@ -56,12 +50,6 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
             months.forEach(m => point[m] = yearDataAvg[0][m]);
             data.push(point);
         });
-        
-        // Define the number of data points
-        var numPoints = months.length;
-        
-        // Define the radius of the radar chart
-        var radius = Math.min(width, height) / 2;
         
         // Define the angles for each data point
         var radialScale = d3.scaleLinear()
@@ -157,9 +145,9 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                     .attr("d", line)
                     .attr("stroke-width", 5)
                     .attr("stroke", (_, i) => colors[i])
-                    //.attr("fill", (_, i) => colors[i])
+                    .attr("fill", "none")
                     .attr("stroke-opacity", 1)
-                    .attr("opacity", 0.1)
+                    //.attr("opacity", 0.1)
             ); 
     });
 }
