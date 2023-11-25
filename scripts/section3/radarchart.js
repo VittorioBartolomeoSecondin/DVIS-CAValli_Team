@@ -160,19 +160,22 @@ function updateRadarChart(selectedDataset, selectedYears) {
             .append("g")
             .attr("class", "datapoint")
             .selectAll("circle")
-            .data(d => Object.values(d).slice(0, -1)) // Exclude the 'year' property
+            .data(d => months.map(month => ({ month, value: d[month] })))
             .enter()
             .append("circle")
             .attr("cx", function(d, i) {
                 var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-                return width / 2 + Math.cos(angle) * radialScale(d);
+                return width / 2 + Math.cos(angle) * radialScale(d.value);
             })
             .attr("cy", function(d, i) {
                 var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-                return height / 2 - Math.sin(angle) * radialScale(d);
+                return height / 2 - Math.sin(angle) * radialScale(d.value);
             })
             .attr("r", 4) // Adjust the radius of the circles as needed
-            .attr("fill", (_, i) => colors[i]); // Use colors to differentiate data points
+            .attr("fill", (_, i) => {
+                const dataIndex = Math.floor(i / months.length); // Calculate index of the data point
+                return colors[dataIndex]; // Assign color based on the index of the line's color array
+            });
 
     });
 }
