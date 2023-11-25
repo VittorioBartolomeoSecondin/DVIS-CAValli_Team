@@ -161,7 +161,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     // Draw circles for data points
                     d3.select(this)
                         .selectAll("circle")
-                        .data(Object.values(d).slice(0, -1)) // Exclude the 'year' property
+                        .data(Object.values(d)) // Exclude the 'year' property
                         .enter()
                         .filter(dp => !isNaN(dp)) // Filter out NaN values
                         .append("circle")
