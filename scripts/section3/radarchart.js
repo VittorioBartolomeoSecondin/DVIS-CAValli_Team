@@ -57,26 +57,13 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
         var data = [];
         selectedYears.forEach(function (selectedYear) {
             yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
-            console.log(yearDataAvg);  
             var point = {}
             months.forEach(m => point[m] = yearDataAvg[0][m]);
-            console.log(point);  
             data.push(point);
         });
-        console.log(data);   
         
         // Define the number of data points
         var numPoints = months.length;
-        
-        /*
-        var data = [];
-        for (var i = 0; i < selectedYears.length; i++){
-            var point = {}
-            months.forEach(m => point[m] = yearDataAvg[i][m]);
-            data.push(point);
-        };    
-        console.log(data);        
-        */
         
         // Define the radius of the radar chart
         var radius = Math.min(width, height) / 2;
@@ -173,11 +160,11 @@ function updateRadarChart(selectedDataset_1,selectedDataset_2,selectedDataset_3,
                 enter => enter.append("path")
                     .datum(d => getPathCoordinates(d))
                     .attr("d", line)
-                    .attr("stroke-width", 3)
+                    .attr("stroke-width", 5)
                     .attr("stroke", (_, i) => colors[i])
-                    .attr("fill", (_, i) => colors[i])
-                    .attr("stroke-opacity", 1)
-                    .attr("opacity", 0.5)
+                    //.attr("fill", (_, i) => colors[i])
+                    //.attr("stroke-opacity", 1)
+                    //.attr("opacity", 0.5)
             ); 
     });
 }
