@@ -51,7 +51,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         // Add X axis
         var x = d3.scaleLinear()
-            .domain([minTemperature - 10, maxTemperature + 10])
+            .domain([minTemperature - 2, maxTemperature + 2])
             .range([0, width]);
         
         svg.append("g")
@@ -64,12 +64,12 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         svg.append("text")
             .attr("text-anchor", "middle")
             .attr("x", width)
-            .attr("y", height + 40)
+            .attr("y", height)
             .text("Temperatures in Celsius");
         
         // Create a Y scale for densities
         var y = d3.scaleLinear()
-            .domain([0, 0.3])
+            .domain([0, 0.5])
             .range([height, 0]);
         
         // Create the Y axis for names
@@ -90,22 +90,13 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
             arrayDataMax = []
             months.forEach(function (month) { arrayDataMax.push( +yearDataMax[0][month] ) });
-            console.log(arrayDataMax);
             
             arrayDataMin = []
             months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
-            console.log(arrayDataMin);
-            
-            // var filteredDataMax = months.map( function(month) { return [selectedYear, +yearDataMax[0][month]];
-            //                                                   }).filter( function(d) { return !isNaN(d[1]); });
-            // console.log(filteredDataMax);
-            // var filteredDataMin = months.map( function(month) { return [selectedYear, +yearDataMin[0][month]];
-            //                                                   }).filter( function(d) { return !isNaN(d[1]); });                     
-            // console.log(filteredDataMin);
             
             // Compute kernel density estimation for each column:
-            var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(10)); // increase this 10 for more accurate density.
-            densityMax = kde( arrayDataMax );
+            var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); // increase this 40 for more accurate density.
+            densityMax = kde(arrayDataMax);
             console.log(densityMax);
             allDensity.push({key: selectedYear, density: densityMax});
         });
