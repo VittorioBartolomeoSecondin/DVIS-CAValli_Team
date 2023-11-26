@@ -148,7 +148,8 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .each(function(d, i) {
                     const color = colors[i]; // Retrieve the color for the current data point
                     const pathData = getPathCoordinates(d);
-                    console.log(pathData);
+                    console.log(d);
+                    console.log(i);
             
                     // Draw path element
                     d3.select(this)
@@ -166,8 +167,8 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         .enter()
                         .filter(dp => !isNaN(dp)) // Filter out NaN values
                         .append("circle")
-                        .attr("temperatureCelsius", function(d) { console.log(d); return d; }) // Custom attribute for temperature
-                        .attr("temperatureFahrenheit", function(d, i) { console.log(yearDataAvg[0]); return yearDataAvg[0][months[i] + "F"]; })
+                        .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
+                        .attr("temperatureFahrenheit", function(d, i) { return yearDataAvg[0][months[i] + "F"]; })
                         .attr("cx", function(dp, j) {
                             const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
                             return width / 2 + Math.cos(angle) * radialScale(dp);
