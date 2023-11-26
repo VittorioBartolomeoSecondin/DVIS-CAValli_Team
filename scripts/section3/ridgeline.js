@@ -48,20 +48,12 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .style("font-size", "20px")
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
-
-        // Compute the mean of each group
-        maxMeans = []
-        minMeans = []
-        selectedYears.forEach(function (selectedYear) {            
-            yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
-            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });  
-            });
+       
+        // selectedYears.forEach(function (selectedYear) {            
+        //     yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
+        //     yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });  
+        //     });
         
-        // Create a color scale using the means
-        const myColor = d3.scaleSequential()
-            .domain([minTemperature, maxTemperature])
-            .interpolator(d3.interpolateViridis);  
-
         // Add X axis
         const x = d3.scaleLinear()
             .domain([minTemperature - 10, maxTemperature + 10])
@@ -82,7 +74,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         
         // Create a Y scale for densities
         const y = d3.scaleLinear()
-            .domain([0, 0.25])
+            .domain([0, 0.3])
             .range([height, 0]);
         
         // Create the Y axis for names
@@ -108,22 +100,16 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         svg.selectAll("areas")
             .data(allDensity)
             .join("path")
-              .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})` )})
-              .attr("fill", function(d){
-                grp = d.key ;
-                index = selectedYears.indexOf(grp)
-                value = maxMeans[index]
-                return myColor(value)
-              })
+              .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})`)})
               .datum(function(d){return(d.density)})
-              .attr("opacity", 0.7)
+              .attr("fill", "#69b3a2")
               .attr("stroke", "#000")
-              .attr("stroke-width", 0.1)
+              .attr("stroke-width", 1)
               .attr("d",  d3.line()
                   .curve(d3.curveBasis)
                   .x(function(d) { return x(d[0]); })
                   .y(function(d) { return y(d[1]); })
-              )        
+              )       
         });
 }
 
