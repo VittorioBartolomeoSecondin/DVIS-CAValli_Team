@@ -92,7 +92,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         const allDensity = []
         for (i = 0; i < selectedYears.length; i++) {
             key = selectedYears[i]
-            density = kde( datasets.map(function(d){  return d[key]; }) )
+            density = kde( dataMax.map(function(d){  return d[key]; }) )
             allDensity.push({key: key, density: density})
         }
         
