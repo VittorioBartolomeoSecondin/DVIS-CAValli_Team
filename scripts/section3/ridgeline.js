@@ -98,7 +98,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); // increase this 40 for more accurate density.
             density = kde( filteredDataMax.map(function(d){  return d[selectedYear]; }) );
             allDensity.push({key: selectedYear, density: density});
-            console.log(allDensity);
+            console.log(density);
         });
 
         // Add areas
