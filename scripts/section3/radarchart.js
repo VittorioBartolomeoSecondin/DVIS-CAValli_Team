@@ -76,7 +76,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
         function angleToCoordinate(angle, value){
             var x = Math.cos(angle) * radialScale(value);
             var y = Math.sin(angle) * radialScale(value);
-            return {"x": width / 2 + x - 20, "y": height / 2 - y};
+            return {"x": width / 2 + x, "y": height / 2 - y};
         }
 
         var featureData = months.map((m, i) => {
@@ -85,7 +85,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 "name": m,
                 "angle": angle,
                 "line_coord": angleToCoordinate(angle, maxTemperature),
-                "label_coord": angleToCoordinate(angle, maxTemperature + 8)
+                "label_coord": angleToCoordinate(angle, maxTemperature + 6)
             };
         });
 
