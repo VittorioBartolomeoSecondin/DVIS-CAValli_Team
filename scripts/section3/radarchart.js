@@ -150,17 +150,17 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .enter()
                 .append("rect")
                 .attr("x", width - 100)
-                .attr("y", i * 20) // Adjust position based on the iteration index
+                .attr("y", 0 * 20) // Adjust position based on the iteration index
                 .attr("width", 10)
                 .attr("height", 10)
-                .attr("fill", colors[i]); // Use colors for rectangles
+                .attr("fill", colors[0]); // Use colors for rectangles
             
             legend.selectAll("text")
                 .data([selectedYear]) // Data for legend is the selected year itself
                 .enter()
                 .append("text")
                 .attr("x", width - 85)
-                .attr("y", i * 20 + 9) // Adjust position based on the iteration index
+                .attr("y", 0 * 20 + 9) // Adjust position based on the iteration index
                 .text(function(d) { return d; }) // Display the year
                 .style("font-size", "12px");
         
