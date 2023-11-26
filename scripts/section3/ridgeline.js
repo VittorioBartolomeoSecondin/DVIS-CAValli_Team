@@ -104,7 +104,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Add areas
         svg.selectAll("areas")
             .data(allDensity)
-            .append("path")
+            .join("path")
               .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})`)})
               .datum(function(d){return(d.density)})
               .attr("fill", "#69b3a2")
