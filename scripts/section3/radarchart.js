@@ -37,7 +37,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
         
         //////
         // Extract unique colors based on the selected years
-        var selectedColors = colors.slice(0, selectedYears.length);
+        var selectedColors = selectedYears.map((year, i) => colors[i % colors.length]);
     
         // Create a legend
         var legend = svg.append("g")
@@ -176,7 +176,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .enter()
                 .append("g")
                 .each(function(d, i) {
-                    const color = colors[i]; // Retrieve the color for the current data point
+                    const color = selectedColors[i]; // Retrieve the color for the current data point
                     const pathData = getPathCoordinates(d);
             
                     // Draw path element
