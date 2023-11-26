@@ -131,6 +131,9 @@ function updateRadarChart(selectedDataset, selectedYears) {
             return coordinates;
         }       
 
+        // Colours that are used
+        var used_colours = {}
+        
         // Data
         var data = [];
         selectedYears.forEach(function (selectedYear) {
@@ -147,6 +150,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .append("g")
                 .each(function(d, i) {
                     const color = colors[i]; // Retrieve the color for the current data point
+                    used_colours[selectedYear] = color;
                     const pathData = getPathCoordinates(d);
             
                     // Draw path element
@@ -180,6 +184,29 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         .on("mouseover", handleMouseOver)
                         .on("mouseout", handleMouseOut);
                 });
+        });
+
+        var legend = svg.append("g")
+                        .attr("class", "legend")
+                        .attr("transform", "translate(20,20)");
+        
+        var keys = Object.keys(used_colours); // Get keys from the dictionary
+        
+        keys.forEach(function(key, j) {
+            var color = used_colours[key]; // Get color value for the key
+        
+            legend.append("rect")
+                .attr("x", width - 100)
+                .attr("y", j * 20)
+                .attr("width", 10)
+                .attr("height", 10)
+                .attr("fill", color);
+        
+            legend.append("text")
+                .attr("x", width - 85)
+                .attr("y", j * 20 + 9)
+                .text(key) // Display the key associated with the color
+                .style("font-size", "12px");
         });
      });
 
