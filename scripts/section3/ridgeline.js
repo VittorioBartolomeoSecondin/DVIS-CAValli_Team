@@ -3,8 +3,6 @@
 //     width = 460 - margin.left - margin.right,
 //     height = 400 - margin.top - margin.bottom;
 
-// var yearDataMax, yearDataMin;
-
 function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
     // append the svg object to the body of the page
@@ -54,25 +52,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Compute the mean of each group
         maxMeans = []
         minMeans = []
-        selectedYears.forEach(function (selectedYear) {
-            
+        selectedYears.forEach(function (selectedYear) {            
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
-            console.log(yearDataMax)
-            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
-            console.log(yearDataMin)
-            
-            maxValues = yearDataMax.map(function(d) { return months.map(function(month) { return +d[month]; }); });
-            console.log(maxValues)
-            minValues = yearDataMin.map(function(d) { return months.map(function(month) { return +d[month]; }); });
-            console.log(minValues)
-            
-            maxMean = !isNaN(d3.mean(maxValues)) ? d3.mean(maxValues) : 0;
-            console.log(maxMean);
-            minMean = !isNaN(d3.mean(minValues)) ? d3.mean(minValues) : 0;
-            console.log(minMean);
-            
-            maxMeans.push(maxMean);
-            minMeans.push(minMean);
+            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });  
             });
         
         // Create a color scale using the means
