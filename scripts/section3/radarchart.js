@@ -281,17 +281,11 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     // Select all checked checkboxes
     const checkedCheckboxes = document.querySelectorAll("#year-checkbox-form input:checked");
     
-    // Extract values of checked checkboxes and maintain the order
-    const selectedYears = Array.from(checkedCheckboxes).map(checkbox => {
-        const year = checkbox.value;
-        if (!checkboxOrder.includes(year)) {
-            checkboxOrder.push(year); // Add the year to the order array if not present
-        }
-        return year;
-    });
+    // Update the checkbox order array
+    checkboxOrder = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
     
     const selectedDataset = "data/section3/AVG/" + selectedValue + "AVG.csv";
 
     d3.select("#radarchart_svg").remove();
-    updateRadarChart(selectedDataset, selectedYears);
+    updateRadarChart(selectedDataset, checkboxOrder);
 });
