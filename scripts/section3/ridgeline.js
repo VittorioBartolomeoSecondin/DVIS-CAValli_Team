@@ -79,19 +79,10 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Create a color scale using the means
         const myColor = d3.scaleSequential()
             .domain([minTemperature, maxTemperature])
-            .interpolator(d3.interpolateViridis);        
+            .interpolator(d3.interpolateViridis);  
 
-        // Add y-axis label
-        svg.append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 0 - margin.left)
-            .attr("x", 0 - height / 2)
-            .attr("dy", "1em")
-            .style("text-anchor", "middle")
-            .text("Temperatures in Celsius");
-        
         // Add X axis
-        var x = d3.scaleLinear()
+        const x = d3.scaleLinear()
             .domain([minTemperature, maxTemperature])
             .range([0, width]);
         
@@ -99,7 +90,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .attr("class", "xAxis")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x).tickValues([0,25, 50, 75, 100]).tickSize(-height) )
-            .select(".domain").remove()
+            .select(".domain").remove();
         
         // Add X axis label:
         svg.append("text")
@@ -126,8 +117,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Compute kernel density estimation for each column:
         const kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)) // increase this 40 for more accurate density.
         const allDensity = []
-        for (i = 0; i < n; i++) {
-            key = categories[i]
+        for (i = 0; i < selectedYears.length; i++) {
+            key = selectedYears[i]
             density = kde( data.map(function(d){  return d[key]; }) )
             allDensity.push({key: key, density: density})
         }
@@ -139,9 +130,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})` )})
               .attr("fill", function(d){
                 grp = d.key ;
-                index = categories.indexOf(grp)
-                value = allMeans[index]
-                return myColor( value  )
+                index = selectedYears.indexOf(grp)
+                value = maxMeans[index]
+                return myColor(value)
               })
               .datum(function(d){return(d.density)})
               .attr("opacity", 0.7)
