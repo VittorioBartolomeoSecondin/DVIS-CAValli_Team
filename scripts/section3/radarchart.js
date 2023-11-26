@@ -1,5 +1,5 @@
 function updateRadarChart(selectedDataset, selectedYears) {
-    console.log(selectedYears);
+   
     // Append the svg object to the body of the page
     var svg = d3.select("#radarchart_1").append("svg")
         .attr("id", "radarchart_svg")
@@ -237,12 +237,9 @@ function handleMouseOut() {
         .style("opacity", 0);
 }
 
-let checkboxOrder = ['2000']; 
-
-
 // Initial chart creation with the default dataset
 updateRadarChart("data/section3/AVG/AlabamaAVG.csv", ['2000']);
-/*
+
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = "data/section3/AVG/" + this.value + "AVG.csv";
@@ -256,7 +253,6 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   d3.select("#radarchart_svg").remove();
   updateRadarChart(selectedDataset, selectedYears);
 });
-
 
 // Add an event listener for changes in the year dropdown
 document.getElementById("year-checkbox-form").addEventListener("change", function () {
@@ -272,24 +268,4 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
 
     d3.select("#radarchart_svg").remove();
     updateRadarChart(selectedDataset, selectedYears);
-});
-*/
-
-// Add an event listener for changes in the year dropdown
-document.getElementById("year-checkbox-form").addEventListener("change", function () {
-    const selectedValue = document.getElementById("dataset-dropdown").value;
-
-    // Select all checked checkboxes
-    const checkedCheckboxes = document.querySelectorAll("#year-checkbox-form input:checked");
-    
-    checkedCheckboxes.forEach(checkbox => {
-        const year = checkbox.value;
-        if (!checkboxOrder.includes(year)) 
-            checkboxOrder.push(year); // Add the year if not present
-    });
-    
-    const selectedDataset = "data/section3/AVG/" + selectedValue + "AVG.csv";
-
-    d3.select("#radarchart_svg").remove();
-    updateRadarChart(selectedDataset, checkboxOrder);
 });
