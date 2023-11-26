@@ -61,9 +61,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
             console.log(yearDataMin)
             
-            maxValues = yearDataMax.map(months, function (month) {return +yearDataMax[month]; });
+            maxValues = yearDataMax.map(function(d) { return months.map(function(month) { return +d[month]; }); });
             console.log(maxValues)
-            minValues = yearDataMin.map(months, function (month) {return +yearDataMax[month]; });
+            minValues = yearDataMin.map(function(d) { return months.map(function(month) { return +d[month]; }); });
             console.log(minValues)
             
             maxMean = !isNaN(d3.mean(maxValues)) ? d3.mean(maxValues) : 0;
