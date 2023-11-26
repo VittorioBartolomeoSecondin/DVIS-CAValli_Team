@@ -57,7 +57,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     .attr("cx", width / 2)
                     .attr("cy", height / 2)
                     .attr("fill", "none")
-                    .attr("stroke", "gray")
+                    .attr("stroke", "black")
                     .attr("r", d => radialScale(d))
             );
 
@@ -98,7 +98,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     .attr("y1", height / 2)
                     .attr("x2", d => d.line_coord.x)
                     .attr("y2", d => d.line_coord.y)
-                    .attr("stroke","black")
+                    .attr("stroke","gray")
             );
         
         // Draw axis label
