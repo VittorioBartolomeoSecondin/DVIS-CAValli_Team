@@ -145,24 +145,24 @@ function updateRadarChart(selectedDataset, selectedYears) {
             months.forEach(m => point[m] = yearDataAvg[0][m]);
             data.push(point);
 
-           legend.selectAll("rect")
+           /*legend.selectAll("rect")
                 .data([selectedYear]) // Data for legend is the selected year itself
                 .enter()
                 .append("rect")
                 .attr("x", width - 100)
-                .attr("y", 0 * 20) // Adjust position based on the iteration index
+                .attr("y", i * 20) // Adjust position based on the iteration index
                 .attr("width", 10)
                 .attr("height", 10)
-                .attr("fill", colors[0]); // Use colors for rectangles
+                .attr("fill", color); // Use colors for rectangles
             
             legend.selectAll("text")
                 .data([selectedYear]) // Data for legend is the selected year itself
                 .enter()
                 .append("text")
                 .attr("x", width - 85)
-                .attr("y", 0 * 20 + 9) // Adjust position based on the iteration index
+                .attr("y", i * 20 + 9) // Adjust position based on the iteration index
                 .text(function(d) { return d; }) // Display the year
-                .style("font-size", "12px");
+                .style("font-size", "12px");*/
         
             // Draw paths and circles with the same color for each data point
             svg.selectAll("g")
@@ -170,6 +170,8 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .enter()
                 .append("g")
                 .each(function(d, i) {
+                    console.log(d);
+                    console.log(i);
                     const color = colors[i]; // Retrieve the color for the current data point
                     const pathData = getPathCoordinates(d);
             
