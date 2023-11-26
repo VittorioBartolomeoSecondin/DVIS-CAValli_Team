@@ -88,18 +88,18 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });  
 
-            var filteredDataMax = months.map( function(month) { return +yearDataMax[0][month];
+            var filteredDataMax = months.map( function(month) { return [+yearDataMax[0][month]];
                                                               }).filter( function(d) { return !isNaN(d[1]); });
             console.log(filteredDataMax);
-            var filteredDataMin = months.map( function(month) { return +yearDataMin[0][month];
+            var filteredDataMin = months.map( function(month) { return [+yearDataMin[0][month]];
                                                               }).filter( function(d) { return !isNaN(d[1]); });                     
             console.log(filteredDataMin);
             
             // Compute kernel density estimation for each column:
             var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(10)); // increase this 10 for more accurate density.
-            density = kde( filteredDataMax.map(function(d){  return d[selectedYear]; }) );
-            allDensity.push({key: selectedYear, density: density});
-            console.log(density);
+            densityMax = kde(filteredDataMax);
+            console.log(densityMax);
+            allDensity.push({key: selectedYear, density: densityMax});
         });
 
         // Add areas
