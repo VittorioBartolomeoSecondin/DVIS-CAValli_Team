@@ -33,6 +33,37 @@ function updateRadarChart(selectedDataset, selectedYears) {
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
+        var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
+        
+        //////
+        // Extract unique colors based on the selected years
+        var selectedColors = colors.slice(0, selectedYears.length);
+    
+        // Create a legend
+        var legend = svg.append("g")
+            .attr("class", "legend")
+            .attr("transform", "translate(20,20)"); // Adjust position as needed
+    
+        legend.selectAll("rect")
+            .data(selectedYears)
+            .enter()
+            .append("rect")
+            .attr("x", width - 100)
+            .attr("y", function(d, i) { return i * 20; })
+            .attr("width", 10)
+            .attr("height", 10)
+            .attr("fill", function(d, i) { return selectedColors[i]; }); // Use colors for rectangles
+    
+        legend.selectAll("text")
+            .data(selectedYears)
+            .enter()
+            .append("text")
+            .attr("x", width - 85)
+            .attr("y", function(d, i) { return i * 20 + 9; })
+            .text(function(d) { return d; }) // Display the year
+            .style("font-size", "12px");
+        //////////////////
+
         // Append a title to the SVG
         svg.append("text")
             .attr("x", width / 2)
@@ -116,7 +147,6 @@ function updateRadarChart(selectedDataset, selectedYears) {
         var line = d3.line()
             .x(d => d.x)
             .y(d => d.y);
-        var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
         
        function getPathCoordinates(data_point){
             var coordinates = [];
