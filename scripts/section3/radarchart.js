@@ -130,28 +130,24 @@ function updateRadarChart(selectedDataset, selectedYears) {
             coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
             return coordinates;
         }       
-        
+
         // Data
         var data = [];
-        selectedYears.forEach(function (selectedYear, i) {
+        selectedYears.forEach(function (selectedYear) {
             yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
             var point = {}
             months.forEach(m => point[m] = yearDataAvg[0][m]);
             data.push(point);
-
-            // Assign unique colors to each year
-            var color = colors[i % colors.length]; // Use modulo to loop through colors if more years than colors
-                
+        
+        
             // Draw paths and circles with the same color for each data point
             svg.selectAll("g")
                 .data(data)
                 .enter()
                 .append("g")
-                .each(function(d, j) {
-                    //const color = colors[j]; // Retrieve the color for the current data point
+                .each(function(d, i) {
+                    const color = colors[i]; // Retrieve the color for the current data point
                     const pathData = getPathCoordinates(d);
-                    console.log(d);
-                    //console.log(j);
             
                     // Draw path element
                     d3.select(this)
@@ -183,30 +179,10 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         .attr("fill", color) // Use the same color for circles
                         .on("mouseover", handleMouseOver)
                         .on("mouseout", handleMouseOut);
-
-                        // Draw legend for each selected year
-                        var legend = svg.append("g")
-                                        .attr("class", "legend")
-                                        .attr("transform", "translate(20,20)"); // Adjust position as needed
-            
-                        // Draw rectangles for legend
-                        legend.append("rect")
-                            .attr("x", width - 100)
-                            .attr("y", i * 20) 
-                            .attr("width", 10)
-                            .attr("height", 10)
-                            .attr("fill", color); // Use colors for rectangles
-            
-                        // Draw text for legend
-                        legend.append("text")
-                            .attr("x", width - 85)
-                            .attr("y", i * 20 + 9) 
-                            .text(selectedYear) // Display the year
-                            .style("font-size", "12px");
                 });
         });
      });
-    
+
 }
 
 function handleMouseOver(event, d) {
