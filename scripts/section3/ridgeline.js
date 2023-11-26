@@ -60,10 +60,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             console.log(yearDataMax)
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
             console.log(yearDataMin)
-            maxMean = d3.mean(months, function (month) {return +yearDataMax[month]; });
+            maxMean = d3.mean(yearDataMax[3:14]);
             console.log(maxMean);
-            minMean = d3.mean(months, function (month) {return +yearDataMin[month]; });
-            // minMean = d3.mean(yearDataMin);
+            minMean = d3.mean(yearDataMin[3:14]);
             console.log(minMean);
             maxMeans.push(maxMean);
             minMeans.push(minMean);
