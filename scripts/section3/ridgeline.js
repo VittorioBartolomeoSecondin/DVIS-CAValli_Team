@@ -50,7 +50,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
 
         // Add X axis
-        const x = d3.scaleLinear()
+        var x = d3.scaleLinear()
             .domain([minTemperature - 10, maxTemperature + 10])
             .range([0, width]);
         
@@ -68,12 +68,12 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .text("Temperatures in Celsius");
         
         // Create a Y scale for densities
-        const y = d3.scaleLinear()
+        var y = d3.scaleLinear()
             .domain([0, 0.3])
             .range([height, 0]);
         
         // Create the Y axis for names
-        const yName = d3.scaleBand()
+        var yName = d3.scaleBand()
             .domain(selectedYears)
             .range([0, height])
             .paddingInner(1)
@@ -82,7 +82,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .call(d3.axisLeft(yName).tickSize(0))
             .select(".domain").remove()
 
-        const allDensity = []
+        var allDensity = []
         selectedYears.forEach(function (selectedYear) { 
             
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
@@ -95,7 +95,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                                                               }).filter( function(d) { return !isNaN(d[1]); });                     
 
             // Compute kernel density estimation for each column:
-            const kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); // increase this 40 for more accurate density.
+            var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); // increase this 40 for more accurate density.
             density = kde( filteredDataMax.map(function(d){  return d[selectedYear]; }) );
             allDensity.push({key: selectedYear, density: density});
             console.log(allDensity);
