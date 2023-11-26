@@ -33,13 +33,6 @@ function updateRadarChart(selectedDataset, selectedYears) {
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
-        var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
-        
-        // Create a legend
-        var legend = svg.append("g")
-            .attr("class", "legend")
-            .attr("transform", "translate(20,20)"); // Adjust position as needed
-
         // Append a title to the SVG
         svg.append("text")
             .attr("x", width / 2)
@@ -123,6 +116,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
         var line = d3.line()
             .x(d => d.x)
             .y(d => d.y);
+        var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
         
        function getPathCoordinates(data_point){
             var coordinates = [];
@@ -144,25 +138,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
             var point = {}
             months.forEach(m => point[m] = yearDataAvg[0][m]);
             data.push(point);
-
-           /*legend.selectAll("rect")
-                .data([selectedYear]) // Data for legend is the selected year itself
-                .enter()
-                .append("rect")
-                .attr("x", width - 100)
-                .attr("y", i * 20) // Adjust position based on the iteration index
-                .attr("width", 10)
-                .attr("height", 10)
-                .attr("fill", color); // Use colors for rectangles
-            
-            legend.selectAll("text")
-                .data([selectedYear]) // Data for legend is the selected year itself
-                .enter()
-                .append("text")
-                .attr("x", width - 85)
-                .attr("y", i * 20 + 9) // Adjust position based on the iteration index
-                .text(function(d) { return d; }) // Display the year
-                .style("font-size", "12px");*/
+        
         
             // Draw paths and circles with the same color for each data point
             svg.selectAll("g")
@@ -170,10 +146,9 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .enter()
                 .append("g")
                 .each(function(d, i) {
-                    console.log(d);
-                    console.log(i);
                     const color = colors[i]; // Retrieve the color for the current data point
                     const pathData = getPathCoordinates(d);
+                    console.log(pathData);
             
                     // Draw path element
                     d3.select(this)
@@ -191,8 +166,8 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         .enter()
                         .filter(dp => !isNaN(dp)) // Filter out NaN values
                         .append("circle")
-                        .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
-                        .attr("temperatureFahrenheit", function(d, i) { return yearDataAvg[0][months[i] + "F"]; })
+                        .attr("temperatureCelsius", function(d) { console.log(d); return d; }) // Custom attribute for temperature
+                        .attr("temperatureFahrenheit", function(d, i) { console.log(yearDataAvg[0]); return yearDataAvg[0][months[i] + "F"]; })
                         .attr("cx", function(dp, j) {
                             const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
                             return width / 2 + Math.cos(angle) * radialScale(dp);
