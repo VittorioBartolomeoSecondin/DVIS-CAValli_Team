@@ -68,7 +68,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 enter => enter.append("text")
                     .attr("class", "ticklabel")
                     .attr("x", width / 2 + 5)
-                    .attr("y", d => height / 2 - radialScale(d))
+                    .attr("y", d => height / 2 + 2 - radialScale(d))
                     .text(d => d.toString())
             );
         
