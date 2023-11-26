@@ -35,34 +35,10 @@ function updateRadarChart(selectedDataset, selectedYears) {
 
         var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
         
-        //////
-        // Extract unique colors based on the selected years
-        var selectedColors = selectedYears.map((year, i) => colors[i % colors.length]);
-    
         // Create a legend
         var legend = svg.append("g")
             .attr("class", "legend")
             .attr("transform", "translate(20,20)"); // Adjust position as needed
-    
-        legend.selectAll("rect")
-            .data(selectedYears)
-            .enter()
-            .append("rect")
-            .attr("x", width - 100)
-            .attr("y", function(d, i) { return i * 20; })
-            .attr("width", 10)
-            .attr("height", 10)
-            .attr("fill", function(d, i) { return selectedColors[i]; }); // Use colors for rectangles
-    
-        legend.selectAll("text")
-            .data(selectedYears)
-            .enter()
-            .append("text")
-            .attr("x", width - 85)
-            .attr("y", function(d, i) { return i * 20 + 9; })
-            .text(function(d) { return d; }) // Display the year
-            .style("font-size", "12px");
-        //////////////////
 
         // Append a title to the SVG
         svg.append("text")
@@ -168,7 +144,25 @@ function updateRadarChart(selectedDataset, selectedYears) {
             var point = {}
             months.forEach(m => point[m] = yearDataAvg[0][m]);
             data.push(point);
-        
+
+           legend.selectAll("rect")
+                .data([selectedYear]) // Data for legend is the selected year itself
+                .enter()
+                .append("rect")
+                .attr("x", width - 100)
+                .attr("y", i * 20) // Adjust position based on the iteration index
+                .attr("width", 10)
+                .attr("height", 10)
+                .attr("fill", colors[i]); // Use colors for rectangles
+            
+            legend.selectAll("text")
+                .data([selectedYear]) // Data for legend is the selected year itself
+                .enter()
+                .append("text")
+                .attr("x", width - 85)
+                .attr("y", i * 20 + 9) // Adjust position based on the iteration index
+                .text(function(d) { return d; }) // Display the year
+                .style("font-size", "12px");
         
             // Draw paths and circles with the same color for each data point
             svg.selectAll("g")
@@ -176,7 +170,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .enter()
                 .append("g")
                 .each(function(d, i) {
-                    const color = selectedColors[i]; // Retrieve the color for the current data point
+                    const color = colors[i]; // Retrieve the color for the current data point
                     const pathData = getPathCoordinates(d);
             
                     // Draw path element
