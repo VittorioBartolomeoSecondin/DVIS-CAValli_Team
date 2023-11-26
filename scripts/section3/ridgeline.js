@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////
 // set the dimensions and margins of the graph
 const margin = {top: 60, right: 30, bottom: 20, left:110},
     width = 460 - margin.left - margin.right,
