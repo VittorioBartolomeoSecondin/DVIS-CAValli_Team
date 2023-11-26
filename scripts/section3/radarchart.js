@@ -1,5 +1,5 @@
 function updateRadarChart(selectedDataset, selectedYears) {
-
+    console.log(selectedYears);
     // Append the svg object to the body of the page
     var svg = d3.select("#radarchart_1").append("svg")
         .attr("id", "radarchart_svg")
