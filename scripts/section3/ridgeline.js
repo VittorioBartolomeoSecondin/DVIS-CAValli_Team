@@ -62,9 +62,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         
         // Add X axis label:
         svg.append("text")
-            .attr("text-anchor", "start")
+            .attr("text-anchor", "end")
             .attr("x", width)
-            .attr("y", height - 30)
+            .attr("y", height + 40)
             .text("Temperatures in Celsius");
         
         // Create a Y scale for densities
