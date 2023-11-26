@@ -1,3 +1,8 @@
+// set the dimensions and margins of the graph
+const margin = {top: 60, right: 30, bottom: 20, left:110},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
 // Append the svg object to the body of the page
 const svg = d3.select("#ridgeline_1")
   .append("svg")
