@@ -237,6 +237,8 @@ function handleMouseOut() {
         .style("opacity", 0);
 }
 
+let checkboxOrder = []; 
+
 // Initial chart creation with the default dataset
 updateRadarChart("data/section3/AVG/AlabamaAVG.csv", [2000]);
 
@@ -254,6 +256,7 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   updateRadarChart(selectedDataset, selectedYears);
 });
 
+/*
 // Add an event listener for changes in the year dropdown
 document.getElementById("year-checkbox-form").addEventListener("change", function () {
     const selectedValue = document.getElementById("dataset-dropdown").value;
@@ -263,6 +266,29 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     
     // Extract values of checked checkboxes
     const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
+    
+    const selectedDataset = "data/section3/AVG/" + selectedValue + "AVG.csv";
+
+    d3.select("#radarchart_svg").remove();
+    updateRadarChart(selectedDataset, selectedYears);
+});
+*/
+
+// Add an event listener for changes in the year dropdown
+document.getElementById("year-checkbox-form").addEventListener("change", function () {
+    const selectedValue = document.getElementById("dataset-dropdown").value;
+
+    // Select all checked checkboxes
+    const checkedCheckboxes = document.querySelectorAll("#year-checkbox-form input:checked");
+    
+    // Extract values of checked checkboxes and maintain the order
+    const selectedYears = Array.from(checkedCheckboxes).map(checkbox => {
+        const year = checkbox.value;
+        if (!checkboxOrder.includes(year)) {
+            checkboxOrder.push(year); // Add the year to the order array if not present
+        }
+        return year;
+    });
     
     const selectedDataset = "data/section3/AVG/" + selectedValue + "AVG.csv";
 
