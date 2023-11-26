@@ -33,11 +33,6 @@ function updateRadarChart(selectedDataset, selectedYears) {
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
-        /*// Draw legend for each selected year
-        var legend = svg.append("g")
-                        .attr("class", "legend")
-                        .attr("transform", "translate(20,20)"); // Adjust position as needed*/
-
         // Append a title to the SVG
         svg.append("text")
             .attr("x", width / 2)
@@ -186,6 +181,11 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         .attr("fill", color) // Use the same color for circles
                         .on("mouseover", handleMouseOver)
                         .on("mouseout", handleMouseOut);
+
+                        // Draw legend for each selected year
+                        var legend = svg.append("g")
+                                        .attr("class", "legend")
+                                        .attr("transform", "translate(20,20)"); // Adjust position as needed
                 });
         });
      });
