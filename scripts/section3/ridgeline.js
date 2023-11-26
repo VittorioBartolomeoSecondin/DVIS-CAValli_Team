@@ -95,7 +95,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                                                               }).filter( function(d) { return !isNaN(d[1]); });                     
 
             // Compute kernel density estimation for each column:
-            var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); // increase this 40 for more accurate density.
+            var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(10)); // increase this 10 for more accurate density.
             density = kde( filteredDataMax.map(function(d){  return d[selectedYear]; }) );
             allDensity.push({key: selectedYear, density: density});
             console.log(density);
