@@ -239,10 +239,10 @@ function handleMouseOut() {
 
 let checkboxOrder = ['2000']; 
 
-/*
+
 // Initial chart creation with the default dataset
 updateRadarChart("data/section3/AVG/AlabamaAVG.csv", ['2000']);
-
+/*
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
   const selectedDataset = "data/section3/AVG/" + this.value + "AVG.csv";
