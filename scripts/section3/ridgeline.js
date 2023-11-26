@@ -69,7 +69,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         
         // Create a Y scale for densities
         var y = d3.scaleLinear()
-            .domain([0, 0.5])
+            .domain([0, 0.1])
             .range([height, 0]);
         
         // Create the Y axis for names
@@ -98,9 +98,10 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); // increase this 40 for more accurate density.
             densityMax = kde(arrayDataMax);
             console.log(densityMax);
-            allDensity.push({key: selectedYear, density: densityMax});
         });
 
+        
+        allDensity.push({key: selectedYear, density: densityMax});
         // Add areas
         svg.selectAll("areas")
             .data(allDensity)
