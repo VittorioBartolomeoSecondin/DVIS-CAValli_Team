@@ -88,16 +88,24 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });  
 
-            var filteredDataMax = months.map( function(month) { return [selectedYear, +yearDataMax[0][month]];
-                                                              }).filter( function(d) { return !isNaN(d[1]); });
-            console.log(filteredDataMax);
-            var filteredDataMin = months.map( function(month) { return [selectedYear, +yearDataMin[0][month]];
-                                                              }).filter( function(d) { return !isNaN(d[1]); });                     
-            console.log(filteredDataMin);
+            arrayDataMax = []
+            months.forEach(function (month) { arrayDataMax.push( +yearDataMax[0][month] ) });
+            console.log(arrayDataMax);
+            
+            arrayDataMin = []
+            months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
+            console.log(arrayDataMin);
+            
+            // var filteredDataMax = months.map( function(month) { return [selectedYear, +yearDataMax[0][month]];
+            //                                                   }).filter( function(d) { return !isNaN(d[1]); });
+            // console.log(filteredDataMax);
+            // var filteredDataMin = months.map( function(month) { return [selectedYear, +yearDataMin[0][month]];
+            //                                                   }).filter( function(d) { return !isNaN(d[1]); });                     
+            // console.log(filteredDataMin);
             
             // Compute kernel density estimation for each column:
             var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(10)); // increase this 10 for more accurate density.
-            densityMax = kde(filteredDataMax);
+            densityMax = kde( arrayDataMax );
             console.log(densityMax);
             allDensity.push({key: selectedYear, density: densityMax});
         });
