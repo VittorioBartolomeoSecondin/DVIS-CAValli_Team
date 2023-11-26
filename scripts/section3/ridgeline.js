@@ -55,16 +55,18 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         maxMeans = []
         minMeans = []
         selectedYears.forEach(function (selectedYear) {
+            
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             console.log(yearDataMax)
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
             console.log(yearDataMin)
-            maxMean = d3.mean(yearDataMax)
-            console.log(maxMean)
-            minMean = d3.mean(yearDataMin)
-            console.log(minMean)
-            maxMeans.push(maxMean)
-            minMeans.push(minMean)
+            maxMean = d3.mean(months, function (month) {return +yearDataMax[month]; });
+            console.log(maxMean);
+            minMean = d3.mean(months, function (month) {return +yearDataMin[month]; });
+            // minMean = d3.mean(yearDataMin);
+            console.log(minMean);
+            maxMeans.push(maxMean);
+            minMeans.push(minMean);
             });
         
         // Create a color scale using the means
