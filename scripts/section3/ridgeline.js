@@ -26,6 +26,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         var allMonths = Object.keys(dataMax[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
+        console.log(months);
         
         var minTemperature = d3.min(dataMin, function (d) {
             return d3.min(months, function (month) {
