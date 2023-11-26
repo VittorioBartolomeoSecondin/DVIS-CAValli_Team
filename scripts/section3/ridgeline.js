@@ -1,30 +1,39 @@
-function updateRadarChart(selectedDataset, selectedYears) {
+// // set the dimensions and margins of the graph
+// const margin = {top: 60, right: 30, bottom: 20, left:110},
+//     width = 460 - margin.left - margin.right,
+//     height = 400 - margin.top - margin.bottom;
 
-    // Append the svg object to the body of the page
-    var svg = d3.select("#radarchart_1").append("svg")
-        .attr("id", "radarchart_svg")
+// var yearDataMax, yearDataMin;
+
+function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#ridgeline_1").append("svg")
+        .attr("id", "ridgeline_svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
-
+    
     // Read the data
     Promise.all([
-        d3.csv(selectedDataset)
+        d3.csv(selectedDataset_1),
+        d3.csv(selectedDataset_2)
     ]).then(function (datasets) {
-    
-        var dataAvg = datasets[0];
+   
+        var dataMax = datasets[0];
+        var dataMin = datasets[1];
 
-        var allMonths = Object.keys(dataAvg[0]).slice(2);
+        var allMonths = Object.keys(dataMax[0]).slice(2);
         var months = allMonths.slice(0, allMonths.length / 2);
         
-        var minTemperature = d3.min(dataAvg, function (d) {
+        var minTemperature = d3.min(dataMin, function (d) {
             return d3.min(months, function (month) {
                 return +d[month];
             });
         });
         
-        var maxTemperature = d3.max(dataAvg, function (d) {
+        var maxTemperature = d3.max(dataMax, function (d) {
             return d3.max(months, function (month) {
                 return +d[month];
             });
@@ -41,149 +50,99 @@ function updateRadarChart(selectedDataset, selectedYears) {
             .style("font-size", "20px")
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
-        
-        // Define the angles for each data point
-        var radialScale = d3.scaleLinear()
-            .domain([d3.min([0, minTemperature]), maxTemperature])
-            .range([0, 220]);
 
-        var ticks = [minTemperature, 0, maxTemperature];    
-
-        // Add circles
-        svg.selectAll("circle")
-            .data(ticks)
-            .join(
-                enter => enter.append("circle")
-                    .attr("cx", width / 2)
-                    .attr("cy", height / 2)
-                    .attr("fill", "none")
-                    .attr("stroke", "black")
-                    .attr("r", d => radialScale(d))
-            );
-
-        // Add text label for ticks
-        svg.selectAll(".ticklabel")
-            .data(ticks)
-            .join(
-                enter => enter.append("text")
-                    .attr("class", "ticklabel")
-                    .attr("x", width / 2 - 8)
-                    .attr("y", d => height / 2 - 8 - radialScale(d))
-                    .text(d => d.toString())
-            );
-        
-        // Create a function angle to coordinate
-        function angleToCoordinate(angle, value){
-            var x = Math.cos(angle) * radialScale(value);
-            var y = Math.sin(angle) * radialScale(value);
-            return {"x": width / 2 + x, "y": height / 2 - y};
-        }
-
-        var featureData = months.map((m, i) => {
-            var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-            return {
-                "name": m,
-                "angle": angle,
-                "line_coord": angleToCoordinate(angle, maxTemperature),
-                "label_coord": angleToCoordinate(angle, maxTemperature + 6)
-            };
-        });
-
-        // Draw axis line
-        svg.selectAll("line")
-            .data(featureData)
-            .join(
-                enter => enter.append("line")
-                    .attr("x1", width / 2)
-                    .attr("y1", height / 2)
-                    .attr("x2", d => d.line_coord.x)
-                    .attr("y2", d => d.line_coord.y)
-                    .attr("stroke","gray")
-                    .attr("stroke-opacity", 0.3)
-            );
-        
-        // Draw axis label
-        svg.selectAll(".axislabel")
-            .data(featureData)
-            .join(
-                enter => enter.append("text")
-                    .attr("x", d => d.label_coord.x - 13)
-                    .attr("y", d => d.label_coord.y + 5)
-                    .text(d => d.name)
-            );
-
-        // Plotting the data
-        var line = d3.line()
-            .x(d => d.x)
-            .y(d => d.y);
-        var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
-        
-       function getPathCoordinates(data_point){
-            var coordinates = [];
-            for (var i = 0; i < months.length; i++){
-                var months_name = months[i];
-                if (!isNaN(data_point[months_name])) {
-                    var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-                    coordinates.push(angleToCoordinate(angle, data_point[months_name]));
-                }
-            }
-            coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
-            return coordinates;
-        }       
-
-        // Data
-        var data = [];
+        // Compute the mean of each group
+        maxMeans = []
+        minMeans = []
         selectedYears.forEach(function (selectedYear) {
-            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
-            var point = {}
-            months.forEach(m => point[m] = yearDataAvg[0][m]);
-            data.push(point);
-        
-        
-            // Draw paths and circles with the same color for each data point
-            svg.selectAll("g")
-                .data(data)
-                .enter()
-                .append("g")
-                .each(function(d, i) {
-                    const color = colors[i]; // Retrieve the color for the current data point
-                    const pathData = getPathCoordinates(d);
-                    console.log(pathData);
             
-                    // Draw path element
-                    d3.select(this)
-                        .append("path")
-                        .attr("d", line(pathData))
-                        .attr("stroke-width", 3)
-                        .attr("stroke", color)
-                        .attr("fill", "none")
-                        .attr("stroke-opacity", 1);
+            yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
+            console.log(yearDataMax)
+            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
+            console.log(yearDataMin)
             
-                    // Draw circles for data points
-                    d3.select(this)
-                        .selectAll("circle")
-                        .data(Object.values(d))
-                        .enter()
-                        .filter(dp => !isNaN(dp)) // Filter out NaN values
-                        .append("circle")
-                        .attr("temperatureCelsius", function(d) { console.log(d); return d; }) // Custom attribute for temperature
-                        .attr("temperatureFahrenheit", function(d, i) { console.log(yearDataAvg[0]); return yearDataAvg[0][months[i] + "F"]; })
-                        .attr("cx", function(dp, j) {
-                            const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
-                            return width / 2 + Math.cos(angle) * radialScale(dp);
-                        })
-                        .attr("cy", function(dp, j) {
-                            const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
-                            return height / 2 - Math.sin(angle) * radialScale(dp);
-                        })
-                        .attr("r", 4) // Adjust the radius of the circles as needed
-                        .attr("fill", color) // Use the same color for circles
-                        .on("mouseover", handleMouseOver)
-                        .on("mouseout", handleMouseOut);
-                });
-        });
-     });
+            maxValues = yearDataMax.map(months, function (month) {return +yearDataMax[month]; });
+            console.log(maxValues)
+            minValues = yearDataMin.map(months, function (month) {return +yearDataMax[month]; });
+            console.log(minValues)
+            
+            maxMean = !isNaN(d3.mean(maxValues)) ? d3.mean(maxValues) : 0;
+            console.log(maxMean);
+            minMean = !isNaN(d3.mean(minValues)) ? d3.mean(minValues) : 0;
+            console.log(minMean);
+            
+            maxMeans.push(maxMean);
+            minMeans.push(minMean);
+            });
+        
+        // Create a color scale using the means
+        const myColor = d3.scaleSequential()
+            .domain([minTemperature, maxTemperature])
+            .interpolator(d3.interpolateViridis);  
 
+        // Add X axis
+        const x = d3.scaleLinear()
+            .domain([minTemperature - 10, maxTemperature + 10])
+            .range([0, width]);
+        
+        svg.append("g")
+            .attr("class", "xAxis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).tickValues([0,25, 50, 75, 100]).tickSize(-height) )
+            .select(".domain").remove();
+        
+        // Add X axis label:
+        svg.append("text")
+            .attr("text-anchor", "end")
+            .attr("x", width)
+            .attr("y", height + 40)
+            .text("Temperatures in Celsius");
+        
+        // Create a Y scale for densities
+        const y = d3.scaleLinear()
+            .domain([0, 0.25])
+            .range([height, 0]);
+        
+        // Create the Y axis for names
+        const yName = d3.scaleBand()
+            .domain(selectedYears)
+            .range([0, height])
+            .paddingInner(1)
+        
+        svg.append("g")
+            .call(d3.axisLeft(yName).tickSize(0))
+            .select(".domain").remove()
+        
+        // Compute kernel density estimation for each column:
+        const kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)) // increase this 40 for more accurate density.
+        const allDensity = []
+        for (i = 0; i < selectedYears.length; i++) {
+            key = selectedYears[i]
+            density = kde( data.map(function(d){  return d[key]; }) )
+            allDensity.push({key: key, density: density})
+        }
+        
+        // Add areas
+        svg.selectAll("areas")
+            .data(allDensity)
+            .join("path")
+              .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})` )})
+              .attr("fill", function(d){
+                grp = d.key ;
+                index = selectedYears.indexOf(grp)
+                value = maxMeans[index]
+                return myColor(value)
+              })
+              .datum(function(d){return(d.density)})
+              .attr("opacity", 0.7)
+              .attr("stroke", "#000")
+              .attr("stroke-width", 0.1)
+              .attr("d",  d3.line()
+                  .curve(d3.curveBasis)
+                  .x(function(d) { return x(d[0]); })
+                  .y(function(d) { return y(d[1]); })
+              )        
+        });
 }
 
 function handleMouseOver(event, d) {
@@ -212,11 +171,13 @@ function handleMouseOut() {
 }
 
 // Initial chart creation with the default dataset
-updateRadarChart("data/section3/AVG/AlabamaAVG.csv", [2000]);
+updateRidgeLine("data/section3/MAX/AlabamaMAX.csv", "data/section3/MIN/AlabamaMIN.csv", [2000]);
 
 // Listen for changes in the dropdown selection
 document.getElementById("dataset-dropdown").addEventListener("change", function () {
-  const selectedDataset = "data/section3/AVG/" + this.value + "AVG.csv";
+    
+  const selectedDataset_1 = "data/section3/MAX/" + this.value + "MAX.csv";
+  const selectedDataset_2 = "data/section3/MIN/" + this.value + "MIN.csv";
 
   // Select all checked checkboxes
   const checkedCheckboxes = document.querySelectorAll("#year-checkbox-form input:checked");
@@ -224,8 +185,8 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   // Extract values of checked checkboxes
   const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
 
-  d3.select("#radarchart_svg").remove();
-  updateRadarChart(selectedDataset, selectedYears);
+  d3.select("#ridgeline_svg").remove();
+  updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears);
 });
 
 // Add an event listener for changes in the year dropdown
@@ -238,8 +199,24 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     // Extract values of checked checkboxes
     const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
     
-    const selectedDataset = "data/section3/AVG/" + selectedValue + "AVG.csv";
+    const selectedDataset_1 = "data/section3/MAX/" + selectedValue + "MAX.csv";
+    const selectedDataset_2 = "data/section3/MIN/" + selectedValue + "MIN.csv";
 
-    d3.select("#radarchart_svg").remove();
-    updateRadarChart(selectedDataset, selectedYears);
+    d3.select("#ridgeline_svg").remove();
+    updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears);
 });
+
+// This is what I need to compute kernel density estimation
+function kernelDensityEstimator(kernel, X) {
+  return function(V) {
+    return X.map(function(x) {
+      return [x, d3.mean(V, function(v) { return kernel(x - v); })];
+    });
+  };
+}
+
+function kernelEpanechnikov(k) {
+  return function(v) {
+    return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
+  };
+}
