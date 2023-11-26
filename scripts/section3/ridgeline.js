@@ -60,10 +60,17 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             console.log(yearDataMax)
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
             console.log(yearDataMin)
-            maxMean = d3.mean(yearDataMax[3:14]);
+
+            maxValues = yearDataMax.slice(3, 15).map(function (d) { return +d.value; });
+            console.log(maxValues)
+            minValues = yearDataMin.slice(3, 15).map(function (d) { return +d.value; });
+            console.log(minValues)
+            
+            maxMean = !isNaN(d3.mean(maxValues)) ? d3.mean(maxValues) : 0;
             console.log(maxMean);
-            minMean = d3.mean(yearDataMin[3:14]);
+            minMean = !isNaN(d3.mean(minValues)) ? d3.mean(minValues) : 0;
             console.log(minMean);
+            
             maxMeans.push(maxMean);
             minMeans.push(minMean);
             });
