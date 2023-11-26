@@ -48,7 +48,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .style("font-size", "20px")
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
-       
+
+        const allDensity = []
         selectedYears.forEach(function (selectedYear) { 
             
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
@@ -95,28 +96,24 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             
             // Compute kernel density estimation for each column:
             const kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)) // increase this 40 for more accurate density.
-            const allDensity = []
-            for (i = 0; i < selectedYears.length; i++) {
-                key = selectedYears[i]
-                density = kde( filteredDataMax.map(function(d){  return d[key]; }) )
-                allDensity.push({key: key, density: density})
-            }
-            
-            // Add areas
-            svg.selectAll("areas")
-                .data(allDensity)
-                .join("path")
-                  .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})`)})
-                  .datum(function(d){return(d.density)})
-                  .attr("fill", "#69b3a2")
-                  .attr("stroke", "#000")
-                  .attr("stroke-width", 1)
-                  .attr("d",  d3.line()
-                      .curve(d3.curveBasis)
-                      .x(function(d) { return x(d[0]); })
-                      .y(function(d) { return y(d[1]); })
-                  )
+            density = kde( filteredDataMax.map(function(d){  return d[selectedYear]; }) )
+            allDensity.push({key: key, density: density})
         });
+
+        // Add areas
+        svg.selectAll("areas")
+            .data(allDensity)
+            .join("path")
+              .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})`)})
+              .datum(function(d){return(d.density)})
+              .attr("fill", "#69b3a2")
+              .attr("stroke", "#000")
+              .attr("stroke-width", 1)
+              .attr("d",  d3.line()
+                  .curve(d3.curveBasis)
+                  .x(function(d) { return x(d[0]); })
+                  .y(function(d) { return y(d[1]); })
+              )
     });
 }
 
