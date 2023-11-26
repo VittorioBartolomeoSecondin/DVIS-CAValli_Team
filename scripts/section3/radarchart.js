@@ -108,7 +108,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
             .join(
                 enter => enter.append("text")
                     .attr("x", d => d.label_coord.x - 10)
-                    .attr("y", d => d.label_coord.y)
+                    .attr("y", d => d.label_coord.y + 5)
                     .text(d => d.name)
             );
 
