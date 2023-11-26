@@ -57,7 +57,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         svg.append("g")
             .attr("class", "xAxis")
             .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x).tickValues([minTemperature, 0, maxTemperature]).tickSize(-height) )
+            .call(d3.axisBottom(x).tickValues([minTemperature - 2, minTemperature, 0, maxTemperature]).tickSize(-height) )
             .select(".domain").remove();
         
         // Add X axis label:
@@ -69,7 +69,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         
         // Create a Y scale for densities
         var y = d3.scaleLinear()
-            .domain([0, 0.1])
+            .domain([0, 0.5])
             .range([height, 0]);
         
         // Create the Y axis for names
