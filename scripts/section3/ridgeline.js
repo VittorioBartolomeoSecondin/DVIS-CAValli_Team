@@ -23,11 +23,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
-
-
-
-// Read data
-d3.csv("https://raw.githubusercontent.com/zonination/perceptions/master/probly.csv").then(function(data) {
     
     // Read the data
     Promise.all([
@@ -83,8 +78,8 @@ d3.csv("https://raw.githubusercontent.com/zonination/perceptions/master/probly.c
         
         // Create a color scale using the means
         const myColor = d3.scaleSequential()
-            .domain([0,100])
-            .interpolator(d3.interpolateViridis);
+            .domain([minTemperature, maxTemperature])
+            .interpolator(d3.interpolateViridis);        
 
         // Add y-axis label
         svg.append("text")
@@ -96,9 +91,9 @@ d3.csv("https://raw.githubusercontent.com/zonination/perceptions/master/probly.c
             .text("Temperatures in Celsius");
         
         // Add X axis
-        const x = d3.scaleLinear()
+        var x = d3.scaleLinear()
             .domain([minTemperature, maxTemperature])
-            .range([ 0, width ]);
+            .range([0, width]);
         
         svg.append("g")
             .attr("class", "xAxis")
@@ -108,19 +103,19 @@ d3.csv("https://raw.githubusercontent.com/zonination/perceptions/master/probly.c
         
         // Add X axis label:
         svg.append("text")
-            .attr("text-anchor", "end")
+            .attr("text-anchor", "middle")
             .attr("x", width)
             .attr("y", height + 40)
-            .text("Probability (%)");
+            .text("Temperatures in Celsius");
         
         // Create a Y scale for densities
         const y = d3.scaleLinear()
             .domain([0, 0.25])
-            .range([ height, 0]);
+            .range([height, 0]);
         
         // Create the Y axis for names
         const yName = d3.scaleBand()
-            .domain(categories)
+            .domain(selectedYears)
             .range([0, height])
             .paddingInner(1)
         
@@ -158,7 +153,6 @@ d3.csv("https://raw.githubusercontent.com/zonination/perceptions/master/probly.c
                   .y(function(d) { return y(d[1]); })
               )        
         });
-    });
 }
 
 function handleMouseOver(event, d) {
