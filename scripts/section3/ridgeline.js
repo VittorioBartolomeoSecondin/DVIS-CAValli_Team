@@ -3,16 +3,7 @@
 //     width = 460 - margin.left - margin.right,
 //     height = 400 - margin.top - margin.bottom;
 
-// Create a tooltip
-const tooltip = d3.select("#ridgeline_1")
-    .append("section")
-        .attr("id", "ridgeline_tooltip")
-    .style("opacity", 0)
-    .style("background-color", "lightgray")
-    .style("border", "2px solid black")
-        .attr("class", "tooltip");
-
-var yearDataMax, yearDataMin;
+// var yearDataMax, yearDataMin;
 
 function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
