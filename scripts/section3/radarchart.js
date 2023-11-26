@@ -186,6 +186,25 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         var legend = svg.append("g")
                                         .attr("class", "legend")
                                         .attr("transform", "translate(20,20)"); // Adjust position as needed
+
+                        legend.selectAll("rect")
+                                .data([selectedYear]) // Data for legend is the selected year itself
+                                .enter()
+                                .append("rect")
+                                .attr("x", width - 100)
+                                .attr("y", i * 20) // Adjust position based on the iteration index
+                                .attr("width", 10)
+                                .attr("height", 10)
+                                .attr("fill", color); // Use colors for rectangles
+                            
+                            legend.selectAll("text")
+                                .data([selectedYear]) // Data for legend is the selected year itself
+                                .enter()
+                                .append("text")
+                                .attr("x", width - 85)
+                                .attr("y", i * 20 + 9) // Adjust position based on the iteration index
+                                .text(function(d) { return d; }) // Display the year
+                                .style("font-size", "12px");
                 });
         });
      });
