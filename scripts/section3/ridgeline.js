@@ -49,6 +49,39 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .style("text-decoration", "underline")
             .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
 
+        // Add X axis
+        const x = d3.scaleLinear()
+            .domain([minTemperature - 10, maxTemperature + 10])
+            .range([0, width]);
+        
+        svg.append("g")
+            .attr("class", "xAxis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).tickValues([minTemperature, 0, maxTemperature]).tickSize(-height) )
+            .select(".domain").remove();
+        
+        // Add X axis label:
+        svg.append("text")
+            .attr("text-anchor", "end")
+            .attr("x", width)
+            .attr("y", height + 40)
+            .text("Temperatures in Celsius");
+        
+        // Create a Y scale for densities
+        const y = d3.scaleLinear()
+            .domain([0, 0.3])
+            .range([height, 0]);
+        
+        // Create the Y axis for names
+        const yName = d3.scaleBand()
+            .domain(selectedYears)
+            .range([0, height])
+            .paddingInner(1)
+        
+        svg.append("g")
+            .call(d3.axisLeft(yName).tickSize(0))
+            .select(".domain").remove()
+
         const allDensity = []
         selectedYears.forEach(function (selectedYear) { 
             
@@ -59,41 +92,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                                                               }).filter( function(d) { return !isNaN(d[1]); });
             
             var filteredDataMin = months.map( function(month) { return [month, +yearDataMin[0][month]];
-                                                              }).filter( function(d) { return !isNaN(d[1]); });
-                        
-            // Add X axis
-            const x = d3.scaleLinear()
-                .domain([minTemperature - 10, maxTemperature + 10])
-                .range([0, width]);
-            
-            svg.append("g")
-                .attr("class", "xAxis")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x).tickValues([minTemperature, 0, maxTemperature]).tickSize(-height) )
-                .select(".domain").remove();
-            
-            // Add X axis label:
-            svg.append("text")
-                .attr("text-anchor", "end")
-                .attr("x", width)
-                .attr("y", height + 40)
-                .text("Temperatures in Celsius");
-            
-            // Create a Y scale for densities
-            const y = d3.scaleLinear()
-                .domain([0, 0.3])
-                .range([height, 0]);
-            
-            // Create the Y axis for names
-            const yName = d3.scaleBand()
-                .domain(selectedYears)
-                .range([0, height])
-                .paddingInner(1)
-            
-            svg.append("g")
-                .call(d3.axisLeft(yName).tickSize(0))
-                .select(".domain").remove()
-            
+                                                              }).filter( function(d) { return !isNaN(d[1]); });                     
+
             // Compute kernel density estimation for each column:
             const kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); // increase this 40 for more accurate density.
             density = kde( filteredDataMax.map(function(d){  return d[selectedYear]; }) );
