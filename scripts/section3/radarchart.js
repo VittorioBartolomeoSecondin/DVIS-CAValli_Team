@@ -133,11 +133,14 @@ function updateRadarChart(selectedDataset, selectedYears) {
         
         // Data
         var data = [];
-        selectedYears.forEach(function (selectedYear) {
+        selectedYears.forEach(function (selectedYear, i) {
             yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
             var point = {}
             months.forEach(m => point[m] = yearDataAvg[0][m]);
             data.push(point);
+
+            // Assign unique colors to each year
+            var color = colors[i % colors.length]; // Use modulo to loop through colors if more years than colors
                 
             // Draw paths and circles with the same color for each data point
             svg.selectAll("g")
@@ -145,10 +148,10 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .enter()
                 .append("g")
                 .each(function(d, j) {
-                    const color = colors[j]; // Retrieve the color for the current data point
+                    //const color = colors[j]; // Retrieve the color for the current data point
                     const pathData = getPathCoordinates(d);
                     console.log(d);
-                    console.log(j);
+                    //console.log(j);
             
                     // Draw path element
                     d3.select(this)
@@ -189,7 +192,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         // Draw rectangles for legend
                         legend.append("rect")
                             .attr("x", width - 100)
-                            .attr("y", j * 20) 
+                            .attr("y", i * 20) 
                             .attr("width", 10)
                             .attr("height", 10)
                             .attr("fill", color); // Use colors for rectangles
@@ -197,7 +200,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                         // Draw text for legend
                         legend.append("text")
                             .attr("x", width - 85)
-                            .attr("y", j * 20 + 9) 
+                            .attr("y", i * 20 + 9) 
                             .text(selectedYear) // Display the year
                             .style("font-size", "12px");
                 });
