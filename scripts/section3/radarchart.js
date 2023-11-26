@@ -85,7 +85,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 "name": m,
                 "angle": angle,
                 "line_coord": angleToCoordinate(angle, maxTemperature),
-                "label_coord": angleToCoordinate(angle, maxTemperature + 5)
+                "label_coord": angleToCoordinate(angle, maxTemperature)
             };
         });
 
