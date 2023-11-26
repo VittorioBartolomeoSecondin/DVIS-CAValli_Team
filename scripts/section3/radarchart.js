@@ -99,7 +99,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
                     .attr("x2", d => d.line_coord.x)
                     .attr("y2", d => d.line_coord.y)
                     .attr("stroke","gray")
-                    .attr("stroke-opacity", 0.5)
+                    .attr("stroke-opacity", 0.3)
             );
         
         // Draw axis label
