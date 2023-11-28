@@ -77,6 +77,7 @@
       const lastColor = chroma(sortedColors[i - 1]);
       const farthestColor = findFarthestColor(lastColor, colorPalette);
       sortedColors.push(farthestColor);
+      colorPalette.splice(colorPalette.indexOf(farthestColor), 1);
     }
     
     // Display each color in a box
