@@ -116,7 +116,7 @@ function updateRadarChart(selectedDataset, selectedYears) {
         var line = d3.line()
             .x(d => d.x)
             .y(d => d.y);
-        var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
+        //var colors = ["darkorange", "gray", "navy", "red", "yellow", "purple", "darkgreen", "lightgreen", "lightblue", "pink"];
         
        function getPathCoordinates(data_point){
             var coordinates = [];
@@ -149,7 +149,8 @@ function updateRadarChart(selectedDataset, selectedYears) {
                 .enter()
                 .append("g")
                 .each(function(d, i) {
-                    const color = colors[i]; // Retrieve the color for the current data point
+                    //const color = colors[i]; // Retrieve the color for the current data point
+                    const color = getColorForYear(selectedYear);
                     used_colours[selectedYear] = color;
                     const pathData = getPathCoordinates(d);
             
