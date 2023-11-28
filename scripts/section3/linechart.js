@@ -1,5 +1,3 @@
-import tinycolor from "https://esm.sh/tinycolor2";
-
 // set the dimensions and margins of the graph
 var margin = { top: 60, right: 40, bottom: 70, left: 60 },
     width = 1000 - margin.left - margin.right,
@@ -108,11 +106,11 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
 
             const colorForMax = getColorForYear(selectedYear);
-            const color = tinycolor(colorForMax);
+            const color = chroma(colorForMax);
             
             // Desaturate the color
-            const colorForAvg = color.desaturate(75).toHexString();
-            const colorForMin = color.desaturate(50).toHexString();
+            const colorForAvg = color.desaturate(75).hex();
+            const colorForMin = color.desaturate(50).hex();
 
             var lineMin = d3.line()
                 .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
