@@ -16,7 +16,6 @@ const distinctColors = [
         'd4bbff', '90a4ae', '3ddbd9', '50b777', '8c3d35', 'fff74f'
     ];
 
-
 // Create a tooltip
 const tooltip = d3.select("#linechart_1")
     .append("section")
