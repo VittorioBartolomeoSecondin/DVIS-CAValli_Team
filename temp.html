@@ -65,12 +65,10 @@
 
     
     // Shuffle the array randomly
-    for (let i = colorPalette2.length - 1; i > 0; i--) {
+    for (let i = colorPalette.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [colorPalette2[i], colorPalette2[j]] = [colorPalette2[j], colorPalette2[i]];
+      [colorPalette[i], colorPalette[j]] = [colorPalette[j], colorPalette[i]];
     }
-    
-    console.log(colorPalette2);
     
     /*
     // Set the first color
