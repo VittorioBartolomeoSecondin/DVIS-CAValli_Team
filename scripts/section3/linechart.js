@@ -109,7 +109,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             const color = chroma(colorForMax);
             
             // Desaturate the color
-            const colorForAvg = color.desaturate(2).hex();
+            const colorForAvg = color.desaturate(1.5).hex();
             const colorForMin = color.desaturate(1).hex();
 
             var lineMin = d3.line()
