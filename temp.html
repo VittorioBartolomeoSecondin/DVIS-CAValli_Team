@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette</title>
+    <!-- Include chroma.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // Generate an array of 50 distinct hexadecimal colors
+    const colorArray = chroma.scale(['#f00', '#0f0']).colors(50);
+
+    // Display each color in a box
+    colorArray.forEach(color => {
+        const colorBox = document.createElement('div');
+        colorBox.style.backgroundColor = color;
+        colorBox.className = 'color-box';
+        document.body.appendChild(colorBox);
+    });
+</script>
+
+</body>
+</html>
