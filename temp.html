@@ -72,14 +72,20 @@
       }, { color: null, distance: -1 }).color;
     }
     
+    // Function to find the color with maximum distance from the average of chosen colors
+    function findFarthestFromAverageColor(chosenColors, colorArray) {
+      const averageColor = chroma.average(chosenColors.map(color => chroma(color)));
+      return findFarthestColor(averageColor, colorArray);
+    }
+    
     // Generate the rest of the colors
     for (let i = 1; i < colorPalette.length; i++) {
-      const lastColor = chroma(sortedColors[i - 1]);
-      const farthestColor = findFarthestColor(lastColor, colorPalette);
+      const farthestColor = findFarthestFromAverageColor(sortedColors, colorPalette);
       sortedColors.push(farthestColor);
       // Remove the used color from the list
       colorPalette.splice(colorPalette.indexOf(farthestColor), 1);
     }
+
     
     // Display each color in a box
     sortedColors.forEach(hexColor => {
