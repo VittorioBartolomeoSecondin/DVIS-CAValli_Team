@@ -232,7 +232,7 @@ function handleMouseOut() {
 
 function getColorForYear(year) {
   // You can use modulo to cycle through the colors
-  const index = year % 60;
+  const index = year % 50;
   return distinctColors[index];
 }
 
