@@ -3,6 +3,7 @@ var margin = { top: 60, right: 40, bottom: 70, left: 60 },
     width = 1000 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
 
+/* NEW COLORS?
 const distinctColors = [
         '#fa4d56', '#29a329', '#bbded6', '#00539a', '#005d5d', '#fdc300',
         '#fbd5d8', '#8a525d', '#009d9a', '#ffa69e', '#e5f6ff', '#82cfff',
@@ -14,7 +15,19 @@ const distinctColors = [
         '#bebebe', '#f6f2ff', '#4F7942', '#fff96e', '#a0f0bf', '#80d6ff',
         '#f3a683', '#e4f1fe', '#fff1f1', '#1192e8', '#0072c3', '#990000',
         '#d4bbff', '#90a4ae', '#3ddbd9', '#50b777', '#8c3d35', '#fff74f'
-    ];
+    ];*/
+const distinctColors = [
+    '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
+    '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf',
+    '#aec7e8', '#ffbb78', '#98df8a', '#ff9896', '#c5b0d5',
+    '#c49c94', '#f7b6d2', '#c7c7c7', '#dbdb8d', '#9edae5',
+    '#393b79', '#e57171', '#4caf50', '#d32f2f', '#2196f3',
+    '#ff5722', '#795548', '#9c27b0', '#607d8b', '#3f51b5',
+    '#009688', '#8bc34a', '#ff4081', '#00bcd4', '#e91e63',
+    '#ffc107', '#03a9f4', '#673ab7', '#ffeb3b', '#8d6e63',
+    '#ff5252', '#8e24aa', '#ff9800', '#00e676', '#18ffff',
+    '#304ffe', '#f50057', '#dd2c00', '#ff3d00', '#00b8d4'
+];
 
 // Create a tooltip
 const tooltip = d3.select("#linechart_1")
