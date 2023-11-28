@@ -26,91 +26,19 @@
 
 <script>
 
-    const distinctColors = [
-      '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
-      '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf',
-      '#aec7e8', '#ffbb78', '#98df8a', '#ff9896', '#c5b0d5',
-      '#c49c94', '#f7b6d2', '#c7c7c7', '#dbdb8d', '#9edae5',
-      '#393b79', '#e57171', '#4caf50', '#d32f2f', '#2196f3',
-      '#ff5722', '#795548', '#9c27b0', '#607d8b', '#3f51b5',
-      '#009688', '#8bc34a', '#ff4081', '#00bcd4', '#e91e63',
-      '#ffc107', '#03a9f4', '#673ab7', '#ffeb3b', '#8d6e63',
-      '#ff5252', '#8e24aa', '#ff9800', '#00e676', '#18ffff',
-      '#304ffe', '#f50057', '#dd2c00', '#ff3d00', '#00b8d4'
-    ];
-
-    const colorPalette2 = [
-      "003a6d", "491d8b", "a56eff", "8a3ffc", "da1e28", "0072c3", "d4bbff", "005d5d",
-      "fa4d56", "f6f2ff", "e8daff", "3ddbd9", "6929c4", "ff8389", "00539a", "bae6ff",
-      "9ef0f0", "a2191f", "e5f6ff", "be95ff", "fff1f1", "33b1ff", "007d79", "005d5d",
-      "1192e8", "ffb3b8", "750e13", "ff1d47", "fbd5d8", "9d4edd", "8a525d", "82cfff",
-      "e5f6ff", "e4f1fe", "80d6ff", "f3a683", "29a329", "a7f0ba", "e5e1d5", "ffa69e",
-      "bbded6", "fdc300", "e95b54", "cc5e12", "009d9a", "bebebe", "8c3d35", "3b5998",
-      "90a4ae", "990000", "50b777", "4F7942", "7be39f", "454B1B", "a0f0bf", "fffca3",
-      "fffc87", "fff96e", "fff74f", "fff42e"
-    ];
-
     const colorPalette = [
-      '003a6d', 
-      '491d8b',
-      'a56eff', '8a3ffc', 'da1e28', '0072c3', 'd4bbff', '005d5d',
-      'fa4d56', 'f6f2ff', 'e8daff', '3ddbd9', '6929c4', 'ff8389', '00539a', 'bae6ff',
-      '9ef0f0', 'a2191f', 'e5f6ff', 'be95ff', 'fff1f1', '33b1ff', '007d79', '005d5d',
-      '1192e8', 'ffb3b8', '750e13', 'ff1d47', 'fbd5d8', '9d4edd', '8a525d', '82cfff',
-      'e5f6ff', 'e4f1fe', '80d6ff', 'f3a683', '29a329', 'a7f0ba', 'e5e1d5', 'ffa69e',
-      'bbded6', 'fdc300', 'e95b54', 'cc5e12', '009d9a', 'bebebe', '8c3d35', '3b5998',
-      '90a4ae', '990000', '50b777', '4F7942', '7be39f', '454B1B', 'a0f0bf', 'fffca3',
-      'fffc87', 'fff96e', 'fff74f', 'fff42e'
+        'fa4d56', '29a329', 'bbded6', '00539a', '005d5d', 'fdc300',
+        'fbd5d8', '8a525d', '009d9a', 'ffa69e', 'e5f6ff', '82cfff',
+        '491d8b', '8a3ffc', 'cc5e12', '005d5d', 'e8daff', 'a56eff',
+        'fffca3', 'ff8389', 'ff1d47', '6929c4', 'da1e28', 'fffc87',
+        'a2191f', '750e13', '003a6d', 'e5f6ff', 'bae6ff', 'ffb3b8',
+        '33b1ff', '9ef0f0', '3b5998', 'a7f0ba', 'fff42e', '454B1B',
+        '007d79', 'e95b54', 'e5e1d5', 'be95ff', '7be39f', '9d4edd',
+        'bebebe', 'f6f2ff', '4F7942', 'fff96e', 'a0f0bf', '80d6ff',
+        'f3a683', 'e4f1fe', 'fff1f1', '1192e8', '0072c3', '990000',
+        'd4bbff', '90a4ae', '3ddbd9', '50b777', '8c3d35', 'fff74f'
     ];
 
-    var importante = ['fa4d56', '29a329', 'bbded6', '00539a', '005d5d', 'fdc300', 'fbd5d8', '8a525d', '009d9a', 'ffa69e', 'e5f6ff', '82cfff', '491d8b', '8a3ffc', 'cc5e12', '005d5d', 'e8daff', 'a56eff', 'fffca3', 'ff8389', 'ff1d47', '6929c4', 'da1e28', 'fffc87', 'a2191f', '750e13', '003a6d', 'e5f6ff', 'bae6ff', 'ffb3b8', '33b1ff', '9ef0f0', '3b5998', 'a7f0ba', 'fff42e', '454B1B', '007d79', 'e95b54', 'e5e1d5', 'be95ff', '7be39f', '9d4edd', 'bebebe', 'f6f2ff', '4F7942', 'fff96e', 'a0f0bf', '80d6ff', 'f3a683', 'e4f1fe', 'fff1f1', '1192e8', '0072c3', '990000', 'd4bbff', '90a4ae', '3ddbd9', '50b777', '8c3d35', 'fff74f'];
-
-    
-    // Shuffle the array randomly
-    for (let i = colorPalette.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [colorPalette[i], colorPalette[j]] = [colorPalette[j], colorPalette[i]];
-    }
-
-    console.log(colorPalette);
-    
-    /*
-    // Set the first color
-    const sortedColors = ['003a6d']; // start with the first color
-    
-    // Function to find the color with maximum distance from the given color
-    function findFarthestColor(baseColor, colorArray) {
-      return colorArray.reduce((farthestColor, currentColor) => {
-        const distance = chroma.deltaE(baseColor, chroma(currentColor));
-        return distance > farthestColor.distance ? { color: currentColor, distance } : farthestColor;
-      }, { color: null, distance: -1 }).color;
-    }
-    
-    // Function to find the color with maximum distance from the average of chosen colors
-    function findFarthestFromAverageColor(chosenColors, colorArray) {
-      const averageColor = chroma.average(chosenColors.map(color => chroma(color)));
-      return findFarthestColor(averageColor, colorArray);
-    }
-    
-    // Generate the rest of the colors
-    for (let i = 1; i < 50; i++) {
-      const farthestColor = findFarthestFromAverageColor(sortedColors, colorPalette);
-      sortedColors.push(farthestColor);
-      // Remove the used color from the list
-      colorPalette.splice(colorPalette.indexOf(farthestColor), 1);
-    }
-    console.log(colorPalette);
-    console.log(sortedColors);
-
-    // Validate that all 50 colors are present in sortedColors
-    const isAllColorsUsed = colorPalette.every(color => sortedColors.includes(color));
-    
-    if (isAllColorsUsed) {
-      console.log("All 50 colors have been used successfully!");
-    } else {
-      console.log("Some colors may not have been used or there are duplicates.");
-    }
-    */
 
     
     // Display each color in a box
