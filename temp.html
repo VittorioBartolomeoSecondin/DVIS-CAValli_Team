@@ -25,11 +25,25 @@
 <body>
 
 <script>
+
+    const distinctColors = [
+      '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
+      '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf',
+      '#aec7e8', '#ffbb78', '#98df8a', '#ff9896', '#c5b0d5',
+      '#c49c94', '#f7b6d2', '#c7c7c7', '#dbdb8d', '#9edae5',
+      '#393b79', '#e57171', '#4caf50', '#d32f2f', '#2196f3',
+      '#ff5722', '#795548', '#9c27b0', '#607d8b', '#3f51b5',
+      '#009688', '#8bc34a', '#ff4081', '#00bcd4', '#e91e63',
+      '#ffc107', '#03a9f4', '#673ab7', '#ffeb3b', '#8d6e63',
+      '#ff5252', '#8e24aa', '#ff9800', '#00e676', '#18ffff',
+      '#304ffe', '#f50057', '#dd2c00', '#ff3d00', '#00b8d4'
+    ];
+    
     // Generate an array of 50 distinct hexadecimal colors
     const colorArray = chroma.scale(['#f00', '#0f0']).colors(50);
 
     // Display each color in a box
-    colorArray.forEach(color => {
+    distinctColors.forEach(color => {
         const colorBox = document.createElement('div');
         colorBox.style.backgroundColor = color;
         colorBox.className = 'color-box';
