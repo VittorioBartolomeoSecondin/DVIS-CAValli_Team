@@ -109,8 +109,8 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             const color = chroma(colorForMax);
             
             // Desaturate the color
-            const colorForAvg = color.desaturate(75).hex();
-            const colorForMin = color.desaturate(50).hex();
+            const colorForAvg = color.desaturate(25).hex();
+            const colorForMin = color.desaturate(10).hex();
 
             var lineMin = d3.line()
                 .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
