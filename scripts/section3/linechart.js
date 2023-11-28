@@ -4,16 +4,16 @@ var margin = { top: 60, right: 40, bottom: 70, left: 60 },
     height = 700 - margin.top - margin.bottom;
 
 const distinctColors = [
-        'fa4d56', '29a329', 'bbded6', '00539a', '005d5d', 'fdc300',
-        'fbd5d8', '8a525d', '009d9a', 'ffa69e', 'e5f6ff', '82cfff',
-        '491d8b', '8a3ffc', 'cc5e12', '005d5d', 'e8daff', 'a56eff',
-        'fffca3', 'ff8389', 'ff1d47', '6929c4', 'da1e28', 'fffc87',
-        'a2191f', '750e13', '003a6d', 'e5f6ff', 'bae6ff', 'ffb3b8',
-        '33b1ff', '9ef0f0', '3b5998', 'a7f0ba', 'fff42e', '454B1B',
-        '007d79', 'e95b54', 'e5e1d5', 'be95ff', '7be39f', '9d4edd',
-        'bebebe', 'f6f2ff', '4F7942', 'fff96e', 'a0f0bf', '80d6ff',
-        'f3a683', 'e4f1fe', 'fff1f1', '1192e8', '0072c3', '990000',
-        'd4bbff', '90a4ae', '3ddbd9', '50b777', '8c3d35', 'fff74f'
+        '#fa4d56', '#29a329', '#bbded6', '#00539a', '#005d5d', '#fdc300',
+        '#fbd5d8', '#8a525d', '#009d9a', '#ffa69e', '#e5f6ff', '#82cfff',
+        '#491d8b', '#8a3ffc', '#cc5e12', '#005d5d', '#e8daff', '#a56eff',
+        '#fffca3', '#ff8389', '#ff1d47', '#6929c4', '#da1e28', '#fffc87',
+        '#a2191f', '#750e13', '#003a6d', '#e5f6ff', '#bae6ff', '#ffb3b8',
+        '#33b1ff', '#9ef0f0', '#3b5998', '#a7f0ba', '#fff42e', '#454B1B',
+        '#007d79', '#e95b54', '#e5e1d5', '#be95ff', '#7be39f', '#9d4edd',
+        '#bebebe', '#f6f2ff', '#4F7942', '#fff96e', '#a0f0bf', '#80d6ff',
+        '#f3a683', '#e4f1fe', '#fff1f1', '#1192e8', '#0072c3', '#990000',
+        '#d4bbff', '#90a4ae', '#3ddbd9', '#50b777', '#8c3d35', '#fff74f'
     ];
 
 // Create a tooltip
