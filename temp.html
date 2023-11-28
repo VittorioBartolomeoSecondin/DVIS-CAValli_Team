@@ -88,6 +88,16 @@
     console.log(colorPalette);
     console.log(sortedColors);
 
+    // Validate that all 50 colors are present in sortedColors
+    const isAllColorsUsed = colorPalette.every(color => sortedColors.includes(color));
+    
+    if (isAllColorsUsed) {
+      console.log("All 50 colors have been used successfully!");
+    } else {
+      console.log("Some colors may not have been used or there are duplicates.");
+    }
+
+
     
     // Display each color in a box
     sortedColors.forEach(hexColor => {
