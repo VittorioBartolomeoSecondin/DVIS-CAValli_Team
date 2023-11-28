@@ -61,16 +61,18 @@
       'fffc87', 'fff96e', 'fff74f', 'fff42e'
     ];
 
-    // Function to calculate the perceptual difference between two colors using CIE76 formula
-function colorDifference(color1, color2) {
-        return chroma.deltaE(color1, color2);
+    // Function to calculate the average perceptual difference between a color and an array of colors
+    function averageColorDifference(color, colorArray) {
+        const differences = colorArray.map(otherColor => chroma.deltaE(color, chroma(otherColor)));
+        const sum = differences.reduce((acc, val) => acc + val, 0);
+        return sum / differences.length;
     }
     
-    // Sort the color palette based on perceptual difference
+    // Sort the color palette based on average perceptual difference
     colorPalette.sort((color1, color2) => {
-        const chromaColor1 = chroma(color1);
-        const chromaColor2 = chroma(color2);
-        return colorDifference(chromaColor1, chromaColor2);
+        const avgDiff1 = averageColorDifference(chroma(color1), colorPalette);
+        const avgDiff2 = averageColorDifference(chroma(color2), colorPalette);
+        return avgDiff1 - avgDiff2;
     });
     
     // Display each color in a box
@@ -81,6 +83,7 @@ function colorDifference(color1, color2) {
         colorBox.className = 'color-box';
         document.body.appendChild(colorBox);
     });
+
 
 </script>
 
