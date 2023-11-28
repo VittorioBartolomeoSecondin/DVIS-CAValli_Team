@@ -66,7 +66,8 @@
     const colorArray = chroma.scale(['#f00', '#0f0']).colors(50);
 
     // Display each color in a box
-    colorPalette.forEach(color => {
+    colorPalette.forEach(hexColor => {
+        const color = chroma(hexColor);
         const colorBox = document.createElement('div');
         colorBox.style.backgroundColor = color;
         colorBox.className = 'color-box';
