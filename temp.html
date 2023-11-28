@@ -77,16 +77,16 @@
       const lastColor = chroma(sortedColors[i - 1]);
       const farthestColor = findFarthestColor(lastColor, colorPalette);
       sortedColors.push(farthestColor);
+      // Remove the used color from the list
       colorPalette.splice(colorPalette.indexOf(farthestColor), 1);
     }
     
     // Display each color in a box
-    sortedColors.forEach(hexColor => {
-        const color = chroma(hexColor);
-        const colorBox = document.createElement('div');
-        colorBox.style.backgroundColor = color;
-        colorBox.className = 'color-box';
-        document.body.appendChild(colorBox);
+    sortedColors.forEach(color => {
+      const colorBox = document.createElement('div');
+      colorBox.style.backgroundColor = color;
+      colorBox.className = 'color-box';
+      document.body.appendChild(colorBox);
     });
 
 
