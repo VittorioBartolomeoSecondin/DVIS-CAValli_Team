@@ -61,6 +61,18 @@
       'fffc87', 'fff96e', 'fff74f', 'fff42e'
     ];
 
+    // Function to calculate the perceptual difference between two colors
+    function colorDifference(color1, color2) {
+        return chroma.deltaE(color1, color2);
+    }
+
+    // Sort the color palette based on perceptual difference
+    colorPalette.sort((color1, color2) => {
+        const chromaColor1 = chroma(color1);
+        const chromaColor2 = chroma(color2);
+        return colorDifference(chromaColor1, chromaColor2);
+    });
+    
     // Display each color in a box
     colorPalette.forEach(hexColor => {
         const color = chroma(hexColor);
