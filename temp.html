@@ -60,7 +60,7 @@
       '90a4ae', '990000', '50b777', '69d58d', '7be39f', '8dedb1', 'a0f0bf', 'fffca3',
       'fffc87', 'fff96e', 'fff74f', 'fff42e'
     ];
-
+    /*
     // Set the first color
     const sortedColors = ['003a6d']; // start with the first color
     
@@ -96,11 +96,11 @@
     } else {
       console.log("Some colors may not have been used or there are duplicates.");
     }
-
+    */
 
     
     // Display each color in a box
-    sortedColors.forEach(hexColor => {
+    colorPalette.forEach(hexColor => {
         const color = chroma(hexColor);
         const colorBox = document.createElement('div');
         colorBox.style.backgroundColor = color;
