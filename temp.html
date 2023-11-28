@@ -61,27 +61,30 @@
       'fffc87', 'fff96e', 'fff74f', 'fff42e'
     ];
 
-    // Function to calculate the average perceptual difference between a color and an array of colors
-    function averageColorDifference(color, colorArray) {
-        const differences = colorArray.map(otherColor => chroma.deltaE(color, chroma(otherColor)));
-        const sum = differences.reduce((acc, val) => acc + val, 0);
-        return sum / differences.length;
+    // Set the first color
+    const sortedColors = ['003a6d']; // start with the first color
+    
+    // Function to find the color with maximum distance from the given color
+    function findFarthestColor(baseColor, colorArray) {
+      return colorArray.reduce((farthestColor, currentColor) => {
+        const distance = chroma.deltaE(baseColor, chroma(currentColor));
+        return distance > farthestColor.distance ? { color: currentColor, distance } : farthestColor;
+      }, { color: null, distance: -1 }).color;
     }
     
-    // Sort the color palette based on average perceptual difference
-    colorPalette.sort((color1, color2) => {
-        const avgDiff1 = averageColorDifference(chroma(color1), colorPalette);
-        const avgDiff2 = averageColorDifference(chroma(color2), colorPalette);
-        return avgDiff1 - avgDiff2;
-    });
+    // Generate the rest of the colors
+    for (let i = 1; i < colorPalette.length; i++) {
+      const lastColor = chroma(sortedColors[i - 1]);
+      const farthestColor = findFarthestColor(lastColor, colorPalette);
+      sortedColors.push(farthestColor);
+    }
     
     // Display each color in a box
-    colorPalette.forEach(hexColor => {
-        const color = chroma(hexColor);
-        const colorBox = document.createElement('div');
-        colorBox.style.backgroundColor = color;
-        colorBox.className = 'color-box';
-        document.body.appendChild(colorBox);
+    sortedColors.forEach(color => {
+      const colorBox = document.createElement('div');
+      colorBox.style.backgroundColor = color;
+      colorBox.className = 'color-box';
+      document.body.appendChild(colorBox);
     });
 
 
