@@ -3,6 +3,19 @@ var margin = { top: 60, right: 40, bottom: 70, left: 60 },
     width = 1000 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
 
+const distinctColors = [
+  '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
+  '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf',
+  '#aec7e8', '#ffbb78', '#98df8a', '#ff9896', '#c5b0d5',
+  '#c49c94', '#f7b6d2', '#c7c7c7', '#dbdb8d', '#9edae5',
+  '#393b79', '#e57171', '#4caf50', '#d32f2f', '#2196f3',
+  '#ff5722', '#795548', '#9c27b0', '#607d8b', '#3f51b5',
+  '#009688', '#8bc34a', '#ff4081', '#00bcd4', '#e91e63',
+  '#ffc107', '#03a9f4', '#673ab7', '#ffeb3b', '#8d6e63',
+  '#ff5252', '#8e24aa', '#ff9800', '#00e676', '#18ffff',
+  '#304ffe', '#f50057', '#dd2c00', '#ff3d00', '#00b8d4'
+];
+
 // Create a tooltip
 const tooltip = d3.select("#linechart_1")
     .append("section")
@@ -92,6 +105,13 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
 
+            const colorForMax = getColorForYear(selectedYear);
+            const color = tinycolor(colorForMax);
+            
+            // Desaturate the color
+            const colorForAvg = color.desaturate(75).toHexString();
+            const colorForMin = color.desaturate(50).toHexString();
+
             var lineMin = d3.line()
                 .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
                 .x(function(d) { return x(d[0]); })
@@ -106,7 +126,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             svg.append("path")
                 .datum(filteredDataMin)
                 .attr("fill", "none")
-                .attr("stroke", "#00FFFF")
+                .attr("stroke", colorForMin)
                 .attr("stroke-width", 1.5)
                 .attr("d", lineMin);
 
@@ -124,18 +144,14 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             svg.append("path")
                 .datum(filteredDataMax)
                 .attr("fill", "none")
-                .attr("stroke", "#0000FF")
+                .attr("stroke", colorForMax)
                 .attr("stroke-width", 1.5)
                 .attr("d", lineMax);
         
             svg.selectAll(".circle-avg-" + selectedYear)
-                /*.data(months.map(function (month) {
-                    return { month: month, value: yearDataAvg[0][month], valueF: yearDataAvg[0][month + "F"] };
-                }))*/
                 .data(months.filter(function(month) {
                     return !isNaN(yearDataAvg[0][month]); // Filter out NaN values
                 }))
-                //.data(months)
                 .enter().append("circle")
                 .attr("class", "circle-avg-" + selectedYear)
                 .attr("temperatureCelsius", function(d) { return yearDataAvg[0][d]; }) // Custom attribute for temperature
@@ -143,18 +159,14 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
                 .attr("r", 4)
-                .style("fill", "#89CFF0")
+                .style("fill", colorForAvg)
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
             svg.selectAll(".circle-max-" + selectedYear)
-                /*.data(months.map(function (month) {
-                    return { month: month, value: yearDataMax[0][month], valueF: yearDataMax[0][month + "F"] };
-                }))*/
                 .data(months.filter(function(month) {
                     return !isNaN(yearDataMax[0][month]); // Filter out NaN values
                 }))
-                //.data(months)
                 .enter().append("circle")
                 .attr("class", "circle-max-" + selectedYear)
                 .attr("temperatureCelsius", function(d) { return yearDataMax[0][d]; }) // Custom attribute for temperature
@@ -162,18 +174,14 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataMax[0][d]); })           
                 .attr("r", 4)
-                .style("fill", "#0000FF")
+                .style("fill", colorForMax)
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
             svg.selectAll(".circle-min-" + selectedYear)
-                /*.data(months.map(function (month) {
-                    return { month: month, value: yearDataMin[0][month], valueF: yearDataMin[0][month + "F"] };
-                }))*/
                 .data(months.filter(function(month) {
                     return !isNaN(yearDataMin[0][month]); // Filter out NaN values
                 }))
-                //.data(months)
                 .enter().append("circle")
                 .attr("class", "circle-min-" + selectedYear)
                 .attr("temperatureCelsius", function(d) { return yearDataMin[0][d]; }) // Custom attribute for temperature
@@ -181,7 +189,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataMin[0][d]); })       
                 .attr("r", 4)
-                .style("fill", "#00FFFF")
+                .style("fill", colorForMin)
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         });
@@ -195,12 +203,8 @@ function handleMouseOver(event, d) {
         .style("opacity", 1);
 
     // Tooltip content
-    //const temperatureCelsius = getTemperatureCelsius(this);
     const temperatureCelsius = d3.select(this).attr("temperatureCelsius") + "°C";
     const temperatureFahrenheit = d3.select(this).attr("temperatureFahrenheit") + "°F";
-    /*const data = d3.select(this).data()[0];
-    const temperatureCelsius = data.value + "°C";
-    const temperatureFahrenheit = data.valueF + "°F";*/
     tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 20) + "px");
@@ -211,6 +215,12 @@ function handleMouseOut() {
     tooltip.transition()
         .duration(500)
         .style("opacity", 0);
+}
+
+function getColorForYear(year) {
+  // You can use modulo to cycle through the colors
+  const index = year % 50;
+  return distinctColors(index);
 }
 
 // Initial chart creation with the default dataset
