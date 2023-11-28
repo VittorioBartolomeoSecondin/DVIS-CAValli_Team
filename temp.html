@@ -82,11 +82,12 @@
     }
     
     // Display each color in a box
-    sortedColors.forEach(color => {
-      const colorBox = document.createElement('div');
-      colorBox.style.backgroundColor = color;
-      colorBox.className = 'color-box';
-      document.body.appendChild(colorBox);
+    sortedColors.forEach(hexColor => {
+        const color = chroma(hexColor);
+        const colorBox = document.createElement('div');
+        colorBox.style.backgroundColor = color;
+        colorBox.className = 'color-box';
+        document.body.appendChild(colorBox);
     });
 
 
