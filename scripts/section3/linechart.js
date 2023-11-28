@@ -220,7 +220,7 @@ function handleMouseOut() {
 function getColorForYear(year) {
   // You can use modulo to cycle through the colors
   const index = year % 50;
-  return distinctColors(index);
+  return distinctColors[index];
 }
 
 // Initial chart creation with the default dataset
