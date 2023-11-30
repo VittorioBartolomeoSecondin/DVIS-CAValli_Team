@@ -18,6 +18,13 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
         d3.csv(selectedDataset_2),
         d3.csv(selectedDataset_3)
     ]).then(function (datasets) {
+
+        var external_svg = d3.select("#external").append("svg")
+                           .attr("id", "external_svg")
+                           .attr("width", width2 + margin2.left + margin2.right)
+                           .attr("height", height2 + margin2.top + margin2.bottom)
+                           .append("g")
+                           .attr("transform", `translate(${margin2.left},${margin2.top})`);
     
         var dataAvg = datasets[0];
         var dataMax = datasets[1];
@@ -41,7 +48,15 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
         var dataAll = [dataMin, dataAvg, dataMax]
-        var name = ["radarchart_1", "radarchart_2", "radarchart_3"]    
+        var name = ["radarchart_1", "radarchart_2", "radarchart_3"]
+
+        external_svg.append("text")
+               .attr("x", width2 / 2)
+               .attr("y", 0 - margin2.top / 2)
+               .attr("text-anchor", "middle")
+               .style("font-size", "20px")
+               .style("text-decoration", "underline")
+               .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
        
         for (let i = 0; i < 3; i++) { 
            
@@ -52,15 +67,6 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                .attr("height", height2 + margin2.top + margin2.bottom)
                .append("g")
                .attr("transform", `translate(${margin2.left},${margin2.top})`);
-           
-           // Append a title to the SVG
-           svg.append("text")
-               .attr("x", width2 / 2)
-               .attr("y", 0 - margin2.top / 2)
-               .attr("text-anchor", "middle")
-               .style("font-size", "20px")
-               .style("text-decoration", "underline")
-               .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
            
            // Define the angles for each data point
            var radialScale = d3.scaleLinear()
