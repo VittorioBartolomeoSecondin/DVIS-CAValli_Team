@@ -87,6 +87,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
             arrayDataMax = []
             months.forEach(function (month) { arrayDataMax.push( +yearDataMax[0][month] ) });
+            console.log(arrayDataMax);
             
             arrayDataMin = []
             months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
