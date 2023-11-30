@@ -216,7 +216,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                 .style("font-size", "12px");
 
            linechart_legend.append("rect")
-                .attr("x", width - 100)
+                .attr("x", width)
                 .attr("y", j * 20)
                 .attr("width", 10)
                 .attr("height", 10)
