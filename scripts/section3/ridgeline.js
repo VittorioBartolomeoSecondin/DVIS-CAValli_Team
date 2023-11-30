@@ -80,6 +80,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .select(".domain").remove()
 
         var allDensity = []
+        var thresholds = d3.ticks(...d3.nice(...d3.extent(data), 2), 12)
         selectedYears.forEach(function (selectedYear) { 
             
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
@@ -92,9 +93,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
             
             // Compute kernel density estimation for each column:
-            var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40));            
-                        
-            densityMax = kde(arrayDataMax);
+            //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40));            
+            densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMax)
+            //densityMax = kde(arrayDataMax);
             allDensity.push({key: selectedYear, density: densityMax});  
             console.log(allDensity);
         });
@@ -194,7 +195,7 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
 });
 
 // This is what I need to compute kernel density estimation
-function kernelDensityEstimator(kernel, X) {
+/*function kernelDensityEstimator(kernel, X) {
   return function(V) {
     return X.map(function(x) {
       return [x, d3.mean(V, function(v) { return kernel(x - v); })];
@@ -206,7 +207,16 @@ function kernelEpanechnikov(k) {
   return function(v) {
     return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
   };
+}*/
+
+
+function kernelDensityEstimator(kernel, thresholds, data) {
+  return thresholds.map(t => [t, d3.mean(data, d => kernel(t - d))]);
 }
+function kernelEpanechnikov(bandwidth) {
+  return x => Math.abs(x /= bandwidth) <= 1 ? 0.75 * (1 - x * x) / bandwidth : 0;
+}
+
 
 // var kde = kernelDensityEstimator(normalDistribution(x, , 2.25), x.ticks(40));
 
