@@ -22,7 +22,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
         var external_svg = d3.select("#external").append("svg")
                            .attr("id", "external_svg")
                            .attr("width", width2 + margin2.left + margin2.right)
-                           .attr("height", height2 - 250 + margin2.top + margin2.bottom)
+                           .attr("height", height2 - 350 + margin2.top + margin2.bottom)
                            .append("g")
                            .attr("transform", `translate(${margin2.left},${margin2.top})`);
     
