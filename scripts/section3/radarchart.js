@@ -229,7 +229,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                    var color = used_colours[key]; // Get color value for the key
                
                    radarchart_legend.append("rect")
-                       .attr("x", width2 - 80) // 100
+                       .attr("x", width2) // 100
                        .attr("y", j * 20)
                        .attr("width", 10)
                        .attr("height", 10)
