@@ -65,7 +65,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
            // Define the angles for each data point
            var radialScale = d3.scaleLinear()
                .domain([d3.min([0, minTemperature]), maxTemperature])
-               .range([0, 170]);
+               .range([0, 160]);
    
            var ticks = [minTemperature, 0, maxTemperature];    
    
