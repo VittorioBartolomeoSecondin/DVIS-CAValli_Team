@@ -92,7 +92,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
             
             // Compute kernel density estimation for each column:
-            var kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(40));
+            var kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(40));            
+                        
             densityMax = kde(arrayDataMax);
             allDensity.push({key: selectedYear, density: densityMax});  
             console.log(allDensity);
@@ -206,3 +207,11 @@ function kernelEpanechnikov(k) {
     return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
   };
 }
+
+// var kde = kernelDensityEstimator(normalDistribution(x, , 2.25), x.ticks(40));
+
+// function normalDistribution(x, mean, variance) {
+//   const coefficient = 1 / (Math.sqrt(2 * Math.PI * variance));
+//   const exponent = -(Math.pow(x - mean, 2) / (2 * variance));
+//   return coefficient * Math.exp(exponent);
+// }
