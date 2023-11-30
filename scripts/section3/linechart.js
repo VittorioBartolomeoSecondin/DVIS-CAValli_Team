@@ -26,11 +26,12 @@ const tooltip = d3.select("#linechart_1")
         .attr("class", "tooltip");
 
 var yearDataAvg, yearDataMax, yearDataMin;
+var linechart_svg;
 
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
 
     // append the svg object to the body of the page
-    var svg = d3.select("#linechart_1").append("svg")
+    linechart_svg = d3.select("#linechart_1").append("svg")
         .attr("id", "linechart_svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
