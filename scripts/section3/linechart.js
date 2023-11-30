@@ -83,8 +83,8 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
         // Add y-axis label
         linechart_svg.append("text")
             .attr("transform", "rotate(-90)")
-            .attr("y", 10 - margin.left)
-            .attr("x", 10 - height / 2)
+            .attr("y", 100 - margin.left)
+            .attr("x", height / 2)
             .attr("dy", "1em")
             .style("text-anchor", "middle")
             .text("Temperatures in Celsius");
