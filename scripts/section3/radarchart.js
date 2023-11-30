@@ -96,7 +96,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        .attr("x", width2 / 2 - 8)
                        .attr("y", (d, i) => height2 / 2 + (i == 2 ?  -radialScale(ticks[i])-2 : radialScale(ticks[i])+8)) 
                        .style("font-size", "10px")
-                       .text(d => d.toString())
+                       .text((d, i) => (i == 1 && ticks[i-1] > 0 ? "" : d.toString()))
                );
            
            // Create a function angle to coordinate
