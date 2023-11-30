@@ -87,13 +87,12 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
             arrayDataMax = []
             months.forEach(function (month) { arrayDataMax.push( +yearDataMax[0][month] ) });
-            console.log(arrayDataMax);
             
             arrayDataMin = []
             months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
             
             // Compute kernel density estimation for each column:
-            var kde = kernelDensityEstimator(kernelEpanechnikov(1.5), x.ticks(40));
+            var kde = kernelDensityEstimator(kernelEpanechnikov(1), x.ticks(40));
             densityMax = kde(arrayDataMax);
             allDensity.push({key: selectedYear, density: densityMax});  
             console.log(allDensity);
