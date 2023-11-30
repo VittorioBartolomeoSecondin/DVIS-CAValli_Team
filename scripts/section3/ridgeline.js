@@ -79,8 +79,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .call(d3.axisLeft(yName).tickSize(0))
             .select(".domain").remove()
 
-        var allDensity = []
-        var thresholds = d3.ticks(...d3.nice(...d3.extent(data), 2), 12)
+        var allDensity = [];
+        var thresholds = d3.ticks(...d3.nice(...d3.extent(data), 2), 12);
         selectedYears.forEach(function (selectedYear) { 
             
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
