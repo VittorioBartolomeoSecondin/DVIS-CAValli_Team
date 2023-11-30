@@ -63,7 +63,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Add X axis label:
         svg.append("text")
             .attr("text-anchor", "end")
-            .attr("x", 0)
+            .attr("x", 50)
             .attr("y", height + 40)
             .text("Temperatures in Celsius");
         
@@ -117,6 +117,23 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               )*/
 
         var midY = (yName.range()[0] + yName.range()[1]) / 2;
+
+        // Append lines first
+        svg.selectAll("lines")
+            .data(allDensity)
+            .join("line")
+            .attr("transform", function(d) {
+                var distanceFromMid = yName(d.key) - midY;
+                var translation = midY + (distanceFromMid * 0.5);
+                return `translate(0, ${translation - height})`;
+            })
+            .attr("x1", 0) // Start x-coordinate
+            .attr("x2", width) // End x-coordinate
+            .attr("y1", y(0)) // Start y-coordinate (baseline)
+            .attr("y2", y(0)) // End y-coordinate (baseline)
+            .attr("stroke", "#000")
+            .attr("stroke-width", 1);
+        
         // Add areas with modified translation
         svg.selectAll("areas")
           .data(allDensity)
