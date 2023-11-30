@@ -63,7 +63,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Add X axis label:
         svg.append("text")
             .attr("text-anchor", "end")
-            .attr("x", 50)
+            .attr("x", 150)
             .attr("y", height + 40)
             .text("Temperatures in Celsius");
         
@@ -77,10 +77,18 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .domain(selectedYears)
             .range([0, height])
             .paddingInner(1)
+
+        var midY = (yName.range()[0] + yName.range()[1]) / 2;
         
         svg.append("g")
             .call(d3.axisLeft(yName).tickSize(0))
-            .select(".domain").remove()
+            //.select(".domain").remove()
+            .selectAll(".tick text")
+            .attr("transform", function(d) {
+                var distanceFromMid = yName(d) - midY;
+                var translation = midY + (distanceFromMid * 0.5);
+                return `translate(0, ${translation - height})`;
+            });
 
         var allDensity = []
         selectedYears.forEach(function (selectedYear) { 
@@ -100,23 +108,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             allDensity.push({key: selectedYear, density: densityMax});  
             console.log(allDensity);
         });
-        
-        // Add areas
-        /*svg.selectAll("areas")
-            .data(allDensity)
-            .join("path")
-              .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})`)})
-              .datum(function(d){return(d.density)})
-              .attr("fill", "#69b3a2")
-              .attr("stroke", "#000")
-              .attr("stroke-width", 1)
-              .attr("d",  d3.line()
-                  .curve(d3.curveBasis)
-                  .x(function(d) { return x(d[0]); })
-                  .y(function(d) { return y(d[1]); })
-              )*/
-
-        var midY = (yName.range()[0] + yName.range()[1]) / 2;
 
         // Append lines first
         svg.selectAll("lines")
@@ -155,7 +146,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
     });
 }
 
-function handleMouseOver(event, d) {
+/*function handleMouseOver(event, d) {
     // Show the tooltip
     tooltip.transition()
         .duration(200)
@@ -174,7 +165,7 @@ function handleMouseOut() {
     tooltip.transition()
         .duration(500)
         .style("opacity", 0);
-}
+}*/
 
 // Initial chart creation with the default dataset
 updateRidgeLine("data/section3/MAX/AlabamaMAX.csv", "data/section3/MIN/AlabamaMIN.csv", [2000]);
