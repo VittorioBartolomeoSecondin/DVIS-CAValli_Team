@@ -223,7 +223,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                 .attr("fill", color);
         
             linechart_legend.append("text")
-                .attr("x", width - 85)
+                .attr("x", width + 15)
                 .attr("y", j * 20 + 9)
                 .text(key) // Display the key associated with the color
                 .style("font-size", "12px");
