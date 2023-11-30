@@ -51,7 +51,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         // Add X axis
         var x = d3.scaleLinear()
-            .domain([minTemperature - 2, maxTemperature + 2])
+            .domain([minTemperature - 2, maxTemperature])
             .range([0, width]);
         
         svg.append("g")
@@ -63,7 +63,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Add X axis label:
         svg.append("text")
             .attr("text-anchor", "end")
-            .attr("x", width)
+            .attr("x", width - 40)
             .attr("y", height + 40)
             .text("Temperatures in Celsius");
         
@@ -102,7 +102,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         });        
         
         // Add areas
-        svg.selectAll("areas")
+        /*svg.selectAll("areas")
             .data(allDensity)
             .join("path")
               .attr("transform", function(d){return(`translate(0, ${(yName(d.key)-height)})`)})
@@ -114,7 +114,25 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                   .curve(d3.curveBasis)
                   .x(function(d) { return x(d[0]); })
                   .y(function(d) { return y(d[1]); })
-              )
+              )*/
+        // Add areas with modified translation
+        svg.selectAll("areas")
+          .data(allDensity)
+          .join("path")
+            .attr("transform", function(d) {
+              var distanceFromMid = yName(d.key) - midY;
+              var translation = midY + (distanceFromMid * 0.3);
+              return `translate(0, ${translation - height})`;
+            })
+            .datum(function(d) { return d.density; })
+            .attr("fill", "#69b3a2")
+            .attr("stroke", "#000")
+            .attr("stroke-width", 1)
+            .attr("d", d3.line()
+              .curve(d3.curveBasis)
+              .x(function(d) { return x(d[0]); })
+              .y(function(d) { return y(d[1]); })
+            );
     });
 }
 
@@ -125,12 +143,8 @@ function handleMouseOver(event, d) {
         .style("opacity", 1);
 
     // Tooltip content
-    //const temperatureCelsius = getTemperatureCelsius(this);
     const temperatureCelsius = d3.select(this).attr("temperatureCelsius") + "°C";
     const temperatureFahrenheit = d3.select(this).attr("temperatureFahrenheit") + "°F";
-    /*const data = d3.select(this).data()[0];
-    const temperatureCelsius = data.value + "°C";
-    const temperatureFahrenheit = data.valueF + "°F";*/
     tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 20) + "px");
@@ -141,6 +155,17 @@ function handleMouseOut() {
     tooltip.transition()
         .duration(500)
         .style("opacity", 0);
+}
+
+// Calculate the midpoint of the y-axis for names
+var midY = (yName.range()[0] + yName.range()[1]) / 2;
+
+// Function to calculate translation based on distance from the midpoint
+function calculateTranslation(d) {
+  var distanceFromMid = yName(d.key) - midY;
+  // Adjust the multiplier based on your preference for distance
+  var translation = midY + (distanceFromMid * 0.3);
+  return `translate(0, ${translation - height})`;
 }
 
 // Initial chart creation with the default dataset
