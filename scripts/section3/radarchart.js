@@ -213,46 +213,48 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                            .on("mouseout", handleMouseOut);
                    });
            });
-   
-           var radarchart_legend = svg.append("g")
-                                      .attr("class", "legend")
-                                      .attr("transform", "translate(20,20)");
-   
-           var linechart_legend = linechart_svg.append("g")
-                                               .attr("class", "legend")
-                                               .attr("transform", "translate(20,20)");
-                       
-           var keys = Object.keys(used_colours); // Get keys from the dictionary
-           
-           keys.forEach(function(key, j) {
-               var color = used_colours[key]; // Get color value for the key
-           
-               radarchart_legend.append("rect")
-                   .attr("x", width2 - 100)
-                   .attr("y", j * 20)
-                   .attr("width", 10)
-                   .attr("height", 10)
-                   .attr("fill", color);
-           
-               radarchart_legend.append("text")
-                   .attr("x", width2 - 85)
-                   .attr("y", j * 20 + 9)
-                   .text(key) // Display the key associated with the color
-                   .style("font-size", "12px");
-   
-              linechart_legend.append("rect")
-                   .attr("x", width)
-                   .attr("y", j * 20)
-                   .attr("width", 10)
-                   .attr("height", 10)
-                   .attr("fill", color);
-           
-               linechart_legend.append("text")
-                   .attr("x", width + 15)
-                   .attr("y", j * 20 + 9)
-                   .text(key) // Display the key associated with the color
-                   .style("font-size", "12px");
-           });
+
+           if (i == 2) {
+               var radarchart_legend = svg.append("g")
+                                          .attr("class", "legend")
+                                          .attr("transform", "translate(20,20)");
+       
+               var linechart_legend = linechart_svg.append("g")
+                                                   .attr("class", "legend")
+                                                   .attr("transform", "translate(20,20)");
+                           
+               var keys = Object.keys(used_colours); // Get keys from the dictionary
+               
+               keys.forEach(function(key, j) {
+                   var color = used_colours[key]; // Get color value for the key
+               
+                   radarchart_legend.append("rect")
+                       .attr("x", width2 - 100)
+                       .attr("y", j * 20)
+                       .attr("width", 10)
+                       .attr("height", 10)
+                       .attr("fill", color);
+               
+                   radarchart_legend.append("text")
+                       .attr("x", width2 - 85)
+                       .attr("y", j * 20 + 9)
+                       .text(key) // Display the key associated with the color
+                       .style("font-size", "12px");
+       
+                  linechart_legend.append("rect")
+                       .attr("x", width)
+                       .attr("y", j * 20)
+                       .attr("width", 10)
+                       .attr("height", 10)
+                       .attr("fill", color);
+               
+                   linechart_legend.append("text")
+                       .attr("x", width + 15)
+                       .attr("y", j * 20 + 9)
+                       .text(key) // Display the key associated with the color
+                       .style("font-size", "12px");
+               });
+           }
          };
      });
 }
