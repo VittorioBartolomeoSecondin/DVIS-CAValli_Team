@@ -1,12 +1,16 @@
+var margin2 = { top: 60, right: 70, bottom: 70, left: 50 },
+    width2 = 1000 - margin2.left - margin2.right,
+    height2 = 700 - margin2.top - margin2.bottom;
+
 function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears) {
 
     // // Append the svg object to the body of the page
     // var svg = d3.select("#radarchart_1").append("svg")
     //     .attr("id", "radarchart_svg")
-    //     .attr("width", width + margin.left + margin.right)
-    //     .attr("height", height + margin.top + margin.bottom)
+    //     .attr("width2", width2 + margin2.left + margin2.right)
+    //     .attr("height2", height2 + margin2.top + margin2.bottom)
     //     .append("g")
-    //     .attr("transform", `translate(${margin.left},${margin.top})`);
+    //     .attr("transform", `translate(${margin2.left},${margin2.top})`);
 
     // Read the data
     Promise.all([
@@ -44,15 +48,15 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
            // Append the svg object to the body of the page
            var svg = d3.select("#" + name[i]).append("svg")
                .attr("id", name[i] + "_svg")
-               .attr("width", width - 50 + margin.left + margin.right)
-               .attr("height", height - 50 + margin.top + margin.bottom)
+               .attr("width2", width2 + margin2.left + margin2.right)
+               .attr("height2", height2 + margin2.top + margin2.bottom)
                .append("g")
-               .attr("transform", `translate(${margin.left},${margin.top})`);
+               .attr("transform", `translate(${margin2.left},${margin2.top})`);
            
            // Append a title to the SVG
            svg.append("text")
-               .attr("x", width / 2)
-               .attr("y", 0 - margin.top / 2)
+               .attr("x", width2 / 2)
+               .attr("y", 0 - margin2.top / 2)
                .attr("text-anchor", "middle")
                .style("font-size", "20px")
                .style("text-decoration", "underline")
@@ -70,8 +74,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                .data(ticks)
                .join(
                    enter => enter.append("circle")
-                       .attr("cx", width / 2)
-                       .attr("cy", height / 2)
+                       .attr("cx", width2 / 2)
+                       .attr("cy", height2 / 2)
                        .attr("fill", "none")
                        .attr("stroke", "black")
                        .attr("r", d => radialScale(d))
@@ -83,8 +87,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                .join(
                    enter => enter.append("text")
                        .attr("class", "ticklabel")
-                       .attr("x", width / 2 - 8)
-                       .attr("y", d => height / 2 - 8 - radialScale(d))
+                       .attr("x", width2 / 2 - 8)
+                       .attr("y", d => height2 / 2 - 8 - radialScale(d))
                        .text(d => d.toString())
                );
            
@@ -92,7 +96,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
            function angleToCoordinate(angle, value){
                var x = Math.cos(angle) * radialScale(value);
                var y = Math.sin(angle) * radialScale(value);
-               return {"x": width / 2 + x, "y": height / 2 - y};
+               return {"x": width2 / 2 + x, "y": height2 / 2 - y};
            }
    
            var featureData = months.map((m, i) => {
@@ -110,8 +114,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                .data(featureData)
                .join(
                    enter => enter.append("line")
-                       .attr("x1", width / 2)
-                       .attr("y1", height / 2)
+                       .attr("x1", width2 / 2)
+                       .attr("y1", height2 / 2)
                        .attr("x2", d => d.line_coord.x)
                        .attr("y2", d => d.line_coord.y)
                        .attr("stroke","gray")
@@ -174,7 +178,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        d3.select(this)
                            .append("path")
                            .attr("d", line(pathData))
-                           .attr("stroke-width", 3)
+                           .attr("stroke-width2", 3)
                            .attr("stroke", color)
                            .attr("fill", "none")
                            .attr("stroke-opacity", 1);
@@ -191,11 +195,11 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                            //.attr("temperatureFahrenheit", function(d, i) { return yearDataAvg[0][months[i] + "F"]; })
                            .attr("cx", function(dp, j) {
                                const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
-                               return width / 2 + Math.cos(angle) * radialScale(dp);
+                               return width2 / 2 + Math.cos(angle) * radialScale(dp);
                            })
                            .attr("cy", function(dp, j) {
                                const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
-                               return height / 2 - Math.sin(angle) * radialScale(dp);
+                               return height2 / 2 - Math.sin(angle) * radialScale(dp);
                            })
                            .attr("r", 4) // Adjust the radius of the circles as needed
                            .attr("fill", color) // Use the same color for circles
@@ -218,27 +222,27 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                var color = used_colours[key]; // Get color value for the key
            
                radarchart_legend.append("rect")
-                   .attr("x", width - 100)
+                   .attr("x", width2 - 100)
                    .attr("y", j * 20)
-                   .attr("width", 10)
-                   .attr("height", 10)
+                   .attr("width2", 10)
+                   .attr("height2", 10)
                    .attr("fill", color);
            
                radarchart_legend.append("text")
-                   .attr("x", width - 85)
+                   .attr("x", width2 - 85)
                    .attr("y", j * 20 + 9)
                    .text(key) // Display the key associated with the color
                    .style("font-size", "12px");
    
               linechart_legend.append("rect")
-                   .attr("x", width)
+                   .attr("x", width2)
                    .attr("y", j * 20)
-                   .attr("width", 10)
-                   .attr("height", 10)
+                   .attr("width2", 10)
+                   .attr("height2", 10)
                    .attr("fill", color);
            
                linechart_legend.append("text")
-                   .attr("x", width + 15)
+                   .attr("x", width2 + 15)
                    .attr("y", j * 20 + 9)
                    .text(key) // Display the key associated with the color
                    .style("font-size", "12px");
