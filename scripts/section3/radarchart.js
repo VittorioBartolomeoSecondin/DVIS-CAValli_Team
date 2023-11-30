@@ -1,4 +1,4 @@
-var margin2 = { top: 60, right: 120, bottom: 70, left: 90 }, // 60 70 70 100
+var margin2 = { top: 60, right: 140, bottom: 70, left: 90 }, // 60 70 70 100
     width2 = 460 - margin2.left - margin2.right,
     height2 = 450 - margin2.top - margin2.bottom;
 
@@ -229,14 +229,14 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                    var color = used_colours[key]; // Get color value for the key
                
                    radarchart_legend.append("rect")
-                       .attr("x", width2 + 60) // 100
+                       .attr("x", width2 + 70) // 100
                        .attr("y", j * 20)
                        .attr("width", 10)
                        .attr("height", 10)
                        .attr("fill", color);
                
                    radarchart_legend.append("text")
-                       .attr("x", width2 + 75) // 85
+                       .attr("x", width2 + 85) // 85
                        .attr("y", j * 20 + 9)
                        .text(key) // Display the key associated with the color
                        .style("font-size", "12px");
