@@ -300,7 +300,7 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   d3.select("#radarchart_1_svg").remove();
   d3.select("#radarchart_2_svg").remove();
   d3.select("#radarchart_3_svg").remove();
-  d3.select("#external").remove();
+  d3.select("#external_svg").remove();
   updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
 });
 
@@ -321,6 +321,6 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     d3.select("#radarchart_1_svg").remove();
     d3.select("#radarchart_2_svg").remove();
     d3.select("#radarchart_3_svg").remove();
-    d3.select("#external").remove();
+    d3.select("#external_svg").remove();
     updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
 });
