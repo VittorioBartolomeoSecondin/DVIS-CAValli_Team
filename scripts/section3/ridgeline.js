@@ -63,7 +63,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Add X axis label:
         svg.append("text")
             .attr("text-anchor", "end")
-            .attr("x", width - 40)
+            .attr("x", 0)
             .attr("y", height + 40)
             .text("Temperatures in Celsius");
         
@@ -79,7 +79,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .paddingInner(1)
         
         svg.append("g")
-            .call(d3.axisLeft(yName).tickSize(0))
+            .call(d3.axisLeft(y).tickSize(0))
             .select(".domain").remove()
 
         var allDensity = []
@@ -123,7 +123,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
           .join("path")
             .attr("transform", function(d) {
               var distanceFromMid = yName(d.key) - midY;
-              var translation = midY + (distanceFromMid * 0.3);
+              var translation = midY + (distanceFromMid * 0.5);
               return `translate(0, ${translation - height})`;
             })
             .datum(function(d) { return d.density; })
