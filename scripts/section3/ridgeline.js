@@ -1,8 +1,3 @@
-// // set the dimensions and margins of the graph
-// const margin = {top: 60, right: 30, bottom: 20, left:110},
-//     width = 460 - margin.left - margin.right,
-//     height = 400 - margin.top - margin.bottom;
-
 function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
     // append the svg object to the body of the page
@@ -82,13 +77,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         
         svg.append("g")
             .call(d3.axisLeft(yName).tickSize(0))
-            //.select(".domain").remove()
-            .selectAll(".tick text")
-            .attr("transform", function(d) {
-                var distanceFromMid = yName(d) - midY;
-                var translation = midY + (distanceFromMid * 0.5);
-                return `translate(0, ${translation - height})`;
-            });
+            .select(".domain").remove()
 
         var allDensity = []
         selectedYears.forEach(function (selectedYear) { 
@@ -136,8 +125,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             })
             .datum(function(d) { return d.density; })
             .attr("fill", "#69b3a2")
-            //.attr("stroke", "#000")
-            //.attr("stroke-width", 1);
+            .attr("stroke", "#000")
+            .attr("stroke-width", 1);
             .attr("d", d3.line()
               .curve(d3.curveBasis)
               .x(function(d) { return x(d[0]); })
