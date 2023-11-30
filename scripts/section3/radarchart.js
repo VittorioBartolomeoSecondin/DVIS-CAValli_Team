@@ -44,8 +44,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
            // Append the svg object to the body of the page
            var svg = d3.select("#" + name[i]).append("svg")
                .attr("id", name[i] + "_svg")
-               .attr("width", width - 30 + margin.left + margin.right)
-               .attr("height", height - 30 + margin.top + margin.bottom)
+               .attr("width", width - 50 + margin.left + margin.right)
+               .attr("height", height - 50 + margin.top + margin.bottom)
                .append("g")
                .attr("transform", `translate(${margin.left},${margin.top})`);
            
