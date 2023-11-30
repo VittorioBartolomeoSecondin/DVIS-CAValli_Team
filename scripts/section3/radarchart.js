@@ -236,7 +236,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        .attr("fill", color);
                
                    radarchart_legend.append("text")
-                       .attr("x", width2 - 65) // 85
+                       .attr("x", width2 + 65) // 85
                        .attr("y", j * 20 + 9)
                        .text(key) // Display the key associated with the color
                        .style("font-size", "12px");
