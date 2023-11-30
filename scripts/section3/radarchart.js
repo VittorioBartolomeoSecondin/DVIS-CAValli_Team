@@ -94,7 +94,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                    enter => enter.append("text")
                        .attr("class", "ticklabel")
                        .attr("x", width2 / 2 - 8)
-                       .attr("y", (d, i) => height2 / 2 + (i == 2 ?  -radialScale(ticks[i])-4 : radialScale(ticks[i])+8)) // (i == 0 ? 12 : i == 1 ? 54 : - 4)
+                       .attr("y", (d, i) => height2 / 2 + (i == 2 ?  -radialScale(ticks[i])-2 : radialScale(ticks[i])+8)) 
                        .style("font-size", "10px")
                        .text(d => d.toString())
                );
