@@ -159,17 +159,6 @@ function handleMouseOut() {
         .style("opacity", 0);
 }
 
-// Calculate the midpoint of the y-axis for names
-var midY = (yName.range()[0] + yName.range()[1]) / 2;
-
-// Function to calculate translation based on distance from the midpoint
-function calculateTranslation(d) {
-  var distanceFromMid = yName(d.key) - midY;
-  // Adjust the multiplier based on your preference for distance
-  var translation = midY + (distanceFromMid * 0.3);
-  return `translate(0, ${translation - height})`;
-}
-
 // Initial chart creation with the default dataset
 updateRidgeLine("data/section3/MAX/AlabamaMAX.csv", "data/section3/MIN/AlabamaMIN.csv", [2000]);
 
