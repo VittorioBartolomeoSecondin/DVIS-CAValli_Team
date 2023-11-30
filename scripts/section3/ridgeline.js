@@ -115,6 +115,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                   .x(function(d) { return x(d[0]); })
                   .y(function(d) { return y(d[1]); })
               )*/
+
+        var midY = (yName.range()[0] + yName.range()[1]) / 2;
         // Add areas with modified translation
         svg.selectAll("areas")
           .data(allDensity)
