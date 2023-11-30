@@ -48,8 +48,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
            // Append the svg object to the body of the page
            var svg = d3.select("#" + name[i]).append("svg")
                .attr("id", name[i] + "_svg")
-               .attr("width2", width2 + margin2.left + margin2.right)
-               .attr("height2", height2 + margin2.top + margin2.bottom)
+               .attr("width", width2 + margin2.left + margin2.right)
+               .attr("height", height2 + margin2.top + margin2.bottom)
                .append("g")
                .attr("transform", `translate(${margin2.left},${margin2.top})`);
            
@@ -235,14 +235,14 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                    .style("font-size", "12px");
    
               linechart_legend.append("rect")
-                   .attr("x", width2)
+                   .attr("x", width)
                    .attr("y", j * 20)
-                   .attr("width2", 10)
-                   .attr("height2", 10)
+                   .attr("width", 10)
+                   .attr("height", 10)
                    .attr("fill", color);
            
                linechart_legend.append("text")
-                   .attr("x", width2 + 15)
+                   .attr("x", width + 15)
                    .attr("y", j * 20 + 9)
                    .text(key) // Display the key associated with the color
                    .style("font-size", "12px");
