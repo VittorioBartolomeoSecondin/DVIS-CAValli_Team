@@ -1,5 +1,5 @@
 var margin2 = { top: 60, right: 50, bottom: 70, left: 50 },
-    width2 = 500 - margin2.left - margin2.right,
+    width2 = 400 - margin2.left - margin2.right,
     height2 = 700 - margin2.top - margin2.bottom;
 
 function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears) {
