@@ -1,12 +1,12 @@
 function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears) {
    
-    // Append the svg object to the body of the page
-    var svg = d3.select("#radarchart_1").append("svg")
-        .attr("id", "radarchart_svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", `translate(${margin.left},${margin.top})`);
+    // // Append the svg object to the body of the page
+    // var svg = d3.select("#radarchart_1").append("svg")
+    //     .attr("id", "radarchart_svg")
+    //     .attr("width", width + margin.left + margin.right)
+    //     .attr("height", height + margin.top + margin.bottom)
+    //     .append("g")
+    //     .attr("transform", `translate(${margin.left},${margin.top})`);
 
     // Read the data
     Promise.all([
@@ -36,198 +36,216 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
         
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
-
-        // Append a title to the SVG
-        svg.append("text")
-            .attr("x", width / 2)
-            .attr("y", 0 - margin.top / 2)
-            .attr("text-anchor", "middle")
-            .style("font-size", "20px")
-            .style("text-decoration", "underline")
-            .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
-        
-        // Define the angles for each data point
-        var radialScale = d3.scaleLinear()
-            .domain([d3.min([0, minTemperature]), maxTemperature])
-            .range([0, 220]);
-
-        var ticks = [minTemperature, 0, maxTemperature];    
-
-        // Add circles
-        svg.selectAll("circle")
-            .data(ticks)
-            .join(
-                enter => enter.append("circle")
-                    .attr("cx", width / 2)
-                    .attr("cy", height / 2)
-                    .attr("fill", "none")
-                    .attr("stroke", "black")
-                    .attr("r", d => radialScale(d))
-            );
-
-        // Add text label for ticks
-        svg.selectAll(".ticklabel")
-            .data(ticks)
-            .join(
-                enter => enter.append("text")
-                    .attr("class", "ticklabel")
-                    .attr("x", width / 2 - 8)
-                    .attr("y", d => height / 2 - 8 - radialScale(d))
-                    .text(d => d.toString())
-            );
-        
-        // Create a function angle to coordinate
-        function angleToCoordinate(angle, value){
-            var x = Math.cos(angle) * radialScale(value);
-            var y = Math.sin(angle) * radialScale(value);
-            return {"x": width / 2 + x, "y": height / 2 - y};
-        }
-
-        var featureData = months.map((m, i) => {
-            var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-            return {
-                "name": m,
-                "angle": angle,
-                "line_coord": angleToCoordinate(angle, maxTemperature),
-                "label_coord": angleToCoordinate(angle, maxTemperature + 6)
-            };
-        });
-
-        // Draw axis line
-        svg.selectAll("line")
-            .data(featureData)
-            .join(
-                enter => enter.append("line")
-                    .attr("x1", width / 2)
-                    .attr("y1", height / 2)
-                    .attr("x2", d => d.line_coord.x)
-                    .attr("y2", d => d.line_coord.y)
-                    .attr("stroke","gray")
-                    .attr("stroke-opacity", 0.3)
-            );
-        
-        // Draw axis label
-        svg.selectAll(".axislabel")
-            .data(featureData)
-            .join(
-                enter => enter.append("text")
-                    .attr("x", d => d.label_coord.x - 13)
-                    .attr("y", d => d.label_coord.y + 5)
-                    .text(d => d.name)
-            );
-
-        // Plotting the data
-        var line = d3.line()
-            .x(d => d.x)
-            .y(d => d.y);
-        
-       function getPathCoordinates(data_point){
-            var coordinates = [];
-            for (var i = 0; i < months.length; i++){
-                var months_name = months[i];
-                if (!isNaN(data_point[months_name])) {
-                    var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
-                    coordinates.push(angleToCoordinate(angle, data_point[months_name]));
-                }
-            }
-            coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
-            return coordinates;
-        }       
-
-        // Colours that are used
-        var used_colours = {}
-        
-        // Data
-        var data = [];
-        selectedYears.forEach(function (selectedYear) {
-            yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
-            var point = {}
-            months.forEach(m => point[m] = yearDataAvg[0][m]);
-            data.push(point);      
-        
-            // Draw paths and circles with the same color for each data point
-            svg.selectAll("g")
-                .data(data)
-                .enter()
-                .append("g")
-                .each(function(d, i) {
-                    //const color = colors[i]; // Retrieve the color for the current data point
-                    const color = getColorForYear(selectedYear);
-                    used_colours[selectedYear] = color;
-                    const pathData = getPathCoordinates(d);
-            
-                    // Draw path element
-                    d3.select(this)
-                        .append("path")
-                        .attr("d", line(pathData))
-                        .attr("stroke-width", 3)
-                        .attr("stroke", color)
-                        .attr("fill", "none")
-                        .attr("stroke-opacity", 1);
-            
-                    // Draw circles for data points
-                    d3.select(this)
-                        .selectAll("circle")
-                        .data(Object.values(d))
-                        .enter()
-                        .filter(dp => !isNaN(dp)) // Filter out NaN values
-                        .append("circle")
-                        .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
-                        .attr("temperatureFahrenheit", function(d, i) { return yearDataAvg[0][months[i] + "F"]; })
-                        .attr("cx", function(dp, j) {
-                            const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
-                            return width / 2 + Math.cos(angle) * radialScale(dp);
-                        })
-                        .attr("cy", function(dp, j) {
-                            const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
-                            return height / 2 - Math.sin(angle) * radialScale(dp);
-                        })
-                        .attr("r", 4) // Adjust the radius of the circles as needed
-                        .attr("fill", color) // Use the same color for circles
-                        .on("mouseover", handleMouseOver)
-                        .on("mouseout", handleMouseOut);
-                });
-        });
-
-        var radarchart_legend = svg.append("g")
-                                   .attr("class", "legend")
-                                   .attr("transform", "translate(20,20)");
-
-        var linechart_legend = linechart_svg.append("g")
-                                            .attr("class", "legend")
-                                            .attr("transform", "translate(20,20)");
-                    
-        var keys = Object.keys(used_colours); // Get keys from the dictionary
-        
-        keys.forEach(function(key, j) {
-            var color = used_colours[key]; // Get color value for the key
-        
-            radarchart_legend.append("rect")
-                .attr("x", width - 100)
-                .attr("y", j * 20)
-                .attr("width", 10)
-                .attr("height", 10)
-                .attr("fill", color);
-        
-            radarchart_legend.append("text")
-                .attr("x", width - 85)
-                .attr("y", j * 20 + 9)
-                .text(key) // Display the key associated with the color
-                .style("font-size", "12px");
-
-           linechart_legend.append("rect")
-                .attr("x", width)
-                .attr("y", j * 20)
-                .attr("width", 10)
-                .attr("height", 10)
-                .attr("fill", color);
-        
-            linechart_legend.append("text")
-                .attr("x", width + 15)
-                .attr("y", j * 20 + 9)
-                .text(key) // Display the key associated with the color
-                .style("font-size", "12px");
-        });
+        var dataAll = [dataMin, dataAvg, dataMax]
+        var title = ["Minimum", "Average", "Maximum"]
+        var name = ["radarchart_1", "radarchart_2", "radarchart_3"]    
+       
+        for (let i = 0; i < 3; i++) { 
+           
+           // Append the svg object to the body of the page
+           var svg = d3.select("#" + name[i]).append("svg")
+               .attr("id", name[i] + "_svg")
+               .attr("width", width + margin.left + margin.right)
+               .attr("height", height + margin.top + margin.bottom)
+               .append("g")
+               .attr("transform", `translate(${margin.left},${margin.top})`);
+           
+           // Append a title to the SVG
+           svg.append("text")
+               .attr("x", width / 2)
+               .attr("y", 0 - margin.top / 2)
+               .attr("text-anchor", "middle")
+               .style("font-size", "20px")
+               .style("text-decoration", "underline")
+               .text(`${stateName}: ` + title[i]);
+               //.text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
+           
+           // Define the angles for each data point
+           var radialScale = d3.scaleLinear()
+               .domain([d3.min([0, minTemperature]), maxTemperature])
+               .range([0, 220]);
+   
+           var ticks = [minTemperature, 0, maxTemperature];    
+   
+           // Add circles
+           svg.selectAll("circle")
+               .data(ticks)
+               .join(
+                   enter => enter.append("circle")
+                       .attr("cx", width / 2)
+                       .attr("cy", height / 2)
+                       .attr("fill", "none")
+                       .attr("stroke", "black")
+                       .attr("r", d => radialScale(d))
+               );
+   
+           // Add text label for ticks
+           svg.selectAll(".ticklabel")
+               .data(ticks)
+               .join(
+                   enter => enter.append("text")
+                       .attr("class", "ticklabel")
+                       .attr("x", width / 2 - 8)
+                       .attr("y", d => height / 2 - 8 - radialScale(d))
+                       .text(d => d.toString())
+               );
+           
+           // Create a function angle to coordinate
+           function angleToCoordinate(angle, value){
+               var x = Math.cos(angle) * radialScale(value);
+               var y = Math.sin(angle) * radialScale(value);
+               return {"x": width / 2 + x, "y": height / 2 - y};
+           }
+   
+           var featureData = months.map((m, i) => {
+               var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
+               return {
+                   "name": m,
+                   "angle": angle,
+                   "line_coord": angleToCoordinate(angle, maxTemperature),
+                   "label_coord": angleToCoordinate(angle, maxTemperature + 6)
+               };
+           });
+   
+           // Draw axis line
+           svg.selectAll("line")
+               .data(featureData)
+               .join(
+                   enter => enter.append("line")
+                       .attr("x1", width / 2)
+                       .attr("y1", height / 2)
+                       .attr("x2", d => d.line_coord.x)
+                       .attr("y2", d => d.line_coord.y)
+                       .attr("stroke","gray")
+                       .attr("stroke-opacity", 0.3)
+               );
+           
+           // Draw axis label
+           svg.selectAll(".axislabel")
+               .data(featureData)
+               .join(
+                   enter => enter.append("text")
+                       .attr("x", d => d.label_coord.x - 13)
+                       .attr("y", d => d.label_coord.y + 5)
+                       .text(d => d.name)
+               );
+   
+           // Plotting the data
+           var line = d3.line()
+               .x(d => d.x)
+               .y(d => d.y);
+           
+          function getPathCoordinates(data_point){
+               var coordinates = [];
+               for (var i = 0; i < months.length; i++){
+                   var months_name = months[i];
+                   if (!isNaN(data_point[months_name])) {
+                       var angle = (Math.PI / 2) + (2 * Math.PI * i / months.length);
+                       coordinates.push(angleToCoordinate(angle, data_point[months_name]));
+                   }
+               }
+               coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
+               return coordinates;
+           }       
+   
+           // Colours that are used
+           var used_colours = {}
+           
+           // Data
+           var data = [];
+           selectedYears.forEach(function (selectedYear) {
+               //yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
+               yearData = dataAll[i].filter(function (d) { return +d.year === +selectedYear; }); 
+               var point = {}
+               //months.forEach(m => point[m] = yearDataAvg[0][m]);
+               months.forEach(m => point[m] = yearData[0][m]);
+               data.push(point);      
+           
+               // Draw paths and circles with the same color for each data point
+               svg.selectAll("g")
+                   .data(data)
+                   .enter()
+                   .append("g")
+                   .each(function(d, i) {
+                       //const color = colors[i]; // Retrieve the color for the current data point
+                       const color = getColorForYear(selectedYear);
+                       used_colours[selectedYear] = color;
+                       const pathData = getPathCoordinates(d);
+               
+                       // Draw path element
+                       d3.select(this)
+                           .append("path")
+                           .attr("d", line(pathData))
+                           .attr("stroke-width", 3)
+                           .attr("stroke", color)
+                           .attr("fill", "none")
+                           .attr("stroke-opacity", 1);
+               
+                       // Draw circles for data points
+                       d3.select(this)
+                           .selectAll("circle")
+                           .data(Object.values(d))
+                           .enter()
+                           .filter(dp => !isNaN(dp)) // Filter out NaN values
+                           .append("circle")
+                           .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
+                           .attr("temperatureFahrenheit", function(d, i) { return yearData[0][months[i] + "F"]; })
+                           //.attr("temperatureFahrenheit", function(d, i) { return yearDataAvg[0][months[i] + "F"]; })
+                           .attr("cx", function(dp, j) {
+                               const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
+                               return width / 2 + Math.cos(angle) * radialScale(dp);
+                           })
+                           .attr("cy", function(dp, j) {
+                               const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
+                               return height / 2 - Math.sin(angle) * radialScale(dp);
+                           })
+                           .attr("r", 4) // Adjust the radius of the circles as needed
+                           .attr("fill", color) // Use the same color for circles
+                           .on("mouseover", handleMouseOver)
+                           .on("mouseout", handleMouseOut);
+                   });
+           });
+   
+           var radarchart_legend = svg.append("g")
+                                      .attr("class", "legend")
+                                      .attr("transform", "translate(20,20)");
+   
+           var linechart_legend = linechart_svg.append("g")
+                                               .attr("class", "legend")
+                                               .attr("transform", "translate(20,20)");
+                       
+           var keys = Object.keys(used_colours); // Get keys from the dictionary
+           
+           keys.forEach(function(key, j) {
+               var color = used_colours[key]; // Get color value for the key
+           
+               radarchart_legend.append("rect")
+                   .attr("x", width - 100)
+                   .attr("y", j * 20)
+                   .attr("width", 10)
+                   .attr("height", 10)
+                   .attr("fill", color);
+           
+               radarchart_legend.append("text")
+                   .attr("x", width - 85)
+                   .attr("y", j * 20 + 9)
+                   .text(key) // Display the key associated with the color
+                   .style("font-size", "12px");
+   
+              linechart_legend.append("rect")
+                   .attr("x", width)
+                   .attr("y", j * 20)
+                   .attr("width", 10)
+                   .attr("height", 10)
+                   .attr("fill", color);
+           
+               linechart_legend.append("text")
+                   .attr("x", width + 15)
+                   .attr("y", j * 20 + 9)
+                   .text(key) // Display the key associated with the color
+                   .style("font-size", "12px");
+           });
+         };
      });
 }
 
