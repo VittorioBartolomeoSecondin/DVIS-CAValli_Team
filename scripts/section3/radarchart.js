@@ -178,7 +178,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        d3.select(this)
                            .append("path")
                            .attr("d", line(pathData))
-                           .attr("stroke-width2", 3)
+                           .attr("stroke-width", 2)
                            .attr("stroke", color)
                            .attr("fill", "none")
                            .attr("stroke-opacity", 1);
