@@ -1,5 +1,5 @@
 function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears) {
-   
+
     // // Append the svg object to the body of the page
     // var svg = d3.select("#radarchart_1").append("svg")
     //     .attr("id", "radarchart_svg")
@@ -287,7 +287,9 @@ document.getElementById("dataset-dropdown").addEventListener("change", function 
   // Extract values of checked checkboxes
   const selectedYears = Array.from(checkedCheckboxes).map(checkbox => checkbox.value);
 
-  d3.select("#radarchart_svg").remove();
+  d3.select("#radarchart_1_svg").remove();
+  d3.select("#radarchart_2_svg").remove();
+  d3.select("#radarchart_3_svg").remove();
   updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
 });
 
@@ -305,6 +307,8 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     const selectedDataset_2 = "data/section3/MAX/" + selectedValue + "MAX.csv";
     const selectedDataset_3 = "data/section3/MIN/" + selectedValue + "MIN.csv";
 
-    d3.select("#radarchart_svg").remove();
+    d3.select("#radarchart_1_svg").remove();
+    d3.select("#radarchart_2_svg").remove();
+    d3.select("#radarchart_3_svg").remove();
     updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears);
 });
