@@ -73,15 +73,15 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             .domain([minTemperature, maxTemperature])
             .range([height, 0]);
     
-        svg.append("g")
+        linechart_svg.append("g")
             .attr("transform", `translate(0,${height})`)
             .call(d3.axisBottom(x));
     
-        svg.append("g")
+        linechart_svg.append("g")
             .call(d3.axisLeft(y));
         
         // Add y-axis label
-        svg.append("text")
+        linechart_svg.append("text")
             .attr("transform", "rotate(-90)")
             .attr("y", 0 - margin.left)
             .attr("x", 0 - height / 2)
@@ -93,7 +93,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
         // Append a title to the SVG
-        svg.append("text")
+        linechart_svg.append("text")
             .attr("x", width / 2)
             .attr("y", 0 - margin.top / 2)
             .attr("text-anchor", "middle")
@@ -124,7 +124,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 return !isNaN(d[1]);
             });
             
-            svg.append("path")
+            linechart_svg.append("path")
                 .datum(filteredDataMin)
                 .attr("fill", "none")
                 .attr("stroke", colorForMin)
@@ -142,14 +142,14 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 return !isNaN(d[1]);
             });
             
-            svg.append("path")
+            linechart_svg.append("path")
                 .datum(filteredDataMax)
                 .attr("fill", "none")
                 .attr("stroke", colorForMax)
                 .attr("stroke-width", 1.5)
                 .attr("d", lineMax);
         
-            svg.selectAll(".circle-avg-" + selectedYear)
+            linechart_svg.selectAll(".circle-avg-" + selectedYear)
                 .data(months.filter(function(month) {
                     return !isNaN(yearDataAvg[0][month]); // Filter out NaN values
                 }))
@@ -164,7 +164,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
-            svg.selectAll(".circle-max-" + selectedYear)
+            linechart_svg.selectAll(".circle-max-" + selectedYear)
                 .data(months.filter(function(month) {
                     return !isNaN(yearDataMax[0][month]); // Filter out NaN values
                 }))
@@ -179,7 +179,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
-            svg.selectAll(".circle-min-" + selectedYear)
+            linechart_svg.selectAll(".circle-min-" + selectedYear)
                 .data(months.filter(function(month) {
                     return !isNaN(yearDataMin[0][month]); // Filter out NaN values
                 }))
