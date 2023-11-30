@@ -91,11 +91,11 @@ d3.csv("data/section2/sankey_NS.csv").then(function(data) {
       .style("stroke", "black")
       .style("stroke-width", 2)
       .attr("height", function(d) { return d.y1 - d.y0; })
-      .attr("width", sankey.nodeWidth())
-      .style("fill", function(d) { 
-	  return d.color = color(d.name.replace(/ .*/, "")); })
-      .style("stroke", function(d) { 
-	  return d3.rgb(d.color).darker(2); });
+      .attr("width", sankey.nodeWidth());
+      //.style("fill", function(d) { 
+      //  return d.color = color(d.name.replace(/ .*/, "")); })
+      //.style("stroke", function(d) { 
+      //  return d3.rgb(d.color).darker(2); });
 
   // add the title for the nodes
   node.append("title")
