@@ -99,7 +99,19 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             densityMax = kde(arrayDataMax);
             allDensity.push({key: selectedYear, density: densityMax});  
             console.log(allDensity);
-        });        
+        });
+
+        // Update the yName scale based on the selected years
+        yName.domain(selectedYears);
+        
+        // Remove the existing y-axis
+        svg.select(".yAxis").remove();
+        
+        // Create the Y axis for names with the updated scale
+        svg.append("g")
+            .attr("class", "yAxis")
+            .call(d3.axisLeft(yName).tickSize(0))
+            .select(".domain").remove();
         
         // Add areas
         /*svg.selectAll("areas")
