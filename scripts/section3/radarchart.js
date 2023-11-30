@@ -37,7 +37,6 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
         var dataAll = [dataMin, dataAvg, dataMax]
-        var title = ["Minimum", "Average", "Maximum"]
         var name = ["radarchart_1", "radarchart_2", "radarchart_3"]    
        
         for (let i = 0; i < 3; i++) { 
@@ -57,8 +56,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                .attr("text-anchor", "middle")
                .style("font-size", "20px")
                .style("text-decoration", "underline")
-               .text(`${stateName}: ` + title[i]);
-               //.text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
+               .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
            
            // Define the angles for each data point
            var radialScale = d3.scaleLinear()
