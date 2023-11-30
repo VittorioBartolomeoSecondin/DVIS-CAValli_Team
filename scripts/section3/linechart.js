@@ -84,7 +84,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
         linechart_svg.append("text")
             .attr("transform", "rotate(-90)")
             .attr("y", 0 - margin.left)
-            .attr("x", 0 - height / 2)
+            .attr("x", 10 - height / 2)
             .attr("dy", "1em")
             .style("text-anchor", "middle")
             .text("Temperatures in Celsius");
