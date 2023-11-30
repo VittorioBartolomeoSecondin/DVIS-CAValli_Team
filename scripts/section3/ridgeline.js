@@ -79,7 +79,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .paddingInner(1)
         
         svg.append("g")
-            .call(d3.axisLeft(y).tickSize(0))
+            .call(d3.axisLeft(yName).tickSize(0))
             .select(".domain").remove()
 
         var allDensity = []
@@ -129,12 +129,12 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .datum(function(d) { return d.density; })
             .attr("fill", "#69b3a2")
             .attr("stroke", "#000")
-            .attr("stroke-width", 1)
-            .attr("d", d3.line()
+            .attr("stroke-width", 1);
+            /*.attr("d", d3.line()
               .curve(d3.curveBasis)
               .x(function(d) { return x(d[0]); })
               .y(function(d) { return y(d[1]); })
-            );
+            );*/
     });
 }
 
