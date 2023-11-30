@@ -224,8 +224,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                radarchart_legend.append("rect")
                    .attr("x", width2 - 100)
                    .attr("y", j * 20)
-                   .attr("width2", 10)
-                   .attr("height2", 10)
+                   .attr("width", 10)
+                   .attr("height", 10)
                    .attr("fill", color);
            
                radarchart_legend.append("text")
