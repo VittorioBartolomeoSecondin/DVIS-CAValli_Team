@@ -79,8 +79,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .call(d3.axisLeft(yName).tickSize(0))
             .select(".domain").remove()
 
-        var allDensity = [];
-        var thresholds = d3.ticks(...d3.nice(...d3.extent(data), 2), 12);
+        var allDensity = []
         selectedYears.forEach(function (selectedYear) { 
             
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
@@ -93,7 +92,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
             
             // Compute kernel density estimation for each column:
-            //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40));            
+            //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); 
+            var thresholds = d3.ticks(...d3.nice(...d3.extent(arrayDataMax), 2), 12);
             densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMax)
             //densityMax = kde(arrayDataMax);
             allDensity.push({key: selectedYear, density: densityMax});  
