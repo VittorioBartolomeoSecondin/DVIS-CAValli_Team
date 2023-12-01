@@ -24,7 +24,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                            .attr("width", width2 + 700 + margin2.left + margin2.right)
                            .attr("height", height2 - 400 + margin2.top + margin2.bottom)
                            .append("g")
-                           .attr("transform", `translate(150, ${margin2.top})`);
+                           .attr("transform", `translate(350, ${margin2.top})`);
     
         var dataAvg = datasets[0];
         var dataMax = datasets[1];
