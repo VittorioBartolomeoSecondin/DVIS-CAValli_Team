@@ -63,6 +63,10 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Removing the domain line separately after the axis is created
         svg.select(".xAxis.primary")
            .select(".domain").remove();
+
+        svg.select(".xAxis.primary")
+            .selectAll(".tick text") 
+            .style("font-size", "8px"); 
         
         svg.append("g")
             .attr("class", "xAxis secondary")
