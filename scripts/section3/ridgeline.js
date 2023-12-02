@@ -155,8 +155,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               var translation = midY + (distanceFromMid * 0.5);
               return `translate(0, ${translation - height})`;
             })
+            .attr("fill", function(d) { console.log(d); return d.colorMax; })
             .datum(function(d) { console.log(d); return d.densityMax; })
-            .attr("fill", function(d) { console.log(d); return d.colorMax; } )
+            //.attr("fill", function(d) { console.log(d); return d.colorMax; } )
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
             .attr("d", d3.line()
