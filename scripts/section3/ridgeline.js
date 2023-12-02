@@ -196,7 +196,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             })
             .attr("fill", function(d) { console.log(d); return `${d.colorMax}80`; })
             .datum(function(d) { console.log(d); return d.densityMax; })
-            .attr("stroke", "#000")
+            .attr("stroke", "red")
             .attr("stroke-width", 1)
             .attr("d", d3.line()
               .curve(d3.curveBasis)
