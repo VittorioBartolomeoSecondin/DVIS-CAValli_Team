@@ -36,6 +36,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
         var thresholds = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
+        var thresholdsMinMax = thresholds.push([minTemperature, maxTemperature]);
         
         // Append a title to the SVG
         svg.append("text")
@@ -56,7 +57,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .attr("transform", "translate(0," + height + ")")
             .attr("stroke", "gray")
             .attr("stroke-opacity", 0.3)
-            .call(d3.axisBottom(x).tickValues(thresholds, minTemperature, maxTemperature).tickSize(-height))
+            .call(d3.axisBottom(x).tickValues(thresholdsMinMax).tickSize(-height))
             .select(".domain").remove();
         
         // Add X axis label:
