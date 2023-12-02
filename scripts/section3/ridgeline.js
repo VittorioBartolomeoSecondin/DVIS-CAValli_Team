@@ -66,7 +66,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         
         // Create a Y scale for densities
         var y = d3.scaleLinear()
-            .domain([0, 0.5])
+            .domain([0, 0.2])
             .range([height, 0]);
         
         // Create the Y axis for names
@@ -136,7 +136,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .join("g") // Create a group for each data point
             .attr("transform", function(d) {
                 var distanceFromMid = yName(d.key) - midY;
-                var translation = midY + (distanceFromMid * 0.5);
+                var translation = midY + (distanceFromMid * 0.8);
                 return `translate(0, ${translation - height})`;
             })
             .call(g => {
@@ -183,7 +183,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
           .join("path")
             .attr("transform", function(d) {
               var distanceFromMid = yName(d.key) - midY;
-              var translation = midY + (distanceFromMid * 0.5);
+              var translation = midY + (distanceFromMid * 0.8);
               return `translate(0, ${translation - height})`;
             })
             .attr("fill", function(d) { console.log(d); return d.colorMax; })
