@@ -94,6 +94,12 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });  
 
+            const colorForMax = getColorForYear(selectedYear);
+            const color = chroma(colorForMax);
+            
+            // Desaturate the color
+            const colorForMin = color.desaturate(1).hex();
+
             arrayDataMax = []
             months.forEach(function (month) { arrayDataMax.push( +yearDataMax[0][month] ) });
             
