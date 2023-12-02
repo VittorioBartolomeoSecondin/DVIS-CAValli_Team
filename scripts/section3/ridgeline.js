@@ -128,7 +128,36 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                 var translation = midY + (distanceFromMid * 0.5);
                 return translation - height;
             });*/
+
+        svg.selectAll("lines")
+            .data(allDensity)
+            .join("g") // Create a group for each data point
+            .attr("transform", function(d) {
+                var distanceFromMid = yName(d.key) - midY;
+                var translation = midY + (distanceFromMid * 0.5);
+                return `translate(0, ${translation - height})`;
+            })
+            .call(g => {
+                g.append("line")
+                    .attr("x1", 0)
+                    .attr("x2", width)
+                    .attr("y1", y(0))
+                    .attr("y2", y(0))
+                    .attr("stroke", "#000")
+                    .attr("stroke-width", 1);
         
+                // Append text labels to the left of each line
+                g.append("text")
+                    .attr("x", -5) // Adjust the x position for the text
+                    .attr("y", y(0)) // Align text vertically with the line
+                    .attr("dy", "0.35em") // Fine-tune vertical alignment
+                    .attr("text-anchor", "end") // Align text to the end of the label
+                    .text(function(d) {
+                        // Provide the label content here based on your data
+                        return d.key; 
+                    });
+            });
+        /*
         // Append lines first
         svg.selectAll("lines")
             .data(allDensity)
@@ -144,7 +173,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .attr("y1", y(0)) // Start y-coordinate (baseline)
             .attr("y2", y(0)) // End y-coordinate (baseline)
             .attr("stroke", "#000")
-            .attr("stroke-width", 1);
+            .attr("stroke-width", 1);*/
         
         // Add areas with modified translation
         svg.selectAll("areas")
