@@ -80,7 +80,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                        //.select(".domain").remove();
 
         yAxis.selectAll(".tick text")
-             .attr("dy", midY);
+             .attr("dy", midY / 2);
         
         var allDensity = []
         selectedYears.forEach(function (selectedYear) { 
