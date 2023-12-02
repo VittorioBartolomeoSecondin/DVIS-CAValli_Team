@@ -195,10 +195,10 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               return `translate(0, ${translation - height})`;
             })
             .attr("fill", function(d) { console.log(d); return d.colorMax; })
+            .attr("stroke-opacity", 0.3)
             .datum(function(d) { console.log(d); return d.densityMax; })
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
-            .attr("stroke-opacity", 0.3)
             .attr("d", d3.line()
               .curve(d3.curveBasis)
               .x(function(d) { return x(d[0]); })
@@ -214,10 +214,10 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               return `translate(0, ${translation - height})`;
             })
             .attr("fill", function(d) { console.log(d); return d.colorMin; })
+            .attr("stroke-opacity", 0.3)
             .datum(function(d) { console.log(d); return d.densityMin; })
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
-            .attr("stroke-opacity", 0.3)
             .attr("d", d3.line()
               .curve(d3.curveBasis)
               .x(function(d) { return x(d[0]); })
