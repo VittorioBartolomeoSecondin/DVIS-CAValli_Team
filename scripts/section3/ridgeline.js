@@ -81,6 +81,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         yAxis.selectAll(".tick text")
              .attr("transform", function(d) {
+                console.log(d);
                 var distanceFromMid = yName(d.key) - midY;
                 var translation = midY + (distanceFromMid * 0.5);
                 return `translate(0, ${translation - height})`;
@@ -113,6 +114,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .data(allDensity)
             .join("line")
             .attr("transform", function(d) {
+                console.log(d);
                 var distanceFromMid = yName(d.key) - midY;
                 var translation = midY + (distanceFromMid * 0.5);
                 return `translate(0, ${translation - height})`;
