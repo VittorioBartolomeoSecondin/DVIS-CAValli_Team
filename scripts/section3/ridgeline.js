@@ -52,7 +52,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         svg.append("g")
             .attr("class", "xAxis")
             .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x).tickValues([minTemperature - 2, minTemperature, 0, maxTemperature, maxTemperature + 10]).tickSize(-height) )
+            .call(d3.axisBottom(x).tickValues([minTemperature, 0, maxTemperature]).tickSize(-height) )
             .select(".domain").remove();
         
         // Add X axis label:
