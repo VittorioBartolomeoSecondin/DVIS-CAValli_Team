@@ -89,8 +89,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
              //.attr("dy", midY / 2);*/
         
         var allDensity = [];
-        var colorForMax = [];
-        var colorForMin = [];
+
         selectedYears.forEach(function (selectedYear) { 
             
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
@@ -98,9 +97,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
             ////////// TO CHECK
             colorForMaxYear = getColorForYear(selectedYear);
-            colorForMax.push(colorForMaxYear);
-            const color = chroma(colorForMaxYear);
-            colorForMin.push(color.desaturate(1).hex());
 
             arrayDataMax = []
             months.forEach(function (month) { arrayDataMax.push( +yearDataMax[0][month] ) });
@@ -110,10 +106,13 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             
             // Compute kernel density estimation for each column:
             //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); 
-            var thresholds = d3.ticks(...d3.nice(...d3.extent(arrayDataMax), 2), 12);
-            densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMax)
+            var thresholdsMax = d3.ticks(...d3.nice(...d3.extent(arrayDataMax), 2), 12);
+            var thresholdsMin = d3.ticks(...d3.nice(...d3.extent(arrayDataMin), 2), 12);
+            densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholdsMax, arrayDataMax)
+            densityMin = kernelDensityEstimator(kernelEpanechnikov(1), thresholdsMin, arrayDataMin)
             //densityMax = kde(arrayDataMax);
-            allDensity.push({key: selectedYear, density: densityMax});  
+            allDensity.push({key: selectedYear, densityMax: densityMax, densityMin: densityMin, colorMax: colorForMaxYear, 
+                             colorMin: chroma(colorForMaxYear).desaturate(1).hex()});  
             console.log(allDensity);
         });
 
@@ -157,8 +156,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               var translation = midY + (distanceFromMid * 0.5);
               return `translate(0, ${translation - height})`;
             })
-            .datum(function(d) { return d.density; })
-            .attr("fill", colorForMax)
+            .datum(function(d) { return d.densityMax; })
+            .attr("fill", function(d) { return d.colorMax; } )
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
             .attr("d", d3.line()
