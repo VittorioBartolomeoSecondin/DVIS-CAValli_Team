@@ -35,6 +35,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
+        var thresholds = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
+        
         // Append a title to the SVG
         svg.append("text")
             .attr("x", width / 2)
@@ -46,7 +48,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         // Add X axis
         var x = d3.scaleLinear()
-            .domain([minTemperature - 5, maxTemperature + 5])
+            .domain([d3.min(thresholds), d3.max(thresholds)])
             .range([0, width]);
         
         svg.append("g")
@@ -54,7 +56,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .attr("transform", "translate(0," + height + ")")
             .attr("stroke", "gray")
             .attr("stroke-opacity", 0.3)
-            .call(d3.axisBottom(x).tickValues([minTemperature, 0, maxTemperature]).tickSize(-height))
+            .call(d3.axisBottom(x).tickValues(thresholds, minTemperature, maxTemperature).tickSize(-height))
             .select(".domain").remove();
         
         // Add X axis label:
@@ -108,7 +110,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             // Compute kernel density estimation for each column:
             //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40));
             //densityMax = kde(arrayDataMax);
-            var thresholds = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
             densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMax)
             densityMin = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMin)            
             allDensity.push({key: selectedYear, 
