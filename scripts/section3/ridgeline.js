@@ -80,7 +80,12 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                        //.select(".domain").remove();
 
         yAxis.selectAll(".tick text")
-             .attr("dy", midY / 2);
+             .attr("transform", function(d) {
+                var distanceFromMid = yName(d.key) - midY;
+                var translation = midY + (distanceFromMid * 0.5);
+                return `translate(0, ${translation - height})`;
+            });
+             //.attr("dy", midY / 2);
         
         var allDensity = []
         selectedYears.forEach(function (selectedYear) { 
