@@ -35,7 +35,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         var selectState = document.getElementById("dataset-dropdown");
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
-        var thresholds = d3.ticks(...[minTemperature, maxTemperature], 12);
+        var thresholds = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
         
         // Append a title to the SVG
         svg.append("text")
