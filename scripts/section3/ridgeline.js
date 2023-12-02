@@ -56,13 +56,18 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .attr("transform", "translate(0," + height + ")")
             .attr("stroke", "green")
             .attr("stroke-opacity", 1)
-            .call(d3.axisBottom(x).tickValues([minTemperature, maxTemperature]).tickSize(height).tickFormat(d3.format(".1f")))
+            .call(d3.axisBottom(x).tickValues([minTemperature, maxTemperature]).tickSize(-height).tickFormat(d3.format(".1f")))
             .selectAll(".tick line") // Selecting all tick lines
             .attr("stroke", "green"); // Changing the tick color to green
 
         // Removing the domain line separately after the axis is created
         svg.select(".xAxis.primary")
            .select(".domain").remove();
+
+        // Move the tick text above the tick line
+        svg.select(".xAxis.primary")
+           .selectAll(".tick text")
+           .attr("y", height);
         
         svg.append("g")
             .attr("class", "xAxis secondary")
