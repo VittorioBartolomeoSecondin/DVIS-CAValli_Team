@@ -40,7 +40,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Append a title to the SVG
         svg.append("text")
             .attr("x", width / 2)
-            .attr("y", 0 - 20 - margin.top / 2)
+            .attr("y", 0 - 15 - margin.top / 2)
             .attr("text-anchor", "middle")
             .style("font-size", "20px")
             .style("text-decoration", "underline")
@@ -212,7 +212,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               var translation = midY + (distanceFromMid * 0.8);
               return `translate(0, ${translation - height})`;
             })
-            .attr("fill", function(d) { console.log(d); return `${d.colorMin}60`; })
+            .attr("fill", function(d) { console.log(d); return `${d.colorMin}80`; })
             .datum(function(d) { console.log(d); return d.densityMin; })
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
