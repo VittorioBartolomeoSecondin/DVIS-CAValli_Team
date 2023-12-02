@@ -52,7 +52,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .range([0, width]);
 
         svg.append("g")
-            .attr("class", "xAxis")
+            .attr("class", "xAxis primary")
             .attr("transform", "translate(0," + height + ")")
             .attr("stroke", "green")
             .attr("stroke-opacity", 0.3)
@@ -60,7 +60,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .select(".domain").remove();
         
         svg.append("g")
-            .attr("class", "xAxis")
+            .attr("class", "xAxis secondary")
             .attr("transform", "translate(0," + height + ")")
             .attr("stroke", "gray")
             .attr("stroke-opacity", 0.3)
