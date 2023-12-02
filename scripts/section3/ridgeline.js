@@ -196,7 +196,24 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             })
             .attr("fill", function(d) { console.log(d); return d.colorMax; })
             .datum(function(d) { console.log(d); return d.densityMax; })
-            //.attr("fill", function(d) { console.log(d); return d.colorMax; } )
+            .attr("stroke", "#000")
+            .attr("stroke-width", 1)
+            .attr("d", d3.line()
+              .curve(d3.curveBasis)
+              .x(function(d) { return x(d[0]); })
+              .y(function(d) { return y(d[1]); })
+            );
+
+        svg.selectAll("areas")
+          .data(allDensity)
+          .join("path")
+            .attr("transform", function(d) {
+              var distanceFromMid = yName(d.key) - midY;
+              var translation = midY + (distanceFromMid * 0.8);
+              return `translate(0, ${translation - height})`;
+            })
+            .attr("fill", function(d) { console.log(d); return d.colorMin; })
+            .datum(function(d) { console.log(d); return d.densityMin; })
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
             .attr("d", d3.line()
