@@ -95,9 +95,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         selectedYears.forEach(function (selectedYear) { 
             
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
-            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });  
-
-            ////////// TO CHECK
+            yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; }); 
+            
             colorForMaxYear = getColorForYear(selectedYear);
 
             arrayDataMax = []
@@ -107,14 +106,14 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
             
             // Compute kernel density estimation for each column:
-            //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); 
-            var thresholdsMax = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
-            var thresholdsMin = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
-            densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholdsMax, arrayDataMax)
-            densityMin = kernelDensityEstimator(kernelEpanechnikov(1), thresholdsMin, arrayDataMin)
+            //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40));
             //densityMax = kde(arrayDataMax);
-            allDensity.push({key: selectedYear, densityMax: densityMax, densityMin: densityMin, colorMax: colorForMaxYear, 
-                             colorMin: chroma(colorForMaxYear).desaturate(1).hex()});  
+            var thresholds = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
+            densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMax)
+            densityMin = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMin)            
+            allDensity.push({key: selectedYear, 
+                             densityMax: densityMax, densityMin: densityMin, 
+                             colorMax: colorForMaxYear, colorMin: chroma(colorForMaxYear).desaturate(1).hex()});  
         });
 
         //console.log(allDensity);
