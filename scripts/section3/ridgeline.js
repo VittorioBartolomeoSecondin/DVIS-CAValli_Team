@@ -57,9 +57,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .attr("stroke", "green")
             .attr("stroke-opacity", 1)
             .call(d3.axisBottom(x).tickValues([minTemperature, maxTemperature]).tickSize(-height))
+            .select(".domain").remove()
             .selectAll(".tick line") // Selecting all tick lines
-            .attr("stroke", "green") // Changing the tick color to green
-            .select(".domain").remove();
+            .attr("stroke", "green"); // Changing the tick color to green
         
         svg.append("g")
             .attr("class", "xAxis secondary")
