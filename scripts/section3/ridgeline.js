@@ -50,14 +50,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         var x = d3.scaleLinear()
             .domain([d3.min(thresholds), d3.max(thresholds)])
             .range([0, width]);
-        
-        svg.append("g")
-            .attr("class", "xAxis")
-            .attr("transform", "translate(0," + height + ")")
-            .attr("stroke", "gray")
-            .attr("stroke-opacity", 0.3)
-            .call(d3.axisBottom(x).tickValues(thresholds).tickSize(-height))
-            .select(".domain").remove();
 
         svg.append("g")
             .attr("class", "xAxis")
@@ -65,6 +57,14 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .attr("stroke", "red")
             .attr("stroke-opacity", 0.3)
             .call(d3.axisBottom(x).tickValues([minTemperature, maxTemperature]).tickSize(-height))
+            .select(".domain").remove();
+        
+        svg.append("g")
+            .attr("class", "xAxis")
+            .attr("transform", "translate(0," + height + ")")
+            .attr("stroke", "gray")
+            .attr("stroke-opacity", 0.3)
+            .call(d3.axisBottom(x).tickValues(thresholds).tickSize(-height))
             .select(".domain").remove();
         
         // Add X axis label:
