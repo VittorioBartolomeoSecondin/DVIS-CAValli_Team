@@ -112,13 +112,13 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         var yAxis = svg.append("g")
                        .call(d3.axisLeft(yName).tickSize(5));
         
-        yAxis.selectAll("text")
+        yAxis.selectAll(".tick text")
              .data(allDensity)
-             .attr("transform", function(d) {
+             .attr("dy", function(d) {
                 console.log(d);
                 var distanceFromMid = yName(d.key) - midY;
                 var translation = midY + (distanceFromMid * 0.5);
-                return `translate(0, ${translation - height})`;
+                return translation - height;
             });
         
         // Append lines first
