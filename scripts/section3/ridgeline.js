@@ -79,8 +79,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                        .call(d3.axisLeft(yName).tickSize(5));
                        //.select(".domain").remove();
 
-        yAxis.selectAll(".tick text")
-             .attr("dy", 10);
+        //yAxis.selectAll(".tick text")
+          //   .attr("dy", 10);
         
         var allDensity = []
         selectedYears.forEach(function (selectedYear) { 
