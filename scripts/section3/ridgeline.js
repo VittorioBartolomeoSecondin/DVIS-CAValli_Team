@@ -123,7 +123,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         yAxis.selectAll(".tick text")
              .data(allDensity)
              .attr("dy", function(d) {
-                console.log(d);
+                //console.log(d);
                 var distanceFromMid = yName(d.key) - midY;
                 var translation = midY + (distanceFromMid * 0.5);
                 return translation - height;
@@ -156,7 +156,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               return `translate(0, ${translation - height})`;
             })
             .datum(function(d) { return d.densityMax; })
-            .attr("fill", function(d) { return d.colorMax; } )
+            .attr("fill", function(d) { console.log(d.colorMax); return d.colorMax; } )
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
             .attr("d", d3.line()
