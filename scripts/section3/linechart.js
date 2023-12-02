@@ -75,7 +75,9 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
     
         linechart_svg.append("g")
             .attr("transform", `translate(0,${height})`)
-            .call(d3.axisBottom(x));
+            .call(d3.axisBottom(x))
+            .selectAll("text") 
+            .style("font-size", "14px");
     
         linechart_svg.append("g")
             .call(d3.axisLeft(y));
