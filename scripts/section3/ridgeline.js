@@ -194,8 +194,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               var translation = midY + (distanceFromMid * 0.8);
               return `translate(0, ${translation - height})`;
             })
-            .attr("fill", function(d) { console.log(d); return d.colorMax; })
-            .attr("stroke-opacity", 0.3)
+            .attr("fill", function(d) { console.log(d); return `${d.colorMax}80`; })
             .datum(function(d) { console.log(d); return d.densityMax; })
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
@@ -213,8 +212,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               var translation = midY + (distanceFromMid * 0.8);
               return `translate(0, ${translation - height})`;
             })
-            .attr("fill", function(d) { console.log(d); return d.colorMin; })
-            .attr("stroke-opacity", 0.3)
+            .attr("fill", function(d) { console.log(d); return `${d.colorMin}80`; })
             .datum(function(d) { console.log(d); return d.densityMin; })
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
