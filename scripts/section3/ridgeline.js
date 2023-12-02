@@ -66,7 +66,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         
         // Create a Y scale for densities
         var y = d3.scaleLinear()
-            .domain([0, 0.2])
+            .domain([0, 1])
             .range([height, 0]);
         
         // Create the Y axis for names
