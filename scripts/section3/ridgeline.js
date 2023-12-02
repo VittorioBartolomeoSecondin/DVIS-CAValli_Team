@@ -115,7 +115,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                              colorMin: chroma(colorForMaxYear).desaturate(1).hex()});  
         });
 
-        console.log(allDensity);
+        //console.log(allDensity);
         
         var yAxis = svg.append("g")
                        .call(d3.axisLeft(yName).tickSize(5));
@@ -134,7 +134,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .data(allDensity)
             .join("line")
             .attr("transform", function(d) {
-                console.log(d);
+                //console.log(d);
                 var distanceFromMid = yName(d.key) - midY;
                 var translation = midY + (distanceFromMid * 0.5);
                 return `translate(0, ${translation - height})`;
@@ -155,8 +155,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               var translation = midY + (distanceFromMid * 0.5);
               return `translate(0, ${translation - height})`;
             })
-            .datum(function(d) { return d.densityMax; })
-            .attr("fill", function(d) { console.log(d.colorMax); return d.colorMax; } )
+            .datum(function(d) { console.log(d); return d.densityMax; })
+            .attr("fill", function(d) { console.log(d); return d.colorMax; } )
             .attr("stroke", "#000")
             .attr("stroke-width", 1)
             .attr("d", d3.line()
