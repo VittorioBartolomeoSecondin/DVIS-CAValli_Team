@@ -46,7 +46,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         // Add X axis
         var x = d3.scaleLinear()
-            .domain([minTemperature - 10, maxTemperature + 10])
+            .domain([minTemperature - 15, maxTemperature + 15])
             .range([0, width]);
         
         svg.append("g")
