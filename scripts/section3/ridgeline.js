@@ -117,8 +117,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         //console.log(allDensity);
         
-        var yAxis = svg.append("g")
-                       .call(d3.axisLeft(yName).tickSize(5));
+        /*var yAxis = svg.append("g")
+                       .call(d3.axisLeft(yName).tickSize(5));*/
         
         /*yAxis.selectAll(".tick text")
              .data(allDensity)
