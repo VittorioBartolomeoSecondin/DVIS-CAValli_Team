@@ -113,10 +113,9 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             //densityMax = kde(arrayDataMax);
             allDensity.push({key: selectedYear, densityMax: densityMax, densityMin: densityMin, colorMax: colorForMaxYear, 
                              colorMin: chroma(colorForMaxYear).desaturate(1).hex()});  
-            console.log(allDensity);
         });
 
-        console.log(colorForMax);
+        console.log(allDensity);
         
         var yAxis = svg.append("g")
                        .call(d3.axisLeft(yName).tickSize(5));
