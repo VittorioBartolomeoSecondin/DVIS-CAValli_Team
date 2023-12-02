@@ -58,7 +58,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             .attr("transform", "translate(0," + height + ")")
             .attr("stroke", "gray")
             .attr("stroke-opacity", 0.3)
-            .call(d3.axisBottom(x).tickValues(thresholds).tickSize(-height))
+            .call(d3.axisBottom(x).tickValues(thresholdsMinMax).tickSize(-height))
             .select(".domain").remove();
         
         // Add X axis label:
