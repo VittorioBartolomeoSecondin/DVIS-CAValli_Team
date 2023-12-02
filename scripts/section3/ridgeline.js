@@ -36,7 +36,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         var stateName = selectState.options[selectState.selectedIndex].innerHTML;
 
         var thresholds = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
-        var thresholdsMinMax = thresholds;
+        var thresholdsMinMax = [...thresholds];
         thresholdsMinMax.push(minTemperature); thresholdsMinMax.push(maxTemperature);
         console.log(thresholds); console.log(thresholdsMinMax);
         
