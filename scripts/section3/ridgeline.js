@@ -75,7 +75,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         var midY = (yName.range()[0] + yName.range()[1]) / 2;
         
-        var yAxis = svg.append("g")
+        /*var yAxis = svg.append("g")
                        .call(d3.axisLeft(yName).tickSize(5));
                        //.select(".domain").remove();
 
@@ -86,7 +86,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                 var translation = midY + (distanceFromMid * 0.5);
                 return `translate(0, ${translation - height})`;
             });
-             //.attr("dy", midY / 2);
+             //.attr("dy", midY / 2);*/
         
         var allDensity = []
         selectedYears.forEach(function (selectedYear) { 
@@ -109,6 +109,18 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             console.log(allDensity);
         });
 
+        var yAxis = svg.append("g")
+                       .call(d3.axisLeft(yName).tickSize(5));
+        
+        yAxis.selectAll(".tick text")
+             .data(allDensity)
+             .attr("transform", function(d) {
+                console.log(d);
+                var distanceFromMid = yName(d.key) - midY;
+                var translation = midY + (distanceFromMid * 0.5);
+                return `translate(0, ${translation - height})`;
+            });
+        
         // Append lines first
         svg.selectAll("lines")
             .data(allDensity)
