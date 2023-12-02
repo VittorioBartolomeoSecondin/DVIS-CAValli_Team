@@ -88,17 +88,19 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             });
              //.attr("dy", midY / 2);*/
         
-        var allDensity = []
+        var allDensity = [];
+        var colorForMax = [];
+        var colorForMin = [];
         selectedYears.forEach(function (selectedYear) { 
             
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });  
 
-            const colorForMax = getColorForYear(selectedYear);
-            const color = chroma(colorForMax);
-            
-            // Desaturate the color
-            const colorForMin = color.desaturate(1).hex();
+            ////////// TO CHECK
+            colorForMaxYear = getColorForYear(selectedYear);
+            colorForMax.push(colorForMaxYear);
+            const color = chroma(colorForMaxYear);
+            colorForMin.push(color.desaturate(1).hex());
 
             arrayDataMax = []
             months.forEach(function (month) { arrayDataMax.push( +yearDataMax[0][month] ) });
@@ -154,8 +156,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
               return `translate(0, ${translation - height})`;
             })
             .datum(function(d) { return d.density; })
-            .attr("fill", "#69b3a2")
-            .attr("stroke", colorForMax)
+            .attr("fill", colorForMax)
+            .attr("stroke", "#000")
             .attr("stroke-width", 1)
             .attr("d", d3.line()
               .curve(d3.curveBasis)
