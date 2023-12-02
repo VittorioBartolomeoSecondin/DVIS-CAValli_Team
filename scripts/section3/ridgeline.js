@@ -108,8 +108,8 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             
             // Compute kernel density estimation for each column:
             //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40)); 
-            var thresholdsMax = d3.ticks(...d3.nice(...d3.extent(arrayDataMax), 2), 12);
-            var thresholdsMin = d3.ticks(...d3.nice(...d3.extent(arrayDataMin), 2), 12);
+            var thresholdsMax = d3.ticks(...d3.nice([minTemperature, maxTemperature], 2), 12);
+            var thresholdsMin = d3.ticks(...d3.nice([minTemperature, maxTemperature], 2), 12);
             densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholdsMax, arrayDataMax)
             densityMin = kernelDensityEstimator(kernelEpanechnikov(1), thresholdsMin, arrayDataMin)
             //densityMax = kde(arrayDataMax);
