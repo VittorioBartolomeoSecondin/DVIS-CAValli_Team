@@ -40,7 +40,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         // Append a title to the SVG
         svg.append("text")
             .attr("x", width / 2)
-            .attr("y", 0 - margin.top / 2)
+            .attr("y", 0 -10 - margin.top / 2)
             .attr("text-anchor", "middle")
             .style("font-size", "20px")
             .style("text-decoration", "underline")
