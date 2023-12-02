@@ -76,7 +76,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         var midY = (yName.range()[0] + yName.range()[1]) / 2;
         
         var yAxis = svg.append("g")
-                       .call(d3.axisLeft(yName).tickSize(1))
+                       .call(d3.axisLeft(yName).tickSize(5))
                        .select(".domain").remove();
 
         yAxis.selectAll(".tick text")
