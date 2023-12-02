@@ -66,7 +66,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         svg.select(".xAxis.primary")
             .selectAll(".tick text") 
-            .style("font-size", "8px"); 
+            .style("font-size", "5px"); 
         
         svg.append("g")
             .attr("class", "xAxis secondary")
