@@ -38,6 +38,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
         var thresholds = d3.ticks(...d3.nice(...[minTemperature, maxTemperature], 2), 12);
         var thresholdsMinMax = thresholds;
         thresholdsMinMax.push(minTemperature); thresholdsMinMax.push(maxTemperature);
+        console.log(thresholds); console.log(thresholdsMinMax);
         
         // Append a title to the SVG
         svg.append("text")
