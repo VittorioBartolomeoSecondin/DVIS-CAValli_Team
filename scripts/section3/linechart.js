@@ -128,6 +128,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             
             linechart_svg.append("path")
                 .datum(filteredDataMin)
+                .attr("class", "line-min-" + selectedYear)
                 .attr("fill", "none")
                 .attr("stroke", colorForMin)
                 .attr("stroke-width", 1.5)
@@ -146,6 +147,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             
             linechart_svg.append("path")
                 .datum(filteredDataMax)
+                .attr("class", "line-max-" + selectedYear)
                 .attr("fill", "none")
                 .attr("stroke", colorForMax)
                 .attr("stroke-width", 1.5)
