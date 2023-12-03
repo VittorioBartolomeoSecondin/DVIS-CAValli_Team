@@ -175,12 +175,14 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                         circles.style("display", displayStyle);
                         maxLines.style("display", displayStyle);
                         minLines.style("display", displayStyle);
+                        avgLines.style("display", displayStyle);
                         legendText.style("font-weight", isClicked ? "bold" : "normal");
                     } else {
                         if (!isClicked) {
                             circles.style("display", null);
                             maxLines.style("display", null);
                             minLines.style("display", null);
+                            avgLines.style("display", null);
                         } else {
                             legendText.style("font-weight", "normal");
                         }
