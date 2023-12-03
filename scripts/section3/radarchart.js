@@ -2,6 +2,8 @@ var margin2 = { top: 60, right: 160, bottom: 70, left: 100 }, // 60 70 70 100
     width2 = 460 - margin2.left - margin2.right,
     height2 = 450 - margin2.top - margin2.bottom;
 
+var previousClickedYear = null;
+
 function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears) {
 
     // // Append the svg object to the body of the page
@@ -165,19 +167,33 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     const maxLines = d3.selectAll(`.line-max-${year}`);
                     const minLines = d3.selectAll(`.line-min-${year}`);
                     const legendText = d3.select(`.legend-text-${year}`);
-            
-                    if (year !== clickedYear) {
-                        circles.style("display", "none");
-                        maxLines.style("display", "none");
-                        minLines.style("display", "none");
-                        legendText.style("font-weight", "normal"); // Reset font weight of non-clicked years
-                    } else {
-                        circles.style("display", null);
-                        maxLines.style("display", null);
-                        minLines.style("display", null);
-                        legendText.style("font-weight", "bold"); // Change font weight of clicked year
+
+                    if (clickedYear != previousClickedYear) {
+                        if (year !== clickedYear) {
+                            circles.style("display", "none");
+                            maxLines.style("display", "none");
+                            minLines.style("display", "none");
+                            legendText.style("font-weight", "normal"); // Reset font weight of non-clicked years
+                        } else {
+                            circles.style("display", null);
+                            maxLines.style("display", null);
+                            minLines.style("display", null);
+                            legendText.style("font-weight", "bold"); // Change font weight of clicked year
+                        }
+                    }
+                    else {
+                        if (year !== clickedYear) {
+                            circles.style("display", null);
+                            maxLines.style("display", null);
+                            minLines.style("display", null);
+                        }
+                        else {
+                            legendText.style("font-weight", "normal"); // Reset font weight of clicked year
+                        }
                     }
                 });
+
+                previousClickedYear = clickedYear;
             }
    
            // Colours that are used
