@@ -169,7 +169,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     const maxLines = d3.selectAll(`.line-max-${year}`);
                     const minLines = d3.selectAll(`.line-min-${year}`);
                     const avgLines = d3.selectAll(`.line-avg-${year}`);
-                    const legendText = d3.select(`.legend-text-${year}`);
+                    const legendText = d3.select(`.legend-text-${year}`);console.log(legendText);
             
                     if (clickedYear !== previousClickedYear) {
                         circles.style("display", displayStyle);
