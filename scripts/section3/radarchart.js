@@ -193,7 +193,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     }
                 });
 
-                previousClickedYear = clickedYear;
+                if (clickedYear != previousClickedYear) previousClickedYear = clickedYear;
+                else previousClickedYear = null;
             }
    
            // Colours that are used
