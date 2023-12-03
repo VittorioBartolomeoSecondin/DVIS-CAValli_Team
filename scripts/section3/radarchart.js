@@ -170,12 +170,12 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                         circles.style("display", "none");
                         maxLines.style("display", "none");
                         minLines.style("display", "none");
-                        legendText.style("fill", "black"); // Reset color of non-clicked years
+                        legendText.style("font-weight", "normal"); // Reset font weight of non-clicked years
                     } else {
                         circles.style("display", null);
                         maxLines.style("display", null);
                         minLines.style("display", null);
-                        legendText.style("fill", "red"); // Change color of clicked year
+                        legendText.style("font-weight", "bold"); // Change font weight of clicked year
                     }
                 });
             }
