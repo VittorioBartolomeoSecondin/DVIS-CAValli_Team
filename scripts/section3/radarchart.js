@@ -159,7 +159,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                return coordinates;
            }
 
-            function handleLegendClick(clickedYear) {
+            /*function handleLegendClick(clickedYear) {
                 const allYears = selectedYears.map(String);
             
                 allYears.forEach(year => {
@@ -195,8 +195,38 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
 
                 if (clickedYear != previousClickedYear) previousClickedYear = clickedYear;
                 else previousClickedYear = null;
+            }*/
+
+            function handleLegendClick(clickedYear) {
+                const allYears = selectedYears.map(String);
+                
+                allYears.forEach(year => {
+                    const isClicked = year === clickedYear;
+                    const displayStyle = isClicked ? null : "none";
+                    const circles = d3.selectAll(`.circle-avg-${year}, .circle-max-${year}, .circle-min-${year}`);
+                    const maxLines = d3.selectAll(`.line-max-${year}`);
+                    const minLines = d3.selectAll(`.line-min-${year}`);
+                    const legendText = d3.select(`.legend-text-${year}`);
+            
+                    if (clickedYear !== previousClickedYear) {
+                        circles.style("display", displayStyle);
+                        maxLines.style("display", displayStyle);
+                        minLines.style("display", displayStyle);
+                        legendText.style("font-weight", isClicked ? "bold" : "normal");
+                    } else {
+                        if (!isClicked) {
+                            circles.style("display", null);
+                            maxLines.style("display", null);
+                            minLines.style("display", null);
+                        } else {
+                            legendText.style("font-weight", "normal");
+                        }
+                    }
+                });
+            
+                previousClickedYear = (clickedYear !== previousClickedYear) ? clickedYear : null;
             }
-   
+               
            // Colours that are used
            var used_colours = {}
            
