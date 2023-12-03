@@ -155,7 +155,30 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                }
                coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
                return coordinates;
-           }       
+           }
+
+            function handleLegendClick(clickedYear) {
+                const allYears = selectedYears.map(String);
+            
+                allYears.forEach(year => {
+                    const circles = d3.selectAll(`.circle-avg-${year}, .circle-max-${year}, .circle-min-${year}`);
+                    const maxLines = d3.selectAll(`.line-max-${year}`);
+                    const minLines = d3.selectAll(`.line-min-${year}`);
+                    const legendText = d3.select(`.legend-text-${year}`);
+            
+                    if (year !== clickedYear) {
+                        circles.style("display", "none");
+                        maxLines.style("display", "none");
+                        minLines.style("display", "none");
+                        legendText.style("fill", "black"); // Reset color of non-clicked years
+                    } else {
+                        circles.style("display", null);
+                        maxLines.style("display", null);
+                        minLines.style("display", null);
+                        legendText.style("fill", "red"); // Change color of clicked year
+                    }
+                });
+            }
    
            // Colours that are used
            var used_colours = {}
@@ -247,11 +270,13 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        .attr("y", j * 20)
                        .attr("width", 10)
                        .attr("height", 10)
-                       .attr("fill", color);
+                       .attr("fill", color)
+                       .on("click", () => handleLegendClick(key));
                
                    linechart_legend.append("text")
                        .attr("x", width + 15)
                        .attr("y", j * 20 + 9)
+                       .attr("class", "legend-text-" + key)
                        .text(key) // Display the key associated with the color
                        .style("font-size", "12px");
                });
