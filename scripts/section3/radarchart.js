@@ -159,44 +159,6 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                return coordinates;
            }
 
-            /*function handleLegendClick(clickedYear) {
-                const allYears = selectedYears.map(String);
-            
-                allYears.forEach(year => {
-                    const circles = d3.selectAll(`.circle-avg-${year}, .circle-max-${year}, .circle-min-${year}`);
-                    const maxLines = d3.selectAll(`.line-max-${year}`);
-                    const minLines = d3.selectAll(`.line-min-${year}`);
-                    const legendText = d3.select(`.legend-text-${year}`);
-
-                    if (clickedYear != previousClickedYear) {
-                        if (year !== clickedYear) {
-                            circles.style("display", "none");
-                            maxLines.style("display", "none");
-                            minLines.style("display", "none");
-                            legendText.style("font-weight", "normal"); // Reset font weight of non-clicked years
-                        } else {
-                            circles.style("display", null);
-                            maxLines.style("display", null);
-                            minLines.style("display", null);
-                            legendText.style("font-weight", "bold"); // Change font weight of clicked year
-                        }
-                    }
-                    else {
-                        if (year !== clickedYear) {
-                            circles.style("display", null);
-                            maxLines.style("display", null);
-                            minLines.style("display", null);
-                        }
-                        else {
-                            legendText.style("font-weight", "normal"); // Reset font weight of clicked year
-                        }
-                    }
-                });
-
-                if (clickedYear != previousClickedYear) previousClickedYear = clickedYear;
-                else previousClickedYear = null;
-            }*/
-
             function handleLegendClick(clickedYear) {
                 const allYears = selectedYears.map(String);
                 
@@ -206,6 +168,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     const circles = d3.selectAll(`.circle-avg-${year}, .circle-max-${year}, .circle-min-${year}`);
                     const maxLines = d3.selectAll(`.line-max-${year}`);
                     const minLines = d3.selectAll(`.line-min-${year}`);
+                    const avgLines = d3.selectAll(`.line-avg-${year}`);
                     const legendText = d3.select(`.legend-text-${year}`);
             
                     if (clickedYear !== previousClickedYear) {
@@ -254,6 +217,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        // Draw path element
                        d3.select(this)
                            .append("path")
+                           .attr("class", function() { return (i == 0 ? "line-min-" : i == 1 ? "line-avg-" : "line-max-") + selectedYear})
                            .attr("d", line(pathData))
                            //.attr("stroke-width", 2)
                            .attr("stroke", color)
@@ -267,6 +231,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                            .enter()
                            .filter(dp => !isNaN(dp)) // Filter out NaN values
                            .append("circle")
+                           .attr("class", function() { return (i == 0 ? "circle-min-" : i == 1 ? "circle-avg-" : "circle-max-") + selectedYear})
                            .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
                            .attr("temperatureFahrenheit", function(d, i) { return yearData[0][months[i] + "F"]; })
                            //.attr("temperatureFahrenheit", function(d, i) { return yearDataAvg[0][months[i] + "F"]; })
@@ -304,11 +269,13 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        .attr("y", j * 20)
                        .attr("width", 10)
                        .attr("height", 10)
-                       .attr("fill", color);
+                       .attr("fill", color)
+                       .on("click", () => handleLegendClick(key));
                
                    radarchart_legend.append("text")
                        .attr("x", width2 + 110) // 85
                        .attr("y", j * 20 + 9)
+                       .attr("class", "legend-text-" + key)
                        .text(key) // Display the key associated with the color
                        .style("font-size", "12px");
        
