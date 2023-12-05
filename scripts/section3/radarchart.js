@@ -174,6 +174,15 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     selectedColors.push(clickedYear);
                 }
                 
+                // Update the visualization based on the selected colors
+                updateVisualization(selectedColors);
+            
+                // Update the legend styles
+                updateLegendStyles();
+            }
+            
+            function updateVisualization(selectedColors) {
+                
                 allYears.forEach(year => {
                     const isClicked = selectedColors.includes(year);
                     const displayStyle = isClicked ? null : "none";
@@ -183,7 +192,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     const avgLines = d3.selectAll(`.line-avg-${year}`);
                     const legendText = d3.selectAll(`.legend-text-${year}`);
             
-                    if (clickedYear !== previousClickedYear) {
+                    /*if (clickedYear !== previousClickedYear) {
                         circles.style("display", displayStyle);
                         maxLines.style("display", displayStyle);
                         minLines.style("display", displayStyle);
@@ -198,11 +207,34 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                         } else {
                             legendText.style("font-weight", "normal");
                         }
-                    }
+                    }*/
+
+                    circles.style("display", displayStyle);
+                    maxLines.style("display", displayStyle);
+                    minLines.style("display", displayStyle);
+                    avgLines.style("display", displayStyle);
+                    legendText.style("font-weight", isClicked ? "bold" : "normal");
+                    
                 });
             
                 //previousClickedYear = (clickedYear !== previousClickedYear) ? clickedYear : null;
-                previousClickedYear = selectedColors.length > 0 ? selectedColors[selectedColors.length - 1] : null;
+                previousClickedYear = selectedColors.length > 0 ? selectedColors[0] : null;
+            }
+
+            function updateLegendStyles() {
+                const keys = Object.keys(used_colours);
+                
+                keys.forEach(key => {
+                    const color = used_colours[key];
+                    const isClicked = selectedColors.includes(key);
+                    
+                    d3.select(`.legend-rect-${key}`)
+                        .style("fill", isClicked ? color : "white")
+                        .style("stroke", color);
+            
+                    d3.select(`.legend-text-${key}`)
+                        .style("font-weight", isClicked ? "bold" : "normal");
+                });
             }
                
            // Colours that are used
@@ -280,6 +312,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                    var color = used_colours[key]; // Get color value for the key
                
                    radarchart_legend.append("rect")
+                       .attr("class", `legend-rect-${key}`)
                        .attr("x", width2 + 95) // 100
                        .attr("y", j * 20)
                        .attr("width", 10)
@@ -296,6 +329,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        .style("font-size", "12px");
        
                   linechart_legend.append("rect")
+                       .attr("class", `legend-rect-${key}`)
                        .attr("x", width)
                        .attr("y", j * 20)
                        .attr("width", 10)
