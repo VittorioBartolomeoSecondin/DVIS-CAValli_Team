@@ -134,7 +134,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             allDensity.push({key: selectedYear, 
                              densityMax: densityMax, densityMin: densityMin, 
                              //colorMax: colorForMaxYear, colorMin: chroma(colorForMaxYear).darken().hex()});
-                             colorMax: "red", colorMin: "blue"});
+                             colorMax: '#FF0000', colorMin: '#0000FF'});
         });
 
         //console.log(allDensity);
