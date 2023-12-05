@@ -157,13 +157,25 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                }
                coordinates.push(angleToCoordinate((Math.PI / 2) + (2 * Math.PI), data_point["Jan"]));
                return coordinates;
-           }
+            }
+
+            var selectedColors = [];
 
             function handleLegendClick(clickedYear) {
                 const allYears = selectedYears.map(String);
+
+                // Check if the clicked color is already selected
+                const index = selectedColors.indexOf(clickedYear);
+                
+                // If selected, remove it; otherwise, add it
+                if (index !== -1) {
+                    selectedColors.splice(index, 1);
+                } else {
+                    selectedColors.push(clickedYear);
+                }
                 
                 allYears.forEach(year => {
-                    const isClicked = year === clickedYear;
+                    const isClicked = selectedColors.includes(year);
                     const displayStyle = isClicked ? null : "none";
                     const circles = d3.selectAll(`.circle-avg-${year}, .circle-max-${year}, .circle-min-${year}`);
                     const maxLines = d3.selectAll(`.line-max-${year}`);
@@ -189,7 +201,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     }
                 });
             
-                previousClickedYear = (clickedYear !== previousClickedYear) ? clickedYear : null;
+                //previousClickedYear = (clickedYear !== previousClickedYear) ? clickedYear : null;
+                previousClickedYear = selectedColors.length > 0 ? selectedColors[selectedColors.length - 1] : null;
             }
                
            // Colours that are used
@@ -272,7 +285,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        .attr("width", 10)
                        .attr("height", 10)
                        .attr("fill", color)
-                       .on("click", () => handleLegendClick(key));
+                       .on("click", () => handleLegendClick(key))
+                           .style("cursor", "pointer");
                
                    radarchart_legend.append("text")
                        .attr("x", width2 + 110) // 85
@@ -287,7 +301,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        .attr("width", 10)
                        .attr("height", 10)
                        .attr("fill", color)
-                       .on("click", () => handleLegendClick(key));
+                       .on("click", () => handleLegendClick(key))
+                           .style("cursor", "pointer");
                
                    linechart_legend.append("text")
                        .attr("x", width + 15)
