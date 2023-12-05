@@ -308,12 +308,8 @@ function handleMouseOver(event, d) {
         .style("opacity", 1);
 
     // Tooltip content
-    //const temperatureCelsius = getTemperatureCelsius(this);
     const temperatureCelsius = d3.select(this).attr("temperatureCelsius") + "°C";
     const temperatureFahrenheit = d3.select(this).attr("temperatureFahrenheit") + "°F";
-    /*const data = d3.select(this).data()[0];
-    const temperatureCelsius = data.value + "°C";
-    const temperatureFahrenheit = data.valueF + "°F";*/
     tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 20) + "px");
