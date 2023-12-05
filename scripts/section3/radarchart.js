@@ -193,15 +193,12 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     const minLines = d3.selectAll(`.line-min-${year}`);
                     const avgLines = d3.selectAll(`.line-avg-${year}`);
                     const legendText = d3.selectAll(`.legend-text-${year}`);
-                    const legendIcons = d3.selectAll(`.legend-rect-${year}`);
 
                     circles.style("display", displayStyle);
                     maxLines.style("display", displayStyle);
                     minLines.style("display", displayStyle);
                     avgLines.style("display", displayStyle);
                     legendText.style("font-weight", isClicked ? "bold" : "normal");
-                    legendIcons.style("fill", isClicked ? color : "white");
-                    legendIcons.style("stroke", color);
                     
                 });
             
