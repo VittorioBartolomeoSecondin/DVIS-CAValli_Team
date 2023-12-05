@@ -182,6 +182,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
             }
             
             function updateVisualization(selectedColors) {
+
+                const allYears = selectedYears.map(String);
                 
                 allYears.forEach(year => {
                     const isClicked = selectedColors.includes(year);
