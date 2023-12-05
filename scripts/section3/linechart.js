@@ -108,12 +108,13 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             yearDataMax = dataMax.filter(function (d) { return +d.year === +selectedYear; });
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
 
-            const colorForMax = getColorForYear(selectedYear);
+            const color = getColorForYear(selectedYear);
+            /*const colorForMax = getColorForYear(selectedYear);
             const color = chroma(colorForMax);
             
             // Desaturate the color
             const colorForAvg = color.desaturate().hex();
-            const colorForMin = color.desaturate(1).hex();
+            const colorForMin = color.desaturate(1).hex();*/
 
             var lineMin = d3.line()
                 .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
@@ -130,7 +131,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .datum(filteredDataMin)
                 .attr("class", "line-min-" + selectedYear)
                 .attr("fill", "none")
-                .attr("stroke", colorForMin)
+                .attr("stroke", color)
                 .attr("stroke-width", 1.5)
                 .attr("d", lineMin);
 
@@ -149,7 +150,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .datum(filteredDataMax)
                 .attr("class", "line-max-" + selectedYear)
                 .attr("fill", "none")
-                .attr("stroke", colorForMax)
+                .attr("stroke", color)
                 .attr("stroke-width", 1.5)
                 .attr("d", lineMax);
         
@@ -164,7 +165,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataAvg[0][d]); })
                 .attr("r", 4)
-                .style("fill", colorForAvg)
+                .style("fill", color)
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
@@ -179,7 +180,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataMax[0][d]); })           
                 .attr("r", 4)
-                .style("fill", colorForMax)
+                .style("fill", color)
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         
@@ -194,7 +195,7 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
                 .attr("cx", function (d) { return x(d); })
                 .attr("cy", function (d) { return y(yearDataMin[0][d]); })       
                 .attr("r", 4)
-                .style("fill", colorForMin)
+                .style("fill", color)
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut);
         });
