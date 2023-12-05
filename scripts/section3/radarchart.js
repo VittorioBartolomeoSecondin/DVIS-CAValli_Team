@@ -187,29 +187,12 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                 
                 allYears.forEach(year => {
                     const isClicked = selectedColors.includes(year);
-                    const displayStyle = isClicked ? null : "none";
+                    const displayStyle = isClicked || selectedColors.length === 0 ? null : "none";
                     const circles = d3.selectAll(`.circle-avg-${year}, .circle-max-${year}, .circle-min-${year}`);
                     const maxLines = d3.selectAll(`.line-max-${year}`);
                     const minLines = d3.selectAll(`.line-min-${year}`);
                     const avgLines = d3.selectAll(`.line-avg-${year}`);
                     const legendText = d3.selectAll(`.legend-text-${year}`);
-            
-                    /*if (clickedYear !== previousClickedYear) {
-                        circles.style("display", displayStyle);
-                        maxLines.style("display", displayStyle);
-                        minLines.style("display", displayStyle);
-                        avgLines.style("display", displayStyle);
-                        legendText.style("font-weight", isClicked ? "bold" : "normal");
-                    } else {
-                        if (!isClicked) {
-                            circles.style("display", null);
-                            maxLines.style("display", null);
-                            minLines.style("display", null);
-                            avgLines.style("display", null);
-                        } else {
-                            legendText.style("font-weight", "normal");
-                        }
-                    }*/
 
                     circles.style("display", displayStyle);
                     maxLines.style("display", displayStyle);
