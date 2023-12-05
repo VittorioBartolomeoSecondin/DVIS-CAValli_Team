@@ -133,7 +133,7 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             densityMin = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMin)            
             allDensity.push({key: selectedYear, 
                              densityMax: densityMax, densityMin: densityMin, 
-                             colorMax: colorForMaxYear, colorMin: chroma(colorForMaxYear).desaturate(1).hex()});  
+                             colorMax: colorForMaxYear, colorMin: chroma(colorForMaxYear).darken().hex()});  
         });
 
         //console.log(allDensity);
