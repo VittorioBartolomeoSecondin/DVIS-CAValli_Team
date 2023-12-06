@@ -202,13 +202,14 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
 
             function updateLegendStyles() {
                 const keys = Object.keys(used_colours);
-                
+                const isColorsEmpty = selectedColors.length === 0;
+            
                 keys.forEach(key => {
                     const color = used_colours[key];
                     const isClicked = selectedColors.includes(key);
                     
                     d3.selectAll(`.legend-rect-${key}`)
-                        .style("fill", isClicked ? color : "white")
+                        .style("fill", isClicked || isColorsEmpty ? color : "white")
                         .style("stroke", color);
             
                     d3.selectAll(`.legend-text-${key}`)
