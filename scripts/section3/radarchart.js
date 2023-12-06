@@ -2,8 +2,6 @@ var margin2 = { top: 60, right: 160, bottom: 70, left: 100 }, // 60 70 70 100
     width2 = 460 - margin2.left - margin2.right,
     height2 = 450 - margin2.top - margin2.bottom;
 
-var previousClickedYear = null;
-
 function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears) {
 
     // // Append the svg object to the body of the page
@@ -162,7 +160,6 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
             var selectedColors = [];
 
             function handleLegendClick(clickedYear) {
-                const allYears = selectedYears.map(String);
 
                 // Check if the clicked color is already selected
                 const index = selectedColors.indexOf(clickedYear);
@@ -201,9 +198,6 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     legendText.style("font-weight", isClicked ? "bold" : "normal");
                     
                 });
-            
-                //previousClickedYear = (clickedYear !== previousClickedYear) ? clickedYear : null;
-                previousClickedYear = selectedColors.length > 0 ? selectedColors[0] : null;
             }
 
             function updateLegendStyles() {
@@ -213,11 +207,11 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     const color = used_colours[key];
                     const isClicked = selectedColors.includes(key);
                     
-                    d3.select(`.legend-rect-${key}`)
+                    d3.selectAll(`.legend-rect-${key}`)
                         .style("fill", isClicked ? color : "white")
                         .style("stroke", color);
             
-                    d3.select(`.legend-text-${key}`)
+                    d3.selectAll(`.legend-text-${key}`)
                         .style("font-weight", isClicked ? "bold" : "normal");
                 });
             }
