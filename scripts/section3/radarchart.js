@@ -293,7 +293,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                
                    radarchart_legend.append("rect")
                        .attr("class", `legend-rect-${key}`)
-                       .attr("x", width2 + 95) // 100
+                       .attr("x", width2 + 90) // 100
                        .attr("y", j * 20)
                        .attr("width", 10)
                        .attr("height", 10)
@@ -302,7 +302,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                            .style("cursor", "pointer");
                
                    radarchart_legend.append("text")
-                       .attr("x", width2 + 110) // 85
+                       .attr("x", width2 + 105) // 85
                        .attr("y", j * 20 + 9)
                        .attr("class", "legend-text-" + key)
                        .text(key) // Display the key associated with the color
