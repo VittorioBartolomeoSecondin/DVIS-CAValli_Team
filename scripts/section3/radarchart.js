@@ -4,14 +4,6 @@ var margin2 = { top: 60, right: 160, bottom: 70, left: 100 }, // 60 70 70 100
 
 function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_3, selectedYears) {
 
-    // // Append the svg object to the body of the page
-    // var svg = d3.select("#radarchart_1").append("svg")
-    //     .attr("id", "radarchart_svg")
-    //     .attr("width2", width2 + margin2.left + margin2.right)
-    //     .attr("height2", height2 + margin2.top + margin2.bottom)
-    //     .append("g")
-    //     .attr("transform", `translate(${margin2.left},${margin2.top})`);
-
     // Read the data
     Promise.all([
         d3.csv(selectedDataset_1),
