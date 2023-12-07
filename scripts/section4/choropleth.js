@@ -4,7 +4,7 @@ const svg = d3.select("svg"),
 	height = svg.attr("height"),
 	path = d3.geoPath(),
 	data = d3.map(),
-	usamap = "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson",
+	usamap = "https://eric.clst.org/assets/wiki/uploads/Stuff/gz_2010_us_040_00_500k.json",
 	tree_abundance = "data/section4/state_abundance_fips.csv";
 
 let centered, world;
