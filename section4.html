@@ -48,7 +48,7 @@
 
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script>
-             var map = d3.choropleth()
+             var map = d3.geomap.choropleth()
                          .geofile('/d3-geomap/topojson/countries/USA.json')
                          .projection(d3.geoAlbersUsa)
                          .column('abundance')
