@@ -203,6 +203,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
             function updateLegendStyles() {
                 const keys = Object.keys(used_colours);
                 const isColorsEmpty = selectedColors.length === 0;
+                const isColorsFull = selectedColors.length === selectedYears.length;
             
                 keys.forEach(key => {
                     const color = used_colours[key];
@@ -213,7 +214,7 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                         .style("stroke", color);
             
                     d3.selectAll(`.legend-text-${key}`)
-                        .style("font-weight", isClicked ? "bold" : "normal");
+                        .style("font-weight", isClicked && !isColorsFull ? "bold" : "normal");
                 });
             }
                
