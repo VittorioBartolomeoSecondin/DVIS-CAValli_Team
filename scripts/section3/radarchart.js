@@ -216,6 +216,8 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     d3.selectAll(`.legend-text-${key}`)
                         .style("font-weight", isClicked && !isColorsFull ? "bold" : "normal");
                 });
+
+                if (isColorsFull) selectedColors = [];
             }
                
            // Colours that are used
