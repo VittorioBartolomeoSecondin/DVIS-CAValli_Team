@@ -1,7 +1,6 @@
 // initial setup
 const svg = d3.select("svg"),
 	path = d3.geoPath(),
-	data = d3.map(),
 	usamap = "https://eric.clst.org/assets/wiki/uploads/Stuff/gz_2010_us_040_00_500k.json";
 
 // Load GeoJSON file
