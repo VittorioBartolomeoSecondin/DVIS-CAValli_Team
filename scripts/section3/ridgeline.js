@@ -98,19 +98,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
 
         var midY = (yName.range()[0] + yName.range()[1]) / 2;
         
-        /*var yAxis = svg.append("g")
-                       .call(d3.axisLeft(yName).tickSize(5));
-                       //.select(".domain").remove();
-
-        yAxis.selectAll(".tick text")
-             .attr("transform", function(d) {
-                console.log(d);
-                var distanceFromMid = yName(d.key) - midY;
-                var translation = midY + (distanceFromMid * 0.5);
-                return `translate(0, ${translation - height})`;
-            });
-             //.attr("dy", midY / 2);*/
-        
         var allDensity = [];
 
         selectedYears.forEach(function (selectedYear) { 
@@ -127,8 +114,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
             months.forEach(function (month) { arrayDataMin.push( +yearDataMin[0][month] ) });
             
             // Compute kernel density estimation for each column:
-            //var kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40));
-            //densityMax = kde(arrayDataMax);
             densityMax = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMax)
             densityMin = kernelDensityEstimator(kernelEpanechnikov(1), thresholds, arrayDataMin)            
             allDensity.push({key: selectedYear, 
@@ -136,20 +121,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                              //colorMax: colorForMaxYear, colorMin: chroma(colorForMaxYear).darken().hex()});
                              colorMax: '#FF0000', colorMin: '#0000FF'});
         });
-
-        //console.log(allDensity);
-        
-        /*var yAxis = svg.append("g")
-                       .call(d3.axisLeft(yName).tickSize(5));*/
-        
-        /*yAxis.selectAll(".tick text")
-             .data(allDensity)
-             .attr("dy", function(d) {
-                //console.log(d);
-                var distanceFromMid = yName(d.key) - midY;
-                var translation = midY + (distanceFromMid * 0.5);
-                return translation - height;
-            });*/
 
         svg.selectAll("lines")
             .data(allDensity)
@@ -179,23 +150,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
                         return d.key; 
                     });
             });
-        /*
-        // Append lines first
-        svg.selectAll("lines")
-            .data(allDensity)
-            .join("line")
-            .attr("transform", function(d) {
-                //console.log(d);
-                var distanceFromMid = yName(d.key) - midY;
-                var translation = midY + (distanceFromMid * 0.5);
-                return `translate(0, ${translation - height})`;
-            })
-            .attr("x1", 0) // Start x-coordinate
-            .attr("x2", width) // End x-coordinate
-            .attr("y1", y(0)) // Start y-coordinate (baseline)
-            .attr("y2", y(0)) // End y-coordinate (baseline)
-            .attr("stroke", "#000")
-            .attr("stroke-width", 1);*/
         
         // Add areas with modified translation
         svg.selectAll("areas")
@@ -236,27 +190,6 @@ function updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears) {
     });
 }
 
-/*function handleMouseOver(event, d) {
-    // Show the tooltip
-    tooltip.transition()
-        .duration(200)
-        .style("opacity", 1);
-
-    // Tooltip content
-    const temperatureCelsius = d3.select(this).attr("temperatureCelsius") + "°C";
-    const temperatureFahrenheit = d3.select(this).attr("temperatureFahrenheit") + "°F";
-    tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
-        .style("left", (event.pageX + 10) + "px")
-        .style("top", (event.pageY - 20) + "px");
-}
-
-function handleMouseOut() {
-    // Hide the tooltip
-    tooltip.transition()
-        .duration(500)
-        .style("opacity", 0);
-}*/
-
 // Initial chart creation with the default dataset
 updateRidgeLine("data/section3/MAX/AlabamaMAX.csv", "data/section3/MIN/AlabamaMIN.csv", [2000]);
 
@@ -293,34 +226,9 @@ document.getElementById("year-checkbox-form").addEventListener("change", functio
     updateRidgeLine(selectedDataset_1, selectedDataset_2, selectedYears);
 });
 
-// This is what I need to compute kernel density estimation
-/*function kernelDensityEstimator(kernel, X) {
-  return function(V) {
-    return X.map(function(x) {
-      return [x, d3.mean(V, function(v) { return kernel(x - v); })];
-    });
-  };
-}
-
-function kernelEpanechnikov(k) {
-  return function(v) {
-    return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
-  };
-}*/
-
-
 function kernelDensityEstimator(kernel, thresholds, data) {
   return thresholds.map(t => [t, d3.mean(data, d => kernel(t - d))]);
 }
 function kernelEpanechnikov(bandwidth) {
   return x => Math.abs(x /= bandwidth) <= 1 ? 0.75 * (1 - x * x) / bandwidth : 0;
 }
-
-
-// var kde = kernelDensityEstimator(normalDistribution(x, , 2.25), x.ticks(40));
-
-// function normalDistribution(x, mean, variance) {
-//   const coefficient = 1 / (Math.sqrt(2 * Math.PI * variance));
-//   const exponent = -(Math.pow(x - mean, 2) / (2 * variance));
-//   return coefficient * Math.exp(exponent);
-// }
