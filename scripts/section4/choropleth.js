@@ -142,7 +142,7 @@ fetch("data/section4/choropleth.json")
 	    .style("opacity", 1)
 	    .on("mouseover", mouseOver)
 	    .on("mouseleave", mouseLeave)
-	    .on("click", click)
+	    //.on("click", click)
             //.attr("d", path)
             .style("stroke-width", "0.75px")
             .style("fill", function(d) {
