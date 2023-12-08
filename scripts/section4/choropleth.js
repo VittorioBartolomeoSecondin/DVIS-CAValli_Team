@@ -3,12 +3,12 @@ var width = 960;
 var height = 500;
 
 // D3 Projection
-var projection = d3.geo.albersUsa()
+var projection = d3.geoAlbersUsa()
 				   .translate([width/2, height/2])    // translate to center of screen
 				   .scale([1000]);          // scale things down so see entire US
         
 // Define path generator
-var path = d3.geo.path()               // path generator that will convert GeoJSON to SVG paths
+var path = d3.geoPath()               // path generator that will convert GeoJSON to SVG paths
 		  	 .projection(projection);  // tell path generator to use albersUsa projection
 
 var colours = ["#2F2F2F", "#323232", "#353535", "#383838", "#3B3B3B", "#3E3E3E", 
