@@ -26,15 +26,8 @@ let g = svg.append("g");
 fetch("data/section4/choropleth.json")
     .then(response => response.json())
     .then(data => {
-        // Extracting the maximum and minimum values from d.properties.abundance
-        const abundanceValues = topojson.feature(data, data.objects.states).features.map(d => d.properties.abundance);
-        const maxValue = Math.max(...abundanceValues);
-        const minValue = Math.min(...abundanceValues);
-
-        // Define the linear scale with swapped minValue and maxValue
-        var c = d3.scaleLinear()
-            .domain([maxValue, minValue]) // Swap maxValue and minValue
-            .range([0, 1]); // Set the range between 0 and 1
+        const data_features = topojson.feature(data, data.objects.states).features;
+        var c = d3.scaleLinear().domain([d3.max(data_features, function(d) { return +d.properties.abundance}), d3.min(data_features, function(d) { return +d.properties.abundance})]).range([0,1]);
 
         g.selectAll(".states")
             .data(topojson.feature(data, data.objects.states).features)
