@@ -2,9 +2,39 @@
 var margin = { top: 60, right: 70, bottom: 70, left: 100 },
     width = 1000 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
+
 let projection = d3.geoAlbersUsa()
                    .scale(width)
                    .translate([width / 2, height / 2]);
+
+let mouseOver = function(d) {
+			d3.selectAll(".Country")
+				.transition()
+				.duration(200)
+				.style("opacity", .5)
+				.style("stroke", "transparent");
+			d3.select(this)
+				.transition()
+				.duration(200)
+				.style("opacity", 1)
+				.style("stroke", "black");
+			tooltip.style("left", (d3.event.pageX + 15) + "px")
+				.style("top", (d3.event.pageY - 28) + "px")
+				.transition().duration(400)
+				.style("opacity", 1)
+				.text(d.properties.postal + ': ' + d.properties.abundance); // put name instead
+		}
+
+let mouseLeave = function() {
+			d3.selectAll(".Country")
+				.transition()
+				.duration(200)
+				.style("opacity", 1)
+				.style("stroke", "transparent");
+			tooltip.transition().duration(300)
+				.style("opacity", 0);
+		}
+
 let path = d3.geoPath().projection(projection);
 
 var colours = ["#2F2F2F", "#323232", "#353535", "#383838", "#3B3B3B", "#3E3E3E", 
@@ -103,8 +133,17 @@ fetch("data/section4/choropleth.json")
         g.selectAll(".states")
             .data(data_features)
             .enter().append("path")
-            .attr("d", path)
-            .style("stroke", "#fff")
+	    .attr("data-name", function(d) { return d.properties.postal }) // put name instead
+		
+	    // add a class, styling and mouseover/mouseleave and click functions
+	    .style("stroke", "transparent")
+	    .attr("class", function(d) { return "Country" })
+	    .attr("id", function(d) { return d.id })
+	    .style("opacity", 1)
+	    .on("mouseover", mouseOver)
+	    .on("mouseleave", mouseLeave)
+	    .on("click", click);
+            //.attr("d", path)
             .style("stroke-width", "0.75px")
             .style("fill", function(d) {
                 // Get data value
