@@ -12,7 +12,7 @@ const tooltip = d3.select("body").append("div")
 		  .attr("class", "tooltip")
 		  .style("opacity", 0);
 
-let mouseOver = function(d) {
+let mouseOver = function(event, d) {
 			d3.selectAll(".Country")
 				.transition()
 				.duration(200)
@@ -23,8 +23,8 @@ let mouseOver = function(d) {
 				.duration(200)
 				.style("opacity", 1)
 				.style("stroke", "black");
-			tooltip.style("left", (d3.event.pageX + 15) + "px")
-				.style("top", (d3.event.pageY - 28) + "px")
+			tooltip.style("left", (event.pageX + 15) + "px")
+				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
 				.style("opacity", 1)
 				.text(d.properties.postal + ': ' + d.properties.abundance); // put name instead
