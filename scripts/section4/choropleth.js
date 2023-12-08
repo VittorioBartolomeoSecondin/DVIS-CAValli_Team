@@ -50,7 +50,7 @@ fetch("data/section4/choropleth.json")
     .then(response => response.json())
     .then(data => {
         // Extracting the maximum and minimum values from d.properties.abundance
-        const abundanceValues = data.features.map(d => d.properties.abundance);
+        const abundanceValues = topojson.feature(data, data.objects.states).features.map(d => d.properties.abundance);
         const maxValue = Math.max(...abundanceValues);
         const minValue = Math.min(...abundanceValues);
 
