@@ -35,7 +35,7 @@ let mouseLeave = function() {
 				.transition()
 				.duration(200)
 				.style("opacity", 1)
-				.style("stroke", "transparent");
+				.style("stroke", "#fff");
 			tooltip.transition().duration(300)
 				.style("opacity", 0);
 		}
