@@ -46,23 +46,7 @@
             </h1>
         </div>
 
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        
-        <!--         
-        <script>
-             var map = d3.geomap.choropleth()
-                         .geofile('/d3-geomap/topojson/countries/USA.json')
-                         .projection(d3.geoAlbersUsa)
-                         .column('abundance')
-                         .unitId('fips')
-                         .scale(1000)
-                         .legend(true);
-            
-            d3.csv('data/section4/state_abundance_fips.csv').then(data => {
-                map.draw(d3.select('#map').datum(data));
-            });           
-        </script> 
-        -->
+        <script src="https://d3js.org/d3.v7.js"></script>
         
         <div id="map">
             <h2 style="margin-left: 40px; margin-right: 40px">Choropleth</h2>
