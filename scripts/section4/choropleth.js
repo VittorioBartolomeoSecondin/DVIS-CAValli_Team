@@ -39,29 +39,34 @@ d3.json(usamap).then(function (us) {
 	});
 });*/
 
-// The svg
-const svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+import * as topojson from "topojson";
 
-// Map and projection
-const projection = d3.geoAlbersUsa()
-              .scale(1280)
+// set the dimensions and margins of the graph
+var margin = { top: 60, right: 70, bottom: 70, left: 100 },
+    width = 1000 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
 
-// Load external data and boot
-d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then( function(data){
+let projection = d3.geoAlbersUsa()
+                   .scale(width)
+                   .translate([width / 2, height / 2]);
 
-    // Filter data
-    data.features = data.features.filter(d => {console.log(d.properties.name); return d.properties.name=="USA"})
+let path = d3.geoPath().projection(projection);
 
-    // Draw the map
-    svg.append("g")
-        .selectAll("path")
-        .data(data.features)
-        .join("path")
-          .attr("fill", "grey")
-          .attr("d", d3.geoPath()
-              .projection(projection)
-          )
-        .style("stroke", "none")
-})
+let svg = d3.select("#map")
+	    .append("svg")
+	    .attr("width", width)
+	    .attr("height", height)
+	    .attr("preserveAspectRatio", "xMinYMin meet")
+	    .attr("viewBox", `0 0 ${width} ${height}`);
+
+let g = svg.append("g");
+
+let us = require("./us-states.json");
+
+g.selectAll(".states")
+ .data(topojson.feature(us, us.objects.states).features)
+ .enter().append("path")
+ .attr("class", "states")
+ .attr("d", path);
+
+d3.select(window).on("resize", this.updateSizes.bind(this));
