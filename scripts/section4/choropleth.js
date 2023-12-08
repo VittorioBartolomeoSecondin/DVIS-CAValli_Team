@@ -92,7 +92,7 @@ let svg = d3.select("#map")
 let g = svg.append("g");
 
 // Fetching the JSON file using fetch
-fetch("./us-states.json")
+fetch("scripts/section4/us-states.json")
     .then(response => response.json())
     .then(data => {
         g.selectAll(".states")
