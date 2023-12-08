@@ -170,3 +170,9 @@ footer .cr-con{
   display: flex;
   justify-content: center;
 }
+
+.states {
+    fill: #aaa;
+    stroke: #fff;
+    stroke-width: 0.75px;
+}
