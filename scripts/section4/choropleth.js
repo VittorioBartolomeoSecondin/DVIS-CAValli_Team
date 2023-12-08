@@ -29,6 +29,74 @@ fetch("data/section4/choropleth.json")
         const data_features = topojson.feature(data, data.objects.states).features;
         var c = d3.scaleLinear().domain([d3.max(data_features, function(d) { return +d.properties.abundance}), d3.min(data_features, function(d) { return +d.properties.abundance})]).range([0,1]);
 
+	const legend_svg = d3.select("#map")
+			     .append("svg")
+			      .attr("id", "choropleth_legend_svg")
+			      .attr("width", 1100)
+			      .attr("height", 80)
+			     .append("g")
+			      .attr("transform", `translate(170, -30)`);
+
+	var colorscale = colours.reverse();
+	  
+	var color = d3.scaleQuantize()
+		      .domain([d3.max(data_features, function(d) { return +d.properties.abundance}), d3.min(data_features, function(d) { return +d.properties.abundance})])
+		      .range(colorscale);
+	  
+	var format = d3.format(".0f")
+	  
+	drawColorScale();
+	  
+	function drawColorScale() {
+	      var palette = legend_svg.append('g')
+		.attr('id', 'palette');
+	
+	      // fill the legend with rectangles (colours)
+	      var swatch = palette.selectAll('rect').data(colorscale);
+	      swatch.enter().append('rect')
+		.attr('fill', function(d) {
+		  return d;
+		})
+		.attr('x', function(d, i) {
+		  return i * 50;
+		})
+		.attr('y', 50)
+		.attr('width', 50)
+		.attr('height', 20)
+		.style("stroke-width", 1)
+		.style("stroke", "black");
+	
+	      // counts are placed below the legend
+	      var texts = palette.selectAll("foo")
+		.data(color.range())
+		.enter()
+		.append("text")
+		.attr("font-size", "10px")
+		.attr("text-anchor", "middle")
+		.attr("y", 80)
+		.attr('x', function(d, i) {
+		  return i * 50 + 25;
+		})
+		.append("tspan")
+		.attr("dy", "0.5em")
+		.attr('x', function(d, i) {
+		  return i * 50;
+		})
+		// single value separating two rectangles in the legend
+		.text(function(d) {
+		  return format(color.invertExtent(d)[0])
+		})
+		.append("tspan")
+		.attr('x', function(d, i) {
+		  return i * 50 + 50;
+		})
+		// last value below the legend
+		.text(function(d) {
+		  if (color.invertExtent(d)[1] == max)
+		    return format(color.invertExtent(d)[1])
+		})
+	}
+
         g.selectAll(".states")
             .data(data_features)
             .enter().append("path")
