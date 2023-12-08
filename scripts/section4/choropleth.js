@@ -30,17 +30,16 @@ fetch("scripts/section4/us-states.json")
         g.selectAll(".states")
             .data(topojson.feature(data, data.objects.states).features)
             .enter().append("path")
-            .attr("class", "states")
             .attr("d", path)
 	    .style("stroke", "#fff")
-	    .style("stroke-width", "1")
+	    .style("stroke-width", "0.75px")
 	    .style("fill", function(d) {
 		// Get data value
 		var value = d.properties.abundance;
 	
 		if (value) {
 		//If value exists…
-		return mapColour(c(value));
+		return "rgb(255,0,0)";//mapColour(c(value));
 		} else {
 		//If value is undefined…
 		return "rgb(213,222,217)";
