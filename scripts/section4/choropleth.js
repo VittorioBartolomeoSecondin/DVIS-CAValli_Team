@@ -36,11 +36,11 @@ fetch("data/section4/choropleth.json")
 	    .style("fill", function(d) {
 		// Get data value
 		var value = d.properties.abundance;
+		var c = d3.scaleLinear().domain([d3.max(data, function(d) { return +d.properties.abundance}), d3.min(data, function(d) { return +d.properties.abundance})]).range([0,1]);
 	
 		if (value) {
 		//If value exists…
-		console.log(value);
-		return "rgb(255,0,0)";//mapColour(c(value));
+		return mapColour(c(value));
 		} else {
 		//If value is undefined…
 		return "rgb(213,222,217)";
