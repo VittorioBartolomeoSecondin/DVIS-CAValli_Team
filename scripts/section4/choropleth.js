@@ -30,7 +30,7 @@ fetch("data/section4/choropleth.json")
         var c = d3.scaleLinear().domain([d3.max(data_features, function(d) { return +d.properties.abundance}), d3.min(data_features, function(d) { return +d.properties.abundance})]).range([0,1]);
 
         g.selectAll(".states")
-            .data(topojson.feature(data, data.objects.states).features)
+            .data(data_features)
             .enter().append("path")
             .attr("d", path)
             .style("stroke", "#fff")
