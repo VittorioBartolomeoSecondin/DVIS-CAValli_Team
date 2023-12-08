@@ -48,7 +48,7 @@ d3.csv("data/section4/state_abundance_postal.csv").then(function(data) {
 	var c = d3.scaleLinear().domain([d3.max(data, function(d) { return +d.abundance}), d3.min(data, function(d) { return +d.abundance})]).range([0,1]);
 		
 	// Load GeoJSON data and merge with states data
-	d3.json("us-states.json", function(json) {
+	d3.json("scripts/section4/us-states.json", function(json) {
 	
 		// Loop through each state data value in the .csv file
 		for (var i = 0; i < data.length; i++) {
