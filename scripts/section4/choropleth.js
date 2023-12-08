@@ -24,7 +24,7 @@ let svg = d3.select("#map")
 let g = svg.append("g");
 
 // Fetching the JSON file using fetch
-fetch("data/section4/choropleth.json")
+/*fetch("data/section4/choropleth.json")
     .then(response => response.json())
     .then(data => {
         g.selectAll(".states")
@@ -36,7 +36,6 @@ fetch("data/section4/choropleth.json")
 	    .style("fill", function(d) {
 		// Get data value
 		var value = d.properties.abundance;
-		var c = d3.scaleLinear().domain([d3.max(d, function(d) { return +d.properties.abundance}), d3.min(d, function(d) { return +d.properties.abundance})]).range([0,1]);
 	
 		if (value) {
 		//If value exists…
@@ -46,6 +45,38 @@ fetch("data/section4/choropleth.json")
 		return "rgb(213,222,217)";
     	   	}
 	    })
+    })*/
+fetch("data/section4/choropleth.json")
+    .then(response => response.json())
+    .then(data => {
+        // Extracting the maximum and minimum values from d.properties.abundance
+        const abundanceValues = data.features.map(d => d.properties.abundance);
+        const maxValue = Math.max(...abundanceValues);
+        const minValue = Math.min(...abundanceValues);
+
+        // Define the linear scale with swapped minValue and maxValue
+        var c = d3.scaleLinear()
+            .domain([maxValue, minValue]) // Swap maxValue and minValue
+            .range([0, 1]); // Set the range between 0 and 1
+
+        g.selectAll(".states")
+            .data(topojson.feature(data, data.objects.states).features)
+            .enter().append("path")
+            .attr("d", path)
+            .style("stroke", "#fff")
+            .style("stroke-width", "0.75px")
+            .style("fill", function(d) {
+                // Get data value
+                var value = d.properties.abundance;
+                
+                if (value) {
+                    // If value exists…
+                    return mapColour(c(value));
+                } else {
+                    // If value is undefined…
+                    return "rgb(213,222,217)";
+                }
+            })
     })
     .catch(error => {
         console.error("Error fetching the data:", error);
