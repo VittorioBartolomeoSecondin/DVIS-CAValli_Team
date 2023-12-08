@@ -24,7 +24,7 @@ let svg = d3.select("#map")
 	    .attr("preserveAspectRatio", "xMinYMin meet")
 	    .attr("viewBox", `0 0 ${width} ${height}`);
 
-let g = svg.append("g");
+/*let g = svg.append("g");
 
 // Fetching the JSON file using fetch
 fetch("scripts/section4/us-states.json")
@@ -38,7 +38,7 @@ fetch("scripts/section4/us-states.json")
     })
     .catch(error => {
         console.error("Error fetching the data:", error);
-    });
+    });*/
 
 
 
