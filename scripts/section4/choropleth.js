@@ -36,7 +36,7 @@ fetch("data/section4/choropleth.json")
 	    .style("fill", function(d) {
 		// Get data value
 		var value = d.properties.abundance;
-		var c = d3.scaleLinear().domain([d3.max(data, function(d) { return +d.properties.abundance}), d3.min(data, function(d) { return +d.properties.abundance})]).range([0,1]);
+		var c = d3.scaleLinear().domain([d3.max(d, function(d) { return +d.properties.abundance}), d3.min(d, function(d) { return +d.properties.abundance})]).range([0,1]);
 	
 		if (value) {
 		//If value exists…
