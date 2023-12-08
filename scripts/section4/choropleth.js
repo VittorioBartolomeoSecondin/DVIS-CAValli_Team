@@ -141,7 +141,7 @@ fetch("data/section4/choropleth.json")
 	    .attr("data-name", function(d) { return d.properties.postal }) // put name instead
 		
 	    // add a class, styling and mouseover/mouseleave and click functions
-	    .style("stroke", "transparent")
+	    .style("stroke", "#fff")
 	    .attr("class", function(d) { return "Country" })
 	    .attr("id", function(d) { return d.id })
 	    .style("opacity", 1)
