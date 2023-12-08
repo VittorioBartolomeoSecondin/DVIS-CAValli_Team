@@ -6,6 +6,15 @@ let projection = d3.geoAlbersUsa()
                    .scale(width)
                    .translate([width / 2, height / 2]);
 let path = d3.geoPath().projection(projection);
+
+var colours = ["#2F2F2F", "#323232", "#353535", "#383838", "#3B3B3B", "#3E3E3E", 
+                 "#414141", "#444444", "#565656", "#686868", "#7A7A7A", "#8C8C8C", 
+                 "#9D9D9D", "#AFAFAF", "#C1C1C1", "#D3D3D3", "#E5E5E5"];
+  
+var mapColour = d3.scaleLinear()
+		      .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
+		      .range(colours);
+
 let svg = d3.select("#map")
 	    .append("svg")
 	    .attr("width", width)
@@ -22,7 +31,20 @@ fetch("scripts/section4/us-states.json")
             .data(topojson.feature(data, data.objects.states).features)
             .enter().append("path")
             .attr("class", "states")
-            .attr("d", path);
+            .attr("d", path)
+	    .style("stroke", "#fff")
+	    .style("stroke-width", "1")
+	    .style("fill", function(d) {
+		// Get data value
+		var value = d.properties.abundance;
+	
+		if (value) {
+		//If value exists…
+		return mapColour(c(value));
+		} else {
+		//If value is undefined…
+		return "rgb(213,222,217)";
+    	   })
     })
     .catch(error => {
         console.error("Error fetching the data:", error);
