@@ -95,5 +95,5 @@ d3.csv("data/section4/state_abundance_postal.csv", function(data) {
 			return "rgb(213,222,217)";
 			}
 		});
-	}
-}
+	});
+});
