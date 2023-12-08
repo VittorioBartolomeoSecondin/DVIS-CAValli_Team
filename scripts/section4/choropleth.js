@@ -1,13 +1,15 @@
-// set the dimensions and margins of the graph
-var margin = { top: 60, right: 70, bottom: 70, left: 100 },
-    width = 1000 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+//Width and height of map
+var width = 960;
+var height = 500;
 
-let projection = d3.geoAlbersUsa()
-                   .scale(width)
-                   .translate([width / 2, height / 2]);
-
-let path = d3.geoPath().projection(projection);
+// D3 Projection
+var projection = d3.geo.albersUsa()
+				   .translate([width/2, height/2])    // translate to center of screen
+				   .scale([1000]);          // scale things down so see entire US
+        
+// Define path generator
+var path = d3.geo.path()               // path generator that will convert GeoJSON to SVG paths
+		  	 .projection(projection);  // tell path generator to use albersUsa projection
 
 var colours = ["#2F2F2F", "#323232", "#353535", "#383838", "#3B3B3B", "#3E3E3E", 
                  "#414141", "#444444", "#565656", "#686868", "#7A7A7A", "#8C8C8C", 
@@ -17,12 +19,11 @@ var mapColour = d3.scaleLinear()
 		      .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
 		      .range(colours);
 
-let svg = d3.select("#map")
-	    .append("svg")
-	    .attr("width", width)
-	    .attr("height", height)
-	    .attr("preserveAspectRatio", "xMinYMin meet")
-	    .attr("viewBox", `0 0 ${width} ${height}`);
+//Create SVG element and append map to the SVG
+var svg = d3.select("body")
+			.append("svg")
+			.attr("width", width)
+			.attr("height", height);
 
 /*let g = svg.append("g");
 
