@@ -1,6 +1,7 @@
-//Width and height of map
-var width = 960;
-var height = 500;
+// set the dimensions and margins of the graph
+var margin = { top: 60, right: 70, bottom: 70, left: 100 },
+    width = 1000 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
 
 // D3 Projection
 var projection = d3.geoAlbersUsa()
@@ -20,13 +21,13 @@ var mapColour = d3.scaleLinear()
 		      .range(colours);
 
 //Create SVG element and append map to the SVG
-var svg = d3.select("body")
+var svg = d3.select("#map")
 			.append("svg")
 			.attr("width", width)
 			.attr("height", height);
 
-/*let g = svg.append("g");
-
+let g = svg.append("g");
+/*
 // Fetching the JSON file using fetch
 fetch("scripts/section4/us-states.json")
     .then(response => response.json())
@@ -45,37 +46,50 @@ fetch("scripts/section4/us-states.json")
 
 
 // Load in my states data!
-d3.csv("data/section4/state_abundance_postal.csv").then(function(data) {
-	var c = d3.scaleLinear().domain([d3.max(data, function(d) { return +d.abundance}), d3.min(data, function(d) { return +d.abundance})]).range([0,1]);
-		
+d3.csv("data/section4/state_abundance_postal.csv", function(d) {
+	//var c = d3.scaleLinear().domain([d3.max(data, function(d) { return +d.abundance}), d3.min(data, function(d) { return +d.abundance})]).range([0,1]);
+
 	// Load GeoJSON data and merge with states data
-	d3.json("scripts/section4/us-states.json").then(function(json) {
-	
-		// Loop through each state data value in the .csv file
-		for (var i = 0; i < data.length; i++) {
+	fetch("scripts/section4/us-states.json")
+	.then(response => {
+	     	// Loop through each state data value in the .csv file
+		for (var i = 0; i < d.length; i++) {
 		
 			// Grab State Name
-			var dataState = data[i].state;
+			var dataState = d[i].state;
 		
 			// Grab data value 
-			var dataValue = data[i].abundance;
+			var dataValue = d[i].abundance;
 		
 			// Find the corresponding state inside the GeoJSON
-			for (var j = 0; j < json.features.length; j++)  {
-				var jsonState = json.features[j].properties.name;
+			for (var j = 0; j < response.json().features.length; j++)  {
+				var jsonState = response.json().features[j].properties.name;
 		
 				if (dataState == jsonState) {
 		
 				// Copy the data value into the JSON
-				json.features[j].properties.abundance = dataValue; 
+				response.json().features[j].properties.abundance = dataValue; 
 		
 				// Stop looking through the JSON
 				break;
 				}
 			}
 		}
-				
-		// Bind the data to the SVG and create one path per GeoJSON feature
+	    })
+	    .then(data => {
+		 g.selectAll(".states")
+	            .data(topojson.feature(data, data.objects.states).features)
+	            .enter().append("path")
+	            .attr("class", "states")
+	            .attr("d", path);   
+	})
+	.catch(error => {
+	        console.error("Error fetching the data:", error);
+	    });
+});
+
+/*
+// Bind the data to the SVG and create one path per GeoJSON feature
 		svg.selectAll("path")
 			.data(json.features)
 			.enter()
@@ -94,7 +108,4 @@ d3.csv("data/section4/state_abundance_postal.csv").then(function(data) {
 			} else {
 			//If value is undefined…
 			return "rgb(213,222,217)";
-			}
-		});
-	});
-});
+			}*/
