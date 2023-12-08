@@ -24,7 +24,7 @@ let svg = d3.select("#map")
 let g = svg.append("g");
 
 // Fetching the JSON file using fetch
-fetch("scripts/section4/us-states.json")
+fetch("data/section4/choropleth.json")
     .then(response => response.json())
     .then(data => {
         g.selectAll(".states")
@@ -39,6 +39,7 @@ fetch("scripts/section4/us-states.json")
 	
 		if (value) {
 		//If value exists…
+		console.log(value);
 		return "rgb(255,0,0)";//mapColour(c(value));
 		} else {
 		//If value is undefined…
