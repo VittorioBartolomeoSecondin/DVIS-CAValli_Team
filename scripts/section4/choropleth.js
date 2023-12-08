@@ -23,29 +23,6 @@ let svg = d3.select("#map")
 	    .attr("viewBox", `0 0 ${width} ${height}`);
 let g = svg.append("g");
 
-// Fetching the JSON file using fetch
-/*fetch("data/section4/choropleth.json")
-    .then(response => response.json())
-    .then(data => {
-        g.selectAll(".states")
-            .data(topojson.feature(data, data.objects.states).features)
-            .enter().append("path")
-            .attr("d", path)
-	    .style("stroke", "#fff")
-	    .style("stroke-width", "0.75px")
-	    .style("fill", function(d) {
-		// Get data value
-		var value = d.properties.abundance;
-	
-		if (value) {
-		//If value exists…
-		return mapColour(c(value));
-		} else {
-		//If value is undefined…
-		return "rgb(213,222,217)";
-    	   	}
-	    })
-    })*/
 fetch("data/section4/choropleth.json")
     .then(response => response.json())
     .then(data => {
@@ -71,6 +48,7 @@ fetch("data/section4/choropleth.json")
                 
                 if (value) {
                     // If value exists…
+		    console.log(mapColour(c(value)));
                     return mapColour(c(value));
                 } else {
                     // If value is undefined…
