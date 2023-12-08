@@ -7,6 +7,11 @@ let projection = d3.geoAlbersUsa()
                    .scale(width)
                    .translate([width / 2, height / 2]);
 
+// add tooltip
+const tooltip = d3.select("body").append("div")
+		  .attr("class", "tooltip")
+		  .style("opacity", 0);
+
 let mouseOver = function(d) {
 			d3.selectAll(".Country")
 				.transition()
