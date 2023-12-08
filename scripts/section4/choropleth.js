@@ -43,7 +43,8 @@ fetch("scripts/section4/us-states.json")
 		} else {
 		//If value is undefined…
 		return "rgb(213,222,217)";
-    	   })
+    	   	}
+	    })
     })
     .catch(error => {
         console.error("Error fetching the data:", error);
