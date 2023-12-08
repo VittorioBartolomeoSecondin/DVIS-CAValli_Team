@@ -143,7 +143,7 @@ fetch("data/section4/choropleth.json")
 	    .on("mouseover", mouseOver)
 	    .on("mouseleave", mouseLeave)
 	    //.on("click", click)
-            //.attr("d", path)
+            .attr("d", path)
             .style("stroke-width", "0.75px")
             .style("fill", function(d) {
                 // Get data value
