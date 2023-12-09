@@ -8,8 +8,8 @@ const legendWidth = 110;
 const legendHeight = 300;
 
 // Calculate the position for the legend
-const legendX = width - legendWidth - 20; // Adjust as needed
-const legendY = height / 2 - legendHeight / 2 - 70; // Center vertically, adjust as needed
+const legendX = width - legendWidth - 20; 
+const legendY = height / 2 - legendHeight / 2 - 70; 
 
 let projection = d3.geoAlbersUsa()
                    .scale(width)
@@ -112,7 +112,7 @@ fetch("data/section4/choropleth.json")
 		.style("stroke-width", 1)
 		.style("stroke", "black");
 	
-	      // counts are placed below the legend
+	      // counts are placed on one side of the legend
 	      var texts = palette.selectAll("foo")
 		.data(color.range())
 		.enter()
@@ -124,7 +124,7 @@ fetch("data/section4/choropleth.json")
 		  return 25 + 50 * i;
 		})
 		.attr("dx", "2em")
-		// single value separating two rectangles in the legend
+		// single value for each rectangle in the legend
 		.text(function(d) {
 		  return `< ${(color.invertExtent(d)[0] / (10 ** 6)).toFixed(2)} m.`;
 		})
@@ -135,7 +135,7 @@ fetch("data/section4/choropleth.json")
             .enter().append("path")
 	    .attr("data-name", function(d) { return d.properties.name }) 
 		
-	    // add a class, styling and mouseover/mouseleave and click functions
+	    // add a class, styling and mouseover/mouseleave
 	    .attr("d", path)
 	    .style("stroke", "black")
 	    .attr("class", "Country")
