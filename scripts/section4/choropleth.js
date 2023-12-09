@@ -127,7 +127,7 @@ fetch("data/section4/choropleth.json")
 		.attr("dx", "2em")
 		// single value separating two rectangles in the legend
 		.text(function(d) {
-		  return format(color.invertExtent(d)[0] / (10 ** 6)
+		  return format(color.invertExtent(d)[0] / (10 ** 6));
 		})
 		/*.append("tspan")
 		.attr('y', function(d, i) {
