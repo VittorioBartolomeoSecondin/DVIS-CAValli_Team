@@ -81,16 +81,14 @@ fetch("data/section4/choropleth.json")
 			     .append("g")
 			      .attr("transform", `translate(${legendX}, ${legendY})`);
 
-	var colorscale = colours.reverse();
-
 	var min = d3.min(data_features, function(d) { return +d.properties.abundance}); 
         var max = d3.max(data_features, function(d) { return +d.properties.abundance});
 
 	var c = d3.scaleLinear().domain([max, 0]).range([0,1]);
 	    
 	var color = d3.scaleQuantize()
-		      .domain([0, max])
-		      .range(colorscale);
+		      .domain([max, 0])
+		      .range(colours);
 	  
 	var format = d3.format(".0f")
 	  
