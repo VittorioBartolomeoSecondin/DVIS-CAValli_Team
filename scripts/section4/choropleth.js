@@ -99,7 +99,7 @@ fetch("data/section4/choropleth.json")
 		.attr('id', 'palette');
 	
 	      // fill the legend with rectangles (colours)
-	      var swatch = palette.selectAll('rect').data(colorscale);
+	      var swatch = palette.selectAll('rect').data(colours);
 	      swatch.enter().append('rect')
 		.attr('fill', function(d) {
 		  return d;
