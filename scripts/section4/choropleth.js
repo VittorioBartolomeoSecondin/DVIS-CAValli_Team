@@ -162,7 +162,7 @@ fetch("data/section4/choropleth.json")
                     return mapColour(c(value));
                 } else {
                     // If value is undefined…
-		    return "rgb(220,220,220)";
+		    return "rgb(240,240,240)";
                     // return "rgb(213,222,217)";
                 }
             })
