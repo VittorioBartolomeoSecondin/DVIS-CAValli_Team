@@ -56,7 +56,9 @@ let svg = d3.select("#map")
 	    .attr("height", height)
 	    .attr("preserveAspectRatio", "xMinYMin meet")
 	    .attr("viewBox", `0 0 ${width} ${height}`);
-let g = svg.append("g");
+
+let world = svg.append("g"); 
+let centered;
 
 fetch("data/section4/choropleth.json")
     .then(response => response.json())
@@ -137,7 +139,7 @@ fetch("data/section4/choropleth.json")
 		})
 	}
 
-        g.selectAll(".states")
+        world.selectAll(".states")
             .data(data_features)
             .enter().append("path")
 	    .attr("data-name", function(d) { return d.properties.name }) 
@@ -149,7 +151,7 @@ fetch("data/section4/choropleth.json")
 	    .style("opacity", 1)
 	    .on("mouseover", mouseOver)
 	    .on("mouseleave", mouseLeave)
-	    //.on("click", click)
+	    .on("click", click)
             .attr("d", path)
             .style("stroke-width", "0.75px")
             .style("fill", function(d) {
@@ -161,6 +163,32 @@ fetch("data/section4/choropleth.json")
     .catch(error => {
         console.error("Error fetching the data:", error);
     });
+
+// Zoom functionality
+function click(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = -(centroid[0] * 6);
+    y = (centroid[1] * 6);
+    k = 3;
+    centered = d;
+  } else {
+    x = 0;
+    y = 0;
+    k = 1;
+    centered = null;
+  }
+
+  world.selectAll("path")
+      .classed("active", centered && function(d) { return d === centered; });
+
+  world.transition()
+      .duration(750)
+      .attr("transform", "translate(" + x + "," + y + ") scale(" + k + ")" );
+  
+}
 
 
 // let centered, world;
