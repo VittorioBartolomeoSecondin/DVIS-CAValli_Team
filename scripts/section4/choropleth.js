@@ -64,7 +64,7 @@ svg.append("rect")
    .attr("height", height)
    .on("click", click);
 
-let world = svg.append("g"); 
+let world = svg.append("g").attr("class","world"); 
 let centered;
 
 fetch("data/section4/choropleth.json")
