@@ -77,7 +77,7 @@ fetch("data/section4/choropleth.json")
 	const legend_svg = svg.append("g")
 			      .attr("id", "choropleth_legend_svg")
 			      .attr("width", legendWidth)
-			      .attr("height", legendHeight)
+			      .attr("height", legendHeight - 20)
 			     .append("g")
 			      .attr("transform", `translate(${legendX}, ${legendY})`);
 
