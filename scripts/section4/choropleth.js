@@ -110,7 +110,32 @@ fetch("data/section4/choropleth.json")
 		.attr('height', 50)
 		.attr('width', 20)
 		.style("stroke-width", 1)
-		.style("stroke", "black");
+		.style("stroke", "black")
+		.on('mouseover', function (event, d) {
+		      d3.select(this)
+		        .style('stroke-width', '2px');
+		
+		      // Make associated countries more opaque
+		      var index = colours.indexOf(d);
+		      var selectedValue = color.invertExtent(colourScale.invertExtent(colours[index])[0])[1];
+		
+		      world.selectAll('.Country')
+		        .transition()
+		        .duration(200)
+		        .style('opacity', function (d) {
+		          return d.properties.abundance >= selectedValue ? 1 : 0.3;
+		        });
+		    })
+		    .on('mouseout', function () {
+		      d3.select(this)
+		        .style('stroke-width', '1px');
+		
+		      // Restore opacity for all countries
+		      world.selectAll('.Country')
+		        .transition()
+		        .duration(200)
+		        .style('opacity', 1);
+		    });
 	
 	      // counts are placed below the legend
 	      var texts = palette.selectAll("foo")
