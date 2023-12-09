@@ -3,6 +3,14 @@ var margin = { top: 60, right: 70, bottom: 70, left: 100 },
     width = 1000 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
 
+// Define the width and height of the legend
+const legendWidth = 100;
+const legendHeight = 300;
+
+// Calculate the position for the legend
+const legendX = width - legendWidth - 20; // Adjust as needed
+const legendY = height / 2 - legendHeight / 2; // Center vertically, adjust as needed
+
 let projection = d3.geoAlbersUsa()
                    .scale(width)
                    .translate([width / 2, height / 2]);
@@ -68,10 +76,10 @@ fetch("data/section4/choropleth.json")
 	
 	const legend_svg = svg.append("g")
 			      .attr("id", "choropleth_legend_svg")
-			      .attr("width", 1100)
-			      .attr("height", 80)
+			      .attr("width", legendWidth)
+			      .attr("height", legendHeight)
 			     .append("g")
-			      .attr("transform", `translate(${width}/2, ${height}/2)`);
+			      .attr("transform", `translate(${legendX}, ${legendY})`);
 
 	var colorscale = colours.reverse();
 
