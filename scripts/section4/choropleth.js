@@ -122,7 +122,7 @@ fetch("data/section4/choropleth.json")
 		.attr("text-anchor", "middle")
 		.attr("x", 80)
 		.attr('y', function(d, i) {
-		  return i * 25;
+		  return 50 * (1 + i);
 		})
 		.attr("dx", "2em")
 		// single value separating two rectangles in the legend
