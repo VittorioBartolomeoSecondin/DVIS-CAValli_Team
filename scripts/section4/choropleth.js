@@ -177,9 +177,15 @@ function click(event, d) {
 
   if (d && centered !== d) {
     var centroid = path.centroid(d);
-    x = -centroid[0];
-    y = -centroid[1];
-    k = 4; // Increase the scale for zooming in
+    var bounds = path.bounds(d); // Get bounding box
+    var dx = bounds[1][0] - bounds[0][0];
+    var dy = bounds[1][1] - bounds[0][1];
+    var x = (bounds[0][0] + bounds[1][0]) / 2;
+    var y = (bounds[0][1] + bounds[1][1]) / 2;
+    var scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height)));
+    var translate = [width / 2 - scale * x, height / 2 - scale * y];
+
+    k = scale; // Set the scale for zooming in
     centered = d;
   } else {
     x = 0;
@@ -195,7 +201,7 @@ function click(event, d) {
 
   world.transition()
     .duration(750)
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + x + "," + y + ")");
+    .attr("transform", "translate(" + translate + ")scale(" + k + ")");
 }
 
 // let centered, world;
