@@ -182,9 +182,9 @@ function click(event, d) {
         k = 4; // Zoom level for the state
         centered = d;
     } else {
-        x = 0;
-        y = 0;
-        k = width; // Zoom level for the overall view
+        x = width / 2;
+        y = height / 2;
+        k = 1; // Zoom level for the overall view
         centered = null;
     }
 
