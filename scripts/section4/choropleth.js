@@ -120,15 +120,15 @@ fetch("data/section4/choropleth.json")
 		.append("text")
 		.attr("font-size", "10px")
 		.attr("text-anchor", "middle")
-		/*.attr("x", 80)
+		.attr("x", 80)
 		.attr('y', function(d, i) {
 		  return i * 25;
-		})*/
-		.append("tspan")
+		})
+		/*.append("tspan")
 		.attr("dx", "2em")
 		.attr('y', function(d, i) {
 		  return i * 50;
-		})
+		})*/
 		// single value separating two rectangles in the legend
 		.text(function(d) {
 		  return format(color.invertExtent(d)[0])
