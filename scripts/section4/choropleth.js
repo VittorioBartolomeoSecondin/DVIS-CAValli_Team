@@ -122,7 +122,7 @@ fetch("data/section4/choropleth.json")
 		.attr("text-anchor", "middle")
 		.attr("x", 80)
 		.attr('y', function(d, i) {
-		  return i * 50 + 25;
+		  return i * 50;
 		})
 		.append("tspan")
 		.attr("dx", "2em")
@@ -133,7 +133,7 @@ fetch("data/section4/choropleth.json")
 		.text(function(d) {
 		  return format(color.invertExtent(d)[0])
 		})
-		.append("tspan")
+		/*.append("tspan")
 		.attr('y', function(d, i) {
 		  return i * 50 + 50;
 		})
@@ -141,7 +141,7 @@ fetch("data/section4/choropleth.json")
 		.text(function(d) {
 		  if (color.invertExtent(d)[1] == max)
 		    return format(color.invertExtent(d)[1])
-		})
+		})*/
 	}
 
         world.selectAll(".states")
