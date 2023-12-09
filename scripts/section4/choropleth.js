@@ -17,6 +17,8 @@ let mouseOver = function(event, d) {
 				.transition()
 				.duration(200)
 				.style("opacity", .5)
+				.style("stroke-width", "0.75px")
+				.style("stroke", "black");
 			d3.select(this)
 				.transition()
 				.duration(200)
