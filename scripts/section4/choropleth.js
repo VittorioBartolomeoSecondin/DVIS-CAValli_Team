@@ -126,7 +126,7 @@ fetch("data/section4/choropleth.json")
 		.attr("dx", "2em")
 		// single value separating two rectangles in the legend
 		.text(function(d) {
-		  return `< ${(color.invertExtent(d)[0] / (10 ** 6)).toFixed(2)} m`;
+		  return `< ${(color.invertExtent(d)[0] / (10 ** 6)).toFixed(2)} m.`;
 		})
 	}
 
