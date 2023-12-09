@@ -25,11 +25,13 @@ let mouseOver = function(event, d) {
 				.transition()
 				.duration(200)
 				.style("opacity", .3)
+				.style("stroke", "black")
 				.style("stroke-width", "1px");
 			d3.select(this)
 				.transition()
 				.duration(200)
 				.style("opacity", 1)
+				.style("stroke", "green")
 				.style("stroke-width", "2px");
 			tooltip.style("left", (event.pageX + 15) + "px")
 				.style("top", (event.pageY - 28) + "px")
@@ -43,6 +45,7 @@ let mouseLeave = function() {
 				.transition()
 				.duration(200)
 				.style("opacity", 1)
+				.style("stroke", "black")
 				.style("stroke-width", "1px");
 			tooltip.transition().duration(300)
 				.style("opacity", 0);
@@ -134,7 +137,7 @@ fetch("data/section4/choropleth.json")
 		
 	    // add a class, styling and mouseover/mouseleave and click functions
 	    .attr("d", path)
-	    .style("stroke", function(d) { console.log(d.properties.abundance); return d.properties.abundance != 0 ? "green" : "black";})
+	    .style("stroke", "black")
 	    .attr("class", "Country")
 	    .attr("id", function(d) { return d.id })
 	    .style("opacity", 1)
