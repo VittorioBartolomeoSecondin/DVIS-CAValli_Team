@@ -42,9 +42,7 @@ let mouseLeave = function() {
 
 let path = d3.geoPath().projection(projection);
 
-var colours = ["#2F2F2F", "#323232", "#353535", "#383838", "#3B3B3B", "#3E3E3E", 
-                 "#414141", "#444444", "#565656", "#686868", "#7A7A7A", "#8C8C8C", 
-                 "#9D9D9D", "#AFAFAF", "#C1C1C1", "#D3D3D3", "#E5E5E5"];
+var colours = ["#238b45", "#41b6c4", "#7fcdbb", "#a6d96a", "#d6e9c6", "#f2f2f2", "#ffffff"]
   
 var mapColour = d3.scaleLinear()
 		      .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
