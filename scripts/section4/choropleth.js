@@ -27,7 +27,7 @@ let mouseOver = function(event, d) {
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
 				.style("opacity", 1)
-				.text(d.properties.name + ' (' + d.properties.postal + '): ' + d.properties.abundance + ' trees'); // put name instead of postal
+				.text(d.properties.name + ' (' + d.properties.postal + '): ' + d.properties.abundance + ' trees');
 		}
 
 let mouseLeave = function() {
@@ -140,11 +140,11 @@ fetch("data/section4/choropleth.json")
         g.selectAll(".states")
             .data(data_features)
             .enter().append("path")
-	    .attr("data-name", function(d) { return d.properties.name }) // put name instead of postal
+	    .attr("data-name", function(d) { return d.properties.name }) 
 		
 	    // add a class, styling and mouseover/mouseleave and click functions
 	    .style("stroke", "#fff")
-	    .attr("class", function(d) { return "Country" })
+	    .attr("class", "Country")
 	    .attr("id", function(d) { return d.id })
 	    .style("opacity", 1)
 	    .on("mouseover", mouseOver)
