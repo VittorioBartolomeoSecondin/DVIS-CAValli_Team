@@ -17,12 +17,12 @@ let mouseOver = function(event, d) {
 				.transition()
 				.duration(200)
 				.style("opacity", .5)
-				.style("stroke", "black");
 			d3.select(this)
 				.transition()
 				.duration(200)
 				.style("opacity", 1)
 				.style("stroke", "green");
+				.style("stroke-width", "2px")
 			tooltip.style("left", (event.pageX + 15) + "px")
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
@@ -35,6 +35,7 @@ let mouseLeave = function() {
 				.transition()
 				.duration(200)
 				.style("opacity", 1)
+				.style("stroke-width", "0.75px")
 				.style("stroke", "black");
 			tooltip.transition().duration(300)
 				.style("opacity", 0);
@@ -155,15 +156,15 @@ fetch("data/section4/choropleth.json")
 	    .attr("class", "Country")
 	    .attr("id", function(d) { return d.id })
 	    .style("opacity", 1)
-	    .on("mouseover", mouseOver)
-	    .on("mouseleave", mouseLeave)
-	    .on("click", click)
-            .style("stroke-width", "0.75px")
+	    .style("stroke-width", "0.75px")
             .style("fill", function(d) {
                 // Get data value
                 var value = d.properties.abundance;
                 return mapColour(c(value));               
             })
+	    .on("mouseover", mouseOver)
+	    .on("mouseleave", mouseLeave)
+	    .on("click", click)
     })
     .catch(error => {
         console.error("Error fetching the data:", error);
