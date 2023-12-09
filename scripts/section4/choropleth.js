@@ -27,7 +27,7 @@ let mouseOver = function(event, d) {
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
 				.style("opacity", 1)
-				.text(d.properties.name + ': ' + d.properties.abundance + ' trees'); // put name instead of postal
+				.text(d.properties.name + ' (' + d.properties.postal + '): ' + d.properties.abundance + ' trees'); // put name instead of postal
 		}
 
 let mouseLeave = function() {
