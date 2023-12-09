@@ -99,12 +99,12 @@ fetch("data/section4/choropleth.json")
 		.attr('fill', function(d) {
 		  return d;
 		})
-		.attr('x', function(d, i) {
+		.attr('y', function(d, i) {
 		  return i * 50;
 		})
-		.attr('y', 50)
-		.attr('width', 50)
-		.attr('height', 20)
+		.attr('x', 50)
+		.attr('height', 50)
+		.attr('width', 20)
 		.style("stroke-width", 1)
 		.style("stroke", "black");
 	
@@ -115,13 +115,13 @@ fetch("data/section4/choropleth.json")
 		.append("text")
 		.attr("font-size", "10px")
 		.attr("text-anchor", "middle")
-		.attr("y", 80)
-		.attr('x', function(d, i) {
+		.attr("x", 80)
+		.attr('y', function(d, i) {
 		  return i * 50 + 25;
 		})
 		.append("tspan")
-		.attr("dy", "0.5em")
-		.attr('x', function(d, i) {
+		.attr("dx", "0.5em")
+		.attr('y', function(d, i) {
 		  return i * 50;
 		})
 		// single value separating two rectangles in the legend
@@ -129,7 +129,7 @@ fetch("data/section4/choropleth.json")
 		  return format(color.invertExtent(d)[0])
 		})
 		.append("tspan")
-		.attr('x', function(d, i) {
+		.attr('y', function(d, i) {
 		  return i * 50 + 50;
 		})
 		// last value below the legend
