@@ -71,7 +71,7 @@ fetch("data/section4/choropleth.json")
 			      .attr("width", 1100)
 			      .attr("height", 80)
 			     .append("g")
-			      .attr("transform", `translate(${width}, ${height})`);
+			      .attr("transform", `translate(${width}/2, ${height}/2)`);
 
 	var colorscale = colours.reverse();
 
