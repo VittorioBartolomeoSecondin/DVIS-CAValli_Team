@@ -42,7 +42,7 @@ let mouseLeave = function() {
 
 let path = d3.geoPath().projection(projection);
 
-var colours = d3.schemeOrRd[7];
+var colours = d3.schemeGreens[9];
   
 var mapColour = d3.scaleLinear()
 		      .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
