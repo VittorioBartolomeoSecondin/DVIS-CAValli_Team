@@ -9,7 +9,7 @@ const legendHeight = 300;
 
 // Calculate the position for the legend
 const legendX = width - legendWidth - 20; // Adjust as needed
-const legendY = height / 2 - legendHeight / 2 - 40; // Center vertically, adjust as needed
+const legendY = height / 2 - legendHeight / 2 - 80; // Center vertically, adjust as needed
 
 let projection = d3.geoAlbersUsa()
                    .scale(width)
