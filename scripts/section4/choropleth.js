@@ -171,68 +171,29 @@ fetch("data/section4/choropleth.json")
         console.error("Error fetching the data:", error);
     });
 
-// Zoom functionality
+// Define a function to handle click events
 function click(event, d) {
-  var x, y, k;
+    var x, y, k;
 
-  if (d && centered !== d) {
-    var centroid = path.centroid(d);
-    x = -centroid[0]/2;
-    y = -centroid[1]/2;
-    k = 2; // Increase the scale for zooming in
-    centered = d;
-  } else {
-    x = 0;
-    y = 0;
-    k = 1;
-    centered = null;
-  }
+    if (d && centered !== d) {
+        var centroid = path.centroid(d);
+        x = centroid[0];
+        y = centroid[1];
+        k = 4; // Zoom level for the state
+        centered = d;
+    } else {
+        x = width / 2;
+        y = height / 2;
+        k = 1; // Zoom level for the overall view
+        centered = null;
+    }
 
-  world.selectAll("path")
-    .classed("active", centered && function(d) {
-      return d === centered;
-    });
+    // Apply zoom transition
+    world.selectAll("path")
+        .classed("active", centered && function(d) { return d === centered; });
 
-  world.transition()
-    .duration(750)
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + x + "," + y + ")");
+    world.transition()
+        .duration(750)
+        .attr("transform", `translate(${width / 2},${height / 2})scale(${k})translate(${-x},${-y})`)
+        .style("stroke-width", 1.5 / k + "px");
 }
-
-// let centered, world;
-
-// // Add clickable background
-// svg.append("rect")
-//   .attr("class", "background")
-// 	.attr("width", width)
-// 	.attr("height", height)
-// 	.on("click", click);
-  
-// 	// Legend
-// 	const x = d3.scaleLinear()
-// 		.domain([2.6, 75.1])
-// 		.rangeRound([600, 860]);
-// }
-
-// // Zoom functionality
-// function click(d) {
-//   var x, y, k;
-
-//   if (d && centered !== d) {
-//     var centroid = path.centroid(d);
-//     x = -(centroid[0] * 6);
-//     y = (centroid[1] * 6);
-//     k = 3;
-//     centered = d;
-//   } else {
-//     x = 0;
-//     y = 0;
-//     k = 1;
-//     centered = null;
-//   }
-
-//   world.selectAll("path")
-//       .classed("active", centered && function(d) { return d === centered; });
-
-//   world.transition()
-//       .duration(750)
-//       .attr("transform", "translate(" + x + "," + y + ") scale(" + k + ")" );
