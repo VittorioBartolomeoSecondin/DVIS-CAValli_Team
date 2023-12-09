@@ -177,8 +177,8 @@ function click(event, d) {
 
   if (d && centered !== d) {
     var centroid = path.centroid(d);
-    x = centroid[0];
-    y = centroid[1];
+    x = -centroid[0]/2;
+    y = -centroid[1]/2;
     k = 4; // Increase the scale for zooming in
     centered = d;
   } else {
