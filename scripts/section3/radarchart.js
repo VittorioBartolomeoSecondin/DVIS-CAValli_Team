@@ -1,4 +1,4 @@
-var margin2 = { top: 60, right: 160, bottom: 70, left: 100 }, // 60 70 70 100
+var margin2 = { top: 60, right: 160, bottom: 70, left: 100 }, 
     width2 = 460 - margin2.left - margin2.right,
     height2 = 450 - margin2.top - margin2.bottom;
 
@@ -12,11 +12,11 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
     ]).then(function (datasets) {
 
         var external_svg = d3.select("#external").append("svg")
-                           .attr("id", "external_svg")
-                           .attr("width", width2 + 700 + margin2.left + margin2.right)
-                           .attr("height", height2 - 400 + margin2.top + margin2.bottom)
-                           .append("g")
-                           .attr("transform", `translate(450, ${margin2.top})`);
+                             .attr("id", "external_svg")
+                             .attr("width", width2 + 700 + margin2.left + margin2.right)
+                             .attr("height", height2 - 400 + margin2.top + margin2.bottom)
+                             .append("g")
+                             .attr("transform", `translate(450, ${margin2.top})`);
     
         var dataAvg = datasets[0];
         var dataMax = datasets[1];
@@ -43,34 +43,34 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
         var name = ["radarchart_1", "radarchart_2", "radarchart_3"]
 
         external_svg.append("text")
-               .attr("x", width2 / 2)
-               .attr("y", 0 - margin2.top / 2)
-               .attr("text-anchor", "middle")
-               .style("font-size", "20px")
-               .style("text-decoration", "underline")
-               .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
+                    .attr("x", width2 / 2)
+                    .attr("y", 0 - margin2.top / 2)
+                    .attr("text-anchor", "middle")
+                    .style("font-size", "20px")
+                    .style("text-decoration", "underline")
+                    .text(`Temperature Data for ${stateName} in ${selectedYears.join(', ')}`);
        
         for (let i = 0; i < 3; i++) { 
            
-           // Append the svg object to the body of the page
+           // Append the svg object
            var svg = d3.select("#" + name[i]).append("svg")
-               .attr("id", name[i] + "_svg")
-               .attr("width", width2 + margin2.left + margin2.right)
-               .attr("height", height2 + margin2.top + margin2.bottom)
-               .append("g")
-               .attr("transform", `translate(${margin2.left},${margin2.top})`);
+                       .attr("id", name[i] + "_svg")
+                       .attr("width", width2 + margin2.left + margin2.right)
+                       .attr("height", height2 + margin2.top + margin2.bottom)
+                       .append("g")
+                       .attr("transform", `translate(${margin2.left},${margin2.top})`);
            
            // Define the angles for each data point
            var radialScale = d3.scaleLinear()
-               .domain([d3.min([0, minTemperature]), maxTemperature])
-               .range([0, 150]);
+                               .domain([d3.min([0, minTemperature]), maxTemperature])
+                               .range([0, 150]);
    
            var ticks = [minTemperature, 0, maxTemperature];    
    
            // Add circles
            svg.selectAll("circle")
-               .data(ticks)
-               .join(
+              .data(ticks)
+              .join(
                    enter => enter.append("circle")
                        .attr("cx", width2 / 2)
                        .attr("cy", height2 / 2)
@@ -79,16 +79,16 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                        .attr("r", d => radialScale(d))
                );
    
-           // Add text label for ticks
+           // Add text labels for ticks
            svg.selectAll(".ticklabel")
-               .data(ticks)
-               .join(
+              .data(ticks)
+              .join(
                    enter => enter.append("text")
-                       .attr("class", "ticklabel")
-                       .attr("x", width2 / 2 - 8)
-                       .attr("y", (d, i) => height2 / 2 + (i == 2 ?  -radialScale(ticks[i])-2 : radialScale(ticks[i])+8)) 
-                       .style("font-size", "10px")
-                       .text((d, i) => (i == 1 && ticks[i-1] > 0 ? "" : d.toString()))
+                                 .attr("class", "ticklabel")
+                                 .attr("x", width2 / 2 - 8)
+                                 .attr("y", (d, i) => height2 / 2 + (i == 2 ?  -radialScale(ticks[i])-2 : radialScale(ticks[i])+8)) 
+                                 .style("font-size", "10px")
+                                 .text((d, i) => (i == 1 && ticks[i-1] > 0 ? "" : d.toString()))
                );
            
            // Create a function angle to coordinate
@@ -108,33 +108,33 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                };
            });
    
-           // Draw axis line
+           // Draw axis lines
            svg.selectAll("line")
-               .data(featureData)
-               .join(
+              .data(featureData)
+              .join(
                    enter => enter.append("line")
-                       .attr("x1", width2 / 2)
-                       .attr("y1", height2 / 2)
-                       .attr("x2", d => d.line_coord.x)
-                       .attr("y2", d => d.line_coord.y)
-                       .attr("stroke","gray")
-                       .attr("stroke-opacity", 0.3)
+                                 .attr("x1", width2 / 2)
+                                 .attr("y1", height2 / 2)
+                                 .attr("x2", d => d.line_coord.x)
+                                 .attr("y2", d => d.line_coord.y)
+                                 .attr("stroke","gray")
+                                 .attr("stroke-opacity", 0.3)
                );
            
-           // Draw axis label
+           // Draw axis labels
            svg.selectAll(".axislabel")
                .data(featureData)
                .join(
                    enter => enter.append("text")
-                       .attr("x", d => d.label_coord.x - 13)
-                       .attr("y", d => d.label_coord.y + 5)
-                       .text(d => d.name)
+                                 .attr("x", d => d.label_coord.x - 13)
+                                 .attr("y", d => d.label_coord.y + 5)
+                                 .text(d => d.name)
                );
    
            // Plotting the data
            var line = d3.line()
-               .x(d => d.x)
-               .y(d => d.y);
+                        .x(d => d.x)
+                        .y(d => d.y);
            
           function getPathCoordinates(data_point){
                var coordinates = [];
@@ -202,11 +202,11 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                     const isClicked = selectedColors.includes(key);
                     
                     d3.selectAll(`.legend-rect-${key}`)
-                        .style("fill", isClicked || isColorsEmpty ? color : "white")
-                        .style("stroke", color);
+                      .style("fill", isClicked || isColorsEmpty ? color : "white")
+                      .style("stroke", color);
             
                     d3.selectAll(`.legend-text-${key}`)
-                        .style("font-weight", isClicked && !isColorsFull ? "bold" : "normal");
+                      .style("font-weight", isClicked && !isColorsFull ? "bold" : "normal");
                 });
 
                 if (isColorsFull) selectedColors = [];
@@ -215,60 +215,54 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
            // Colours that are used
            var used_colours = {}
            
-           // Data
            var data = [];
            selectedYears.forEach(function (selectedYear) {
-               //yearDataAvg = dataAvg.filter(function (d) { return +d.year === +selectedYear; }); 
                yearData = dataAll[i].filter(function (d) { return +d.year === +selectedYear; }); 
                var point = {}
-               //months.forEach(m => point[m] = yearDataAvg[0][m]);
                months.forEach(m => point[m] = yearData[0][m]);
                data.push(point);      
            
                // Draw paths and circles with the same color for each data point
                svg.selectAll("g")
-                   .data(data)
-                   .enter()
-                   .append("g")
-                   .each(function(d, i) {
-                       //const color = colors[i]; // Retrieve the color for the current data point
+                  .data(data)
+                  .enter()
+                  .append("g")
+                  .each(function(d, i) {
                        const color = getColorForYear(selectedYear);
                        used_colours[selectedYear] = color;
                        const pathData = getPathCoordinates(d);
                
                        // Draw path element
                        d3.select(this)
-                           .append("path")
-                           .attr("class", function() { return (i == 0 ? "line-min-" : i == 1 ? "line-avg-" : "line-max-") + selectedYear})
-                           .attr("d", line(pathData))
-                           //.attr("stroke-width", 2)
-                           .attr("stroke", color)
-                           .attr("fill", "none")
-                           .attr("stroke-opacity", 1);
+                         .append("path")
+                         .attr("class", function() { return (i == 0 ? "line-min-" : i == 1 ? "line-avg-" : "line-max-") + selectedYear})
+                         .attr("d", line(pathData))
+                         .attr("stroke", color)
+                         .attr("fill", "none")
+                         .attr("stroke-opacity", 1);
                
                        // Draw circles for data points
                        d3.select(this)
-                           .selectAll("circle")
-                           .data(Object.values(d))
-                           .enter()
-                           .filter(dp => !isNaN(dp)) // Filter out NaN values
-                           .append("circle")
-                           .attr("class", function() { return (i == 0 ? "circle-min-" : i == 1 ? "circle-avg-" : "circle-max-") + selectedYear})
-                           .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
-                           .attr("temperatureFahrenheit", function(d, i) { return yearData[0][months[i] + "F"]; })
-                           //.attr("temperatureFahrenheit", function(d, i) { return yearDataAvg[0][months[i] + "F"]; })
-                           .attr("cx", function(dp, j) {
+                         .selectAll("circle")
+                         .data(Object.values(d))
+                         .enter()
+                         .filter(dp => !isNaN(dp)) // Filter out NaN values
+                         .append("circle")
+                         .attr("class", function() { return (i == 0 ? "circle-min-" : i == 1 ? "circle-avg-" : "circle-max-") + selectedYear})
+                         .attr("temperatureCelsius", function(d) { return d; }) // Custom attribute for temperature
+                         .attr("temperatureFahrenheit", function(d, i) { return yearData[0][months[i] + "F"]; })
+                         .attr("cx", function(dp, j) {
                                const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
                                return width2 / 2 + Math.cos(angle) * radialScale(dp);
-                           })
-                           .attr("cy", function(dp, j) {
+                          })
+                         .attr("cy", function(dp, j) {
                                const angle = (Math.PI / 2) + (2 * Math.PI * j / months.length);
                                return height2 / 2 - Math.sin(angle) * radialScale(dp);
-                           })
-                           .attr("r", 4) // Adjust the radius of the circles as needed
-                           .attr("fill", color) // Use the same color for circles
-                           .on("mouseover", handleMouseOver)
-                           .on("mouseout", handleMouseOut);
+                          })
+                         .attr("r", 4) // Adjust the radius of the circles as needed
+                         .attr("fill", color) // Use the same color for circles
+                         .on("mouseover", handleMouseOver)
+                         .on("mouseout", handleMouseOut);
                    });
            });
 
@@ -287,38 +281,38 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
                    var color = used_colours[key]; // Get color value for the key
                
                    radarchart_legend.append("rect")
-                       .attr("class", `legend-rect-${key}`)
-                       .attr("x", width2 + 90) // 100
-                       .attr("y", j * 20)
-                       .attr("width", 10)
-                       .attr("height", 10)
-                       .attr("fill", color)
-                       .on("click", () => handleLegendClick(key))
-                           .style("cursor", "pointer");
+                                    .attr("class", `legend-rect-${key}`)
+                                    .attr("x", width2 + 90) // 100
+                                    .attr("y", j * 20)
+                                    .attr("width", 10)
+                                    .attr("height", 10)
+                                    .attr("fill", color)
+                                    .on("click", () => handleLegendClick(key))
+                                    .style("cursor", "pointer");
                
                    radarchart_legend.append("text")
-                       .attr("x", width2 + 105) // 85
-                       .attr("y", j * 20 + 9)
-                       .attr("class", "legend-text-" + key)
-                       .text(key) // Display the key associated with the color
-                       .style("font-size", "12px");
+                                    .attr("x", width2 + 105) // 85
+                                    .attr("y", j * 20 + 9)
+                                    .attr("class", "legend-text-" + key)
+                                    .text(key) // Display the key associated with the color
+                                    .style("font-size", "12px");
        
                   linechart_legend.append("rect")
-                       .attr("class", `legend-rect-${key}`)
-                       .attr("x", width)
-                       .attr("y", j * 20)
-                       .attr("width", 10)
-                       .attr("height", 10)
-                       .attr("fill", color)
-                       .on("click", () => handleLegendClick(key))
-                           .style("cursor", "pointer");
+                                  .attr("class", `legend-rect-${key}`)
+                                  .attr("x", width)
+                                  .attr("y", j * 20)
+                                  .attr("width", 10)
+                                  .attr("height", 10)
+                                  .attr("fill", color)
+                                  .on("click", () => handleLegendClick(key))
+                                  .style("cursor", "pointer");
                
                    linechart_legend.append("text")
-                       .attr("x", width + 15)
-                       .attr("y", j * 20 + 9)
-                       .attr("class", "legend-text-" + key)
-                       .text(key) // Display the key associated with the color
-                       .style("font-size", "12px");
+                                   .attr("x", width + 15)
+                                   .attr("y", j * 20 + 9)
+                                   .attr("class", "legend-text-" + key)
+                                   .text(key) // Display the key associated with the color
+                                   .style("font-size", "12px");
                });
            }
          };
@@ -328,22 +322,22 @@ function updateRadarChart(selectedDataset_1, selectedDataset_2, selectedDataset_
 function handleMouseOver(event, d) {
     // Show the tooltip
     tooltip.transition()
-        .duration(200)
-        .style("opacity", 1);
+           .duration(200)
+           .style("opacity", 1);
 
     // Tooltip content
     const temperatureCelsius = d3.select(this).attr("temperatureCelsius") + "°C";
     const temperatureFahrenheit = d3.select(this).attr("temperatureFahrenheit") + "°F";
     tooltip.html(`Temperature: ${temperatureCelsius} / ${temperatureFahrenheit}`)
-        .style("left", (event.pageX + 10) + "px")
-        .style("top", (event.pageY - 20) + "px");
+           .style("left", (event.pageX + 10) + "px")
+           .style("top", (event.pageY - 20) + "px");
 }
 
 function handleMouseOut() {
     // Hide the tooltip
     tooltip.transition()
-        .duration(500)
-        .style("opacity", 0);
+           .duration(500)
+           .style("opacity", 0);
 }
 
 // Initial chart creation with the default dataset
