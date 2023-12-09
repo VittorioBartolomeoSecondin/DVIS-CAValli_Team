@@ -27,7 +27,7 @@ let mouseOver = function(event, d) {
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
 				.style("opacity", 1)
-				.text(d.properties.name + ': ' + d.properties.abundance); // put name instead of postal
+				.text(d.properties.name + ': ' + d.properties.abundance + ' trees'); // put name instead of postal
 		}
 
 let mouseLeave = function() {
@@ -171,19 +171,6 @@ fetch("data/section4/choropleth.json")
 // 	.attr("width", width)
 // 	.attr("height", height)
 // 	.on("click", click);
-
-// // ----------------------------
-// //Start of Choropleth drawing
-// // ----------------------------
-
-// function ready(error, topo) {
-// 	// topo is the data received from the d3.queue function (the world.geojson)
-// 	// the data from world_population.csv (country code and country population) is saved in data variable
-	
-// 	d3.csv("data/section4/state_abundance_postal.csv", function(d) {
-// 	var c = d3.scaleLinear().domain(
-// 		[d3.max(topo, function(d) { return +d.features.properties.abundance}), 
-// 		 d3.min(topo, function(d) { return +d.features.properties.abundance})]).range([0,1]);});
   
 // 	// Legend
 // 	const x = d3.scaleLinear()
@@ -214,5 +201,3 @@ fetch("data/section4/choropleth.json")
 //   world.transition()
 //       .duration(750)
 //       .attr("transform", "translate(" + x + "," + y + ") scale(" + k + ")" );
-  
-// }
