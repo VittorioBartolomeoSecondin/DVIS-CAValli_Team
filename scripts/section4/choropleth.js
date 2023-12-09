@@ -26,7 +26,7 @@ let mouseOver = function(event, d) {
 				.duration(200)
 				.style("opacity", .3)
 				.style("stroke", "black")
-				.style("stroke-width", "1px");
+				.style("stroke-width", "0.75px");
 			d3.select(this)
 				.transition()
 				.duration(200)
@@ -46,7 +46,7 @@ let mouseLeave = function() {
 				.duration(200)
 				.style("opacity", 1)
 				.style("stroke", "black")
-				.style("stroke-width", "1px");
+				.style("stroke-width", "0.75px");
 			tooltip.transition().duration(300)
 				.style("opacity", 0);
 		}
@@ -141,7 +141,7 @@ fetch("data/section4/choropleth.json")
 	    .attr("class", "Country")
 	    .attr("id", function(d) { return d.id })
 	    .style("opacity", 1)
-	    .style("stroke-width", "1px")
+	    .style("stroke-width", "0.75px")
             .style("fill", function(d) {
                 // Get data value
                 var value = d.properties.abundance;
