@@ -170,3 +170,7 @@ footer .cr-con{
   display: flex;
   justify-content: center;
 }
+
+.world {
+  transform-origin: center;
+}
