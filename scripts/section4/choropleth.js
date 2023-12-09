@@ -58,15 +58,7 @@ let svg = d3.select("#map")
 	    .attr("preserveAspectRatio", "xMinYMin meet")
 	    .attr("viewBox", `0 0 ${width} ${height}`);
 
-// Add clickable background
-svg.append("rect")
-   .attr("class", "background")
-   .attr("width", width)
-   .attr("height", height)
-   .on("click", click);
-
-let world = svg.append("g").attr("class","world"); 
-let centered;
+let world = svg.append("g"); 
 
 fetch("data/section4/choropleth.json")
     .then(response => response.json())
@@ -80,7 +72,7 @@ fetch("data/section4/choropleth.json")
 			      .attr("width", 1100)
 			      .attr("height", 80)
 			     .append("g")
-			      .attr("transform", `translate(160, -50)`);
+			      .attr("transform", `translate(160, -70)`);
 
 	var colorscale = colours.reverse();
 
@@ -165,36 +157,8 @@ fetch("data/section4/choropleth.json")
                 return mapColour(c(value));               
             })
 	    .on("mouseover", mouseOver)
-	    .on("mouseleave", mouseLeave)
-	    .on("click", click)
+	    .on("mouseleave", mouseLeave);
     })
     .catch(error => {
         console.error("Error fetching the data:", error);
     });
-
-// Define a function to handle click events
-function click(event, d) {
-    var x, y, k;
-
-    if (d && centered !== d) {
-        var centroid = path.centroid(d);
-        x = -centroid[0];
-        y = centroid[1];
-        k = 4; // Zoom level for the state
-        centered = d;
-    } else {
-        x = width / 2;
-        y = height / 2;
-        k = 1; // Zoom level for the overall view
-        centered = null;
-    }
-
-    // Apply zoom transition
-    world.selectAll("path")
-        .classed("active", centered && function(d) { return d === centered; });
-
-    world.transition()
-        .duration(750)
-        .attr("transform", `translate(${width / 2},${height / 2})scale(${k})translate(${-x},${-y})`)
-        .style("stroke-width", 1.5 / k + "px");
-}
