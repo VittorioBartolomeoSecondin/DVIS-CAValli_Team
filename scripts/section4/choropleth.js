@@ -9,7 +9,7 @@ const legendHeight = 300;
 
 // Calculate the position for the legend
 const legendX = width - legendWidth - 20; // Adjust as needed
-const legendY = height / 2 - legendHeight / 2 - 80; // Center vertically, adjust as needed
+const legendY = height / 2 - legendHeight / 2 - 70; // Center vertically, adjust as needed
 
 let projection = d3.geoAlbersUsa()
                    .scale(width)
@@ -127,7 +127,7 @@ fetch("data/section4/choropleth.json")
 		  return i * 50 + 25;
 		})
 		.append("tspan")
-		.attr("dx", "0.5em")
+		.attr("dx", "2em")
 		.attr('y', function(d, i) {
 		  return i * 50;
 		})
