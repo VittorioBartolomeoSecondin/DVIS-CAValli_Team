@@ -170,12 +170,3 @@ footer .cr-con{
   display: flex;
   justify-content: center;
 }
-
-.background {
-  fill: transparent;
-  pointer-evens: all;
-}
-
-.world {
-  transform-origin: center;
-}
