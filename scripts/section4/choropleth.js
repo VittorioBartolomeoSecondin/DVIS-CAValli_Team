@@ -122,7 +122,7 @@ fetch("data/section4/choropleth.json")
 		.attr("text-anchor", "middle")
 		.attr("x", 80)
 		.attr('y', function(d, i) {
-		  return i * 50;
+		  return i * 25;
 		})
 		.append("tspan")
 		.attr("dx", "2em")
