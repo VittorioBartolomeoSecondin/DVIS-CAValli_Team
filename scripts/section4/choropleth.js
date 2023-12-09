@@ -177,7 +177,7 @@ function click(event, d) {
 
     if (d && centered !== d) {
         var centroid = path.centroid(d);
-        x = centroid[0];
+        x = -centroid[0];
         y = centroid[1];
         k = 4; // Zoom level for the state
         centered = d;
