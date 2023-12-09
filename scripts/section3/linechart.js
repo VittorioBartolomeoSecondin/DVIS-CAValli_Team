@@ -18,19 +18,19 @@ const distinctColors = [
 
 // Create a tooltip
 const tooltip = d3.select("#linechart_1")
-    .append("section")
-        .attr("id", "linechart_tooltip")
-    .style("opacity", 0)
-    .style("background-color", "lightgray")
-    .style("border", "2px solid black")
-        .attr("class", "tooltip");
+                  .append("section")
+                    .attr("id", "linechart_tooltip")
+                  .style("opacity", 0)
+                  .style("background-color", "lightgray")
+                  .style("border", "2px solid black")
+                    .attr("class", "tooltip");
 
 var yearDataAvg, yearDataMax, yearDataMin;
 var linechart_svg;
 
 function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, selectedYears) {
 
-    // append the svg object to the body of the page
+    // append the svg object
     linechart_svg = d3.select("#linechart_1").append("svg")
         .attr("id", "linechart_svg")
         .attr("width", width + margin.left + margin.right)
@@ -109,12 +109,6 @@ function updateLineChart(selectedDataset_1,selectedDataset_2,selectedDataset_3, 
             yearDataMin = dataMin.filter(function (d) { return +d.year === +selectedYear; });
 
             const color = getColorForYear(selectedYear);
-            /*const colorForMax = getColorForYear(selectedYear);
-            const color = chroma(colorForMax);
-            
-            // Desaturate the color
-            const colorForAvg = color.desaturate().hex();
-            const colorForMin = color.desaturate(1).hex();*/
 
             var lineMin = d3.line()
                 .defined(function(d) { return !isNaN(d[1]); }) // Exclude NaN values from the line
