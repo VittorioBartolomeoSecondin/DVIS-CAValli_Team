@@ -62,7 +62,8 @@ fetch("data/section4/choropleth.json")
     .then(response => response.json())
     .then(data => {
         const data_features = topojson.feature(data, data.objects.states).features;
-        var c = d3.scaleLinear().domain([d3.max(data_features, function(d) { return +d.properties.abundance}), d3.min(data_features, function(d) { return +d.properties.abundance})]).range([0,1]);
+        // var c = d3.scaleLinear().domain([d3.max(data_features, function(d) { return +d.properties.abundance}), d3.min(data_features, function(d) { return +d.properties.abundance})]).range([0,1]);
+	
 
 	const legend_svg = d3.select("#map")
 			     .append("svg")
@@ -76,9 +77,11 @@ fetch("data/section4/choropleth.json")
 
 	var min = d3.min(data_features, function(d) { return +d.properties.abundance}); 
         var max = d3.max(data_features, function(d) { return +d.properties.abundance});
-	  
+
+	var c = d3.scaleLinear().domain([0, max]).range([0,1]);
+	    
 	var color = d3.scaleQuantize()
-		      .domain([min, max])
+		      .domain([0, max])
 		      .range(colorscale);
 	  
 	var format = d3.format(".0f")
@@ -138,7 +141,7 @@ fetch("data/section4/choropleth.json")
         g.selectAll(".states")
             .data(data_features)
             .enter().append("path")
-	    .attr("data-name", function(d) { return d.properties.postal }) // put name instead
+	    .attr("data-name", function(d) { return d.properties.name }) // put name instead of postal
 		
 	    // add a class, styling and mouseover/mouseleave and click functions
 	    .style("stroke", "#fff")
@@ -160,7 +163,8 @@ fetch("data/section4/choropleth.json")
                     return mapColour(c(value));
                 } else {
                     // If value is undefined…
-                    return "rgb(213,222,217)";
+		    return "rgb(252,252,252)";
+                    // return "rgb(213,222,217)";
                 }
             })
     })
