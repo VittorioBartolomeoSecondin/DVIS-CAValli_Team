@@ -169,6 +169,8 @@ function click(d) {
   var x, y, k;
 
   if (d && centered !== d) {
+    console.log(d);
+    console.log(path.centroid(d));
     var centroid = path.centroid(d);
     x = -(centroid[0] * 6);
     y = (centroid[1] * 6);
