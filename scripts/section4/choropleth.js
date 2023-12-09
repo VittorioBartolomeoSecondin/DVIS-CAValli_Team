@@ -58,11 +58,11 @@ let svg = d3.select("#map")
 	    .attr("viewBox", `0 0 ${width} ${height}`);
 
 // Add clickable background
-svg.append("rect")
+/*svg.append("rect")
    .attr("class", "background")
    .attr("width", width)
    .attr("height", height)
-   .on("click", click);
+   .on("click", click);*/
 
 let world = svg.append("g").attr("class","world"); 
 let centered;
