@@ -66,13 +66,12 @@ fetch("data/section4/choropleth.json")
         const data_features = topojson.feature(data, data.objects.states).features;
         // var c = d3.scaleLinear().domain([d3.max(data_features, function(d) { return +d.properties.abundance}), d3.min(data_features, function(d) { return +d.properties.abundance})]).range([0,1]);
 	
-	const legend_svg = d3.select("#map")
-			     .append("svg")
+	const legend_svg = svg.append("g")
 			      .attr("id", "choropleth_legend_svg")
 			      .attr("width", 1100)
 			      .attr("height", 80)
 			     .append("g")
-			      .attr("transform", `translate(0, -40)`);
+			      .attr("transform", `translate(20, 20)`);
 
 	var colorscale = colours.reverse();
 
