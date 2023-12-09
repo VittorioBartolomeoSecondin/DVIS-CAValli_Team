@@ -145,6 +145,7 @@ fetch("data/section4/choropleth.json")
 	    .attr("data-name", function(d) { return d.properties.name }) 
 		
 	    // add a class, styling and mouseover/mouseleave and click functions
+	    .attr("d", path)
 	    .style("stroke", "#fff")
 	    .attr("class", "Country")
 	    .attr("id", function(d) { return d.id })
@@ -152,7 +153,6 @@ fetch("data/section4/choropleth.json")
 	    .on("mouseover", mouseOver)
 	    .on("mouseleave", mouseLeave)
 	    .on("click", click)
-            .attr("d", path)
             .style("stroke-width", "0.75px")
             .style("fill", function(d) {
                 // Get data value
@@ -165,7 +165,7 @@ fetch("data/section4/choropleth.json")
     });
 
 // Zoom functionality
-function click(event, d) {
+function click(d) {
   var x, y, k;
 
   if (d && centered !== d) {
