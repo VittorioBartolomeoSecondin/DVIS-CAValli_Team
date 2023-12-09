@@ -176,12 +176,10 @@ function click(event, d) {
   var x, y, k;
 
   if (d && centered !== d) {
-    console.log(d);
-    console.log(path.centroid(d));
     var centroid = path.centroid(d);
-    x = -(centroid[0] * 6);
-    y = (centroid[1] * 6);
-    k = 3;
+    x = -centroid[0];
+    y = -centroid[1];
+    k = 4; // Increase the scale for zooming in
     centered = d;
   } else {
     x = 0;
@@ -191,14 +189,14 @@ function click(event, d) {
   }
 
   world.selectAll("path")
-      .classed("active", centered && function(d) { return d === centered; });
+    .classed("active", centered && function(d) {
+      return d === centered;
+    });
 
   world.transition()
-      .duration(750)
-      .attr("transform", "translate(" + x + "," + y + ") scale(" + k + ")" );
-  
+    .duration(750)
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + x + "," + y + ")");
 }
-
 
 // let centered, world;
 
