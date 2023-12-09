@@ -165,7 +165,7 @@ fetch("data/section4/choropleth.json")
     });
 
 // Zoom functionality
-function click(d) {
+function click(event, d) {
   var x, y, k;
 
   if (d && centered !== d) {
