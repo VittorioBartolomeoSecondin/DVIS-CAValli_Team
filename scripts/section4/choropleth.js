@@ -24,15 +24,13 @@ let mouseOver = function(event, d) {
 			d3.selectAll(".Country")
 				.transition()
 				.duration(200)
-				.style("opacity", .5)
-				.style("stroke-width", "0.75px")
-				.style("stroke", "black");
+				.style("opacity", .3)
+				.style("stroke-width", "0.75px");
 			d3.select(this)
 				.transition()
 				.duration(200)
 				.style("opacity", 1)
-				.style("stroke", "green")
-				.style("stroke-width", "2px")
+				.style("stroke-width", "2px");
 			tooltip.style("left", (event.pageX + 15) + "px")
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
@@ -45,8 +43,7 @@ let mouseLeave = function() {
 				.transition()
 				.duration(200)
 				.style("opacity", 1)
-				.style("stroke-width", "0.75px")
-				.style("stroke", "black");
+				.style("stroke-width", "0.75px");
 			tooltip.transition().duration(300)
 				.style("opacity", 0);
 		}
@@ -72,7 +69,6 @@ fetch("data/section4/choropleth.json")
     .then(response => response.json())
     .then(data => {
         const data_features = topojson.feature(data, data.objects.states).features;
-        // var c = d3.scaleLinear().domain([d3.max(data_features, function(d) { return +d.properties.abundance}), d3.min(data_features, function(d) { return +d.properties.abundance})]).range([0,1]);
 	
 	const legend_svg = svg.append("g")
 			      .attr("id", "choropleth_legend_svg")
@@ -129,15 +125,6 @@ fetch("data/section4/choropleth.json")
 		.text(function(d) {
 		  return `< ${(color.invertExtent(d)[0] / (10 ** 6)).toFixed(2)} m`;
 		})
-		/*.append("tspan")
-		.attr('y', function(d, i) {
-		  return i * 50 + 50;
-		})
-		// last value below the legend
-		.text(function(d) {
-		  if (color.invertExtent(d)[1] == max)
-		    return format(color.invertExtent(d)[1])
-		})*/
 	}
 
         world.selectAll(".states")
@@ -147,7 +134,7 @@ fetch("data/section4/choropleth.json")
 		
 	    // add a class, styling and mouseover/mouseleave and click functions
 	    .attr("d", path)
-	    .style("stroke", "black")
+	    .style("stroke", function(d) { return d.properties.abundance ? "green" : "black";})
 	    .attr("class", "Country")
 	    .attr("id", function(d) { return d.id })
 	    .style("opacity", 1)
