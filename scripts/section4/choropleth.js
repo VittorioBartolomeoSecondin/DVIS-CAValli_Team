@@ -155,16 +155,7 @@ fetch("data/section4/choropleth.json")
             .style("fill", function(d) {
                 // Get data value
                 var value = d.properties.abundance;
-                
-                if (value) {
-                    // If value exists…
-		    console.log(mapColour(c(value)));
-                    return mapColour(c(value));
-                } else {
-                    // If value is undefined…
-		    return "rgb(240,240,240)";
-                    // return "rgb(213,222,217)";
-                }
+                return mapColour(c(value));               
             })
     })
     .catch(error => {
