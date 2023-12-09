@@ -134,7 +134,7 @@ fetch("data/section4/choropleth.json")
 		
 	    // add a class, styling and mouseover/mouseleave and click functions
 	    .attr("d", path)
-	    .style("stroke", function(d) { console.log(d.properties.abundance); return d.properties.abundance != 0 ? "black" : "green";})
+	    .style("stroke", function(d) { console.log(d.properties.abundance); return d.properties.abundance != 0 ? "green" : "black";})
 	    .attr("class", "Country")
 	    .attr("id", function(d) { return d.id })
 	    .style("opacity", 1)
