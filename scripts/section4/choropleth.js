@@ -166,7 +166,7 @@ const x = d3.scaleLinear()
 	.rangeRound([600, 860]);
 
 const legend = svg.append("g")
-	.attr("id", "legend");
+	.attr("id", "choropleth_legend");
 
 const legend_entry = legend.selectAll("g.legend")
 	.data(colorScale.range().map(function(d) {
@@ -199,9 +199,9 @@ legend_entry.append("text")
 		return height - (i * ls_h) - ls_h - 6;
 	})
 	.text(function(d, i) {
-		if (i === 0) return "< " + d[1] / 1000000 + " m";
-		if (d[1] < d[0]) return d[0] / 1000000 + " m +";
-		return d[0] / 1000000 + " m - " + d[1] / 1000000 + " m";
+		if (i === 0) return "< " + d[1];
+		if (d[1] < d[0]) return d[0];
+		return d[0] + " - " + d[1];
 	});
 
-legend.append("text").attr("x", 15).attr("y", 280).text("Population (Million)");
+legend.append("text").attr("x", 15).attr("y", 280).text("Tree abundance");
