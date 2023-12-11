@@ -53,11 +53,16 @@ let mouseLeave = function() {
 
 let path = d3.geoPath().projection(projection);
 
-var colours = d3.schemeGreens[9].reverse();
+// Define color scale
+const colorScale = d3.scaleThreshold()
+	.domain([100000, 200000, 300000, 400000, 500000])
+	.range(d3.schemeGreens[6]);
+
+/*var colours = d3.schemeGreens[9].reverse();
   
 var mapColour = d3.scaleLinear()
 		      .domain(d3.range(0, 1, 1.0 / (colours.length - 1)))
-		      .range(colours);
+		      .range(colours);*/
 
 let svg = d3.select("#map")
 	    .append("svg")
@@ -72,8 +77,8 @@ fetch("data/section4/choropleth.json")
     .then(response => response.json())
     .then(data => {
         const data_features = topojson.feature(data, data.objects.states).features;
-	
-	const legend_svg = svg.append("g")
+	    
+	/*const legend_svg = svg.append("g")
 			      .attr("id", "choropleth_legend_svg")
 			      .attr("width", legendWidth)
 			      .attr("height", legendHeight)
@@ -128,7 +133,7 @@ fetch("data/section4/choropleth.json")
 		.text(function(d) {
 		  return `< ${(color.invertExtent(d)[0] / (10 ** 6)).toFixed(2)} m.`;
 		})
-	}
+	}*/
 
         world.selectAll(".states")
             .data(data_features)
@@ -145,7 +150,8 @@ fetch("data/section4/choropleth.json")
             .style("fill", function(d) {
                 // Get data value
                 var value = d.properties.abundance;
-                return mapColour(c(value));               
+                //return mapColour(c(value));
+	        return colorScale(value);
             })
 	    .on("mouseover", mouseOver)
 	    .on("mouseleave", mouseLeave);
