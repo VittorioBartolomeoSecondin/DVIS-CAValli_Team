@@ -55,8 +55,8 @@ let path = d3.geoPath().projection(projection);
 
 // Define color scale
 const colorScale = d3.scaleThreshold()
-	.domain([100000, 200000, 300000, 400000, 500000])
-	.range(d3.schemeGreens[6]);
+	.domain([100000, 200000, 300000, 500000])
+	.range(d3.schemeGreens[5]);
 
 /*var colours = d3.schemeGreens[9].reverse();
   
