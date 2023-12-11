@@ -205,4 +205,4 @@ legend_entry.append("text")
 		return d[0] / 1000 + " k - " + d[1] / 1000 + " k";
 	});
 
-legend.append("text").attr("x", 15).attr("y", 280).text("Tree abundance");
+legend.append("text").attr("x", 15).attr("y", 140).text("Tree abundance");
