@@ -159,3 +159,49 @@ fetch("data/section4/choropleth.json")
     .catch(error => {
         console.error("Error fetching the data:", error);
     });
+
+// Legend
+const x = d3.scaleLinear()
+	.domain([2.6, 75.1])
+	.rangeRound([600, 860]);
+
+const legend = svg.append("g")
+	.attr("id", "legend");
+
+const legend_entry = legend.selectAll("g.legend")
+	.data(colorScale.range().map(function(d) {
+		d = colorScale.invertExtent(d);
+		if (d[0] == null) d[0] = x.domain()[0];
+		if (d[1] == null) d[1] = x.domain()[1];
+		return d;
+	}))
+	.enter().append("g")
+	.attr("class", "legend_entry");
+
+const ls_w = 20,
+	ls_h = 20;
+
+legend_entry.append("rect")
+	.attr("x", 20)
+	.attr("y", function(d, i) {
+		return height - (i * ls_h) - 2 * ls_h;
+	})
+	.attr("width", ls_w)
+	.attr("height", ls_h)
+	.style("fill", function(d) {
+		return colorScale(d[0]);
+	})
+	.style("opacity", 0.8);
+
+legend_entry.append("text")
+	.attr("x", 50)
+	.attr("y", function(d, i) {
+		return height - (i * ls_h) - ls_h - 6;
+	})
+	.text(function(d, i) {
+		if (i === 0) return "< " + d[1] / 1000000 + " m";
+		if (d[1] < d[0]) return d[0] / 1000000 + " m +";
+		return d[0] / 1000000 + " m - " + d[1] / 1000000 + " m";
+	});
+
+legend.append("text").attr("x", 15).attr("y", 280).text("Population (Million)");
