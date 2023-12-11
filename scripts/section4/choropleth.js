@@ -191,8 +191,8 @@ legend_entry.append("rect")
 	.attr("height", ls_h)
 	.style("fill", function(d) {
 		return colorScale(d[0]);
-	})
-	.style("opacity", 0.8);
+	});
+	//.style("opacity", 0.8);
 
 legend_entry.append("text")
 	.attr("x", 50)
