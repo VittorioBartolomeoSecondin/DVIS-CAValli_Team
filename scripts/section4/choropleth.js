@@ -1,6 +1,6 @@
 // set the dimensions and margins of the graph
 var margin = { top: 60, right: 70, bottom: 70, left: 100 },
-    width = 1000 - margin.left - margin.right,
+    width = 1500 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
 
 // Define the width and height of the legend
