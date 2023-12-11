@@ -166,7 +166,8 @@ const x = d3.scaleLinear()
 	.rangeRound([600, 860]);
 
 const legend = svg.append("g")
-	.attr("id", "choropleth_legend");
+	.attr("id", "choropleth_legend")
+	.attr("transform", `translate(${legendX}, ${legendY})`);
 
 const legend_entry = legend.selectAll("g.legend")
 	.data(colorScale.range().map(function(d) {
