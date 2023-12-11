@@ -151,7 +151,7 @@ fetch("data/section4/choropleth.json")
                 // Get data value
                 var value = d.properties.abundance;
                 //return mapColour(c(value));
-	        return colorScale(value);
+	        return value != 0 ? colorScale(value) : "grey";
             })
 	    .on("mouseover", mouseOver)
 	    .on("mouseleave", mouseLeave);
@@ -205,4 +205,4 @@ legend_entry.append("text")
 		return d[0] / 1000 + " k - " + d[1] / 1000 + " k";
 	});
 
-legend.append("text").attr("x", 15).attr("y", 430).text("Tree abundance");
+legend.append("text").attr("x", 15).attr("y", 410).text("Tree abundance");
