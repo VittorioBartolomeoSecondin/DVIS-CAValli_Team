@@ -35,7 +35,7 @@ const ChoroplethDensity = {
 						.style("opacity", 1)
 						.style("stroke", d.properties.density_1000 != 0 ? "green" : "black")
 						.style("stroke-width", "2px");
-					tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + d.properties.density_1000 + ' trees every 1000 square kilometers')
+					tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + Math.round(d.properties.density_1000) + ' trees every 1000 square kilometers')
 						.style("left", (event.pageX + 15) + "px")
 						.style("top", (event.pageY - 28) + "px")
 						.transition().duration(400)
