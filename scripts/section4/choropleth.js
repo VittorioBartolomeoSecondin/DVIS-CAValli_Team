@@ -86,7 +86,7 @@ defs.append("pattern")
     .attr("width", 4)
     .attr("height", 8)
     .attr("transform", "translate(0,0)")
-    .attr("fill", "white");
+    .attr("fill", "black");
 
 fetch("data/section4/choropleth.json")
     .then(response => response.json())
