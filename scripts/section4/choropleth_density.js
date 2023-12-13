@@ -160,7 +160,14 @@ const ChoroplethDensity = {
 				return d[0] + " - " + d[1];
 			});
 		
-		legend.append("text").attr("x", 15).attr("y", 430).html('Tree density' + '<br>' + '(trees every 1000 km<sup>2</sup>');
+		legend.append("text")
+		  .attr("x", 15)
+		  .attr("y", 430)
+		  .html('Tree density')
+		  .append("tspan") // Append a tspan for the second line
+		  .attr("x", 15)
+		  .attr("dy", "1.2em") // Offset by 1.2em (line height) to move to the next line
+		  .html('(trees every 1000 km<sup>2</sup>)');
 	}
 }
 
