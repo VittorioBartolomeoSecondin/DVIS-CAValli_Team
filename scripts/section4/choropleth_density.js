@@ -1,16 +1,3 @@
-// set the dimensions and margins of the graph
-var margin = { top: 60, right: 70, bottom: 70, left: 100 },
-    width = 1300 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
-
-// Define the width and height of the legend
-const legendWidth = 110;
-const legendHeight = 300;
-
-// Calculate the position for the legend
-const legendX = width - legendWidth - 20; 
-const legendY = height / 2 - legendHeight / 2 - 220; 
-
 let projection = d3.geoAlbersUsa()
                    .scale(width)
                    .translate([width / 2, height / 2]);
@@ -33,8 +20,8 @@ let mouseOver = function(event, d) {
 				.style("opacity", 1)
 				.style("stroke", d.properties.density_1000 != 0 ? "green" : "black")
 				.style("stroke-width", "2px");
-  			tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + d.properties.density_1000 
-                    + ' trees/1000 square kilometers')
+  				tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + d.properties.density_1000 
+                    			+ ' trees/1000 square kilometers')
 				.style("left", (event.pageX + 15) + "px")
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
