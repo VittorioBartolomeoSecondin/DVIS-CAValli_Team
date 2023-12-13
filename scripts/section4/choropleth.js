@@ -165,6 +165,12 @@ const Choropleth = {
 	},
 
 	destroy: function() {
-	    delete window.Choropleth; 
+	    // Clean up existing map elements
+	    const existingMap = document.querySelector("#choropleth svg");
+	    if (existingMap)
+		existingMap.parentNode.removeChild(existingMap);
+	
+	    // Remove the reference from the global object
+	    delete window.Choropleth;
 	}
 }
