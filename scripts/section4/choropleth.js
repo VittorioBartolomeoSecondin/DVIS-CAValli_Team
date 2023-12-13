@@ -38,7 +38,7 @@ let mouseOver = function(event, d) {
 				.transition().duration(400)
 				.style("opacity", 1)
 				.text(d.properties.name + ' (' + d.properties.postal + '): ' + d.properties.abundance + ' trees'
-				     + '\n' + d.properties.area + ' square kilometers');
+				     + '\n\n' + d.properties.area + ' square kilometers');
 		}
 
 let mouseLeave = function() {
