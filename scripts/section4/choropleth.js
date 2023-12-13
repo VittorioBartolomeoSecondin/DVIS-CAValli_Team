@@ -20,21 +20,6 @@ const tooltip = d3.select("body").append("div")
 		  .attr("class", "tooltip")
 		  .style("opacity", 0);
 
-// Add the stripe pattern to the SVG
-const defs = svg.append("defs");
-
-defs.append("pattern")
-    .attr("id", "stripe")
-    .attr("patternUnits", "userSpaceOnUse")
-    .attr("width", 8)
-    .attr("height", 8)
-    .attr("patternTransform", "rotate(45)")
-    .append("rect")
-    .attr("width", 4)
-    .attr("height", 8)
-    .attr("transform", "translate(0,0)")
-    .attr("fill", "white");
-
 let mouseOver = function(event, d) {
 			d3.selectAll(".Country")
 				.transition()
@@ -47,10 +32,7 @@ let mouseOver = function(event, d) {
 				.duration(200)
 				.style("opacity", 1)
 				.style("stroke", d.properties.abundance != 0 ? "green" : "black")
-				.style("stroke-width", "2px")
-				.style("fill", function(d) {
-			            return d.properties.abundance !== 0 ? colorScale(d.properties.abundance) : "url(#stripe)";
-			        });
+				.style("stroke-width", "2px");
 			tooltip.style("left", (event.pageX + 15) + "px")
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
@@ -89,7 +71,22 @@ let svg = d3.select("#map")
 	    .attr("preserveAspectRatio", "xMinYMin meet")
 	    .attr("viewBox", `0 0 ${width} ${height}`);
 
-let world = svg.append("g"); 
+let world = svg.append("g");
+
+// Add the stripe pattern to the SVG
+const defs = svg.append("defs");
+
+defs.append("pattern")
+    .attr("id", "stripe")
+    .attr("patternUnits", "userSpaceOnUse")
+    .attr("width", 8)
+    .attr("height", 8)
+    .attr("patternTransform", "rotate(45)")
+    .append("rect")
+    .attr("width", 4)
+    .attr("height", 8)
+    .attr("transform", "translate(0,0)")
+    .attr("fill", "white");
 
 fetch("data/section4/choropleth.json")
     .then(response => response.json())
@@ -169,7 +166,7 @@ fetch("data/section4/choropleth.json")
                 // Get data value
                 var value = d.properties.abundance;
                 //return mapColour(c(value));
-	        return value != 0 ? colorScale(value) : "#F5F5F5";
+	        return value != 0 ? colorScale(value) : "url(#stripe)";
             })
 	    .on("mouseover", mouseOver)
 	    .on("mouseleave", mouseLeave);
