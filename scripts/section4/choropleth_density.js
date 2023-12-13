@@ -178,6 +178,8 @@ const ChoroplethDensity = {
 			  .attr("y", 440)
 			  .text(")");
 	}
-}
 
-ChoroplethDensity.initialize();
+	destroy: function() {
+	    delete window.ChoroplethDensity; 
+	}
+}
