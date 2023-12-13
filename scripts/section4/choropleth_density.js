@@ -52,7 +52,7 @@ let world_density = svg_density.append("g");
 const defs_density = svg_density.append("defs");
 
 defs_density.append("pattern")
-    .attr("id", "stripe")
+    .attr("id", "stripe_density")
     .attr("patternUnits", "userSpaceOnUse")
     .attr("width", 8)
     .attr("height", 8)
@@ -69,7 +69,7 @@ fetch("data/section4/choropleth.json")
     .then(data => {
         const data_features = topojson.feature(data, data.objects.states).features;
 	    
-        world.selectAll(".states")
+        world.selectAll(".states_density")
             .data(data_features)
             .enter().append("path")
 	    .attr("data-name", function(d) { return d.properties.name }) 
@@ -85,7 +85,7 @@ fetch("data/section4/choropleth.json")
                 // Get data value
                 var value = d.properties.density_1000;
                 //return mapColour(c(value));
-	        return value != 0 ? colorScale_density(value) : "url(#stripe)";
+	        return value != 0 ? colorScale_density(value) : "url(#stripe_density)";
             })
 	    .on("mouseover", mouseOver)
 	    .on("mouseleave", mouseLeave);
@@ -99,7 +99,7 @@ const x_density = d3.scaleLinear()
 	.domain([2.6, 75.1])
 	.rangeRound([600, 860]);
 
-const legend_density = svg.append("g")
+const legend_density = svg_density.append("g")
 	.attr("id", "choropleth_legend")
 	.attr("transform", `translate(${legendX}, ${legendY})`);
 
