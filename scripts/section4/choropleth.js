@@ -168,6 +168,3 @@ const Choropleth = {
 	    delete window.Choropleth; 
 	}
 }
-
-Choropleth.initialize();
-Choropleth.destroy();
