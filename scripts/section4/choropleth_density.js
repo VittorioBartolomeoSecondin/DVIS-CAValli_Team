@@ -6,7 +6,7 @@ const ChoroplethDensity = {
 		    height = 700 - margin.top - margin.bottom;
 		
 		// Define the width and height of the legend
-		const legendWidth = 110;
+		const legendWidth = 112;
 		const legendHeight = 300;
 		
 		// Calculate the position for the legend
