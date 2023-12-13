@@ -161,7 +161,7 @@ const ChoroplethDensity = {
 			});
 		
 			legend.append("text")
-			  .attr("x", 24)
+			  .attr("x", 27)
 			  .attr("y", 425)
 			  .text("Tree density")
 			  .append("tspan")
