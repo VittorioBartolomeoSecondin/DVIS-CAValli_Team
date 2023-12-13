@@ -166,7 +166,7 @@ const ChoroplethDensity = {
 			  .text("Tree density");
 			
 			legend.append("text")
-			  .attr("x", 27)
+			  .attr("x", 7)
 			  .attr("y", 445)
 			  .text("(trees every 1000 km")
 			  .append("tspan")
@@ -174,7 +174,7 @@ const ChoroplethDensity = {
 			  .text("2");
 			
 			legend.append("text")
-			  .attr("x", 27)
+			  .attr("x", 7)
 			  .attr("y", 465)
 			  .text(")");
 	}
