@@ -164,3 +164,5 @@ const Choropleth = {
 		legend.append("text").attr("x", 15).attr("y", 440).text("Tree abundance");
 	}
 }
+
+Choropleth.initalize();
