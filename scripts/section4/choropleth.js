@@ -162,7 +162,7 @@ const Choropleth = {
 			});
 		
 		legend.append("text").attr("x", 15).attr("y", 420).text("Tree abundance");
-	}
+	},
 
 	destroy: function() {
 	    delete window.Choropleth; 
