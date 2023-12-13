@@ -163,15 +163,19 @@ const ChoroplethDensity = {
 			legend.append("text")
 			  .attr("x", 27)
 			  .attr("y", 425)
-			  .text("Tree density")
-			  .append("tspan")
-			  .attr("x", 7)
-			  .attr("dy", "1.2em")
+			  .text("Tree density");
+			
+			legend.append("text")
+			  .attr("x", 27)
+			  .attr("y", 445)
 			  .text("(trees every 1000 km")
 			  .append("tspan")
 			  .attr("baseline-shift", "super")
-			  .text("2")
-			  .attr("baseline-shift", "baseline")
+			  .text("2");
+			
+			legend.append("text")
+			  .attr("x", 27)
+			  .attr("y", 465)
 			  .text(")");
 	}
 }
