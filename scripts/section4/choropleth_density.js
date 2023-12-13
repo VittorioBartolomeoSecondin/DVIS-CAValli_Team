@@ -57,8 +57,8 @@ const ChoroplethDensity = {
 		
 		// Define color scale
 		const colorScale = d3.scaleThreshold()
-			.domain([500, 1000, 4000])
-			.range(d3.schemeGreens[4]);
+			.domain([100, 500, 1000, 4000])
+			.range(d3.schemeGreens[5]);
 		
 		let svg = d3.select("#choropleth_density")
 			    .append("svg")
