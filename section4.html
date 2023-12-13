@@ -66,9 +66,36 @@
             </div>
         </div>
 
+        <script>
+            document.querySelectorAll('input[name="options"]').forEach(function(radio) {
+              radio.addEventListener('change', instantiateChoropleth);
+            });
+        </script>
+
         <br>
         
         <div id="choropleth"></div>
+
+        <script>
+            let currentInstance;
+            
+            function instantiateChoropleth() {
+              const radioValue = document.querySelector('input[name="options"]:checked').value;
+            
+              if (currentInstance) {
+                currentInstance.destroy();
+                currentInstance = null;
+              }
+            
+              if (radioValue === 'abundance') {
+                currentInstance = new Choropleth();
+                currentInstance.initialize(); // Use the initialize method for setup
+              } else if (radioValue === 'density') {
+                currentInstance = new ChoroplethDensity();
+                currentInstance.initialize(); // Use the initialize method for setup
+              }
+            }
+        </script>
 
         <br>
         
