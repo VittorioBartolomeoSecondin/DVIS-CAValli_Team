@@ -180,6 +180,12 @@ const ChoroplethDensity = {
 	},
 
 	destroy: function() {
-	    delete window.ChoroplethDensity; 
+	    // Clean up existing map elements
+	    const existingMap = document.querySelector("#choropleth svg");
+	    if (existingMap)
+		existingMap.parentNode.removeChild(existingMap);
+	
+	    // Remove the reference from the global object
+	    delete window.ChoroplethDensity;
 	}
 }
