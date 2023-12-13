@@ -64,7 +64,7 @@ ChoroplethDensity.prototype = {
 			.domain([100, 500, 1000, 4000])
 			.range(d3.schemeGreens[5]);
 		
-		let svg = d3.select("#choropleth_density")
+		let svg = d3.select("#choropleth")
 			    .append("svg")
 			    .attr("width", width)
 			    .attr("height", height)
