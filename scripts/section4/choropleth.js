@@ -39,7 +39,7 @@ let mouseOver = function(event, d) {
 				.style("opacity", 1)
 				.text(function() {
 				     return d.properties.name + " (" + d.properties.postal + "): " + d.properties.abundance + " trees"
-				     + "\n" + d.properties.area + " square kilometers";
+				     + "\nArea: " + d.properties.area + " square kilometers";
     		    		});
 		}
 
