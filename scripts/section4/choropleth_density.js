@@ -160,18 +160,20 @@ const ChoroplethDensity = {
 				return d[0] + " - " + d[1];
 			});
 		
-		legend.append("text")
-		  .attr("x", 12)
-		  .attr("y", 425)
-		  .html('Tree density')
-		  .append("tspan") // Append a tspan for the second line
-		  .text("(trees every 1000 km")
-		  .append("tspan") // Append a tspan for the superscript "2"
-		  .attr("baseline-shift", "super")
-		  .text("2")
-		  .append("tspan") // Append a tspan for the closing parenthesis
-		  .attr("baseline-shift", "baseline")
-		  .text(")");
+			legend.append("text")
+			  .attr("x", 12)
+			  .attr("y", 425)
+			  .text("Tree density")
+			  .append("tspan")
+			  .attr("x", 12)
+			  .attr("dy", "1.2em")
+			  .text("(trees every 1000 km")
+			  .append("tspan")
+			  .attr("baseline-shift", "super")
+			  .text("2")
+			  .append("tspan")
+			  .attr("baseline-shift", "baseline")
+			  .text(")");
 	}
 }
 
