@@ -165,4 +165,4 @@ const Choropleth = {
 	}
 }
 
-Choropleth.initalize();
+Choropleth.initialize();
