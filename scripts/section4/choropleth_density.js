@@ -49,7 +49,20 @@ let svg_density = d3.select("#choropleth_density")
 let world_density = svg_density.append("g");
 
 // Add the stripe pattern to the SVG
-svg_density.append("defs");
+const defs_density = svg_density.append("defs");
+
+defs_density.append("pattern")
+    .attr("id", "stripe")
+    .attr("patternUnits", "userSpaceOnUse")
+    .attr("width", 8)
+    .attr("height", 8)
+    .attr("patternTransform", "rotate(45)")
+    .append("rect")
+    .attr("width", 4)
+    .attr("height", 8)
+    .attr("transform", "translate(0,0)")
+    .attr("opacity", 0.5)
+    .attr("fill", "grey");
 
 fetch("data/section4/choropleth.json")
     .then(response => response.json())
