@@ -59,7 +59,7 @@ const colorScale = d3.scaleThreshold()
 	.domain([100000, 200000, 300000, 500000])
 	.range(d3.schemeGreens[5]);
 
-let svg = d3.select("#map")
+let svg = d3.select("#choropleth")
 	    .append("svg")
 	    .attr("width", width)
 	    .attr("height", height)
