@@ -76,6 +76,8 @@
                 currentInstance.destroy();
                 currentInstance = null;
               }
+
+              console.log(radioValue);
             
               if (radioValue === 'abundance') {
                 currentInstance = new Choropleth();
