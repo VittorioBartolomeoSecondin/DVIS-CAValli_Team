@@ -78,24 +78,15 @@
         <script src="scripts/section4/choropleth_density.js"></script>
 
         <script>
-            let currentInstance;
-            
             function instantiateChoropleth() {
               const radioId = document.querySelector('input[name="options"]:checked').id;
             
-              if (currentInstance) {
-                currentInstance.destroy();
-                currentInstance = null;
-              }
-
-              console.log(radioId);
-            
               if (radioId === 'option1') {
-                currentInstance = new Choropleth();
-                currentInstance.initialize(); // Use the initialize method for setup
+                ChoroplethDensity.destroy();
+                Choropleth.initialize(); // Use the initialize method for setup
               } else if (radioId === 'option2') {
-                currentInstance = new ChoroplethDensity();
-                currentInstance.initialize(); // Use the initialize method for setup
+                Choropleth.destroy();
+                ChoroplethDensity.initialize(); // Use the initialize method for setup
               }
             }
             
