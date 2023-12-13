@@ -66,6 +66,17 @@
             </div>
         </div>
 
+        <br>
+        
+        <div id="choropleth"></div>
+
+        <br>
+
+        <script src="https://d3js.org/d3.v7.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+        <script src="scripts/section4/choropleth.js"></script>
+        <script src="scripts/section4/choropleth_density.js"></script>
+
         <script>
             let currentInstance;
             
@@ -92,17 +103,6 @@
               radio.addEventListener('change', instantiateChoropleth);
             });
         </script>
-
-        <br>
-        
-        <div id="choropleth"></div>
-
-        <br>
-        
-        <script src="https://d3js.org/d3.v7.js"></script>
-        <script src="https://unpkg.com/topojson@3"></script>
-        <script src="scripts/section4/choropleth.js"></script>
-        <script src="scripts/section4/choropleth_density.js"></script>
         
         <br>
         <div id="navigation_buttons">
