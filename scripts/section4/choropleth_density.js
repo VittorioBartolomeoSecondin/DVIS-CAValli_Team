@@ -177,7 +177,7 @@ const ChoroplethDensity = {
 			  .attr("x", 127)
 			  .attr("y", 440)
 			  .text(")");
-	}
+	},
 
 	destroy: function() {
 	    delete window.ChoroplethDensity; 
