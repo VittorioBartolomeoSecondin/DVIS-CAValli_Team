@@ -46,7 +46,7 @@ let svg_density = d3.select("#choropleth_density")
 	    .attr("preserveAspectRatio", "xMinYMin meet")
 	    .attr("viewBox", `0 0 ${width} ${height}`);
 
-let world_density = svg.append("g");
+let world_density = svg_density.append("g");
 
 // Add the stripe pattern to the SVG
 svg_density.append("defs");
