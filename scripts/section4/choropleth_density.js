@@ -57,8 +57,8 @@ const ChoroplethDensity = {
 		
 		// Define color scale
 		const colorScale = d3.scaleThreshold()
-			.domain([50000, 100000, 200000, 300000, 500000])
-			.range(d3.schemeGreens[6]);
+			.domain([500, 1000, 4000])
+			.range(d3.schemeGreens[4]);
 		
 		let svg = d3.select("#choropleth_density")
 			    .append("svg")
@@ -155,12 +155,12 @@ const ChoroplethDensity = {
 				return height - (i * ls_h) - ls_h - 6;
 			})
 			.text(function(d, i) {
-				if (i === 0) return "< " + d[1] / 1000 + " k";
-				if (d[1] < d[0]) return d[0] / 1000 + " k +";
-				return d[0] / 1000 + " k - " + d[1] / 1000 + " k";
+				if (i === 0) return "< " + d[1];
+				if (d[1] < d[0]) return d[0] + " +";
+				return d[0] + " - " + d[1];
 			});
 		
-		legend.append("text").attr("x", 15).attr("y", 420).text("Tree abundance");
+		legend.append("text").attr("x", 15).attr("y", 420).text("Tree density");
 	}
 }
 
