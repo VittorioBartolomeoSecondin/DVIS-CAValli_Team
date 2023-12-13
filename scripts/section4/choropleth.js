@@ -33,16 +33,16 @@ let mouseOver = function(event, d) {
 				.style("opacity", 1)
 				.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 				.style("stroke-width", "2px");
-			tooltip.style("left", (event.pageX + 15) + "px")
+			tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + d.properties.abundance + ' trees' +
+        			'<br>' + d.properties.area + ' square kilometers')
+				.style("left", (event.pageX + 15) + "px")
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
-				.style("opacity", 1)
+				.style("opacity", 1);
 				/*.text(function() {
 				     return d.properties.name + " (" + d.properties.postal + "): " + d.properties.abundance + " trees"
 				     + "\nArea: " + d.properties.area + " square kilometers";
     		    		});*/
-				.html(d.properties.name + ' (' + d.properties.postal + '): ' + d.properties.abundance + ' trees' +
-			        '<br><br>' + d.properties.area + ' square kilometers');
 		}
 
 let mouseLeave = function() {
