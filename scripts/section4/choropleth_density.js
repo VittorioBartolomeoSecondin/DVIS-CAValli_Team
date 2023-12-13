@@ -171,7 +171,6 @@ const ChoroplethDensity = {
 			  .append("tspan")
 			  .attr("baseline-shift", "super")
 			  .text("2")
-			  .append("tspan")
 			  .attr("baseline-shift", "baseline")
 			  .text(")");
 	}
