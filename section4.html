@@ -50,17 +50,28 @@
 
         <br>
         
-        <div id="choropleth">
-            <h2>Choropleth</h2>
-            <p>Description</p>
-        </div>
+        <h2>Choropleth</h2>
+        <p>Description</p>
 
         <br>
 
-        <div id="choropleth_density">
-            <h2>Choropleth</h2>
-            <p>Description</p>
+        <div class="d-flex justify-content-center">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option1" checked> Stacked bar chart
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2"> Stacked bar chart with small multiple
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3"> Stacked bar chart 100%
+              </label>
+            </div>
         </div>
+        
+        <div id="choropleth"></div>
+
+        <br>
         
         <script src="https://d3js.org/d3.v7.js"></script>
         <script src="https://unpkg.com/topojson@3"></script>
