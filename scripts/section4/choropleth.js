@@ -37,10 +37,12 @@ let mouseOver = function(event, d) {
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
 				.style("opacity", 1)
-				.text(function() {
+				/*.text(function() {
 				     return d.properties.name + " (" + d.properties.postal + "): " + d.properties.abundance + " trees"
 				     + "\nArea: " + d.properties.area + " square kilometers";
-    		    		});
+    		    		});*/
+				.html(d.properties.name + ' (' + d.properties.postal + '): ' + d.properties.abundance + ' trees' +
+			        '<br><br>' + d.properties.area + ' square kilometers');
 		}
 
 let mouseLeave = function() {
