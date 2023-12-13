@@ -35,7 +35,7 @@ const ChoroplethDensity = {
 						.style("opacity", 1)
 						.style("stroke", d.properties.density_1000 != 0 ? "green" : "black")
 						.style("stroke-width", "2px");
-					tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + Math.round(d.properties.density_1000) + ' trees every 1000 square kilometers')
+					tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + Math.round(d.properties.density_1000) + ' trees every 1000 km<sup>2</sup>')
 						.style("left", (event.pageX + 15) + "px")
 						.style("top", (event.pageY - 28) + "px")
 						.transition().duration(400)
@@ -160,7 +160,7 @@ const ChoroplethDensity = {
 				return d[0] + " - " + d[1];
 			});
 		
-		legend.append("text").attr("x", 15).attr("y", 420).text("Tree density");
+		legend.append("text").attr("x", 15).attr("y", 430).text("Tree density (trees every 1000 km<sup>2</sup>");
 	}
 }
 
