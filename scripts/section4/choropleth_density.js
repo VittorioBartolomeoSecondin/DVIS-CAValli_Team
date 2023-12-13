@@ -87,7 +87,7 @@ const x_density = d3.scaleLinear()
 	.rangeRound([600, 860]);
 
 const legend_density = svg.append("g")
-	.attr("id", "choropleth_density_legend")
+	.attr("id", "choropleth_legend")
 	.attr("transform", `translate(${legendX}, ${legendY})`);
 
 const legend_entry_density = legend_density.selectAll("g.legend_density")
@@ -99,9 +99,6 @@ const legend_entry_density = legend_density.selectAll("g.legend_density")
 	}))
 	.enter().append("g")
 	.attr("class", "legend_entry_density");
-
-const ls_w = 20,
-	ls_h = 20;
 
 legend_entry_density.append("rect")
 	.attr("x", 20)
