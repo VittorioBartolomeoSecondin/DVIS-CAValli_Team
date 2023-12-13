@@ -174,7 +174,7 @@ const ChoroplethDensity = {
 			  .text("2");
 			
 			legend.append("text")
-			  .attr("x", 129)
+			  .attr("x", 128)
 			  .attr("y", 440)
 			  .text(")");
 	}
