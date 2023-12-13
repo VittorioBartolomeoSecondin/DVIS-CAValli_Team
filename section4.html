@@ -67,16 +67,6 @@
         </div>
 
         <script>
-            document.querySelectorAll('input[name="options"]').forEach(function(radio) {
-              radio.addEventListener('change', instantiateChoropleth);
-            });
-        </script>
-
-        <br>
-        
-        <div id="choropleth"></div>
-
-        <script>
             let currentInstance;
             
             function instantiateChoropleth() {
@@ -95,7 +85,15 @@
                 currentInstance.initialize(); // Use the initialize method for setup
               }
             }
+            
+            document.querySelectorAll('input[name="options"]').forEach(function(radio) {
+              radio.addEventListener('change', instantiateChoropleth);
+            });
         </script>
+
+        <br>
+        
+        <div id="choropleth"></div>
 
         <br>
         
