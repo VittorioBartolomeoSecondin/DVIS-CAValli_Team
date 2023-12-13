@@ -37,7 +37,7 @@ let mouseOver = function(event, d) {
 				.style("top", (event.pageY - 28) + "px")
 				.transition().duration(400)
 				.style("opacity", 1)
-				.text(function(d) {
+				.text(function() {
 				     return d.properties.name + " (" + d.properties.postal + "): " + d.properties.abundance + " trees"
 				     + "\n" + d.properties.area + " square kilometers";
     		    		});
