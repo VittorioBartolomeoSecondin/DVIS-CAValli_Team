@@ -165,7 +165,7 @@ const ChoroplethDensity = {
 		  .attr("y", 425)
 		  .html('Tree density')
 		  .append("tspan") // Append a tspan for the second line
-		  .text("(trees every 1000 km");
+		  .text("(trees every 1000 km")
 		  .attr("baseline-shift", "super")
 		  .text("2")
 		  .attr("baseline-shift", "baseline")
