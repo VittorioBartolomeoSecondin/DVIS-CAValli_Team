@@ -166,8 +166,10 @@ const ChoroplethDensity = {
 		  .html('Tree density')
 		  .append("tspan") // Append a tspan for the second line
 		  .text("(trees every 1000 km")
+		  .append("tspan") // Append a tspan for the superscript "2"
 		  .attr("baseline-shift", "super")
 		  .text("2")
+		  .append("tspan") // Append a tspan for the closing parenthesis
 		  .attr("baseline-shift", "baseline")
 		  .text(")");
 	}
