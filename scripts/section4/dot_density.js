@@ -59,8 +59,8 @@ const Dot_Density = {
 				console.log(+d.count);
 			        return Math.sqrt(+d.count)/20;
 			    })
-			        .style("fill", "rgb(0,0,0)")
-			        .style("opacity", 1)
+			        .style("fill", "rgb(34,139,34)")
+			        .style("opacity", 0.85)
 			
 			    .on("mouseover", function(d) {
 			        div.transition()
