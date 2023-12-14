@@ -51,17 +51,17 @@ const Dot_Density = {
 			    .enter()
 			    .append("circle")
 			    .attr("cx", function(d) {
-				const projected = projection([d.longitude, d.latitude]);
+				const projected = projection([+d.longitude, +d.latitude]);
 			        // Log projected coordinates for debugging
 			        console.log(projected);
 			        return projected[0];
 			        //return projection([d.longitude, d.latitude])[0];
 			    })
 			    .attr("cy", function(d) {
-			        return projection([d.longitude, d.latitude])[1];
+			        return projection([+d.longitude, +d.latitude])[1];
 			    })
 			    .attr("r", function(d) {
-			        return Math.sqrt(d.count);
+			        return Math.sqrt(+d.count);
 			    })
 			        .style("fill", "rgb(0,0,0)")
 			        .style("opacity", 1)
