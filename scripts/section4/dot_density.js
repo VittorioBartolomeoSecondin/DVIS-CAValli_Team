@@ -44,7 +44,7 @@ const Dot_Density = {
 		    });
 
 		    d3.csv("data/section4/dotmap.csv", function(data) {
-			console.log(data);
+			//console.log(data);
 
 			svg.selectAll("circle")
 			    .data(data)
