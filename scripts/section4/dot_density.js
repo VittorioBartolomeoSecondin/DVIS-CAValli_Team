@@ -110,6 +110,7 @@ const Dot_Density = {
 	}
 }
 
+Dot_Density.initialize();
 
 		/*
 d3.csv("dotmap.csv", function(data) {
