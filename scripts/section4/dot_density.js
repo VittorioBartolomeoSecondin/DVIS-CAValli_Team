@@ -51,7 +51,7 @@ const Dot_Density = {
 			    .enter()
 			    .append("circle")
 			    .attr("cx", function(d) {
-				console.log(d);
+				console.log(data);
 				console.log(+d.latitude);
 				const projected = projection([+d.longitude, +d.latitude]);
 			        // Log projected coordinates for debugging
