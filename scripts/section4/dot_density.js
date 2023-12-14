@@ -38,6 +38,30 @@ const Dot_Density = {
 		    tooltip.transition().duration(300)
 			.style("opacity", 0);
 		}
+
+		let mouseOver_states = function(event, d) {
+		     d3.select(this)
+			.transition()
+			.duration(200)
+			.style("stroke", "black")
+			.style("stroke-width", "1px");
+			
+		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
+			.style("left", (event.pageX + 15) + "px")
+			.style("top", (event.pageY - 28) + "px")
+			.transition().duration(400)
+			.style("opacity", 1);
+		}
+		
+		let mouseLeave_states = function() {
+		     d3.select(this)
+			.transition()
+			.duration(200)
+			.style("stroke", "none");
+	
+		    tooltip.transition().duration(300)
+			.style("opacity", 0);
+		}
 		
 		let svg = d3.select("#dotmap")
 			    .append("svg")
@@ -65,7 +89,9 @@ const Dot_Density = {
 			    .attr("id", function(d) { return d.id })
 			    .style("opacity", 1)
 			    .style("stroke-width", "0.75px")
-			    .style("fill", "white");
+			    .style("fill", "white")
+			    .on("mouseover", mouseOver_states)
+			    .on("mouseleave", mouseLeave_states);
 		    })
 		    .catch(error => {
 		        console.error("Error fetching the data:", error);
@@ -90,22 +116,6 @@ const Dot_Density = {
 			        .style("opacity", 0.5)
 			    	.on("mouseover", mouseOver)
                 		.on("mouseleave", mouseLeave);
-			
-			    /*.on("mouseover", function(d) {
-			        div.transition()
-			             .duration(200)
-			           .style("opacity", .9);
-			           div.text(d.state)
-			           .style("left", (d3.event.pageX) + "px")
-			           .style("top", (d3.event.pageY - 28) + "px");
-			    })
-			
-			    // fade out tooltip on mouse out
-			    .on("mouseout", function(d) {
-				div.transition()
-			           .duration(500)
-			           .style("opacity", 0);
-			    });*/
 		    });
 	}
 }
