@@ -43,7 +43,7 @@ const Dot_Density = {
 		        console.error("Error fetching the data:", error);
 		    });
 
-		    d3.csv("data/section4/dotmap.csv", function(data) {
+		    d3.csv("data/section4/dotmap.csv").then(function(data) {
 
 			svg.selectAll("circle")
 			    .data(data)
