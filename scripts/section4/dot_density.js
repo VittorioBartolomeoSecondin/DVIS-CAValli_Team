@@ -57,7 +57,7 @@ const Dot_Density = {
 			    })
 			    .attr("r", function(d) {
 				console.log(+d.count);
-			        return Math.sqrt(+d.count);
+			        return Math.sqrt(+d.count)/20;
 			    })
 			        .style("fill", "rgb(0,0,0)")
 			        .style("opacity", 1)
