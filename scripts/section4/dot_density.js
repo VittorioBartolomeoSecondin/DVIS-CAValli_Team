@@ -44,13 +44,18 @@ const Dot_Density = {
 		    });
 
 		    d3.csv("data/section4/dotmap.csv", function(data) {
+			console.log(data);
 
 			svg.selectAll("circle")
 			    .data(data)
 			    .enter()
 			    .append("circle")
 			    .attr("cx", function(d) {
-			        return projection([d.longitude, d.latitude])[0];
+				const projected = projection([d.longitude, d.latitude]);
+			        // Log projected coordinates for debugging
+			        console.log(projected);
+			        return projected[0];
+			        //return projection([d.longitude, d.latitude])[0];
 			    })
 			    .attr("cy", function(d) {
 			        return projection([d.longitude, d.latitude])[1];
