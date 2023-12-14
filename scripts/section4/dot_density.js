@@ -15,6 +15,27 @@ const Dot_Density = {
 				  .attr("class", "tooltip")
 				  .style("opacity", 0);
 		
+		let mouseOver = function(event, d) {
+					d3.selectAll("circle")
+						.transition()
+						.duration(200)
+						.style("stroke", "black")
+						.style("stroke-width", "0.75px");
+					tooltip.html(d.properties.name + ' &#40;')
+						.style("left", (event.pageX + 15) + "px")
+						.style("top", (event.pageY - 28) + "px")
+						.transition().duration(400)
+						.style("opacity", 1);
+				}
+		
+		let mouseLeave = function() {
+					d3.selectAll("circle")
+						.transition()
+						.duration(200)
+					tooltip.transition().duration(300)
+						.style("opacity", 0);
+				}
+		
 		let svg = d3.select("#dotmap")
 			    .append("svg")
 			    .attr("width", width)
@@ -63,9 +84,9 @@ const Dot_Density = {
 			        return Math.sqrt(+d.count)/20;
 			    })
 			        .style("fill", "rgb(34,139,34)")
-			        .style("opacity", 0.85)
+			        .style("opacity", 0.5);
 			
-			    .on("mouseover", function(d) {
+			    /*.on("mouseover", function(d) {
 			        div.transition()
 			             .duration(200)
 			           .style("opacity", .9);
@@ -79,7 +100,7 @@ const Dot_Density = {
 				div.transition()
 			           .duration(500)
 			           .style("opacity", 0);
-			    });
+			    });*/
 		    });
 	}
 }
