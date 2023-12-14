@@ -53,7 +53,7 @@ const Dot_Density = {
 			.domain([50000, 100000, 200000, 300000, 500000])
 			.range(d3.schemeGreens[6]);
 		
-		let svg = d3.select("#choropleth")
+		let svg = d3.select("#dotmap")
 			    .append("svg")
 			    .attr("width", width)
 			    .attr("height", height)
@@ -107,4 +107,44 @@ const Dot_Density = {
 		    .catch(error => {
 		        console.error("Error fetching the data:", error);
 		    });
+	}
 }
+
+
+		/*
+d3.csv("dotmap.csv", function(data) {
+
+svg.selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("cx", function(d) {
+        return projection([d.longitude, d.latitude])[0];
+    })
+    .attr("cy", function(d) {
+        return projection([d.longitude, d.latitude])[1];
+    })
+    .attr("r", function(d) {
+        return Math.sqrt(d.count)/10;
+    })
+        .style("fill", "rgb(217,91,67)")
+        .style("opacity", 0.85)
+
+    .on("mouseover", function(d) {
+        div.transition()
+             .duration(200)
+           .style("opacity", .9);
+           div.text(d.state)
+           .style("left", (d3.event.pageX) + "px")
+           .style("top", (d3.event.pageY - 28) + "px");
+    })
+
+        // fade out tooltip on mouse out
+        .on("mouseout", function(d) {
+        div.transition()
+           .duration(500)
+           .style("opacity", 0);
+    });
+});
+
+*/
