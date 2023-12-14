@@ -10,6 +10,10 @@ const Dot_Density = {
 		                   .translate([width / 2, height / 2]);
 		
 		let path = d3.geoPath().projection(projection);
+
+		const tooltip = d3.select("body").append("div")
+				  .attr("class", "tooltip")
+				  .style("opacity", 0);
 		
 		let svg = d3.select("#dotmap")
 			    .append("svg")
@@ -56,7 +60,6 @@ const Dot_Density = {
 			        return projection([+d.longitude, +d.latitude])[1];
 			    })
 			    .attr("r", function(d) {
-				console.log(+d.count);
 			        return Math.sqrt(+d.count)/20;
 			    })
 			        .style("fill", "rgb(34,139,34)")
