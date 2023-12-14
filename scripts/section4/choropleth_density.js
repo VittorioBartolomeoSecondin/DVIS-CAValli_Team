@@ -33,7 +33,7 @@ const ChoroplethDensity = {
 						.transition()
 						.duration(200)
 						.style("opacity", 1)
-						.style("stroke", d.properties.density_1000 != 0 ? "green" : "black")
+						.style("stroke", d.properties.density_1000 != 0 ? "blue" : "black")
 						.style("stroke-width", "2px");
 					tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + Math.round(d.properties.density_1000) + ' trees every 1000 km<sup>2</sup>')
 						.style("left", (event.pageX + 15) + "px")
