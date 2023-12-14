@@ -36,7 +36,8 @@ const Dot_Density = {
 			    .attr("class", "Country")
 			    .attr("id", function(d) { return d.id })
 			    .style("opacity", 1)
-			    .style("stroke-width", "0.75px");
+			    .style("stroke-width", "0.75px")
+			    .fill("white");
 		    })
 		    .catch(error => {
 		        console.error("Error fetching the data:", error);
@@ -57,8 +58,8 @@ const Dot_Density = {
 			    .attr("r", function(d) {
 			        return Math.sqrt(d.count)/10;
 			    })
-			        .style("fill", "rgb(217,91,67)")
-			        .style("opacity", 0.85)
+			        .style("fill", "rgb(0,0,0)")
+			        .style("opacity", 1)
 			
 			    .on("mouseover", function(d) {
 			        div.transition()
