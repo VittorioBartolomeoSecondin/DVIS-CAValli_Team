@@ -44,25 +44,19 @@ const Dot_Density = {
 		    });
 
 		    d3.csv("data/section4/dotmap.csv", function(data) {
-			//console.log(data);
 
 			svg.selectAll("circle")
 			    .data(data)
 			    .enter()
 			    .append("circle")
 			    .attr("cx", function(d) {
-				console.log(data);
-				console.log(+d.latitude);
-				const projected = projection([+d.longitude, +d.latitude]);
-			        // Log projected coordinates for debugging
-			        console.log(projected);
-			        return projected[0];
-			        //return projection([d.longitude, d.latitude])[0];
+			        return projection([+d.longitude, +d.latitude])[0];
 			    })
 			    .attr("cy", function(d) {
 			        return projection([+d.longitude, +d.latitude])[1];
 			    })
 			    .attr("r", function(d) {
+				console.log(+d.count);
 			        return Math.sqrt(+d.count);
 			    })
 			        .style("fill", "rgb(0,0,0)")
