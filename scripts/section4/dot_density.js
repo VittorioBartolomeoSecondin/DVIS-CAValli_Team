@@ -43,8 +43,7 @@ const Dot_Density = {
 		     d3.select(this)
 			.transition()
 			.duration(200)
-			.style("stroke", "black")
-			.style("stroke-width", "1px");
+			.style("stroke-width", "2px");
 			
 		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
 			.style("left", (event.pageX + 15) + "px")
@@ -57,7 +56,7 @@ const Dot_Density = {
 		     d3.select(this)
 			.transition()
 			.duration(200)
-			.style("stroke", "none");
+			.style("stroke-width", "0.75px")
 	
 		    tooltip.transition().duration(300)
 			.style("opacity", 0);
