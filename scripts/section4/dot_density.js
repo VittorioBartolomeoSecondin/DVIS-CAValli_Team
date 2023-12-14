@@ -14,27 +14,30 @@ const Dot_Density = {
 		const tooltip = d3.select("body").append("div")
 				  .attr("class", "tooltip")
 				  .style("opacity", 0);
-		
+	
 		let mouseOver = function(event, d) {
-					d3.selectAll("circle")
-						.transition()
-						.duration(200)
-						.style("stroke", "black")
-						.style("stroke-width", "0.75px");
-					tooltip.html(d.properties.name + ' &#40;')
-						.style("left", (event.pageX + 15) + "px")
-						.style("top", (event.pageY - 28) + "px")
-						.transition().duration(400)
-						.style("opacity", 1);
-				}
-		
+		    d3.select(this)
+			.transition()
+			.duration(200)
+			.style("stroke", "black")
+			.style("stroke-width", "0.75px");
+	
+		    tooltip.html(d.state + ' (' + d.count + ' trees)')
+			.style("left", (event.pageX + 15) + "px")
+			.style("top", (event.pageY - 28) + "px")
+			.transition().duration(400)
+			.style("opacity", 1);
+		}
+	
 		let mouseLeave = function() {
-					d3.selectAll("circle")
-						.transition()
-						.duration(200)
-					tooltip.transition().duration(300)
-						.style("opacity", 0);
-				}
+		    d3.select(this)
+			.transition()
+			.duration(200)
+			.style("stroke", "none");
+	
+		    tooltip.transition().duration(300)
+			.style("opacity", 0);
+		}
 		
 		let svg = d3.select("#dotmap")
 			    .append("svg")
@@ -84,7 +87,9 @@ const Dot_Density = {
 			        return Math.sqrt(+d.count)/20;
 			    })
 			        .style("fill", "rgb(34,139,34)")
-			        .style("opacity", 0.5);
+			        .style("opacity", 0.5)
+			    	.on("mouseover", mouseOver)
+                		.on("mouseleave", mouseLeave);
 			
 			    /*.on("mouseover", function(d) {
 			        div.transition()
