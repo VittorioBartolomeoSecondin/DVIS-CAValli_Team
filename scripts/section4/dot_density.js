@@ -56,7 +56,7 @@ const Dot_Density = {
 			        return projection([d.longitude, d.latitude])[1];
 			    })
 			    .attr("r", function(d) {
-			        return Math.sqrt(d.count)/10;
+			        return Math.sqrt(d.count);
 			    })
 			        .style("fill", "rgb(0,0,0)")
 			        .style("opacity", 1)
