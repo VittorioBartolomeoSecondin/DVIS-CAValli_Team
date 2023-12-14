@@ -37,7 +37,7 @@ const Dot_Density = {
 			    .attr("id", function(d) { return d.id })
 			    .style("opacity", 1)
 			    .style("stroke-width", "0.75px")
-			    .fill("white");
+			    .style("fill", "white");
 		    })
 		    .catch(error => {
 		        console.error("Error fetching the data:", error);
