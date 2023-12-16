@@ -80,7 +80,7 @@ const DotDensity = {
 		            return event.transform.apply([projection([+d.longitude, +d.latitude])[0], projection([+d.longitude, +d.latitude])[1]])[1];
 		        })
 		        .attr("r", function(d) {
-		            return Math.sqrt(+d.count) / 10 / event.transform.k; // Scale based on zoom level
+		            return (Math.sqrt(+d.count) / 10) * event.transform.k; // Scale based on zoom level
 		        });
 		};
 		
