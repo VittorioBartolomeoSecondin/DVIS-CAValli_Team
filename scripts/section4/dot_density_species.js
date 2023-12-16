@@ -109,6 +109,61 @@ const DotDensitySpecies = {
     		    .catch(error => {
     		        console.error("Error fetching the data:", error);
     		    });
+
+        var selectedColors = [];
+
+            function handleLegendClick(scientificName) {
+
+                // Check if the clicked color is already selected
+                const index = selectedColors.indexOf(scientificName);
+                
+                // If selected, remove it; otherwise, add it
+                if (index !== -1) {
+                    selectedColors.splice(index, 1);
+                } else {
+                    selectedColors.push(scientificName);
+                }
+                
+                // Update the visualization based on the selected colors
+                updateVisualization(selectedColors);
+            
+                // Update the legend styles
+                updateLegendStyles();
+            }
+            
+            function updateVisualization(selectedColors) {
+
+                Object.keys(speciesColors).forEach(scientific_name => {
+                    const isClicked = selectedColors.includes(scientific_name);
+                    const displayStyle = isClicked || selectedColors.length === 0 ? null : "none";
+                    const circles = d3.selectAll(`.circle-${scientific_name}`);
+                    const legendText = d3.selectAll(`.legend-text-${scientific_name}`);
+
+                    circles.style("display", displayStyle);
+                    legendText.style("font-weight", isClicked ? "bold" : "normal");
+                    
+                });
+            }
+
+            function updateLegendStyles() {
+                const keys = Object.keys(speciesColors);
+                const isColorsEmpty = selectedColors.length === 0;
+                const isColorsFull = selectedColors.length === Object.keys(speciesColors).length;
+            
+                keys.forEach(key => {
+                    const color = speciesColors[key];
+                    const isClicked = selectedColors.includes(key);
+                    
+                    d3.selectAll(`.legend-rect-${key}`)
+                      .style("fill", isClicked || isColorsEmpty ? color : "white")
+                      .style("stroke", color);
+            
+                    d3.selectAll(`.legend-text-${key}`)
+                      .style("font-weight", isClicked && !isColorsFull ? "bold" : "normal");
+                });
+
+                if (isColorsFull) selectedColors = [];
+            }
     
         d3.csv("data/section4/dotmap2.csv").then(function(data) {
             svg.selectAll("circle")
