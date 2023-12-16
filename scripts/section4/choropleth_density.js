@@ -172,7 +172,7 @@ const ChoroplethDensity = {
 			  .text("trees every 1000 km")
 			  .append("tspan")
 			  .attr("baseline-shift", "super")
-		          .style("font-size", "3px")
+		          .style("font-size", "5px")
 			  .text("2");
 	},
 
