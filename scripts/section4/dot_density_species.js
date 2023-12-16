@@ -6,7 +6,7 @@ const DotDensitySpecies = {
     		    height = 700 - margin.top - margin.bottom;
     		
     		let projection = d3.geoAlbersUsa()
-    		                   .scale(width-335)
+    		                   .scale(width-20)
     		                   .translate([width / 2, height / 2]);
     		
     		let path = d3.geoPath().projection(projection);
