@@ -77,9 +77,20 @@ const DotDensity = {
 		
 		let world = svg.append("g");
 
-		function zoomed(event) {
+		let zoomed = function(event) {
 		    world.attr("transform", event.transform);
-		}
+		    // Update circle positions and sizes on zoom
+		    svg.selectAll("circle")
+		        .attr("cx", function(d) {
+		            return event.transform.apply([projection([+d.longitude, +d.latitude])[0], projection([+d.longitude, +d.latitude])[1]])[0];
+		        })
+		        .attr("cy", function(d) {
+		            return event.transform.apply([projection([+d.longitude, +d.latitude])[0], projection([+d.longitude, +d.latitude])[1]])[1];
+		        })
+		        .attr("r", function(d) {
+		            return Math.sqrt(+d.count) / 10 / event.transform.k; // Scale based on zoom level
+		        });
+		};
 
 		let currentZoomState = null;
 
