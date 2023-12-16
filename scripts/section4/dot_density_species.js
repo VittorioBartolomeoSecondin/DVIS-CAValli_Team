@@ -82,8 +82,61 @@ const DotDensitySpecies = {
     			    .attr("height", height)
     			    .attr("preserveAspectRatio", "xMinYMin meet")
     			    .attr("viewBox", `0 0 ${width} ${height}`);
+
+        let zoomed = function(event) {
+    		    world.attr("transform", event.transform);
+    		    // Update circle positions and sizes on zoom
+    		    svg.selectAll("circle")
+    		        .attr("cx", function(d) {
+    		            return event.transform.apply([projection([+d.longitude, +d.latitude])[0], projection([+d.longitude, +d.latitude])[1]])[0];
+    		        })
+    		        .attr("cy", function(d) {
+    		            return event.transform.apply([projection([+d.longitude, +d.latitude])[0], projection([+d.longitude, +d.latitude])[1]])[1];
+    		        })
+    		        .attr("r", function(d) {
+    		            return (Math.sqrt(+d.count) / 10) * event.transform.k; // Scale based on zoom level
+    		        });
+		    };
+
+        let zoom = d3.zoom()
+    		    .scaleExtent([1, 8]) 
+    		    .on("zoom", zoomed);
+		
+		    svg.call(zoom);
     		
     		let world = svg.append("g");
+
+        let currentZoomState = null;
+
+    		let zoomIn = function(event, d) {
+    		    if (currentZoomState === d.id) {
+    		        // Reset to initial view
+    		        svg.transition()
+    		            .duration(750)
+    		            .call(
+    		                zoom.transform,
+    		                d3.zoomIdentity
+    		            );
+    		        currentZoomState = null; // Reset the currently zoomed state
+    		    } else {
+    		        // Zoom to the clicked state
+    		        let bounds = path.bounds(d);
+    		        let dx = bounds[1][0] - bounds[0][0];
+    		        let dy = bounds[1][1] - bounds[0][1];
+    		        let x = (bounds[0][0] + bounds[1][0]) / 2;
+    		        let y = (bounds[0][1] + bounds[1][1]) / 2;
+    		        let scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height)));
+    		        let translate = [width / 2 - scale * x, height / 2 - scale * y];
+    		
+    		        svg.transition()
+    		            .duration(750)
+    		            .call(
+    		                zoom.transform,
+    		                d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
+    		            );
+    		        currentZoomState = d.id; // Set the currently zoomed state
+    		    }
+    		};
     		
     		fetch("data/section4/choropleth.json")
     		    .then(response => response.json())
@@ -104,7 +157,8 @@ const DotDensitySpecies = {
     			    .style("stroke-width", "0.75px")
     			    .style("fill", "white")
     			    .on("mouseover", mouseOver_states)
-    			    .on("mouseleave", mouseLeave_states);
+    			    .on("mouseleave", mouseLeave_states)
+              .on("click", zoomIn);
     		    })
     		    .catch(error => {
     		        console.error("Error fetching the data:", error);
