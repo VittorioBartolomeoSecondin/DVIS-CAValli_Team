@@ -101,44 +101,31 @@
         <script src="scripts/section4/dot_density.js"></script>
 
         <script>
-            function instantiateMaps() {
-                const dotRadioId = document.querySelector('input[name="dot-options"]:checked').id;
-                const choroplethRadioId = document.querySelector('input[name="choropleth-options"]:checked').id;
-
-                console.log(dotRadioId);
-                console.log(choroplethRadioId);
-                
-                switch (dotRadioId) {
+            function instantiateMaps(radioId) {
+                switch (radioId) {
                     case 'dot-option1':
                         DotDensitySpecies.destroy();
                         DotDensity.initialize();
-                    break;
+                        break;
                     case 'dot-option2':
                         DotDensity.destroy();
                         DotDensitySpecies.initialize();
-                    break;
-                    default: break;
-                }
-        
-                switch (choroplethRadioId) {
+                        break;
                     case 'choropleth-option1':
                         ChoroplethDensity.destroy();
                         Choropleth.initialize();
-                    break;
+                        break;
                     case 'choropleth-option2':
                         Choropleth.destroy();
                         ChoroplethDensity.initialize();
-                    break;
-                    default: break;
+                        break;
                 }
             }
-
-            document.querySelectorAll('input[name="dot-options"]').forEach(function (radio) {
-                radio.addEventListener('change', instantiateMaps);
-            });
-        
-            document.querySelectorAll('input[name="choropleth-options"]').forEach(function (radio) {
-                radio.addEventListener('change', instantiateMaps);
+            
+            document.querySelectorAll('input[name="dot-options"], input[name="choropleth-options"]').forEach(function (radio) {
+                radio.addEventListener('change', function () {
+                    instantiateMaps(radio.id);
+                });
             });
         </script>
         
