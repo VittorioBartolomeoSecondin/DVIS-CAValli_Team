@@ -12,16 +12,16 @@ const DotDensitySpecies = {
     		let path = d3.geoPath().projection(projection);
 
         const speciesColors = {
-              "Platanus acerifolia": "#FF5733",
+              "Platanusacerifolia": "#FF5733",
               "Prunus": "#8B0000",
-              "Liquidambar styraciflua": "#FFA500",
-              "Acer rubrum": "#FFD700",
-              "Gleditsia triacanthos": "#00FF00",
-              "Lagerstroemia indica": "#9932CC",
-              "Pyrus calleryana": "#00CED1",
-              "Tilia cordata": "#8A2BE2",
-              "Acer platanoides": "#FFFF00",
-              "Fraxinus pennsylvanica": "#FF00FF",
+              "Liquidambarstyraciflua": "#FFA500",
+              "Acerrubrum": "#FFD700",
+              "Gleditsiatriacanthos": "#00FF00",
+              "Lagerstroemiaindica": "#9932CC",
+              "Pyruscalleryana": "#00CED1",
+              "Tiliacordata": "#8A2BE2",
+              "Acerplatanoides": "#FFFF00",
+              "Fraxinuspennsylvanica": "#FF00FF",
               "Others": "#A9A9A9" 
         };
     
@@ -170,7 +170,7 @@ const DotDensitySpecies = {
                 .data(data)
                 .enter()
                 .append("circle")
-                .attr("class", function(d) { return "circle-" + d.scientific_name; })
+                .attr("class", function(d) { return "circle-" + d.scientific_name.replace(/\s+/g, ''); })
                 .attr("cx", function(d) {
                     return projection([+d.longitude, +d.latitude])[0];
                 })
@@ -181,7 +181,7 @@ const DotDensitySpecies = {
                     return Math.sqrt(+d.count)/20;
                 })
                     .style("fill", function(d) {
-                      return speciesColors[d.scientific_name];
+                      return speciesColors[d.scientific_name.replace(/\s+/g, '')];
                     })
                     .style("opacity", 0.5)
                   .on("mouseover", mouseOver)
