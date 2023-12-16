@@ -1,4 +1,4 @@
-const Dot_Density = {
+const DotDensity = {
 	initialize: function() {
 		// set the dimensions and margins of the graph
 		var margin = { top: 60, right: 70, bottom: 70, left: 100 },
@@ -119,4 +119,4 @@ const Dot_Density = {
 	}
 }
 
-Dot_Density.initialize();
+DotDensity.initialize();
