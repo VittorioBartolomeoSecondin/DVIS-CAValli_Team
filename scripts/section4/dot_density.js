@@ -117,6 +117,16 @@ const DotDensity = {
                 		.on("mouseleave", mouseLeave);
 		    });
 	}
+
+	destroy: function() {
+	    // Clean up existing map elements
+	    const existingMap = document.querySelector("#dotmap svg");
+	    if (existingMap)
+		existingMap.parentNode.removeChild(existingMap);
+	
+	    // Remove the reference from the global object
+	    delete window.DotDensity;
+	}
 }
 
 DotDensity.initialize();
