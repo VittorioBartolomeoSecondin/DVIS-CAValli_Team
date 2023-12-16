@@ -136,7 +136,6 @@ const DotDensitySpecies = {
                 Object.keys(speciesColors).forEach(scientific_name => {
                     const isClicked = selectedColors.includes(scientific_name);
                     const displayStyle = isClicked || selectedColors.length === 0 ? null : "none";
-                    console.log(`.circle-${scientific_name}`);
                     const circles = d3.selectAll(`.circle-${scientific_name}`);
                     const legendText = d3.selectAll(`.legend-text-${scientific_name}`);
 
@@ -171,7 +170,7 @@ const DotDensitySpecies = {
                 .data(data)
                 .enter()
                 .append("circle")
-                .attr("class", function(d) { console.log("circle-" + d.scientific_name); return "circle-" + d.scientific_name; })
+                .attr("class", function(d) { return "circle-" + d.scientific_name; })
                 .attr("cx", function(d) {
                     return projection([+d.longitude, +d.latitude])[0];
                 })
