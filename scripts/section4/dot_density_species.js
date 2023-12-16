@@ -10,6 +10,20 @@ const DotDensitySpecies = {
     		                   .translate([width / 2, height / 2]);
     		
     		let path = d3.geoPath().projection(projection);
+
+        const speciesColors = {
+              "Platanus acerifolia": "#FF5733",
+              "Prunus": "#8B0000",
+              "Liquidambar styraciflua": "#FFA500",
+              "Acer rubrum": "#FFD700",
+              "Gleditsia triacanthos": "#00FF00",
+              "Lagerstroemia indica": "#9932CC",
+              "Pyrus calleryana": "#00CED1",
+              "Tilia cordata": "#8A2BE2",
+              "Acer platanoides": "#FFFF00",
+              "Fraxinus pennsylvanica": "#FF00FF",
+              "Others": "#A9A9A9" 
+        };
     
     		const tooltip = d3.select("body").append("div")
     				  .attr("class", "tooltip")
