@@ -124,7 +124,9 @@ const DotDensitySpecies = {
                 .attr("r", function(d) {
                     return Math.sqrt(+d.count)/20;
                 })
-                    .style("fill", "rgb(34,139,34)")
+                    .style("fill", function(d) {
+                      return speciesColors[d.scientific_name];
+                    })
                     .style("opacity", 0.5)
                   .on("mouseover", mouseOver)
                           .on("mouseleave", mouseLeave);
