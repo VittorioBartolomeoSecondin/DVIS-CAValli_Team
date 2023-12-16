@@ -178,7 +178,7 @@ const DotDensitySpecies = {
                     return projection([+d.longitude, +d.latitude])[1];
                 })
                 .attr("r", function(d) {
-                    return Math.sqrt(+d.count)/7.5;
+                    return Math.sqrt(+d.count)/10;
                 })
                     .style("fill", function(d) {
                       return speciesColors[d.scientific_name.replace(/\s+/g, '_').toLowerCase()];
