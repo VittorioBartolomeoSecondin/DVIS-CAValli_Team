@@ -116,7 +116,7 @@ const DotDensity = {
 			    	.on("mouseover", mouseOver)
                 		.on("mouseleave", mouseLeave);
 		    });
-	}
+	},
 
 	destroy: function() {
 	    // Clean up existing map elements
