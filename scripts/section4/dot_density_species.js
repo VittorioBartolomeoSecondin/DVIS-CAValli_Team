@@ -2,7 +2,7 @@ const DotDensitySpecies = {
   	initialize: function() {
     		// set the dimensions and margins of the graph
     		var margin = { top: 60, right: 70, bottom: 70, left: 100 },
-    		    width = 1420 - margin.left - margin.right,
+    		    width = 1435 - margin.left - margin.right,
     		    height = 700 - margin.top - margin.bottom;
     		
     		let projection = d3.geoAlbersUsa()
