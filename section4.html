@@ -104,7 +104,10 @@
             function instantiateMaps() {
                 const dotRadioId = document.querySelector('input[name="dot-options"]:checked').id;
                 const choroplethRadioId = document.querySelector('input[name="choropleth-options"]:checked').id;
-        
+
+                console.log(dotRadioId);
+                console.log(choroplethRadioId);
+                
                 switch (dotRadioId) {
                     case 'dot-option1':
                         DotDensitySpecies.destroy();
