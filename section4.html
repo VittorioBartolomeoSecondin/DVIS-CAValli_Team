@@ -80,10 +80,10 @@
         <div class="d-flex justify-content-center">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option1" checked> Tree abundance
+                <input type="radio" name="options" id="option3" checked> Tree abundance
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2"> Tree density
+                <input type="radio" name="options" id="option4"> Tree density
               </label>
             </div>
         </div>
@@ -101,20 +101,31 @@
         <script src="scripts/section4/dot_density.js"></script>
 
         <script>
-            function instantiateChoropleth() {
+            function instantiateMaps() {
               const radioId = document.querySelector('input[name="options"]:checked').id;
             
-              if (radioId === 'option1') {
-                ChoroplethDensity.destroy();
-                Choropleth.initialize(); // Use the initialize method for setup
-              } else if (radioId === 'option2') {
-                Choropleth.destroy();
-                ChoroplethDensity.initialize(); // Use the initialize method for setup
-              }
+              switch (radioId) {
+                    case 'option1':
+                        DotDensitySpecies.destroy();
+                        DotDensity.initialize();
+                    break;
+                    case 'option2':
+                        DotDensity.destroy();
+                        DotDensitySpecies.initialize();
+                    break;
+                    case 'option3':
+                        ChoroplethDensity.destroy();
+                        Choropleth.initialize();
+                    break;
+                    case 'option4':
+                        Choropleth.destroy();
+                        ChoroplethDensity.initialize();
+                    break;
+               }
             }
             
             document.querySelectorAll('input[name="options"]').forEach(function(radio) {
-              radio.addEventListener('change', instantiateChoropleth);
+                    radio.addEventListener('change', instantiateMaps);
             });
         </script>
         
