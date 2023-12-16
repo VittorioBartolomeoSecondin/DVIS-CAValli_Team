@@ -58,10 +58,10 @@
         <div class="d-flex justify-content-center">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option1" checked> Tree clusters
+                <input type="radio" name="dot-options" id="dot-option1" checked> Tree clusters
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2"> Tree species clusters
+                <input type="radio" name="dot-options" id="dot-option2"> Tree species clusters
               </label>
             </div>
         </div>
@@ -80,10 +80,10 @@
         <div class="d-flex justify-content-center">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option3" checked> Tree abundance
+                <input type="radio" name="choropleth-options" id="choropleth-option1" checked> Tree abundance
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option4"> Tree density
+                <input type="radio" name="choropleth-options" id="choropleth-option2"> Tree density
               </label>
             </div>
         </div>
@@ -102,30 +102,38 @@
 
         <script>
             function instantiateMaps() {
-              const radioId = document.querySelector('input[name="options"]:checked').id;
-            
-              switch (radioId) {
-                    case 'option1':
+                const dotRadioId = document.querySelector('input[name="dot-options"]:checked').id;
+                const choroplethRadioId = document.querySelector('input[name="choropleth-options"]:checked').id;
+        
+                switch (dotRadioId) {
+                    case 'dot-option1':
                         DotDensitySpecies.destroy();
                         DotDensity.initialize();
-                    break;
-                    case 'option2':
+                        break;
+                    case 'dot-option2':
                         DotDensity.destroy();
                         DotDensitySpecies.initialize();
-                    break;
-                    case 'option3':
+                        break;
+                }
+        
+                switch (choroplethRadioId) {
+                    case 'choropleth-option1':
                         ChoroplethDensity.destroy();
                         Choropleth.initialize();
-                    break;
-                    case 'option4':
+                        break;
+                    case 'choropleth-option2':
                         Choropleth.destroy();
                         ChoroplethDensity.initialize();
-                    break;
-               }
+                        break;
+                }
             }
-            
-            document.querySelectorAll('input[name="options"]').forEach(function(radio) {
-                    radio.addEventListener('change', instantiateMaps);
+
+            document.querySelectorAll('input[name="dot-options"]').forEach(function (radio) {
+                radio.addEventListener('change', instantiateMaps);
+            });
+        
+            document.querySelectorAll('input[name="choropleth-options"]').forEach(function (radio) {
+                radio.addEventListener('change', instantiateMaps);
             });
         </script>
         
