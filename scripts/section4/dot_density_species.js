@@ -135,7 +135,7 @@ const DotDensitySpecies = {
 
        var map_legend = svg.append("g")
                                           .attr("class", "legend")
-                                          .attr("transform", "translate(20,20)");
+                                          .attr("transform", "translate(20,350)");
 
       var keys = Object.keys(speciesColors); // Get keys from the dictionary
                
