@@ -146,7 +146,7 @@ const DotDensitySpecies = {
             }
 
             function updateLegendStyles() {
-                const keys = Object.keys(speciesColors);
+                /*const keys = Object.keys(speciesColors);
                 const isColorsEmpty = selectedColors.length === 0;
                 const isColorsFull = selectedColors.length === Object.keys(speciesColors).length;
             
@@ -162,7 +162,7 @@ const DotDensitySpecies = {
                       .style("font-weight", isClicked && !isColorsFull ? "bold" : "normal");
                 });
 
-                if (isColorsFull) selectedColors = [];
+                if (isColorsFull) selectedColors = [];*/
             }
     
         d3.csv("data/section4/dotmap2.csv").then(function(data) {
