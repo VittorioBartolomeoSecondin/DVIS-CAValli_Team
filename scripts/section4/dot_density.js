@@ -69,14 +69,6 @@ const DotDensity = {
 			    .attr("preserveAspectRatio", "xMinYMin meet")
 			    .attr("viewBox", `0 0 ${width} ${height}`);
 
-		let zoom = d3.zoom()
-		    .scaleExtent([1, 8]) 
-		    .on("zoom", zoomed);
-		
-		svg.call(zoom);
-		
-		let world = svg.append("g");
-
 		let zoomed = function(event) {
 		    world.attr("transform", event.transform);
 		    // Update circle positions and sizes on zoom
@@ -91,6 +83,14 @@ const DotDensity = {
 		            return Math.sqrt(+d.count) / 10 / event.transform.k; // Scale based on zoom level
 		        });
 		};
+		
+		let zoom = d3.zoom()
+		    .scaleExtent([1, 8]) 
+		    .on("zoom", zoomed);
+		
+		svg.call(zoom);
+		
+		let world = svg.append("g");
 
 		let currentZoomState = null;
 
