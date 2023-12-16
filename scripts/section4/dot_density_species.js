@@ -17,9 +17,9 @@ const DotDensitySpecies = {
             "liquidambar_styraciflua": "#FFA500",   // Orange
             "acer_rubrum": "#FFD700",               // Gold
             "gleditsia_triacanthos": "#00FF00",     // Green
-            "lagerstroemia_indica": "#9932CC",      // Purple
+            "lagerstroemia_indica": "#663399",      // Medium purple
             "pyrus_calleryana": "#00CED1",          // Blue-green
-            "tilia_cordata": "#8A2BE2",             // Violet
+            "tilia_cordata": "#8A2BE2",             // Blue-violet
             "acer_platanoides": "#FFFF00",          // Yellow
             "fraxinus_pennsylvanica": "#FF00FF",    // Fuchsia
             "others": "#A9A9A9"                     // Dark gray
