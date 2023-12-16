@@ -2,7 +2,7 @@ const Choropleth = {
 	initialize: function() {
 		// set the dimensions and margins of the graph
 		var margin = { top: 60, right: 70, bottom: 70, left: 100 },
-		    width = 1300 - margin.left - margin.right,
+		    width = 1435 - margin.left - margin.right,
 		    height = 700 - margin.top - margin.bottom;
 		
 		// Define the width and height of the legend
@@ -14,7 +14,7 @@ const Choropleth = {
 		const legendY = height / 2 - legendHeight / 2 - 220; 
 		
 		let projection = d3.geoAlbersUsa()
-		                   .scale(width)
+		                   .scale(width-20)
 		                   .translate([width / 2, height / 2]);
 		
 		// add tooltip
