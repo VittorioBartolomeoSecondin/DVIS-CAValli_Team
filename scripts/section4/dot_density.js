@@ -68,8 +68,36 @@ const DotDensity = {
 			    .attr("height", height)
 			    .attr("preserveAspectRatio", "xMinYMin meet")
 			    .attr("viewBox", `0 0 ${width} ${height}`);
+
+		let zoom = d3.zoom()
+		    .scaleExtent([1, 8]) 
+		    .on("zoom", zoomed);
+		
+		svg.call(zoom);
 		
 		let world = svg.append("g");
+
+		function zoomed(event) {
+		    world.attr("transform", event.transform);
+		}
+
+		let zoomIn = function(event, d) {
+		    // Zoom to the clicked state
+		    let bounds = path.bounds(d);
+		    let dx = bounds[1][0] - bounds[0][0];
+		    let dy = bounds[1][1] - bounds[0][1];
+		    let x = (bounds[0][0] + bounds[1][0]) / 2;
+		    let y = (bounds[0][1] + bounds[1][1]) / 2;
+		    let scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height)));
+		    let translate = [width / 2 - scale * x, height / 2 - scale * y];
+		
+		    svg.transition()
+		        .duration(750)
+		        .call(
+		            zoom.transform,
+		            d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
+		        );
+		};
 		
 		fetch("data/section4/choropleth.json")
 		    .then(response => response.json())
@@ -90,7 +118,8 @@ const DotDensity = {
 			    .style("stroke-width", "0.75px")
 			    .style("fill", "white")
 			    .on("mouseover", mouseOver_states)
-			    .on("mouseleave", mouseLeave_states);
+			    .on("mouseleave", mouseLeave_states)
+			    .on("click", zoomIn);
 		    })
 		    .catch(error => {
 		        console.error("Error fetching the data:", error);
