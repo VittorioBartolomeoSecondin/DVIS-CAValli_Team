@@ -115,6 +115,7 @@ const DotDensitySpecies = {
                 .data(data)
                 .enter()
                 .append("circle")
+                .attr("class", function(d) { return "circle-" + d.scientific_name; })
                 .attr("cx", function(d) {
                     return projection([+d.longitude, +d.latitude])[0];
                 })
@@ -131,6 +132,33 @@ const DotDensitySpecies = {
                   .on("mouseover", mouseOver)
                           .on("mouseleave", mouseLeave);
         });
+
+       var map_legend = svg.append("g")
+                                          .attr("class", "legend")
+                                          .attr("transform", "translate(20,20)");
+
+      var keys = Object.keys(speciesColors); // Get keys from the dictionary
+               
+               keys.forEach(function(key, j) {
+                   var color = speciesColors[key]; // Get color value for the key
+               
+                   map_legend.append("rect")
+                                    .attr("class", `legend-rect-${key}`)
+                                    .attr("x", width2 + 90) // 100
+                                    .attr("y", j * 20)
+                                    .attr("width", 10)
+                                    .attr("height", 10)
+                                    .attr("fill", color)
+                                    .on("click", () => handleLegendClick(key))
+                                    .style("cursor", "pointer");
+               
+                   map_legend.append("text")
+                                    .attr("x", width2 + 105) // 85
+                                    .attr("y", j * 20 + 9)
+                                    .attr("class", "legend-text-" + key)
+                                    .text(key) // Display the key associated with the color
+                                    .style("font-size", "12px");
+               });
   	},
 
   	destroy: function() {
