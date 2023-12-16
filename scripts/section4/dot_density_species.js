@@ -145,7 +145,7 @@ const DotDensitySpecies = {
                    map_legend.append("rect")
                                     .attr("class", `legend-rect-${key}`)
                                     .attr("x", width/2 + 385) // 100
-                                    .attr("y", j * 20)
+                                    .attr("y", j * 30)
                                     .attr("width", 20)
                                     .attr("height", 20)
                                     .attr("fill", color)
@@ -154,7 +154,7 @@ const DotDensitySpecies = {
                
                    map_legend.append("text")
                                     .attr("x", width/2 + 400) // 85
-                                    .attr("y", j * 20 + 9)
+                                    .attr("y", j * 30 + 15)
                                     .attr("class", "legend-text-" + key)
                                     .text(key) // Display the key associated with the color
                                     .style("font-size", "12px");
