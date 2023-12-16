@@ -166,7 +166,7 @@ const ChoroplethDensity = {
 			  .text("Tree density");
 			
 			legend.append("text")
-			  .attr("x", 12)
+			  .attr("x", 15)
 			  .attr("y", 440)
 			  .style("font-size", "8px")
 			  .text("trees every 1000 km")
