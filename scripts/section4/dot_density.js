@@ -81,22 +81,36 @@ const DotDensity = {
 		    world.attr("transform", event.transform);
 		}
 
+		let currentZoomState = null;
+
 		let zoomIn = function(event, d) {
-		    // Zoom to the clicked state
-		    let bounds = path.bounds(d);
-		    let dx = bounds[1][0] - bounds[0][0];
-		    let dy = bounds[1][1] - bounds[0][1];
-		    let x = (bounds[0][0] + bounds[1][0]) / 2;
-		    let y = (bounds[0][1] + bounds[1][1]) / 2;
-		    let scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height)));
-		    let translate = [width / 2 - scale * x, height / 2 - scale * y];
+		    if (currentZoomState === d.id) {
+		        // Reset to initial view
+		        svg.transition()
+		            .duration(750)
+		            .call(
+		                zoom.transform,
+		                d3.zoomIdentity
+		            );
+		        currentZoomState = null; // Reset the currently zoomed state
+		    } else {
+		        // Zoom to the clicked state
+		        let bounds = path.bounds(d);
+		        let dx = bounds[1][0] - bounds[0][0];
+		        let dy = bounds[1][1] - bounds[0][1];
+		        let x = (bounds[0][0] + bounds[1][0]) / 2;
+		        let y = (bounds[0][1] + bounds[1][1]) / 2;
+		        let scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height)));
+		        let translate = [width / 2 - scale * x, height / 2 - scale * y];
 		
-		    svg.transition()
-		        .duration(750)
-		        .call(
-		            zoom.transform,
-		            d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
-		        );
+		        svg.transition()
+		            .duration(750)
+		            .call(
+		                zoom.transform,
+		                d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
+		            );
+		        currentZoomState = d.id; // Set the currently zoomed state
+		    }
 		};
 		
 		fetch("data/section4/choropleth.json")
