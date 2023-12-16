@@ -12,17 +12,17 @@ const DotDensitySpecies = {
     		let path = d3.geoPath().projection(projection);
 
         const speciesColors = {
-              "Platanusacerifolia": "#FF5733",
-              "Prunus": "#8B0000",
-              "Liquidambarstyraciflua": "#FFA500",
-              "Acerrubrum": "#FFD700",
-              "Gleditsiatriacanthos": "#00FF00",
-              "Lagerstroemiaindica": "#9932CC",
-              "Pyruscalleryana": "#00CED1",
-              "Tiliacordata": "#8A2BE2",
-              "Acerplatanoides": "#FFFF00",
-              "Fraxinuspennsylvanica": "#FF00FF",
-              "Others": "#A9A9A9" 
+              "platanus_acerifolia": "#FF5733",
+              "prunus": "#8B0000",
+              "liquidambar_styraciflua": "#FFA500",
+              "acer_rubrum": "#FFD700",
+              "gleditsia_triacanthos": "#00FF00",
+              "lagerstroemia_indica": "#9932CC",
+              "pyrus_calleryana": "#00CED1",
+              "tilia_cordata": "#8A2BE2",
+              "acer_platanoides": "#FFFF00",
+              "fraxinus_pennsylvanica": "#FF00FF",
+              "others": "#A9A9A9" 
         };
     
     		const tooltip = d3.select("body").append("div")
@@ -170,7 +170,7 @@ const DotDensitySpecies = {
                 .data(data)
                 .enter()
                 .append("circle")
-                .attr("class", function(d) { return "circle-" + d.scientific_name.replace(/\s+/g, ''); })
+                .attr("class", function(d) { return "circle-" + d.scientific_name.replace(/\s+/g, '_').toLowerCase(); })
                 .attr("cx", function(d) {
                     return projection([+d.longitude, +d.latitude])[0];
                 })
@@ -181,7 +181,7 @@ const DotDensitySpecies = {
                     return Math.sqrt(+d.count)/20;
                 })
                     .style("fill", function(d) {
-                      return speciesColors[d.scientific_name.replace(/\s+/g, '')];
+                      return speciesColors[d.scientific_name.replace(/\s+/g, '_').toLowerCase()];
                     })
                     .style("opacity", 0.5)
                   .on("mouseover", mouseOver)
@@ -211,7 +211,7 @@ const DotDensitySpecies = {
                                     .attr("x", width/2 + 415) // 85
                                     .attr("y", j * 30 + 15)
                                     .attr("class", "legend-text-" + key)
-                                    .text(key) // Display the key associated with the color
+                                    .text((key.charAt(0).toUpperCase() + key.slice(1)).replace(/_/g, ' ')) // Display the key associated with the color
                                     .style("font-size", "12px");
                });
   	},
