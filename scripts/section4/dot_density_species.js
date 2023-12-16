@@ -12,17 +12,17 @@ const DotDensitySpecies = {
     		let path = d3.geoPath().projection(projection);
 
         const speciesColors = {
-              "platanus_acerifolia": "#FF5733",
-              "prunus": "#8B0000",
-              "liquidambar_styraciflua": "#FFA500",
-              "acer_rubrum": "#FFD700",
-              "gleditsia_triacanthos": "#00FF00",
-              "lagerstroemia_indica": "#9932CC",
-              "pyrus_calleryana": "#00CED1",
-              "tilia_cordata": "#8A2BE2",
-              "acer_platanoides": "#FFFF00",
-              "fraxinus_pennsylvanica": "#FF00FF",
-              "others": "#A9A9A9" 
+            "platanus_acerifolia": "#FF5733",       // Reddish-orange
+            "prunus": "#8B0000",                    // Dark red
+            "liquidambar_styraciflua": "#FFA500",   // Orange
+            "acer_rubrum": "#FFD700",               // Gold
+            "gleditsia_triacanthos": "#00FF00",     // Green
+            "lagerstroemia_indica": "#9932CC",      // Purple
+            "pyrus_calleryana": "#00CED1",          // Blue-green
+            "tilia_cordata": "#8A2BE2",             // Violet
+            "acer_platanoides": "#FFFF00",          // Yellow
+            "fraxinus_pennsylvanica": "#FF00FF",    // Fuchsia
+            "others": "#A9A9A9"                     // Dark gray
         };
     
     		const tooltip = d3.select("body").append("div")
