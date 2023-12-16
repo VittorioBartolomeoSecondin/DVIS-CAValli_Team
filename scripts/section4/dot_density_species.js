@@ -196,9 +196,9 @@ const DotDensitySpecies = {
                
                keys.forEach(function(key, j) {
                    var color = speciesColors[key]; // Get color value for the key
-               
+                   
                    map_legend.append("rect")
-                                    .attr("class", `legend-rect-${key}`)
+                                    .attr("class", function() {console.log(`legend-rect-${key}`); return `legend-rect-${key}`;})
                                     .attr("x", width/2 + 385) // 100
                                     .attr("y", j * 30)
                                     .attr("width", 20)
