@@ -127,5 +127,3 @@ const DotDensitySpecies = {
   	    delete window.DotDensitySpecies;
   	}
 }
-
-DotDensitySpecies.initialize();
