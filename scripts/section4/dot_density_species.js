@@ -22,7 +22,7 @@ const DotDensitySpecies = {
     			.style("stroke", "black")
     			.style("stroke-width", "0.75px");
     	
-    		    tooltip.html(d.state + ' (' + d.count + ' trees)')
+    		    tooltip.html(d.state + ' (' + d.count + ' trees in ' + d.scientific_name + ')')
     			.style("left", (event.pageX + 15) + "px")
     			.style("top", (event.pageY - 28) + "px")
     			.transition().duration(400)
@@ -96,7 +96,7 @@ const DotDensitySpecies = {
     		        console.error("Error fetching the data:", error);
     		    });
     
-        d3.csv("data/section4/dotmap.csv").then(function(data) {
+        d3.csv("data/section4/dotmap2.csv").then(function(data) {
             svg.selectAll("circle")
                 .data(data)
                 .enter()
