@@ -109,7 +109,7 @@ const DotDensity = {
 			        return projection([+d.longitude, +d.latitude])[1];
 			    })
 			    .attr("r", function(d) {
-			        return Math.sqrt(+d.count)/20;
+			        return Math.sqrt(+d.count)/7.5;
 			    })
 			        .style("fill", "rgb(34,139,34)")
 			        .style("opacity", 0.5)
