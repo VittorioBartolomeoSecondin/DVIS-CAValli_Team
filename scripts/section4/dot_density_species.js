@@ -165,7 +165,7 @@ const DotDensitySpecies = {
                 if (isColorsFull) selectedColors = [];
             }
     
-        d3.csv("data/section4/dotmap2.csv").then(function(data) {
+        d3.csv("data/section4/dotmap2_alternative.csv").then(function(data) {
             svg.selectAll("circle")
                 .data(data)
                 .enter()
