@@ -146,8 +146,8 @@ const DotDensitySpecies = {
                                     .attr("class", `legend-rect-${key}`)
                                     .attr("x", width/2 + 385) // 100
                                     .attr("y", j * 20)
-                                    .attr("width", 10)
-                                    .attr("height", 10)
+                                    .attr("width", 20)
+                                    .attr("height", 20)
                                     .attr("fill", color)
                                     .on("click", () => handleLegendClick(key))
                                     .style("cursor", "pointer");
