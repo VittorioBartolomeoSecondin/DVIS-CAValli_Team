@@ -10,9 +10,8 @@ const DotDensity = {
 		                   .translate([width / 2, height / 2]);
 		
 		let path = d3.geoPath().projection(projection);
-		const tooltip = d3.select("body").append("div")
-				  .attr("class", "tooltip")
-				  .style("opacity", 0);
+
+		let tooltip = null;
 	
 		let mouseOver = function(event, d) {
 		    d3.selectAll(".Circle")
@@ -26,6 +25,11 @@ const DotDensity = {
 			.style("stroke", "black")
 			.style("opacity", 0.5)
 			.style("stroke-width", "0.75px");
+		    if (!tooltip) {
+	                tooltip = d3.select("body").append("div")
+	                    .attr("class", "tooltip")
+	                    .style("opacity", 0);
+            	    }
 		    tooltip.html(d.greater_metro + ' (' + d.count + ' trees)')
 			.style("left", (event.pageX + 15) + "px")
 			.style("top", (event.pageY - 28) + "px")
@@ -39,10 +43,13 @@ const DotDensity = {
 			.duration(200)
 			.style("opacity", 0.5)
 			.style("stroke", "none");
-		    tooltip.transition().duration(300)
-			.style("opacity", 0)
-			.style("left", "-9999px") // Move tooltip off-screen
-        		.style("top", "-9999px");
+		    // Hide and remove the tooltip
+	            	if (tooltip) {
+		                tooltip.transition().duration(300)
+		                    .style("opacity", 0)
+		                    .remove();
+		                tooltip = null; // Reset tooltip variable
+            		}
 		}
 		let mouseOver_states = function(event, d) {
 		     d3.select(this)
@@ -50,6 +57,12 @@ const DotDensity = {
 			.duration(200)
 			.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 			.style("stroke-width", "2px");
+			// Create the tooltip if it doesn't exist
+		            if (!tooltip) {
+		                tooltip = d3.select("body").append("div")
+		                    .attr("class", "tooltip")
+		                    .style("opacity", 0);
+		            }
 		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
 			.style("left", (event.pageX + 15) + "px")
 			.style("top", (event.pageY - 28) + "px")
@@ -63,10 +76,12 @@ const DotDensity = {
 			.duration(200)
 			.style("stroke", "black")
 			.style("stroke-width", "0.75px");
-		    tooltip.transition().duration(300)
-			.style("opacity", 0)
-			.style("left", "-9999px") // Move tooltip off-screen
-        		.style("top", "-9999px");
+		    if (tooltip) {
+	                tooltip.transition().duration(300)
+	                    .style("opacity", 0)
+	                    .remove();
+	                tooltip = null; // Reset tooltip variable
+            	    }
 		}
 		
 		let svg = d3.select("#dotmap")
