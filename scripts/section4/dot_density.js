@@ -61,7 +61,7 @@ const DotDensity = {
 		
 		let mouseLeave_states = function() {
 		    // Check if the selected class is present
-		    const selected = d3.select(this).classed("selected");
+		    const selected = d3.select(this).attr("data-selected");
 		
 		    if (!selected) {
 		        d3.select(this)
@@ -118,9 +118,7 @@ const DotDensity = {
 		            );
 		        currentZoomState = null; // Reset the currently zoomed state
 
-			// Remove the class when zooming out
-		        world.select("#" + d.id)
-		            .classed("selected", false);
+		        world.select("#" + d.id).attr("data-selected", false);
 		    } else {
 		        // Zoom to the clicked state
 		        let bounds = path.bounds(d);
@@ -139,9 +137,7 @@ const DotDensity = {
 		            );
 		        currentZoomState = d.id; // Set the currently zoomed state
 
-			// Add a class to the selected state
-		        world.select("#" + d.id)
-		            .classed("selected", true);
+		        world.select("#" + d.id).attr("data-selected", true);
 		    }
 		};
 		
@@ -154,7 +150,7 @@ const DotDensity = {
 		            .data(data_features)
 		            .enter().append("path")
 			    .attr("data-name", function(d) { return d.properties.name }) 
-				
+			    .attr("data-selected", false)
 			    // add a class and styling
 			    .attr("d", path)
 			    .style("stroke", "black")
