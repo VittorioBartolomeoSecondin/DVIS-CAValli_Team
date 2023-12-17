@@ -38,6 +38,15 @@ const DotDensity = {
 			.style("opacity", 0);
 		}
 		let mouseOver_states = function(event, d) {
+		     // Set opacity of all circles to 0.3
+		     svg.selectAll("circle")
+			.style("opacity", 0.3);
+		     // Set opacity of circles in the current state to 1
+		     svg.selectAll("circle")
+			.filter(function(circleData) {
+			    return circleData.state !== d.properties.name;
+		     })
+		        .style("opacity", 1);
 		     d3.selectAll(".Country")
 			.transition()
 			.duration(200)
