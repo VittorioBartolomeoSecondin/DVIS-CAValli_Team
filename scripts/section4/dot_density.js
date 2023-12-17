@@ -56,7 +56,7 @@ const DotDensity = {
 		}
 		
 		let mouseLeave_states = function() {
-		     d3.selectAll(this)
+		     d3.select(this)
 			.transition()
 			.duration(200)
 			.style("stroke", "black")
