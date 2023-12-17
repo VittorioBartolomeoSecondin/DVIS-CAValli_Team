@@ -59,30 +59,22 @@ const DotDensitySpecies = {
     		}
     
     		let mouseOver_states = function(event, d) {
-    		     d3.selectAll(".Country")
+    		     d3.select(this)
 			.transition()
 			.duration(200)
-			.style("opacity", .3)
-			.style("stroke", "black")
-			.style("stroke-width", "0.75px");
-		     d3.select(this)
-			.transition()
-			.duration(200)
-			.style("opacity", 1)
 			.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 			.style("stroke-width", "2px");
-    		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
-    			.style("left", (event.pageX + 15) + "px")
-    			.style("top", (event.pageY - 28) + "px")
-    			.transition().duration(400)
-    			.style("opacity", 1);
+		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
+			.style("left", (event.pageX + 15) + "px")
+			.style("top", (event.pageY - 28) + "px")
+			.transition().duration(400)
+			.style("opacity", 1);
     		}
     		
     		let mouseLeave_states = function() {
-    		     d3.selectAll(".Country")
+    		     d3.select(this)
 			.transition()
 			.duration(200)
-			.style("opacity", 1)
 			.style("stroke", "black")
 			.style("stroke-width", "0.75px");
 		    tooltip.transition().duration(300)
