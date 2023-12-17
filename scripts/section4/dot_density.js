@@ -40,7 +40,7 @@ const DotDensity = {
 		let mouseOver_states = function(event, d) {
 		     // Set opacity of all circles to 0.1
 		     svg.selectAll("circle")
-			.style("opacity", 0.1);
+			.style("opacity", 0);
 		     // Set opacity of circles in the current state to 0.5
 		     svg.selectAll("circle")
 			.filter(function(circleData) {
