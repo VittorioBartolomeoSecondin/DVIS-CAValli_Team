@@ -24,10 +24,6 @@ const DotDensitySpecies = {
             "fraxinus_pennsylvanica": "#FF00FF",    // Fuchsia
             "others": "#A9A9A9"                     // Dark gray
         };
-    
-    		/*const tooltip = d3.select("body").append("div")
-    				  .attr("class", "tooltip")
-    				  .style("opacity", 0);*/
 
 		let tooltip = null;
     	
