@@ -35,6 +35,12 @@ const ChoroplethDensity = {
 						.style("opacity", 1)
 						.style("stroke", d.properties.density_1000 != 0 ? "blue" : "black")
 						.style("stroke-width", "2px");
+					// Create the tooltip if it doesn't exist
+				            if (!tooltip) {
+				                tooltip = d3.select("body").append("div")
+				                    .attr("class", "tooltip")
+				                    .style("opacity", 0);
+				            }
 					tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + Math.round(d.properties.density_1000) + ' trees every 1000 km<sup>2</sup>')
 						.style("left", (event.pageX + 15) + "px")
 						.style("top", (event.pageY - 28) + "px")
@@ -49,10 +55,12 @@ const ChoroplethDensity = {
 						.style("opacity", 1)
 						.style("stroke", "black")
 						.style("stroke-width", "0.75px");
-					tooltip.transition().duration(300)
-						.style("opacity", 0)
-						.style("left", "-9999px") // Move tooltip off-screen
-        					.style("top", "-9999px");
+					if (tooltip) {
+				                tooltip.transition().duration(300)
+				                    .style("opacity", 0)
+				                    .remove();
+				                tooltip = null; // Reset tooltip variable
+			            	}
 				}
 		
 		let path = d3.geoPath().projection(projection);
