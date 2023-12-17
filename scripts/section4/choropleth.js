@@ -36,7 +36,7 @@ const Choropleth = {
 						.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 						.style("stroke-width", "2px");
 					tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + d.properties.abundance + ' trees' +
-		        			'<br>' + d.properties.area + ' square kilometers')
+		        			'<br>' + d.properties.area + ' km<sup>2</sup>')
 						.style("left", (event.pageX + 15) + "px")
 						.style("top", (event.pageY - 28) + "px")
 						.transition().duration(400)
