@@ -30,7 +30,7 @@ const DotDensitySpecies = {
     				  .style("opacity", 0);
     	
     		let mouseOver = function(event, d) {
-    		    d3.selectAll(".Circle")
+    		   d3.selectAll('[class^="circle"]')
 		      .transition()
 		      .duration(200)
 		      .style("opacity", 0.1)
@@ -49,7 +49,7 @@ const DotDensitySpecies = {
     		}
     	
     		let mouseLeave = function() {
-    		     d3.selectAll(".Circle")
+    		     d3.selectAll('[class^="circle"]')
 			.transition()
 			.duration(200)
 			.style("opacity", 0.5)
@@ -244,7 +244,6 @@ const DotDensitySpecies = {
                 .data(data)
                 .enter()
                 .append("circle")
-		.attr("class", "Circle")
                 .attr("class", function(d) { return "circle-" + d.scientific_name.replace(/\s+/g, '_').toLowerCase(); })
                 .attr("cx", function(d) {
                     return projection([+d.longitude, +d.latitude])[0];
