@@ -40,7 +40,9 @@ const DotDensity = {
 			.style("opacity", 0.5)
 			.style("stroke", "none");
 		    tooltip.transition().duration(300)
-			.style("opacity", 0);
+			.style("opacity", 0)
+			.style("left", "-9999px") // Move tooltip off-screen
+        		.style("top", "-9999px");
 		}
 		let mouseOver_states = function(event, d) {
 		     d3.select(this)
@@ -62,7 +64,9 @@ const DotDensity = {
 			.style("stroke", "black")
 			.style("stroke-width", "0.75px");
 		    tooltip.transition().duration(300)
-			.style("opacity", 0);
+			.style("opacity", 0)
+			.style("left", "-9999px") // Move tooltip off-screen
+        		.style("top", "-9999px");
 		}
 		
 		let svg = d3.select("#dotmap")
