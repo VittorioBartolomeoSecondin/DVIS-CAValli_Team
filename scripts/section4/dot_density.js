@@ -112,8 +112,6 @@ const DotDensity = {
 		                d3.zoomIdentity
 		            );
 		        currentZoomState = null; // Reset the currently zoomed state
-
-			world.select("#" + d.id).attr("data-selected", "false");
 		    } else {
 		        // Zoom to the clicked state
 		        let bounds = path.bounds(d);
@@ -131,8 +129,6 @@ const DotDensity = {
 		                d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
 		            );
 		        currentZoomState = d.id; // Set the currently zoomed state
-
-			world.select("#" + d.id).attr("data-selected", "true");
 		    }
 		};
 		
@@ -145,7 +141,7 @@ const DotDensity = {
 		            .data(data_features)
 		            .enter().append("path")
 			    .attr("data-name", function(d) { return d.properties.name }) 
-			    .attr("data-selected", false)
+			    
 			    // add a class and styling
 			    .attr("d", path)
 			    .style("stroke", "black")
@@ -176,10 +172,10 @@ const DotDensity = {
 			    .attr("r", function(d) {
 			        return Math.sqrt(+d.count)/10;
 			    })
-			        .style("fill", "rgb(34,139,34)")
-			        .style("opacity", 0.5)
-			    	.on("mouseover", mouseOver)
-                		.on("mouseleave", mouseLeave);
+			    .style("fill", "rgb(34,139,34)")
+			    .style("opacity", 0.5)
+			    .on("mouseover", mouseOver)
+			    .on("mouseleave", mouseLeave);
 		    });
 	},
 	destroy: function() {
