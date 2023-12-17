@@ -54,10 +54,12 @@ const DotDensitySpecies = {
 			.duration(200)
 			.style("opacity", 0.5)
 			.style("stroke", "none");
-		    tooltip.transition().duration(300)
-			.style("opacity", 0)
-			.style("left", "-9999px") // Move tooltip off-screen
-        		.style("top", "-9999px");
+		    // Delay before hiding the tooltip
+		    setTimeout(() => {
+			tooltip.transition().duration(300)
+			    .style("left", "-9999px") // Move tooltip off-screen
+			    .style("top", "-9999px");
+		    }, 100); // Adjust this delay time as needed
     		}
     
     		let mouseOver_states = function(event, d) {
@@ -79,10 +81,12 @@ const DotDensitySpecies = {
 			.duration(200)
 			.style("stroke", "black")
 			.style("stroke-width", "0.75px");
-		    tooltip.transition().duration(300)
-			.style("opacity", 0)
-			.style("left", "-9999px") // Move tooltip off-screen
-        		.style("top", "-9999px");
+		    // Delay before hiding the tooltip
+		    setTimeout(() => {
+			tooltip.transition().duration(300)
+			    .style("left", "-9999px") // Move tooltip off-screen
+			    .style("top", "-9999px");
+		    }, 100); // Adjust this delay time as needed
     		}
     		
     		let svg = d3.select("#dotmap")
