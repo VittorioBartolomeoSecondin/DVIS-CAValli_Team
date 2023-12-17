@@ -38,11 +38,18 @@ const DotDensity = {
 			.style("opacity", 0);
 		}
 		let mouseOver_states = function(event, d) {
+		     d3.selectAll(".Country")
+			.transition()
+			.duration(200)
+			.style("opacity", .3)
+			.style("stroke", "black")
+			.style("stroke-width", "0.75px");
 		     d3.select(this)
 			.transition()
 			.duration(200)
+			.style("opacity", 1)
+			.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 			.style("stroke-width", "2px");
-			
 		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
 			.style("left", (event.pageX + 15) + "px")
 			.style("top", (event.pageY - 28) + "px")
@@ -51,10 +58,12 @@ const DotDensity = {
 		}
 		
 		let mouseLeave_states = function() {
-		     d3.select(this)
+		     d3.selectAll(".Country")
 			.transition()
 			.duration(200)
-			.style("stroke-width", "0.75px")
+			.style("opacity", 1)
+			.style("stroke", "black")
+			.style("stroke-width", "0.75px");
 	
 		    tooltip.transition().duration(300)
 			.style("opacity", 0);
@@ -99,6 +108,8 @@ const DotDensity = {
 		                d3.zoomIdentity
 		            );
 		        currentZoomState = null; // Reset the currently zoomed state
+
+			world.select("#" + d.id).attr("data-selected", "false");
 		    } else {
 		        // Zoom to the clicked state
 		        let bounds = path.bounds(d);
@@ -116,6 +127,8 @@ const DotDensity = {
 		                d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
 		            );
 		        currentZoomState = d.id; // Set the currently zoomed state
+
+			world.select("#" + d.id).attr("data-selected", "true");
 		    }
 		};
 		
@@ -128,7 +141,7 @@ const DotDensity = {
 		            .data(data_features)
 		            .enter().append("path")
 			    .attr("data-name", function(d) { return d.properties.name }) 
-				
+			    .attr("data-selected", false)
 			    // add a class and styling
 			    .attr("d", path)
 			    .style("stroke", "black")
