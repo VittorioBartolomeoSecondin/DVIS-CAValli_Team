@@ -60,10 +60,6 @@ const Choropleth = {
 				                    .remove();
 				                tooltip = null; // Reset tooltip variable
 		            	       }
-					tooltip.transition().duration(300)
-						.style("opacity", 0)
-						.style("left", "-9999px") // Move tooltip off-screen
-        					.style("top", "-9999px");
 				}
 		
 		let path = d3.geoPath().projection(projection);
