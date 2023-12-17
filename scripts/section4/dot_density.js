@@ -43,16 +43,9 @@ const DotDensity = {
 			.style("opacity", 0);
 		}
 		let mouseOver_states = function(event, d) {
-		     d3.selectAll(".Country")
-			.transition()
-			.duration(200)
-			.style("opacity", .3)
-			.style("stroke", "black")
-			.style("stroke-width", "0.75px");
 		     d3.select(this)
 			.transition()
 			.duration(200)
-			.style("opacity", 1)
 			.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 			.style("stroke-width", "2px");
 		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
@@ -63,10 +56,9 @@ const DotDensity = {
 		}
 		
 		let mouseLeave_states = function() {
-		     d3.selectAll(".Country")
+		     d3.selectAll(this)
 			.transition()
 			.duration(200)
-			.style("opacity", 1)
 			.style("stroke", "black")
 			.style("stroke-width", "0.75px");
 		    tooltip.transition().duration(300)
