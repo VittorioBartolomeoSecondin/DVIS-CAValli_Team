@@ -30,12 +30,17 @@ const DotDensitySpecies = {
     				  .style("opacity", 0);
     	
     		let mouseOver = function(event, d) {
-    		    d3.select(this)
-    			.transition()
-    			.duration(200)
-    			.style("stroke", "black")
-    			.style("stroke-width", "0.75px");
-    	
+    		    d3.selectAll(".Circle")
+		      .transition()
+		      .duration(200)
+		      .style("opacity", 0.1)
+		      .style("stroke", "none");
+		    d3.select(this)
+			.transition()
+			.duration(200)
+			.style("stroke", "black")
+			.style("opacity", 0.5)
+			.style("stroke-width", "0.75px");
     		    tooltip.html(d.greater_metro + ' (' + d.count + ' trees in ' + d.scientific_name + ')')
     			.style("left", (event.pageX + 15) + "px")
     			.style("top", (event.pageY - 28) + "px")
@@ -44,21 +49,28 @@ const DotDensitySpecies = {
     		}
     	
     		let mouseLeave = function() {
-    		    d3.select(this)
-    			.transition()
-    			.duration(200)
-    			.style("stroke", "none");
-    	
-    		    tooltip.transition().duration(300)
-    			.style("opacity", 0);
+    		     d3.selectAll(".Circle")
+			.transition()
+			.duration(200)
+			.style("opacity", 0.5)
+			.style("stroke", "none");
+		    tooltip.transition().duration(300)
+			.style("opacity", 0);
     		}
     
     		let mouseOver_states = function(event, d) {
-    		     d3.select(this)
-    			.transition()
-    			.duration(200)
-    			.style("stroke-width", "2px");
-    			
+    		     d3.selectAll(".Country")
+			.transition()
+			.duration(200)
+			.style("opacity", .3)
+			.style("stroke", "black")
+			.style("stroke-width", "0.75px");
+		     d3.select(this)
+			.transition()
+			.duration(200)
+			.style("opacity", 1)
+			.style("stroke", d.properties.abundance != 0 ? "green" : "black")
+			.style("stroke-width", "2px");
     		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
     			.style("left", (event.pageX + 15) + "px")
     			.style("top", (event.pageY - 28) + "px")
@@ -67,13 +79,14 @@ const DotDensitySpecies = {
     		}
     		
     		let mouseLeave_states = function() {
-    		     d3.select(this)
-    			.transition()
-    			.duration(200)
-    			.style("stroke-width", "0.75px")
-    	
-    		    tooltip.transition().duration(300)
-    			.style("opacity", 0);
+    		     d3.selectAll(".Country")
+			.transition()
+			.duration(200)
+			.style("opacity", 1)
+			.style("stroke", "black")
+			.style("stroke-width", "0.75px");
+		    tooltip.transition().duration(300)
+			.style("opacity", 0);
     		}
     		
     		let svg = d3.select("#dotmap")
@@ -107,6 +120,21 @@ const DotDensitySpecies = {
     		let world = svg.append("g");
 
         let currentZoomState = null;
+
+		let svgBackground = world.append("rect")
+		    .attr("class", "background")
+		    .attr("width", width)
+		    .attr("height", height)
+		    .attr("fill", "transparent")
+		    .on("click", function() {
+		        if (currentZoomState !== null) {
+		            svg.transition()
+		                .duration(750)
+		                .call(zoom.transform, d3.zoomIdentity);
+		            currentZoomState = null;
+		        }
+		    });
+
 
     		let zoomIn = function(event, d) {
     		    if (currentZoomState === d.id) {
@@ -224,6 +252,7 @@ const DotDensitySpecies = {
                 .data(data)
                 .enter()
                 .append("circle")
+		.attr("class", "Circle")
                 .attr("class", function(d) { return "circle-" + d.scientific_name.replace(/\s+/g, '_').toLowerCase(); })
                 .attr("cx", function(d) {
                     return projection([+d.longitude, +d.latitude])[0];
