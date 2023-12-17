@@ -25,9 +25,11 @@ const DotDensitySpecies = {
             "others": "#A9A9A9"                     // Dark gray
         };
     
-    		const tooltip = d3.select("body").append("div")
+    		/*const tooltip = d3.select("body").append("div")
     				  .attr("class", "tooltip")
-    				  .style("opacity", 0);
+    				  .style("opacity", 0);*/
+
+		let tooltip = null;
     	
     		let mouseOver = function(event, d) {
     		   d3.selectAll('[class^="circle"]')
@@ -41,6 +43,11 @@ const DotDensitySpecies = {
 			.style("stroke", "black")
 			.style("opacity", 0.5)
 			.style("stroke-width", "0.75px");
+		    if (!tooltip) {
+	                tooltip = d3.select("body").append("div")
+	                    .attr("class", "tooltip")
+	                    .style("opacity", 0);
+            	    }
     		    tooltip.html(d.greater_metro + ' (' + d.count + ' trees in ' + d.scientific_name + ')')
     			.style("left", (event.pageX + 15) + "px")
     			.style("top", (event.pageY - 28) + "px")
@@ -54,12 +61,13 @@ const DotDensitySpecies = {
 			.duration(200)
 			.style("opacity", 0.5)
 			.style("stroke", "none");
-		    // Delay before hiding the tooltip
-		    setTimeout(() => {
-			tooltip.transition().duration(300)
-			    .style("left", "-9999px") // Move tooltip off-screen
-			    .style("top", "-9999px");
-		    }, 100); // Adjust this delay time as needed
+		    // Hide and remove the tooltip
+	            	if (tooltip) {
+		                tooltip.transition().duration(300)
+		                    .style("opacity", 0)
+		                    .remove();
+		                tooltip = null; // Reset tooltip variable
+            		}
     		}
     
     		let mouseOver_states = function(event, d) {
@@ -68,6 +76,12 @@ const DotDensitySpecies = {
 			.duration(200)
 			.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 			.style("stroke-width", "2px");
+			// Create the tooltip if it doesn't exist
+		            if (!tooltip) {
+		                tooltip = d3.select("body").append("div")
+		                    .attr("class", "tooltip")
+		                    .style("opacity", 0);
+		            }
 		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
 			.style("left", (event.pageX + 15) + "px")
 			.style("top", (event.pageY - 28) + "px")
@@ -81,12 +95,12 @@ const DotDensitySpecies = {
 			.duration(200)
 			.style("stroke", "black")
 			.style("stroke-width", "0.75px");
-		    // Delay before hiding the tooltip
-		    setTimeout(() => {
-			tooltip.transition().duration(300)
-			    .style("left", "-9999px") // Move tooltip off-screen
-			    .style("top", "-9999px");
-		    }, 100); // Adjust this delay time as needed
+		    if (tooltip) {
+	                tooltip.transition().duration(300)
+	                    .style("opacity", 0)
+	                    .remove();
+	                tooltip = null; // Reset tooltip variable
+            	    }
     		}
     		
     		let svg = d3.select("#dotmap")
