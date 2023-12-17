@@ -15,12 +15,17 @@ const DotDensity = {
 				  .style("opacity", 0);
 	
 		let mouseOver = function(event, d) {
+		    d3.selectAll(".Circle")
+		      .transition()
+		      .duration(200)
+		      .style("opacity", 0.1)
+		      .style("stroke", "none");
 		    d3.select(this)
 			.transition()
 			.duration(200)
 			.style("stroke", "black")
+			.style("opacity", 0.5)
 			.style("stroke-width", "0.75px");
-	
 		    tooltip.html(d.greater_metro + ' (' + d.count + ' trees)')
 			.style("left", (event.pageX + 15) + "px")
 			.style("top", (event.pageY - 28) + "px")
@@ -29,24 +34,15 @@ const DotDensity = {
 		}
 	
 		let mouseLeave = function() {
-		    d3.select(this)
+		    d3.selectAll(".Circle")
 			.transition()
 			.duration(200)
+			.style("opacity", 0.5)
 			.style("stroke", "none");
-	
 		    tooltip.transition().duration(300)
 			.style("opacity", 0);
 		}
 		let mouseOver_states = function(event, d) {
-		     // Set opacity of all circles to 0.1
-		     svg.selectAll("circle")
-			.style("opacity", 0);
-		     // Set opacity of circles in the current state to 0.5
-		     svg.selectAll("circle")
-			.filter(function(circleData) {
-			    return circleData.state !== d.properties.name;
-		     })
-		        .style("opacity", 0.5);
 		     d3.selectAll(".Country")
 			.transition()
 			.duration(200)
@@ -73,7 +69,6 @@ const DotDensity = {
 			.style("opacity", 1)
 			.style("stroke", "black")
 			.style("stroke-width", "0.75px");
-	
 		    tooltip.transition().duration(300)
 			.style("opacity", 0);
 		}
@@ -171,6 +166,7 @@ const DotDensity = {
 			    .data(data)
 			    .enter()
 			    .append("circle")
+			    .attr("class", "Circle")
 			    .attr("cx", function(d) {
 			        return projection([+d.longitude, +d.latitude])[0];
 			    })
