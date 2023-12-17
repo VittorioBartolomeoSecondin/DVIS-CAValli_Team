@@ -104,6 +104,20 @@ const DotDensity = {
 		
 		let currentZoomState = null;
 
+		let svgBackground = world.append("rect")
+		    .attr("class", "background")
+		    .attr("width", width)
+		    .attr("height", height)
+		    .attr("fill", "transparent")
+		    .on("click", function() {
+		        if (currentZoomState !== null) {
+		            svg.transition()
+		                .duration(750)
+		                .call(zoom.transform, d3.zoomIdentity);
+		            currentZoomState = null;
+		        }
+		    });
+
 		let zoomIn = function(event, d) {
 		    if (currentZoomState === d.id) {
 		        // Reset to initial view
