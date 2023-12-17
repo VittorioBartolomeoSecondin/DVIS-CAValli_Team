@@ -288,6 +288,22 @@ const DotDensitySpecies = {
                                     .text((key.charAt(0).toUpperCase() + key.slice(1)).replace(/_/g, ' ')) // Display the key associated with the color
                                     .style("font-size", "12px");
                });
+
+	map_legend.selectAll("*")
+	    .on("mouseover", function() {
+		// Increase legend's z-index
+		d3.select(this).style("z-index", 1000);
+	
+		// Hide the tooltip
+		tooltip.style("opacity", 0);
+	    })
+	    .on("mouseout", function() {
+		// Restore legend's default z-index
+		d3.select(this).style("z-index", null);
+	
+		// Show the tooltip if needed
+		// tooltip.style("opacity", 1);
+	    });
   	},
 
   	destroy: function() {
