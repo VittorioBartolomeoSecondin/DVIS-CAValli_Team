@@ -10,7 +10,6 @@ const DotDensity = {
 		                   .translate([width / 2, height / 2]);
 		
 		let path = d3.geoPath().projection(projection);
-
 		const tooltip = d3.select("body").append("div")
 				  .attr("class", "tooltip")
 				  .style("opacity", 0);
@@ -38,20 +37,12 @@ const DotDensity = {
 		    tooltip.transition().duration(300)
 			.style("opacity", 0);
 		}
-
 		let mouseOver_states = function(event, d) {
-		     d3.selectAll(".Country")
-			.transition()
-			.duration(200)
-			.style("opacity", .3)
-			.style("stroke", "black")
-			.style("stroke-width", "0.75px");
 		     d3.select(this)
 			.transition()
 			.duration(200)
-			.style("opacity", 1)
-			.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 			.style("stroke-width", "2px");
+			
 		     tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;')
 			.style("left", (event.pageX + 15) + "px")
 			.style("top", (event.pageY - 28) + "px")
@@ -60,15 +51,14 @@ const DotDensity = {
 		}
 		
 		let mouseLeave_states = function() {
-		    d3.select(this)
+		     d3.select(this)
 			.transition()
 			.duration(200)
 			.style("stroke-width", "0.75px")
-			.style("stroke", "black");
-		    
+	
 		    tooltip.transition().duration(300)
-		        .style("opacity", 0);
-		};
+			.style("opacity", 0);
+		}
 		
 		let svg = d3.select("#dotmap")
 			    .append("svg")
@@ -76,7 +66,6 @@ const DotDensity = {
 			    .attr("height", height)
 			    .attr("preserveAspectRatio", "xMinYMin meet")
 			    .attr("viewBox", `0 0 ${width} ${height}`);
-
 		let zoomed = function(event) {
 		    world.attr("transform", event.transform);
 		    // Update circle positions and sizes on zoom
@@ -91,7 +80,7 @@ const DotDensity = {
 		            return (Math.sqrt(+d.count) / 10) * event.transform.k; // Scale based on zoom level
 		        });
 		};
-		
+
 		let zoom = d3.zoom()
 		    .scaleExtent([1, 8]) 
 		    .on("zoom", zoomed);
@@ -99,9 +88,7 @@ const DotDensity = {
 		svg.call(zoom);
 		
 		let world = svg.append("g");
-
 		let currentZoomState = null;
-
 		let zoomIn = function(event, d) {
 		    if (currentZoomState === d.id) {
 		        // Reset to initial view
@@ -112,8 +99,6 @@ const DotDensity = {
 		                d3.zoomIdentity
 		            );
 		        currentZoomState = null; // Reset the currently zoomed state
-
-		        world.select("#" + d.id).attr("data-selected", false);
 		    } else {
 		        // Zoom to the clicked state
 		        let bounds = path.bounds(d);
@@ -131,8 +116,6 @@ const DotDensity = {
 		                d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
 		            );
 		        currentZoomState = d.id; // Set the currently zoomed state
-
-		        world.select("#" + d.id).attr("data-selected", true);
 		    }
 		};
 		
@@ -145,7 +128,7 @@ const DotDensity = {
 		            .data(data_features)
 		            .enter().append("path")
 			    .attr("data-name", function(d) { return d.properties.name }) 
-			    .attr("data-selected", false)
+				
 			    // add a class and styling
 			    .attr("d", path)
 			    .style("stroke", "black")
@@ -161,9 +144,7 @@ const DotDensity = {
 		    .catch(error => {
 		        console.error("Error fetching the data:", error);
 		    });
-
 		    d3.csv("data/section4/dotmap_alternative.csv").then(function(data) {
-
 			svg.selectAll("circle")
 			    .data(data)
 			    .enter()
@@ -183,7 +164,6 @@ const DotDensity = {
                 		.on("mouseleave", mouseLeave);
 		    });
 	},
-
 	destroy: function() {
 	    // Clean up existing map elements
 	    const existingMap = document.querySelector("#dotmap svg");
@@ -194,5 +174,4 @@ const DotDensity = {
 	    delete window.DotDensity;
 	}
 }
-
 DotDensity.initialize();
