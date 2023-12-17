@@ -60,15 +60,20 @@ const DotDensity = {
 		}
 		
 		let mouseLeave_states = function() {
-		     d3.selectAll(".Country")
-			.transition()
-			.duration(200)
-			.style("opacity", 1)
-			.style("stroke", "black")
-			.style("stroke-width", "0.75px");
-		     tooltip.transition().duration(300)
-			.style("opacity", 0);
-		}
+		    // Check if the selected class is present
+		    const selected = d3.select(this).classed("selected");
+		
+		    if (!selected) {
+		        d3.select(this)
+		            .transition()
+		            .duration(200)
+		            .style("stroke-width", "0.75px")
+		            .style("stroke", "black");
+		    }
+		
+		    tooltip.transition().duration(300)
+		        .style("opacity", 0);
+		};
 		
 		let svg = d3.select("#dotmap")
 			    .append("svg")
@@ -112,6 +117,10 @@ const DotDensity = {
 		                d3.zoomIdentity
 		            );
 		        currentZoomState = null; // Reset the currently zoomed state
+
+			// Remove the class when zooming out
+		        world.select("#" + d.id)
+		            .classed("selected", false);
 		    } else {
 		        // Zoom to the clicked state
 		        let bounds = path.bounds(d);
@@ -129,6 +138,10 @@ const DotDensity = {
 		                d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
 		            );
 		        currentZoomState = d.id; // Set the currently zoomed state
+
+			// Add a class to the selected state
+		        world.select("#" + d.id)
+		            .classed("selected", true);
 		    }
 		};
 		
