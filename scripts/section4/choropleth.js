@@ -35,6 +35,12 @@ const Choropleth = {
 						.style("opacity", 1)
 						.style("stroke", d.properties.abundance != 0 ? "green" : "black")
 						.style("stroke-width", "2px");
+					// Create the tooltip if it doesn't exist
+				            if (!tooltip) {
+				                tooltip = d3.select("body").append("div")
+				                    .attr("class", "tooltip")
+				                    .style("opacity", 0);
+				            }
 					tooltip.html(d.properties.name + ' &#40;' + d.properties.postal + '&#41;: ' + d.properties.abundance + ' trees in '
 		        			+ d.properties.area + ' km<sup>2</sup>')
 						.style("left", (event.pageX + 15) + "px")
@@ -50,6 +56,12 @@ const Choropleth = {
 						.style("opacity", 1)
 						.style("stroke", "black")
 						.style("stroke-width", "0.75px");
+					if (tooltip) {
+				                tooltip.transition().duration(300)
+				                    .style("opacity", 0)
+				                    .remove();
+				                tooltip = null; // Reset tooltip variable
+		            	       }
 					tooltip.transition().duration(300)
 						.style("opacity", 0)
 						.style("left", "-9999px") // Move tooltip off-screen
