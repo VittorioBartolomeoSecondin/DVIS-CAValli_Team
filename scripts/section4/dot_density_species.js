@@ -55,7 +55,11 @@ const DotDensitySpecies = {
 			.style("opacity", 0.5)
 			.style("stroke", "none");
 		    tooltip.transition().duration(300)
-			.style("opacity", 0);
+			.style("opacity", 0)
+			.on("end", function() {
+		            // Completely remove the tooltip from the DOM
+		            tooltip.remove();
+        		});
     		}
     
     		let mouseOver_states = function(event, d) {
