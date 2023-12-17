@@ -60,17 +60,12 @@ const DotDensity = {
 		}
 		
 		let mouseLeave_states = function() {
-		    // Check if the selected class is present
-		    const selected = d3.select(this).attr("data-selected");
-		
-		    if (!selected) {
-		        d3.select(this)
-		            .transition()
-		            .duration(200)
-		            .style("stroke-width", "0.75px")
-		            .style("stroke", "black");
-		    }
-		
+		    d3.select(this)
+			.transition()
+			.duration(200)
+			.style("stroke-width", "0.75px")
+			.style("stroke", "black");
+		    
 		    tooltip.transition().duration(300)
 		        .style("opacity", 0);
 		};
