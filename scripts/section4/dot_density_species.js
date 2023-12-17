@@ -80,7 +80,9 @@ const DotDensitySpecies = {
 			.style("stroke", "black")
 			.style("stroke-width", "0.75px");
 		    tooltip.transition().duration(300)
-			.style("opacity", 0);
+			.style("opacity", 0)
+			.style("left", "-9999px") // Move tooltip off-screen
+        		.style("top", "-9999px");
     		}
     		
     		let svg = d3.select("#dotmap")
