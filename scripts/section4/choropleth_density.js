@@ -18,9 +18,7 @@ const ChoroplethDensity = {
 		                   .translate([width / 2, height / 2]);
 		
 		// add tooltip
-		const tooltip = d3.select("body").append("div")
-				  .attr("class", "tooltip")
-				  .style("opacity", 0);
+		let tooltip = null;
 		
 		let mouseOver = function(event, d) {
 					d3.selectAll(".Country")
