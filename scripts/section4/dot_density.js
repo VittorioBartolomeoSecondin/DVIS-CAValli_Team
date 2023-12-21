@@ -30,7 +30,7 @@ const DotDensity = {
 	                    .attr("class", "tooltip")
 	                    .style("opacity", 0);
             	    }
-		    tooltip.html('<p>' + d.greater_metro + ' &rarr ' + d.count + ' trees</p>')
+		    tooltip.html('<p>' + d.greater_metro + ' &rarr; ' + d.count + ' trees</p>')
 			.style("left", (event.pageX + 15) + "px")
 			.style("top", (event.pageY - 28) + "px")
 			.transition().duration(400)
