@@ -44,7 +44,7 @@ const DotDensitySpecies = {
 	                    .attr("class", "tooltip")
 	                    .style("opacity", 0);
             	    }
-    		    tooltip.html(d.greater_metro + ' &rarr ' +
+    		    tooltip.html(d.greater_metro + ' &rarr; ' +
 				 d.count + ' trees of type <i>' + d.scientific_name + '</i>')
     			.style("left", (event.pageX + 15) + "px")
     			.style("top", (event.pageY - 28) + "px")
