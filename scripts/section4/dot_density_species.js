@@ -15,9 +15,9 @@ const DotDensitySpecies = {
             "platanus_acerifolia": "#FF5733",       // Reddish-orange
             "prunus": "#8B0000",                    // Dark red
             "liquidambar_styraciflua": "#FFA500",   // Orange
-            "acer_rubrum": "#FFD700",               // Gold
+            "acer_rubrum": "#FF0000",               // Pure red
             "gleditsia_triacanthos": "#00FF00",     // Green
-            "lagerstroemia_indica": "#663399",      // Medium purple
+            "lagerstroemia_indica": "#2101FF",      // Pure blue
             "pyrus_calleryana": "#00CED1",          // Blue-green
             "tilia_cordata": "#8A2BE2",             // Blue-violet
             "acer_platanoides": "#FFFF00",          // Yellow
